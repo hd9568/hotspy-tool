@@ -1,0 +1,19 @@
+digraph "Call graph: sort_test2.ll" {
+	label="Call graph: sort_test2.ll";
+
+	Node0x55cdc8cbc110 [shape=record,label="{main}"];
+	Node0x55cdc8cbc110 -> Node0x55cdc8cb2ce0;
+	Node0x55cdc8cbc110 -> Node0x55cdc8cb42a0;
+	Node0x55cdc8cbc110 -> Node0x55cdc8ca85f0;
+	Node0x55cdc8cbc110 -> Node0x55cdc8cb9c90;
+	Node0x55cdc8cbc110 -> Node0x55cdc8cb6480;
+	Node0x55cdc8cbc110 -> Node0x55cdc8cb7330;
+	Node0x55cdc8cbc110 -> Node0x55cdc8ca8530;
+	Node0x55cdc8cb2ce0 [shape=record,label="{llvm.memset.p0.i64}"];
+	Node0x55cdc8cb42a0 [shape=record,label="{rand}"];
+	Node0x55cdc8cb6480 [shape=record,label="{sortv_ui}"];
+	Node0x55cdc8cb7330 [shape=record,label="{getticks}"];
+	Node0x55cdc8cb9c90 [shape=record,label="{printf}"];
+	Node0x55cdc8ca8530 [shape=record,label="{sortp_ui}"];
+	Node0x55cdc8ca85f0 [shape=record,label="{free}"];
+}

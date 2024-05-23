@@ -1,0 +1,5 @@
+digraph "CFG for '_ZNK9__gnu_cxx16__aligned_membufISt4pairIKmiEE6_M_ptrEv' function" {
+	label="CFG for '_ZNK9__gnu_cxx16__aligned_membufISt4pairIKmiEE6_M_ptrEv' function";
+
+	Node0x55dfe4b96d40 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %call = call noundef ptr\l... @_ZNK9__gnu_cxx16__aligned_membufISt4pairIKmiEE7_M_addrEv(ptr noundef nonnull\l... align 8 dereferenceable(16) %this1) #3\l  ret ptr %call\l}"];
+}

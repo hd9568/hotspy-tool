@@ -1,0 +1,5 @@
+digraph "CFG for 'hypre_BoomerAMGBuildCoarseOperator' function" {
+	label="CFG for 'hypre_BoomerAMGBuildCoarseOperator' function";
+
+	Node0x55db1fef37a0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %RT.addr = alloca ptr, align 8\l  %A.addr = alloca ptr, align 8\l  %P.addr = alloca ptr, align 8\l  %RAP_ptr.addr = alloca ptr, align 8\l  store ptr %RT, ptr %RT.addr, align 8\l  store ptr %A, ptr %A.addr, align 8\l  store ptr %P, ptr %P.addr, align 8\l  store ptr %RAP_ptr, ptr %RAP_ptr.addr, align 8\l  %0 = load ptr, ptr %RT.addr, align 8\l  %1 = load ptr, ptr %A.addr, align 8\l  %2 = load ptr, ptr %P.addr, align 8\l  %3 = load ptr, ptr %RAP_ptr.addr, align 8\l  %call = call i32 @hypre_BoomerAMGBuildCoarseOperatorKT(ptr noundef %0, ptr\l... noundef %1, ptr noundef %2, i32 noundef 0, ptr noundef %3)\l  %4 = load i32, ptr @hypre__global_error, align 4\l  ret i32 %4\l}"];
+}

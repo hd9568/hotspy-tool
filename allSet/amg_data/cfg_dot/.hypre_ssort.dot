@@ -1,0 +1,24 @@
+digraph "CFG for 'hypre_ssort' function" {
+	label="CFG for 'hypre_ssort' function";
+
+	Node0x558fa7003540 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d24b4070" fontname="Courier",label="{entry:\l|  %data.addr = alloca ptr, align 8\l  %n.addr = alloca i32, align 4\l  %i = alloca i32, align 4\l  %si = alloca i32, align 4\l  %change = alloca i32, align 4\l  store ptr %data, ptr %data.addr, align 8\l  store i32 %n, ptr %n.addr, align 4\l  store i32 0, ptr %change, align 4\l  %0 = load i32, ptr %n.addr, align 4\l  %cmp = icmp sgt i32 %0, 0\l  br i1 %cmp, label %if.then, label %if.end4\l|{<s0>T|<s1>F}}"];
+	Node0x558fa7003540:s0 -> Node0x558fa70039a0[tooltip="entry -> if.then\nProbability 62.50%" ];
+	Node0x558fa7003540:s1 -> Node0x558fa7003a10[tooltip="entry -> if.end4\nProbability 37.50%" ];
+	Node0x558fa70039a0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{if.then:\l|  %1 = load i32, ptr %n.addr, align 4\l  %sub = sub nsw i32 %1, 1\l  store i32 %sub, ptr %i, align 4\l  br label %for.cond\l}"];
+	Node0x558fa70039a0 -> Node0x558fa7003d00[tooltip="if.then -> for.cond\nProbability 100.00%" ];
+	Node0x558fa7003d00 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.cond:\l|  %2 = load i32, ptr %i, align 4\l  %cmp1 = icmp sgt i32 %2, 0\l  br i1 %cmp1, label %for.body, label %for.end\l|{<s0>T|<s1>F}}"];
+	Node0x558fa7003d00:s0 -> Node0x558fa7004050[tooltip="for.cond -> for.body\nProbability 96.88%" ];
+	Node0x558fa7003d00:s1 -> Node0x558fa70040d0[tooltip="for.cond -> for.end\nProbability 3.12%" ];
+	Node0x558fa7004050 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.body:\l|  %3 = load ptr, ptr %data.addr, align 8\l  %4 = load i32, ptr %i, align 4\l  %add = add nsw i32 %4, 1\l  %call = call i32 @hypre_index_of_minimum(ptr noundef %3, i32 noundef %add)\l  store i32 %call, ptr %si, align 4\l  %5 = load i32, ptr %i, align 4\l  %6 = load i32, ptr %si, align 4\l  %cmp2 = icmp ne i32 %5, %6\l  br i1 %cmp2, label %if.then3, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x558fa7004050:s0 -> Node0x558fa70047f0[tooltip="for.body -> if.then3\nProbability 50.00%" ];
+	Node0x558fa7004050:s1 -> Node0x558fa70048a0[tooltip="for.body -> if.end\nProbability 50.00%" ];
+	Node0x558fa70047f0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.then3:\l|  %7 = load ptr, ptr %data.addr, align 8\l  %8 = load i32, ptr %i, align 4\l  %9 = load i32, ptr %si, align 4\l  call void @hypre_swap_int(ptr noundef %7, i32 noundef %8, i32 noundef %9)\l  store i32 1, ptr %change, align 4\l  br label %if.end\l}"];
+	Node0x558fa70047f0 -> Node0x558fa70048a0[tooltip="if.then3 -> if.end\nProbability 100.00%" ];
+	Node0x558fa70048a0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  br label %for.inc\l}"];
+	Node0x558fa70048a0 -> Node0x558fa7004df0[tooltip="if.end -> for.inc\nProbability 100.00%" ];
+	Node0x558fa7004df0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.inc:\l|  %10 = load i32, ptr %i, align 4\l  %dec = add nsw i32 %10, -1\l  store i32 %dec, ptr %i, align 4\l  br label %for.cond, !llvm.loop !6\l}"];
+	Node0x558fa7004df0 -> Node0x558fa7003d00[tooltip="for.inc -> for.cond\nProbability 100.00%" ];
+	Node0x558fa70040d0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{for.end:\l|  br label %if.end4\l}"];
+	Node0x558fa70040d0 -> Node0x558fa7003a10[tooltip="for.end -> if.end4\nProbability 100.00%" ];
+	Node0x558fa7003a10 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d24b4070" fontname="Courier",label="{if.end4:\l|  %11 = load i32, ptr %change, align 4\l  ret i32 %11\l}"];
+}

@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN3fmt6v9_lmp6detail9dragonbox28divide_by_10_to_kappa_plus_1Ej' function" {
+	label="CFG for '_ZN3fmt6v9_lmp6detail9dragonbox28divide_by_10_to_kappa_plus_1Ej' function";
+
+	Node0x55fec2f94bd0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %n.addr = alloca i32, align 4\l  store i32 %n, ptr %n.addr, align 4\l  %0 = load i32, ptr %n.addr, align 4\l  %conv = zext i32 %0 to i64\l  %mul = mul i64 %conv, 1374389535\l  %shr = lshr i64 %mul, 37\l  %conv1 = trunc i64 %shr to i32\l  ret i32 %conv1\l}"];
+}

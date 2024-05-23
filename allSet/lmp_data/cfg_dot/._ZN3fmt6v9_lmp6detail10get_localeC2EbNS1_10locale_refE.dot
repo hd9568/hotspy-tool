@@ -1,0 +1,10 @@
+digraph "CFG for '_ZN3fmt6v9_lmp6detail10get_localeC2EbNS1_10locale_refE' function" {
+	label="CFG for '_ZN3fmt6v9_lmp6detail10get_localeC2EbNS1_10locale_refE' function";
+
+	Node0x5584168fb220 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %loc = alloca %\"class.fmt::v9_lmp::detail::locale_ref\", align 8\l  %this.addr = alloca ptr, align 8\l  %localized.addr = alloca i8, align 1\l  %coerce.dive = getelementptr inbounds\l... %\"class.fmt::v9_lmp::detail::locale_ref\", ptr %loc, i32 0, i32 0\l  store ptr %loc.coerce, ptr %coerce.dive, align 8\l  store ptr %this, ptr %this.addr, align 8\l  %frombool = zext i1 %localized to i8\l  store i8 %frombool, ptr %localized.addr, align 1\l  %this1 = load ptr, ptr %this.addr, align 8\l  %has_locale_ = getelementptr inbounds\l... %\"class.fmt::v9_lmp::detail::get_locale\", ptr %this1, i32 0, i32 1\l  %0 = load i8, ptr %localized.addr, align 1\l  %tobool = trunc i8 %0 to i1\l  %frombool2 = zext i1 %tobool to i8\l  store i8 %frombool2, ptr %has_locale_, align 8\l  %1 = load i8, ptr %localized.addr, align 1\l  %tobool3 = trunc i8 %1 to i1\l  br i1 %tobool3, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x5584168fb220:s0 -> Node0x5584168fbdc0[tooltip="entry -> if.then\nProbability 50.00%" ];
+	Node0x5584168fb220:s1 -> Node0x5584168fbe30[tooltip="entry -> if.end\nProbability 50.00%" ];
+	Node0x5584168fbdc0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.then:\l|  %2 = getelementptr inbounds %\"class.fmt::v9_lmp::detail::get_locale\", ptr\l... %this1, i32 0, i32 0\l  call void @_ZNK3fmt6v9_lmp6detail10locale_ref3getISt6localeEET_v(ptr\l... dead_on_unwind writable sret(%\"class.std::locale\") align 8 %2, ptr noundef\l... nonnull align 8 dereferenceable(8) %loc)\l  br label %if.end\l}"];
+	Node0x5584168fbdc0 -> Node0x5584168fbe30[tooltip="if.then -> if.end\nProbability 100.00%" ];
+	Node0x5584168fbe30 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  ret void\l}"];
+}

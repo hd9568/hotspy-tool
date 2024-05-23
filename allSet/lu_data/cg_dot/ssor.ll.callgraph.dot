@@ -1,0 +1,37 @@
+digraph "Call graph: ssor.ll" {
+	label="Call graph: ssor.ll";
+
+	Node0x55ea82cab2f0 [shape=record,label="{ssor_}"];
+	Node0x55ea82cab2f0 -> Node0x55ea82c6d800;
+	Node0x55ea82cab2f0 -> Node0x55ea82c9cf80;
+	Node0x55ea82cab2f0 -> Node0x55ea82c95540;
+	Node0x55ea82cab2f0 -> Node0x55ea82caa4b0;
+	Node0x55ea82cab2f0 -> Node0x55ea82cabce0;
+	Node0x55ea82cab2f0 -> Node0x55ea82caa4f0;
+	Node0x55ea82cab2f0 -> Node0x55ea82caaaa0;
+	Node0x55ea82cab2f0 -> Node0x55ea82caab20;
+	Node0x55ea82cab2f0 -> Node0x55ea82caaba0;
+	Node0x55ea82cab2f0 -> Node0x55ea82cab0d0;
+	Node0x55ea82cab2f0 -> Node0x55ea82caabe0;
+	Node0x55ea82cab2f0 -> Node0x55ea82caac60;
+	Node0x55ea82cab2f0 -> Node0x55ea82caace0;
+	Node0x55ea82cab2f0 -> Node0x55ea82cabc60;
+	Node0x55ea82cab2f0 -> Node0x55ea82caad60;
+	Node0x55ea82cab0d0 [shape=record,label="{jacld_}"];
+	Node0x55ea82caace0 [shape=record,label="{buts_}"];
+	Node0x55ea82caad60 [shape=record,label="{timer_stop_}"];
+	Node0x55ea82c6d800 [shape=record,label="{rhs_}"];
+	Node0x55ea82c95540 [shape=record,label="{timer_clear_}"];
+	Node0x55ea82caa4b0 [shape=record,label="{mpi_barrier_}"];
+	Node0x55ea82c9cf80 [shape=record,label="{l2norm_}"];
+	Node0x55ea82caa4f0 [shape=record,label="{timer_start_}"];
+	Node0x55ea82caaaa0 [shape=record,label="{_FortranAioBeginExternalFormattedOutput}"];
+	Node0x55ea82caab20 [shape=record,label="{_FortranAioOutputInteger32}"];
+	Node0x55ea82caaba0 [shape=record,label="{_FortranAioEndIoStatement}"];
+	Node0x55ea82caac60 [shape=record,label="{jacu_}"];
+	Node0x55ea82cabc60 [shape=record,label="{timer_read_}"];
+	Node0x55ea82caabe0 [shape=record,label="{blts_}"];
+	Node0x55ea82cabce0 [shape=record,label="{mpi_allreduce_}"];
+	Node0x55ea82cabfd0 [shape=record,label="{llvm.stacksave.p0}"];
+	Node0x55ea82cb1470 [shape=record,label="{llvm.stackrestore.p0}"];
+}

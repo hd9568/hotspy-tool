@@ -1,0 +1,5 @@
+digraph "CFG for 'mpi_init_' function" {
+	label="CFG for 'mpi_init_' function";
+
+	Node0x5560a31c5980 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{1:\l|  store i32 0, ptr %0, align 4\l  ret void\l}"];
+}

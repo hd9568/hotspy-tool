@@ -1,0 +1,5 @@
+digraph "CFG for 'hypre_MPI_Type_vector' function" {
+	label="CFG for 'hypre_MPI_Type_vector' function";
+
+	Node0x5555d665c2d0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %count.addr = alloca i32, align 4\l  %blocklength.addr = alloca i32, align 4\l  %stride.addr = alloca i32, align 4\l  %oldtype.addr = alloca ptr, align 8\l  %newtype.addr = alloca ptr, align 8\l  store i32 %count, ptr %count.addr, align 4\l  store i32 %blocklength, ptr %blocklength.addr, align 4\l  store i32 %stride, ptr %stride.addr, align 4\l  store ptr %oldtype, ptr %oldtype.addr, align 8\l  store ptr %newtype, ptr %newtype.addr, align 8\l  %0 = load i32, ptr %count.addr, align 4\l  %1 = load i32, ptr %blocklength.addr, align 4\l  %2 = load i32, ptr %stride.addr, align 4\l  %3 = load ptr, ptr %oldtype.addr, align 8\l  %4 = load ptr, ptr %newtype.addr, align 8\l  %call = call i32 @MPI_Type_vector(i32 noundef %0, i32 noundef %1, i32\l... noundef %2, ptr noundef %3, ptr noundef %4)\l  ret i32 %call\l}"];
+}

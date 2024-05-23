@@ -1,0 +1,5 @@
+digraph "CFG for '_ZNSt11_Deque_baseIiSaIiEE19_M_get_Tp_allocatorEv' function" {
+	label="CFG for '_ZNSt11_Deque_baseIiSaIiEE19_M_get_Tp_allocatorEv' function";
+
+	Node0x560dca0c43e0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %_M_impl = getelementptr inbounds %\"class.std::_Deque_base\", ptr %this1, i32\l... 0, i32 0\l  ret ptr %_M_impl\l}"];
+}

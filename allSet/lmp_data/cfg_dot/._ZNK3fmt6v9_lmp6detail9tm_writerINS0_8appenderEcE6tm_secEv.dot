@@ -1,0 +1,20 @@
+digraph "CFG for '_ZNK3fmt6v9_lmp6detail9tm_writerINS0_8appenderEcE6tm_secEv' function" {
+	label="CFG for '_ZNK3fmt6v9_lmp6detail9tm_writerINS0_8appenderEcE6tm_secEv' function";
+
+	Node0x558416952e50 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %tm_ = getelementptr inbounds %\"class.fmt::v9_lmp::detail::tm_writer\", ptr\l... %this1, i32 0, i32 3\l  %0 = load ptr, ptr %tm_, align 8\l  %tm_sec = getelementptr inbounds %struct.tm, ptr %0, i32 0, i32 0\l  %1 = load i32, ptr %tm_sec, align 8\l  %cmp = icmp sge i32 %1, 0\l  br i1 %cmp, label %land.lhs.true, label %cond.false\l|{<s0>T|<s1>F}}"];
+	Node0x558416952e50:s0 -> Node0x558416952ea0[tooltip="entry -> land.lhs.true\nProbability 100.00%" ];
+	Node0x558416952e50:s1 -> Node0x558416953620[tooltip="entry -> cond.false\nProbability 0.00%" ];
+	Node0x558416952ea0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{land.lhs.true:\l|  %tm_2 = getelementptr inbounds %\"class.fmt::v9_lmp::detail::tm_writer\",\l... ptr %this1, i32 0, i32 3\l  %2 = load ptr, ptr %tm_2, align 8\l  %tm_sec3 = getelementptr inbounds %struct.tm, ptr %2, i32 0, i32 0\l  %3 = load i32, ptr %tm_sec3, align 8\l  %cmp4 = icmp sle i32 %3, 61\l  br i1 %cmp4, label %cond.true, label %cond.false\l|{<s0>T|<s1>F}}"];
+	Node0x558416952ea0:s0 -> Node0x558416953af0[tooltip="land.lhs.true -> cond.true\nProbability 100.00%" ];
+	Node0x558416952ea0:s1 -> Node0x558416953620[tooltip="land.lhs.true -> cond.false\nProbability 0.00%" ];
+	Node0x558416953af0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{cond.true:\l|  br label %cond.end\l}"];
+	Node0x558416953af0 -> Node0x558416953dc0[tooltip="cond.true -> cond.end\nProbability 100.00%" ];
+	Node0x558416953620 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f6bfa670" fontname="Courier",label="{cond.false:\l|  invoke void @_ZN3fmt6v9_lmp6detail11assert_failEPKciS3_(ptr noundef\l... @.str.107, i32 noundef 970, ptr noundef @.str) #21\l          to label %invoke.cont unwind label %terminate.lpad\l}"];
+	Node0x558416953620 -> Node0x558416953ed0[tooltip="cond.false -> invoke.cont\nProbability 0.00%" ];
+	Node0x558416953620 -> Node0x558416953f50[tooltip="cond.false -> terminate.lpad\nProbability 100.00%" ];
+	Node0x558416953ed0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#536edd70" fontname="Courier",label="{invoke.cont:\l|  unreachable\l}"];
+	Node0x558416954200 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#3d50c370" fontname="Courier",label="{4:\l|  br label %cond.end\l}"];
+	Node0x558416954200 -> Node0x558416953dc0[tooltip="4 -> cond.end\nProbability 100.00%" ];
+	Node0x558416953dc0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{cond.end:\l|  %tm_5 = getelementptr inbounds %\"class.fmt::v9_lmp::detail::tm_writer\",\l... ptr %this1, i32 0, i32 3\l  %5 = load ptr, ptr %tm_5, align 8\l  %tm_sec6 = getelementptr inbounds %struct.tm, ptr %5, i32 0, i32 0\l  %6 = load i32, ptr %tm_sec6, align 8\l  ret i32 %6\l}"];
+	Node0x558416953f50 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f6bfa670" fontname="Courier",label="{terminate.lpad:\l|  %7 = landingpad \{ ptr, i32 \}\l          catch ptr null\l  %8 = extractvalue \{ ptr, i32 \} %7, 0\l  call void @__clang_call_terminate(ptr %8) #22\l  unreachable\l}"];
+}

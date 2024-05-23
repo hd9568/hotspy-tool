@@ -1,0 +1,15 @@
+digraph "Call graph: DirectionCosine.ll" {
+	label="Call graph: DirectionCosine.ll";
+
+	Node0x565388ce2380 [shape=record,label="{_ZN15DirectionCosine16Sample_IsotropicEPm}"];
+	Node0x565388ce2380 -> Node0x565388ce2430;
+	Node0x565388ce2380 -> Node0x565388ce24e0;
+	Node0x565388ce2380 -> Node0x565388ce7250;
+	Node0x565388ce2380 -> Node0x565388ce2560;
+	Node0x565388ce2380 -> Node0x565388ce71d0;
+	Node0x565388ce2430 [shape=record,label="{_Z9rngSamplePm}"];
+	Node0x565388ce24e0 [shape=record,label="{llvm.fmuladd.f64}"];
+	Node0x565388ce2560 [shape=record,label="{sqrt}"];
+	Node0x565388ce71d0 [shape=record,label="{cos}"];
+	Node0x565388ce7250 [shape=record,label="{sin}"];
+}

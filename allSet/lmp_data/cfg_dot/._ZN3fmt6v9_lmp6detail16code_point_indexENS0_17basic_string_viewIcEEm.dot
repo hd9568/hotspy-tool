@@ -1,0 +1,24 @@
+digraph "CFG for '_ZN3fmt6v9_lmp6detail16code_point_indexENS0_17basic_string_viewIcEEm' function" {
+	label="CFG for '_ZN3fmt6v9_lmp6detail16code_point_indexENS0_17basic_string_viewIcEEm' function";
+
+	Node0x55fec36bb4a0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d24b4070" fontname="Courier",label="{entry:\l|  %retval = alloca i64, align 8\l  %s = alloca %\"class.fmt::v9_lmp::basic_string_view\", align 8\l  %n.addr = alloca i64, align 8\l  %data = alloca ptr, align 8\l  %num_code_points = alloca i64, align 8\l  %i = alloca i64, align 8\l  %size = alloca i64, align 8\l  %0 = getelementptr inbounds \{ ptr, i64 \}, ptr %s, i32 0, i32 0\l  store ptr %s.coerce0, ptr %0, align 8\l  %1 = getelementptr inbounds \{ ptr, i64 \}, ptr %s, i32 0, i32 1\l  store i64 %s.coerce1, ptr %1, align 8\l  store i64 %n, ptr %n.addr, align 8\l  %call = call noundef ptr @_ZNK3fmt6v9_lmp17basic_string_viewIcE4dataEv(ptr\l... noundef nonnull align 8 dereferenceable(16) %s) #17\l  store ptr %call, ptr %data, align 8\l  store i64 0, ptr %num_code_points, align 8\l  store i64 0, ptr %i, align 8\l  %call1 = call noundef i64 @_ZNK3fmt6v9_lmp17basic_string_viewIcE4sizeEv(ptr\l... noundef nonnull align 8 dereferenceable(16) %s) #17\l  store i64 %call1, ptr %size, align 8\l  br label %for.cond\l}"];
+	Node0x55fec36bb4a0 -> Node0x55fec36bc5b0[tooltip="entry -> for.cond\nProbability 100.00%" ];
+	Node0x55fec36bc5b0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.cond:\l|  %2 = load i64, ptr %i, align 8\l  %3 = load i64, ptr %size, align 8\l  %cmp = icmp ne i64 %2, %3\l  br i1 %cmp, label %for.body, label %for.end\l|{<s0>T|<s1>F}}"];
+	Node0x55fec36bc5b0:s0 -> Node0x55fec36bc820[tooltip="for.cond -> for.body\nProbability 96.88%" ];
+	Node0x55fec36bc5b0:s1 -> Node0x55fec36bc8a0[tooltip="for.cond -> for.end\nProbability 3.12%" ];
+	Node0x55fec36bc820 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.body:\l|  %4 = load ptr, ptr %data, align 8\l  %5 = load i64, ptr %i, align 8\l  %arrayidx = getelementptr inbounds i8, ptr %4, i64 %5\l  %6 = load i8, ptr %arrayidx, align 1\l  %conv = sext i8 %6 to i32\l  %and = and i32 %conv, 192\l  %cmp2 = icmp ne i32 %and, 128\l  br i1 %cmp2, label %land.lhs.true, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x55fec36bc820:s0 -> Node0x55fec36bce60[tooltip="for.body -> land.lhs.true\nProbability 50.00%" ];
+	Node0x55fec36bc820:s1 -> Node0x55fec36bcee0[tooltip="for.body -> if.end\nProbability 50.00%" ];
+	Node0x55fec36bce60 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{land.lhs.true:\l|  %7 = load i64, ptr %num_code_points, align 8\l  %inc = add i64 %7, 1\l  store i64 %inc, ptr %num_code_points, align 8\l  %8 = load i64, ptr %n.addr, align 8\l  %cmp3 = icmp ugt i64 %inc, %8\l  br i1 %cmp3, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x55fec36bce60:s0 -> Node0x55fec36bc370[tooltip="land.lhs.true -> if.then\nProbability 3.12%" ];
+	Node0x55fec36bce60:s1 -> Node0x55fec36bcee0[tooltip="land.lhs.true -> if.end\nProbability 96.88%" ];
+	Node0x55fec36bc370 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#dc5d4a70" fontname="Courier",label="{if.then:\l|  %9 = load i64, ptr %i, align 8\l  store i64 %9, ptr %retval, align 8\l  br label %return\l}"];
+	Node0x55fec36bc370 -> Node0x55fec36bd750[tooltip="if.then -> return\nProbability 100.00%" ];
+	Node0x55fec36bcee0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  br label %for.inc\l}"];
+	Node0x55fec36bcee0 -> Node0x55fec36bd830[tooltip="if.end -> for.inc\nProbability 100.00%" ];
+	Node0x55fec36bd830 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.inc:\l|  %10 = load i64, ptr %i, align 8\l  %inc4 = add i64 %10, 1\l  store i64 %inc4, ptr %i, align 8\l  br label %for.cond, !llvm.loop !6\l}"];
+	Node0x55fec36bd830 -> Node0x55fec36bc5b0[tooltip="for.inc -> for.cond\nProbability 100.00%" ];
+	Node0x55fec36bc8a0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{for.end:\l|  %call5 = call noundef i64\l... @_ZNK3fmt6v9_lmp17basic_string_viewIcE4sizeEv(ptr noundef nonnull align 8\l... dereferenceable(16) %s) #17\l  store i64 %call5, ptr %retval, align 8\l  br label %return\l}"];
+	Node0x55fec36bc8a0 -> Node0x55fec36bd750[tooltip="for.end -> return\nProbability 100.00%" ];
+	Node0x55fec36bd750 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d24b4070" fontname="Courier",label="{return:\l|  %11 = load i64, ptr %retval, align 8\l  ret i64 %11\l}"];
+}

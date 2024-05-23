@@ -1,0 +1,12 @@
+digraph "CFG for 'copyi_' function" {
+	label="CFG for 'copyi_' function";
+
+	Node0x557942887890 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{5:\l|  %6 = alloca i32, i64 1, align 4\l  %7 = load i32, ptr %2, align 4\l  %8 = sext i32 %7 to i64\l  %9 = icmp sgt i64 %8, 0\l  %10 = select i1 %9, i64 %8, i64 0\l  %11 = load i32, ptr %2, align 4\l  %12 = sext i32 %11 to i64\l  %13 = icmp sgt i64 %12, 0\l  %14 = select i1 %13, i64 %12, i64 0\l  %15 = load i32, ptr %3, align 4\l  %16 = sext i32 %15 to i64\l  %17 = load i32, ptr %4, align 4\l  %18 = sext i32 %17 to i64\l  %19 = trunc i64 %16 to i32\l  %20 = sub i64 %18, %16\l  %21 = add i64 %20, 1\l  br label %22\l}"];
+	Node0x557942887890 -> Node0x5579428882e0[tooltip="5 -> 22\nProbability 100.00%" ];
+	Node0x5579428882e0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{22:\l|  %23 = phi i32 [ %43, %26 ], [ %19, %5 ]\l  %24 = phi i64 [ %44, %26 ], [ %21, %5 ]\l  %25 = icmp sgt i64 %24, 0\l  br i1 %25, label %26, label %45\l|{<s0>T|<s1>F}}"];
+	Node0x5579428882e0:s0 -> Node0x5579428883a0[tooltip="22 -> 26\nProbability 96.88%" ];
+	Node0x5579428882e0:s1 -> Node0x557942888630[tooltip="22 -> 45\nProbability 3.12%" ];
+	Node0x5579428883a0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{26:\l|  store i32 %23, ptr %6, align 4\l  %27 = load i32, ptr %6, align 4\l  %28 = sext i32 %27 to i64\l  %29 = sub nsw i64 %28, 1\l  %30 = mul nsw i64 %29, 1\l  %31 = mul nsw i64 %30, 1\l  %32 = add nsw i64 %31, 0\l  %33 = mul nsw i64 1, %14\l  %34 = getelementptr float, ptr %1, i64 %32\l  %35 = load float, ptr %34, align 4\l  %36 = sub nsw i64 %28, 1\l  %37 = mul nsw i64 %36, 1\l  %38 = mul nsw i64 %37, 1\l  %39 = add nsw i64 %38, 0\l  %40 = mul nsw i64 1, %10\l  %41 = getelementptr float, ptr %0, i64 %39\l  store float %35, ptr %41, align 4\l  %42 = load i32, ptr %6, align 4\l  %43 = add i32 %42, 1\l  %44 = sub i64 %24, 1\l  br label %22\l}"];
+	Node0x5579428883a0 -> Node0x5579428882e0[tooltip="26 -> 22\nProbability 100.00%" ];
+	Node0x557942888630 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{45:\l|  store i32 %23, ptr %6, align 4\l  ret void\l}"];
+}

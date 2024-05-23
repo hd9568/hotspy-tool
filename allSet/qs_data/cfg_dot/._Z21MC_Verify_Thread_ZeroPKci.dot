@@ -1,0 +1,5 @@
+digraph "CFG for '_Z21MC_Verify_Thread_ZeroPKci' function" {
+	label="CFG for '_Z21MC_Verify_Thread_ZeroPKci' function";
+
+	Node0x561c73bf23f0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %file.addr = alloca ptr, align 8\l  %line.addr = alloca i32, align 4\l  store ptr %file, ptr %file.addr, align 8\l  store i32 %line, ptr %line.addr, align 4\l  ret void\l}"];
+}

@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN9MathEigen6JacobiIdPdPS1_PKPKdE7SetSizeEi' function" {
+	label="CFG for '_ZN9MathEigen6JacobiIdPdPS1_PKPKdE7SetSizeEi' function";
+
+	Node0x5600924b11e0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %n.addr = alloca i32, align 4\l  store ptr %this, ptr %this.addr, align 8\l  store i32 %n, ptr %n.addr, align 4\l  %this1 = load ptr, ptr %this.addr, align 8\l  call void @_ZN9MathEigen6JacobiIdPdPS1_PKPKdE7DeallocEv(ptr noundef nonnull\l... align 8 dereferenceable(49) %this1)\l  %0 = load i32, ptr %n.addr, align 4\l  call void @_ZN9MathEigen6JacobiIdPdPS1_PKPKdE5AllocEi(ptr noundef nonnull\l... align 8 dereferenceable(49) %this1, i32 noundef %0)\l  ret void\l}"];
+}

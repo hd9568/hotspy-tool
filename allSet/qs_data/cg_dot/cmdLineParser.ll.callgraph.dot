@@ -1,0 +1,47 @@
+digraph "Call graph: cmdLineParser.ll" {
+	label="Call graph: cmdLineParser.ll";
+
+	Node0x55879fb8baa0 [shape=record,label="{_Z6addArgPKccicPviS0_}"];
+	Node0x55879fb8baa0 -> Node0x55879fb8e950;
+	Node0x55879fb8baa0 -> Node0x55879fb93ca0;
+	Node0x55879fb93ca0 [shape=record,label="{_ZL10lastOptionP10MyOptionSt}"];
+	Node0x55879fb8e950 [shape=record,label="{_ZL13myOptionAllocPKccicPviS0_}"];
+	Node0x55879fb8e950 -> Node0x55879fb94bd0;
+	Node0x55879fb8e950 -> Node0x55879fb976e0;
+	Node0x55879fb8e950 -> Node0x55879fb9f920;
+	Node0x55879fbb0580 [shape=record,label="{_Z8freeArgsv}"];
+	Node0x55879fbb0580 -> Node0x55879fbb0600;
+	Node0x55879fbb0600 [shape=record,label="{_ZL12myOptionFreeP10MyOptionSt}"];
+	Node0x55879fbb0600 -> Node0x55879fbb0680;
+	Node0x55879fbb0700 [shape=record,label="{_Z9printArgsv}"];
+	Node0x55879fbb0700 -> Node0x55879fb9afe0;
+	Node0x55879fbb0700 -> Node0x55879fb9de00;
+	Node0x55879fb9afe0 [shape=record,label="{fprintf}"];
+	Node0x55879fb9de00 [shape=record,label="{sprintf}"];
+	Node0x55879fba0230 [shape=record,label="{_Z11processArgsiPPc}"];
+	Node0x55879fba0230 -> Node0x55879fb94bd0;
+	Node0x55879fba0230 -> Node0x55879fbb0680;
+	Node0x55879fba0230 -> Node0x55879fba42d0;
+	Node0x55879fba0230 -> Node0x55879fb9afe0;
+	Node0x55879fba0230 -> Node0x55879fba4610;
+	Node0x55879fba0230 -> Node0x55879fba63e0;
+	Node0x55879fba0230 -> Node0x55879fba6af0;
+	Node0x55879fba0230 -> Node0x55879fba1060;
+	Node0x55879fb94bd0 [shape=record,label="{_ZL8qsCallocmm}"];
+	Node0x55879fb94bd0 -> Node0x55879fb82970;
+	Node0x55879fba42d0 [shape=record,label="{strcat}"];
+	Node0x55879fba4610 [shape=record,label="{getopt_long}"];
+	Node0x55879fba63e0 [shape=record,label="{_ZL10findOptionP10MyOptionSth}"];
+	Node0x55879fba6af0 [shape=record,label="{__isoc99_sscanf}"];
+	Node0x55879fba1060 [shape=record,label="{strncpy}"];
+	Node0x55879fbb0680 [shape=record,label="{_ZL6qsFreePv}"];
+	Node0x55879fbb0680 -> Node0x55879fb916b0;
+	Node0x55879fb976e0 [shape=record,label="{_ZL9dupStringPKc}"];
+	Node0x55879fb976e0 -> Node0x55879fb9f920;
+	Node0x55879fb976e0 -> Node0x55879fb94bd0;
+	Node0x55879fb976e0 -> Node0x55879fb94e50;
+	Node0x55879fb9f920 [shape=record,label="{strlen}"];
+	Node0x55879fb94e50 [shape=record,label="{strcpy}"];
+	Node0x55879fb82970 [shape=record,label="{calloc}"];
+	Node0x55879fb916b0 [shape=record,label="{free}"];
+}

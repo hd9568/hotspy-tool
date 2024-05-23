@@ -1,0 +1,19 @@
+digraph "CFG for '_ZN9LAMMPS_NS9ReaderXYZ4skipEv' function" {
+	label="CFG for '_ZN9LAMMPS_NS9ReaderXYZ4skipEv' function";
+
+	Node0x55815b8a01b0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %nchunk = alloca i32, align 4\l  %nremain = alloca i64, align 8\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %natoms = getelementptr inbounds %\"class.LAMMPS_NS::ReaderXYZ\", ptr %this1,\l... i32 0, i32 3\l  %0 = load i64, ptr %natoms, align 8\l  store i64 %0, ptr %nremain, align 8\l  br label %while.cond\l}"];
+	Node0x55815b8a01b0 -> Node0x55815b8a0660[tooltip="entry -> while.cond\nProbability 100.00%" ];
+	Node0x55815b8a0660 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{while.cond:\l|  %1 = load i64, ptr %nremain, align 8\l  %tobool = icmp ne i64 %1, 0\l  br i1 %tobool, label %while.body, label %while.end\l|{<s0>T|<s1>F}}"];
+	Node0x55815b8a0660:s0 -> Node0x55815b8a07f0[tooltip="while.cond -> while.body\nProbability 96.88%" ];
+	Node0x55815b8a0660:s1 -> Node0x55815b8a0870[tooltip="while.cond -> while.end\nProbability 3.12%" ];
+	Node0x55815b8a07f0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{while.body:\l|  %2 = load i64, ptr %nremain, align 8\l  %cmp = icmp slt i64 %2, 2147483647\l  br i1 %cmp, label %cond.true, label %cond.false\l|{<s0>T|<s1>F}}"];
+	Node0x55815b8a07f0:s0 -> Node0x55815b8a0b00[tooltip="while.body -> cond.true\nProbability 50.00%" ];
+	Node0x55815b8a07f0:s1 -> Node0x55815b8a0d20[tooltip="while.body -> cond.false\nProbability 50.00%" ];
+	Node0x55815b8a0b00 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{cond.true:\l|  %3 = load i64, ptr %nremain, align 8\l  br label %cond.end\l}"];
+	Node0x55815b8a0b00 -> Node0x55815b8a0ed0[tooltip="cond.true -> cond.end\nProbability 100.00%" ];
+	Node0x55815b8a0d20 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{cond.false:\l|  br label %cond.end\l}"];
+	Node0x55815b8a0d20 -> Node0x55815b8a0ed0[tooltip="cond.false -> cond.end\nProbability 100.00%" ];
+	Node0x55815b8a0ed0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{cond.end:\l|  %cond = phi i64 [ %3, %cond.true ], [ 2147483647, %cond.false ]\l  %conv = trunc i64 %cond to i32\l  store i32 %conv, ptr %nchunk, align 4\l  %4 = load i32, ptr %nchunk, align 4\l  call void @_ZN9LAMMPS_NS9ReaderXYZ10read_linesEi(ptr noundef nonnull align 8\l... dereferenceable(240) %this1, i32 noundef %4)\l  %5 = load i32, ptr %nchunk, align 4\l  %conv2 = sext i32 %5 to i64\l  %6 = load i64, ptr %nremain, align 8\l  %sub = sub nsw i64 %6, %conv2\l  store i64 %sub, ptr %nremain, align 8\l  br label %while.cond, !llvm.loop !6\l}"];
+	Node0x55815b8a0ed0 -> Node0x55815b8a0660[tooltip="cond.end -> while.cond\nProbability 100.00%" ];
+	Node0x55815b8a0870 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{while.end:\l|  ret void\l}"];
+}

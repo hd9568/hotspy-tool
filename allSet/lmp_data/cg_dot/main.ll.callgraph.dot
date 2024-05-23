@@ -1,0 +1,45 @@
+digraph "Call graph: main.ll" {
+	label="Call graph: main.ll";
+
+	Node0x557729f8d070 [shape=record,label="{main}"];
+	Node0x557729f8d070 -> Node0x557729f8efd0;
+	Node0x557729f8d070 -> Node0x557729f8fd40;
+	Node0x557729f8d070 -> Node0x557729f90090;
+	Node0x557729f8d070 -> Node0x557729f91310;
+	Node0x557729f8d070 -> Node0x557729f917b0;
+	Node0x557729f8d070 -> Node0x557729f920e0;
+	Node0x557729f8d070 -> Node0x557729f9df80;
+	Node0x557729f8d070 -> Node0x557729f92750;
+	Node0x557729f8d070 -> Node0x557729f92b80;
+	Node0x557729f8d070 -> Node0x557729f86d70;
+	Node0x557729f8d070 -> Node0x557729f92880;
+	Node0x557729f8d070 -> Node0x557729f8e6f0;
+	Node0x557729f8d070 -> Node0x557729f8e5d0;
+	Node0x557729f8d070 -> Node0x557729f9d8f0;
+	Node0x557729f8d070 -> Node0x557729f9df00;
+	Node0x557729f8d070 -> Node0x557729f9d970;
+	Node0x557729f8efd0 [shape=record,label="{MPI_Init}"];
+	Node0x557729f8fd40 [shape=record,label="{_Znwm}"];
+	Node0x557729f9e000 [shape=record,label="{__gxx_personality_v0}"];
+	Node0x557729f90090 [shape=record,label="{_ZN9LAMMPS_NS6LAMMPSC1EiPPcP19ompi_communicator_t}"];
+	Node0x557729f920e0 [shape=record,label="{_ZdlPv}"];
+	Node0x557729f91310 [shape=record,label="{_ZN9LAMMPS_NS5Input4fileEv}"];
+	Node0x557729f917b0 [shape=record,label="{_ZN9LAMMPS_NS6LAMMPSD1Ev}"];
+	Node0x557729f92750 [shape=record,label="{llvm.eh.typeid.for}"];
+	Node0x557729f92b80 [shape=record,label="{__cxa_begin_catch}"];
+	Node0x557729f86d70 [shape=record,label="{fprintf}"];
+	Node0x557729f92880 [shape=record,label="{_ZL8finalizev}"];
+	Node0x557729f92880 -> Node0x557729f9e150;
+	Node0x557729f92880 -> Node0x557729f9e200;
+	Node0x557729f8e6f0 [shape=record,label="{MPI_Abort}"];
+	Node0x557729f8e5d0 [shape=record,label="{exit}"];
+	Node0x557729f9d8f0 [shape=record,label="{__cxa_end_catch}"];
+	Node0x557729f9df80 [shape=record,label="{__clang_call_terminate}"];
+	Node0x557729f9df80 -> Node0x557729f92b80;
+	Node0x557729f9df80 -> Node0x557729f9e310;
+	Node0x557729f9e310 [shape=record,label="{_ZSt9terminatev}"];
+	Node0x557729f9d970 [shape=record,label="{MPI_Barrier}"];
+	Node0x557729f9df00 [shape=record,label="{MPI_Finalize}"];
+	Node0x557729f9e150 [shape=record,label="{lammps_kokkos_finalize}"];
+	Node0x557729f9e200 [shape=record,label="{lammps_python_finalize}"];
+}

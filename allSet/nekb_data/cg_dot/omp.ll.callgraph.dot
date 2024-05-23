@@ -1,0 +1,17 @@
+digraph "Call graph: omp.ll" {
+	label="Call graph: omp.ll";
+
+	Node0x5610cb5a4540 [shape=record,label="{rzeroi_}"];
+	Node0x5610cb5a45c0 [shape=record,label="{copyi_}"];
+	Node0x5610cb5a4640 [shape=record,label="{glsc3i_}"];
+	Node0x5610cb5a4640 -> Node0x5610cb5a46c0;
+	Node0x5610cb5a4640 -> Node0x5610cb5a4b50;
+	Node0x5610cb5a4bd0 [shape=record,label="{solvemi_}"];
+	Node0x5610cb5a4bd0 -> Node0x5610cb5a45c0;
+	Node0x5610cb5a4c50 [shape=record,label="{add2s1i_}"];
+	Node0x5610cb5a4e20 [shape=record,label="{add2s2i_}"];
+	Node0x5610cb5a4b50 [shape=record,label="{gop_}"];
+	Node0x5610cb5a46c0 [shape=record,label="{llvm.memmove.p0.p0.i64}"];
+	Node0x5610cb5a4ed0 [shape=record,label="{llvm.stacksave.p0}"];
+	Node0x5610cb5a51e0 [shape=record,label="{llvm.stackrestore.p0}"];
+}

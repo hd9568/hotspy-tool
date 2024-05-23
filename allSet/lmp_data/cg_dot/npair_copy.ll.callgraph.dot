@@ -1,0 +1,18 @@
+digraph "Call graph: npair_copy.ll" {
+	label="Call graph: npair_copy.ll";
+
+	Node0x55803c7446c0 [shape=record,label="{_ZN9LAMMPS_NS9NPairCopyC2EPNS_6LAMMPSE}"];
+	Node0x55803c7446c0 -> Node0x55803c744770;
+	Node0x55803c744770 [shape=record,label="{_ZN9LAMMPS_NS5NPairC2EPNS_6LAMMPSE}"];
+	Node0x55803c744820 [shape=record,label="{_ZN9LAMMPS_NS9NPairCopy5buildEPNS_9NeighListE}"];
+	Node0x55803c7448a0 [shape=record,label="{_ZN9LAMMPS_NS9NPairCopyD2Ev}"];
+	Node0x55803c7448a0 -> Node0x55803c747b80;
+	Node0x55803c747c30 [shape=record,label="{_ZN9LAMMPS_NS9NPairCopyD0Ev}"];
+	Node0x55803c747c30 -> Node0x55803c7448a0;
+	Node0x55803c747c30 -> Node0x55803c747e30;
+	Node0x55803c747eb0 [shape=record,label="{_ZN9LAMMPS_NS5NPair18copy_neighbor_infoEv}"];
+	Node0x55803c747f30 [shape=record,label="{_ZN9LAMMPS_NS5NPair13copy_bin_infoEv}"];
+	Node0x55803c747fe0 [shape=record,label="{_ZN9LAMMPS_NS5NPair17copy_stencil_infoEv}"];
+	Node0x55803c747b80 [shape=record,label="{_ZN9LAMMPS_NS5NPairD2Ev}"];
+	Node0x55803c747e30 [shape=record,label="{_ZdlPv}"];
+}

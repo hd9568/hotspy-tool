@@ -1,0 +1,34 @@
+digraph "CFG for '_Z13mpiIAllreducePvS_iiiiPi' function" {
+	label="CFG for '_Z13mpiIAllreducePvS_iiiiPi' function";
+
+	Node0x55ce0029da80 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %sendbuf.addr = alloca ptr, align 8\l  %recvbuf.addr = alloca ptr, align 8\l  %count.addr = alloca i32, align 4\l  %datatype.addr = alloca i32, align 4\l  %operation.addr = alloca i32, align 4\l  %comm.addr = alloca i32, align 4\l  %request.addr = alloca ptr, align 8\l  store ptr %sendbuf, ptr %sendbuf.addr, align 8\l  store ptr %recvbuf, ptr %recvbuf.addr, align 8\l  store i32 %count, ptr %count.addr, align 4\l  store i32 %datatype, ptr %datatype.addr, align 4\l  store i32 %operation, ptr %operation.addr, align 4\l  store i32 %comm, ptr %comm.addr, align 4\l  store ptr %request, ptr %request.addr, align 8\l  %0 = load ptr, ptr %sendbuf.addr, align 8\l  %cmp = icmp eq ptr %0, null\l  br i1 %cmp, label %land.lhs.true, label %lor.lhs.false\l|{<s0>T|<s1>F}}"];
+	Node0x55ce0029da80:s0 -> Node0x55ce0029eaa0[tooltip="entry -> land.lhs.true\nProbability 37.50%" ];
+	Node0x55ce0029da80:s1 -> Node0x55ce0029eb20[tooltip="entry -> lor.lhs.false\nProbability 62.50%" ];
+	Node0x55ce0029eb20 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{lor.lhs.false:\l|  %1 = load ptr, ptr %recvbuf.addr, align 8\l  %cmp1 = icmp eq ptr %1, null\l  br i1 %cmp1, label %land.lhs.true, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x55ce0029eb20:s0 -> Node0x55ce0029eaa0[tooltip="lor.lhs.false -> land.lhs.true\nProbability 37.50%" ];
+	Node0x55ce0029eb20:s1 -> Node0x55ce0029ed80[tooltip="lor.lhs.false -> if.end\nProbability 62.50%" ];
+	Node0x55ce0029eaa0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{land.lhs.true:\l|  %2 = load i32, ptr %count.addr, align 4\l  %cmp2 = icmp sgt i32 %2, 0\l  br i1 %cmp2, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x55ce0029eaa0:s0 -> Node0x55ce0029efd0[tooltip="land.lhs.true -> if.then\nProbability 62.50%" ];
+	Node0x55ce0029eaa0:s1 -> Node0x55ce0029ed80[tooltip="land.lhs.true -> if.end\nProbability 37.50%" ];
+	Node0x55ce0029efd0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{if.then:\l|  %call = call i32 (ptr, ...) @printf(ptr noundef @.str.6, ptr noundef\l... @.str.2, i32 noundef 172)\l  br label %do.body\l}"];
+	Node0x55ce0029efd0 -> Node0x55ce0029f190[tooltip="if.then -> do.body\nProbability 100.00%" ];
+	Node0x55ce0029f190 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{do.body:\l|  %call3 = call i32 (ptr, ...) @printf(ptr noundef @.str.3, ptr noundef\l... @.str.2, i32 noundef 172)\l  br label %do.end\l}"];
+	Node0x55ce0029f190 -> Node0x55ce0029f6e0[tooltip="do.body -> do.end\nProbability 100.00%" ];
+	Node0x55ce0029f6e0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{do.end:\l|  br label %if.end\l}"];
+	Node0x55ce0029f6e0 -> Node0x55ce0029ed80[tooltip="do.end -> if.end\nProbability 100.00%" ];
+	Node0x55ce0029ed80 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  %3 = load i32, ptr %datatype.addr, align 4\l  switch i32 %3, label %sw.default [\l    i32 2, label %sw.bb\l    i32 4, label %sw.bb\l    i32 3, label %sw.bb\l    i32 5, label %sw.bb\l  ]\l|{<s0>def|<s1>2|<s2>4|<s3>3|<s4>5}}"];
+	Node0x55ce0029ed80:s0 -> Node0x55ce0029f8b0[tooltip="if.end -> sw.default\nProbability 20.00%" ];
+	Node0x55ce0029ed80:s1 -> Node0x55ce0029f930[tooltip="if.end -> sw.bb\nProbability 80.00%" ];
+	Node0x55ce0029ed80:s2 -> Node0x55ce0029f930[tooltip="if.end -> sw.bb\nProbability 80.00%" ];
+	Node0x55ce0029ed80:s3 -> Node0x55ce0029f930[tooltip="if.end -> sw.bb\nProbability 80.00%" ];
+	Node0x55ce0029ed80:s4 -> Node0x55ce0029f930[tooltip="if.end -> sw.bb\nProbability 80.00%" ];
+	Node0x55ce0029f930 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{sw.bb:\l|  %4 = load ptr, ptr %recvbuf.addr, align 8\l  %5 = load ptr, ptr %sendbuf.addr, align 8\l  %6 = load i32, ptr %count.addr, align 4\l  %conv = sext i32 %6 to i64\l  %7 = load i32, ptr %datatype.addr, align 4\l  %idxprom = sext i32 %7 to i64\l  %arrayidx = getelementptr inbounds [6 x i64], ptr @_ZL18mpi_datatype_sizes,\l... i64 0, i64 %idxprom\l  %8 = load i64, ptr %arrayidx, align 8\l  %mul = mul i64 %conv, %8\l  call void @llvm.memcpy.p0.p0.i64(ptr align 1 %4, ptr align 1 %5, i64 %mul,\l... i1 false)\l  br label %sw.epilog\l}"];
+	Node0x55ce0029f930 -> Node0x55ce002a0280[tooltip="sw.bb -> sw.epilog\nProbability 100.00%" ];
+	Node0x55ce0029f8b0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470" fontname="Courier",label="{sw.default:\l|  %9 = load i32, ptr %datatype.addr, align 4\l  %call4 = call i32 (ptr, ...) @printf(ptr noundef @.str.7, ptr noundef\l... @.str.2, i32 noundef 183, i32 noundef %9)\l  br label %do.body5\l}"];
+	Node0x55ce0029f8b0 -> Node0x55ce002a0510[tooltip="sw.default -> do.body5\nProbability 100.00%" ];
+	Node0x55ce002a0510 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470" fontname="Courier",label="{do.body5:\l|  %call6 = call i32 (ptr, ...) @printf(ptr noundef @.str.3, ptr noundef\l... @.str.2, i32 noundef 184)\l  br label %do.end7\l}"];
+	Node0x55ce002a0510 -> Node0x55ce002a0760[tooltip="do.body5 -> do.end7\nProbability 100.00%" ];
+	Node0x55ce002a0760 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470" fontname="Courier",label="{do.end7:\l|  br label %sw.epilog\l}"];
+	Node0x55ce002a0760 -> Node0x55ce002a0280[tooltip="do.end7 -> sw.epilog\nProbability 100.00%" ];
+	Node0x55ce002a0280 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{sw.epilog:\l|  ret void\l}"];
+}

@@ -1,0 +1,124 @@
+MODEL BEGINNING!
+All functions have been obtained! All graphs are being parsed:
+Test dataloader's time is 0.0 mins
+This is GPU0: Tesla V100-PCIE-32GB
+All functions have been obtained! All graphs are being parsed:
+The number of function which is only with one node is 4184 ,141 of that is Hot
+4564 is ignored, 68 of which is hot
+dataloader is done! the final number is 4152
+Train dataloader's time is 0.8333333333333334 mins
+========== All training data has already been ready! ===========
+TRAIN_HOT: 0.42052023121387283
+TEST_HOT 0.07865168539325842
+Epoch [1/20], Loss: 0.02810
+| TN=162 FP=2 |
+| FN=14 TP=0 |
+test accuracy: 91.01%
+precision: 0.00%
+recall: 0.00%
+model05111056_0.pth test accuracy: 91.01%
+Epoch [2/20], Loss: 0.01028
+| TN=110 FP=54 |
+| FN=5 TP=9 |
+test accuracy: 66.85%
+precision: 14.29%
+recall: 64.29%
+model05111056_1.pth test accuracy: 66.85%
+Epoch [3/20], Loss: 0.00798
+| TN=105 FP=59 |
+| FN=6 TP=8 |
+test accuracy: 63.48%
+precision: 11.94%
+recall: 57.14%
+model05111056_2.pth test accuracy: 63.48%
+Epoch [4/20], Loss: 0.00347
+| TN=91 FP=73 |
+| FN=3 TP=11 |
+test accuracy: 57.30%
+precision: 13.10%
+recall: 78.57%
+model05111056_3.pth test accuracy: 57.30%
+Epoch [5/20], Loss: 0.00814
+| TN=69 FP=95 |
+| FN=3 TP=11 |
+test accuracy: 44.94%
+precision: 10.38%
+recall: 78.57%
+model05111056_4.pth test accuracy: 44.94%
+Epoch [6/20], Loss: 0.00175
+| TN=94 FP=70 |
+| FN=10 TP=4 |
+test accuracy: 55.06%
+precision: 5.41%
+recall: 28.57%
+model05111056_5.pth test accuracy: 55.06%
+Epoch [7/20], Loss: 0.02138
+| TN=111 FP=53 |
+| FN=11 TP=3 |
+test accuracy: 64.04%
+precision: 5.36%
+recall: 21.43%
+model05111056_6.pth test accuracy: 64.04%
+Epoch [8/20], Loss: 0.00000
+| TN=134 FP=30 |
+| FN=13 TP=1 |
+test accuracy: 75.84%
+precision: 3.23%
+recall: 7.14%
+model05111056_7.pth test accuracy: 75.84%
+Epoch [9/20], Loss: 0.00000
+| TN=83 FP=81 |
+| FN=5 TP=9 |
+test accuracy: 51.69%
+precision: 10.00%
+recall: 64.29%
+model05111056_8.pth test accuracy: 51.69%
+Epoch [10/20], Loss: 0.00000
+| TN=135 FP=29 |
+| FN=13 TP=1 |
+test accuracy: 76.40%
+precision: 3.33%
+recall: 7.14%
+model05111056_9.pth test accuracy: 76.40%
+Epoch [11/20], Loss: 0.00000
+| TN=59 FP=105 |
+| FN=5 TP=9 |
+test accuracy: 38.20%
+precision: 7.89%
+recall: 64.29%
+model05111056_10.pth test accuracy: 38.20%
+Epoch [12/20], Loss: 0.00000
+| TN=92 FP=72 |
+| FN=8 TP=6 |
+test accuracy: 55.06%
+precision: 7.69%
+recall: 42.86%
+model05111056_11.pth test accuracy: 55.06%
+Epoch [13/20], Loss: 0.00000
+| TN=90 FP=74 |
+| FN=5 TP=9 |
+test accuracy: 55.62%
+precision: 10.84%
+recall: 64.29%
+model05111056_12.pth test accuracy: 55.62%
+Epoch [14/20], Loss: 0.00000
+| TN=157 FP=7 |
+| FN=14 TP=0 |
+test accuracy: 88.20%
+precision: 0.00%
+recall: 0.00%
+model05111056_13.pth test accuracy: 88.20%
+Epoch [15/20], Loss: 0.00000
+| TN=157 FP=7 |
+| FN=14 TP=0 |
+test accuracy: 88.20%
+precision: 0.00%
+recall: 0.00%
+model05111056_14.pth test accuracy: 88.20%
+Epoch [16/20], Loss: 0.00000
+| TN=153 FP=11 |
+| FN=14 TP=0 |
+test accuracy: 85.96%
+precision: 0.00%
+recall: 0.00%
+model05111056_15.pth test accuracy: 85.96%

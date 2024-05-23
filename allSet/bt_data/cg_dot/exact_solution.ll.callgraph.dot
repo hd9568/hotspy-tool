@@ -1,0 +1,7 @@
+digraph "Call graph: exact_solution.ll" {
+	label="Call graph: exact_solution.ll";
+
+	Node0x55e40f92fe30 [shape=record,label="{exact_solution_}"];
+	Node0x55e40f92fee0 [shape=record,label="{llvm.stacksave.p0}"];
+	Node0x55e40f92ff60 [shape=record,label="{llvm.stackrestore.p0}"];
+}

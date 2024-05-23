@@ -1,0 +1,5 @@
+digraph "CFG for '_ZNSt16allocator_traitsISaIPcEE8max_sizeERKS1_' function" {
+	label="CFG for '_ZNSt16allocator_traitsISaIPcEE8max_sizeERKS1_' function";
+
+	Node0x561f1654a0c0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %__a.addr = alloca ptr, align 8\l  store ptr %__a, ptr %__a.addr, align 8\l  %0 = load ptr, ptr %__a.addr, align 8\l  %call = call noundef i64 @_ZNK9__gnu_cxx13new_allocatorIPcE8max_sizeEv(ptr\l... noundef nonnull align 1 dereferenceable(1) %0) #13\l  ret i64 %call\l}"];
+}

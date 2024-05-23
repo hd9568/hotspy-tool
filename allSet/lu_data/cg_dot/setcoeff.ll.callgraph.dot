@@ -1,0 +1,7 @@
+digraph "Call graph: setcoeff.ll" {
+	label="Call graph: setcoeff.ll";
+
+	Node0x55bd65cdebc0 [shape=record,label="{setcoeff_}"];
+	Node0x55bd65cdec70 [shape=record,label="{llvm.stacksave.p0}"];
+	Node0x55bd65cdecf0 [shape=record,label="{llvm.stackrestore.p0}"];
+}

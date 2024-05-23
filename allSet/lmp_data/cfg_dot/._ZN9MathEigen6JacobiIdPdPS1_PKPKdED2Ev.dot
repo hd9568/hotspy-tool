@@ -1,0 +1,10 @@
+digraph "CFG for '_ZN9MathEigen6JacobiIdPdPS1_PKPKdED2Ev' function" {
+	label="CFG for '_ZN9MathEigen6JacobiIdPdPS1_PKPKdED2Ev' function";
+
+	Node0x56009246bf00 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %is_preallocated = getelementptr inbounds %\"class.MathEigen::Jacobi.0\", ptr\l... %this1, i32 0, i32 7\l  %0 = load i8, ptr %is_preallocated, align 8\l  %tobool = trunc i8 %0 to i1\l  br i1 %tobool, label %if.end, label %if.then\l|{<s0>T|<s1>F}}"];
+	Node0x56009246bf00:s0 -> Node0x56009246c2a0[tooltip="entry -> if.end\nProbability 50.00%" ];
+	Node0x56009246bf00:s1 -> Node0x56009246c310[tooltip="entry -> if.then\nProbability 50.00%" ];
+	Node0x56009246c310 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.then:\l|  call void @_ZN9MathEigen6JacobiIdPdPS1_PKPKdE7DeallocEv(ptr noundef\l... nonnull align 8 dereferenceable(49) %this1)\l  br label %if.end\l}"];
+	Node0x56009246c310 -> Node0x56009246c2a0[tooltip="if.then -> if.end\nProbability 100.00%" ];
+	Node0x56009246c2a0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  ret void\l}"];
+}

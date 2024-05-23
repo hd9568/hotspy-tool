@@ -1,0 +1,5 @@
+digraph "CFG for 'spec_genrand_real2' function" {
+	label="CFG for 'spec_genrand_real2' function";
+
+	Node0x5614a63e9280 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %call = call i64 @spec_genrand_int32()\l  %conv = uitofp i64 %call to double\l  %mul = fmul double %conv, 0x3DF0000000000000\l  ret double %mul\l}"];
+}

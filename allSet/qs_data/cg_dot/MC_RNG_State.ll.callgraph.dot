@@ -1,0 +1,17 @@
+digraph "Call graph: MC_RNG_State.ll" {
+	label="Call graph: MC_RNG_State.ll";
+
+	Node0x55ca7e4de5c0 [shape=record,label="{_Z27rngSpawn_Random_Number_SeedPm}"];
+	Node0x55ca7e4de5c0 -> Node0x55ca7e4de670;
+	Node0x55ca7e4de5c0 -> Node0x55ca7e4de720;
+	Node0x55ca7e4de670 [shape=record,label="{_ZN12_GLOBAL__N_110hash_stateEm}"];
+	Node0x55ca7e4de670 -> Node0x55ca7e4de820;
+	Node0x55ca7e4de670 -> Node0x55ca7e4de8a0;
+	Node0x55ca7e4de670 -> Node0x55ca7e4de920;
+	Node0x55ca7e4de720 [shape=record,label="{_Z9rngSamplePm}"];
+	Node0x55ca7e4de820 [shape=record,label="{_ZN12_GLOBAL__N_114breakup_uint64EmRjS0_}"];
+	Node0x55ca7e4de8a0 [shape=record,label="{_ZN12_GLOBAL__N_110pseudo_desERjS0_}"];
+	Node0x55ca7e4de8a0 -> Node0x55ca7e4e1c00;
+	Node0x55ca7e4de920 [shape=record,label="{_ZN12_GLOBAL__N_118reconstruct_uint64Ejj}"];
+	Node0x55ca7e4e1c00 [shape=record,label="{llvm.memcpy.p0.p0.i64}"];
+}

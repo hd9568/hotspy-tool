@@ -1,0 +1,22 @@
+digraph "CFG for '_ZN3fmt6v9_lmp6detail9tm_writerINS0_8appenderEcE20on_dec1_week_of_yearENS1_14numeric_systemE' function" {
+	label="CFG for '_ZN3fmt6v9_lmp6detail9tm_writerINS0_8appenderEcE20on_dec1_week_of_yearENS1_14numeric_systemE' function";
+
+	Node0x55841696abe0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %ns.addr = alloca i32, align 4\l  %wday = alloca i32, align 4\l  store ptr %this, ptr %this.addr, align 8\l  store i32 %ns, ptr %ns.addr, align 4\l  %this1 = load ptr, ptr %this.addr, align 8\l  %is_classic_ = getelementptr inbounds\l... %\"class.fmt::v9_lmp::detail::tm_writer\", ptr %this1, i32 0, i32 1\l  %0 = load i8, ptr %is_classic_, align 8\l  %tobool = trunc i8 %0 to i1\l  br i1 %tobool, label %if.then, label %lor.lhs.false\l|{<s0>T|<s1>F}}"];
+	Node0x55841696abe0:s0 -> Node0x55841696b0f0[tooltip="entry -> if.then\nProbability 50.00%" ];
+	Node0x55841696abe0:s1 -> Node0x55841696b160[tooltip="entry -> lor.lhs.false\nProbability 50.00%" ];
+	Node0x55841696b160 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{lor.lhs.false:\l|  %1 = load i32, ptr %ns.addr, align 4\l  %cmp = icmp eq i32 %1, 0\l  br i1 %cmp, label %if.then, label %if.else\l|{<s0>T|<s1>F}}"];
+	Node0x55841696b160:s0 -> Node0x55841696b0f0[tooltip="lor.lhs.false -> if.then\nProbability 37.50%" ];
+	Node0x55841696b160:s1 -> Node0x55841696b3c0[tooltip="lor.lhs.false -> if.else\nProbability 62.50%" ];
+	Node0x55841696b0f0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.then:\l|  %call = call noundef i32\l... @_ZNK3fmt6v9_lmp6detail9tm_writerINS0_8appenderEcE7tm_wdayEv(ptr noundef\l... nonnull align 8 dereferenceable(32) %this1) #18\l  store i32 %call, ptr %wday, align 4\l  %call2 = call noundef i32\l... @_ZNK3fmt6v9_lmp6detail9tm_writerINS0_8appenderEcE7tm_ydayEv(ptr noundef\l... nonnull align 8 dereferenceable(32) %this1) #18\l  %add = add nsw i32 %call2, 7\l  %2 = load i32, ptr %wday, align 4\l  %cmp3 = icmp eq i32 %2, 0\l  br i1 %cmp3, label %cond.true, label %cond.false\l|{<s0>T|<s1>F}}"];
+	Node0x55841696b0f0:s0 -> Node0x55841696b680[tooltip="if.then -> cond.true\nProbability 37.50%" ];
+	Node0x55841696b0f0:s1 -> Node0x55841696bbe0[tooltip="if.then -> cond.false\nProbability 62.50%" ];
+	Node0x55841696b680 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470" fontname="Courier",label="{cond.true:\l|  br label %cond.end\l}"];
+	Node0x55841696b680 -> Node0x55841696bd70[tooltip="cond.true -> cond.end\nProbability 100.00%" ];
+	Node0x55841696bbe0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{cond.false:\l|  %3 = load i32, ptr %wday, align 4\l  %sub = sub nsw i32 %3, 1\l  br label %cond.end\l}"];
+	Node0x55841696bbe0 -> Node0x55841696bd70[tooltip="cond.false -> cond.end\nProbability 100.00%" ];
+	Node0x55841696bd70 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{cond.end:\l|  %cond = phi i32 [ 6, %cond.true ], [ %sub, %cond.false ]\l  %sub4 = sub nsw i32 %add, %cond\l  %div = sdiv i32 %sub4, 7\l  call void @_ZN3fmt6v9_lmp6detail9tm_writerINS0_8appenderEcE6write2Ei(ptr\l... noundef nonnull align 8 dereferenceable(32) %this1, i32 noundef %div)\l  br label %if.end\l}"];
+	Node0x55841696bd70 -> Node0x55841696c0a0[tooltip="cond.end -> if.end\nProbability 100.00%" ];
+	Node0x55841696b3c0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{if.else:\l|  call void\l... @_ZN3fmt6v9_lmp6detail9tm_writerINS0_8appenderEcE16format_localizedEcc(ptr\l... noundef nonnull align 8 dereferenceable(32) %this1, i8 noundef signext 87, i8\l... noundef signext 79)\l  br label %if.end\l}"];
+	Node0x55841696b3c0 -> Node0x55841696c0a0[tooltip="if.else -> if.end\nProbability 100.00%" ];
+	Node0x55841696c0a0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  ret void\l}"];
+}

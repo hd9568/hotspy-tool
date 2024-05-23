@@ -1,0 +1,10 @@
+digraph "CFG for '_Z11DumpToVisitR6Domainiii' function" {
+	label="CFG for '_Z11DumpToVisitR6Domainiii' function";
+
+	Node0x55b20b3ab240 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %domain.addr = alloca ptr, align 8\l  %numFiles.addr = alloca i32, align 4\l  %myRank.addr = alloca i32, align 4\l  %numRanks.addr = alloca i32, align 4\l  store ptr %domain, ptr %domain.addr, align 8\l  store i32 %numFiles, ptr %numFiles.addr, align 4\l  store i32 %myRank, ptr %myRank.addr, align 4\l  store i32 %numRanks, ptr %numRanks.addr, align 4\l  %0 = load i32, ptr %myRank.addr, align 4\l  %cmp = icmp eq i32 %0, 0\l  br i1 %cmp, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x55b20b3ab240:s0 -> Node0x55b20b3ae250[tooltip="entry -> if.then\nProbability 37.50%" ];
+	Node0x55b20b3ab240:s1 -> Node0x55b20b3ae2c0[tooltip="entry -> if.end\nProbability 62.50%" ];
+	Node0x55b20b3ae250 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{if.then:\l|  %call = call i32 (ptr, ...) @printf(ptr noundef @.str)\l  br label %if.end\l}"];
+	Node0x55b20b3ae250 -> Node0x55b20b3ae2c0[tooltip="if.then -> if.end\nProbability 100.00%" ];
+	Node0x55b20b3ae2c0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  ret void\l}"];
+}

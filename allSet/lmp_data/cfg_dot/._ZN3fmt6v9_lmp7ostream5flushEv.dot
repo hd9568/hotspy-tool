@@ -1,0 +1,12 @@
+digraph "CFG for '_ZN3fmt6v9_lmp7ostream5flushEv' function" {
+	label="CFG for '_ZN3fmt6v9_lmp7ostream5flushEv' function";
+
+	Node0x55957a4c9740 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %call = call noundef i64 @_ZNK3fmt6v9_lmp6detail6bufferIcE4sizeEv(ptr\l... noundef nonnull align 8 dereferenceable(32) %this1) #8\l  %cmp = icmp eq i64 %call, 0\l  br i1 %cmp, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x55957a4c9740:s0 -> Node0x55957a4c9ac0[tooltip="entry -> if.then\nProbability 37.50%" ];
+	Node0x55957a4c9740:s1 -> Node0x55957a4c9b30[tooltip="entry -> if.end\nProbability 62.50%" ];
+	Node0x55957a4c9ac0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{if.then:\l|  br label %return\l}"];
+	Node0x55957a4c9ac0 -> Node0x55957a4c9c50[tooltip="if.then -> return\nProbability 100.00%" ];
+	Node0x55957a4c9b30 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.end:\l|  %file_ = getelementptr inbounds %\"class.fmt::v9_lmp::ostream\", ptr %this1,\l... i32 0, i32 1\l  %call2 = call noundef ptr @_ZN3fmt6v9_lmp6detail6bufferIcE4dataEv(ptr\l... noundef nonnull align 8 dereferenceable(32) %this1) #8\l  %call3 = call noundef i64 @_ZNK3fmt6v9_lmp6detail6bufferIcE4sizeEv(ptr\l... noundef nonnull align 8 dereferenceable(32) %this1) #8\l  %call4 = call noundef i64 @_ZN3fmt6v9_lmp4file5writeEPKvm(ptr noundef\l... nonnull align 4 dereferenceable(4) %file_, ptr noundef %call2, i64 noundef\l... %call3)\l  call void @_ZN3fmt6v9_lmp6detail6bufferIcE5clearEv(ptr noundef nonnull align\l... 8 dereferenceable(32) %this1)\l  br label %return\l}"];
+	Node0x55957a4c9b30 -> Node0x55957a4c9c50[tooltip="if.end -> return\nProbability 100.00%" ];
+	Node0x55957a4c9c50 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{return:\l|  ret void\l}"];
+}

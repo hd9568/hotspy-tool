@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN3fmt6v9_lmp6detail12count_digitsEm' function" {
+	label="CFG for '_ZN3fmt6v9_lmp6detail12count_digitsEm' function";
+
+	Node0x556bfec14d60 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %n.addr = alloca i64, align 8\l  store i64 %n, ptr %n.addr, align 8\l  %0 = load i64, ptr %n.addr, align 8\l  %call = call noundef i32 @_ZN3fmt6v9_lmp6detail15do_count_digitsEm(i64\l... noundef %0)\l  ret i32 %call\l}"];
+}

@@ -1,0 +1,5 @@
+digraph "CFG for 'HYPRE_CSRMatrixRead' function" {
+	label="CFG for 'HYPRE_CSRMatrixRead' function";
+
+	Node0x55b87af373f0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %file_name.addr = alloca ptr, align 8\l  store ptr %file_name, ptr %file_name.addr, align 8\l  %0 = load ptr, ptr %file_name.addr, align 8\l  %call = call ptr @hypre_CSRMatrixRead(ptr noundef %0)\l  ret ptr %call\l}"];
+}

@@ -1,0 +1,14 @@
+digraph "CFG for 'hypre_CSRMatrixSumElts' function" {
+	label="CFG for 'hypre_CSRMatrixSumElts' function";
+
+	Node0x55ab6f30cad0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{entry:\l|  %A.addr = alloca ptr, align 8\l  %sum = alloca double, align 8\l  %data = alloca ptr, align 8\l  %num_nonzeros = alloca i32, align 4\l  %i = alloca i32, align 4\l  store ptr %A, ptr %A.addr, align 8\l  store double 0.000000e+00, ptr %sum, align 8\l  %0 = load ptr, ptr %A.addr, align 8\l  %data1 = getelementptr inbounds %struct.hypre_CSRMatrix, ptr %0, i32 0, i32 6\l  %1 = load ptr, ptr %data1, align 8\l  store ptr %1, ptr %data, align 8\l  %2 = load ptr, ptr %A.addr, align 8\l  %num_nonzeros2 = getelementptr inbounds %struct.hypre_CSRMatrix, ptr %2, i32\l... 0, i32 4\l  %3 = load i32, ptr %num_nonzeros2, align 8\l  store i32 %3, ptr %num_nonzeros, align 4\l  store i32 0, ptr %i, align 4\l  br label %for.cond\l}"];
+	Node0x55ab6f30cad0 -> Node0x55ab6f30e3c0[tooltip="entry -> for.cond\nProbability 100.00%" ];
+	Node0x55ab6f30e3c0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.cond:\l|  %4 = load i32, ptr %i, align 4\l  %5 = load i32, ptr %num_nonzeros, align 4\l  %cmp = icmp slt i32 %4, %5\l  br i1 %cmp, label %for.body, label %for.end\l|{<s0>T|<s1>F}}"];
+	Node0x55ab6f30e3c0:s0 -> Node0x55ab6f30e660[tooltip="for.cond -> for.body\nProbability 96.88%" ];
+	Node0x55ab6f30e3c0:s1 -> Node0x55ab6f30e6e0[tooltip="for.cond -> for.end\nProbability 3.12%" ];
+	Node0x55ab6f30e660 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.body:\l|  %6 = load ptr, ptr %data, align 8\l  %7 = load i32, ptr %i, align 4\l  %idxprom = sext i32 %7 to i64\l  %arrayidx = getelementptr inbounds double, ptr %6, i64 %idxprom\l  %8 = load double, ptr %arrayidx, align 8\l  %9 = load double, ptr %sum, align 8\l  %add = fadd double %9, %8\l  store double %add, ptr %sum, align 8\l  br label %for.inc\l}"];
+	Node0x55ab6f30e660 -> Node0x55ab6f30ee50[tooltip="for.body -> for.inc\nProbability 100.00%" ];
+	Node0x55ab6f30ee50 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.inc:\l|  %10 = load i32, ptr %i, align 4\l  %inc = add nsw i32 %10, 1\l  store i32 %inc, ptr %i, align 4\l  br label %for.cond, !llvm.loop !6\l}"];
+	Node0x55ab6f30ee50 -> Node0x55ab6f30e3c0[tooltip="for.inc -> for.cond\nProbability 100.00%" ];
+	Node0x55ab6f30e6e0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{for.end:\l|  %11 = load double, ptr %sum, align 8\l  ret double %11\l}"];
+}

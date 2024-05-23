@@ -1,0 +1,11 @@
+digraph "Call graph: IJMatrix.ll" {
+	label="Call graph: IJMatrix.ll";
+
+	Node0x564773881e10 [shape=record,label="{hypre_IJMatrixGetRowPartitioning}"];
+	Node0x564773881e10 -> Node0x564773881ec0;
+	Node0x564773881ec0 [shape=record,label="{hypre_error_handler}"];
+	Node0x564773882380 [shape=record,label="{hypre_IJMatrixGetColPartitioning}"];
+	Node0x564773882380 -> Node0x564773881ec0;
+	Node0x564773882400 [shape=record,label="{hypre_IJMatrixSetObject}"];
+	Node0x564773882400 -> Node0x564773881ec0;
+}

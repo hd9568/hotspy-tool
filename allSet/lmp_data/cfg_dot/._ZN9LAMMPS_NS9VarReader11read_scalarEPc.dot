@@ -1,0 +1,36 @@
+digraph "CFG for '_ZN9LAMMPS_NS9VarReader11read_scalarEPc' function" {
+	label="CFG for '_ZN9LAMMPS_NS9VarReader11read_scalarEPc' function";
+
+	Node0x556bfe26cc20 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#ca3b3770" fontname="Courier",label="{entry:\l|  %retval = alloca i32, align 4\l  %this.addr = alloca ptr, align 8\l  %str.addr = alloca ptr, align 8\l  %n = alloca i32, align 4\l  %ptr = alloca ptr, align 8\l  store ptr %this, ptr %this.addr, align 8\l  store ptr %str, ptr %str.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %me = getelementptr inbounds %\"class.LAMMPS_NS::VarReader\", ptr %this1, i32\l... 0, i32 3\l  %0 = load i32, ptr %me, align 8\l  %cmp = icmp eq i32 %0, 0\l  br i1 %cmp, label %if.then, label %if.end15\l|{<s0>T|<s1>F}}"];
+	Node0x556bfe26cc20:s0 -> Node0x556bfe26cfd0[tooltip="entry -> if.then\nProbability 37.50%" ];
+	Node0x556bfe26cc20:s1 -> Node0x556bfe26d040[tooltip="entry -> if.end15\nProbability 62.50%" ];
+	Node0x556bfe26cfd0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d0473d70" fontname="Courier",label="{if.then:\l|  br label %while.body\l}"];
+	Node0x556bfe26cfd0 -> Node0x556bfe26d310[tooltip="if.then -> while.body\nProbability 100.00%" ];
+	Node0x556bfe26d310 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{while.body:\l|  %1 = load ptr, ptr %str.addr, align 8\l  %fp = getelementptr inbounds %\"class.LAMMPS_NS::VarReader\", ptr %this1, i32\l... 0, i32 5\l  %2 = load ptr, ptr %fp, align 8\l  %call = call ptr @fgets(ptr noundef %1, i32 noundef 256, ptr noundef %2)\l  store ptr %call, ptr %ptr, align 8\l  %3 = load ptr, ptr %ptr, align 8\l  %tobool = icmp ne ptr %3, null\l  br i1 %tobool, label %if.end, label %if.then2\l|{<s0>T|<s1>F}}"];
+	Node0x556bfe26d310:s0 -> Node0x556bfe26d800[tooltip="while.body -> if.end\nProbability 96.88%" ];
+	Node0x556bfe26d310:s1 -> Node0x556bfe26d870[tooltip="while.body -> if.then2\nProbability 3.12%" ];
+	Node0x556bfe26d870 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{if.then2:\l|  store i32 0, ptr %n, align 4\l  br label %while.end\l}"];
+	Node0x556bfe26d870 -> Node0x556bfe26da10[tooltip="if.then2 -> while.end\nProbability 100.00%" ];
+	Node0x556bfe26d800 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  %4 = load ptr, ptr %ptr, align 8\l  %5 = load ptr, ptr %ptr, align 8\l  %call3 = call i64 @strcspn(ptr noundef %5, ptr noundef @.str.306) #21\l  %arrayidx = getelementptr inbounds i8, ptr %4, i64 %call3\l  store i8 0, ptr %arrayidx, align 1\l  %6 = load ptr, ptr %ptr, align 8\l  %call4 = call i64 @strspn(ptr noundef %6, ptr noundef @.str.307) #21\l  %7 = load ptr, ptr %ptr, align 8\l  %add.ptr = getelementptr inbounds i8, ptr %7, i64 %call4\l  store ptr %add.ptr, ptr %ptr, align 8\l  %8 = load ptr, ptr %ptr, align 8\l  %9 = load ptr, ptr %ptr, align 8\l  %call5 = call i64 @strcspn(ptr noundef %9, ptr noundef @.str.307) #21\l  %arrayidx6 = getelementptr inbounds i8, ptr %8, i64 %call5\l  store i8 0, ptr %arrayidx6, align 1\l  %10 = load ptr, ptr %ptr, align 8\l  %call7 = call i64 @strlen(ptr noundef %10) #21\l  %add = add i64 %call7, 1\l  %conv = trunc i64 %add to i32\l  store i32 %conv, ptr %n, align 4\l  %11 = load i32, ptr %n, align 4\l  %cmp8 = icmp eq i32 %11, 1\l  br i1 %cmp8, label %if.then9, label %if.end10\l|{<s0>T|<s1>F}}"];
+	Node0x556bfe26d800:s0 -> Node0x556bfe26edd0[tooltip="if.end -> if.then9\nProbability 96.88%" ];
+	Node0x556bfe26d800:s1 -> Node0x556bfe26ee20[tooltip="if.end -> if.end10\nProbability 3.12%" ];
+	Node0x556bfe26edd0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.then9:\l|  br label %while.body, !llvm.loop !6\l}"];
+	Node0x556bfe26edd0 -> Node0x556bfe26d310[tooltip="if.then9 -> while.body\nProbability 100.00%" ];
+	Node0x556bfe26ee20 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{if.end10:\l|  br label %while.end\l}"];
+	Node0x556bfe26ee20 -> Node0x556bfe26da10[tooltip="if.end10 -> while.end\nProbability 100.00%" ];
+	Node0x556bfe26da10 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d0473d70" fontname="Courier",label="{while.end:\l|  %12 = load i32, ptr %n, align 4\l  %cmp11 = icmp sgt i32 %12, 0\l  br i1 %cmp11, label %if.then12, label %if.end14\l|{<s0>T|<s1>F}}"];
+	Node0x556bfe26da10:s0 -> Node0x556bfe26f270[tooltip="while.end -> if.then12\nProbability 62.50%" ];
+	Node0x556bfe26da10:s1 -> Node0x556bfe26f2f0[tooltip="while.end -> if.end14\nProbability 37.50%" ];
+	Node0x556bfe26f270 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{if.then12:\l|  %13 = load ptr, ptr %str.addr, align 8\l  %14 = load ptr, ptr %ptr, align 8\l  %15 = load i32, ptr %n, align 4\l  %conv13 = sext i32 %15 to i64\l  call void @llvm.memmove.p0.p0.i64(ptr align 1 %13, ptr align 1 %14, i64\l... %conv13, i1 false)\l  br label %if.end14\l}"];
+	Node0x556bfe26f270 -> Node0x556bfe26f2f0[tooltip="if.then12 -> if.end14\nProbability 100.00%" ];
+	Node0x556bfe26f2f0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d0473d70" fontname="Courier",label="{if.end14:\l|  br label %if.end15\l}"];
+	Node0x556bfe26f2f0 -> Node0x556bfe26d040[tooltip="if.end14 -> if.end15\nProbability 100.00%" ];
+	Node0x556bfe26d040 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#ca3b3770" fontname="Courier",label="{if.end15:\l|  %world = getelementptr inbounds %\"class.LAMMPS_NS::Pointers\", ptr %this1,\l... i32 0, i32 16\l  %16 = load ptr, ptr %world, align 8\l  %17 = load ptr, ptr %16, align 8\l  %call16 = call i32 @MPI_Bcast(ptr noundef %n, i32 noundef 1, ptr noundef\l... @ompi_mpi_int, i32 noundef 0, ptr noundef %17)\l  %18 = load i32, ptr %n, align 4\l  %cmp17 = icmp eq i32 %18, 0\l  br i1 %cmp17, label %if.then18, label %if.end19\l|{<s0>T|<s1>F}}"];
+	Node0x556bfe26d040:s0 -> Node0x556bfe26fed0[tooltip="if.end15 -> if.then18\nProbability 37.50%" ];
+	Node0x556bfe26d040:s1 -> Node0x556bfe26ff20[tooltip="if.end15 -> if.end19\nProbability 62.50%" ];
+	Node0x556bfe26fed0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d0473d70" fontname="Courier",label="{if.then18:\l|  store i32 1, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x556bfe26fed0 -> Node0x556bfe2700c0[tooltip="if.then18 -> return\nProbability 100.00%" ];
+	Node0x556bfe26ff20 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#cc403a70" fontname="Courier",label="{if.end19:\l|  %19 = load ptr, ptr %str.addr, align 8\l  %20 = load i32, ptr %n, align 4\l  %world20 = getelementptr inbounds %\"class.LAMMPS_NS::Pointers\", ptr %this1,\l... i32 0, i32 16\l  %21 = load ptr, ptr %world20, align 8\l  %22 = load ptr, ptr %21, align 8\l  %call21 = call i32 @MPI_Bcast(ptr noundef %19, i32 noundef %20, ptr noundef\l... @ompi_mpi_char, i32 noundef 0, ptr noundef %22)\l  store i32 0, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x556bfe26ff20 -> Node0x556bfe2700c0[tooltip="if.end19 -> return\nProbability 100.00%" ];
+	Node0x556bfe2700c0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#ca3b3770" fontname="Courier",label="{return:\l|  %23 = load i32, ptr %retval, align 4\l  ret i32 %23\l}"];
+}

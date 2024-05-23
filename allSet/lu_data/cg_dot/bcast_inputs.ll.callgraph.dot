@@ -1,0 +1,9 @@
+digraph "Call graph: bcast_inputs.ll" {
+	label="Call graph: bcast_inputs.ll";
+
+	Node0x556bee3b5bf0 [shape=record,label="{bcast_inputs_}"];
+	Node0x556bee3b5bf0 -> Node0x556bee3b5ca0;
+	Node0x556bee3b6540 [shape=record,label="{llvm.stacksave.p0}"];
+	Node0x556bee3b65c0 [shape=record,label="{llvm.stackrestore.p0}"];
+	Node0x556bee3b5ca0 [shape=record,label="{mpi_bcast_}"];
+}

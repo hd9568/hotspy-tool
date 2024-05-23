@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN12_GLOBAL__N_114breakup_uint64EmRjS0_' function" {
+	label="CFG for '_ZN12_GLOBAL__N_114breakup_uint64EmRjS0_' function";
+
+	Node0x556a6cdc4b80 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %uint64_in.addr = alloca i64, align 8\l  %front_bits.addr = alloca ptr, align 8\l  %back_bits.addr = alloca ptr, align 8\l  store i64 %uint64_in, ptr %uint64_in.addr, align 8\l  store ptr %front_bits, ptr %front_bits.addr, align 8\l  store ptr %back_bits, ptr %back_bits.addr, align 8\l  %0 = load i64, ptr %uint64_in.addr, align 8\l  %shr = lshr i64 %0, 32\l  %conv = trunc i64 %shr to i32\l  %1 = load ptr, ptr %front_bits.addr, align 8\l  store i32 %conv, ptr %1, align 4\l  %2 = load i64, ptr %uint64_in.addr, align 8\l  %and = and i64 %2, 4294967295\l  %conv1 = trunc i64 %and to i32\l  %3 = load ptr, ptr %back_bits.addr, align 8\l  store i32 %conv1, ptr %3, align 4\l  ret void\l}"];
+}

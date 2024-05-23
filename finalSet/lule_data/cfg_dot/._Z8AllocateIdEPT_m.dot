@@ -1,0 +1,5 @@
+digraph "CFG for '_Z8AllocateIdEPT_m' function" {
+	label="CFG for '_Z8AllocateIdEPT_m' function";
+
+	Node0x561418b8a770 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %size.addr = alloca i64, align 8\l  store i64 %size, ptr %size.addr, align 8\l  %0 = load i64, ptr %size.addr, align 8\l  %mul = mul i64 8, %0\l  %call = call noalias ptr @malloc(i64 noundef %mul) #12\l  ret ptr %call\l}"];
+}

@@ -1,0 +1,17 @@
+digraph "Call graph: sarray_sort_test.ll" {
+	label="Call graph: sarray_sort_test.ll";
+
+	Node0x55e1b931c420 [shape=record,label="{main}"];
+	Node0x55e1b931c420 -> Node0x55e1b932dd80;
+	Node0x55e1b931c420 -> Node0x55e1b932de00;
+	Node0x55e1b931c420 -> Node0x55e1b931cc40;
+	Node0x55e1b931c420 -> Node0x55e1b931cc00;
+	Node0x55e1b931c420 -> Node0x55e1b931cb80;
+	Node0x55e1b931c420 -> Node0x55e1b931cb00;
+	Node0x55e1b932dd80 [shape=record,label="{llvm.memset.p0.i64}"];
+	Node0x55e1b932de00 [shape=record,label="{rand}"];
+	Node0x55e1b931cb00 [shape=record,label="{sortp_ui}"];
+	Node0x55e1b931cb80 [shape=record,label="{sarray_permute_buf_}"];
+	Node0x55e1b931cc00 [shape=record,label="{printf}"];
+	Node0x55e1b931cc40 [shape=record,label="{free}"];
+}

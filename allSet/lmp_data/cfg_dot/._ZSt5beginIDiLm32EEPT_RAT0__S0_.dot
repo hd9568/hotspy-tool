@@ -1,0 +1,5 @@
+digraph "CFG for '_ZSt5beginIDiLm32EEPT_RAT0__S0_' function" {
+	label="CFG for '_ZSt5beginIDiLm32EEPT_RAT0__S0_' function";
+
+	Node0x5584169ca890 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %__arr.addr = alloca ptr, align 8\l  store ptr %__arr, ptr %__arr.addr, align 8\l  %0 = load ptr, ptr %__arr.addr, align 8\l  %arraydecay = getelementptr inbounds [32 x i32], ptr %0, i64 0, i64 0\l  ret ptr %arraydecay\l}"];
+}

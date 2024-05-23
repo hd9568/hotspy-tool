@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN3fmt6v9_lmp6detail9dragonbox14cache_accessorIfE42compute_round_up_for_shorter_interval_caseERKmi' function" {
+	label="CFG for '_ZN3fmt6v9_lmp6detail9dragonbox14cache_accessorIfE42compute_round_up_for_shorter_interval_caseERKmi' function";
+
+	Node0x55fec37421f0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %cache.addr = alloca ptr, align 8\l  %beta.addr = alloca i32, align 4\l  store ptr %cache, ptr %cache.addr, align 8\l  store i32 %beta, ptr %beta.addr, align 4\l  %0 = load ptr, ptr %cache.addr, align 8\l  %1 = load i64, ptr %0, align 8\l  %call = call noundef i32 @_ZN3fmt6v9_lmp6detail20num_significand_bitsIfEEiv()\l  %sub = sub nsw i32 64, %call\l  %sub1 = sub nsw i32 %sub, 2\l  %2 = load i32, ptr %beta.addr, align 4\l  %sub2 = sub nsw i32 %sub1, %2\l  %sh_prom = zext i32 %sub2 to i64\l  %shr = lshr i64 %1, %sh_prom\l  %conv = trunc i64 %shr to i32\l  %add = add i32 %conv, 1\l  %div = udiv i32 %add, 2\l  ret i32 %div\l}"];
+}

@@ -1,0 +1,22 @@
+digraph "CFG for '_ZN9LAMMPS_NS6CiteMeD2Ev' function" {
+	label="CFG for '_ZN9LAMMPS_NS6CiteMeD2Ev' function";
+
+	Node0x5634656fcc70 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  store ptr getelementptr inbounds (\{ [4 x ptr] \}, ptr\l... @_ZTVN9LAMMPS_NS6CiteMeE, i32 0, inrange i32 0, i32 2), ptr %this1, align 8\l  invoke void @_ZN9LAMMPS_NS6CiteMe5flushEv(ptr noundef nonnull align 8\l... dereferenceable(304) %this1)\l          to label %invoke.cont unwind label %terminate.lpad\l}"];
+	Node0x5634656fcc70 -> Node0x5634656fd0e0[tooltip="entry -> invoke.cont\nProbability 100.00%" ];
+	Node0x5634656fcc70 -> Node0x5634656fd130[tooltip="entry -> terminate.lpad\nProbability 0.00%" ];
+	Node0x5634656fd0e0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{invoke.cont:\l|  %cs = getelementptr inbounds %\"class.LAMMPS_NS::CiteMe\", ptr %this1, i32\l... 0, i32 7\l  %0 = load ptr, ptr %cs, align 8\l  %isnull = icmp eq ptr %0, null\l  br i1 %isnull, label %delete.end, label %delete.notnull\l|{<s0>T|<s1>F}}"];
+	Node0x5634656fd0e0:s0 -> Node0x5634656fd440[tooltip="invoke.cont -> delete.end\nProbability 37.50%" ];
+	Node0x5634656fd0e0:s1 -> Node0x5634656fd490[tooltip="invoke.cont -> delete.notnull\nProbability 62.50%" ];
+	Node0x5634656fd490 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{delete.notnull:\l|  call void @_ZNSt3setImSt4lessImESaImEED2Ev(ptr noundef nonnull align 8\l... dereferenceable(48) %0) #12\l  call void @_ZdlPv(ptr noundef %0) #13\l  br label %delete.end\l}"];
+	Node0x5634656fd490 -> Node0x5634656fd440[tooltip="delete.notnull -> delete.end\nProbability 100.00%" ];
+	Node0x5634656fd440 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{delete.end:\l|  %fp = getelementptr inbounds %\"class.LAMMPS_NS::CiteMe\", ptr %this1, i32\l... 0, i32 1\l  %1 = load ptr, ptr %fp, align 8\l  %tobool = icmp ne ptr %1, null\l  br i1 %tobool, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x5634656fd440:s0 -> Node0x5634656fdbc0[tooltip="delete.end -> if.then\nProbability 62.50%" ];
+	Node0x5634656fd440:s1 -> Node0x5634656fddd0[tooltip="delete.end -> if.end\nProbability 37.50%" ];
+	Node0x5634656fdbc0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.then:\l|  %fp2 = getelementptr inbounds %\"class.LAMMPS_NS::CiteMe\", ptr %this1, i32\l... 0, i32 1\l  %2 = load ptr, ptr %fp2, align 8\l  %call = invoke i32 @fclose(ptr noundef %2)\l          to label %invoke.cont3 unwind label %terminate.lpad\l}"];
+	Node0x5634656fdbc0 -> Node0x5634656fe0b0[tooltip="if.then -> invoke.cont3\nProbability 100.00%" ];
+	Node0x5634656fdbc0 -> Node0x5634656fd130[tooltip="if.then -> terminate.lpad\nProbability 0.00%" ];
+	Node0x5634656fe0b0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{invoke.cont3:\l|  br label %if.end\l}"];
+	Node0x5634656fe0b0 -> Node0x5634656fddd0[tooltip="invoke.cont3 -> if.end\nProbability 100.00%" ];
+	Node0x5634656fddd0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  %logbuffer = getelementptr inbounds %\"class.LAMMPS_NS::CiteMe\", ptr\l... %this1, i32 0, i32 6\l  call void @_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEED1Ev(ptr\l... noundef nonnull align 8 dereferenceable(32) %logbuffer) #12\l  %scrbuffer = getelementptr inbounds %\"class.LAMMPS_NS::CiteMe\", ptr %this1,\l... i32 0, i32 5\l  call void @_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEED1Ev(ptr\l... noundef nonnull align 8 dereferenceable(32) %scrbuffer) #12\l  %citefile = getelementptr inbounds %\"class.LAMMPS_NS::CiteMe\", ptr %this1,\l... i32 0, i32 2\l  call void @_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEED1Ev(ptr\l... noundef nonnull align 8 dereferenceable(32) %citefile) #12\l  call void @_ZN9LAMMPS_NS8PointersD2Ev(ptr noundef nonnull align 8\l... dereferenceable(184) %this1) #12\l  ret void\l}"];
+	Node0x5634656fd130 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f6bfa670" fontname="Courier",label="{terminate.lpad:\l|  %3 = landingpad \{ ptr, i32 \}\l          catch ptr null\l  %4 = extractvalue \{ ptr, i32 \} %3, 0\l  call void @__clang_call_terminate(ptr %4) #14\l  unreachable\l}"];
+}

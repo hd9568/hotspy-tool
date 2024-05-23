@@ -1,0 +1,13 @@
+digraph "CFG for '_ZL13matchalphanumc' function" {
+	label="CFG for '_ZL13matchalphanumc' function";
+
+	Node0x5584167cbc80 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %c.addr = alloca i8, align 1\l  store i8 %c, ptr %c.addr, align 1\l  %0 = load i8, ptr %c.addr, align 1\l  %conv = sext i8 %0 to i32\l  %cmp = icmp eq i32 %conv, 95\l  br i1 %cmp, label %lor.end, label %lor.lhs.false\l|{<s0>T|<s1>F}}"];
+	Node0x5584167cbc80:s0 -> Node0x5584167cbf30[tooltip="entry -> lor.end\nProbability 50.00%" ];
+	Node0x5584167cbc80:s1 -> Node0x5584167cbfa0[tooltip="entry -> lor.lhs.false\nProbability 50.00%" ];
+	Node0x5584167cbfa0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{lor.lhs.false:\l|  %1 = load i8, ptr %c.addr, align 1\l  %call = call noundef i32 @_ZL10matchalphac(i8 noundef signext %1)\l  %tobool = icmp ne i32 %call, 0\l  br i1 %tobool, label %lor.end, label %lor.rhs\l|{<s0>T|<s1>F}}"];
+	Node0x5584167cbfa0:s0 -> Node0x5584167cbf30[tooltip="lor.lhs.false -> lor.end\nProbability 62.50%" ];
+	Node0x5584167cbfa0:s1 -> Node0x5584167cc3b0[tooltip="lor.lhs.false -> lor.rhs\nProbability 37.50%" ];
+	Node0x5584167cc3b0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470" fontname="Courier",label="{lor.rhs:\l|  %2 = load i8, ptr %c.addr, align 1\l  %call1 = call noundef i32 @_ZL10matchdigitc(i8 noundef signext %2)\l  %tobool2 = icmp ne i32 %call1, 0\l  br label %lor.end\l}"];
+	Node0x5584167cc3b0 -> Node0x5584167cbf30[tooltip="lor.rhs -> lor.end\nProbability 100.00%" ];
+	Node0x5584167cbf30 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{lor.end:\l|  %3 = phi i1 [ true, %lor.lhs.false ], [ true, %entry ], [ %tobool2,\l... %lor.rhs ]\l  %conv3 = zext i1 %3 to i32\l  ret i32 %conv3\l}"];
+}

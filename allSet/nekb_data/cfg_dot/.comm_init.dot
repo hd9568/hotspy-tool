@@ -1,0 +1,5 @@
+digraph "CFG for 'comm_init' function" {
+	label="CFG for 'comm_init' function";
+
+	Node0x55c4aa6c9db0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %c.addr = alloca ptr, align 8\l  %ce.addr = alloca i32, align 4\l  store ptr %c, ptr %c.addr, align 8\l  store i32 %ce, ptr %ce.addr, align 4\l  %0 = load ptr, ptr %c.addr, align 8\l  %id = getelementptr inbounds %struct.comm, ptr %0, i32 0, i32 0\l  store i32 0, ptr %id, align 4\l  %1 = load ptr, ptr %c.addr, align 8\l  %np = getelementptr inbounds %struct.comm, ptr %1, i32 0, i32 1\l  store i32 1, ptr %np, align 4\l  ret void\l}"];
+}

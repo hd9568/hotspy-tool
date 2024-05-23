@@ -1,0 +1,15 @@
+digraph "Call graph: subdomain.ll" {
+	label="Call graph: subdomain.ll";
+
+	Node0x562b9f145c60 [shape=record,label="{subdomain_}"];
+	Node0x562b9f145c60 -> Node0x562b9f145d10;
+	Node0x562b9f145c60 -> Node0x562b9f1461d0;
+	Node0x562b9f145c60 -> Node0x562b9f146420;
+	Node0x562b9f145c60 -> Node0x562b9f146250;
+	Node0x562b9f145d10 [shape=record,label="{_FortranAioBeginExternalFormattedOutput}"];
+	Node0x562b9f1461d0 [shape=record,label="{_FortranAioOutputInteger32}"];
+	Node0x562b9f146250 [shape=record,label="{_FortranAioEndIoStatement}"];
+	Node0x562b9f146420 [shape=record,label="{mpi_abort_}"];
+	Node0x562b9f146790 [shape=record,label="{llvm.stacksave.p0}"];
+	Node0x562b9f146810 [shape=record,label="{llvm.stackrestore.p0}"];
+}

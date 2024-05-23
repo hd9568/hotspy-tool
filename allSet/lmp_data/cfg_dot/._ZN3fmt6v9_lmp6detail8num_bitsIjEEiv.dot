@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN3fmt6v9_lmp6detail8num_bitsIjEEiv' function" {
+	label="CFG for '_ZN3fmt6v9_lmp6detail8num_bitsIjEEiv' function";
+
+	Node0x556bfec793c0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  ret i32 32\l}"];
+}

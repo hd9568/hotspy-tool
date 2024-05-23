@@ -1,0 +1,5 @@
+digraph "CFG for 'mpi_group_free_' function" {
+	label="CFG for 'mpi_group_free_' function";
+
+	Node0x5560a31d8ec0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{0:\l|  ret void\l}"];
+}

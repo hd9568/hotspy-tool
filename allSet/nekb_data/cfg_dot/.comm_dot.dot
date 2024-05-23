@@ -1,0 +1,5 @@
+digraph "CFG for 'comm_dot' function" {
+	label="CFG for 'comm_dot' function";
+
+	Node0x5645b07f0180 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %comm.addr = alloca ptr, align 8\l  %v.addr = alloca ptr, align 8\l  %w.addr = alloca ptr, align 8\l  %n.addr = alloca i32, align 4\l  %s = alloca double, align 8\l  %b = alloca double, align 8\l  store ptr %comm, ptr %comm.addr, align 8\l  store ptr %v, ptr %v.addr, align 8\l  store ptr %w, ptr %w.addr, align 8\l  store i32 %n, ptr %n.addr, align 4\l  %0 = load ptr, ptr %v.addr, align 8\l  %1 = load ptr, ptr %w.addr, align 8\l  %2 = load i32, ptr %n.addr, align 4\l  %call = call double @tensor_dot(ptr noundef %0, ptr noundef %1, i32 noundef\l... %2)\l  store double %call, ptr %s, align 8\l  %3 = load ptr, ptr %comm.addr, align 8\l  call void @comm_allreduce(ptr noundef %3, i32 noundef 0, i32 noundef 0, ptr\l... noundef %s, i32 noundef 1, ptr noundef %b)\l  %4 = load double, ptr %s, align 8\l  ret double %4\l}"];
+}

@@ -1,0 +1,5 @@
+digraph "CFG for '_ZNSt16allocator_traitsISaISt13_Rb_tree_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE22CrossSectionParametersEEEE37select_on_container_copy_constructionERKSC_' function" {
+	label="CFG for '_ZNSt16allocator_traitsISaISt13_Rb_tree_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE22CrossSectionParametersEEEE37select_on_container_copy_constructionERKSC_' function";
+
+	Node0x5642719fa830 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %result.ptr = alloca ptr, align 8\l  %__rhs.addr = alloca ptr, align 8\l  store ptr %agg.result, ptr %result.ptr, align 8\l  store ptr %__rhs, ptr %__rhs.addr, align 8\l  %0 = load ptr, ptr %__rhs.addr, align 8\l  call void\l... @_ZNSaISt13_Rb_tree_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIc\l...ESaIcEEE22CrossSectionParametersEEEC2ERKSB_(ptr noundef nonnull align 1\l... dereferenceable(1) %agg.result, ptr noundef nonnull align 1\l... dereferenceable(1) %0) #3\l  ret void\l}"];
+}

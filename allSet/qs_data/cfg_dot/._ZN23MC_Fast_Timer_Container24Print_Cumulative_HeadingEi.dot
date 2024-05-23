@@ -1,0 +1,10 @@
+digraph "CFG for '_ZN23MC_Fast_Timer_Container24Print_Cumulative_HeadingEi' function" {
+	label="CFG for '_ZN23MC_Fast_Timer_Container24Print_Cumulative_HeadingEi' function";
+
+	Node0x55feb2d3ce50 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %mpi_rank.addr = alloca i32, align 4\l  store ptr %this, ptr %this.addr, align 8\l  store i32 %mpi_rank, ptr %mpi_rank.addr, align 4\l  %this1 = load ptr, ptr %this.addr, align 8\l  %0 = load i32, ptr %mpi_rank.addr, align 4\l  %cmp = icmp eq i32 %0, 0\l  br i1 %cmp, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x55feb2d3ce50:s0 -> Node0x55feb2d3d470[tooltip="entry -> if.then\nProbability 37.50%" ];
+	Node0x55feb2d3ce50:s1 -> Node0x55feb2d3d4e0[tooltip="entry -> if.end\nProbability 62.50%" ];
+	Node0x55feb2d3d470 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{if.then:\l|  %1 = load ptr, ptr @stdout, align 8\l  %call = call i32 (ptr, ptr, ...) @fprintf(ptr noundef %1, ptr noundef\l... @.str.7, ptr noundef @.str.8, ptr noundef @.str.22, ptr noundef @.str.22, ptr\l... noundef @.str.22, ptr noundef @.str.22, ptr noundef @.str.22, ptr noundef\l... @.str.22)\l  %2 = load ptr, ptr @stdout, align 8\l  %call2 = call i32 (ptr, ptr, ...) @fprintf(ptr noundef %2, ptr noundef\l... @.str.10, ptr noundef @.str.11, ptr noundef @.str.12, ptr noundef @.str.13,\l... ptr noundef @.str.13, ptr noundef @.str.13, ptr noundef @.str.13, ptr noundef\l... @.str.14)\l  %3 = load ptr, ptr @stdout, align 8\l  %call3 = call i32 (ptr, ptr, ...) @fprintf(ptr noundef %3, ptr noundef\l... @.str.10, ptr noundef @.str.15, ptr noundef @.str.16, ptr noundef @.str.17,\l... ptr noundef @.str.18, ptr noundef @.str.19, ptr noundef @.str.20, ptr noundef\l... @.str.21)\l  br label %if.end\l}"];
+	Node0x55feb2d3d470 -> Node0x55feb2d3d4e0[tooltip="if.then -> if.end\nProbability 100.00%" ];
+	Node0x55feb2d3d4e0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  ret void\l}"];
+}

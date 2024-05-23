@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN9LAMMPS_NS11FixExternal17set_energy_globalEd' function" {
+	label="CFG for '_ZN9LAMMPS_NS11FixExternal17set_energy_globalEd' function";
+
+	Node0x5634c6549510 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %caller_energy.addr = alloca double, align 8\l  store ptr %this, ptr %this.addr, align 8\l  store double %caller_energy, ptr %caller_energy.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %0 = load double, ptr %caller_energy.addr, align 8\l  %user_energy = getelementptr inbounds %\"class.LAMMPS_NS::FixExternal\", ptr\l... %this1, i32 0, i32 8\l  store double %0, ptr %user_energy, align 8\l  ret void\l}"];
+}

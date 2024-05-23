@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN11MC_LocationC2Eiii' function" {
+	label="CFG for '_ZN11MC_LocationC2Eiii' function";
+
+	Node0x5606e006ef20 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %adomain.addr = alloca i32, align 4\l  %acell.addr = alloca i32, align 4\l  %afacet.addr = alloca i32, align 4\l  store ptr %this, ptr %this.addr, align 8\l  store i32 %adomain, ptr %adomain.addr, align 4\l  store i32 %acell, ptr %acell.addr, align 4\l  store i32 %afacet, ptr %afacet.addr, align 4\l  %this1 = load ptr, ptr %this.addr, align 8\l  %domain = getelementptr inbounds %class.MC_Location, ptr %this1, i32 0, i32 0\l  %0 = load i32, ptr %adomain.addr, align 4\l  store i32 %0, ptr %domain, align 4\l  %cell = getelementptr inbounds %class.MC_Location, ptr %this1, i32 0, i32 1\l  %1 = load i32, ptr %acell.addr, align 4\l  store i32 %1, ptr %cell, align 4\l  %facet = getelementptr inbounds %class.MC_Location, ptr %this1, i32 0, i32 2\l  %2 = load i32, ptr %afacet.addr, align 4\l  store i32 %2, ptr %facet, align 4\l  ret void\l}"];
+}

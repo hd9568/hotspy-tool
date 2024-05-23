@@ -1,0 +1,9 @@
+digraph "Call graph: setiv.ll" {
+	label="Call graph: setiv.ll";
+
+	Node0x55d223384860 [shape=record,label="{setiv_}"];
+	Node0x55d223384860 -> Node0x55d22337b4c0;
+	Node0x55d22337b4c0 [shape=record,label="{exact_}"];
+	Node0x55d22337b6c0 [shape=record,label="{llvm.stacksave.p0}"];
+	Node0x55d22337b740 [shape=record,label="{llvm.stackrestore.p0}"];
+}

@@ -1,0 +1,12 @@
+digraph "CFG for 'add2s1i_' function" {
+	label="CFG for 'add2s1i_' function";
+
+	Node0x55794288d830 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{6:\l|  %7 = alloca i32, i64 1, align 4\l  %8 = load i32, ptr %3, align 4\l  %9 = sext i32 %8 to i64\l  %10 = icmp sgt i64 %9, 0\l  %11 = select i1 %10, i64 %9, i64 0\l  %12 = load i32, ptr %3, align 4\l  %13 = sext i32 %12 to i64\l  %14 = icmp sgt i64 %13, 0\l  %15 = select i1 %14, i64 %13, i64 0\l  %16 = load i32, ptr %4, align 4\l  %17 = sext i32 %16 to i64\l  %18 = load i32, ptr %5, align 4\l  %19 = sext i32 %18 to i64\l  %20 = trunc i64 %17 to i32\l  %21 = sub i64 %19, %17\l  %22 = add i64 %21, 1\l  br label %23\l}"];
+	Node0x55794288d830 -> Node0x55794288e2e0[tooltip="6 -> 23\nProbability 100.00%" ];
+	Node0x55794288e2e0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{23:\l|  %24 = phi i32 [ %48, %27 ], [ %20, %6 ]\l  %25 = phi i64 [ %49, %27 ], [ %22, %6 ]\l  %26 = icmp sgt i64 %25, 0\l  br i1 %26, label %27, label %50\l|{<s0>T|<s1>F}}"];
+	Node0x55794288e2e0:s0 -> Node0x55794288e3d0[tooltip="23 -> 27\nProbability 96.88%" ];
+	Node0x55794288e2e0:s1 -> Node0x55794288e660[tooltip="23 -> 50\nProbability 3.12%" ];
+	Node0x55794288e3d0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{27:\l|  store i32 %24, ptr %7, align 4\l  %28 = load float, ptr %2, align 4\l  %29 = load i32, ptr %7, align 4\l  %30 = sext i32 %29 to i64\l  %31 = sub nsw i64 %30, 1\l  %32 = mul nsw i64 %31, 1\l  %33 = mul nsw i64 %32, 1\l  %34 = add nsw i64 %33, 0\l  %35 = mul nsw i64 1, %11\l  %36 = getelementptr float, ptr %0, i64 %34\l  %37 = load float, ptr %36, align 4\l  %38 = fmul contract float %28, %37\l  %39 = sub nsw i64 %30, 1\l  %40 = mul nsw i64 %39, 1\l  %41 = mul nsw i64 %40, 1\l  %42 = add nsw i64 %41, 0\l  %43 = mul nsw i64 1, %15\l  %44 = getelementptr float, ptr %1, i64 %42\l  %45 = load float, ptr %44, align 4\l  %46 = fadd contract float %38, %45\l  store float %46, ptr %36, align 4\l  %47 = load i32, ptr %7, align 4\l  %48 = add i32 %47, 1\l  %49 = sub i64 %25, 1\l  br label %23\l}"];
+	Node0x55794288e3d0 -> Node0x55794288e2e0[tooltip="27 -> 23\nProbability 100.00%" ];
+	Node0x55794288e660 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{50:\l|  store i32 %24, ptr %7, align 4\l  ret void\l}"];
+}

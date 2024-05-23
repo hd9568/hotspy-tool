@@ -1,0 +1,5 @@
+digraph "CFG for '_Z6CkMyPev' function" {
+	label="CFG for '_Z6CkMyPev' function";
+
+	Node0x5634d8729270 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  ret i32 1\l}"];
+}

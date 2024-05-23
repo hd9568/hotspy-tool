@@ -1,0 +1,10 @@
+digraph "CFG for 'hypre_IJVectorSetMaxOffProcElmtsPar' function" {
+	label="CFG for 'hypre_IJVectorSetMaxOffProcElmtsPar' function";
+
+	Node0x563aadd3fc60 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %vector.addr = alloca ptr, align 8\l  %max_off_proc_elmts.addr = alloca i32, align 4\l  %aux_vector = alloca ptr, align 8\l  store ptr %vector, ptr %vector.addr, align 8\l  store i32 %max_off_proc_elmts, ptr %max_off_proc_elmts.addr, align 4\l  %0 = load ptr, ptr %vector.addr, align 8\l  %translator = getelementptr inbounds %struct.hypre_IJVector_struct, ptr %0,\l... i32 0, i32 4\l  %1 = load ptr, ptr %translator, align 8\l  store ptr %1, ptr %aux_vector, align 8\l  %2 = load ptr, ptr %aux_vector, align 8\l  %tobool = icmp ne ptr %2, null\l  br i1 %tobool, label %if.end, label %if.then\l|{<s0>T|<s1>F}}"];
+	Node0x563aadd3fc60:s0 -> Node0x563aadd400d0[tooltip="entry -> if.end\nProbability 62.50%" ];
+	Node0x563aadd3fc60:s1 -> Node0x563aadd40120[tooltip="entry -> if.then\nProbability 37.50%" ];
+	Node0x563aadd40120 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{if.then:\l|  %call = call i32 @hypre_AuxParVectorCreate(ptr noundef %aux_vector)\l  %3 = load ptr, ptr %aux_vector, align 8\l  %4 = load ptr, ptr %vector.addr, align 8\l  %translator1 = getelementptr inbounds %struct.hypre_IJVector_struct, ptr %4,\l... i32 0, i32 4\l  store ptr %3, ptr %translator1, align 8\l  br label %if.end\l}"];
+	Node0x563aadd40120 -> Node0x563aadd400d0[tooltip="if.then -> if.end\nProbability 100.00%" ];
+	Node0x563aadd400d0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  %5 = load i32, ptr %max_off_proc_elmts.addr, align 4\l  %6 = load ptr, ptr %aux_vector, align 8\l  %max_off_proc_elmts2 = getelementptr inbounds %struct.hypre_AuxParVector,\l... ptr %6, i32 0, i32 0\l  store i32 %5, ptr %max_off_proc_elmts2, align 8\l  %7 = load i32, ptr @hypre__global_error, align 4\l  ret i32 %7\l}"];
+}

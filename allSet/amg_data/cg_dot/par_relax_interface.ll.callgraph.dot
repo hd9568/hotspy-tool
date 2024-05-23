@@ -1,0 +1,7 @@
+digraph "Call graph: par_relax_interface.ll" {
+	label="Call graph: par_relax_interface.ll";
+
+	Node0x558d1e661b00 [shape=record,label="{hypre_BoomerAMGRelaxIF}"];
+	Node0x558d1e661b00 -> Node0x558d1e661bb0;
+	Node0x558d1e661bb0 [shape=record,label="{hypre_BoomerAMGRelax}"];
+}

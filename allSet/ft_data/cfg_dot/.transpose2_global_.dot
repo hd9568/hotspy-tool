@@ -1,0 +1,15 @@
+digraph "CFG for 'transpose2_global_' function" {
+	label="CFG for 'transpose2_global_' function";
+
+	Node0x55cdf5d95a20 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{2:\l|  %3 = alloca i32, i64 1, align 4\l  %4 = alloca i32, i64 1, align 4\l  %5 = alloca i32, i64 1, align 4\l  %6 = alloca i32, i64 1, align 4\l  %7 = alloca i32, i64 1, align 4\l  %8 = load i32, ptr getelementptr (i8, ptr @dbg_, i64 8), align 4\l  %9 = icmp ne i32 %8, 0\l  br i1 %9, label %10, label %11\l|{<s0>T|<s1>F}}"];
+	Node0x55cdf5d95a20:s0 -> Node0x55cdf5d95d80[tooltip="2 -> 10\nProbability 62.50%" ];
+	Node0x55cdf5d95a20:s1 -> Node0x55cdf5d95dd0[tooltip="2 -> 11\nProbability 37.50%" ];
+	Node0x55cdf5d95d80 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{10:\l|  store i32 10, ptr %6, align 4\l  call void @timer_start_(ptr %6)\l  br label %11\l}"];
+	Node0x55cdf5d95d80 -> Node0x55cdf5d95dd0[tooltip="10 -> 11\nProbability 100.00%" ];
+	Node0x55cdf5d95dd0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{11:\l|  %12 = load i32, ptr getelementptr (i8, ptr @procgrid_, i64 12), align 4\l  %13 = sdiv i32 2097152, %12\l  store i32 %13, ptr %5, align 4\l  store i32 %13, ptr %4, align 4\l  call void @mpi_alltoall_(ptr %0, ptr %5, ptr @mpistuff_, ptr %1, ptr %4, ptr\l... @mpistuff_, ptr @comms_, ptr %7)\l  %14 = load i32, ptr getelementptr (i8, ptr @dbg_, i64 8), align 4\l  %15 = icmp ne i32 %14, 0\l  br i1 %15, label %16, label %17\l|{<s0>T|<s1>F}}"];
+	Node0x55cdf5d95dd0:s0 -> Node0x55cdf5d966e0[tooltip="11 -> 16\nProbability 62.50%" ];
+	Node0x55cdf5d95dd0:s1 -> Node0x55cdf5d96730[tooltip="11 -> 17\nProbability 37.50%" ];
+	Node0x55cdf5d966e0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{16:\l|  store i32 10, ptr %3, align 4\l  call void @timer_stop_(ptr %3)\l  br label %17\l}"];
+	Node0x55cdf5d966e0 -> Node0x55cdf5d96730[tooltip="16 -> 17\nProbability 100.00%" ];
+	Node0x55cdf5d96730 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{17:\l|  ret void\l}"];
+}

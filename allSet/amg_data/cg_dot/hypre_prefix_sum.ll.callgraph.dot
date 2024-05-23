@@ -1,0 +1,8 @@
+digraph "Call graph: hypre_prefix_sum.ll" {
+	label="Call graph: hypre_prefix_sum.ll";
+
+	Node0x55dc2fe8dd60 [shape=record,label="{hypre_prefix_sum}"];
+	Node0x55dc2fe8de10 [shape=record,label="{hypre_prefix_sum_pair}"];
+	Node0x55dc2fe8de90 [shape=record,label="{hypre_prefix_sum_triple}"];
+	Node0x55dc2fe8df10 [shape=record,label="{hypre_prefix_sum_multiple}"];
+}

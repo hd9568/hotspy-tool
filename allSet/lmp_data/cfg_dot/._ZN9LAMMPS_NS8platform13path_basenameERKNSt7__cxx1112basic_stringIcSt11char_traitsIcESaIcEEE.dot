@@ -1,0 +1,12 @@
+digraph "CFG for '_ZN9LAMMPS_NS8platform13path_basenameERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE' function" {
+	label="CFG for '_ZN9LAMMPS_NS8platform13path_basenameERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE' function";
+
+	Node0x5651cd8250b0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %result.ptr = alloca ptr, align 8\l  %path.addr = alloca ptr, align 8\l  %start = alloca i64, align 8\l  store ptr %agg.result, ptr %result.ptr, align 8\l  store ptr %path, ptr %path.addr, align 8\l  %0 = load ptr, ptr %path.addr, align 8\l  %call = call noundef i64\l... @_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12find_last_ofEPKcm(ptr\l... noundef nonnull align 8 dereferenceable(32) %0, ptr noundef\l... @_ZN9LAMMPS_NS8platformL11filepathsepE, i64 noundef -1) #4\l  store i64 %call, ptr %start, align 8\l  %1 = load i64, ptr %start, align 8\l  %cmp = icmp eq i64 %1, -1\l  br i1 %cmp, label %if.then, label %if.else\l|{<s0>T|<s1>F}}"];
+	Node0x5651cd8250b0:s0 -> Node0x5651cd825760[tooltip="entry -> if.then\nProbability 37.50%" ];
+	Node0x5651cd8250b0:s1 -> Node0x5651cd8257d0[tooltip="entry -> if.else\nProbability 62.50%" ];
+	Node0x5651cd825760 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{if.then:\l|  store i64 0, ptr %start, align 8\l  br label %if.end\l}"];
+	Node0x5651cd825760 -> Node0x5651cd825990[tooltip="if.then -> if.end\nProbability 100.00%" ];
+	Node0x5651cd8257d0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.else:\l|  %2 = load i64, ptr %start, align 8\l  %add = add i64 %2, 1\l  store i64 %add, ptr %start, align 8\l  br label %if.end\l}"];
+	Node0x5651cd8257d0 -> Node0x5651cd825990[tooltip="if.else -> if.end\nProbability 100.00%" ];
+	Node0x5651cd825990 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  %3 = load ptr, ptr %path.addr, align 8\l  %4 = load i64, ptr %start, align 8\l  call void\l... @_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6substrEmm(ptr\l... dead_on_unwind writable sret(%\"class.std::__cxx11::basic_string\") align 8\l... %agg.result, ptr noundef nonnull align 8 dereferenceable(32) %3, i64 noundef\l... %4, i64 noundef -1)\l  ret void\l}"];
+}

@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN9LAMMPS_NS8platform5ftellEP8_IO_FILE' function" {
+	label="CFG for '_ZN9LAMMPS_NS8platform5ftellEP8_IO_FILE' function";
+
+	Node0x5651cd820480 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %fp.addr = alloca ptr, align 8\l  store ptr %fp, ptr %fp.addr, align 8\l  %0 = load ptr, ptr %fp.addr, align 8\l  %call = call i64 @ftell(ptr noundef %0)\l  ret i64 %call\l}"];
+}

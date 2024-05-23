@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN15CellTallyDomainaSERKS_' function" {
+	label="CFG for '_ZN15CellTallyDomainaSERKS_' function";
+
+	Node0x556c3c86c010 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %.addr = alloca ptr, align 8\l  store ptr %this, ptr %this.addr, align 8\l  store ptr %0, ptr %.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %_task = getelementptr inbounds %class.CellTallyDomain, ptr %this1, i32 0,\l... i32 0\l  %1 = load ptr, ptr %.addr, align 8\l  %_task2 = getelementptr inbounds %class.CellTallyDomain, ptr %1, i32 0, i32 0\l  %call = call noundef nonnull align 8 dereferenceable(24) ptr\l... @_ZN9qs_vectorI13CellTallyTaskEaSERKS1_(ptr noundef nonnull align 8\l... dereferenceable(24) %_task, ptr noundef nonnull align 8 dereferenceable(24)\l... %_task2)\l  ret ptr %this1\l}"];
+}

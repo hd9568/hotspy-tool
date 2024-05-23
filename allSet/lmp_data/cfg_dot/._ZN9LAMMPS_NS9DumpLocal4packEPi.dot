@@ -1,0 +1,21 @@
+digraph "CFG for '_ZN9LAMMPS_NS9DumpLocal4packEPi' function" {
+	label="CFG for '_ZN9LAMMPS_NS9DumpLocal4packEPi' function";
+
+	Node0x55e11c5baa70 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %.addr = alloca ptr, align 8\l  %n = alloca i32, align 4\l  store ptr %this, ptr %this.addr, align 8\l  store ptr %0, ptr %.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  store i32 0, ptr %n, align 4\l  br label %for.cond\l}"];
+	Node0x55e11c5baa70 -> Node0x55e11c5bad40[tooltip="entry -> for.cond\nProbability 100.00%" ];
+	Node0x55e11c5bad40 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.cond:\l|  %1 = load i32, ptr %n, align 4\l  %size_one = getelementptr inbounds %\"class.LAMMPS_NS::Dump\", ptr %this1, i32\l... 0, i32 57\l  %2 = load i32, ptr %size_one, align 8\l  %cmp = icmp slt i32 %1, %2\l  br i1 %cmp, label %for.body, label %for.end\l|{<s0>T|<s1>F}}"];
+	Node0x55e11c5bad40:s0 -> Node0x55e11c5bb0a0[tooltip="for.cond -> for.body\nProbability 96.88%" ];
+	Node0x55e11c5bad40:s1 -> Node0x55e11c5bb120[tooltip="for.cond -> for.end\nProbability 3.12%" ];
+	Node0x55e11c5bb0a0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.body:\l|  %pack_choice = getelementptr inbounds %\"class.LAMMPS_NS::DumpLocal\", ptr\l... %this1, i32 0, i32 18\l  %3 = load ptr, ptr %pack_choice, align 8\l  %4 = load i32, ptr %n, align 4\l  %idxprom = sext i32 %4 to i64\l  %arrayidx = getelementptr inbounds \{ i64, i64 \}, ptr %3, i64 %idxprom\l  %5 = load \{ i64, i64 \}, ptr %arrayidx, align 8\l  %memptr.adj = extractvalue \{ i64, i64 \} %5, 1\l  %6 = getelementptr inbounds i8, ptr %this1, i64 %memptr.adj\l  %memptr.ptr = extractvalue \{ i64, i64 \} %5, 0\l  %7 = and i64 %memptr.ptr, 1\l  %memptr.isvirtual = icmp ne i64 %7, 0\l  br i1 %memptr.isvirtual, label %memptr.virtual, label %memptr.nonvirtual\l|{<s0>T|<s1>F}}"];
+	Node0x55e11c5bb0a0:s0 -> Node0x55e11c5bbbb0[tooltip="for.body -> memptr.virtual\nProbability 50.00%" ];
+	Node0x55e11c5bb0a0:s1 -> Node0x55e11c5bbc00[tooltip="for.body -> memptr.nonvirtual\nProbability 50.00%" ];
+	Node0x55e11c5bbbb0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{memptr.virtual:\l|  %vtable = load ptr, ptr %6, align 8\l  %8 = sub i64 %memptr.ptr, 1\l  %9 = getelementptr i8, ptr %vtable, i64 %8, !nosanitize !6\l  %memptr.virtualfn = load ptr, ptr %9, align 8, !nosanitize !6\l  br label %memptr.end\l}"];
+	Node0x55e11c5bbbb0 -> Node0x55e11c4b7910[tooltip="memptr.virtual -> memptr.end\nProbability 100.00%" ];
+	Node0x55e11c5bbc00 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{memptr.nonvirtual:\l|  %memptr.nonvirtualfn = inttoptr i64 %memptr.ptr to ptr\l  br label %memptr.end\l}"];
+	Node0x55e11c5bbc00 -> Node0x55e11c4b7910[tooltip="memptr.nonvirtual -> memptr.end\nProbability 100.00%" ];
+	Node0x55e11c4b7910 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{memptr.end:\l|  %10 = phi ptr [ %memptr.virtualfn, %memptr.virtual ], [\l... %memptr.nonvirtualfn, %memptr.nonvirtual ]\l  %11 = load i32, ptr %n, align 4\l  call void %10(ptr noundef nonnull align 8 dereferenceable(976) %6, i32\l... noundef %11)\l  br label %for.inc\l}"];
+	Node0x55e11c4b7910 -> Node0x55e11c5bc910[tooltip="memptr.end -> for.inc\nProbability 100.00%" ];
+	Node0x55e11c5bc910 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.inc:\l|  %12 = load i32, ptr %n, align 4\l  %inc = add nsw i32 %12, 1\l  store i32 %inc, ptr %n, align 4\l  br label %for.cond, !llvm.loop !7\l}"];
+	Node0x55e11c5bc910 -> Node0x55e11c5bad40[tooltip="for.inc -> for.cond\nProbability 100.00%" ];
+	Node0x55e11c5bb120 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{for.end:\l|  ret void\l}"];
+}

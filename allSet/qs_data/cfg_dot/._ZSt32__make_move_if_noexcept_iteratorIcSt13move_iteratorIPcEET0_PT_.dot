@@ -1,0 +1,5 @@
+digraph "CFG for '_ZSt32__make_move_if_noexcept_iteratorIcSt13move_iteratorIPcEET0_PT_' function" {
+	label="CFG for '_ZSt32__make_move_if_noexcept_iteratorIcSt13move_iteratorIPcEET0_PT_' function";
+
+	Node0x5555abcd9780 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %retval = alloca %\"class.std::move_iterator\", align 8\l  %__i.addr = alloca ptr, align 8\l  store ptr %__i, ptr %__i.addr, align 8\l  %0 = load ptr, ptr %__i.addr, align 8\l  call void @_ZNSt13move_iteratorIPcEC2ES0_(ptr noundef nonnull align 8\l... dereferenceable(8) %retval, ptr noundef %0)\l  %coerce.dive = getelementptr inbounds %\"class.std::move_iterator\", ptr\l... %retval, i32 0, i32 0\l  %1 = load ptr, ptr %coerce.dive, align 8\l  ret ptr %1\l}"];
+}

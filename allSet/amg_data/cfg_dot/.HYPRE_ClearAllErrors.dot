@@ -1,0 +1,5 @@
+digraph "CFG for 'HYPRE_ClearAllErrors' function" {
+	label="CFG for 'HYPRE_ClearAllErrors' function";
+
+	Node0x5645847ad640 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  store i32 0, ptr @hypre__global_error, align 4\l  %0 = load i32, ptr @hypre__global_error, align 4\l  %cmp = icmp ne i32 %0, 0\l  %conv = zext i1 %cmp to i32\l  ret i32 %conv\l}"];
+}

@@ -1,0 +1,17 @@
+digraph "Call graph: k10_mxm.ll" {
+	label="Call graph: k10_mxm.ll";
+
+	Node0x55dd79fae580 [shape=record,label="{k10_mxm}"];
+	Node0x55dd79fae580 -> Node0x55dd79fad140;
+	Node0x55dd79fae580 -> Node0x55dd79fad1f0;
+	Node0x55dd79fae580 -> Node0x55dd79fad270;
+	Node0x55dd79fae580 -> Node0x55dd79fad2f0;
+	Node0x55dd79fae580 -> Node0x55dd79fad370;
+	Node0x55dd79fae580 -> Node0x55dd79fbd110;
+	Node0x55dd79fad140 [shape=record,label="{tune_mxm888}"];
+	Node0x55dd79fad1f0 [shape=record,label="{tune_mxm8864}"];
+	Node0x55dd79fad270 [shape=record,label="{tune_mxm6488}"];
+	Node0x55dd79fad2f0 [shape=record,label="{tune_mxm101010}"];
+	Node0x55dd79fad370 [shape=record,label="{tune_mxm1010100}"];
+	Node0x55dd79fbd110 [shape=record,label="{tune_mxm1001010}"];
+}

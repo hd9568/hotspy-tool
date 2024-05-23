@@ -1,0 +1,21 @@
+digraph "CFG for 'hypre_ClearTiming' function" {
+	label="CFG for 'hypre_ClearTiming' function";
+
+	Node0x557f02aa08e0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d24b4070" fontname="Courier",label="{entry:\l|  %retval = alloca i32, align 4\l  %ierr = alloca i32, align 4\l  %i = alloca i32, align 4\l  store i32 0, ptr %ierr, align 4\l  %0 = load ptr, ptr @hypre_global_timing, align 8\l  %cmp = icmp eq ptr %0, null\l  br i1 %cmp, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x557f02aa08e0:s0 -> Node0x557f02aa0df0[tooltip="entry -> if.then\nProbability 37.50%" ];
+	Node0x557f02aa08e0:s1 -> Node0x557f02aa0e60[tooltip="entry -> if.end\nProbability 62.50%" ];
+	Node0x557f02aa0df0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#dc5d4a70" fontname="Courier",label="{if.then:\l|  %1 = load i32, ptr %ierr, align 4\l  store i32 %1, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x557f02aa0df0 -> Node0x557f02aa10a0[tooltip="if.then -> return\nProbability 100.00%" ];
+	Node0x557f02aa0e60 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{if.end:\l|  store i32 0, ptr %i, align 4\l  br label %for.cond\l}"];
+	Node0x557f02aa0e60 -> Node0x557f02aa1220[tooltip="if.end -> for.cond\nProbability 100.00%" ];
+	Node0x557f02aa1220 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.cond:\l|  %2 = load i32, ptr %i, align 4\l  %3 = load ptr, ptr @hypre_global_timing, align 8\l  %size = getelementptr inbounds %struct.hypre_TimingType, ptr %3, i32 0, i32 7\l  %4 = load i32, ptr %size, align 4\l  %cmp1 = icmp slt i32 %2, %4\l  br i1 %cmp1, label %for.body, label %for.end\l|{<s0>T|<s1>F}}"];
+	Node0x557f02aa1220:s0 -> Node0x557f02aa1620[tooltip="for.cond -> for.body\nProbability 96.88%" ];
+	Node0x557f02aa1220:s1 -> Node0x557f02aa1670[tooltip="for.cond -> for.end\nProbability 3.12%" ];
+	Node0x557f02aa1620 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.body:\l|  %5 = load ptr, ptr @hypre_global_timing, align 8\l  %wall_time = getelementptr inbounds %struct.hypre_TimingType, ptr %5, i32 0,\l... i32 0\l  %6 = load ptr, ptr %wall_time, align 8\l  %7 = load i32, ptr %i, align 4\l  %idxprom = sext i32 %7 to i64\l  %arrayidx = getelementptr inbounds double, ptr %6, i64 %idxprom\l  store double 0.000000e+00, ptr %arrayidx, align 8\l  %8 = load ptr, ptr @hypre_global_timing, align 8\l  %cpu_time = getelementptr inbounds %struct.hypre_TimingType, ptr %8, i32 0,\l... i32 1\l  %9 = load ptr, ptr %cpu_time, align 8\l  %10 = load i32, ptr %i, align 4\l  %idxprom2 = sext i32 %10 to i64\l  %arrayidx3 = getelementptr inbounds double, ptr %9, i64 %idxprom2\l  store double 0.000000e+00, ptr %arrayidx3, align 8\l  %11 = load ptr, ptr @hypre_global_timing, align 8\l  %flops = getelementptr inbounds %struct.hypre_TimingType, ptr %11, i32 0,\l... i32 2\l  %12 = load ptr, ptr %flops, align 8\l  %13 = load i32, ptr %i, align 4\l  %idxprom4 = sext i32 %13 to i64\l  %arrayidx5 = getelementptr inbounds double, ptr %12, i64 %idxprom4\l  store double 0.000000e+00, ptr %arrayidx5, align 8\l  br label %for.inc\l}"];
+	Node0x557f02aa1620 -> Node0x557f02aa30b0[tooltip="for.body -> for.inc\nProbability 100.00%" ];
+	Node0x557f02aa30b0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.inc:\l|  %14 = load i32, ptr %i, align 4\l  %inc = add nsw i32 %14, 1\l  store i32 %inc, ptr %i, align 4\l  br label %for.cond, !llvm.loop !6\l}"];
+	Node0x557f02aa30b0 -> Node0x557f02aa1220[tooltip="for.inc -> for.cond\nProbability 100.00%" ];
+	Node0x557f02aa1670 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{for.end:\l|  %15 = load i32, ptr %ierr, align 4\l  store i32 %15, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x557f02aa1670 -> Node0x557f02aa10a0[tooltip="for.end -> return\nProbability 100.00%" ];
+	Node0x557f02aa10a0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d24b4070" fontname="Courier",label="{return:\l|  %16 = load i32, ptr %retval, align 4\l  ret i32 %16\l}"];
+}

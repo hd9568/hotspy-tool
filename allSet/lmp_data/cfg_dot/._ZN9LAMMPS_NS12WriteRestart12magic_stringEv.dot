@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN9LAMMPS_NS12WriteRestart12magic_stringEv' function" {
+	label="CFG for '_ZN9LAMMPS_NS12WriteRestart12magic_stringEv' function";
+
+	Node0x557ad5c80650 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %magic = alloca [16 x i8], align 16\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  call void @llvm.memcpy.p0.p0.i64(ptr align 16 %magic, ptr align 16\l... @__const._ZN9LAMMPS_NS12WriteRestart12magic_stringEv.magic, i64 16, i1 false)\l  %arraydecay = getelementptr inbounds [16 x i8], ptr %magic, i64 0, i64 0\l  %fp = getelementptr inbounds %\"class.LAMMPS_NS::WriteRestart\", ptr %this1,\l... i32 0, i32 3\l  %0 = load ptr, ptr %fp, align 8\l  %call = call i64 @fwrite(ptr noundef %arraydecay, i64 noundef 1, i64 noundef\l... 16, ptr noundef %0)\l  ret void\l}"];
+}

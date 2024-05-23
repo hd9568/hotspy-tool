@@ -1,0 +1,5 @@
+digraph "CFG for 'lammps_plugin_count' function" {
+	label="CFG for 'lammps_plugin_count' function";
+
+	Node0x55bdf813f910 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  ret i32 0\l}"];
+}

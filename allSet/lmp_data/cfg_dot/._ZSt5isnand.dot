@@ -1,0 +1,5 @@
+digraph "CFG for '_ZSt5isnand' function" {
+	label="CFG for '_ZSt5isnand' function";
+
+	Node0x55fec326b260 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %__x.addr = alloca double, align 8\l  store double %__x, ptr %__x.addr, align 8\l  %0 = load double, ptr %__x.addr, align 8\l  %1 = call i1 @llvm.is.fpclass.f64(double %0, i32 3)\l  ret i1 %1\l}"];
+}

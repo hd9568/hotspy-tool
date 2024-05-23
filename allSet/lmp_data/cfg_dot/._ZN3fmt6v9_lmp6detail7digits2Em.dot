@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN3fmt6v9_lmp6detail7digits2Em' function" {
+	label="CFG for '_ZN3fmt6v9_lmp6detail7digits2Em' function";
+
+	Node0x556bfec07f40 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %value.addr = alloca i64, align 8\l  store i64 %value, ptr %value.addr, align 8\l  %0 = load i64, ptr %value.addr, align 8\l  %mul = mul i64 %0, 2\l  %arrayidx = getelementptr inbounds [201 x i8], ptr @.str.344, i64 0, i64 %mul\l  ret ptr %arrayidx\l}"];
+}

@@ -1,0 +1,20 @@
+digraph "CFG for 'hypre_BoomerAMGSetChebyFraction' function" {
+	label="CFG for 'hypre_BoomerAMGSetChebyFraction' function";
+
+	Node0x55fa809d3d10 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %retval = alloca i32, align 4\l  %data.addr = alloca ptr, align 8\l  %ratio.addr = alloca double, align 8\l  %amg_data = alloca ptr, align 8\l  store ptr %data, ptr %data.addr, align 8\l  store double %ratio, ptr %ratio.addr, align 8\l  %0 = load ptr, ptr %data.addr, align 8\l  store ptr %0, ptr %amg_data, align 8\l  %1 = load ptr, ptr %amg_data, align 8\l  %tobool = icmp ne ptr %1, null\l  br i1 %tobool, label %if.end, label %if.then\l|{<s0>T|<s1>F}}"];
+	Node0x55fa809d3d10:s0 -> Node0x55fa809d42a0[tooltip="entry -> if.end\nProbability 62.50%" ];
+	Node0x55fa809d3d10:s1 -> Node0x55fa809d4310[tooltip="entry -> if.then\nProbability 37.50%" ];
+	Node0x55fa809d4310 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{if.then:\l|  call void @hypre_error_handler(ptr noundef @.str.2, i32 noundef 2678, i32\l... noundef 12, ptr noundef null)\l  %2 = load i32, ptr @hypre__global_error, align 4\l  store i32 %2, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x55fa809d4310 -> Node0x55fa809d4770[tooltip="if.then -> return\nProbability 100.00%" ];
+	Node0x55fa809d42a0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.end:\l|  %3 = load double, ptr %ratio.addr, align 8\l  %cmp = fcmp ole double %3, 0.000000e+00\l  br i1 %cmp, label %if.then2, label %lor.lhs.false\l|{<s0>T|<s1>F}}"];
+	Node0x55fa809d42a0:s0 -> Node0x55fa809d4940[tooltip="if.end -> if.then2\nProbability 50.00%" ];
+	Node0x55fa809d42a0:s1 -> Node0x55fa809d3bf0[tooltip="if.end -> lor.lhs.false\nProbability 50.00%" ];
+	Node0x55fa809d3bf0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{lor.lhs.false:\l|  %4 = load double, ptr %ratio.addr, align 8\l  %cmp1 = fcmp ogt double %4, 1.000000e+00\l  br i1 %cmp1, label %if.then2, label %if.end3\l|{<s0>T|<s1>F}}"];
+	Node0x55fa809d3bf0:s0 -> Node0x55fa809d4940[tooltip="lor.lhs.false -> if.then2\nProbability 50.00%" ];
+	Node0x55fa809d3bf0:s1 -> Node0x55fa809d4c80[tooltip="lor.lhs.false -> if.end3\nProbability 50.00%" ];
+	Node0x55fa809d4940 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.then2:\l|  call void @hypre_error_handler(ptr noundef @.str.2, i32 noundef 2683, i32\l... noundef 20, ptr noundef null)\l  %5 = load i32, ptr @hypre__global_error, align 4\l  store i32 %5, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x55fa809d4940 -> Node0x55fa809d4770[tooltip="if.then2 -> return\nProbability 100.00%" ];
+	Node0x55fa809d4c80 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#ca3b3770" fontname="Courier",label="{if.end3:\l|  %6 = load double, ptr %ratio.addr, align 8\l  %7 = load ptr, ptr %amg_data, align 8\l  %cheby_fraction = getelementptr inbounds %struct.hypre_ParAMGData, ptr %7,\l... i32 0, i32 69\l  store double %6, ptr %cheby_fraction, align 8\l  %8 = load i32, ptr @hypre__global_error, align 4\l  store i32 %8, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x55fa809d4c80 -> Node0x55fa809d4770[tooltip="if.end3 -> return\nProbability 100.00%" ];
+	Node0x55fa809d4770 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{return:\l|  %9 = load i32, ptr %retval, align 4\l  ret i32 %9\l}"];
+}

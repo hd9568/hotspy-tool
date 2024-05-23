@@ -1,0 +1,45 @@
+digraph "Call graph: my_pool_chunk.ll" {
+	label="Call graph: my_pool_chunk.ll";
+
+	Node0x55e023246e50 [shape=record,label="{_ZN9LAMMPS_NS11MyPoolChunkIiEC2Eiiiii}"];
+	Node0x55e023246e50 -> Node0x55e023241a40;
+	Node0x55e023246e50 -> Node0x55e02328c070;
+	Node0x55e023241a40 [shape=record,label="{llvm.umul.with.overflow.i64}"];
+	Node0x55e02328c070 [shape=record,label="{_Znam}"];
+	Node0x55e0232533b0 [shape=record,label="{_ZN9LAMMPS_NS11MyPoolChunkIiED2Ev}"];
+	Node0x55e0232533b0 -> Node0x55e023232ce0;
+	Node0x55e0232533b0 -> Node0x55e023233e50;
+	Node0x55e023232ce0 [shape=record,label="{_ZdaPv}"];
+	Node0x55e023233e50 [shape=record,label="{free}"];
+	Node0x55e02323a100 [shape=record,label="{_ZN9LAMMPS_NS11MyPoolChunkIiE3getERi}"];
+	Node0x55e02323a100 -> Node0x55e02323b130;
+	Node0x55e02324ba20 [shape=record,label="{_ZNK9LAMMPS_NS11MyPoolChunkIiE4sizeEv}"];
+	Node0x55e02324ba20 -> Node0x55e02324d080;
+	Node0x55e02323b130 [shape=record,label="{_ZN9LAMMPS_NS11MyPoolChunkIiE8allocateEi}"];
+	Node0x55e02323b130 -> Node0x55e0232432b0;
+	Node0x55e02323b130 -> Node0x55e023244e60;
+	Node0x55e0232457c0 [shape=record,label="{_ZN9LAMMPS_NS11MyPoolChunkIiE3getEiRi}"];
+	Node0x55e0232457c0 -> Node0x55e02323b130;
+	Node0x55e023260940 [shape=record,label="{_ZN9LAMMPS_NS11MyPoolChunkIiE3putEi}"];
+	Node0x55e02326d190 [shape=record,label="{_ZN9LAMMPS_NS11MyPoolChunkIdE3putEi}"];
+	Node0x55e02324d080 [shape=record,label="{llvm.fmuladd.f64}"];
+	Node0x55e02324fa10 [shape=record,label="{_ZNK9LAMMPS_NS11MyPoolChunkIiE6statusEv}"];
+	Node0x55e0232432b0 [shape=record,label="{realloc}"];
+	Node0x55e023244e60 [shape=record,label="{malloc}"];
+	Node0x55e02325a0d0 [shape=record,label="{_ZN9LAMMPS_NS11MyPoolChunkIdEC2Eiiiii}"];
+	Node0x55e02325a0d0 -> Node0x55e023241a40;
+	Node0x55e02325a0d0 -> Node0x55e02328c070;
+	Node0x55e023262030 [shape=record,label="{_ZN9LAMMPS_NS11MyPoolChunkIdED2Ev}"];
+	Node0x55e023262030 -> Node0x55e023232ce0;
+	Node0x55e023262030 -> Node0x55e023233e50;
+	Node0x55e023262b70 [shape=record,label="{_ZN9LAMMPS_NS11MyPoolChunkIdE3getERi}"];
+	Node0x55e023262b70 -> Node0x55e023265de0;
+	Node0x55e023265de0 [shape=record,label="{_ZN9LAMMPS_NS11MyPoolChunkIdE8allocateEi}"];
+	Node0x55e023265de0 -> Node0x55e0232432b0;
+	Node0x55e023265de0 -> Node0x55e023244e60;
+	Node0x55e023266830 [shape=record,label="{_ZN9LAMMPS_NS11MyPoolChunkIdE3getEiRi}"];
+	Node0x55e023266830 -> Node0x55e023265de0;
+	Node0x55e02326df10 [shape=record,label="{_ZNK9LAMMPS_NS11MyPoolChunkIdE4sizeEv}"];
+	Node0x55e02326df10 -> Node0x55e02324d080;
+	Node0x55e02326f700 [shape=record,label="{_ZNK9LAMMPS_NS11MyPoolChunkIdE6statusEv}"];
+}

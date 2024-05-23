@@ -1,0 +1,5 @@
+digraph "CFG for '_ZNK14ScalarFluxCell4sizeEv' function" {
+	label="CFG for '_ZNK14ScalarFluxCell4sizeEv' function";
+
+	Node0x556c3c77d110 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %_size = getelementptr inbounds %class.ScalarFluxCell, ptr %this1, i32 0,\l... i32 1\l  %0 = load i32, ptr %_size, align 8\l  ret i32 %0\l}"];
+}

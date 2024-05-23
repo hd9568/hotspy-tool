@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN9LAMMPS_NS4Info22has_fft_single_supportEv' function" {
+	label="CFG for '_ZN9LAMMPS_NS4Info22has_fft_single_supportEv' function";
+
+	Node0x5628465bbe70 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  ret i1 false\l}"];
+}

@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN9LAMMPS_NS4Info16has_jpeg_supportEv' function" {
+	label="CFG for '_ZN9LAMMPS_NS4Info16has_jpeg_supportEv' function";
+
+	Node0x5628465bb820 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  ret i1 false\l}"];
+}

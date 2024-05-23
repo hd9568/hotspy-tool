@@ -1,0 +1,5 @@
+digraph "CFG for 'die' function" {
+	label="CFG for 'die' function";
+
+	Node0x55563bf970b0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %status.addr = alloca i32, align 4\l  store i32 %status, ptr %status.addr, align 4\l  %0 = load i32, ptr %status.addr, align 4\l  call void @exit(i32 noundef %0) #7\l  unreachable\l}"];
+}

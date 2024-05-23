@@ -1,0 +1,14 @@
+digraph "CFG for '_ZN9LAMMPS_NS13AtomVecHybrid4initEv' function" {
+	label="CFG for '_ZN9LAMMPS_NS13AtomVecHybrid4initEv' function";
+
+	Node0x557e2af5b630 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %k = alloca i32, align 4\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %vtable = load ptr, ptr %this1, align 8\l  %vbase.offset.ptr = getelementptr i8, ptr %vtable, i64 -24\l  %vbase.offset = load i64, ptr %vbase.offset.ptr, align 8\l  %add.ptr = getelementptr inbounds i8, ptr %this1, i64 %vbase.offset\l  call void @_ZN9LAMMPS_NS7AtomVec4initEv(ptr noundef nonnull align 8\l... dereferenceable(2752) %add.ptr)\l  store i32 0, ptr %k, align 4\l  br label %for.cond\l}"];
+	Node0x557e2af5b630 -> Node0x557e2af5bde0[tooltip="entry -> for.cond\nProbability 100.00%" ];
+	Node0x557e2af5bde0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.cond:\l|  %0 = load i32, ptr %k, align 4\l  %nstyles = getelementptr inbounds %\"class.LAMMPS_NS::AtomVecHybrid\", ptr\l... %this1, i32 0, i32 1\l  %1 = load i32, ptr %nstyles, align 8\l  %cmp = icmp slt i32 %0, %1\l  br i1 %cmp, label %for.body, label %for.end\l|{<s0>T|<s1>F}}"];
+	Node0x557e2af5bde0:s0 -> Node0x557e2af5c0a0[tooltip="for.cond -> for.body\nProbability 96.88%" ];
+	Node0x557e2af5bde0:s1 -> Node0x557e2af5c290[tooltip="for.cond -> for.end\nProbability 3.12%" ];
+	Node0x557e2af5c0a0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.body:\l|  %styles = getelementptr inbounds %\"class.LAMMPS_NS::AtomVecHybrid\", ptr\l... %this1, i32 0, i32 2\l  %2 = load ptr, ptr %styles, align 8\l  %3 = load i32, ptr %k, align 4\l  %idxprom = sext i32 %3 to i64\l  %arrayidx = getelementptr inbounds ptr, ptr %2, i64 %idxprom\l  %4 = load ptr, ptr %arrayidx, align 8\l  %vtable2 = load ptr, ptr %4, align 8\l  %vfn = getelementptr inbounds ptr, ptr %vtable2, i64 3\l  %5 = load ptr, ptr %vfn, align 8\l  call void %5(ptr noundef nonnull align 8 dereferenceable(2752) %4)\l  br label %for.inc\l}"];
+	Node0x557e2af5c0a0 -> Node0x557e2af5ca60[tooltip="for.body -> for.inc\nProbability 100.00%" ];
+	Node0x557e2af5ca60 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.inc:\l|  %6 = load i32, ptr %k, align 4\l  %inc = add nsw i32 %6, 1\l  store i32 %inc, ptr %k, align 4\l  br label %for.cond, !llvm.loop !6\l}"];
+	Node0x557e2af5ca60 -> Node0x557e2af5bde0[tooltip="for.inc -> for.cond\nProbability 100.00%" ];
+	Node0x557e2af5c290 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{for.end:\l|  ret void\l}"];
+}

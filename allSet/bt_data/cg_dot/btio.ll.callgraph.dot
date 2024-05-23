@@ -1,0 +1,12 @@
+digraph "Call graph: btio.ll" {
+	label="Call graph: btio.ll";
+
+	Node0x55f5eb833d70 [shape=record,label="{setup_btio_}"];
+	Node0x55f5eb833e20 [shape=record,label="{output_timestep_}"];
+	Node0x55f5eb833ea0 [shape=record,label="{btio_cleanup_}"];
+	Node0x55f5eb833f20 [shape=record,label="{btio_verify_}"];
+	Node0x55f5eb833fa0 [shape=record,label="{accumulate_norms_}"];
+	Node0x55f5eb834170 [shape=record,label="{checksum_timestep_}"];
+	Node0x55f5eb8341f0 [shape=record,label="{llvm.stacksave.p0}"];
+	Node0x55f5eb834270 [shape=record,label="{llvm.stackrestore.p0}"];
+}

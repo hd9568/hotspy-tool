@@ -1,0 +1,13 @@
+digraph "CFG for '_ZN9LAMMPS_NS11FixExternal7setmaskEv' function" {
+	label="CFG for '_ZN9LAMMPS_NS11FixExternal7setmaskEv' function";
+
+	Node0x5634c6532930 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %mask = alloca i32, align 4\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  store i32 0, ptr %mask, align 4\l  %mode = getelementptr inbounds %\"class.LAMMPS_NS::FixExternal\", ptr %this1,\l... i32 0, i32 2\l  %0 = load i32, ptr %mode, align 8\l  %cmp = icmp eq i32 %0, 0\l  br i1 %cmp, label %if.then, label %lor.lhs.false\l|{<s0>T|<s1>F}}"];
+	Node0x5634c6532930:s0 -> Node0x5634c6532d70[tooltip="entry -> if.then\nProbability 37.50%" ];
+	Node0x5634c6532930:s1 -> Node0x5634c6532de0[tooltip="entry -> lor.lhs.false\nProbability 62.50%" ];
+	Node0x5634c6532de0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{lor.lhs.false:\l|  %mode2 = getelementptr inbounds %\"class.LAMMPS_NS::FixExternal\", ptr\l... %this1, i32 0, i32 2\l  %1 = load i32, ptr %mode2, align 8\l  %cmp3 = icmp eq i32 %1, 1\l  br i1 %cmp3, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x5634c6532de0:s0 -> Node0x5634c6532d70[tooltip="lor.lhs.false -> if.then\nProbability 50.00%" ];
+	Node0x5634c6532de0:s1 -> Node0x5634c6533120[tooltip="lor.lhs.false -> if.end\nProbability 50.00%" ];
+	Node0x5634c6532d70 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.then:\l|  %2 = load i32, ptr %mask, align 4\l  %or = or i32 %2, 64\l  store i32 %or, ptr %mask, align 4\l  %3 = load i32, ptr %mask, align 4\l  %or4 = or i32 %3, 128\l  store i32 %or4, ptr %mask, align 4\l  %4 = load i32, ptr %mask, align 4\l  %or5 = or i32 %4, 2097152\l  store i32 %or5, ptr %mask, align 4\l  br label %if.end\l}"];
+	Node0x5634c6532d70 -> Node0x5634c6533120[tooltip="if.then -> if.end\nProbability 100.00%" ];
+	Node0x5634c6533120 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  %5 = load i32, ptr %mask, align 4\l  ret i32 %5\l}"];
+}

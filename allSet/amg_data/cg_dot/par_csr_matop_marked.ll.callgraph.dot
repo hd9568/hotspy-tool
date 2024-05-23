@@ -1,0 +1,44 @@
+digraph "Call graph: par_csr_matop_marked.ll" {
+	label="Call graph: par_csr_matop_marked.ll";
+
+	Node0x55f9cf8f1900 [shape=record,label="{hypre_ParMatmul_RowSizes_Marked}"];
+	Node0x55f9cf8f1900 -> Node0x55f9cf90c6b0;
+	Node0x55f9cf90c6b0 [shape=record,label="{hypre_CAlloc}"];
+	Node0x55f9cf9121a0 [shape=record,label="{hypre_ParMatmul_FC}"];
+	Node0x55f9cf9121a0 -> Node0x55f9cf8fd000;
+	Node0x55f9cf9121a0 -> Node0x55f9cf8faac0;
+	Node0x55f9cf9121a0 -> Node0x55f9cf8f1df0;
+	Node0x55f9cf9121a0 -> Node0x55f9cf90c6b0;
+	Node0x55f9cf9121a0 -> Node0x55f9cf91e6f0;
+	Node0x55f9cf9121a0 -> Node0x55f9cf8e8b70;
+	Node0x55f9cf9121a0 -> Node0x55f9cf93ee30;
+	Node0x55f9cf9121a0 -> Node0x55f9cf88df30;
+	Node0x55f9cf9121a0 -> Node0x55f9cf8f1900;
+	Node0x55f9cf9121a0 -> Node0x55f9cf928460;
+	Node0x55f9cf9121a0 -> Node0x55f9cf91bb40;
+	Node0x55f9cf9121a0 -> Node0x55f9cf927a10;
+	Node0x55f9cf8fd000 [shape=record,label="{hypre_printf}"];
+	Node0x55f9cf8faac0 [shape=record,label="{hypre_MPI_Comm_size}"];
+	Node0x55f9cf8f1df0 [shape=record,label="{hypre_ParCSRMatrixExtractBExt}"];
+	Node0x55f9cf928460 [shape=record,label="{hypre_CSRMatrixDestroy}"];
+	Node0x55f9cf927a10 [shape=record,label="{hypre_qsort0}"];
+	Node0x55f9cf91e6f0 [shape=record,label="{hypre_Free}"];
+	Node0x55f9cf91bb40 [shape=record,label="{hypre_BinarySearch}"];
+	Node0x55f9cf88df30 [shape=record,label="{hypre_ParCSRMatrixCreate}"];
+	Node0x55f9cf93ee30 [shape=record,label="{hypre_ParCSRMatrixSetRowStartsOwner}"];
+	Node0x55f9cf8e8b70 [shape=record,label="{hypre_ParCSRMatrixSetColStartsOwner}"];
+	Node0x55f9cf8e3550 [shape=record,label="{hypre_ParMatScaleDiagInv_F}"];
+	Node0x55f9cf8cc870 [shape=record,label="{hypre_fprintf}"];
+	Node0x55f9cf8c73f0 [shape=record,label="{hypre_error_handler}"];
+	Node0x55f9cf8c3b20 [shape=record,label="{hypre_ParMatMinus_F}"];
+	Node0x55f9cf8c3b20 -> Node0x55f9cf8a43d0;
+	Node0x55f9cf8c3b20 -> Node0x55f9cf8aa0e0;
+	Node0x55f9cf8c3b20 -> Node0x55f9cf91b0f0;
+	Node0x55f9cf8c3b20 -> Node0x55f9cf90c6b0;
+	Node0x55f9cf8c3b20 -> Node0x55f9cf8cc870;
+	Node0x55f9cf8c3b20 -> Node0x55f9cf8c73f0;
+	Node0x55f9cf8c3b20 -> Node0x55f9cf91e6f0;
+	Node0x55f9cf8a43d0 [shape=record,label="{hypre_ParCSRMatrixUnion}"];
+	Node0x55f9cf8aa0e0 [shape=record,label="{hypre_ParCSRMatrixZero_F}"];
+	Node0x55f9cf91b0f0 [shape=record,label="{hypre_ParCSRMatrixCopy_C}"];
+}

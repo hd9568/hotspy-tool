@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN9LAMMPS_NS5Input7latticeEv' function" {
+	label="CFG for '_ZN9LAMMPS_NS5Input7latticeEv' function";
+
+	Node0x562873599e20 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %domain = getelementptr inbounds %\"class.LAMMPS_NS::Pointers\", ptr %this1,\l... i32 0, i32 10\l  %0 = load ptr, ptr %domain, align 8\l  %1 = load ptr, ptr %0, align 8\l  %narg = getelementptr inbounds %\"class.LAMMPS_NS::Input\", ptr %this1, i32 0,\l... i32 1\l  %2 = load i32, ptr %narg, align 8\l  %arg = getelementptr inbounds %\"class.LAMMPS_NS::Input\", ptr %this1, i32 0,\l... i32 2\l  %3 = load ptr, ptr %arg, align 8\l  call void @_ZN9LAMMPS_NS6Domain11set_latticeEiPPc(ptr noundef nonnull align\l... 8 dereferenceable(1200) %1, i32 noundef %2, ptr noundef %3)\l  ret void\l}"];
+}

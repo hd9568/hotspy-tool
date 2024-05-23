@@ -1,0 +1,23 @@
+digraph "CFG for '_ZN3fmt6v9_lmp6detail12report_errorEPFvRNS1_6bufferIcEEiPKcEiS6_' function" {
+	label="CFG for '_ZN3fmt6v9_lmp6detail12report_errorEPFvRNS1_6bufferIcEEiPKcEiS6_' function";
+
+	Node0x55fec2f66eb0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %func.addr = alloca ptr, align 8\l  %error_code.addr = alloca i32, align 4\l  %message.addr = alloca ptr, align 8\l  %full_message = alloca %\"class.fmt::v9_lmp::basic_memory_buffer\", align 8\l  %ref.tmp = alloca %\"class.std::allocator\", align 1\l  store ptr %func, ptr %func.addr, align 8\l  store i32 %error_code, ptr %error_code.addr, align 4\l  store ptr %message, ptr %message.addr, align 8\l  call void @_ZNSaIcEC1Ev(ptr noundef nonnull align 1 dereferenceable(1)\l... %ref.tmp) #17\l  invoke void @_ZN3fmt6v9_lmp19basic_memory_bufferIcLm500ESaIcEEC2ERKS2_(ptr\l... noundef nonnull align 8 dereferenceable(536) %full_message, ptr noundef\l... nonnull align 1 dereferenceable(1) %ref.tmp)\l          to label %invoke.cont unwind label %terminate.lpad\l}"];
+	Node0x55fec2f66eb0 -> Node0x55fec2f67990[tooltip="entry -> invoke.cont\nProbability 100.00%" ];
+	Node0x55fec2f66eb0 -> Node0x55fec2f679e0[tooltip="entry -> terminate.lpad\nProbability 0.00%" ];
+	Node0x55fec2f67990 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{invoke.cont:\l|  call void @_ZNSaIcED1Ev(ptr noundef nonnull align 1 dereferenceable(1)\l... %ref.tmp) #17\l  %0 = load ptr, ptr %func.addr, align 8\l  %1 = load i32, ptr %error_code.addr, align 4\l  %2 = load ptr, ptr %message.addr, align 8\l  invoke void %0(ptr noundef nonnull align 8 dereferenceable(32)\l... %full_message, i32 noundef %1, ptr noundef %2)\l          to label %invoke.cont1 unwind label %terminate.lpad\l}"];
+	Node0x55fec2f67990 -> Node0x55fec2f67fd0[tooltip="invoke.cont -> invoke.cont1\nProbability 100.00%" ];
+	Node0x55fec2f67990 -> Node0x55fec2f679e0[tooltip="invoke.cont -> terminate.lpad\nProbability 0.00%" ];
+	Node0x55fec2f67fd0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{invoke.cont1:\l|  %call = call noundef ptr @_ZN3fmt6v9_lmp6detail6bufferIcE4dataEv(ptr\l... noundef nonnull align 8 dereferenceable(32) %full_message) #17\l  %call2 = call noundef i64 @_ZNK3fmt6v9_lmp6detail6bufferIcE4sizeEv(ptr\l... noundef nonnull align 8 dereferenceable(32) %full_message) #17\l  %3 = load ptr, ptr @stderr, align 8\l  %call4 = invoke i64 @fwrite(ptr noundef %call, i64 noundef %call2, i64\l... noundef 1, ptr noundef %3)\l          to label %invoke.cont3 unwind label %terminate.lpad\l}"];
+	Node0x55fec2f67fd0 -> Node0x55fec2f68730[tooltip="invoke.cont1 -> invoke.cont3\nProbability 100.00%" ];
+	Node0x55fec2f67fd0 -> Node0x55fec2f679e0[tooltip="invoke.cont1 -> terminate.lpad\nProbability 0.00%" ];
+	Node0x55fec2f68730 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{invoke.cont3:\l|  %cmp = icmp ugt i64 %call4, 0\l  br i1 %cmp, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x55fec2f68730:s0 -> Node0x55fec2f68b50[tooltip="invoke.cont3 -> if.then\nProbability 50.00%" ];
+	Node0x55fec2f68730:s1 -> Node0x55fec2f68bc0[tooltip="invoke.cont3 -> if.end\nProbability 50.00%" ];
+	Node0x55fec2f68b50 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.then:\l|  %4 = load ptr, ptr @stderr, align 8\l  %call6 = invoke i32 @fputc(i32 noundef 10, ptr noundef %4)\l          to label %invoke.cont5 unwind label %terminate.lpad\l}"];
+	Node0x55fec2f68b50 -> Node0x55fec2f68dc0[tooltip="if.then -> invoke.cont5\nProbability 100.00%" ];
+	Node0x55fec2f68b50 -> Node0x55fec2f679e0[tooltip="if.then -> terminate.lpad\nProbability 0.00%" ];
+	Node0x55fec2f68dc0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{invoke.cont5:\l|  br label %if.end\l}"];
+	Node0x55fec2f68dc0 -> Node0x55fec2f68bc0[tooltip="invoke.cont5 -> if.end\nProbability 100.00%" ];
+	Node0x55fec2f68bc0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  call void @_ZN3fmt6v9_lmp19basic_memory_bufferIcLm500ESaIcEED2Ev(ptr\l... noundef nonnull align 8 dereferenceable(536) %full_message) #17\l  ret void\l}"];
+	Node0x55fec2f679e0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f7b99e70" fontname="Courier",label="{terminate.lpad:\l|  %5 = landingpad \{ ptr, i32 \}\l          catch ptr null\l  %6 = extractvalue \{ ptr, i32 \} %5, 0\l  call void @__clang_call_terminate(ptr %6) #18\l  unreachable\l}"];
+}

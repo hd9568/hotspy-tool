@@ -1,0 +1,10 @@
+digraph "CFG for '_ZZN9__gnu_cxx6__stoaIlicJiEEET0_PFT_PKT1_PPS3_DpT2_EPKcS5_PmS9_EN10_Range_chk6_S_chkElSt17integral_constantIbLb1EE' function" {
+	label="CFG for '_ZZN9__gnu_cxx6__stoaIlicJiEEET0_PFT_PKT1_PPS3_DpT2_EPKcS5_PmS9_EN10_Range_chk6_S_chkElSt17integral_constantIbLb1EE' function";
+
+	Node0x5558b8000520 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %0 = alloca %\"struct.std::integral_constant\", align 1\l  %__val.addr = alloca i64, align 8\l  store i64 %__val, ptr %__val.addr, align 8\l  %1 = load i64, ptr %__val.addr, align 8\l  %cmp = icmp slt i64 %1, -2147483648\l  br i1 %cmp, label %lor.end, label %lor.rhs\l|{<s0>T|<s1>F}}"];
+	Node0x5558b8000520:s0 -> Node0x5558b8000700[tooltip="entry -> lor.end\nProbability 50.00%" ];
+	Node0x5558b8000520:s1 -> Node0x5558b8000770[tooltip="entry -> lor.rhs\nProbability 50.00%" ];
+	Node0x5558b8000770 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{lor.rhs:\l|  %2 = load i64, ptr %__val.addr, align 8\l  %cmp1 = icmp sgt i64 %2, 2147483647\l  br label %lor.end\l}"];
+	Node0x5558b8000770 -> Node0x5558b8000700[tooltip="lor.rhs -> lor.end\nProbability 100.00%" ];
+	Node0x5558b8000700 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{lor.end:\l|  %3 = phi i1 [ true, %entry ], [ %cmp1, %lor.rhs ]\l  ret i1 %3\l}"];
+}

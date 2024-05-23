@@ -1,0 +1,12 @@
+digraph "CFG for 'NearestPowerOfTwo' function" {
+	label="CFG for 'NearestPowerOfTwo' function";
+
+	Node0x55e2c2bc4490 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{entry:\l|  %value.addr = alloca i32, align 4\l  %rc = alloca i32, align 4\l  store i32 %value, ptr %value.addr, align 4\l  store i32 1, ptr %rc, align 4\l  br label %while.cond\l}"];
+	Node0x55e2c2bc4490 -> Node0x55e2c2bc46a0[tooltip="entry -> while.cond\nProbability 100.00%" ];
+	Node0x55e2c2bc46a0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{while.cond:\l|  %0 = load i32, ptr %rc, align 4\l  %1 = load i32, ptr %value.addr, align 4\l  %cmp = icmp slt i32 %0, %1\l  br i1 %cmp, label %while.body, label %while.end\l|{<s0>T|<s1>F}}"];
+	Node0x55e2c2bc46a0:s0 -> Node0x55e2c2bc4940[tooltip="while.cond -> while.body\nProbability 96.88%" ];
+	Node0x55e2c2bc46a0:s1 -> Node0x55e2c2bc49c0[tooltip="while.cond -> while.end\nProbability 3.12%" ];
+	Node0x55e2c2bc4940 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{while.body:\l|  %2 = load i32, ptr %rc, align 4\l  %shl = shl i32 %2, 1\l  store i32 %shl, ptr %rc, align 4\l  br label %while.cond, !llvm.loop !6\l}"];
+	Node0x55e2c2bc4940 -> Node0x55e2c2bc46a0[tooltip="while.body -> while.cond\nProbability 100.00%" ];
+	Node0x55e2c2bc49c0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{while.end:\l|  %3 = load i32, ptr %rc, align 4\l  ret i32 %3\l}"];
+}

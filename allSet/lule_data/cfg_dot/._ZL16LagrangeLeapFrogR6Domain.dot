@@ -1,0 +1,5 @@
+digraph "CFG for '_ZL16LagrangeLeapFrogR6Domain' function" {
+	label="CFG for '_ZL16LagrangeLeapFrogR6Domain' function";
+
+	Node0x561418b4e5e0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %domain.addr = alloca ptr, align 8\l  store ptr %domain, ptr %domain.addr, align 8\l  %0 = load ptr, ptr %domain.addr, align 8\l  call void @_ZL13LagrangeNodalR6Domain(ptr noundef nonnull align 8\l... dereferenceable(1744) %0)\l  %1 = load ptr, ptr %domain.addr, align 8\l  %2 = load ptr, ptr %domain.addr, align 8\l  %call = call noundef nonnull align 4 dereferenceable(4) ptr\l... @_ZN6Domain7numElemEv(ptr noundef nonnull align 8 dereferenceable(1744) %2)\l  %3 = load i32, ptr %call, align 4\l  call void @_ZL16LagrangeElementsR6Domaini(ptr noundef nonnull align 8\l... dereferenceable(1744) %1, i32 noundef %3)\l  %4 = load ptr, ptr %domain.addr, align 8\l  call void @_ZL27CalcTimeConstraintsForElemsR6Domain(ptr noundef nonnull\l... align 8 dereferenceable(1744) %4)\l  ret void\l}"];
+}

@@ -1,0 +1,15 @@
+digraph "CFG for '_ZN9LAMMPS_NS11ComputeTempD2Ev' function" {
+	label="CFG for '_ZN9LAMMPS_NS11ComputeTempD2Ev' function";
+
+	Node0x55ab1624d190 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  store ptr getelementptr inbounds (\{ [44 x ptr] \}, ptr\l... @_ZTVN9LAMMPS_NS11ComputeTempE, i32 0, inrange i32 0, i32 2), ptr %this1,\l... align 8\l  %copymode = getelementptr inbounds %\"class.LAMMPS_NS::Compute\", ptr %this1,\l... i32 0, i32 57\l  %0 = load i32, ptr %copymode, align 8\l  %tobool = icmp ne i32 %0, 0\l  br i1 %tobool, label %if.end, label %if.then\l|{<s0>T|<s1>F}}"];
+	Node0x55ab1624d190:s0 -> Node0x55ab16252b60[tooltip="entry -> if.end\nProbability 62.50%" ];
+	Node0x55ab1624d190:s1 -> Node0x55ab162598e0[tooltip="entry -> if.then\nProbability 37.50%" ];
+	Node0x55ab162598e0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{if.then:\l|  %vector = getelementptr inbounds %\"class.LAMMPS_NS::Compute\", ptr %this1,\l... i32 0, i32 6\l  %1 = load ptr, ptr %vector, align 8\l  %isnull = icmp eq ptr %1, null\l  br i1 %isnull, label %delete.end, label %delete.notnull\l|{<s0>T|<s1>F}}"];
+	Node0x55ab162598e0:s0 -> Node0x55ab16259b90[tooltip="if.then -> delete.end\nProbability 37.50%" ];
+	Node0x55ab162598e0:s1 -> Node0x55ab16259c10[tooltip="if.then -> delete.notnull\nProbability 62.50%" ];
+	Node0x55ab16259c10 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470" fontname="Courier",label="{delete.notnull:\l|  call void @_ZdaPv(ptr noundef %1) #9\l  br label %delete.end\l}"];
+	Node0x55ab16259c10 -> Node0x55ab16259b90[tooltip="delete.notnull -> delete.end\nProbability 100.00%" ];
+	Node0x55ab16259b90 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{delete.end:\l|  br label %if.end\l}"];
+	Node0x55ab16259b90 -> Node0x55ab16252b60[tooltip="delete.end -> if.end\nProbability 100.00%" ];
+	Node0x55ab16252b60 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  call void @_ZN9LAMMPS_NS7ComputeD2Ev(ptr noundef nonnull align 8\l... dereferenceable(564) %this1) #10\l  ret void\l}"];
+}

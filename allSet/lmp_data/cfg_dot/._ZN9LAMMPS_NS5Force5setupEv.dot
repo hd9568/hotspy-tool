@@ -1,0 +1,10 @@
+digraph "CFG for '_ZN9LAMMPS_NS5Force5setupEv' function" {
+	label="CFG for '_ZN9LAMMPS_NS5Force5setupEv' function";
+
+	Node0x563a5e060180 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %pair = getelementptr inbounds %\"class.LAMMPS_NS::Force\", ptr %this1, i32 0,\l... i32 24\l  %0 = load ptr, ptr %pair, align 8\l  %tobool = icmp ne ptr %0, null\l  br i1 %tobool, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x563a5e060180:s0 -> Node0x563a5e060480[tooltip="entry -> if.then\nProbability 62.50%" ];
+	Node0x563a5e060180:s1 -> Node0x563a5e0604f0[tooltip="entry -> if.end\nProbability 37.50%" ];
+	Node0x563a5e060480 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.then:\l|  %pair2 = getelementptr inbounds %\"class.LAMMPS_NS::Force\", ptr %this1, i32\l... 0, i32 24\l  %1 = load ptr, ptr %pair2, align 8\l  %vtable = load ptr, ptr %1, align 8\l  %vfn = getelementptr inbounds ptr, ptr %vtable, i64 3\l  %2 = load ptr, ptr %vfn, align 8\l  call void %2(ptr noundef nonnull align 8 dereferenceable(908) %1)\l  br label %if.end\l}"];
+	Node0x563a5e060480 -> Node0x563a5e0604f0[tooltip="if.then -> if.end\nProbability 100.00%" ];
+	Node0x563a5e0604f0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  ret void\l}"];
+}

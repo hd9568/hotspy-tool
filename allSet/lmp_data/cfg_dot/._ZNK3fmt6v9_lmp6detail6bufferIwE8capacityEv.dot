@@ -1,0 +1,5 @@
+digraph "CFG for '_ZNK3fmt6v9_lmp6detail6bufferIwE8capacityEv' function" {
+	label="CFG for '_ZNK3fmt6v9_lmp6detail6bufferIwE8capacityEv' function";
+
+	Node0x55fec3731960 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %capacity_ = getelementptr inbounds %\"class.fmt::v9_lmp::detail::buffer.7\",\l... ptr %this1, i32 0, i32 3\l  %0 = load i64, ptr %capacity_, align 8\l  ret i64 %0\l}"];
+}

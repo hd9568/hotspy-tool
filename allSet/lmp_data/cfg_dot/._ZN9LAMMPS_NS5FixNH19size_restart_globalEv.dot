@@ -1,0 +1,20 @@
+digraph "CFG for '_ZN9LAMMPS_NS5FixNH19size_restart_globalEv' function" {
+	label="CFG for '_ZN9LAMMPS_NS5FixNH19size_restart_globalEv' function";
+
+	Node0x55b2c7d5cee0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %nsize = alloca i32, align 4\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  store i32 2, ptr %nsize, align 4\l  %tstat_flag = getelementptr inbounds %\"class.LAMMPS_NS::FixNH\", ptr %this1,\l... i32 0, i32 20\l  %0 = load i32, ptr %tstat_flag, align 8\l  %tobool = icmp ne i32 %0, 0\l  br i1 %tobool, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x55b2c7d5cee0:s0 -> Node0x55b2c7d5d3e0[tooltip="entry -> if.then\nProbability 62.50%" ];
+	Node0x55b2c7d5cee0:s1 -> Node0x55b2c7d5d450[tooltip="entry -> if.end\nProbability 37.50%" ];
+	Node0x55b2c7d5d3e0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.then:\l|  %mtchain = getelementptr inbounds %\"class.LAMMPS_NS::FixNH\", ptr %this1,\l... i32 0, i32 57\l  %1 = load i32, ptr %mtchain, align 8\l  %mul = mul nsw i32 2, %1\l  %add = add nsw i32 1, %mul\l  %2 = load i32, ptr %nsize, align 4\l  %add2 = add nsw i32 %2, %add\l  store i32 %add2, ptr %nsize, align 4\l  br label %if.end\l}"];
+	Node0x55b2c7d5d3e0 -> Node0x55b2c7d5d450[tooltip="if.then -> if.end\nProbability 100.00%" ];
+	Node0x55b2c7d5d450 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  %pstat_flag = getelementptr inbounds %\"class.LAMMPS_NS::FixNH\", ptr\l... %this1, i32 0, i32 21\l  %3 = load i32, ptr %pstat_flag, align 4\l  %tobool3 = icmp ne i32 %3, 0\l  br i1 %tobool3, label %if.then4, label %if.end12\l|{<s0>T|<s1>F}}"];
+	Node0x55b2c7d5d450:s0 -> Node0x55b2c7d5de30[tooltip="if.end -> if.then4\nProbability 62.50%" ];
+	Node0x55b2c7d5d450:s1 -> Node0x55b2c7d5deb0[tooltip="if.end -> if.end12\nProbability 37.50%" ];
+	Node0x55b2c7d5de30 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.then4:\l|  %mpchain = getelementptr inbounds %\"class.LAMMPS_NS::FixNH\", ptr %this1,\l... i32 0, i32 63\l  %4 = load i32, ptr %mpchain, align 8\l  %mul5 = mul nsw i32 2, %4\l  %add6 = add nsw i32 16, %mul5\l  %5 = load i32, ptr %nsize, align 4\l  %add7 = add nsw i32 %5, %add6\l  store i32 %add7, ptr %nsize, align 4\l  %deviatoric_flag = getelementptr inbounds %\"class.LAMMPS_NS::FixNH\", ptr\l... %this1, i32 0, i32 73\l  %6 = load i32, ptr %deviatoric_flag, align 8\l  %tobool8 = icmp ne i32 %6, 0\l  br i1 %tobool8, label %if.then9, label %if.end11\l|{<s0>T|<s1>F}}"];
+	Node0x55b2c7d5de30:s0 -> Node0x55b2c7d5e6c0[tooltip="if.then4 -> if.then9\nProbability 62.50%" ];
+	Node0x55b2c7d5de30:s1 -> Node0x55b2c7d5e710[tooltip="if.then4 -> if.end11\nProbability 37.50%" ];
+	Node0x55b2c7d5e6c0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.then9:\l|  %7 = load i32, ptr %nsize, align 4\l  %add10 = add nsw i32 %7, 6\l  store i32 %add10, ptr %nsize, align 4\l  br label %if.end11\l}"];
+	Node0x55b2c7d5e6c0 -> Node0x55b2c7d5e710[tooltip="if.then9 -> if.end11\nProbability 100.00%" ];
+	Node0x55b2c7d5e710 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.end11:\l|  br label %if.end12\l}"];
+	Node0x55b2c7d5e710 -> Node0x55b2c7d5deb0[tooltip="if.end11 -> if.end12\nProbability 100.00%" ];
+	Node0x55b2c7d5deb0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end12:\l|  %8 = load i32, ptr %nsize, align 4\l  ret i32 %8\l}"];
+}

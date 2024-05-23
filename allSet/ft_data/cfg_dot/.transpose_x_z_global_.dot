@@ -1,0 +1,15 @@
+digraph "CFG for 'transpose_x_z_global_' function" {
+	label="CFG for 'transpose_x_z_global_' function";
+
+	Node0x55cdf5da9320 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{5:\l|  %6 = alloca i32, i64 1, align 4\l  %7 = alloca i32, i64 1, align 4\l  %8 = alloca i32, i64 1, align 4\l  %9 = alloca i32, i64 1, align 4\l  %10 = alloca i32, i64 1, align 4\l  %11 = load i32, ptr getelementptr (i8, ptr @dbg_, i64 8), align 4\l  %12 = icmp ne i32 %11, 0\l  br i1 %12, label %13, label %14\l|{<s0>T|<s1>F}}"];
+	Node0x55cdf5da9320:s0 -> Node0x55cdf5da9830[tooltip="5 -> 13\nProbability 62.50%" ];
+	Node0x55cdf5da9320:s1 -> Node0x55cdf5da9880[tooltip="5 -> 14\nProbability 37.50%" ];
+	Node0x55cdf5da9830 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{13:\l|  store i32 10, ptr %9, align 4\l  call void @timer_start_(ptr %9)\l  br label %14\l}"];
+	Node0x55cdf5da9830 -> Node0x55cdf5da9880[tooltip="13 -> 14\nProbability 100.00%" ];
+	Node0x55cdf5da9880 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{14:\l|  %15 = load i32, ptr %0, align 4\l  %16 = load i32, ptr %1, align 4\l  %17 = mul i32 %15, %16\l  %18 = load i32, ptr %2, align 4\l  %19 = mul i32 %17, %18\l  %20 = load i32, ptr getelementptr (i8, ptr @procgrid_, i64 4), align 4\l  %21 = sdiv i32 %19, %20\l  store i32 %21, ptr %8, align 4\l  store i32 %21, ptr %7, align 4\l  call void @mpi_alltoall_(ptr %3, ptr %8, ptr @mpistuff_, ptr %4, ptr %7, ptr\l... @mpistuff_, ptr @comms_, ptr %10)\l  %22 = load i32, ptr getelementptr (i8, ptr @dbg_, i64 8), align 4\l  %23 = icmp ne i32 %22, 0\l  br i1 %23, label %24, label %25\l|{<s0>T|<s1>F}}"];
+	Node0x55cdf5da9880:s0 -> Node0x55cdf5daa350[tooltip="14 -> 24\nProbability 62.50%" ];
+	Node0x55cdf5da9880:s1 -> Node0x55cdf5daa3a0[tooltip="14 -> 25\nProbability 37.50%" ];
+	Node0x55cdf5daa350 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{24:\l|  store i32 10, ptr %6, align 4\l  call void @timer_stop_(ptr %6)\l  br label %25\l}"];
+	Node0x55cdf5daa350 -> Node0x55cdf5daa3a0[tooltip="24 -> 25\nProbability 100.00%" ];
+	Node0x55cdf5daa3a0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{25:\l|  ret void\l}"];
+}

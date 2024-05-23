@@ -1,0 +1,5 @@
+digraph "CFG for 'hypre_PCGGetPrintLevel' function" {
+	label="CFG for 'hypre_PCGGetPrintLevel' function";
+
+	Node0x557061687330 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %pcg_vdata.addr = alloca ptr, align 8\l  %level.addr = alloca ptr, align 8\l  %pcg_data = alloca ptr, align 8\l  store ptr %pcg_vdata, ptr %pcg_vdata.addr, align 8\l  store ptr %level, ptr %level.addr, align 8\l  %0 = load ptr, ptr %pcg_vdata.addr, align 8\l  store ptr %0, ptr %pcg_data, align 8\l  %1 = load ptr, ptr %pcg_data, align 8\l  %print_level = getelementptr inbounds %struct.hypre_PCGData, ptr %1, i32 0,\l... i32 22\l  %2 = load i32, ptr %print_level, align 8\l  %3 = load ptr, ptr %level.addr, align 8\l  store i32 %2, ptr %3, align 4\l  %4 = load i32, ptr @hypre__global_error, align 4\l  ret i32 %4\l}"];
+}

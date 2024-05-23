@@ -1,0 +1,15 @@
+digraph "CFG for 'lammps_mpi_finalize' function" {
+	label="CFG for 'lammps_mpi_finalize' function";
+
+	Node0x55bdf7d8cb50 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %flag = alloca i32, align 4\l  %call = call i32 @MPI_Initialized(ptr noundef %flag)\l  %0 = load i32, ptr %flag, align 4\l  %tobool = icmp ne i32 %0, 0\l  br i1 %tobool, label %if.then, label %if.end6\l|{<s0>T|<s1>F}}"];
+	Node0x55bdf7d8cb50:s0 -> Node0x55bdf7d8ce60[tooltip="entry -> if.then\nProbability 62.50%" ];
+	Node0x55bdf7d8cb50:s1 -> Node0x55bdf7d8ced0[tooltip="entry -> if.end6\nProbability 37.50%" ];
+	Node0x55bdf7d8ce60 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.then:\l|  %call1 = call i32 @MPI_Finalized(ptr noundef %flag)\l  %1 = load i32, ptr %flag, align 4\l  %tobool2 = icmp ne i32 %1, 0\l  br i1 %tobool2, label %if.end, label %if.then3\l|{<s0>T|<s1>F}}"];
+	Node0x55bdf7d8ce60:s0 -> Node0x55bdf7d8d1b0[tooltip="if.then -> if.end\nProbability 62.50%" ];
+	Node0x55bdf7d8ce60:s1 -> Node0x55bdf7d8d220[tooltip="if.then -> if.then3\nProbability 37.50%" ];
+	Node0x55bdf7d8d220 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470" fontname="Courier",label="{if.then3:\l|  %call4 = call i32 @MPI_Barrier(ptr noundef @ompi_mpi_comm_world)\l  %call5 = call i32 @MPI_Finalize()\l  br label %if.end\l}"];
+	Node0x55bdf7d8d220 -> Node0x55bdf7d8d1b0[tooltip="if.then3 -> if.end\nProbability 100.00%" ];
+	Node0x55bdf7d8d1b0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.end:\l|  br label %if.end6\l}"];
+	Node0x55bdf7d8d1b0 -> Node0x55bdf7d8ced0[tooltip="if.end -> if.end6\nProbability 100.00%" ];
+	Node0x55bdf7d8ced0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end6:\l|  ret void\l}"];
+}

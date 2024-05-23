@@ -1,0 +1,5 @@
+digraph "CFG for '_ZNSt16allocator_traitsISaIiEE37select_on_container_copy_constructionERKS0_' function" {
+	label="CFG for '_ZNSt16allocator_traitsISaIiEE37select_on_container_copy_constructionERKS0_' function";
+
+	Node0x5606e0083e40 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %result.ptr = alloca ptr, align 8\l  %__rhs.addr = alloca ptr, align 8\l  store ptr %agg.result, ptr %result.ptr, align 8\l  store ptr %__rhs, ptr %__rhs.addr, align 8\l  %0 = load ptr, ptr %__rhs.addr, align 8\l  call void @_ZNSaIiEC2ERKS_(ptr noundef nonnull align 1 dereferenceable(1)\l... %agg.result, ptr noundef nonnull align 1 dereferenceable(1) %0) #12\l  ret void\l}"];
+}

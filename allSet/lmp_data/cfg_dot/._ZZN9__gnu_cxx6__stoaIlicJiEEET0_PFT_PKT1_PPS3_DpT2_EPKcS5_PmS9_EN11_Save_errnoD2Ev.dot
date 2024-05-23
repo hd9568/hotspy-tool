@@ -1,0 +1,10 @@
+digraph "CFG for '_ZZN9__gnu_cxx6__stoaIlicJiEEET0_PFT_PKT1_PPS3_DpT2_EPKcS5_PmS9_EN11_Save_errnoD2Ev' function" {
+	label="CFG for '_ZZN9__gnu_cxx6__stoaIlicJiEEET0_PFT_PKT1_PPS3_DpT2_EPKcS5_PmS9_EN11_Save_errnoD2Ev' function";
+
+	Node0x5558b8000ed0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %call = call ptr @__errno_location() #9\l  %0 = load i32, ptr %call, align 4\l  %cmp = icmp eq i32 %0, 0\l  br i1 %cmp, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x5558b8000ed0:s0 -> Node0x5558b8001290[tooltip="entry -> if.then\nProbability 37.50%" ];
+	Node0x5558b8000ed0:s1 -> Node0x5558b8001300[tooltip="entry -> if.end\nProbability 62.50%" ];
+	Node0x5558b8001290 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{if.then:\l|  %_M_errno = getelementptr inbounds %struct._Save_errno, ptr %this1, i32 0,\l... i32 0\l  %1 = load i32, ptr %_M_errno, align 4\l  %call2 = call ptr @__errno_location() #9\l  store i32 %1, ptr %call2, align 4\l  br label %if.end\l}"];
+	Node0x5558b8001290 -> Node0x5558b8001300[tooltip="if.then -> if.end\nProbability 100.00%" ];
+	Node0x5558b8001300 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  ret void\l}"];
+}

@@ -1,0 +1,8 @@
+randlc 1
+timer_clear 0
+find_my_seed 0
+create_seq 1
+timer_start 0
+timer_stop 0
+timer_read 0
+c_print_results 0

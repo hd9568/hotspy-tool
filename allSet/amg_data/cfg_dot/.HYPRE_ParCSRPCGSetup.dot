@@ -1,0 +1,5 @@
+digraph "CFG for 'HYPRE_ParCSRPCGSetup' function" {
+	label="CFG for 'HYPRE_ParCSRPCGSetup' function";
+
+	Node0x55f91b633030 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %solver.addr = alloca ptr, align 8\l  %A.addr = alloca ptr, align 8\l  %b.addr = alloca ptr, align 8\l  %x.addr = alloca ptr, align 8\l  store ptr %solver, ptr %solver.addr, align 8\l  store ptr %A, ptr %A.addr, align 8\l  store ptr %b, ptr %b.addr, align 8\l  store ptr %x, ptr %x.addr, align 8\l  %0 = load ptr, ptr %solver.addr, align 8\l  %1 = load ptr, ptr %A.addr, align 8\l  %2 = load ptr, ptr %b.addr, align 8\l  %3 = load ptr, ptr %x.addr, align 8\l  %call = call i32 @HYPRE_PCGSetup(ptr noundef %0, ptr noundef %1, ptr noundef\l... %2, ptr noundef %3)\l  ret i32 %call\l}"];
+}

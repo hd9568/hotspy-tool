@@ -1,0 +1,47 @@
+digraph "CFG for '_ZN3fmt6v9_lmp6detail19get_round_directionEmmm' function" {
+	label="CFG for '_ZN3fmt6v9_lmp6detail19get_round_directionEmmm' function";
+
+	Node0x556bfec25230 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %retval = alloca i32, align 4\l  %divisor.addr = alloca i64, align 8\l  %remainder.addr = alloca i64, align 8\l  %error.addr = alloca i64, align 8\l  store i64 %divisor, ptr %divisor.addr, align 8\l  store i64 %remainder, ptr %remainder.addr, align 8\l  store i64 %error, ptr %error.addr, align 8\l  %0 = load i64, ptr %remainder.addr, align 8\l  %1 = load i64, ptr %divisor.addr, align 8\l  %cmp = icmp ult i64 %0, %1\l  br i1 %cmp, label %cond.true, label %cond.false\l|{<s0>T|<s1>F}}"];
+	Node0x556bfec25230:s0 -> Node0x556bfec25810[tooltip="entry -> cond.true\nProbability 100.00%" ];
+	Node0x556bfec25230:s1 -> Node0x556bfec25890[tooltip="entry -> cond.false\nProbability 0.00%" ];
+	Node0x556bfec25810 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{cond.true:\l|  br label %cond.end\l}"];
+	Node0x556bfec25810 -> Node0x556bfec259c0[tooltip="cond.true -> cond.end\nProbability 100.00%" ];
+	Node0x556bfec25890 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f4c5ad70" fontname="Courier",label="{cond.false:\l|  call void @_ZN3fmt6v9_lmp6detail11assert_failEPKciS3_(ptr noundef\l... @.str.339, i32 noundef 2543, ptr noundef @.str.75) #21\l  unreachable\l}"];
+	Node0x556bfec25c10 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#3d50c370" fontname="Courier",label="{2:\l|  br label %cond.end\l}"];
+	Node0x556bfec25c10 -> Node0x556bfec259c0[tooltip="2 -> cond.end\nProbability 100.00%" ];
+	Node0x556bfec259c0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{cond.end:\l|  %3 = load i64, ptr %error.addr, align 8\l  %4 = load i64, ptr %divisor.addr, align 8\l  %cmp1 = icmp ult i64 %3, %4\l  br i1 %cmp1, label %cond.true2, label %cond.false3\l|{<s0>T|<s1>F}}"];
+	Node0x556bfec259c0:s0 -> Node0x556bfec26000[tooltip="cond.end -> cond.true2\nProbability 100.00%" ];
+	Node0x556bfec259c0:s1 -> Node0x556bfec26050[tooltip="cond.end -> cond.false3\nProbability 0.00%" ];
+	Node0x556bfec26000 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{cond.true2:\l|  br label %cond.end4\l}"];
+	Node0x556bfec26000 -> Node0x556bfec26180[tooltip="cond.true2 -> cond.end4\nProbability 100.00%" ];
+	Node0x556bfec26050 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f4c5ad70" fontname="Courier",label="{cond.false3:\l|  call void @_ZN3fmt6v9_lmp6detail11assert_failEPKciS3_(ptr noundef\l... @.str.339, i32 noundef 2544, ptr noundef @.str.75) #21\l  unreachable\l}"];
+	Node0x556bfec263b0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#3d50c370" fontname="Courier",label="{5:\l|  br label %cond.end4\l}"];
+	Node0x556bfec263b0 -> Node0x556bfec26180[tooltip="5 -> cond.end4\nProbability 100.00%" ];
+	Node0x556bfec26180 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{cond.end4:\l|  %6 = load i64, ptr %error.addr, align 8\l  %7 = load i64, ptr %divisor.addr, align 8\l  %8 = load i64, ptr %error.addr, align 8\l  %sub = sub i64 %7, %8\l  %cmp5 = icmp ult i64 %6, %sub\l  br i1 %cmp5, label %cond.true6, label %cond.false7\l|{<s0>T|<s1>F}}"];
+	Node0x556bfec26180:s0 -> Node0x556bfec26710[tooltip="cond.end4 -> cond.true6\nProbability 100.00%" ];
+	Node0x556bfec26180:s1 -> Node0x556bfec26760[tooltip="cond.end4 -> cond.false7\nProbability 0.00%" ];
+	Node0x556bfec26710 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{cond.true6:\l|  br label %cond.end8\l}"];
+	Node0x556bfec26710 -> Node0x556bfec26890[tooltip="cond.true6 -> cond.end8\nProbability 100.00%" ];
+	Node0x556bfec26760 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f4c5ad70" fontname="Courier",label="{cond.false7:\l|  call void @_ZN3fmt6v9_lmp6detail11assert_failEPKciS3_(ptr noundef\l... @.str.339, i32 noundef 2545, ptr noundef @.str.75) #21\l  unreachable\l}"];
+	Node0x556bfec26ab0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#3d50c370" fontname="Courier",label="{9:\l|  br label %cond.end8\l}"];
+	Node0x556bfec26ab0 -> Node0x556bfec26890[tooltip="9 -> cond.end8\nProbability 100.00%" ];
+	Node0x556bfec26890 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{cond.end8:\l|  %10 = load i64, ptr %remainder.addr, align 8\l  %11 = load i64, ptr %divisor.addr, align 8\l  %12 = load i64, ptr %remainder.addr, align 8\l  %sub9 = sub i64 %11, %12\l  %cmp10 = icmp ule i64 %10, %sub9\l  br i1 %cmp10, label %land.lhs.true, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x556bfec26890:s0 -> Node0x556bfec26e10[tooltip="cond.end8 -> land.lhs.true\nProbability 50.00%" ];
+	Node0x556bfec26890:s1 -> Node0x556bfec26e60[tooltip="cond.end8 -> if.end\nProbability 50.00%" ];
+	Node0x556bfec26e10 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{land.lhs.true:\l|  %13 = load i64, ptr %error.addr, align 8\l  %mul = mul i64 %13, 2\l  %14 = load i64, ptr %divisor.addr, align 8\l  %15 = load i64, ptr %remainder.addr, align 8\l  %mul11 = mul i64 %15, 2\l  %sub12 = sub i64 %14, %mul11\l  %cmp13 = icmp ule i64 %mul, %sub12\l  br i1 %cmp13, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x556bfec26e10:s0 -> Node0x556bfec27550[tooltip="land.lhs.true -> if.then\nProbability 50.00%" ];
+	Node0x556bfec26e10:s1 -> Node0x556bfec26e60[tooltip="land.lhs.true -> if.end\nProbability 50.00%" ];
+	Node0x556bfec27550 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470" fontname="Courier",label="{if.then:\l|  store i32 2, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x556bfec27550 -> Node0x556bfec27710[tooltip="if.then -> return\nProbability 100.00%" ];
+	Node0x556bfec26e60 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.end:\l|  %16 = load i64, ptr %remainder.addr, align 8\l  %17 = load i64, ptr %error.addr, align 8\l  %cmp14 = icmp uge i64 %16, %17\l  br i1 %cmp14, label %land.lhs.true15, label %if.end21\l|{<s0>T|<s1>F}}"];
+	Node0x556bfec26e60:s0 -> Node0x556bfec279a0[tooltip="if.end -> land.lhs.true15\nProbability 50.00%" ];
+	Node0x556bfec26e60:s1 -> Node0x556bfec27a20[tooltip="if.end -> if.end21\nProbability 50.00%" ];
+	Node0x556bfec279a0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{land.lhs.true15:\l|  %18 = load i64, ptr %remainder.addr, align 8\l  %19 = load i64, ptr %error.addr, align 8\l  %sub16 = sub i64 %18, %19\l  %20 = load i64, ptr %divisor.addr, align 8\l  %21 = load i64, ptr %remainder.addr, align 8\l  %22 = load i64, ptr %error.addr, align 8\l  %sub17 = sub i64 %21, %22\l  %sub18 = sub i64 %20, %sub17\l  %cmp19 = icmp uge i64 %sub16, %sub18\l  br i1 %cmp19, label %if.then20, label %if.end21\l|{<s0>T|<s1>F}}"];
+	Node0x556bfec279a0:s0 -> Node0x556bfec280c0[tooltip="land.lhs.true15 -> if.then20\nProbability 50.00%" ];
+	Node0x556bfec279a0:s1 -> Node0x556bfec27a20[tooltip="land.lhs.true15 -> if.end21\nProbability 50.00%" ];
+	Node0x556bfec280c0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470" fontname="Courier",label="{if.then20:\l|  store i32 1, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x556bfec280c0 -> Node0x556bfec27710[tooltip="if.then20 -> return\nProbability 100.00%" ];
+	Node0x556bfec27a20 [shape=record,color="#b70d28ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.end21:\l|  store i32 0, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x556bfec27a20 -> Node0x556bfec27710[tooltip="if.end21 -> return\nProbability 100.00%" ];
+	Node0x556bfec27710 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{return:\l|  %23 = load i32, ptr %retval, align 4\l  ret i32 %23\l}"];
+}

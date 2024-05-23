@@ -1,0 +1,5 @@
+digraph "CFG for '_ZNSt16allocator_traitsISaIPN9LAMMPS_NS3FixEEE9constructIS2_JRKS2_EEEvRS3_PT_DpOT0_' function" {
+	label="CFG for '_ZNSt16allocator_traitsISaIPN9LAMMPS_NS3FixEEE9constructIS2_JRKS2_EEEvRS3_PT_DpOT0_' function";
+
+	Node0x561f165646e0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %__a.addr = alloca ptr, align 8\l  %__p.addr = alloca ptr, align 8\l  %__args.addr = alloca ptr, align 8\l  store ptr %__a, ptr %__a.addr, align 8\l  store ptr %__p, ptr %__p.addr, align 8\l  store ptr %__args, ptr %__args.addr, align 8\l  %0 = load ptr, ptr %__a.addr, align 8\l  %1 = load ptr, ptr %__p.addr, align 8\l  %2 = load ptr, ptr %__args.addr, align 8\l  call void\l... @_ZN9__gnu_cxx13new_allocatorIPN9LAMMPS_NS3FixEE9constructIS3_JRKS3_EEEvPT_DpO\l...T0_(ptr noundef nonnull align 1 dereferenceable(1) %0, ptr noundef %1, ptr\l... noundef nonnull align 8 dereferenceable(8) %2) #13\l  ret void\l}"];
+}

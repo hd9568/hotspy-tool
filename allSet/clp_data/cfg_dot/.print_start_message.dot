@@ -1,0 +1,23 @@
+digraph "CFG for 'print_start_message' function" {
+	label="CFG for 'print_start_message' function";
+
+	Node0x5567ef54cc00 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %desc.addr = alloca ptr, align 8\l  %starttime = alloca i64, align 8\l  %startdate = alloca [50 x i8], align 16\l  store ptr %desc, ptr %desc.addr, align 8\l  %call = call i64 @time(ptr noundef %starttime) #8\l  %arraydecay = getelementptr inbounds [50 x i8], ptr %startdate, i64 0, i64 0\l  %call1 = call ptr @ctime_r(ptr noundef %starttime, ptr noundef %arraydecay)\l... #8\l  %0 = load ptr, ptr %desc.addr, align 8\l  %arraydecay2 = getelementptr inbounds [50 x i8], ptr %startdate, i64 0, i64 0\l  %call3 = call i32 (ptr, ...) @printf(ptr noundef @.str.32, ptr noundef %0,\l... ptr noundef %arraydecay2)\l  %1 = load ptr, ptr %desc.addr, align 8\l  %call4 = call i32 @strcmp(ptr noundef %1, ptr noundef @.str.33) #9\l  %cmp = icmp ne i32 %call4, 0\l  br i1 %cmp, label %land.lhs.true, label %if.end16\l|{<s0>T|<s1>F}}"];
+	Node0x5567ef54cc00:s0 -> Node0x5567ef54d800[tooltip="entry -> land.lhs.true\nProbability 62.50%" ];
+	Node0x5567ef54cc00:s1 -> Node0x5567ef54da20[tooltip="entry -> if.end16\nProbability 37.50%" ];
+	Node0x5567ef54d800 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{land.lhs.true:\l|  %2 = load ptr, ptr %desc.addr, align 8\l  %call5 = call i32 @strcmp(ptr noundef %2, ptr noundef @.str.34) #9\l  %cmp6 = icmp ne i32 %call5, 0\l  br i1 %cmp6, label %land.lhs.true7, label %if.end16\l|{<s0>T|<s1>F}}"];
+	Node0x5567ef54d800:s0 -> Node0x5567ef54de30[tooltip="land.lhs.true -> land.lhs.true7\nProbability 62.50%" ];
+	Node0x5567ef54d800:s1 -> Node0x5567ef54da20[tooltip="land.lhs.true -> if.end16\nProbability 37.50%" ];
+	Node0x5567ef54de30 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{land.lhs.true7:\l|  %3 = load ptr, ptr %desc.addr, align 8\l  %call8 = call i32 @strcmp(ptr noundef %3, ptr noundef @.str.35) #9\l  %cmp9 = icmp ne i32 %call8, 0\l  br i1 %cmp9, label %if.then, label %if.end16\l|{<s0>T|<s1>F}}"];
+	Node0x5567ef54de30:s0 -> Node0x5567ef566c40[tooltip="land.lhs.true7 -> if.then\nProbability 62.50%" ];
+	Node0x5567ef54de30:s1 -> Node0x5567ef54da20[tooltip="land.lhs.true7 -> if.end16\nProbability 37.50%" ];
+	Node0x5567ef566c40 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470" fontname="Courier",label="{if.then:\l|  %4 = load ptr, ptr %desc.addr, align 8\l  %call10 = call i32 @strcmp(ptr noundef %4, ptr noundef @.str.36) #9\l  %cmp11 = icmp ne i32 %call10, 0\l  br i1 %cmp11, label %if.then12, label %if.else\l|{<s0>T|<s1>F}}"];
+	Node0x5567ef566c40:s0 -> Node0x5567ef566fa0[tooltip="if.then -> if.then12\nProbability 62.50%" ];
+	Node0x5567ef566c40:s1 -> Node0x5567ef567020[tooltip="if.then -> if.else\nProbability 37.50%" ];
+	Node0x5567ef566fa0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#ca3b3770" fontname="Courier",label="{if.then12:\l|  %5 = load ptr, ptr %desc.addr, align 8\l  %call13 = call i32 @omp_get_max_threads()\l  %call14 = call i32 (ptr, ...) @printf(ptr noundef @.str.37, ptr noundef %5,\l... i32 noundef %call13)\l  br label %if.end\l}"];
+	Node0x5567ef566fa0 -> Node0x5567ef54d8f0[tooltip="if.then12 -> if.end\nProbability 100.00%" ];
+	Node0x5567ef567020 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#cc403a70" fontname="Courier",label="{if.else:\l|  %6 = load ptr, ptr %desc.addr, align 8\l  %call15 = call i32 (ptr, ...) @printf(ptr noundef @.str.38, ptr noundef %6)\l  br label %if.end\l}"];
+	Node0x5567ef567020 -> Node0x5567ef54d8f0[tooltip="if.else -> if.end\nProbability 100.00%" ];
+	Node0x5567ef54d8f0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470" fontname="Courier",label="{if.end:\l|  br label %if.end16\l}"];
+	Node0x5567ef54d8f0 -> Node0x5567ef54da20[tooltip="if.end -> if.end16\nProbability 100.00%" ];
+	Node0x5567ef54da20 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end16:\l|  ret void\l}"];
+}

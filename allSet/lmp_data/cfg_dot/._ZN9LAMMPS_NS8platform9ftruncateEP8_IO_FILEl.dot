@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN9LAMMPS_NS8platform9ftruncateEP8_IO_FILEl' function" {
+	label="CFG for '_ZN9LAMMPS_NS8platform9ftruncateEP8_IO_FILEl' function";
+
+	Node0x5651cd8220a0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %fp.addr = alloca ptr, align 8\l  %length.addr = alloca i64, align 8\l  store ptr %fp, ptr %fp.addr, align 8\l  store i64 %length, ptr %length.addr, align 8\l  %0 = load ptr, ptr %fp.addr, align 8\l  %1 = load i64, ptr %length.addr, align 8\l  %call = call noundef i32 @_ZN9LAMMPS_NS8platform5fseekEP8_IO_FILEl(ptr\l... noundef %0, i64 noundef %1)\l  %2 = load ptr, ptr %fp.addr, align 8\l  %call1 = call i32 @fileno(ptr noundef %2) #4\l  %3 = load i64, ptr %length.addr, align 8\l  %call2 = call i32 @ftruncate(i32 noundef %call1, i64 noundef %3) #4\l  ret i32 %call2\l}"];
+}

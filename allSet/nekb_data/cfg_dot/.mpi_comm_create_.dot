@@ -1,0 +1,5 @@
+digraph "CFG for 'mpi_comm_create_' function" {
+	label="CFG for 'mpi_comm_create_' function";
+
+	Node0x5560a31d88e0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{4:\l|  store i32 1, ptr %2, align 4\l  ret void\l}"];
+}

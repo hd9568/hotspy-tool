@@ -1,0 +1,25 @@
+digraph "Call graph: par_rap_communication.ll" {
+	label="Call graph: par_rap_communication.ll";
+
+	Node0x56456f5075d0 [shape=record,label="{hypre_GetCommPkgRTFromCommPkgA}"];
+	Node0x56456f5075d0 -> Node0x56456f50b310;
+	Node0x56456f5075d0 -> Node0x56456f50f670;
+	Node0x56456f5075d0 -> Node0x56456f512380;
+	Node0x56456f5075d0 -> Node0x56456f512b30;
+	Node0x56456f5075d0 -> Node0x56456f539c00;
+	Node0x56456f5075d0 -> Node0x56456f539b80;
+	Node0x56456f5075d0 -> Node0x56456f512690;
+	Node0x56456f50b310 [shape=record,label="{hypre_MPI_Comm_size}"];
+	Node0x56456f50f670 [shape=record,label="{hypre_MPI_Comm_rank}"];
+	Node0x56456f512380 [shape=record,label="{hypre_CAlloc}"];
+	Node0x56456f512690 [shape=record,label="{hypre_MPI_Irecv}"];
+	Node0x56456f539b80 [shape=record,label="{hypre_MPI_Isend}"];
+	Node0x56456f539c00 [shape=record,label="{hypre_MPI_Waitall}"];
+	Node0x56456f512b30 [shape=record,label="{hypre_Free}"];
+	Node0x56456f51d9e0 [shape=record,label="{hypre_GenerateSendMapAndCommPkg}"];
+	Node0x56456f51d9e0 -> Node0x56456f512380;
+	Node0x56456f51d9e0 -> Node0x56456f512b30;
+	Node0x56456f51d9e0 -> Node0x56456f539c00;
+	Node0x56456f51d9e0 -> Node0x56456f512690;
+	Node0x56456f51d9e0 -> Node0x56456f539b80;
+}

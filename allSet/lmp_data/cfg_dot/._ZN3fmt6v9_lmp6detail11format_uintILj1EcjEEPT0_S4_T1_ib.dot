@@ -1,0 +1,19 @@
+digraph "CFG for '_ZN3fmt6v9_lmp6detail11format_uintILj1EcjEEPT0_S4_T1_ib' function" {
+	label="CFG for '_ZN3fmt6v9_lmp6detail11format_uintILj1EcjEEPT0_S4_T1_ib' function";
+
+	Node0x55fec3186010 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{entry:\l|  %buffer.addr = alloca ptr, align 8\l  %value.addr = alloca i32, align 4\l  %num_digits.addr = alloca i32, align 4\l  %upper.addr = alloca i8, align 1\l  %end = alloca ptr, align 8\l  %digits = alloca ptr, align 8\l  %digit = alloca i32, align 4\l  store ptr %buffer, ptr %buffer.addr, align 8\l  store i32 %value, ptr %value.addr, align 4\l  store i32 %num_digits, ptr %num_digits.addr, align 4\l  %frombool = zext i1 %upper to i8\l  store i8 %frombool, ptr %upper.addr, align 1\l  %0 = load i32, ptr %num_digits.addr, align 4\l  %1 = load ptr, ptr %buffer.addr, align 8\l  %idx.ext = sext i32 %0 to i64\l  %add.ptr = getelementptr inbounds i8, ptr %1, i64 %idx.ext\l  store ptr %add.ptr, ptr %buffer.addr, align 8\l  %2 = load ptr, ptr %buffer.addr, align 8\l  store ptr %2, ptr %end, align 8\l  br label %do.body\l}"];
+	Node0x55fec3186010 -> Node0x55fec3186d50[tooltip="entry -> do.body\nProbability 100.00%" ];
+	Node0x55fec3186d50 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{do.body:\l|  %3 = load i8, ptr %upper.addr, align 1\l  %tobool = trunc i8 %3 to i1\l  br i1 %tobool, label %cond.true, label %cond.false\l|{<s0>T|<s1>F}}"];
+	Node0x55fec3186d50:s0 -> Node0x55fec3186f40[tooltip="do.body -> cond.true\nProbability 50.00%" ];
+	Node0x55fec3186d50:s1 -> Node0x55fec3186f90[tooltip="do.body -> cond.false\nProbability 50.00%" ];
+	Node0x55fec3186f40 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{cond.true:\l|  br label %cond.end\l}"];
+	Node0x55fec3186f40 -> Node0x55fec31870c0[tooltip="cond.true -> cond.end\nProbability 100.00%" ];
+	Node0x55fec3186f90 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{cond.false:\l|  br label %cond.end\l}"];
+	Node0x55fec3186f90 -> Node0x55fec31870c0[tooltip="cond.false -> cond.end\nProbability 100.00%" ];
+	Node0x55fec31870c0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{cond.end:\l|  %cond-lvalue = phi ptr [ @.str.20, %cond.true ], [ @.str.21, %cond.false ]\l  %arraydecay = getelementptr inbounds [17 x i8], ptr %cond-lvalue, i64 0, i64\l... 0\l  store ptr %arraydecay, ptr %digits, align 8\l  %4 = load i32, ptr %value.addr, align 4\l  %and = and i32 %4, 1\l  store i32 %and, ptr %digit, align 4\l  %5 = load i32, ptr %digit, align 4\l  %add = add i32 48, %5\l  %conv = trunc i32 %add to i8\l  %6 = load ptr, ptr %buffer.addr, align 8\l  %incdec.ptr = getelementptr inbounds i8, ptr %6, i32 -1\l  store ptr %incdec.ptr, ptr %buffer.addr, align 8\l  store i8 %conv, ptr %incdec.ptr, align 1\l  br label %do.cond\l}"];
+	Node0x55fec31870c0 -> Node0x55fec3186820[tooltip="cond.end -> do.cond\nProbability 100.00%" ];
+	Node0x55fec3186820 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{do.cond:\l|  %7 = load i32, ptr %value.addr, align 4\l  %shr = lshr i32 %7, 1\l  store i32 %shr, ptr %value.addr, align 4\l  %cmp = icmp ne i32 %shr, 0\l  br i1 %cmp, label %do.body, label %do.end, !llvm.loop !6\l|{<s0>T|<s1>F}}"];
+	Node0x55fec3186820:s0 -> Node0x55fec3186d50[tooltip="do.cond -> do.body\nProbability 96.88%" ];
+	Node0x55fec3186820:s1 -> Node0x55fec3187ee0[tooltip="do.cond -> do.end\nProbability 3.12%" ];
+	Node0x55fec3187ee0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{do.end:\l|  %8 = load ptr, ptr %end, align 8\l  ret ptr %8\l}"];
+}

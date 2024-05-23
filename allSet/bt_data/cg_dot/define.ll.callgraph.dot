@@ -1,0 +1,7 @@
+digraph "Call graph: define.ll" {
+	label="Call graph: define.ll";
+
+	Node0x55ddda994a60 [shape=record,label="{compute_buffer_size_}"];
+	Node0x55ddda994b10 [shape=record,label="{llvm.stacksave.p0}"];
+	Node0x55ddda994b90 [shape=record,label="{llvm.stackrestore.p0}"];
+}

@@ -1,0 +1,27 @@
+digraph "CFG for 'power_' function" {
+	label="CFG for 'power_' function";
+
+	Node0x559626e2b200 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#de614d70" fontname="Courier",label="{4:\l|  %5 = alloca double, i64 1, align 8\l  %6 = alloca i32, i64 1, align 4\l  %7 = alloca i32, i64 1, align 4\l  %8 = alloca i32, i64 1, align 4\l  %9 = alloca double, i64 1, align 8\l  %10 = alloca double, i64 1, align 8\l  store double 1.000000e+00, ptr %9, align 8\l  %11 = load double, ptr %0, align 8\l  store double %11, ptr %5, align 8\l  %12 = load i32, ptr %3, align 4\l  store i32 %12, ptr %8, align 4\l  %13 = load i32, ptr %1, align 4\l  store i32 %13, ptr %6, align 4\l  %14 = load i32, ptr %2, align 4\l  store i32 %14, ptr %7, align 4\l  br label %15\l}"];
+	Node0x559626e2b200 -> Node0x559626e2b9f0[tooltip="4 -> 15\nProbability 100.00%" ];
+	Node0x559626e2b9f0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{15:\l|  %16 = load i32, ptr %7, align 4\l  %17 = icmp sgt i32 %16, 0\l  br i1 %17, label %18, label %29\l|{<s0>T|<s1>F}}"];
+	Node0x559626e2b9f0:s0 -> Node0x559626e2bbc0[tooltip="15 -> 18\nProbability 62.50%" ];
+	Node0x559626e2b9f0:s1 -> Node0x559626e2bc10[tooltip="15 -> 29\nProbability 37.50%" ];
+	Node0x559626e2bbc0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{18:\l|  %19 = load i32, ptr %7, align 4\l  %20 = srem i32 %19, 2\l  %21 = icmp eq i32 %20, 1\l  br i1 %21, label %22, label %26\l|{<s0>T|<s1>F}}"];
+	Node0x559626e2bbc0:s0 -> Node0x559626e2beb0[tooltip="18 -> 22\nProbability 50.00%" ];
+	Node0x559626e2bbc0:s1 -> Node0x559626e2bf00[tooltip="18 -> 26\nProbability 50.00%" ];
+	Node0x559626e2beb0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{22:\l|  %23 = load i32, ptr %8, align 4\l  %24 = load i32, ptr %6, align 4\l  %25 = add i32 %23, %24\l  store i32 %25, ptr %8, align 4\l  br label %26\l}"];
+	Node0x559626e2beb0 -> Node0x559626e2bf00[tooltip="22 -> 26\nProbability 100.00%" ];
+	Node0x559626e2bf00 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{26:\l|  %27 = load i32, ptr %7, align 4\l  %28 = sdiv i32 %27, 2\l  store i32 %28, ptr %7, align 4\l  br label %34\l}"];
+	Node0x559626e2bf00 -> Node0x559626e2d270[tooltip="26 -> 34\nProbability 100.00%" ];
+	Node0x559626e2bc10 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{29:\l|  %30 = load i32, ptr %8, align 4\l  %31 = icmp eq i32 %30, 0\l  br i1 %31, label %32, label %34\l|{<s0>T|<s1>F}}"];
+	Node0x559626e2bc10:s0 -> Node0x559626e2d440[tooltip="29 -> 32\nProbability 3.12%" ];
+	Node0x559626e2bc10:s1 -> Node0x559626e2d270[tooltip="29 -> 34\nProbability 96.88%" ];
+	Node0x559626e2d440 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#de614d70" fontname="Courier",label="{32:\l|  %33 = load double, ptr %9, align 8\l  ret double %33\l}"];
+	Node0x559626e2d270 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{34:\l|  %35 = load i32, ptr %8, align 4\l  %36 = srem i32 %35, 2\l  %37 = icmp eq i32 %36, 1\l  br i1 %37, label %38, label %40\l|{<s0>T|<s1>F}}"];
+	Node0x559626e2d270:s0 -> Node0x559626e2d7d0[tooltip="34 -> 38\nProbability 50.00%" ];
+	Node0x559626e2d270:s1 -> Node0x559626e2d820[tooltip="34 -> 40\nProbability 50.00%" ];
+	Node0x559626e2d7d0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{38:\l|  %39 = call contract double @randlc_(ptr %9, ptr %5)\l  store double %39, ptr %10, align 8\l  br label %40\l}"];
+	Node0x559626e2d7d0 -> Node0x559626e2d820[tooltip="38 -> 40\nProbability 100.00%" ];
+	Node0x559626e2d820 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{40:\l|  %41 = call contract double @randlc_(ptr %5, ptr %5)\l  store double %41, ptr %10, align 8\l  %42 = load i32, ptr %8, align 4\l  %43 = sdiv i32 %42, 2\l  store i32 %43, ptr %8, align 4\l  br label %15\l}"];
+	Node0x559626e2d820 -> Node0x559626e2b9f0[tooltip="40 -> 15\nProbability 100.00%" ];
+}

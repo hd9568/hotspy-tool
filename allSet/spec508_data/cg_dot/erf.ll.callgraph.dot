@@ -1,0 +1,5 @@
+digraph "Call graph: erf.ll" {
+	label="Call graph: erf.ll";
+
+	Node0x55eae12fddf0 [shape=record,label="{_Z9dummy_erfi}"];
+}

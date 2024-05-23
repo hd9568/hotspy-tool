@@ -1,0 +1,16 @@
+digraph "Call graph: math_special.ll" {
+	label="Call graph: math_special.ll";
+
+	Node0x55ab28b1daf0 [shape=record,label="{_ZN9LAMMPS_NS11MathSpecial9factorialEi}"];
+	Node0x55ab28b1daf0 -> Node0x55ab28b1e0c0;
+	Node0x55ab28b1e0c0 [shape=record,label="{_ZNSt14numeric_limitsIdE9quiet_NaNEv}"];
+	Node0x55ab28b1e880 [shape=record,label="{_ZN9LAMMPS_NS11MathSpecial10erfcx_y100Ed}"];
+	Node0x55ab28b1e880 -> Node0x55ab28b1ec60;
+	Node0x55ab28b1ec60 [shape=record,label="{llvm.fmuladd.f64}"];
+	Node0x55ab28b1f280 [shape=record,label="{_ZN9LAMMPS_NS11MathSpecial8exp2_x86Ed}"];
+	Node0x55ab28b1f280 -> Node0x55ab28b1f660;
+	Node0x55ab28b1f280 -> Node0x55ab28b1ec60;
+	Node0x55ab28b1f660 [shape=record,label="{llvm.floor.f64}"];
+	Node0x55ab28b1fa40 [shape=record,label="{_ZN9LAMMPS_NS11MathSpecial6fm_expEd}"];
+	Node0x55ab28b1fa40 -> Node0x55ab28b1f280;
+}

@@ -1,0 +1,39 @@
+digraph "CFG for 'dsdot_' function" {
+	label="CFG for 'dsdot_' function";
+
+	Node0x55ee10115930 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#ca3b3770" fontname="Courier",label="{5:\l|  %6 = alloca double, i64 1, align 8\l  %7 = alloca i32, i64 1, align 4\l  %8 = alloca i32, i64 1, align 4\l  %9 = alloca i32, i64 1, align 4\l  %10 = alloca i32, i64 1, align 4\l  store double 0.000000e+00, ptr %6, align 8\l  %11 = load i32, ptr %0, align 4\l  %12 = icmp sle i32 %11, 0\l  br i1 %12, label %117, label %13\l|{<s0>T|<s1>F}}"];
+	Node0x55ee10115930:s0 -> Node0x55ee10115f60[tooltip="5 -> 117\nProbability 50.00%" ];
+	Node0x55ee10115930:s1 -> Node0x55ee10115fb0[tooltip="5 -> 13\nProbability 50.00%" ];
+	Node0x55ee10115fb0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d0473d70" fontname="Courier",label="{13:\l|  %14 = load i32, ptr %2, align 4\l  %15 = load i32, ptr %4, align 4\l  %16 = icmp eq i32 %14, %15\l  %17 = icmp sgt i32 %14, 0\l  %18 = and i1 %16, %17\l  %19 = xor i1 %18, true\l  br i1 %19, label %20, label %77\l|{<s0>T|<s1>F}}"];
+	Node0x55ee10115fb0:s0 -> Node0x55ee101163f0[tooltip="13 -> 20\nProbability 50.00%" ];
+	Node0x55ee10115fb0:s1 -> Node0x55ee10116440[tooltip="13 -> 77\nProbability 50.00%" ];
+	Node0x55ee101163f0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{20:\l|  store i32 1, ptr %8, align 4\l  store i32 1, ptr %9, align 4\l  %21 = load i32, ptr %2, align 4\l  %22 = icmp slt i32 %21, 0\l  br i1 %22, label %23, label %29\l|{<s0>T|<s1>F}}"];
+	Node0x55ee101163f0:s0 -> Node0x55ee10116790[tooltip="20 -> 23\nProbability 37.50%" ];
+	Node0x55ee101163f0:s1 -> Node0x55ee101167e0[tooltip="20 -> 29\nProbability 62.50%" ];
+	Node0x55ee10116790 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#de614d70" fontname="Courier",label="{23:\l|  %24 = load i32, ptr %0, align 4\l  %25 = sub i32 1, %24\l  %26 = load i32, ptr %2, align 4\l  %27 = mul i32 %25, %26\l  %28 = add i32 %27, 1\l  store i32 %28, ptr %8, align 4\l  br label %29\l}"];
+	Node0x55ee10116790 -> Node0x55ee101167e0[tooltip="23 -> 29\nProbability 100.00%" ];
+	Node0x55ee101167e0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{29:\l|  %30 = load i32, ptr %4, align 4\l  %31 = icmp slt i32 %30, 0\l  br i1 %31, label %32, label %38\l|{<s0>T|<s1>F}}"];
+	Node0x55ee101167e0:s0 -> Node0x55ee101168e0[tooltip="29 -> 32\nProbability 37.50%" ];
+	Node0x55ee101167e0:s1 -> Node0x55ee10118850[tooltip="29 -> 38\nProbability 62.50%" ];
+	Node0x55ee101168e0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#de614d70" fontname="Courier",label="{32:\l|  %33 = load i32, ptr %0, align 4\l  %34 = sub i32 1, %33\l  %35 = load i32, ptr %4, align 4\l  %36 = mul i32 %34, %35\l  %37 = add i32 %36, 1\l  store i32 %37, ptr %9, align 4\l  br label %38\l}"];
+	Node0x55ee101168e0 -> Node0x55ee10118850[tooltip="32 -> 38\nProbability 100.00%" ];
+	Node0x55ee10118850 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{38:\l|  %39 = load i32, ptr %0, align 4\l  %40 = sext i32 %39 to i64\l  br label %41\l}"];
+	Node0x55ee10118850 -> Node0x55ee10118e00[tooltip="38 -> 41\nProbability 100.00%" ];
+	Node0x55ee10118e00 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{41:\l|  %42 = phi i32 [ %74, %45 ], [ 1, %38 ]\l  %43 = phi i64 [ %75, %45 ], [ %40, %38 ]\l  %44 = icmp sgt i64 %43, 0\l  br i1 %44, label %45, label %76\l|{<s0>T|<s1>F}}"];
+	Node0x55ee10118e00:s0 -> Node0x55ee10118ec0[tooltip="41 -> 45\nProbability 96.88%" ];
+	Node0x55ee10118e00:s1 -> Node0x55ee10119120[tooltip="41 -> 76\nProbability 3.12%" ];
+	Node0x55ee10118ec0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{45:\l|  store i32 %42, ptr %7, align 4\l  %46 = load double, ptr %6, align 8\l  %47 = load i32, ptr %8, align 4\l  %48 = sext i32 %47 to i64\l  %49 = sub nsw i64 %48, 1\l  %50 = mul nsw i64 %49, 1\l  %51 = mul nsw i64 %50, 1\l  %52 = add nsw i64 %51, 0\l  %53 = getelementptr float, ptr %1, i64 %52\l  %54 = load float, ptr %53, align 4\l  %55 = fpext float %54 to double\l  %56 = load i32, ptr %9, align 4\l  %57 = sext i32 %56 to i64\l  %58 = sub nsw i64 %57, 1\l  %59 = mul nsw i64 %58, 1\l  %60 = mul nsw i64 %59, 1\l  %61 = add nsw i64 %60, 0\l  %62 = getelementptr float, ptr %3, i64 %61\l  %63 = load float, ptr %62, align 4\l  %64 = fpext float %63 to double\l  %65 = fmul contract double %55, %64\l  %66 = fadd contract double %46, %65\l  store double %66, ptr %6, align 8\l  %67 = load i32, ptr %8, align 4\l  %68 = load i32, ptr %2, align 4\l  %69 = add i32 %67, %68\l  store i32 %69, ptr %8, align 4\l  %70 = load i32, ptr %9, align 4\l  %71 = load i32, ptr %4, align 4\l  %72 = add i32 %70, %71\l  store i32 %72, ptr %9, align 4\l  %73 = load i32, ptr %7, align 4\l  %74 = add i32 %73, 1\l  %75 = sub i64 %43, 1\l  br label %41\l}"];
+	Node0x55ee10118ec0 -> Node0x55ee10118e00[tooltip="45 -> 41\nProbability 100.00%" ];
+	Node0x55ee10119120 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{76:\l|  store i32 %42, ptr %7, align 4\l  br label %117\l}"];
+	Node0x55ee10119120 -> Node0x55ee10115f60[tooltip="76 -> 117\nProbability 100.00%" ];
+	Node0x55ee10116440 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{77:\l|  %78 = load i32, ptr %0, align 4\l  %79 = load i32, ptr %2, align 4\l  %80 = mul i32 %78, %79\l  store i32 %80, ptr %10, align 4\l  %81 = load i32, ptr %10, align 4\l  %82 = sext i32 %81 to i64\l  %83 = load i32, ptr %2, align 4\l  %84 = sext i32 %83 to i64\l  %85 = sub i64 %82, 1\l  %86 = add i64 %85, %84\l  %87 = sdiv i64 %86, %84\l  br label %88\l}"];
+	Node0x55ee10116440 -> Node0x55ee1011b3d0[tooltip="77 -> 88\nProbability 100.00%" ];
+	Node0x55ee1011b3d0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{88:\l|  %89 = phi i32 [ %114, %92 ], [ 1, %77 ]\l  %90 = phi i64 [ %115, %92 ], [ %87, %77 ]\l  %91 = icmp sgt i64 %90, 0\l  br i1 %91, label %92, label %116\l|{<s0>T|<s1>F}}"];
+	Node0x55ee1011b3d0:s0 -> Node0x55ee1011b490[tooltip="88 -> 92\nProbability 96.88%" ];
+	Node0x55ee1011b3d0:s1 -> Node0x55ee1011b6f0[tooltip="88 -> 116\nProbability 3.12%" ];
+	Node0x55ee1011b490 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{92:\l|  store i32 %89, ptr %7, align 4\l  %93 = load double, ptr %6, align 8\l  %94 = load i32, ptr %7, align 4\l  %95 = sext i32 %94 to i64\l  %96 = sub nsw i64 %95, 1\l  %97 = mul nsw i64 %96, 1\l  %98 = mul nsw i64 %97, 1\l  %99 = add nsw i64 %98, 0\l  %100 = getelementptr float, ptr %1, i64 %99\l  %101 = load float, ptr %100, align 4\l  %102 = fpext float %101 to double\l  %103 = sub nsw i64 %95, 1\l  %104 = mul nsw i64 %103, 1\l  %105 = mul nsw i64 %104, 1\l  %106 = add nsw i64 %105, 0\l  %107 = getelementptr float, ptr %3, i64 %106\l  %108 = load float, ptr %107, align 4\l  %109 = fpext float %108 to double\l  %110 = fmul contract double %102, %109\l  %111 = fadd contract double %93, %110\l  store double %111, ptr %6, align 8\l  %112 = trunc i64 %84 to i32\l  %113 = load i32, ptr %7, align 4\l  %114 = add i32 %113, %112\l  %115 = sub i64 %90, 1\l  br label %88\l}"];
+	Node0x55ee1011b490 -> Node0x55ee1011b3d0[tooltip="92 -> 88\nProbability 100.00%" ];
+	Node0x55ee1011b6f0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{116:\l|  store i32 %89, ptr %7, align 4\l  br label %117\l}"];
+	Node0x55ee1011b6f0 -> Node0x55ee10115f60[tooltip="116 -> 117\nProbability 100.00%" ];
+	Node0x55ee10115f60 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#ca3b3770" fontname="Courier",label="{117:\l|  %118 = load double, ptr %6, align 8\l  ret double %118\l}"];
+}

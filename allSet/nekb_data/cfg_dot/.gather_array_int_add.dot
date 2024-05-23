@@ -1,0 +1,14 @@
+digraph "CFG for 'gather_array_int_add' function" {
+	label="CFG for 'gather_array_int_add' function";
+
+	Node0x55e011c7f240 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{entry:\l|  %out.addr = alloca ptr, align 8\l  %in.addr = alloca ptr, align 8\l  %n.addr = alloca i32, align 4\l  %q = alloca i32, align 4\l  %p = alloca ptr, align 8\l  store ptr %out, ptr %out.addr, align 8\l  store ptr %in, ptr %in.addr, align 8\l  store i32 %n, ptr %n.addr, align 4\l  br label %for.cond\l}"];
+	Node0x55e011c7f240 -> Node0x55e011c7f6f0[tooltip="entry -> for.cond\nProbability 100.00%" ];
+	Node0x55e011c7f6f0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.cond:\l|  %0 = load i32, ptr %n.addr, align 4\l  %tobool = icmp ne i32 %0, 0\l  br i1 %tobool, label %for.body, label %for.end\l|{<s0>T|<s1>F}}"];
+	Node0x55e011c7f6f0:s0 -> Node0x55e011c7f8e0[tooltip="for.cond -> for.body\nProbability 96.88%" ];
+	Node0x55e011c7f6f0:s1 -> Node0x55e011c7f960[tooltip="for.cond -> for.end\nProbability 3.12%" ];
+	Node0x55e011c7f8e0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.body:\l|  %1 = load ptr, ptr %in.addr, align 8\l  %incdec.ptr = getelementptr inbounds i32, ptr %1, i32 1\l  store ptr %incdec.ptr, ptr %in.addr, align 8\l  %2 = load i32, ptr %1, align 4\l  store i32 %2, ptr %q, align 4\l  %3 = load ptr, ptr %out.addr, align 8\l  %incdec.ptr1 = getelementptr inbounds i32, ptr %3, i32 1\l  store ptr %incdec.ptr1, ptr %out.addr, align 8\l  store ptr %3, ptr %p, align 8\l  %4 = load i32, ptr %q, align 4\l  %5 = load ptr, ptr %p, align 8\l  %6 = load i32, ptr %5, align 4\l  %add = add nsw i32 %6, %4\l  store i32 %add, ptr %5, align 4\l  br label %for.inc\l}"];
+	Node0x55e011c7f8e0 -> Node0x55e011c803b0[tooltip="for.body -> for.inc\nProbability 100.00%" ];
+	Node0x55e011c803b0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.inc:\l|  %7 = load i32, ptr %n.addr, align 4\l  %dec = add i32 %7, -1\l  store i32 %dec, ptr %n.addr, align 4\l  br label %for.cond, !llvm.loop !6\l}"];
+	Node0x55e011c803b0 -> Node0x55e011c7f6f0[tooltip="for.inc -> for.cond\nProbability 100.00%" ];
+	Node0x55e011c7f960 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{for.end:\l|  ret void\l}"];
+}

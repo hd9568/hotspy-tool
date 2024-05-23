@@ -1,0 +1,5 @@
+digraph "CFG for 'hypre_MPI_Barrier' function" {
+	label="CFG for 'hypre_MPI_Barrier' function";
+
+	Node0x5555d661f170 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %comm.addr = alloca ptr, align 8\l  store ptr %comm, ptr %comm.addr, align 8\l  %0 = load ptr, ptr %comm.addr, align 8\l  %call = call i32 @MPI_Barrier(ptr noundef %0)\l  ret i32 %call\l}"];
+}

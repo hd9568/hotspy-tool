@@ -1,0 +1,5 @@
+digraph "CFG for '_ZSt4swapIdENSt9enable_ifIXsr6__and_ISt6__not_ISt15__is_tuple_likeIT_EESt21is_move_constructibleIS3_ESt18is_move_assignableIS3_EEE5valueEvE4typeERS3_SC_' function" {
+	label="CFG for '_ZSt4swapIdENSt9enable_ifIXsr6__and_ISt6__not_ISt15__is_tuple_likeIT_EESt21is_move_constructibleIS3_ESt18is_move_assignableIS3_EEE5valueEvE4typeERS3_SC_' function";
+
+	Node0x5600924507c0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %__a.addr = alloca ptr, align 8\l  %__b.addr = alloca ptr, align 8\l  %__tmp = alloca double, align 8\l  store ptr %__a, ptr %__a.addr, align 8\l  store ptr %__b, ptr %__b.addr, align 8\l  %0 = load ptr, ptr %__a.addr, align 8\l  %1 = load double, ptr %0, align 8\l  store double %1, ptr %__tmp, align 8\l  %2 = load ptr, ptr %__b.addr, align 8\l  %3 = load double, ptr %2, align 8\l  %4 = load ptr, ptr %__a.addr, align 8\l  store double %3, ptr %4, align 8\l  %5 = load double, ptr %__tmp, align 8\l  %6 = load ptr, ptr %__b.addr, align 8\l  store double %5, ptr %6, align 8\l  ret void\l}"];
+}

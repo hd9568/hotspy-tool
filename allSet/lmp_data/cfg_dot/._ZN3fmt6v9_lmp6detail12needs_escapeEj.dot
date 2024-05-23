@@ -1,0 +1,19 @@
+digraph "CFG for '_ZN3fmt6v9_lmp6detail12needs_escapeEj' function" {
+	label="CFG for '_ZN3fmt6v9_lmp6detail12needs_escapeEj' function";
+
+	Node0x55fec31b5570 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %cp.addr = alloca i32, align 4\l  store i32 %cp, ptr %cp.addr, align 4\l  %0 = load i32, ptr %cp.addr, align 4\l  %cmp = icmp ult i32 %0, 32\l  br i1 %cmp, label %lor.end, label %lor.lhs.false\l|{<s0>T|<s1>F}}"];
+	Node0x55fec31b5570:s0 -> Node0x55fec31b5790[tooltip="entry -> lor.end\nProbability 50.00%" ];
+	Node0x55fec31b5570:s1 -> Node0x55fec31b5800[tooltip="entry -> lor.lhs.false\nProbability 50.00%" ];
+	Node0x55fec31b5800 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{lor.lhs.false:\l|  %1 = load i32, ptr %cp.addr, align 4\l  %cmp1 = icmp eq i32 %1, 127\l  br i1 %cmp1, label %lor.end, label %lor.lhs.false2\l|{<s0>T|<s1>F}}"];
+	Node0x55fec31b5800:s0 -> Node0x55fec31b5790[tooltip="lor.lhs.false -> lor.end\nProbability 50.00%" ];
+	Node0x55fec31b5800:s1 -> Node0x55fec31b5a30[tooltip="lor.lhs.false -> lor.lhs.false2\nProbability 50.00%" ];
+	Node0x55fec31b5a30 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470" fontname="Courier",label="{lor.lhs.false2:\l|  %2 = load i32, ptr %cp.addr, align 4\l  %cmp3 = icmp eq i32 %2, 34\l  br i1 %cmp3, label %lor.end, label %lor.lhs.false4\l|{<s0>T|<s1>F}}"];
+	Node0x55fec31b5a30:s0 -> Node0x55fec31b5790[tooltip="lor.lhs.false2 -> lor.end\nProbability 50.00%" ];
+	Node0x55fec31b5a30:s1 -> Node0x55fec31b5c90[tooltip="lor.lhs.false2 -> lor.lhs.false4\nProbability 50.00%" ];
+	Node0x55fec31b5c90 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#ca3b3770" fontname="Courier",label="{lor.lhs.false4:\l|  %3 = load i32, ptr %cp.addr, align 4\l  %cmp5 = icmp eq i32 %3, 92\l  br i1 %cmp5, label %lor.end, label %lor.rhs\l|{<s0>T|<s1>F}}"];
+	Node0x55fec31b5c90:s0 -> Node0x55fec31b5790[tooltip="lor.lhs.false4 -> lor.end\nProbability 50.00%" ];
+	Node0x55fec31b5c90:s1 -> Node0x55fec31b5f20[tooltip="lor.lhs.false4 -> lor.rhs\nProbability 50.00%" ];
+	Node0x55fec31b5f20 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d0473d70" fontname="Courier",label="{lor.rhs:\l|  %4 = load i32, ptr %cp.addr, align 4\l  %call = call noundef zeroext i1 @_ZN3fmt6v9_lmp6detail12is_printableEj(i32\l... noundef %4)\l  %lnot = xor i1 %call, true\l  br label %lor.end\l}"];
+	Node0x55fec31b5f20 -> Node0x55fec31b5790[tooltip="lor.rhs -> lor.end\nProbability 100.00%" ];
+	Node0x55fec31b5790 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{lor.end:\l|  %5 = phi i1 [ true, %lor.lhs.false4 ], [ true, %lor.lhs.false2 ], [ true,\l... %lor.lhs.false ], [ true, %entry ], [ %lnot, %lor.rhs ]\l  ret i1 %5\l}"];
+}

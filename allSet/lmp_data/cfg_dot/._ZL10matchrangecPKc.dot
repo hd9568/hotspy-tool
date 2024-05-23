@@ -1,0 +1,30 @@
+digraph "CFG for '_ZL10matchrangecPKc' function" {
+	label="CFG for '_ZL10matchrangecPKc' function";
+
+	Node0x5584167cd410 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %c.addr = alloca i8, align 1\l  %str.addr = alloca ptr, align 8\l  store i8 %c, ptr %c.addr, align 1\l  store ptr %str, ptr %str.addr, align 8\l  %0 = load i8, ptr %c.addr, align 1\l  %conv = sext i8 %0 to i32\l  %cmp = icmp ne i32 %conv, 45\l  br i1 %cmp, label %land.lhs.true, label %land.end28\l|{<s0>T|<s1>F}}"];
+	Node0x5584167cd410:s0 -> Node0x5584167cd7e0[tooltip="entry -> land.lhs.true\nProbability 50.00%" ];
+	Node0x5584167cd410:s1 -> Node0x5584167cd860[tooltip="entry -> land.end28\nProbability 50.00%" ];
+	Node0x5584167cd7e0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{land.lhs.true:\l|  %1 = load ptr, ptr %str.addr, align 8\l  %arrayidx = getelementptr inbounds i8, ptr %1, i64 0\l  %2 = load i8, ptr %arrayidx, align 1\l  %conv1 = sext i8 %2 to i32\l  %cmp2 = icmp ne i32 %conv1, 0\l  br i1 %cmp2, label %land.lhs.true3, label %land.end28\l|{<s0>T|<s1>F}}"];
+	Node0x5584167cd7e0:s0 -> Node0x5584167cdca0[tooltip="land.lhs.true -> land.lhs.true3\nProbability 62.50%" ];
+	Node0x5584167cd7e0:s1 -> Node0x5584167cd860[tooltip="land.lhs.true -> land.end28\nProbability 37.50%" ];
+	Node0x5584167cdca0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{land.lhs.true3:\l|  %3 = load ptr, ptr %str.addr, align 8\l  %arrayidx4 = getelementptr inbounds i8, ptr %3, i64 0\l  %4 = load i8, ptr %arrayidx4, align 1\l  %conv5 = sext i8 %4 to i32\l  %cmp6 = icmp ne i32 %conv5, 45\l  br i1 %cmp6, label %land.lhs.true7, label %land.end28\l|{<s0>T|<s1>F}}"];
+	Node0x5584167cdca0:s0 -> Node0x5584167ce280[tooltip="land.lhs.true3 -> land.lhs.true7\nProbability 50.00%" ];
+	Node0x5584167cdca0:s1 -> Node0x5584167cd860[tooltip="land.lhs.true3 -> land.end28\nProbability 50.00%" ];
+	Node0x5584167ce280 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#ca3b3770" fontname="Courier",label="{land.lhs.true7:\l|  %5 = load ptr, ptr %str.addr, align 8\l  %arrayidx8 = getelementptr inbounds i8, ptr %5, i64 1\l  %6 = load i8, ptr %arrayidx8, align 1\l  %conv9 = sext i8 %6 to i32\l  %cmp10 = icmp eq i32 %conv9, 45\l  br i1 %cmp10, label %land.lhs.true11, label %land.end28\l|{<s0>T|<s1>F}}"];
+	Node0x5584167ce280:s0 -> Node0x5584167ce6c0[tooltip="land.lhs.true7 -> land.lhs.true11\nProbability 50.00%" ];
+	Node0x5584167ce280:s1 -> Node0x5584167cd860[tooltip="land.lhs.true7 -> land.end28\nProbability 50.00%" ];
+	Node0x5584167ce6c0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d0473d70" fontname="Courier",label="{land.lhs.true11:\l|  %7 = load ptr, ptr %str.addr, align 8\l  %arrayidx12 = getelementptr inbounds i8, ptr %7, i64 1\l  %8 = load i8, ptr %arrayidx12, align 1\l  %conv13 = sext i8 %8 to i32\l  %cmp14 = icmp ne i32 %conv13, 0\l  br i1 %cmp14, label %land.lhs.true15, label %land.end28\l|{<s0>T|<s1>F}}"];
+	Node0x5584167ce6c0:s0 -> Node0x5584167ceb00[tooltip="land.lhs.true11 -> land.lhs.true15\nProbability 62.50%" ];
+	Node0x5584167ce6c0:s1 -> Node0x5584167cd860[tooltip="land.lhs.true11 -> land.end28\nProbability 37.50%" ];
+	Node0x5584167ceb00 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d24b4070" fontname="Courier",label="{land.lhs.true15:\l|  %9 = load ptr, ptr %str.addr, align 8\l  %arrayidx16 = getelementptr inbounds i8, ptr %9, i64 2\l  %10 = load i8, ptr %arrayidx16, align 1\l  %conv17 = sext i8 %10 to i32\l  %cmp18 = icmp ne i32 %conv17, 0\l  br i1 %cmp18, label %land.rhs, label %land.end28\l|{<s0>T|<s1>F}}"];
+	Node0x5584167ceb00:s0 -> Node0x5584167cf0c0[tooltip="land.lhs.true15 -> land.rhs\nProbability 62.50%" ];
+	Node0x5584167ceb00:s1 -> Node0x5584167cd860[tooltip="land.lhs.true15 -> land.end28\nProbability 37.50%" ];
+	Node0x5584167cf0c0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{land.rhs:\l|  %11 = load i8, ptr %c.addr, align 1\l  %conv19 = sext i8 %11 to i32\l  %12 = load ptr, ptr %str.addr, align 8\l  %arrayidx20 = getelementptr inbounds i8, ptr %12, i64 0\l  %13 = load i8, ptr %arrayidx20, align 1\l  %conv21 = sext i8 %13 to i32\l  %cmp22 = icmp sge i32 %conv19, %conv21\l  br i1 %cmp22, label %land.rhs23, label %land.end\l|{<s0>T|<s1>F}}"];
+	Node0x5584167cf0c0:s0 -> Node0x5584167cf610[tooltip="land.rhs -> land.rhs23\nProbability 50.00%" ];
+	Node0x5584167cf0c0:s1 -> Node0x5584167cf690[tooltip="land.rhs -> land.end\nProbability 50.00%" ];
+	Node0x5584167cf610 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#dc5d4a70" fontname="Courier",label="{land.rhs23:\l|  %14 = load i8, ptr %c.addr, align 1\l  %conv24 = sext i8 %14 to i32\l  %15 = load ptr, ptr %str.addr, align 8\l  %arrayidx25 = getelementptr inbounds i8, ptr %15, i64 2\l  %16 = load i8, ptr %arrayidx25, align 1\l  %conv26 = sext i8 %16 to i32\l  %cmp27 = icmp sle i32 %conv24, %conv26\l  br label %land.end\l}"];
+	Node0x5584167cf610 -> Node0x5584167cf690[tooltip="land.rhs23 -> land.end\nProbability 100.00%" ];
+	Node0x5584167cf690 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{land.end:\l|  %17 = phi i1 [ false, %land.rhs ], [ %cmp27, %land.rhs23 ]\l  br label %land.end28\l}"];
+	Node0x5584167cf690 -> Node0x5584167cd860[tooltip="land.end -> land.end28\nProbability 100.00%" ];
+	Node0x5584167cd860 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{land.end28:\l|  %18 = phi i1 [ false, %land.lhs.true15 ], [ false, %land.lhs.true11 ], [\l... false, %land.lhs.true7 ], [ false, %land.lhs.true3 ], [ false, %land.lhs.true\l... ], [ false, %entry ], [ %17, %land.end ]\l  %conv29 = zext i1 %18 to i32\l  ret i32 %conv29\l}"];
+}

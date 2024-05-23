@@ -1,0 +1,10 @@
+digraph "CFG for '_ZN3fmt6v9_lmp6detail9formatbufISt15basic_streambufIcSt11char_traitsIcEEE8overflowEi' function" {
+	label="CFG for '_ZN3fmt6v9_lmp6detail9formatbufISt15basic_streambufIcSt11char_traitsIcEEE8overflowEi' function";
+
+	Node0x5584169bf340 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %ch.addr = alloca i32, align 4\l  %ref.tmp = alloca i32, align 4\l  %ref.tmp3 = alloca i8, align 1\l  store ptr %this, ptr %this.addr, align 8\l  store i32 %ch, ptr %ch.addr, align 4\l  %this1 = load ptr, ptr %this.addr, align 8\l  %call = call noundef i32 @_ZNSt11char_traitsIcE3eofEv() #18\l  store i32 %call, ptr %ref.tmp, align 4\l  %call2 = call noundef zeroext i1\l... @_ZNSt11char_traitsIcE11eq_int_typeERKiS2_(ptr noundef nonnull align 4\l... dereferenceable(4) %ch.addr, ptr noundef nonnull align 4 dereferenceable(4)\l... %ref.tmp) #18\l  %lnot = xor i1 %call2, true\l  br i1 %lnot, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x5584169bf340:s0 -> Node0x5584164ad1c0[tooltip="entry -> if.then\nProbability 50.00%" ];
+	Node0x5584169bf340:s1 -> Node0x5584164ad930[tooltip="entry -> if.end\nProbability 50.00%" ];
+	Node0x5584164ad1c0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.then:\l|  %buffer_ = getelementptr inbounds %\"class.fmt::v9_lmp::detail::formatbuf\",\l... ptr %this1, i32 0, i32 1\l  %0 = load ptr, ptr %buffer_, align 8\l  %1 = load i32, ptr %ch.addr, align 4\l  %conv = trunc i32 %1 to i8\l  store i8 %conv, ptr %ref.tmp3, align 1\l  call void @_ZN3fmt6v9_lmp6detail6bufferIcE9push_backERKc(ptr noundef nonnull\l... align 8 dereferenceable(32) %0, ptr noundef nonnull align 1\l... dereferenceable(1) %ref.tmp3)\l  br label %if.end\l}"];
+	Node0x5584164ad1c0 -> Node0x5584164ad930[tooltip="if.then -> if.end\nProbability 100.00%" ];
+	Node0x5584164ad930 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  %2 = load i32, ptr %ch.addr, align 4\l  ret i32 %2\l}"];
+}

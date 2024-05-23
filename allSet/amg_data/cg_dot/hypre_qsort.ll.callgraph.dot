@@ -1,0 +1,39 @@
+digraph "Call graph: hypre_qsort.ll" {
+	label="Call graph: hypre_qsort.ll";
+
+	Node0x5575f43464a0 [shape=record,label="{hypre_swap}"];
+	Node0x5575f43369e0 [shape=record,label="{hypre_swap2}"];
+	Node0x5575f4343f30 [shape=record,label="{hypre_swap2i}"];
+	Node0x5575f43402c0 [shape=record,label="{hypre_swap3i}"];
+	Node0x5575f4363b30 [shape=record,label="{hypre_swap_d}"];
+	Node0x5575f4340c00 [shape=record,label="{hypre_swap3_d}"];
+	Node0x5575f4342910 [shape=record,label="{hypre_swap4_d}"];
+	Node0x5575f434e0c0 [shape=record,label="{hypre_qsort3_abs}"];
+	Node0x5575f434e0c0 -> Node0x5575f4340c00;
+	Node0x5575f434e0c0 -> Node0x5575f4363630;
+	Node0x5575f434e0c0 -> Node0x5575f434e0c0;
+	Node0x5575f4349500 [shape=record,label="{hypre_qsort0}"];
+	Node0x5575f4349500 -> Node0x5575f43464a0;
+	Node0x5575f4349500 -> Node0x5575f4349500;
+	Node0x5575f434a130 [shape=record,label="{hypre_qsort1}"];
+	Node0x5575f434a130 -> Node0x5575f43369e0;
+	Node0x5575f434a130 -> Node0x5575f434a130;
+	Node0x5575f434a750 [shape=record,label="{hypre_qsort2i}"];
+	Node0x5575f434a750 -> Node0x5575f4343f30;
+	Node0x5575f434a750 -> Node0x5575f434a750;
+	Node0x5575f434bb20 [shape=record,label="{hypre_qsort2}"];
+	Node0x5575f434bb20 -> Node0x5575f43369e0;
+	Node0x5575f434bb20 -> Node0x5575f434bb20;
+	Node0x5575f434d8c0 [shape=record,label="{hypre_qsort3i}"];
+	Node0x5575f434d8c0 -> Node0x5575f43402c0;
+	Node0x5575f434d8c0 -> Node0x5575f434d8c0;
+	Node0x5575f4363630 [shape=record,label="{llvm.fabs.f64}"];
+	Node0x5575f4350c20 [shape=record,label="{hypre_qsort4_abs}"];
+	Node0x5575f4350c20 -> Node0x5575f4342910;
+	Node0x5575f4350c20 -> Node0x5575f4363630;
+	Node0x5575f4350c20 -> Node0x5575f4350c20;
+	Node0x5575f4351850 [shape=record,label="{hypre_qsort_abs}"];
+	Node0x5575f4351850 -> Node0x5575f4363b30;
+	Node0x5575f4351850 -> Node0x5575f4363630;
+	Node0x5575f4351850 -> Node0x5575f4351850;
+}

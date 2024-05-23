@@ -1,0 +1,5 @@
+digraph "CFG for 'hypre_MPI_Op_create' function" {
+	label="CFG for 'hypre_MPI_Op_create' function";
+
+	Node0x5555d6663450 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %function.addr = alloca ptr, align 8\l  %commute.addr = alloca i32, align 4\l  %op.addr = alloca ptr, align 8\l  store ptr %function, ptr %function.addr, align 8\l  store i32 %commute, ptr %commute.addr, align 4\l  store ptr %op, ptr %op.addr, align 8\l  %0 = load ptr, ptr %function.addr, align 8\l  %1 = load i32, ptr %commute.addr, align 4\l  %2 = load ptr, ptr %op.addr, align 8\l  %call = call i32 @MPI_Op_create(ptr noundef %0, i32 noundef %1, ptr noundef\l... %2)\l  ret i32 %call\l}"];
+}

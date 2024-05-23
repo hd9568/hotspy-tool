@@ -1,0 +1,23 @@
+digraph "CFG for 'do_omp_barrier_only' function" {
+	label="CFG for 'do_omp_barrier_only' function";
+
+	Node0x5567ef5828a0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#ec7f6370" fontname="Courier",label="{entry:\l|  %num_iterations.addr = alloca i64, align 8\l  %iteration = alloca i64, align 8\l  %subcycle = alloca i64, align 8\l  store i64 %num_iterations, ptr %num_iterations.addr, align 8\l  store i64 0, ptr %iteration, align 8\l  br label %for.cond\l}"];
+	Node0x5567ef5828a0 -> Node0x5567ef582ca0[tooltip="entry -> for.cond\nProbability 100.00%" ];
+	Node0x5567ef582ca0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{for.cond:\l|  %0 = load i64, ptr %iteration, align 8\l  %1 = load i64, ptr %num_iterations.addr, align 8\l  %cmp = icmp slt i64 %0, %1\l  br i1 %cmp, label %for.body, label %for.end6\l|{<s0>T|<s1>F}}"];
+	Node0x5567ef582ca0:s0 -> Node0x5567ef582ef0[tooltip="for.cond -> for.body\nProbability 96.88%" ];
+	Node0x5567ef582ca0:s1 -> Node0x5567ef582f40[tooltip="for.cond -> for.end6\nProbability 3.12%" ];
+	Node0x5567ef582ef0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{for.body:\l|  store i64 0, ptr %subcycle, align 8\l  br label %for.cond1\l}"];
+	Node0x5567ef582ef0 -> Node0x5567ef5830e0[tooltip="for.body -> for.cond1\nProbability 100.00%" ];
+	Node0x5567ef5830e0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.cond1:\l|  %2 = load i64, ptr %subcycle, align 8\l  %cmp2 = icmp slt i64 %2, 10\l  br i1 %cmp2, label %for.body3, label %for.end\l|{<s0>T|<s1>F}}"];
+	Node0x5567ef5830e0:s0 -> Node0x5567ef583300[tooltip="for.cond1 -> for.body3\nProbability 96.88%" ];
+	Node0x5567ef5830e0:s1 -> Node0x5567ef583380[tooltip="for.cond1 -> for.end\nProbability 3.12%" ];
+	Node0x5567ef583300 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.body3:\l|  br label %for.inc\l}"];
+	Node0x5567ef583300 -> Node0x5567ef583640[tooltip="for.body3 -> for.inc\nProbability 100.00%" ];
+	Node0x5567ef583640 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.inc:\l|  %3 = load i64, ptr %subcycle, align 8\l  %inc = add nsw i64 %3, 1\l  store i64 %inc, ptr %subcycle, align 8\l  br label %for.cond1, !llvm.loop !6\l}"];
+	Node0x5567ef583640 -> Node0x5567ef5830e0[tooltip="for.inc -> for.cond1\nProbability 100.00%" ];
+	Node0x5567ef583380 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{for.end:\l|  br label %for.inc4\l}"];
+	Node0x5567ef583380 -> Node0x5567ef583ab0[tooltip="for.end -> for.inc4\nProbability 100.00%" ];
+	Node0x5567ef583ab0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{for.inc4:\l|  %4 = load i64, ptr %iteration, align 8\l  %inc5 = add nsw i64 %4, 1\l  store i64 %inc5, ptr %iteration, align 8\l  br label %for.cond, !llvm.loop !8\l}"];
+	Node0x5567ef583ab0 -> Node0x5567ef582ca0[tooltip="for.inc4 -> for.cond\nProbability 100.00%" ];
+	Node0x5567ef582f40 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#ec7f6370" fontname="Courier",label="{for.end6:\l|  ret void\l}"];
+}

@@ -1,0 +1,10 @@
+digraph "CFG for '_ZN9MathEigen6JacobiIdPdPS1_PKPKdE5AllocEi' function" {
+	label="CFG for '_ZN9MathEigen6JacobiIdPdPS1_PKPKdE5AllocEi' function";
+
+	Node0x5600924b2970 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %n.addr = alloca i32, align 4\l  store ptr %this, ptr %this.addr, align 8\l  store i32 %n, ptr %n.addr, align 4\l  %this1 = load ptr, ptr %this.addr, align 8\l  %0 = load i32, ptr %n.addr, align 4\l  %n2 = getelementptr inbounds %\"class.MathEigen::Jacobi.0\", ptr %this1, i32\l... 0, i32 0\l  store i32 %0, ptr %n2, align 8\l  %1 = load i32, ptr %n.addr, align 4\l  %cmp = icmp sgt i32 %1, 0\l  br i1 %cmp, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x5600924b2970:s0 -> Node0x5600924b2f80[tooltip="entry -> if.then\nProbability 62.50%" ];
+	Node0x5600924b2970:s1 -> Node0x560092430810[tooltip="entry -> if.end\nProbability 37.50%" ];
+	Node0x5600924b2f80 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.then:\l|  %2 = load i32, ptr %n.addr, align 4\l  %conv = sext i32 %2 to i64\l  %3 = call \{ i64, i1 \} @llvm.umul.with.overflow.i64(i64 %conv, i64 4)\l  %4 = extractvalue \{ i64, i1 \} %3, 1\l  %5 = extractvalue \{ i64, i1 \} %3, 0\l  %6 = select i1 %4, i64 -1, i64 %5\l  %call = call noalias noundef nonnull ptr @_Znam(i64 noundef %6) #7\l  %max_idx_row = getelementptr inbounds %\"class.MathEigen::Jacobi.0\", ptr\l... %this1, i32 0, i32 6\l  store ptr %call, ptr %max_idx_row, align 8\l  %7 = load i32, ptr %n.addr, align 4\l  %conv3 = sext i32 %7 to i64\l  %8 = load i32, ptr %n.addr, align 4\l  %conv4 = sext i32 %8 to i64\l  %M = getelementptr inbounds %\"class.MathEigen::Jacobi.0\", ptr %this1, i32 0,\l... i32 2\l  call void @_ZN9MathEigen7Alloc2DIdEEvmmPPPT_(i64 noundef %conv3, i64 noundef\l... %conv4, ptr noundef %M)\l  br label %if.end\l}"];
+	Node0x5600924b2f80 -> Node0x560092430810[tooltip="if.then -> if.end\nProbability 100.00%" ];
+	Node0x560092430810 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  ret void\l}"];
+}

@@ -1,0 +1,5 @@
+digraph "CFG for '_ZSt25__uninitialized_default_nIPPvmET_S2_T0_' function" {
+	label="CFG for '_ZSt25__uninitialized_default_nIPPvmET_S2_T0_' function";
+
+	Node0x56285ad30000 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %__first.addr = alloca ptr, align 8\l  %__n.addr = alloca i64, align 8\l  %__assignable = alloca i8, align 1\l  store ptr %__first, ptr %__first.addr, align 8\l  store i64 %__n, ptr %__n.addr, align 8\l  store i8 1, ptr %__assignable, align 1\l  %0 = load ptr, ptr %__first.addr, align 8\l  %1 = load i64, ptr %__n.addr, align 8\l  %call = call noundef ptr\l... @_ZNSt27__uninitialized_default_n_1ILb1EE18__uninit_default_nIPPvmEET_S4_T0_(p\l...tr noundef %0, i64 noundef %1)\l  ret ptr %call\l}"];
+}

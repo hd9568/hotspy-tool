@@ -1,0 +1,29 @@
+digraph "CFG for '_ZZN3fmt6v9_lmp6detail14do_write_floatINS0_8appenderENS1_9dragonbox10decimal_fpIdEEcNS1_14digit_groupingIcEEEET_S9_RKT0_RKNS0_18basic_format_specsIT1_EENS1_11float_specsENS1_10locale_refEENKUlvE_clEv' function" {
+	label="CFG for '_ZZN3fmt6v9_lmp6detail14do_write_floatINS0_8appenderENS1_9dragonbox10decimal_fpIdEEcNS1_14digit_groupingIcEEEET_S9_RKT0_RKNS0_18basic_format_specsIT1_EENS1_11float_specsENS1_10locale_refEENKUlvE_clEv' function";
+
+	Node0x55fec3282b60 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %retval = alloca i1, align 1\l  %this.addr = alloca ptr, align 8\l  %exp_lower = alloca i32, align 4\l  %exp_upper = alloca i32, align 4\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %0 = getelementptr inbounds %class.anon.49, ptr %this1, i32 0, i32 0\l  %format = getelementptr inbounds %\"struct.fmt::v9_lmp::detail::float_specs\",\l... ptr %0, i32 0, i32 1\l  %bf.load = load i32, ptr %format, align 4\l  %bf.clear = and i32 %bf.load, 255\l  %bf.cast = trunc i32 %bf.clear to i8\l  %cmp = icmp eq i8 %bf.cast, 1\l  br i1 %cmp, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x55fec3282b60:s0 -> Node0x55fec3288890[tooltip="entry -> if.then\nProbability 50.00%" ];
+	Node0x55fec3282b60:s1 -> Node0x55fec3288aa0[tooltip="entry -> if.end\nProbability 50.00%" ];
+	Node0x55fec3288890 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.then:\l|  store i1 true, ptr %retval, align 1\l  br label %return\l}"];
+	Node0x55fec3288890 -> Node0x55fec3288c60[tooltip="if.then -> return\nProbability 100.00%" ];
+	Node0x55fec3288aa0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.end:\l|  %1 = getelementptr inbounds %class.anon.49, ptr %this1, i32 0, i32 0\l  %format2 = getelementptr inbounds\l... %\"struct.fmt::v9_lmp::detail::float_specs\", ptr %1, i32 0, i32 1\l  %bf.load3 = load i32, ptr %format2, align 4\l  %bf.clear4 = and i32 %bf.load3, 255\l  %bf.cast5 = trunc i32 %bf.clear4 to i8\l  %cmp6 = icmp ne i8 %bf.cast5, 0\l  br i1 %cmp6, label %if.then7, label %if.end8\l|{<s0>T|<s1>F}}"];
+	Node0x55fec3288aa0:s0 -> Node0x55fec32891a0[tooltip="if.end -> if.then7\nProbability 62.50%" ];
+	Node0x55fec3288aa0:s1 -> Node0x55fec3289220[tooltip="if.end -> if.end8\nProbability 37.50%" ];
+	Node0x55fec32891a0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{if.then7:\l|  store i1 false, ptr %retval, align 1\l  br label %return\l}"];
+	Node0x55fec32891a0 -> Node0x55fec3288c60[tooltip="if.then7 -> return\nProbability 100.00%" ];
+	Node0x55fec3289220 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470" fontname="Courier",label="{if.end8:\l|  store i32 -4, ptr %exp_lower, align 4\l  store i32 16, ptr %exp_upper, align 4\l  %2 = getelementptr inbounds %class.anon.49, ptr %this1, i32 0, i32 1\l  %3 = load i32, ptr %2, align 4\l  %cmp9 = icmp slt i32 %3, -4\l  br i1 %cmp9, label %lor.end, label %lor.rhs\l|{<s0>T|<s1>F}}"];
+	Node0x55fec3289220:s0 -> Node0x55fec3289780[tooltip="if.end8 -> lor.end\nProbability 50.00%" ];
+	Node0x55fec3289220:s1 -> Node0x55fec32897f0[tooltip="if.end8 -> lor.rhs\nProbability 50.00%" ];
+	Node0x55fec32897f0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#cc403a70" fontname="Courier",label="{lor.rhs:\l|  %4 = getelementptr inbounds %class.anon.49, ptr %this1, i32 0, i32 1\l  %5 = load i32, ptr %4, align 4\l  %6 = getelementptr inbounds %class.anon.49, ptr %this1, i32 0, i32 0\l  %precision = getelementptr inbounds\l... %\"struct.fmt::v9_lmp::detail::float_specs\", ptr %6, i32 0, i32 0\l  %7 = load i32, ptr %precision, align 4\l  %cmp10 = icmp sgt i32 %7, 0\l  br i1 %cmp10, label %cond.true, label %cond.false\l|{<s0>T|<s1>F}}"];
+	Node0x55fec32897f0:s0 -> Node0x55fec3289eb0[tooltip="lor.rhs -> cond.true\nProbability 62.50%" ];
+	Node0x55fec32897f0:s1 -> Node0x55fec3289f30[tooltip="lor.rhs -> cond.false\nProbability 37.50%" ];
+	Node0x55fec3289eb0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d24b4070" fontname="Courier",label="{cond.true:\l|  %8 = getelementptr inbounds %class.anon.49, ptr %this1, i32 0, i32 0\l  %precision11 = getelementptr inbounds\l... %\"struct.fmt::v9_lmp::detail::float_specs\", ptr %8, i32 0, i32 0\l  %9 = load i32, ptr %precision11, align 4\l  br label %cond.end\l}"];
+	Node0x55fec3289eb0 -> Node0x55fec328a290[tooltip="cond.true -> cond.end\nProbability 100.00%" ];
+	Node0x55fec3289f30 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{cond.false:\l|  br label %cond.end\l}"];
+	Node0x55fec3289f30 -> Node0x55fec328a290[tooltip="cond.false -> cond.end\nProbability 100.00%" ];
+	Node0x55fec328a290 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#cc403a70" fontname="Courier",label="{cond.end:\l|  %cond = phi i32 [ %9, %cond.true ], [ 16, %cond.false ]\l  %cmp12 = icmp sge i32 %5, %cond\l  br label %lor.end\l}"];
+	Node0x55fec328a290 -> Node0x55fec3289780[tooltip="cond.end -> lor.end\nProbability 100.00%" ];
+	Node0x55fec3289780 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470" fontname="Courier",label="{lor.end:\l|  %10 = phi i1 [ true, %if.end8 ], [ %cmp12, %cond.end ]\l  store i1 %10, ptr %retval, align 1\l  br label %return\l}"];
+	Node0x55fec3289780 -> Node0x55fec3288c60[tooltip="lor.end -> return\nProbability 100.00%" ];
+	Node0x55fec3288c60 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{return:\l|  %11 = load i1, ptr %retval, align 1\l  ret i1 %11\l}"];
+}

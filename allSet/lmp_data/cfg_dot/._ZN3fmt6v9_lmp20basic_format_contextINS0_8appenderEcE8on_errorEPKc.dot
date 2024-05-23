@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN3fmt6v9_lmp20basic_format_contextINS0_8appenderEcE8on_errorEPKc' function" {
+	label="CFG for '_ZN3fmt6v9_lmp20basic_format_contextINS0_8appenderEcE8on_errorEPKc' function";
+
+	Node0x55fec3497820 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %message.addr = alloca ptr, align 8\l  %ref.tmp = alloca %\"struct.fmt::v9_lmp::detail::error_handler\", align 1\l  %undef.agg.tmp = alloca %\"struct.fmt::v9_lmp::detail::error_handler\", align 1\l  store ptr %this, ptr %this.addr, align 8\l  store ptr %message, ptr %message.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  call void\l... @_ZN3fmt6v9_lmp20basic_format_contextINS0_8appenderEcE13error_handlerEv(ptr\l... noundef nonnull align 8 dereferenceable(32) %this1)\l  %0 = load ptr, ptr %message.addr, align 8\l  call void @_ZN3fmt6v9_lmp6detail13error_handler8on_errorEPKc(ptr noundef\l... nonnull align 1 dereferenceable(1) %ref.tmp, ptr noundef %0) #17\l  unreachable\l}"];
+}

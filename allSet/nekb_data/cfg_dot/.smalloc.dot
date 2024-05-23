@@ -1,0 +1,12 @@
+digraph "CFG for 'smalloc' function" {
+	label="CFG for 'smalloc' function";
+
+	Node0x55c4aa6d2810 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %size.addr = alloca i64, align 8\l  %file.addr = alloca ptr, align 8\l  %line.addr = alloca i32, align 4\l  %res = alloca ptr, align 8\l  store i64 %size, ptr %size.addr, align 8\l  store ptr %file, ptr %file.addr, align 8\l  store i32 %line, ptr %line.addr, align 4\l  %0 = load i64, ptr %size.addr, align 8\l  %call = call noalias ptr @malloc(i64 noundef %0) #8\l  store ptr %call, ptr %res, align 8\l  %1 = load ptr, ptr %res, align 8\l  %tobool = icmp ne ptr %1, null\l  br i1 %tobool, label %if.end, label %land.lhs.true\l|{<s0>T|<s1>F}}"];
+	Node0x55c4aa6d2810:s0 -> Node0x55c4aa6d2eb0[tooltip="entry -> if.end\nProbability 62.50%" ];
+	Node0x55c4aa6d2810:s1 -> Node0x55c4aa6d2f20[tooltip="entry -> land.lhs.true\nProbability 37.50%" ];
+	Node0x55c4aa6d2f20 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{land.lhs.true:\l|  %2 = load i64, ptr %size.addr, align 8\l  %tobool1 = icmp ne i64 %2, 0\l  br i1 %tobool1, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x55c4aa6d2f20:s0 -> Node0x55c4aa6d3320[tooltip="land.lhs.true -> if.then\nProbability 0.00%" ];
+	Node0x55c4aa6d2f20:s1 -> Node0x55c4aa6d2eb0[tooltip="land.lhs.true -> if.end\nProbability 100.00%" ];
+	Node0x55c4aa6d3320 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f2cab570" fontname="Courier",label="{if.then:\l|  %3 = load ptr, ptr %file.addr, align 8\l  %4 = load i32, ptr %line.addr, align 4\l  %5 = load i64, ptr %size.addr, align 8\l  call void (i32, ptr, i32, ptr, ...) @fail(i32 noundef 1, ptr noundef %3, i32\l... noundef %4, ptr noundef @.str.6, i64 noundef %5) #9\l  unreachable\l}"];
+	Node0x55c4aa6d2eb0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  %6 = load ptr, ptr %res, align 8\l  ret ptr %6\l}"];
+}

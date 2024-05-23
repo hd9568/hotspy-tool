@@ -1,0 +1,9 @@
+digraph "CFG for '_ZNSt8_Rb_treeIiiSt9_IdentityIiESt4lessIiESaIiEED2Ev' function" {
+	label="CFG for '_ZNSt8_Rb_treeIiiSt9_IdentityIiESt4lessIiESaIiEED2Ev' function";
+
+	Node0x55aea91b6560 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %call = call noundef ptr\l... @_ZNSt8_Rb_treeIiiSt9_IdentityIiESt4lessIiESaIiEE8_M_beginEv(ptr noundef\l... nonnull align 8 dereferenceable(48) %this1) #15\l  invoke void\l... @_ZNSt8_Rb_treeIiiSt9_IdentityIiESt4lessIiESaIiEE8_M_eraseEPSt13_Rb_tree_nodeI\l...iE(ptr noundef nonnull align 8 dereferenceable(48) %this1, ptr noundef %call)\l          to label %invoke.cont unwind label %terminate.lpad\l}"];
+	Node0x55aea91b6560 -> Node0x55aea91b6700[tooltip="entry -> invoke.cont\nProbability 100.00%" ];
+	Node0x55aea91b6560 -> Node0x55aea91b6980[tooltip="entry -> terminate.lpad\nProbability 0.00%" ];
+	Node0x55aea91b6700 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{invoke.cont:\l|  %_M_impl = getelementptr inbounds %\"class.std::_Rb_tree.33\", ptr %this1,\l... i32 0, i32 0\l  call void\l... @_ZNSt8_Rb_treeIiiSt9_IdentityIiESt4lessIiESaIiEE13_Rb_tree_implIS3_Lb1EED2Ev(\l...ptr noundef nonnull align 8 dereferenceable(48) %_M_impl) #15\l  ret void\l}"];
+	Node0x55aea91b6980 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f4c5ad70" fontname="Courier",label="{terminate.lpad:\l|  %0 = landingpad \{ ptr, i32 \}\l          catch ptr null\l  %1 = extractvalue \{ ptr, i32 \} %0, 0\l  call void @__clang_call_terminate(ptr %1) #16\l  unreachable\l}"];
+}

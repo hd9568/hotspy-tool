@@ -1,0 +1,12 @@
+digraph "CFG for '_ZL9truncpathRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE' function" {
+	label="CFG for '_ZL9truncpathRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE' function";
+
+	Node0x55d775284350 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %result.ptr = alloca ptr, align 8\l  %path.addr = alloca ptr, align 8\l  %found = alloca i64, align 8\l  store ptr %agg.result, ptr %result.ptr, align 8\l  store ptr %path, ptr %path.addr, align 8\l  %0 = load ptr, ptr %path.addr, align 8\l  %call = call noundef i64\l... @_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4findEPKcm(ptr noundef\l... nonnull align 8 dereferenceable(32) %0, ptr noundef @.str.9, i64 noundef 0)\l... #12\l  store i64 %call, ptr %found, align 8\l  %1 = load i64, ptr %found, align 8\l  %cmp = icmp ne i64 %1, -1\l  br i1 %cmp, label %if.then, label %if.else\l|{<s0>T|<s1>F}}"];
+	Node0x55d775284350:s0 -> Node0x55d7752847f0[tooltip="entry -> if.then\nProbability 62.50%" ];
+	Node0x55d775284350:s1 -> Node0x55d775284bc0[tooltip="entry -> if.else\nProbability 37.50%" ];
+	Node0x55d7752847f0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.then:\l|  %2 = load ptr, ptr %path.addr, align 8\l  %3 = load i64, ptr %found, align 8\l  call void\l... @_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6substrEmm(ptr\l... dead_on_unwind writable sret(%\"class.std::__cxx11::basic_string\") align 8\l... %agg.result, ptr noundef nonnull align 8 dereferenceable(32) %2, i64 noundef\l... %3, i64 noundef -1)\l  br label %return\l}"];
+	Node0x55d7752847f0 -> Node0x55d775284de0[tooltip="if.then -> return\nProbability 100.00%" ];
+	Node0x55d775284bc0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{if.else:\l|  %4 = load ptr, ptr %path.addr, align 8\l  call void @_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC1ERKS4_(ptr\l... noundef nonnull align 8 dereferenceable(32) %agg.result, ptr noundef nonnull\l... align 8 dereferenceable(32) %4)\l  br label %return\l}"];
+	Node0x55d775284bc0 -> Node0x55d775284de0[tooltip="if.else -> return\nProbability 100.00%" ];
+	Node0x55d775284de0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{return:\l|  ret void\l}"];
+}

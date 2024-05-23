@@ -1,0 +1,5 @@
+digraph "CFG for 'hypre_GMRESGetConvergenceFactorTol' function" {
+	label="CFG for 'hypre_GMRESGetConvergenceFactorTol' function";
+
+	Node0x56458ac17b80 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %gmres_vdata.addr = alloca ptr, align 8\l  %cf_tol.addr = alloca ptr, align 8\l  %gmres_data = alloca ptr, align 8\l  store ptr %gmres_vdata, ptr %gmres_vdata.addr, align 8\l  store ptr %cf_tol, ptr %cf_tol.addr, align 8\l  %0 = load ptr, ptr %gmres_vdata.addr, align 8\l  store ptr %0, ptr %gmres_data, align 8\l  %1 = load ptr, ptr %gmres_data, align 8\l  %cf_tol1 = getelementptr inbounds %struct.hypre_GMRESData, ptr %1, i32 0,\l... i32 8\l  %2 = load double, ptr %cf_tol1, align 8\l  %3 = load ptr, ptr %cf_tol.addr, align 8\l  store double %2, ptr %3, align 8\l  %4 = load i32, ptr @hypre__global_error, align 4\l  ret i32 %4\l}"];
+}

@@ -1,0 +1,43 @@
+digraph "Call graph: read_input.ll" {
+	label="Call graph: read_input.ll";
+
+	Node0x55f722e4a1c0 [shape=record,label="{read_input_}"];
+	Node0x55f722e4a1c0 -> Node0x55f722e4a4d0;
+	Node0x55f722e4a1c0 -> Node0x55f722e4aa30;
+	Node0x55f722e4a1c0 -> Node0x55f722e4ac50;
+	Node0x55f722e4a1c0 -> Node0x55f722e4ae70;
+	Node0x55f722e4a1c0 -> Node0x55f722e4b0e0;
+	Node0x55f722e4a1c0 -> Node0x55f722e56b40;
+	Node0x55f722e4a1c0 -> Node0x55f722e4d0e0;
+	Node0x55f722e4a1c0 -> Node0x55f722e4b210;
+	Node0x55f722e4a1c0 -> Node0x55f722e4c9d0;
+	Node0x55f722e4a1c0 -> Node0x55f722e4cc20;
+	Node0x55f722e4a1c0 -> Node0x55f722e4c630;
+	Node0x55f722e4a1c0 -> Node0x55f722e4c140;
+	Node0x55f722e4a1c0 -> Node0x55f722e4bef0;
+	Node0x55f722e4a1c0 -> Node0x55f722e4b430;
+	Node0x55f722e4a1c0 -> Node0x55f722e4b650;
+	Node0x55f722e4a1c0 -> Node0x55f722e4c360;
+	Node0x55f722e4a1c0 -> Node0x55f722e4b950;
+	Node0x55f722e4a1c0 -> Node0x55f722e4bc80;
+	Node0x55f722e4a4d0 [shape=record,label="{_FortranAioBeginExternalFormattedOutput}"];
+	Node0x55f722e4aa30 [shape=record,label="{_FortranAioEndIoStatement}"];
+	Node0x55f722e4ac50 [shape=record,label="{_FortranAioBeginOpenUnit}"];
+	Node0x55f722e4ae70 [shape=record,label="{_FortranAioEnableHandlers}"];
+	Node0x55f722e4b0e0 [shape=record,label="{_FortranAioSetFile}"];
+	Node0x55f722e56b40 [shape=record,label="{_FortranAioSetStatus}"];
+	Node0x55f722e4b210 [shape=record,label="{_FortranAioBeginClose}"];
+	Node0x55f722e4b430 [shape=record,label="{_FortranAioSetAccess}"];
+	Node0x55f722e4b650 [shape=record,label="{_FortranAioSetForm}"];
+	Node0x55f722e4b950 [shape=record,label="{_FortranAioBeginExternalListOutput}"];
+	Node0x55f722e4bc80 [shape=record,label="{_FortranAioOutputAscii}"];
+	Node0x55f722e4bef0 [shape=record,label="{_FortranAioBeginExternalListInput}"];
+	Node0x55f722e4c140 [shape=record,label="{_FortranAioInputInteger}"];
+	Node0x55f722e4c360 [shape=record,label="{_FortranAioInputReal64}"];
+	Node0x55f722e4c630 [shape=record,label="{mpi_comm_size_}"];
+	Node0x55f722e4c9d0 [shape=record,label="{_FortranAioOutputInteger32}"];
+	Node0x55f722e4cc20 [shape=record,label="{mpi_abort_}"];
+	Node0x55f722e4d0e0 [shape=record,label="{bcast_inputs_}"];
+	Node0x55f722e4fcd0 [shape=record,label="{llvm.stacksave.p0}"];
+	Node0x55f722e50170 [shape=record,label="{llvm.stackrestore.p0}"];
+}

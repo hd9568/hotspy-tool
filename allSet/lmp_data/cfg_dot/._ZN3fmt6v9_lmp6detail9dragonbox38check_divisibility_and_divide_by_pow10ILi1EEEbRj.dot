@@ -1,0 +1,17 @@
+digraph "CFG for '_ZN3fmt6v9_lmp6detail9dragonbox38check_divisibility_and_divide_by_pow10ILi1EEEbRj' function" {
+	label="CFG for '_ZN3fmt6v9_lmp6detail9dragonbox38check_divisibility_and_divide_by_pow10ILi1EEEbRj' function";
+
+	Node0x55fec2f985d0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %n.addr = alloca ptr, align 8\l  %info = alloca %struct.anon, align 4\l  %magic_number = alloca i32, align 4\l  %comparison_mask = alloca i32, align 4\l  %result = alloca i8, align 1\l  store ptr %n, ptr %n.addr, align 8\l  call void @llvm.memcpy.p0.p0.i64(ptr align 4 %info, ptr align 4\l... @__const._ZN3fmt6v9_lmp6detail9dragonbox38check_divisibility_and_divide_by_pow\l...10ILi1EEEbRj.info, i64 8, i1 false)\l  %0 = load ptr, ptr %n.addr, align 8\l  %1 = load i32, ptr %0, align 4\l  %cmp = icmp ule i32 %1, 100\l  br i1 %cmp, label %cond.true, label %cond.false\l|{<s0>T|<s1>F}}"];
+	Node0x55fec2f985d0:s0 -> Node0x55fec2f98dc0[tooltip="entry -> cond.true\nProbability 100.00%" ];
+	Node0x55fec2f985d0:s1 -> Node0x55fec2f98e10[tooltip="entry -> cond.false\nProbability 0.00%" ];
+	Node0x55fec2f98dc0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{cond.true:\l|  br label %cond.end\l}"];
+	Node0x55fec2f98dc0 -> Node0x55fec2f98f10[tooltip="cond.true -> cond.end\nProbability 100.00%" ];
+	Node0x55fec2f98e10 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f4c5ad70" fontname="Courier",label="{cond.false:\l|  invoke void @_ZN3fmt6v9_lmp6detail11assert_failEPKciS3_(ptr noundef\l... @.str.1, i32 noundef 259, ptr noundef @.str.53) #17\l          to label %invoke.cont unwind label %terminate.lpad\l}"];
+	Node0x55fec2f98e10 -> Node0x55fec2f98fc0[tooltip="cond.false -> invoke.cont\nProbability 0.00%" ];
+	Node0x55fec2f98e10 -> Node0x55fec2f99040[tooltip="cond.false -> terminate.lpad\nProbability 100.00%" ];
+	Node0x55fec2f98fc0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#4f69d970" fontname="Courier",label="{invoke.cont:\l|  unreachable\l}"];
+	Node0x55fec2f99490 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#3d50c370" fontname="Courier",label="{2:\l|  br label %cond.end\l}"];
+	Node0x55fec2f99490 -> Node0x55fec2f98f10[tooltip="2 -> cond.end\nProbability 100.00%" ];
+	Node0x55fec2f98f10 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{cond.end:\l|  store i32 6554, ptr %magic_number, align 4\l  %3 = load ptr, ptr %n.addr, align 8\l  %4 = load i32, ptr %3, align 4\l  %mul = mul i32 %4, 6554\l  store i32 %mul, ptr %3, align 4\l  store i32 65535, ptr %comparison_mask, align 4\l  %5 = load ptr, ptr %n.addr, align 8\l  %6 = load i32, ptr %5, align 4\l  %and = and i32 %6, 65535\l  %cmp1 = icmp ult i32 %and, 6554\l  %frombool = zext i1 %cmp1 to i8\l  store i8 %frombool, ptr %result, align 1\l  %7 = load ptr, ptr %n.addr, align 8\l  %8 = load i32, ptr %7, align 4\l  %shr = lshr i32 %8, 16\l  store i32 %shr, ptr %7, align 4\l  %9 = load i8, ptr %result, align 1\l  %tobool = trunc i8 %9 to i1\l  ret i1 %tobool\l}"];
+	Node0x55fec2f99040 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f4c5ad70" fontname="Courier",label="{terminate.lpad:\l|  %10 = landingpad \{ ptr, i32 \}\l          catch ptr null\l  %11 = extractvalue \{ ptr, i32 \} %10, 0\l  call void @__clang_call_terminate(ptr %11) #18\l  unreachable\l}"];
+}

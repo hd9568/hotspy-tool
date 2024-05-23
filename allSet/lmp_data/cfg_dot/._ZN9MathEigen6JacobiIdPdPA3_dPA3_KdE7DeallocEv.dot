@@ -1,0 +1,10 @@
+digraph "CFG for '_ZN9MathEigen6JacobiIdPdPA3_dPA3_KdE7DeallocEv' function" {
+	label="CFG for '_ZN9MathEigen6JacobiIdPdPA3_dPA3_KdE7DeallocEv' function";
+
+	Node0x5600924716e0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %M = getelementptr inbounds %\"class.MathEigen::Jacobi\", ptr %this1, i32 0,\l... i32 2\l  call void @_ZN9MathEigen9Dealloc2DIdEEvPPPT_(ptr noundef %M)\l  %max_idx_row = getelementptr inbounds %\"class.MathEigen::Jacobi\", ptr\l... %this1, i32 0, i32 6\l  %0 = load ptr, ptr %max_idx_row, align 8\l  %isnull = icmp eq ptr %0, null\l  br i1 %isnull, label %delete.end, label %delete.notnull\l|{<s0>T|<s1>F}}"];
+	Node0x5600924716e0:s0 -> Node0x560092471d20[tooltip="entry -> delete.end\nProbability 37.50%" ];
+	Node0x5600924716e0:s1 -> Node0x560092471da0[tooltip="entry -> delete.notnull\nProbability 62.50%" ];
+	Node0x560092471da0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{delete.notnull:\l|  call void @_ZdaPv(ptr noundef %0) #7\l  br label %delete.end\l}"];
+	Node0x560092471da0 -> Node0x560092471d20[tooltip="delete.notnull -> delete.end\nProbability 100.00%" ];
+	Node0x560092471d20 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{delete.end:\l|  %max_idx_row2 = getelementptr inbounds %\"class.MathEigen::Jacobi\", ptr\l... %this1, i32 0, i32 6\l  store ptr null, ptr %max_idx_row2, align 8\l  call void @_ZN9MathEigen6JacobiIdPdPA3_dPA3_KdE4InitEv(ptr noundef nonnull\l... align 8 dereferenceable(49) %this1)\l  ret void\l}"];
+}

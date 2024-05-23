@@ -1,0 +1,27 @@
+digraph "CFG for '_ZN13MemoryControl10deallocateI18NuclearDataIsotopeEEvPT_iNS_16AllocationPolicyE' function" {
+	label="CFG for '_ZN13MemoryControl10deallocateI18NuclearDataIsotopeEEvPT_iNS_16AllocationPolicyE' function";
+
+	Node0x55cf6342f600 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#ca3b3770" fontname="Courier",label="{entry:\l|  %data.addr = alloca ptr, align 8\l  %size.addr = alloca i32, align 4\l  %policy.addr = alloca i32, align 4\l  store ptr %data, ptr %data.addr, align 8\l  store i32 %size, ptr %size.addr, align 4\l  store i32 %policy, ptr %policy.addr, align 4\l  %0 = load i32, ptr %policy.addr, align 4\l  switch i32 %0, label %sw.default [\l    i32 0, label %sw.bb\l  ]\l|{<s0>def|<s1>0}}"];
+	Node0x55cf6342f600:s0 -> Node0x55cf6342fa10[tooltip="entry -> sw.default\nProbability 50.00%" ];
+	Node0x55cf6342f600:s1 -> Node0x55cf6342fa90[tooltip="entry -> sw.bb\nProbability 50.00%" ];
+	Node0x55cf6342fa90 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d0473d70" fontname="Courier",label="{sw.bb:\l|  %1 = load ptr, ptr %data.addr, align 8\l  %isnull = icmp eq ptr %1, null\l  br i1 %isnull, label %delete.end2, label %delete.notnull\l|{<s0>T|<s1>F}}"];
+	Node0x55cf6342fa90:s0 -> Node0x55cf6342fcc0[tooltip="sw.bb -> delete.end2\nProbability 37.50%" ];
+	Node0x55cf6342fa90:s1 -> Node0x55cf6342fd40[tooltip="sw.bb -> delete.notnull\nProbability 62.50%" ];
+	Node0x55cf6342fd40 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d24b4070" fontname="Courier",label="{delete.notnull:\l|  %2 = getelementptr inbounds i8, ptr %1, i64 -8\l  %3 = load i64, ptr %2, align 8\l  %delete.end = getelementptr inbounds %class.NuclearDataIsotope, ptr %1, i64\l... %3\l  %arraydestroy.isempty = icmp eq ptr %1, %delete.end\l  br i1 %arraydestroy.isempty, label %arraydestroy.done1, label\l... %arraydestroy.body\l|{<s0>T|<s1>F}}"];
+	Node0x55cf6342fd40:s0 -> Node0x55cf634302a0[tooltip="delete.notnull -> arraydestroy.done1\nProbability 37.50%" ];
+	Node0x55cf6342fd40:s1 -> Node0x55cf63430310[tooltip="delete.notnull -> arraydestroy.body\nProbability 62.50%" ];
+	Node0x55cf63430310 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{arraydestroy.body:\l|  %arraydestroy.elementPast = phi ptr [ %delete.end, %delete.notnull ], [\l... %arraydestroy.element, %arraydestroy.body ]\l  %arraydestroy.element = getelementptr inbounds %class.NuclearDataIsotope,\l... ptr %arraydestroy.elementPast, i64 -1\l  call void @_ZN18NuclearDataIsotopeD2Ev(ptr noundef nonnull align 8\l... dereferenceable(24) %arraydestroy.element) #9\l  %arraydestroy.done = icmp eq ptr %arraydestroy.element, %1\l  br i1 %arraydestroy.done, label %arraydestroy.done1, label %arraydestroy.body\l|{<s0>T|<s1>F}}"];
+	Node0x55cf63430310:s0 -> Node0x55cf634302a0[tooltip="arraydestroy.body -> arraydestroy.done1\nProbability 3.12%" ];
+	Node0x55cf63430310:s1 -> Node0x55cf63430310[tooltip="arraydestroy.body -> arraydestroy.body\nProbability 96.88%" ];
+	Node0x55cf634302a0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d24b4070" fontname="Courier",label="{arraydestroy.done1:\l|  call void @_ZdaPv(ptr noundef %2) #10\l  br label %delete.end2\l}"];
+	Node0x55cf634302a0 -> Node0x55cf6342fcc0[tooltip="arraydestroy.done1 -> delete.end2\nProbability 100.00%" ];
+	Node0x55cf6342fcc0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d0473d70" fontname="Courier",label="{delete.end2:\l|  br label %sw.epilog\l}"];
+	Node0x55cf6342fcc0 -> Node0x55cf63430970[tooltip="delete.end2 -> sw.epilog\nProbability 100.00%" ];
+	Node0x55cf6342fa10 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d0473d70" fontname="Courier",label="{sw.default:\l|  br label %do.body\l}"];
+	Node0x55cf6342fa10 -> Node0x55cf63430a30[tooltip="sw.default -> do.body\nProbability 100.00%" ];
+	Node0x55cf63430a30 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d0473d70" fontname="Courier",label="{do.body:\l|  %call = call i32 (ptr, ...) @printf(ptr noundef @.str, ptr noundef\l... @.str.3, i32 noundef 53)\l  br label %do.end\l}"];
+	Node0x55cf63430a30 -> Node0x55cf63430b60[tooltip="do.body -> do.end\nProbability 100.00%" ];
+	Node0x55cf63430b60 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d0473d70" fontname="Courier",label="{do.end:\l|  br label %sw.epilog\l}"];
+	Node0x55cf63430b60 -> Node0x55cf63430970[tooltip="do.end -> sw.epilog\nProbability 100.00%" ];
+	Node0x55cf63430970 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#ca3b3770" fontname="Courier",label="{sw.epilog:\l|  ret void\l}"];
+}

@@ -1,0 +1,10 @@
+digraph "CFG for '_ZN3fmt6v9_lmp6detail18is_arithmetic_typeENS1_4typeE' function" {
+	label="CFG for '_ZN3fmt6v9_lmp6detail18is_arithmetic_typeENS1_4typeE' function";
+
+	Node0x556bfeabc770 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %t.addr = alloca i32, align 4\l  store i32 %t, ptr %t.addr, align 4\l  %0 = load i32, ptr %t.addr, align 4\l  %cmp = icmp sgt i32 %0, 0\l  br i1 %cmp, label %land.rhs, label %land.end\l|{<s0>T|<s1>F}}"];
+	Node0x556bfeabc770:s0 -> Node0x556bfeabc990[tooltip="entry -> land.rhs\nProbability 62.50%" ];
+	Node0x556bfeabc770:s1 -> Node0x556bfeabca10[tooltip="entry -> land.end\nProbability 37.50%" ];
+	Node0x556bfeabc990 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{land.rhs:\l|  %1 = load i32, ptr %t.addr, align 4\l  %cmp1 = icmp sle i32 %1, 11\l  br label %land.end\l}"];
+	Node0x556bfeabc990 -> Node0x556bfeabca10[tooltip="land.rhs -> land.end\nProbability 100.00%" ];
+	Node0x556bfeabca10 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{land.end:\l|  %2 = phi i1 [ false, %entry ], [ %cmp1, %land.rhs ]\l  ret i1 %2\l}"];
+}

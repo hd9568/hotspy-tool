@@ -1,0 +1,5 @@
+digraph "CFG for '_ZSt10_ConstructINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEJEEvPT_DpOT0_' function" {
+	label="CFG for '_ZSt10_ConstructINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEJEEvPT_DpOT0_' function";
+
+	Node0x55bd40626db0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %__p.addr = alloca ptr, align 8\l  store ptr %__p, ptr %__p.addr, align 8\l  %0 = load ptr, ptr %__p.addr, align 8\l  call void @_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC1Ev(ptr\l... noundef nonnull align 8 dereferenceable(32) %0) #15\l  ret void\l}"];
+}

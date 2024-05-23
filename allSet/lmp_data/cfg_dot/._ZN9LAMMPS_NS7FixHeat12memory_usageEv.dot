@@ -1,0 +1,10 @@
+digraph "CFG for '_ZN9LAMMPS_NS7FixHeat12memory_usageEv' function" {
+	label="CFG for '_ZN9LAMMPS_NS7FixHeat12memory_usageEv' function";
+
+	Node0x559ef20ec280 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %bytes = alloca double, align 8\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  store double 0.000000e+00, ptr %bytes, align 8\l  %hstyle = getelementptr inbounds %\"class.LAMMPS_NS::FixHeat\", ptr %this1,\l... i32 0, i32 7\l  %0 = load i32, ptr %hstyle, align 8\l  %cmp = icmp eq i32 %0, 2\l  br i1 %cmp, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x559ef20ec280:s0 -> Node0x559ef205de60[tooltip="entry -> if.then\nProbability 50.00%" ];
+	Node0x559ef20ec280:s1 -> Node0x559ef20eec40[tooltip="entry -> if.end\nProbability 50.00%" ];
+	Node0x559ef205de60 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.then:\l|  %atom = getelementptr inbounds %\"class.LAMMPS_NS::Pointers\", ptr %this1,\l... i32 0, i32 6\l  %1 = load ptr, ptr %atom, align 8\l  %2 = load ptr, ptr %1, align 8\l  %nmax = getelementptr inbounds %\"class.LAMMPS_NS::Atom\", ptr %2, i32 0, i32 6\l  %3 = load i32, ptr %nmax, align 8\l  %mul = mul nsw i32 %3, 2\l  %conv = sext i32 %mul to i64\l  %mul2 = mul i64 %conv, 8\l  %conv3 = uitofp i64 %mul2 to double\l  store double %conv3, ptr %bytes, align 8\l  br label %if.end\l}"];
+	Node0x559ef205de60 -> Node0x559ef20eec40[tooltip="if.then -> if.end\nProbability 100.00%" ];
+	Node0x559ef20eec40 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  %4 = load double, ptr %bytes, align 8\l  ret double %4\l}"];
+}

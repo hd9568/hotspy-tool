@@ -1,0 +1,5 @@
+digraph "CFG for '_ZSt10_ConstructIZN12_GLOBAL__N_118checkCrossSectionsEP10MonteCarloRK10ParametersE7XC_DataJEEvPT_DpOT0_' function" {
+	label="CFG for '_ZSt10_ConstructIZN12_GLOBAL__N_118checkCrossSectionsEP10MonteCarloRK10ParametersE7XC_DataJEEvPT_DpOT0_' function";
+
+	Node0x55dab497aca0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %__p.addr = alloca ptr, align 8\l  store ptr %__p, ptr %__p.addr, align 8\l  %0 = load ptr, ptr %__p.addr, align 8\l  call void\l... @_ZZN12_GLOBAL__N_118checkCrossSectionsEP10MonteCarloRK10ParametersEN7XC_DataC\l...2Ev(ptr noundef nonnull align 8 dereferenceable(24) %0)\l  ret void\l}"];
+}

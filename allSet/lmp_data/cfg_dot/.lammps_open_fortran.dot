@@ -1,0 +1,5 @@
+digraph "CFG for 'lammps_open_fortran' function" {
+	label="CFG for 'lammps_open_fortran' function";
+
+	Node0x55bdf7d8a9e0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %argc.addr = alloca i32, align 4\l  %argv.addr = alloca ptr, align 8\l  %f_comm.addr = alloca i32, align 4\l  %c_comm = alloca ptr, align 8\l  store i32 %argc, ptr %argc.addr, align 4\l  store ptr %argv, ptr %argv.addr, align 8\l  store i32 %f_comm, ptr %f_comm.addr, align 4\l  call void @lammps_mpi_init()\l  %0 = load i32, ptr %f_comm.addr, align 4\l  %call = call ptr @MPI_Comm_f2c(i32 noundef %0)\l  store ptr %call, ptr %c_comm, align 8\l  %1 = load i32, ptr %argc.addr, align 4\l  %2 = load ptr, ptr %argv.addr, align 8\l  %3 = load ptr, ptr %c_comm, align 8\l  %call1 = call ptr @lammps_open(i32 noundef %1, ptr noundef %2, ptr noundef\l... %3, ptr noundef null)\l  ret ptr %call1\l}"];
+}

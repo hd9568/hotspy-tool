@@ -1,0 +1,5 @@
+digraph "CFG for '_ZSt25__uninitialized_default_nIPSt3setImSt4lessImESaImEEmET_S6_T0_' function" {
+	label="CFG for '_ZSt25__uninitialized_default_nIPSt3setImSt4lessImESaImEEmET_S6_T0_' function";
+
+	Node0x560dca0fd9c0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %__first.addr = alloca ptr, align 8\l  %__n.addr = alloca i64, align 8\l  %__assignable = alloca i8, align 1\l  store ptr %__first, ptr %__first.addr, align 8\l  store i64 %__n, ptr %__n.addr, align 8\l  store i8 1, ptr %__assignable, align 1\l  %0 = load ptr, ptr %__first.addr, align 8\l  %1 = load i64, ptr %__n.addr, align 8\l  %call = call noundef ptr\l... @_ZNSt27__uninitialized_default_n_1ILb0EE18__uninit_default_nIPSt3setImSt4less\l...ImESaImEEmEET_S8_T0_(ptr noundef %0, i64 noundef %1)\l  ret ptr %call\l}"];
+}

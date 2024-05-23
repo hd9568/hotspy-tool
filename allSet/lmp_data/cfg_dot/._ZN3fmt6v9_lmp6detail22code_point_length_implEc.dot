@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN3fmt6v9_lmp6detail22code_point_length_implEc' function" {
+	label="CFG for '_ZN3fmt6v9_lmp6detail22code_point_length_implEc' function";
+
+	Node0x556bfeab7290 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %c.addr = alloca i8, align 1\l  store i8 %c, ptr %c.addr, align 1\l  %0 = load i8, ptr %c.addr, align 1\l  %conv = zext i8 %0 to i32\l  %shr = ashr i32 %conv, 3\l  %idxprom = sext i32 %shr to i64\l  %arrayidx = getelementptr inbounds [32 x i8], ptr @.str.318, i64 0, i64\l... %idxprom\l  %1 = load i8, ptr %arrayidx, align 1\l  %conv1 = sext i8 %1 to i32\l  ret i32 %conv1\l}"];
+}

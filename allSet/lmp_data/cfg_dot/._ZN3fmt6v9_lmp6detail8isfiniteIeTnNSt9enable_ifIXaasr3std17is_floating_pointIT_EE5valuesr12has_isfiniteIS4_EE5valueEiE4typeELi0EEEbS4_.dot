@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN3fmt6v9_lmp6detail8isfiniteIeTnNSt9enable_ifIXaasr3std17is_floating_pointIT_EE5valuesr12has_isfiniteIS4_EE5valueEiE4typeELi0EEEbS4_' function" {
+	label="CFG for '_ZN3fmt6v9_lmp6detail8isfiniteIeTnNSt9enable_ifIXaasr3std17is_floating_pointIT_EE5valuesr12has_isfiniteIS4_EE5valueEiE4typeELi0EEEbS4_' function";
+
+	Node0x55fec32f4870 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %value.addr = alloca x86_fp80, align 16\l  %inf = alloca x86_fp80, align 16\l  store x86_fp80 %value, ptr %value.addr, align 16\l  store x86_fp80 0xK7FFF8000000000000000, ptr %inf, align 16\l  %0 = load x86_fp80, ptr %value.addr, align 16\l  %call = call noundef zeroext i1 @_ZSt8isfinitee(x86_fp80 noundef %0)\l  ret i1 %call\l}"];
+}

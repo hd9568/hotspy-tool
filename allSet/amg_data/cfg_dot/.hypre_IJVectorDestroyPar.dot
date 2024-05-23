@@ -1,0 +1,5 @@
+digraph "CFG for 'hypre_IJVectorDestroyPar' function" {
+	label="CFG for 'hypre_IJVectorDestroyPar' function";
+
+	Node0x563aadd39e20 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %vector.addr = alloca ptr, align 8\l  store ptr %vector, ptr %vector.addr, align 8\l  %0 = load ptr, ptr %vector.addr, align 8\l  %object = getelementptr inbounds %struct.hypre_IJVector_struct, ptr %0, i32\l... 0, i32 3\l  %1 = load ptr, ptr %object, align 8\l  %call = call i32 @hypre_ParVectorDestroy(ptr noundef %1)\l  ret i32 %call\l}"];
+}

@@ -1,0 +1,20 @@
+digraph "CFG for '_ZN3fmt6v9_lmp6detail9dragonbox14cache_accessorIfE16get_cached_powerEi' function" {
+	label="CFG for '_ZN3fmt6v9_lmp6detail9dragonbox14cache_accessorIfE16get_cached_powerEi' function";
+
+	Node0x55fec2fe4150 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %k.addr = alloca i32, align 4\l  store i32 %k, ptr %k.addr, align 4\l  %0 = load i32, ptr %k.addr, align 4\l  %cmp = icmp sge i32 %0, -31\l  br i1 %cmp, label %land.lhs.true, label %cond.false\l|{<s0>T|<s1>F}}"];
+	Node0x55fec2fe4150:s0 -> Node0x55fec2fe41a0[tooltip="entry -> land.lhs.true\nProbability 100.00%" ];
+	Node0x55fec2fe4150:s1 -> Node0x55fec2fe4660[tooltip="entry -> cond.false\nProbability 0.00%" ];
+	Node0x55fec2fe41a0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{land.lhs.true:\l|  %1 = load i32, ptr %k.addr, align 4\l  %cmp1 = icmp sle i32 %1, 46\l  br i1 %cmp1, label %cond.true, label %cond.false\l|{<s0>T|<s1>F}}"];
+	Node0x55fec2fe41a0:s0 -> Node0x55fec2fe48f0[tooltip="land.lhs.true -> cond.true\nProbability 100.00%" ];
+	Node0x55fec2fe41a0:s1 -> Node0x55fec2fe4660[tooltip="land.lhs.true -> cond.false\nProbability 0.00%" ];
+	Node0x55fec2fe48f0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{cond.true:\l|  br label %cond.end\l}"];
+	Node0x55fec2fe48f0 -> Node0x55fec2fe4a20[tooltip="cond.true -> cond.end\nProbability 100.00%" ];
+	Node0x55fec2fe4660 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f6bfa670" fontname="Courier",label="{cond.false:\l|  invoke void @_ZN3fmt6v9_lmp6detail11assert_failEPKciS3_(ptr noundef\l... @.str.1, i32 noundef 299, ptr noundef @.str.11) #17\l          to label %invoke.cont unwind label %terminate.lpad\l}"];
+	Node0x55fec2fe4660 -> Node0x55fec2fe4b60[tooltip="cond.false -> invoke.cont\nProbability 0.00%" ];
+	Node0x55fec2fe4660 -> Node0x55fec2fe4be0[tooltip="cond.false -> terminate.lpad\nProbability 100.00%" ];
+	Node0x55fec2fe4b60 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#536edd70" fontname="Courier",label="{invoke.cont:\l|  unreachable\l}"];
+	Node0x55fec2fe4e90 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#3d50c370" fontname="Courier",label="{2:\l|  br label %cond.end\l}"];
+	Node0x55fec2fe4e90 -> Node0x55fec2fe4a20[tooltip="2 -> cond.end\nProbability 100.00%" ];
+	Node0x55fec2fe4a20 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{cond.end:\l|  %3 = load i32, ptr %k.addr, align 4\l  %sub = sub nsw i32 %3, -31\l  %idxprom = sext i32 %sub to i64\l  %arrayidx = getelementptr inbounds [78 x i64], ptr\l... @_ZZN3fmt6v9_lmp6detail9dragonbox14cache_accessorIfE16get_cached_powerEiE18pow\l...10_significands, i64 0, i64 %idxprom\l  %4 = load i64, ptr %arrayidx, align 8\l  ret i64 %4\l}"];
+	Node0x55fec2fe4be0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f6bfa670" fontname="Courier",label="{terminate.lpad:\l|  %5 = landingpad \{ ptr, i32 \}\l          catch ptr null\l  %6 = extractvalue \{ ptr, i32 \} %5, 0\l  call void @__clang_call_terminate(ptr %6) #18\l  unreachable\l}"];
+}

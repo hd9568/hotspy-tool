@@ -1,0 +1,42 @@
+digraph "CFG for '_ZN9__gnu_cxx6__stoaIlicJiEEET0_PFT_PKT1_PPS3_DpT2_EPKcS5_PmS9_' function" {
+	label="CFG for '_ZN9__gnu_cxx6__stoaIlicJiEEET0_PFT_PKT1_PPS3_DpT2_EPKcS5_PmS9_' function";
+
+	Node0x5558b7ffa8f0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %__convf.addr = alloca ptr, align 8\l  %__name.addr = alloca ptr, align 8\l  %__str.addr = alloca ptr, align 8\l  %__idx.addr = alloca ptr, align 8\l  %__base.addr = alloca i32, align 4\l  %__ret = alloca i32, align 4\l  %__endptr = alloca ptr, align 8\l  %__save_errno = alloca %struct._Save_errno, align 4\l  %__tmp = alloca i64, align 8\l  %exn.slot = alloca ptr, align 8\l  %ehselector.slot = alloca i32, align 4\l  %agg.tmp = alloca %\"struct.std::integral_constant\", align 1\l  %ref.tmp = alloca %\"struct.std::is_same\", align 1\l  store ptr %__convf, ptr %__convf.addr, align 8\l  store ptr %__name, ptr %__name.addr, align 8\l  store ptr %__str, ptr %__str.addr, align 8\l  store ptr %__idx, ptr %__idx.addr, align 8\l  store i32 %__base, ptr %__base.addr, align 4\l  call void\l... @_ZZN9__gnu_cxx6__stoaIlicJiEEET0_PFT_PKT1_PPS3_DpT2_EPKcS5_PmS9_EN11_Save_err\l...noC2Ev(ptr noundef nonnull align 4 dereferenceable(4) %__save_errno)\l  %0 = load ptr, ptr %__convf.addr, align 8\l  %1 = load ptr, ptr %__str.addr, align 8\l  %2 = load i32, ptr %__base.addr, align 4\l  %call = invoke noundef i64 %0(ptr noundef %1, ptr noundef %__endptr, i32\l... noundef %2)\l          to label %invoke.cont unwind label %lpad\l}"];
+	Node0x5558b7ffa8f0 -> Node0x5558b7ffbc80[tooltip="entry -> invoke.cont\nProbability 100.00%" ];
+	Node0x5558b7ffa8f0 -> Node0x5558b7ffbd00[tooltip="entry -> lpad\nProbability 0.00%" ];
+	Node0x5558b7ffbc80 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{invoke.cont:\l|  store i64 %call, ptr %__tmp, align 8\l  %3 = load ptr, ptr %__endptr, align 8\l  %4 = load ptr, ptr %__str.addr, align 8\l  %cmp = icmp eq ptr %3, %4\l  br i1 %cmp, label %if.then, label %if.else\l|{<s0>T|<s1>F}}"];
+	Node0x5558b7ffbc80:s0 -> Node0x5558b7ffc160[tooltip="invoke.cont -> if.then\nProbability 0.00%" ];
+	Node0x5558b7ffbc80:s1 -> Node0x5558b7ffc1d0[tooltip="invoke.cont -> if.else\nProbability 100.00%" ];
+	Node0x5558b7ffc160 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f4c5ad70" fontname="Courier",label="{if.then:\l|  %5 = load ptr, ptr %__name.addr, align 8\l  invoke void @_ZSt24__throw_invalid_argumentPKc(ptr noundef %5) #9\l          to label %invoke.cont1 unwind label %lpad\l}"];
+	Node0x5558b7ffc160 -> Node0x5558b7ffc6b0[tooltip="if.then -> invoke.cont1\nProbability 0.00%" ];
+	Node0x5558b7ffc160 -> Node0x5558b7ffbd00[tooltip="if.then -> lpad\nProbability 100.00%" ];
+	Node0x5558b7ffc6b0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#4f69d970" fontname="Courier",label="{invoke.cont1:\l|  unreachable\l}"];
+	Node0x5558b7ffbd00 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f7b99e70" fontname="Courier",label="{lpad:\l|  %6 = landingpad \{ ptr, i32 \}\l          cleanup\l  %7 = extractvalue \{ ptr, i32 \} %6, 0\l  store ptr %7, ptr %exn.slot, align 8\l  %8 = extractvalue \{ ptr, i32 \} %6, 1\l  store i32 %8, ptr %ehselector.slot, align 4\l  call void\l... @_ZZN9__gnu_cxx6__stoaIlicJiEEET0_PFT_PKT1_PPS3_DpT2_EPKcS5_PmS9_EN11_Save_err\l...noD2Ev(ptr noundef nonnull align 4 dereferenceable(4) %__save_errno) #10\l  br label %eh.resume\l}"];
+	Node0x5558b7ffbd00 -> Node0x5558b7ffcdd0[tooltip="lpad -> eh.resume\nProbability 100.00%" ];
+	Node0x5558b7ffc1d0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.else:\l|  %call2 = call ptr @__errno_location() #11\l  %9 = load i32, ptr %call2, align 4\l  %cmp3 = icmp eq i32 %9, 34\l  br i1 %cmp3, label %lor.end, label %lor.rhs\l|{<s0>T|<s1>F}}"];
+	Node0x5558b7ffc1d0:s0 -> Node0x5558b7ffd180[tooltip="if.else -> lor.end\nProbability 50.00%" ];
+	Node0x5558b7ffc1d0:s1 -> Node0x5558b7ffd250[tooltip="if.else -> lor.rhs\nProbability 50.00%" ];
+	Node0x5558b7ffd250 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{lor.rhs:\l|  %10 = load i64, ptr %__tmp, align 8\l  %call5 = invoke noundef zeroext i1\l... @_ZZN9__gnu_cxx6__stoaIlicJiEEET0_PFT_PKT1_PPS3_DpT2_EPKcS5_PmS9_EN10_Range_ch\l...k6_S_chkElSt17integral_constantIbLb1EE(i64 noundef %10)\l          to label %invoke.cont4 unwind label %lpad\l}"];
+	Node0x5558b7ffd250 -> Node0x5558b7ffd4d0[tooltip="lor.rhs -> invoke.cont4\nProbability 100.00%" ];
+	Node0x5558b7ffd250 -> Node0x5558b7ffbd00[tooltip="lor.rhs -> lpad\nProbability 0.00%" ];
+	Node0x5558b7ffd4d0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{invoke.cont4:\l|  br label %lor.end\l}"];
+	Node0x5558b7ffd4d0 -> Node0x5558b7ffd180[tooltip="invoke.cont4 -> lor.end\nProbability 100.00%" ];
+	Node0x5558b7ffd180 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{lor.end:\l|  %11 = phi i1 [ true, %if.else ], [ %call5, %invoke.cont4 ]\l  br i1 %11, label %if.then6, label %if.else8\l|{<s0>T|<s1>F}}"];
+	Node0x5558b7ffd180:s0 -> Node0x5558b7ffd810[tooltip="lor.end -> if.then6\nProbability 0.00%" ];
+	Node0x5558b7ffd180:s1 -> Node0x5558b7ffd8f0[tooltip="lor.end -> if.else8\nProbability 100.00%" ];
+	Node0x5558b7ffd810 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f4c5ad70" fontname="Courier",label="{if.then6:\l|  %12 = load ptr, ptr %__name.addr, align 8\l  invoke void @_ZSt20__throw_out_of_rangePKc(ptr noundef %12) #9\l          to label %invoke.cont7 unwind label %lpad\l}"];
+	Node0x5558b7ffd810 -> Node0x5558b7ffdad0[tooltip="if.then6 -> invoke.cont7\nProbability 0.00%" ];
+	Node0x5558b7ffd810 -> Node0x5558b7ffbd00[tooltip="if.then6 -> lpad\nProbability 100.00%" ];
+	Node0x5558b7ffdad0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#4f69d970" fontname="Courier",label="{invoke.cont7:\l|  unreachable\l}"];
+	Node0x5558b7ffd8f0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.else8:\l|  %13 = load i64, ptr %__tmp, align 8\l  %conv = trunc i64 %13 to i32\l  store i32 %conv, ptr %__ret, align 4\l  br label %if.end\l}"];
+	Node0x5558b7ffd8f0 -> Node0x5558b7ffdf90[tooltip="if.else8 -> if.end\nProbability 100.00%" ];
+	Node0x5558b7ffdf90 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  br label %if.end9\l}"];
+	Node0x5558b7ffdf90 -> Node0x5558b7ffe070[tooltip="if.end -> if.end9\nProbability 100.00%" ];
+	Node0x5558b7ffe070 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end9:\l|  %14 = load ptr, ptr %__idx.addr, align 8\l  %tobool = icmp ne ptr %14, null\l  br i1 %tobool, label %if.then10, label %if.end11\l|{<s0>T|<s1>F}}"];
+	Node0x5558b7ffe070:s0 -> Node0x5558b7ffe280[tooltip="if.end9 -> if.then10\nProbability 62.50%" ];
+	Node0x5558b7ffe070:s1 -> Node0x5558b7ffe2d0[tooltip="if.end9 -> if.end11\nProbability 37.50%" ];
+	Node0x5558b7ffe280 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.then10:\l|  %15 = load ptr, ptr %__endptr, align 8\l  %16 = load ptr, ptr %__str.addr, align 8\l  %sub.ptr.lhs.cast = ptrtoint ptr %15 to i64\l  %sub.ptr.rhs.cast = ptrtoint ptr %16 to i64\l  %sub.ptr.sub = sub i64 %sub.ptr.lhs.cast, %sub.ptr.rhs.cast\l  %17 = load ptr, ptr %__idx.addr, align 8\l  store i64 %sub.ptr.sub, ptr %17, align 8\l  br label %if.end11\l}"];
+	Node0x5558b7ffe280 -> Node0x5558b7ffe2d0[tooltip="if.then10 -> if.end11\nProbability 100.00%" ];
+	Node0x5558b7ffe2d0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end11:\l|  %18 = load i32, ptr %__ret, align 4\l  call void\l... @_ZZN9__gnu_cxx6__stoaIlicJiEEET0_PFT_PKT1_PPS3_DpT2_EPKcS5_PmS9_EN11_Save_err\l...noD2Ev(ptr noundef nonnull align 4 dereferenceable(4) %__save_errno) #10\l  ret i32 %18\l}"];
+	Node0x5558b7ffcdd0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f7b99e70" fontname="Courier",label="{eh.resume:\l|  %exn = load ptr, ptr %exn.slot, align 8\l  %sel = load i32, ptr %ehselector.slot, align 4\l  %lpad.val = insertvalue \{ ptr, i32 \} poison, ptr %exn, 0\l  %lpad.val12 = insertvalue \{ ptr, i32 \} %lpad.val, i32 %sel, 1\l  resume \{ ptr, i32 \} %lpad.val12\l}"];
+}

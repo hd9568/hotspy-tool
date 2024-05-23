@@ -1,0 +1,17 @@
+digraph "CFG for '_ZN9LAMMPS_NS11FixBoxRelax7min_dofEv' function" {
+	label="CFG for '_ZN9LAMMPS_NS11FixBoxRelax7min_dofEv' function";
+
+	Node0x55810d846e00 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %retval = alloca i32, align 4\l  %this.addr = alloca ptr, align 8\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %pstyle = getelementptr inbounds %\"class.LAMMPS_NS::FixBoxRelax\", ptr\l... %this1, i32 0, i32 2\l  %0 = load i32, ptr %pstyle, align 8\l  %cmp = icmp eq i32 %0, 0\l  br i1 %cmp, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x55810d846e00:s0 -> Node0x55810d84a840[tooltip="entry -> if.then\nProbability 37.50%" ];
+	Node0x55810d846e00:s1 -> Node0x55810d84a8b0[tooltip="entry -> if.end\nProbability 62.50%" ];
+	Node0x55810d84a840 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{if.then:\l|  store i32 1, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x55810d84a840 -> Node0x55810d84aa70[tooltip="if.then -> return\nProbability 100.00%" ];
+	Node0x55810d84a8b0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.end:\l|  %pstyle2 = getelementptr inbounds %\"class.LAMMPS_NS::FixBoxRelax\", ptr\l... %this1, i32 0, i32 2\l  %1 = load i32, ptr %pstyle2, align 8\l  %cmp3 = icmp eq i32 %1, 2\l  br i1 %cmp3, label %if.then4, label %if.end5\l|{<s0>T|<s1>F}}"];
+	Node0x55810d84a8b0:s0 -> Node0x55810d84ad60[tooltip="if.end -> if.then4\nProbability 50.00%" ];
+	Node0x55810d84a8b0:s1 -> Node0x55810d84af80[tooltip="if.end -> if.end5\nProbability 50.00%" ];
+	Node0x55810d84ad60 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{if.then4:\l|  store i32 6, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x55810d84ad60 -> Node0x55810d84aa70[tooltip="if.then4 -> return\nProbability 100.00%" ];
+	Node0x55810d84af80 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{if.end5:\l|  store i32 3, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x55810d84af80 -> Node0x55810d84aa70[tooltip="if.end5 -> return\nProbability 100.00%" ];
+	Node0x55810d84aa70 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{return:\l|  %2 = load i32, ptr %retval, align 4\l  ret i32 %2\l}"];
+}

@@ -1,0 +1,37 @@
+digraph "Call graph: par_cycle.ll" {
+	label="Call graph: par_cycle.ll";
+
+	Node0x558402764b00 [shape=record,label="{hypre_BoomerAMGCycle}"];
+	Node0x558402764b00 -> Node0x5584027647f0;
+	Node0x558402764b00 -> Node0x55840275b1a0;
+	Node0x558402764b00 -> Node0x558402765800;
+	Node0x558402764b00 -> Node0x55840275c1a0;
+	Node0x558402764b00 -> Node0x5584027501e0;
+	Node0x558402764b00 -> Node0x55840277d0b0;
+	Node0x558402764b00 -> Node0x55840277d130;
+	Node0x558402764b00 -> Node0x55840277d1b0;
+	Node0x558402764b00 -> Node0x55840277d230;
+	Node0x558402764b00 -> Node0x5584027622c0;
+	Node0x558402764b00 -> Node0x55840275ad10;
+	Node0x558402764b00 -> Node0x558402769a90;
+	Node0x558402764b00 -> Node0x558402757bf0;
+	Node0x558402764b00 -> Node0x55840277b990;
+	Node0x558402764b00 -> Node0x558402759b00;
+	Node0x558402764b00 -> Node0x55840276e9c0;
+	Node0x55840275b1a0 [shape=record,label="{hypre_Free}"];
+	Node0x5584027647f0 [shape=record,label="{hypre_CAlloc}"];
+	Node0x558402765800 [shape=record,label="{hypre_MPI_Comm_rank}"];
+	Node0x55840275c1a0 [shape=record,label="{hypre_seqAMGCycle}"];
+	Node0x5584027501e0 [shape=record,label="{hypre_GaussElimSolve}"];
+	Node0x55840277d0b0 [shape=record,label="{hypre_ParCSRRelax_L1_Jacobi}"];
+	Node0x5584027622c0 [shape=record,label="{hypre_BoomerAMGRelax_FCFJacobi}"];
+	Node0x558402757bf0 [shape=record,label="{hypre_ParVectorSetConstantValues}"];
+	Node0x55840277d130 [shape=record,label="{hypre_ParCSRRelax}"];
+	Node0x55840277d1b0 [shape=record,label="{hypre_ParCSRRelaxThreads}"];
+	Node0x55840277d230 [shape=record,label="{hypre_ParCSRRelax_Cheby_Solve}"];
+	Node0x55840277b990 [shape=record,label="{hypre_ParCSRMatrixMatvecOutOfPlace}"];
+	Node0x55840275ad10 [shape=record,label="{hypre_BoomerAMGRelax}"];
+	Node0x558402769a90 [shape=record,label="{hypre_BoomerAMGRelaxIF}"];
+	Node0x558402759b00 [shape=record,label="{hypre_ParCSRMatrixMatvecT}"];
+	Node0x55840276e9c0 [shape=record,label="{hypre_ParCSRMatrixMatvec}"];
+}

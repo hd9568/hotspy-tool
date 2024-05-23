@@ -1,0 +1,36 @@
+digraph "CFG for '_ZN9LAMMPS_NS14FixWallReflectD2Ev' function" {
+	label="CFG for '_ZN9LAMMPS_NS14FixWallReflectD2Ev' function";
+
+	Node0x55d7f4a15900 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d0473d70" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %cleanup.dest.slot = alloca i32, align 4\l  %m = alloca i32, align 4\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  store ptr getelementptr inbounds (\{ [107 x ptr] \}, ptr\l... @_ZTVN9LAMMPS_NS14FixWallReflectE, i32 0, inrange i32 0, i32 2), ptr %this1,\l... align 8\l  %copymode = getelementptr inbounds %\"class.LAMMPS_NS::Fix\", ptr %this1, i32\l... 0, i32 92\l  %0 = load i32, ptr %copymode, align 8\l  %tobool = icmp ne i32 %0, 0\l  br i1 %tobool, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x55d7f4a15900:s0 -> Node0x55d7f4a15ce0[tooltip="entry -> if.then\nProbability 62.50%" ];
+	Node0x55d7f4a15900:s1 -> Node0x55d7f4a15d50[tooltip="entry -> if.end\nProbability 37.50%" ];
+	Node0x55d7f4a15ce0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d24b4070" fontname="Courier",label="{if.then:\l|  store i32 1, ptr %cleanup.dest.slot, align 4\l  br label %cleanup\l}"];
+	Node0x55d7f4a15ce0 -> Node0x55d7f4a15f40[tooltip="if.then -> cleanup\nProbability 100.00%" ];
+	Node0x55d7f4a15d50 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{if.end:\l|  store i32 0, ptr %m, align 4\l  br label %for.cond\l}"];
+	Node0x55d7f4a15d50 -> Node0x55d7f4a160c0[tooltip="if.end -> for.cond\nProbability 100.00%" ];
+	Node0x55d7f4a160c0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.cond:\l|  %1 = load i32, ptr %m, align 4\l  %nwall = getelementptr inbounds %\"class.LAMMPS_NS::FixWallReflect\", ptr\l... %this1, i32 0, i32 1\l  %2 = load i32, ptr %nwall, align 8\l  %cmp = icmp slt i32 %1, %2\l  br i1 %cmp, label %for.body, label %for.end\l|{<s0>T|<s1>F}}"];
+	Node0x55d7f4a160c0:s0 -> Node0x55d7f4a16530[tooltip="for.cond -> for.body\nProbability 96.88%" ];
+	Node0x55d7f4a160c0:s1 -> Node0x55d7f4a16580[tooltip="for.cond -> for.end\nProbability 3.12%" ];
+	Node0x55d7f4a16530 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.body:\l|  %wallstyle = getelementptr inbounds %\"class.LAMMPS_NS::FixWallReflect\",\l... ptr %this1, i32 0, i32 3\l  %3 = load i32, ptr %m, align 4\l  %idxprom = sext i32 %3 to i64\l  %arrayidx = getelementptr inbounds [6 x i32], ptr %wallstyle, i64 0, i64\l... %idxprom\l  %4 = load i32, ptr %arrayidx, align 4\l  %cmp2 = icmp eq i32 %4, 3\l  br i1 %cmp2, label %if.then3, label %if.end6\l|{<s0>T|<s1>F}}"];
+	Node0x55d7f4a16530:s0 -> Node0x55d7f4a16ac0[tooltip="for.body -> if.then3\nProbability 50.00%" ];
+	Node0x55d7f4a16530:s1 -> Node0x55d7f4a16b40[tooltip="for.body -> if.end6\nProbability 50.00%" ];
+	Node0x55d7f4a16ac0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.then3:\l|  %varstr = getelementptr inbounds %\"class.LAMMPS_NS::FixWallReflect\", ptr\l... %this1, i32 0, i32 5\l  %5 = load i32, ptr %m, align 4\l  %idxprom4 = sext i32 %5 to i64\l  %arrayidx5 = getelementptr inbounds [6 x ptr], ptr %varstr, i64 0, i64\l... %idxprom4\l  %6 = load ptr, ptr %arrayidx5, align 8\l  %isnull = icmp eq ptr %6, null\l  br i1 %isnull, label %delete.end, label %delete.notnull\l|{<s0>T|<s1>F}}"];
+	Node0x55d7f4a16ac0:s0 -> Node0x55d7f4a16390[tooltip="if.then3 -> delete.end\nProbability 37.50%" ];
+	Node0x55d7f4a16ac0:s1 -> Node0x55d7f4a172a0[tooltip="if.then3 -> delete.notnull\nProbability 62.50%" ];
+	Node0x55d7f4a172a0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{delete.notnull:\l|  call void @_ZdaPv(ptr noundef %6) #9\l  br label %delete.end\l}"];
+	Node0x55d7f4a172a0 -> Node0x55d7f4a16390[tooltip="delete.notnull -> delete.end\nProbability 100.00%" ];
+	Node0x55d7f4a16390 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{delete.end:\l|  br label %if.end6\l}"];
+	Node0x55d7f4a16390 -> Node0x55d7f4a16b40[tooltip="delete.end -> if.end6\nProbability 100.00%" ];
+	Node0x55d7f4a16b40 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end6:\l|  br label %for.inc\l}"];
+	Node0x55d7f4a16b40 -> Node0x55d7f4a17640[tooltip="if.end6 -> for.inc\nProbability 100.00%" ];
+	Node0x55d7f4a17640 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.inc:\l|  %7 = load i32, ptr %m, align 4\l  %inc = add nsw i32 %7, 1\l  store i32 %inc, ptr %m, align 4\l  br label %for.cond, !llvm.loop !6\l}"];
+	Node0x55d7f4a17640 -> Node0x55d7f4a160c0[tooltip="for.inc -> for.cond\nProbability 100.00%" ];
+	Node0x55d7f4a16580 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{for.end:\l|  store i32 0, ptr %cleanup.dest.slot, align 4\l  br label %cleanup\l}"];
+	Node0x55d7f4a16580 -> Node0x55d7f4a15f40[tooltip="for.end -> cleanup\nProbability 100.00%" ];
+	Node0x55d7f4a15f40 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d0473d70" fontname="Courier",label="{cleanup:\l|  call void @_ZN9LAMMPS_NS3FixD2Ev(ptr noundef nonnull align 8\l... dereferenceable(656) %this1) #10\l  %cleanup.dest = load i32, ptr %cleanup.dest.slot, align 4\l  switch i32 %cleanup.dest, label %unreachable [\l    i32 0, label %cleanup.cont\l    i32 1, label %cleanup.cont\l  ]\l|{<s0>def|<s1>0|<s2>1}}"];
+	Node0x55d7f4a15f40:s0 -> Node0x55d7f4a17d70[tooltip="cleanup -> unreachable\nProbability 0.00%" ];
+	Node0x55d7f4a15f40:s1 -> Node0x55d7f4a17dc0[tooltip="cleanup -> cleanup.cont\nProbability 100.00%" ];
+	Node0x55d7f4a15f40:s2 -> Node0x55d7f4a17dc0[tooltip="cleanup -> cleanup.cont\nProbability 100.00%" ];
+	Node0x55d7f4a17dc0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d0473d70" fontname="Courier",label="{cleanup.cont:\l|  ret void\l}"];
+	Node0x55d7f4a17d70 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#b5cdfa70" fontname="Courier",label="{unreachable:\l|  unreachable\l}"];
+}

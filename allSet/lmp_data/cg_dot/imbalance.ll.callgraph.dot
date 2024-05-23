@@ -1,0 +1,19 @@
+digraph "Call graph: imbalance.ll" {
+	label="Call graph: imbalance.ll";
+
+	Node0x558a32e68090 [shape=record,label="{_ZN9LAMMPS_NS9ImbalanceC2EPNS_6LAMMPSE}"];
+	Node0x558a32e68090 -> Node0x558a32e59390;
+	Node0x558a32e59390 [shape=record,label="{_ZN9LAMMPS_NS8PointersC2EPNS_6LAMMPSE}"];
+	Node0x558a32e6f2b0 [shape=record,label="{_ZN9LAMMPS_NS9ImbalanceD2Ev}"];
+	Node0x558a32e6f2b0 -> Node0x558a32e6f330;
+	Node0x558a32e6f3b0 [shape=record,label="{_ZN9LAMMPS_NS9ImbalanceD0Ev}"];
+	Node0x558a32e6f3b0 -> Node0x558a32e6f430;
+	Node0x558a32e6f4e0 [shape=record,label="{__cxa_pure_virtual}"];
+	Node0x558a32e6f6e0 [shape=record,label="{_ZN9LAMMPS_NS9Imbalance4initEi}"];
+	Node0x558a32e6f330 [shape=record,label="{_ZN9LAMMPS_NS8PointersD2Ev}"];
+	Node0x558a32e6f760 [shape=record,label="{_ZN9LAMMPS_NS8PointersD0Ev}"];
+	Node0x558a32e6f760 -> Node0x558a32e6f330;
+	Node0x558a32e6f760 -> Node0x558a32e6f810;
+	Node0x558a32e6f810 [shape=record,label="{_ZdlPv}"];
+	Node0x558a32e6f430 [shape=record,label="{llvm.trap}"];
+}

@@ -1,0 +1,5 @@
+digraph "CFG for 'hypre_ParKrylovMatvecDestroy' function" {
+	label="CFG for 'hypre_ParKrylovMatvecDestroy' function";
+
+	Node0x557950111e30 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %matvec_data.addr = alloca ptr, align 8\l  store ptr %matvec_data, ptr %matvec_data.addr, align 8\l  ret i32 0\l}"];
+}

@@ -1,0 +1,28 @@
+digraph "CFG for '_ZN3fmt6v9_lmp6detail9dragonbox14cache_accessorIfE18compute_mul_parityEjRKmi' function" {
+	label="CFG for '_ZN3fmt6v9_lmp6detail9dragonbox14cache_accessorIfE18compute_mul_parityEjRKmi' function";
+
+	Node0x55fec2f95700 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %retval = alloca\l... %\"struct.fmt::v9_lmp::detail::dragonbox::cache_accessor\<float\>::compute_mul_pa\l...rity_result\", align 1\l  %two_f.addr = alloca i32, align 4\l  %cache.addr = alloca ptr, align 8\l  %beta.addr = alloca i32, align 4\l  %r = alloca i64, align 8\l  store i32 %two_f, ptr %two_f.addr, align 4\l  store ptr %cache, ptr %cache.addr, align 8\l  store i32 %beta, ptr %beta.addr, align 4\l  %0 = load i32, ptr %beta.addr, align 4\l  %cmp = icmp sge i32 %0, 1\l  br i1 %cmp, label %cond.true, label %cond.false\l|{<s0>T|<s1>F}}"];
+	Node0x55fec2f95700:s0 -> Node0x55fec2f95d00[tooltip="entry -> cond.true\nProbability 100.00%" ];
+	Node0x55fec2f95700:s1 -> Node0x55fec2f95d80[tooltip="entry -> cond.false\nProbability 0.00%" ];
+	Node0x55fec2f95d00 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{cond.true:\l|  br label %cond.end\l}"];
+	Node0x55fec2f95d00 -> Node0x55fec2f95eb0[tooltip="cond.true -> cond.end\nProbability 100.00%" ];
+	Node0x55fec2f95d80 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f4c5ad70" fontname="Courier",label="{cond.false:\l|  invoke void @_ZN3fmt6v9_lmp6detail11assert_failEPKciS3_(ptr noundef\l... @.str.1, i32 noundef 353, ptr noundef @.str.2) #17\l          to label %invoke.cont unwind label %terminate.lpad\l}"];
+	Node0x55fec2f95d80 -> Node0x55fec2f96190[tooltip="cond.false -> invoke.cont\nProbability 0.00%" ];
+	Node0x55fec2f95d80 -> Node0x55fec2f96210[tooltip="cond.false -> terminate.lpad\nProbability 100.00%" ];
+	Node0x55fec2f96190 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#4f69d970" fontname="Courier",label="{invoke.cont:\l|  unreachable\l}"];
+	Node0x55fec2f964c0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#3d50c370" fontname="Courier",label="{1:\l|  br label %cond.end\l}"];
+	Node0x55fec2f964c0 -> Node0x55fec2f95eb0[tooltip="1 -> cond.end\nProbability 100.00%" ];
+	Node0x55fec2f95eb0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{cond.end:\l|  %2 = load i32, ptr %beta.addr, align 4\l  %cmp1 = icmp slt i32 %2, 64\l  br i1 %cmp1, label %cond.true2, label %cond.false3\l|{<s0>T|<s1>F}}"];
+	Node0x55fec2f95eb0:s0 -> Node0x55fec2f96690[tooltip="cond.end -> cond.true2\nProbability 100.00%" ];
+	Node0x55fec2f95eb0:s1 -> Node0x55fec2f96710[tooltip="cond.end -> cond.false3\nProbability 0.00%" ];
+	Node0x55fec2f96690 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{cond.true2:\l|  br label %cond.end5\l}"];
+	Node0x55fec2f96690 -> Node0x55fec2f96840[tooltip="cond.true2 -> cond.end5\nProbability 100.00%" ];
+	Node0x55fec2f96710 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f4c5ad70" fontname="Courier",label="{cond.false3:\l|  invoke void @_ZN3fmt6v9_lmp6detail11assert_failEPKciS3_(ptr noundef\l... @.str.1, i32 noundef 354, ptr noundef @.str.2) #17\l          to label %invoke.cont4 unwind label %terminate.lpad\l}"];
+	Node0x55fec2f96710 -> Node0x55fec2f96960[tooltip="cond.false3 -> invoke.cont4\nProbability 0.00%" ];
+	Node0x55fec2f96710 -> Node0x55fec2f96210[tooltip="cond.false3 -> terminate.lpad\nProbability 100.00%" ];
+	Node0x55fec2f96960 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#4f69d970" fontname="Courier",label="{invoke.cont4:\l|  unreachable\l}"];
+	Node0x55fec2f96c10 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#3d50c370" fontname="Courier",label="{3:\l|  br label %cond.end5\l}"];
+	Node0x55fec2f96c10 -> Node0x55fec2f96840[tooltip="3 -> cond.end5\nProbability 100.00%" ];
+	Node0x55fec2f96840 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{cond.end5:\l|  %4 = load i32, ptr %two_f.addr, align 4\l  %5 = load ptr, ptr %cache.addr, align 8\l  %6 = load i64, ptr %5, align 8\l  %call = call noundef i64\l... @_ZN3fmt6v9_lmp6detail9dragonbox14umul96_lower64Ejm(i32 noundef %4, i64\l... noundef %6) #18\l  store i64 %call, ptr %r, align 8\l  %parity = getelementptr inbounds\l... %\"struct.fmt::v9_lmp::detail::dragonbox::cache_accessor\<float\>::compute_mul_pa\l...rity_result\", ptr %retval, i32 0, i32 0\l  %7 = load i64, ptr %r, align 8\l  %8 = load i32, ptr %beta.addr, align 4\l  %sub = sub nsw i32 64, %8\l  %sh_prom = zext i32 %sub to i64\l  %shr = lshr i64 %7, %sh_prom\l  %and = and i64 %shr, 1\l  %cmp6 = icmp ne i64 %and, 0\l  %frombool = zext i1 %cmp6 to i8\l  store i8 %frombool, ptr %parity, align 1\l  %is_integer = getelementptr inbounds\l... %\"struct.fmt::v9_lmp::detail::dragonbox::cache_accessor\<float\>::compute_mul_pa\l...rity_result\", ptr %retval, i32 0, i32 1\l  %9 = load i64, ptr %r, align 8\l  %10 = load i32, ptr %beta.addr, align 4\l  %sub7 = sub nsw i32 32, %10\l  %sh_prom8 = zext i32 %sub7 to i64\l  %shr9 = lshr i64 %9, %sh_prom8\l  %conv = trunc i64 %shr9 to i32\l  %cmp10 = icmp eq i32 %conv, 0\l  %frombool11 = zext i1 %cmp10 to i8\l  store i8 %frombool11, ptr %is_integer, align 1\l  %11 = load i16, ptr %retval, align 1\l  ret i16 %11\l}"];
+	Node0x55fec2f96210 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f6bfa670" fontname="Courier",label="{terminate.lpad:\l|  %12 = landingpad \{ ptr, i32 \}\l          catch ptr null\l  %13 = extractvalue \{ ptr, i32 \} %12, 0\l  call void @__clang_call_terminate(ptr %13) #19\l  unreachable\l}"];
+}

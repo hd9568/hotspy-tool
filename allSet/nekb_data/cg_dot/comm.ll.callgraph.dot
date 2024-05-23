@@ -1,0 +1,36 @@
+digraph "Call graph: comm.ll" {
+	label="Call graph: comm.ll";
+
+	Node0x5558b7f6c2c0 [shape=record,label="{comm_scan}"];
+	Node0x5558b7f6c2c0 -> Node0x5558b7f8afd0;
+	Node0x5558b7f8afd0 [shape=record,label="{scan_imp}"];
+	Node0x5558b7f8afd0 -> Node0x5558b7f85cd0;
+	Node0x5558b7f8afd0 -> Node0x5558b7f82720;
+	Node0x5558b7f8afd0 -> Node0x5558b7f5e9f0;
+	Node0x5558b7f8afd0 -> Node0x5558b7f75a80;
+	Node0x5558b7f8afd0 -> Node0x5558b7f63a30;
+	Node0x5558b7f8afd0 -> Node0x5558b7f5d3b0;
+	Node0x5558b7f8afd0 -> Node0x5558b7f56870;
+	Node0x5558b7f8afd0 -> Node0x5558b7f639b0;
+	Node0x5558b7f57e20 [shape=record,label="{comm_allreduce}"];
+	Node0x5558b7f5ca70 [shape=record,label="{comm_dot}"];
+	Node0x5558b7f5ca70 -> Node0x5558b7f5e680;
+	Node0x5558b7f5ca70 -> Node0x5558b7f57e20;
+	Node0x5558b7f5e680 [shape=record,label="{tensor_dot}"];
+	Node0x5558b7f620a0 [shape=record,label="{comm_reduce__double}"];
+	Node0x5558b7f620a0 -> Node0x5558b7f57e20;
+	Node0x5558b7f63070 [shape=record,label="{comm_reduce__float}"];
+	Node0x5558b7f63070 -> Node0x5558b7f57e20;
+	Node0x5558b7f647a0 [shape=record,label="{comm_reduce__int}"];
+	Node0x5558b7f647a0 -> Node0x5558b7f57e20;
+	Node0x5558b7f68a60 [shape=record,label="{comm_reduce__long}"];
+	Node0x5558b7f68a60 -> Node0x5558b7f57e20;
+	Node0x5558b7f85cd0 [shape=record,label="{gs_init_array}"];
+	Node0x5558b7f82720 [shape=record,label="{llvm.memcpy.p0.p0.i64}"];
+	Node0x5558b7f5e9f0 [shape=record,label="{comm_irecv}"];
+	Node0x5558b7f75a80 [shape=record,label="{comm_isend}"];
+	Node0x5558b7f63a30 [shape=record,label="{comm_wait}"];
+	Node0x5558b7f5d3b0 [shape=record,label="{gs_gather_array}"];
+	Node0x5558b7f639b0 [shape=record,label="{comm_send}"];
+	Node0x5558b7f56870 [shape=record,label="{comm_recv}"];
+}

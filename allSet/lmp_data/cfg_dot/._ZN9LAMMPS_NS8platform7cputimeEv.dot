@@ -1,0 +1,10 @@
+digraph "CFG for '_ZN9LAMMPS_NS8platform7cputimeEv' function" {
+	label="CFG for '_ZN9LAMMPS_NS8platform7cputimeEv' function";
+
+	Node0x5651cd77faf0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %rv = alloca double, align 8\l  %ru = alloca %struct.rusage, align 8\l  store double 0.000000e+00, ptr %rv, align 8\l  %call = call i32 @getrusage(i32 noundef 0, ptr noundef %ru) #4\l  %cmp = icmp eq i32 %call, 0\l  br i1 %cmp, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x5651cd77faf0:s0 -> Node0x5651cd780a50[tooltip="entry -> if.then\nProbability 37.50%" ];
+	Node0x5651cd77faf0:s1 -> Node0x5651cd780b20[tooltip="entry -> if.end\nProbability 62.50%" ];
+	Node0x5651cd780a50 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{if.then:\l|  %ru_utime = getelementptr inbounds %struct.rusage, ptr %ru, i32 0, i32 0\l  %tv_sec = getelementptr inbounds %struct.timeval, ptr %ru_utime, i32 0, i32 0\l  %0 = load i64, ptr %tv_sec, align 8\l  %conv = sitofp i64 %0 to double\l  store double %conv, ptr %rv, align 8\l  %ru_utime1 = getelementptr inbounds %struct.rusage, ptr %ru, i32 0, i32 0\l  %tv_usec = getelementptr inbounds %struct.timeval, ptr %ru_utime1, i32 0,\l... i32 1\l  %1 = load i64, ptr %tv_usec, align 8\l  %conv2 = sitofp i64 %1 to double\l  %2 = load double, ptr %rv, align 8\l  %3 = call double @llvm.fmuladd.f64(double %conv2, double 0x3EB0C6F7A0B5ED8D,\l... double %2)\l  store double %3, ptr %rv, align 8\l  br label %if.end\l}"];
+	Node0x5651cd780a50 -> Node0x5651cd780b20[tooltip="if.then -> if.end\nProbability 100.00%" ];
+	Node0x5651cd780b20 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  %4 = load double, ptr %rv, align 8\l  ret double %4\l}"];
+}

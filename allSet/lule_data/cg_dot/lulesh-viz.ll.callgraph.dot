@@ -1,0 +1,7 @@
+digraph "Call graph: lulesh-viz.ll" {
+	label="Call graph: lulesh-viz.ll";
+
+	Node0x560c3163ad20 [shape=record,label="{_Z11DumpToVisitR6Domainiii}"];
+	Node0x560c3163ad20 -> Node0x560c3163add0;
+	Node0x560c3163add0 [shape=record,label="{printf}"];
+}

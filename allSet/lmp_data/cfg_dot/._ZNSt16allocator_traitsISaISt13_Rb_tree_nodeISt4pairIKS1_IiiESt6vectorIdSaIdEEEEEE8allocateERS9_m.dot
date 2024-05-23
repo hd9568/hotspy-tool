@@ -1,0 +1,5 @@
+digraph "CFG for '_ZNSt16allocator_traitsISaISt13_Rb_tree_nodeISt4pairIKS1_IiiESt6vectorIdSaIdEEEEEE8allocateERS9_m' function" {
+	label="CFG for '_ZNSt16allocator_traitsISaISt13_Rb_tree_nodeISt4pairIKS1_IiiESt6vectorIdSaIdEEEEEE8allocateERS9_m' function";
+
+	Node0x55e722db1330 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %__a.addr = alloca ptr, align 8\l  %__n.addr = alloca i64, align 8\l  store ptr %__a, ptr %__a.addr, align 8\l  store i64 %__n, ptr %__n.addr, align 8\l  %0 = load ptr, ptr %__a.addr, align 8\l  %1 = load i64, ptr %__n.addr, align 8\l  %call = call noundef ptr\l... @_ZN9__gnu_cxx13new_allocatorISt13_Rb_tree_nodeISt4pairIKS2_IiiESt6vectorIdSaI\l...dEEEEE8allocateEmPKv(ptr noundef nonnull align 1 dereferenceable(1) %0, i64\l... noundef %1, ptr noundef null)\l  ret ptr %call\l}"];
+}

@@ -1,0 +1,5 @@
+digraph "CFG for '_ZNSt7__cxx1110_List_baseI25particle_buffer_base_typeSaIS1_EE7_M_initEv' function" {
+	label="CFG for '_ZNSt7__cxx1110_List_baseI25particle_buffer_base_typeSaIS1_EE7_M_initEv' function";
+
+	Node0x558b694f7620 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %_M_impl = getelementptr inbounds %\"class.std::__cxx11::_List_base\", ptr\l... %this1, i32 0, i32 0\l  %_M_node = getelementptr inbounds\l... %\"struct.std::__cxx11::_List_base\<particle_buffer_base_type,\l... std::allocator\<particle_buffer_base_type\>\>::_List_impl\", ptr %_M_impl, i32 0,\l... i32 0\l  call void @_ZNSt8__detail17_List_node_header7_M_initEv(ptr noundef nonnull\l... align 8 dereferenceable(24) %_M_node) #3\l  ret void\l}"];
+}

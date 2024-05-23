@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN9LAMMPS_NS9multitypeaSERKi' function" {
+	label="CFG for '_ZN9LAMMPS_NS9multitypeaSERKi' function";
+
+	Node0x55bd403cf7f0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %_i.addr = alloca ptr, align 8\l  store ptr %this, ptr %this.addr, align 8\l  store ptr %_i, ptr %_i.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %type = getelementptr inbounds %\"struct.LAMMPS_NS::multitype\", ptr %this1,\l... i32 0, i32 0\l  store i32 0, ptr %type, align 8\l  %0 = load ptr, ptr %_i.addr, align 8\l  %1 = load i32, ptr %0, align 4\l  %data = getelementptr inbounds %\"struct.LAMMPS_NS::multitype\", ptr %this1,\l... i32 0, i32 1\l  store i32 %1, ptr %data, align 8\l  ret ptr %this1\l}"];
+}

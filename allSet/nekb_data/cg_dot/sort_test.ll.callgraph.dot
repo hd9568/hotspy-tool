@@ -1,0 +1,19 @@
+digraph "Call graph: sort_test.ll" {
+	label="Call graph: sort_test.ll";
+
+	Node0x5609872b3350 [shape=record,label="{main}"];
+	Node0x5609872b3350 -> Node0x5609872b4f80;
+	Node0x5609872b3350 -> Node0x5609872ba1f0;
+	Node0x5609872b3350 -> Node0x5609872bc9d0;
+	Node0x5609872b3350 -> Node0x5609872ba6a0;
+	Node0x5609872b3350 -> Node0x5609872bbab0;
+	Node0x5609872b3350 -> Node0x5609872ba590;
+	Node0x5609872b3350 -> Node0x5609872bb410;
+	Node0x5609872b4f80 [shape=record,label="{llvm.memset.p0.i64}"];
+	Node0x5609872ba1f0 [shape=record,label="{rand}"];
+	Node0x5609872ba6a0 [shape=record,label="{printf}"];
+	Node0x5609872ba590 [shape=record,label="{sortv_ui}"];
+	Node0x5609872bb410 [shape=record,label="{sortp_ui}"];
+	Node0x5609872bbab0 [shape=record,label="{llvm.memcpy.p0.p0.i64}"];
+	Node0x5609872bc9d0 [shape=record,label="{free}"];
+}

@@ -1,0 +1,16 @@
+digraph "Call graph: timer.ll" {
+	label="Call graph: timer.ll";
+
+	Node0x55a830c446d0 [shape=record,label="{time_getWallclockSeconds}"];
+	Node0x55a830c446d0 -> Node0x55a830c44780;
+	Node0x55a830c446d0 -> Node0x55a830c44c40;
+	Node0x55a830c44780 [shape=record,label="{times}"];
+	Node0x55a830c44c40 [shape=record,label="{sysconf}"];
+	Node0x55a830c44cc0 [shape=record,label="{time_getCPUSeconds}"];
+	Node0x55a830c44cc0 -> Node0x55a830c44d40;
+	Node0x55a830c44d40 [shape=record,label="{clock}"];
+	Node0x55a830c44f70 [shape=record,label="{time_get_wallclock_seconds_}"];
+	Node0x55a830c44f70 -> Node0x55a830c446d0;
+	Node0x55a830c45020 [shape=record,label="{time_get_cpu_seconds_}"];
+	Node0x55a830c45020 -> Node0x55a830c44cc0;
+}

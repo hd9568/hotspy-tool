@@ -1,0 +1,9 @@
+digraph "CFG for '_ZNSt6vectorIN9LAMMPS_NS17ComputeGlobalAtom7value_tESaIS2_EE11_S_max_sizeERKS3_' function" {
+	label="CFG for '_ZNSt6vectorIN9LAMMPS_NS17ComputeGlobalAtom7value_tESaIS2_EE11_S_max_sizeERKS3_' function";
+
+	Node0x56131ec0f000 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %__a.addr = alloca ptr, align 8\l  %__diffmax = alloca i64, align 8\l  %__allocmax = alloca i64, align 8\l  store ptr %__a, ptr %__a.addr, align 8\l  store i64 192153584101141162, ptr %__diffmax, align 8\l  %0 = load ptr, ptr %__a.addr, align 8\l  %call = call noundef i64\l... @_ZNSt16allocator_traitsISaIN9LAMMPS_NS17ComputeGlobalAtom7value_tEEE8max_size\l...ERKS3_(ptr noundef nonnull align 1 dereferenceable(1) %0) #10\l  store i64 %call, ptr %__allocmax, align 8\l  %call1 = invoke noundef nonnull align 8 dereferenceable(8) ptr\l... @_ZSt3minImERKT_S2_S2_(ptr noundef nonnull align 8 dereferenceable(8)\l... %__diffmax, ptr noundef nonnull align 8 dereferenceable(8) %__allocmax)\l          to label %invoke.cont unwind label %terminate.lpad\l}"];
+	Node0x56131ec0f000 -> Node0x56131ec0f630[tooltip="entry -> invoke.cont\nProbability 100.00%" ];
+	Node0x56131ec0f000 -> Node0x56131ec0f6b0[tooltip="entry -> terminate.lpad\nProbability 0.00%" ];
+	Node0x56131ec0f630 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{invoke.cont:\l|  %1 = load i64, ptr %call1, align 8\l  ret i64 %1\l}"];
+	Node0x56131ec0f6b0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f4c5ad70" fontname="Courier",label="{terminate.lpad:\l|  %2 = landingpad \{ ptr, i32 \}\l          catch ptr null\l  %3 = extractvalue \{ ptr, i32 \} %2, 0\l  call void @__clang_call_terminate(ptr %3) #11\l  unreachable\l}"];
+}

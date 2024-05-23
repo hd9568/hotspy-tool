@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN3fmt6v9_lmp6detail12count_digitsEj' function" {
+	label="CFG for '_ZN3fmt6v9_lmp6detail12count_digitsEj' function";
+
+	Node0x556bfebf5930 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %n.addr.i = alloca i32, align 4\l  %inc.i = alloca i64, align 8\l  %n.addr = alloca i32, align 4\l  store i32 %n, ptr %n.addr, align 4\l  %0 = load i32, ptr %n.addr, align 4\l  store i32 %0, ptr %n.addr.i, align 4\l  %1 = load i32, ptr %n.addr.i, align 4\l  %or.i = or i32 %1, 1\l  %2 = call i32 @llvm.ctlz.i32(i32 %or.i, i1 true)\l  %xor.i = xor i32 %2, 31\l  %idxprom.i = sext i32 %xor.i to i64\l  %arrayidx.i = getelementptr inbounds [32 x i64], ptr\l... @_ZZN3fmt6v9_lmp6detail15do_count_digitsEjE5table, i64 0, i64 %idxprom.i\l  %3 = load i64, ptr %arrayidx.i, align 8\l  store i64 %3, ptr %inc.i, align 8\l  %4 = load i32, ptr %n.addr.i, align 4\l  %conv.i = zext i32 %4 to i64\l  %5 = load i64, ptr %inc.i, align 8\l  %add.i = add i64 %conv.i, %5\l  %shr.i = lshr i64 %add.i, 32\l  %conv1.i = trunc i64 %shr.i to i32\l  ret i32 %conv1.i\l}"];
+}

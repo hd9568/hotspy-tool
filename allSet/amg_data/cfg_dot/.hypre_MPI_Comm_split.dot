@@ -1,0 +1,5 @@
+digraph "CFG for 'hypre_MPI_Comm_split' function" {
+	label="CFG for 'hypre_MPI_Comm_split' function";
+
+	Node0x5555d66201b0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %comm.addr = alloca ptr, align 8\l  %n.addr = alloca i32, align 4\l  %m.addr = alloca i32, align 4\l  %comms.addr = alloca ptr, align 8\l  store ptr %comm, ptr %comm.addr, align 8\l  store i32 %n, ptr %n.addr, align 4\l  store i32 %m, ptr %m.addr, align 4\l  store ptr %comms, ptr %comms.addr, align 8\l  %0 = load ptr, ptr %comm.addr, align 8\l  %1 = load i32, ptr %n.addr, align 4\l  %2 = load i32, ptr %m.addr, align 4\l  %3 = load ptr, ptr %comms.addr, align 8\l  %call = call i32 @MPI_Comm_split(ptr noundef %0, i32 noundef %1, i32 noundef\l... %2, ptr noundef %3)\l  ret i32 %call\l}"];
+}

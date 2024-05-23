@@ -1,0 +1,12 @@
+digraph "CFG for '_ZN3fmt6v9_lmp6detail23check_pointer_type_specIRNS1_13error_handlerEEEvNS0_17presentation_typeEOT_' function" {
+	label="CFG for '_ZN3fmt6v9_lmp6detail23check_pointer_type_specIRNS1_13error_handlerEEEvNS0_17presentation_typeEOT_' function";
+
+	Node0x556bfea949b0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %type.addr = alloca i8, align 1\l  %eh.addr = alloca ptr, align 8\l  store i8 %type, ptr %type.addr, align 1\l  store ptr %eh, ptr %eh.addr, align 8\l  %0 = load i8, ptr %type.addr, align 1\l  %cmp = icmp ne i8 %0, 0\l  br i1 %cmp, label %land.lhs.true, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x556bfea949b0:s0 -> Node0x556bfea94d20[tooltip="entry -> land.lhs.true\nProbability 62.50%" ];
+	Node0x556bfea949b0:s1 -> Node0x556bfea94da0[tooltip="entry -> if.end\nProbability 37.50%" ];
+	Node0x556bfea94d20 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{land.lhs.true:\l|  %1 = load i8, ptr %type.addr, align 1\l  %cmp1 = icmp ne i8 %1, 17\l  br i1 %cmp1, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x556bfea94d20:s0 -> Node0x556bfea94ff0[tooltip="land.lhs.true -> if.then\nProbability 0.00%" ];
+	Node0x556bfea94d20:s1 -> Node0x556bfea94da0[tooltip="land.lhs.true -> if.end\nProbability 100.00%" ];
+	Node0x556bfea94ff0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f3c7b170" fontname="Courier",label="{if.then:\l|  %2 = load ptr, ptr %eh.addr, align 8\l  call void @_ZN3fmt6v9_lmp6detail13error_handler8on_errorEPKc(ptr noundef\l... nonnull align 1 dereferenceable(1) %2, ptr noundef @.str.316) #21\l  unreachable\l}"];
+	Node0x556bfea94da0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  ret void\l}"];
+}

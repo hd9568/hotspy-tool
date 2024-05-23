@@ -1,0 +1,13 @@
+digraph "Call graph: jacu.ll" {
+	label="Call graph: jacu.ll";
+
+	Node0x55862e8a9210 [shape=record,label="{jacu_}"];
+	Node0x55862e8a9210 -> Node0x55862e8aecd0;
+	Node0x55862e8a9210 -> Node0x55862e8af190;
+	Node0x55862e8a9210 -> Node0x55862e8af6a0;
+	Node0x55862e8aecd0 [shape=record,label="{timer_start_}"];
+	Node0x55862e8af6a0 [shape=record,label="{timer_stop_}"];
+	Node0x55862e8afc20 [shape=record,label="{llvm.stacksave.p0}"];
+	Node0x55862e8afca0 [shape=record,label="{llvm.stackrestore.p0}"];
+	Node0x55862e8af190 [shape=record,label="{llvm.powi.f64.i32}"];
+}

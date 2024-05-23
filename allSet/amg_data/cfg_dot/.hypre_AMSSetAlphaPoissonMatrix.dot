@@ -1,0 +1,5 @@
+digraph "CFG for 'hypre_AMSSetAlphaPoissonMatrix' function" {
+	label="CFG for 'hypre_AMSSetAlphaPoissonMatrix' function";
+
+	Node0x56058d796c00 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %solver.addr = alloca ptr, align 8\l  %A_Pi.addr = alloca ptr, align 8\l  %ams_data = alloca ptr, align 8\l  store ptr %solver, ptr %solver.addr, align 8\l  store ptr %A_Pi, ptr %A_Pi.addr, align 8\l  %0 = load ptr, ptr %solver.addr, align 8\l  store ptr %0, ptr %ams_data, align 8\l  %1 = load ptr, ptr %A_Pi.addr, align 8\l  %2 = load ptr, ptr %ams_data, align 8\l  %A_Pi1 = getelementptr inbounds %struct.hypre_AMSData, ptr %2, i32 0, i32 7\l  store ptr %1, ptr %A_Pi1, align 8\l  %3 = load ptr, ptr %A_Pi.addr, align 8\l  %call = call i32 @hypre_ParCSRMatrixSetDiagRows(ptr noundef %3, double\l... noundef 0x7FEFFFFFFFFFFFFF)\l  %4 = load i32, ptr @hypre__global_error, align 4\l  ret i32 %4\l}"];
+}

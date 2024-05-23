@@ -1,0 +1,17 @@
+digraph "Call graph: amg_linklist.ll" {
+	label="Call graph: amg_linklist.ll";
+
+	Node0x558308e9f2b0 [shape=record,label="{hypre_dispose_elt}"];
+	Node0x558308e9f2b0 -> Node0x558308eaa130;
+	Node0x558308eaa130 [shape=record,label="{free}"];
+	Node0x558308eaa1e0 [shape=record,label="{hypre_remove_point}"];
+	Node0x558308eaa1e0 -> Node0x558308e9f2b0;
+	Node0x558308eaa1e0 -> Node0x558308eaa340;
+	Node0x558308eaa340 [shape=record,label="{hypre_error_handler}"];
+	Node0x558308eaef90 [shape=record,label="{hypre_create_elt}"];
+	Node0x558308eaef90 -> Node0x558308eaf160;
+	Node0x558308eaef90 -> Node0x558308eaa340;
+	Node0x558308eaf160 [shape=record,label="{malloc}"];
+	Node0x558308eaf210 [shape=record,label="{hypre_enter_on_lists}"];
+	Node0x558308eaf210 -> Node0x558308eaef90;
+}

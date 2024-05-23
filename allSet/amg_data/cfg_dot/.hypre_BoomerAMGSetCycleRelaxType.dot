@@ -1,0 +1,44 @@
+digraph "CFG for 'hypre_BoomerAMGSetCycleRelaxType' function" {
+	label="CFG for 'hypre_BoomerAMGSetCycleRelaxType' function";
+
+	Node0x55fa809eebc0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{entry:\l|  %retval = alloca i32, align 4\l  %data.addr = alloca ptr, align 8\l  %relax_type.addr = alloca i32, align 4\l  %k.addr = alloca i32, align 4\l  %i = alloca i32, align 4\l  %grid_relax_type = alloca ptr, align 8\l  %amg_data = alloca ptr, align 8\l  store ptr %data, ptr %data.addr, align 8\l  store i32 %relax_type, ptr %relax_type.addr, align 4\l  store i32 %k, ptr %k.addr, align 4\l  %0 = load ptr, ptr %data.addr, align 8\l  store ptr %0, ptr %amg_data, align 8\l  %1 = load ptr, ptr %amg_data, align 8\l  %tobool = icmp ne ptr %1, null\l  br i1 %tobool, label %if.end, label %if.then\l|{<s0>T|<s1>F}}"];
+	Node0x55fa809eebc0:s0 -> Node0x55fa809ef430[tooltip="entry -> if.end\nProbability 62.50%" ];
+	Node0x55fa809eebc0:s1 -> Node0x55fa809eea90[tooltip="entry -> if.then\nProbability 37.50%" ];
+	Node0x55fa809eea90 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470" fontname="Courier",label="{if.then:\l|  call void @hypre_error_handler(ptr noundef @.str.2, i32 noundef 1552, i32\l... noundef 12, ptr noundef null)\l  %2 = load i32, ptr @hypre__global_error, align 4\l  store i32 %2, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x55fa809eea90 -> Node0x55fa809ef990[tooltip="if.then -> return\nProbability 100.00%" ];
+	Node0x55fa809ef430 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.end:\l|  %3 = load i32, ptr %k.addr, align 4\l  %cmp = icmp slt i32 %3, 1\l  br i1 %cmp, label %if.then2, label %lor.lhs.false\l|{<s0>T|<s1>F}}"];
+	Node0x55fa809ef430:s0 -> Node0x55fa809efb60[tooltip="if.end -> if.then2\nProbability 37.50%" ];
+	Node0x55fa809ef430:s1 -> Node0x55fa809efbb0[tooltip="if.end -> lor.lhs.false\nProbability 62.50%" ];
+	Node0x55fa809efbb0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{lor.lhs.false:\l|  %4 = load i32, ptr %k.addr, align 4\l  %cmp1 = icmp sgt i32 %4, 3\l  br i1 %cmp1, label %if.then2, label %if.end3\l|{<s0>T|<s1>F}}"];
+	Node0x55fa809efbb0:s0 -> Node0x55fa809efb60[tooltip="lor.lhs.false -> if.then2\nProbability 50.00%" ];
+	Node0x55fa809efbb0:s1 -> Node0x55fa809efde0[tooltip="lor.lhs.false -> if.end3\nProbability 50.00%" ];
+	Node0x55fa809efb60 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{if.then2:\l|  call void @hypre_error_handler(ptr noundef @.str.2, i32 noundef 1557, i32\l... noundef 28, ptr noundef null)\l  %5 = load i32, ptr @hypre__global_error, align 4\l  store i32 %5, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x55fa809efb60 -> Node0x55fa809ef990[tooltip="if.then2 -> return\nProbability 100.00%" ];
+	Node0x55fa809efde0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#ca3b3770" fontname="Courier",label="{if.end3:\l|  %6 = load i32, ptr %relax_type.addr, align 4\l  %cmp4 = icmp slt i32 %6, 0\l  br i1 %cmp4, label %if.then5, label %if.end6\l|{<s0>T|<s1>F}}"];
+	Node0x55fa809efde0:s0 -> Node0x55fa809f03c0[tooltip="if.end3 -> if.then5\nProbability 37.50%" ];
+	Node0x55fa809efde0:s1 -> Node0x55fa809f0410[tooltip="if.end3 -> if.end6\nProbability 62.50%" ];
+	Node0x55fa809f03c0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d24b4070" fontname="Courier",label="{if.then5:\l|  call void @hypre_error_handler(ptr noundef @.str.2, i32 noundef 1562, i32\l... noundef 20, ptr noundef null)\l  %7 = load i32, ptr @hypre__global_error, align 4\l  store i32 %7, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x55fa809f03c0 -> Node0x55fa809ef990[tooltip="if.then5 -> return\nProbability 100.00%" ];
+	Node0x55fa809f0410 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d0473d70" fontname="Courier",label="{if.end6:\l|  %8 = load ptr, ptr %amg_data, align 8\l  %grid_relax_type7 = getelementptr inbounds %struct.hypre_ParAMGData, ptr %8,\l... i32 0, i32 30\l  %9 = load ptr, ptr %grid_relax_type7, align 8\l  %cmp8 = icmp eq ptr %9, null\l  br i1 %cmp8, label %if.then9, label %if.end13\l|{<s0>T|<s1>F}}"];
+	Node0x55fa809f0410:s0 -> Node0x55fa809f0e90[tooltip="if.end6 -> if.then9\nProbability 37.50%" ];
+	Node0x55fa809f0410:s1 -> Node0x55fa809f0ee0[tooltip="if.end6 -> if.end13\nProbability 62.50%" ];
+	Node0x55fa809f0e90 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{if.then9:\l|  %call = call ptr @hypre_CAlloc(i64 noundef 4, i64 noundef 4)\l  store ptr %call, ptr %grid_relax_type, align 8\l  store i32 0, ptr %i, align 4\l  br label %for.cond\l}"];
+	Node0x55fa809f0e90 -> Node0x55fa809f1250[tooltip="if.then9 -> for.cond\nProbability 100.00%" ];
+	Node0x55fa809f1250 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.cond:\l|  %10 = load i32, ptr %i, align 4\l  %cmp10 = icmp slt i32 %10, 3\l  br i1 %cmp10, label %for.body, label %for.end\l|{<s0>T|<s1>F}}"];
+	Node0x55fa809f1250:s0 -> Node0x55fa809f1420[tooltip="for.cond -> for.body\nProbability 96.88%" ];
+	Node0x55fa809f1250:s1 -> Node0x55fa809f14a0[tooltip="for.cond -> for.end\nProbability 3.12%" ];
+	Node0x55fa809f1420 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.body:\l|  %11 = load ptr, ptr %grid_relax_type, align 8\l  %12 = load i32, ptr %i, align 4\l  %idxprom = sext i32 %12 to i64\l  %arrayidx = getelementptr inbounds i32, ptr %11, i64 %idxprom\l  store i32 3, ptr %arrayidx, align 4\l  br label %for.inc\l}"];
+	Node0x55fa809f1420 -> Node0x55fa809f18c0[tooltip="for.body -> for.inc\nProbability 100.00%" ];
+	Node0x55fa809f18c0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.inc:\l|  %13 = load i32, ptr %i, align 4\l  %inc = add nsw i32 %13, 1\l  store i32 %inc, ptr %i, align 4\l  br label %for.cond, !llvm.loop !6\l}"];
+	Node0x55fa809f18c0 -> Node0x55fa809f1250[tooltip="for.inc -> for.cond\nProbability 100.00%" ];
+	Node0x55fa809f14a0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{for.end:\l|  %14 = load ptr, ptr %grid_relax_type, align 8\l  %arrayidx11 = getelementptr inbounds i32, ptr %14, i64 3\l  store i32 9, ptr %arrayidx11, align 4\l  %15 = load ptr, ptr %grid_relax_type, align 8\l  %16 = load ptr, ptr %amg_data, align 8\l  %grid_relax_type12 = getelementptr inbounds %struct.hypre_ParAMGData, ptr\l... %16, i32 0, i32 30\l  store ptr %15, ptr %grid_relax_type12, align 8\l  br label %if.end13\l}"];
+	Node0x55fa809f14a0 -> Node0x55fa809f0ee0[tooltip="for.end -> if.end13\nProbability 100.00%" ];
+	Node0x55fa809f0ee0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d0473d70" fontname="Courier",label="{if.end13:\l|  %17 = load i32, ptr %relax_type.addr, align 4\l  %18 = load ptr, ptr %amg_data, align 8\l  %grid_relax_type14 = getelementptr inbounds %struct.hypre_ParAMGData, ptr\l... %18, i32 0, i32 30\l  %19 = load ptr, ptr %grid_relax_type14, align 8\l  %20 = load i32, ptr %k.addr, align 4\l  %idxprom15 = sext i32 %20 to i64\l  %arrayidx16 = getelementptr inbounds i32, ptr %19, i64 %idxprom15\l  store i32 %17, ptr %arrayidx16, align 4\l  %21 = load i32, ptr %k.addr, align 4\l  %cmp17 = icmp eq i32 %21, 3\l  br i1 %cmp17, label %if.then18, label %if.end19\l|{<s0>T|<s1>F}}"];
+	Node0x55fa809f0ee0:s0 -> Node0x55fa809f2880[tooltip="if.end13 -> if.then18\nProbability 50.00%" ];
+	Node0x55fa809f0ee0:s1 -> Node0x55fa809f2900[tooltip="if.end13 -> if.end19\nProbability 50.00%" ];
+	Node0x55fa809f2880 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d24b4070" fontname="Courier",label="{if.then18:\l|  %22 = load i32, ptr %relax_type.addr, align 4\l  %23 = load ptr, ptr %amg_data, align 8\l  %user_coarse_relax_type = getelementptr inbounds %struct.hypre_ParAMGData,\l... ptr %23, i32 0, i32 33\l  store i32 %22, ptr %user_coarse_relax_type, align 4\l  br label %if.end19\l}"];
+	Node0x55fa809f2880 -> Node0x55fa809f2900[tooltip="if.then18 -> if.end19\nProbability 100.00%" ];
+	Node0x55fa809f2900 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d0473d70" fontname="Courier",label="{if.end19:\l|  %24 = load i32, ptr @hypre__global_error, align 4\l  store i32 %24, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x55fa809f2900 -> Node0x55fa809ef990[tooltip="if.end19 -> return\nProbability 100.00%" ];
+	Node0x55fa809ef990 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{return:\l|  %25 = load i32, ptr %retval, align 4\l  ret i32 %25\l}"];
+}

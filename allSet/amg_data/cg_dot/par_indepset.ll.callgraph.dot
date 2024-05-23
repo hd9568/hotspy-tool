@@ -1,0 +1,12 @@
+digraph "Call graph: par_indepset.ll" {
+	label="Call graph: par_indepset.ll";
+
+	Node0x564cb0a598b0 [shape=record,label="{hypre_BoomerAMGIndepSetInit}"];
+	Node0x564cb0a598b0 -> Node0x564cb0a59b70;
+	Node0x564cb0a598b0 -> Node0x564cb0a59260;
+	Node0x564cb0a598b0 -> Node0x564cb0a592e0;
+	Node0x564cb0a59b70 [shape=record,label="{hypre_MPI_Comm_rank}"];
+	Node0x564cb0a59260 [shape=record,label="{hypre_SeedRand}"];
+	Node0x564cb0a592e0 [shape=record,label="{hypre_Rand}"];
+	Node0x564cb0a5a0f0 [shape=record,label="{hypre_BoomerAMGIndepSet}"];
+}

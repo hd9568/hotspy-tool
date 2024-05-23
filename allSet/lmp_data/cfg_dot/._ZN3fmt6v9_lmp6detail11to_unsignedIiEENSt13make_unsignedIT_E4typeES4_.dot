@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN3fmt6v9_lmp6detail11to_unsignedIiEENSt13make_unsignedIT_E4typeES4_' function" {
+	label="CFG for '_ZN3fmt6v9_lmp6detail11to_unsignedIiEENSt13make_unsignedIT_E4typeES4_' function";
+
+	Node0x556bfeb18780 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %value.addr = alloca i32, align 4\l  store i32 %value, ptr %value.addr, align 4\l  %0 = load i32, ptr %value.addr, align 4\l  ret i32 %0\l}"];
+}

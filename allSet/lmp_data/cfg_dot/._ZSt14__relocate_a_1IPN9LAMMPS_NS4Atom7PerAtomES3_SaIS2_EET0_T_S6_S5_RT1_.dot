@@ -1,0 +1,14 @@
+digraph "CFG for '_ZSt14__relocate_a_1IPN9LAMMPS_NS4Atom7PerAtomES3_SaIS2_EET0_T_S6_S5_RT1_' function" {
+	label="CFG for '_ZSt14__relocate_a_1IPN9LAMMPS_NS4Atom7PerAtomES3_SaIS2_EET0_T_S6_S5_RT1_' function";
+
+	Node0x55aea9233e70 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{entry:\l|  %__first.addr = alloca ptr, align 8\l  %__last.addr = alloca ptr, align 8\l  %__result.addr = alloca ptr, align 8\l  %__alloc.addr = alloca ptr, align 8\l  %__cur = alloca ptr, align 8\l  store ptr %__first, ptr %__first.addr, align 8\l  store ptr %__last, ptr %__last.addr, align 8\l  store ptr %__result, ptr %__result.addr, align 8\l  store ptr %__alloc, ptr %__alloc.addr, align 8\l  %0 = load ptr, ptr %__result.addr, align 8\l  store ptr %0, ptr %__cur, align 8\l  br label %for.cond\l}"];
+	Node0x55aea9233e70 -> Node0x55aea9234510[tooltip="entry -> for.cond\nProbability 100.00%" ];
+	Node0x55aea9234510 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.cond:\l|  %1 = load ptr, ptr %__first.addr, align 8\l  %2 = load ptr, ptr %__last.addr, align 8\l  %cmp = icmp ne ptr %1, %2\l  br i1 %cmp, label %for.body, label %for.end\l|{<s0>T|<s1>F}}"];
+	Node0x55aea9234510:s0 -> Node0x55aea92347b0[tooltip="for.cond -> for.body\nProbability 96.88%" ];
+	Node0x55aea9234510:s1 -> Node0x55aea92349d0[tooltip="for.cond -> for.end\nProbability 3.12%" ];
+	Node0x55aea92347b0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.body:\l|  %3 = load ptr, ptr %__cur, align 8\l  %4 = load ptr, ptr %__first.addr, align 8\l  %5 = load ptr, ptr %__alloc.addr, align 8\l  call void\l... @_ZSt19__relocate_object_aIN9LAMMPS_NS4Atom7PerAtomES2_SaIS2_EEvPT_PT0_RT1_(pt\l...r noundef %3, ptr noundef %4, ptr noundef nonnull align 1 dereferenceable(1)\l... %5) #15\l  br label %for.inc\l}"];
+	Node0x55aea92347b0 -> Node0x55aea9234dd0[tooltip="for.body -> for.inc\nProbability 100.00%" ];
+	Node0x55aea9234dd0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.inc:\l|  %6 = load ptr, ptr %__first.addr, align 8\l  %incdec.ptr = getelementptr inbounds %\"struct.LAMMPS_NS::Atom::PerAtom\", ptr\l... %6, i32 1\l  store ptr %incdec.ptr, ptr %__first.addr, align 8\l  %7 = load ptr, ptr %__cur, align 8\l  %incdec.ptr1 = getelementptr inbounds %\"struct.LAMMPS_NS::Atom::PerAtom\",\l... ptr %7, i32 1\l  store ptr %incdec.ptr1, ptr %__cur, align 8\l  br label %for.cond, !llvm.loop !6\l}"];
+	Node0x55aea9234dd0 -> Node0x55aea9234510[tooltip="for.inc -> for.cond\nProbability 100.00%" ];
+	Node0x55aea92349d0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{for.end:\l|  %8 = load ptr, ptr %__cur, align 8\l  ret ptr %8\l}"];
+}

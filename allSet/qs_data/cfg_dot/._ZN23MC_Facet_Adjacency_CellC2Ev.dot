@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN23MC_Facet_Adjacency_CellC2Ev' function" {
+	label="CFG for '_ZN23MC_Facet_Adjacency_CellC2Ev' function";
+
+	Node0x55dfe4c011a0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %num_facets = getelementptr inbounds %class.MC_Facet_Adjacency_Cell, ptr\l... %this1, i32 0, i32 0\l  store i32 24, ptr %num_facets, align 8\l  %_facet = getelementptr inbounds %class.MC_Facet_Adjacency_Cell, ptr %this1,\l... i32 0, i32 1\l  store ptr null, ptr %_facet, align 8\l  %num_points = getelementptr inbounds %class.MC_Facet_Adjacency_Cell, ptr\l... %this1, i32 0, i32 2\l  store i32 14, ptr %num_points, align 8\l  %_point = getelementptr inbounds %class.MC_Facet_Adjacency_Cell, ptr %this1,\l... i32 0, i32 3\l  store ptr null, ptr %_point, align 8\l  ret void\l}"];
+}

@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN9LAMMPS_NS12NeighRequest12enable_ghostEv' function" {
+	label="CFG for '_ZN9LAMMPS_NS12NeighRequest12enable_ghostEv' function";
+
+	Node0x561f337f4aa0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %ghost = getelementptr inbounds %\"class.LAMMPS_NS::NeighRequest\", ptr\l... %this1, i32 0, i32 13\l  store i32 1, ptr %ghost, align 4\l  ret void\l}"];
+}

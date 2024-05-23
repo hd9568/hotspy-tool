@@ -1,0 +1,35 @@
+digraph "Call graph: par_amg_solve.ll" {
+	label="Call graph: par_amg_solve.ll";
+
+	Node0x555ab8bf3b50 [shape=record,label="{hypre_BoomerAMGSolve}"];
+	Node0x555ab8bf3b50 -> Node0x555ab8bf5580;
+	Node0x555ab8bf3b50 -> Node0x555ab8bfb010;
+	Node0x555ab8bf3b50 -> Node0x555ab8c00320;
+	Node0x555ab8bf3b50 -> Node0x555ab8c01610;
+	Node0x555ab8bf3b50 -> Node0x555ab8c03590;
+	Node0x555ab8bf3b50 -> Node0x555ab8c11f40;
+	Node0x555ab8bf3b50 -> Node0x555ab8c036d0;
+	Node0x555ab8bf3b50 -> Node0x555ab8c03e30;
+	Node0x555ab8bf3b50 -> Node0x555ab8c07f20;
+	Node0x555ab8bf3b50 -> Node0x555ab8c04d80;
+	Node0x555ab8bf3b50 -> Node0x555ab8c04820;
+	Node0x555ab8bf3b50 -> Node0x555ab8c0fe40;
+	Node0x555ab8bf3b50 -> Node0x555ab8c047b0;
+	Node0x555ab8bf3b50 -> Node0x555ab8c04470;
+	Node0x555ab8bf3b50 -> Node0x555ab8c03eb0;
+	Node0x555ab8bf5580 [shape=record,label="{hypre_MPI_Comm_size}"];
+	Node0x555ab8bfb010 [shape=record,label="{hypre_MPI_Comm_rank}"];
+	Node0x555ab8c00320 [shape=record,label="{hypre_BoomerAMGWriteSolverParams}"];
+	Node0x555ab8c01610 [shape=record,label="{hypre_printf}"];
+	Node0x555ab8c03590 [shape=record,label="{hypre_ParVectorCopy}"];
+	Node0x555ab8c11f40 [shape=record,label="{hypre_ParCSRMatrixMatvec}"];
+	Node0x555ab8c03e30 [shape=record,label="{sqrt}"];
+	Node0x555ab8c036d0 [shape=record,label="{hypre_ParVectorInnerProd}"];
+	Node0x555ab8c0fe40 [shape=record,label="{hypre_error_handler}"];
+	Node0x555ab8c03eb0 [shape=record,label="{hypre_BoomerAMGCycle}"];
+	Node0x555ab8c04470 [shape=record,label="{hypre_BoomerAMGAdditiveCycle}"];
+	Node0x555ab8c047b0 [shape=record,label="{hypre_ParCSRMatrixMatvecOutOfPlace}"];
+	Node0x555ab8c04820 [shape=record,label="{pow}"];
+	Node0x555ab8c04d80 [shape=record,label="{hypre_CAlloc}"];
+	Node0x555ab8c07f20 [shape=record,label="{hypre_Free}"];
+}

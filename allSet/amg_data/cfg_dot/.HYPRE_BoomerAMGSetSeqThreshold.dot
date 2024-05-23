@@ -1,0 +1,5 @@
+digraph "CFG for 'HYPRE_BoomerAMGSetSeqThreshold' function" {
+	label="CFG for 'HYPRE_BoomerAMGSetSeqThreshold' function";
+
+	Node0x55f5a9a4c120 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %solver.addr = alloca ptr, align 8\l  %seq_threshold.addr = alloca i32, align 4\l  store ptr %solver, ptr %solver.addr, align 8\l  store i32 %seq_threshold, ptr %seq_threshold.addr, align 4\l  %0 = load ptr, ptr %solver.addr, align 8\l  %1 = load i32, ptr %seq_threshold.addr, align 4\l  %call = call i32 @hypre_BoomerAMGSetSeqThreshold(ptr noundef %0, i32 noundef\l... %1)\l  ret i32 %call\l}"];
+}

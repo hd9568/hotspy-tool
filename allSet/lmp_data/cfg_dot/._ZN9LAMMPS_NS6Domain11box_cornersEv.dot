@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN9LAMMPS_NS6Domain11box_cornersEv' function" {
+	label="CFG for '_ZN9LAMMPS_NS6Domain11box_cornersEv' function";
+
+	Node0x561837e70820 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %boxlo_lamda = getelementptr inbounds %\"class.LAMMPS_NS::Domain\", ptr\l... %this1, i32 0, i32 22\l  %arraydecay = getelementptr inbounds [3 x double], ptr %boxlo_lamda, i64 0,\l... i64 0\l  %boxhi_lamda = getelementptr inbounds %\"class.LAMMPS_NS::Domain\", ptr\l... %this1, i32 0, i32 23\l  %arraydecay2 = getelementptr inbounds [3 x double], ptr %boxhi_lamda, i64 0,\l... i64 0\l  call void @_ZN9LAMMPS_NS6Domain17lamda_box_cornersEPdS1_(ptr noundef nonnull\l... align 8 dereferenceable(1200) %this1, ptr noundef %arraydecay, ptr noundef\l... %arraydecay2)\l  ret void\l}"];
+}

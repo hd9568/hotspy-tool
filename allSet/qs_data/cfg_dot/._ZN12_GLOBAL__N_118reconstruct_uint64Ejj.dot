@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN12_GLOBAL__N_118reconstruct_uint64Ejj' function" {
+	label="CFG for '_ZN12_GLOBAL__N_118reconstruct_uint64Ejj' function";
+
+	Node0x556a6cdca6e0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %front_bits.addr = alloca i32, align 4\l  %back_bits.addr = alloca i32, align 4\l  %reconstructed = alloca i64, align 8\l  %temp = alloca i64, align 8\l  store i32 %front_bits, ptr %front_bits.addr, align 4\l  store i32 %back_bits, ptr %back_bits.addr, align 4\l  %0 = load i32, ptr %front_bits.addr, align 4\l  %conv = zext i32 %0 to i64\l  store i64 %conv, ptr %reconstructed, align 8\l  %1 = load i32, ptr %back_bits.addr, align 4\l  %conv1 = zext i32 %1 to i64\l  store i64 %conv1, ptr %temp, align 8\l  %2 = load i64, ptr %reconstructed, align 8\l  %shl = shl i64 %2, 32\l  store i64 %shl, ptr %reconstructed, align 8\l  %3 = load i64, ptr %temp, align 8\l  %and = and i64 %3, 4294967295\l  %4 = load i64, ptr %reconstructed, align 8\l  %or = or i64 %4, %and\l  store i64 %or, ptr %reconstructed, align 8\l  %5 = load i64, ptr %reconstructed, align 8\l  ret i64 %5\l}"];
+}

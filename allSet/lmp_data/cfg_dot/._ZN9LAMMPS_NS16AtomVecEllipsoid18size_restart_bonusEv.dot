@@ -1,0 +1,21 @@
+digraph "CFG for '_ZN9LAMMPS_NS16AtomVecEllipsoid18size_restart_bonusEv' function" {
+	label="CFG for '_ZN9LAMMPS_NS16AtomVecEllipsoid18size_restart_bonusEv' function";
+
+	Node0x556728d95150 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %i = alloca i32, align 4\l  %n = alloca i32, align 4\l  %nlocal = alloca i32, align 4\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  store i32 0, ptr %n, align 4\l  %atom = getelementptr inbounds %\"class.LAMMPS_NS::Pointers\", ptr %this1, i32\l... 0, i32 6\l  %0 = load ptr, ptr %atom, align 8\l  %1 = load ptr, ptr %0, align 8\l  %nlocal2 = getelementptr inbounds %\"class.LAMMPS_NS::Atom\", ptr %1, i32 0,\l... i32 4\l  %2 = load i32, ptr %nlocal2, align 8\l  store i32 %2, ptr %nlocal, align 4\l  store i32 0, ptr %i, align 4\l  br label %for.cond\l}"];
+	Node0x556728d95150 -> Node0x556728d959f0[tooltip="entry -> for.cond\nProbability 100.00%" ];
+	Node0x556728d959f0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.cond:\l|  %3 = load i32, ptr %i, align 4\l  %4 = load i32, ptr %nlocal, align 4\l  %cmp = icmp slt i32 %3, %4\l  br i1 %cmp, label %for.body, label %for.end\l|{<s0>T|<s1>F}}"];
+	Node0x556728d959f0:s0 -> Node0x556728d95c90[tooltip="for.cond -> for.body\nProbability 96.88%" ];
+	Node0x556728d959f0:s1 -> Node0x556728d95d10[tooltip="for.cond -> for.end\nProbability 3.12%" ];
+	Node0x556728d95c90 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.body:\l|  %ellipsoid = getelementptr inbounds %\"class.LAMMPS_NS::AtomVecEllipsoid\",\l... ptr %this1, i32 0, i32 3\l  %5 = load ptr, ptr %ellipsoid, align 8\l  %6 = load i32, ptr %i, align 4\l  %idxprom = sext i32 %6 to i64\l  %arrayidx = getelementptr inbounds i32, ptr %5, i64 %idxprom\l  %7 = load i32, ptr %arrayidx, align 4\l  %cmp3 = icmp sge i32 %7, 0\l  br i1 %cmp3, label %if.then, label %if.else\l|{<s0>T|<s1>F}}"];
+	Node0x556728d95c90:s0 -> Node0x556728d96370[tooltip="for.body -> if.then\nProbability 50.00%" ];
+	Node0x556728d95c90:s1 -> Node0x556728d963e0[tooltip="for.body -> if.else\nProbability 50.00%" ];
+	Node0x556728d96370 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.then:\l|  %size_restart_bonus_one = getelementptr inbounds\l... %\"class.LAMMPS_NS::AtomVec\", ptr %this1, i32 0, i32 22\l  %8 = load i32, ptr %size_restart_bonus_one, align 4\l  %9 = load i32, ptr %n, align 4\l  %add = add nsw i32 %9, %8\l  store i32 %add, ptr %n, align 4\l  br label %if.end\l}"];
+	Node0x556728d96370 -> Node0x556728d968d0[tooltip="if.then -> if.end\nProbability 100.00%" ];
+	Node0x556728d963e0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.else:\l|  %10 = load i32, ptr %n, align 4\l  %inc = add nsw i32 %10, 1\l  store i32 %inc, ptr %n, align 4\l  br label %if.end\l}"];
+	Node0x556728d963e0 -> Node0x556728d968d0[tooltip="if.else -> if.end\nProbability 100.00%" ];
+	Node0x556728d968d0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  br label %for.inc\l}"];
+	Node0x556728d968d0 -> Node0x556728d96bf0[tooltip="if.end -> for.inc\nProbability 100.00%" ];
+	Node0x556728d96bf0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.inc:\l|  %11 = load i32, ptr %i, align 4\l  %inc4 = add nsw i32 %11, 1\l  store i32 %inc4, ptr %i, align 4\l  br label %for.cond, !llvm.loop !6\l}"];
+	Node0x556728d96bf0 -> Node0x556728d959f0[tooltip="for.inc -> for.cond\nProbability 100.00%" ];
+	Node0x556728d95d10 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{for.end:\l|  %12 = load i32, ptr %n, align 4\l  ret i32 %12\l}"];
+}

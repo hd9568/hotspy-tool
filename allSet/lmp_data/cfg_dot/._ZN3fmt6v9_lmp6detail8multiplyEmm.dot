@@ -1,0 +1,12 @@
+digraph "CFG for '_ZN3fmt6v9_lmp6detail8multiplyEmm' function" {
+	label="CFG for '_ZN3fmt6v9_lmp6detail8multiplyEmm' function";
+
+	Node0x556bfec218d0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %lhs.addr = alloca i64, align 8\l  %rhs.addr = alloca i64, align 8\l  %product = alloca i128, align 16\l  %f = alloca i64, align 8\l  store i64 %lhs, ptr %lhs.addr, align 8\l  store i64 %rhs, ptr %rhs.addr, align 8\l  %0 = load i64, ptr %lhs.addr, align 8\l  %conv = zext i64 %0 to i128\l  %1 = load i64, ptr %rhs.addr, align 8\l  %conv1 = zext i64 %1 to i128\l  %mul = mul i128 %conv, %conv1\l  store i128 %mul, ptr %product, align 16\l  %2 = load i128, ptr %product, align 16\l  %shr = lshr i128 %2, 64\l  %conv2 = trunc i128 %shr to i64\l  store i64 %conv2, ptr %f, align 8\l  %3 = load i128, ptr %product, align 16\l  %conv3 = trunc i128 %3 to i64\l  %and = and i64 %conv3, -9223372036854775808\l  %cmp = icmp ne i64 %and, 0\l  br i1 %cmp, label %cond.true, label %cond.false\l|{<s0>T|<s1>F}}"];
+	Node0x556bfec218d0:s0 -> Node0x556bfec22650[tooltip="entry -> cond.true\nProbability 50.00%" ];
+	Node0x556bfec218d0:s1 -> Node0x556bfec226d0[tooltip="entry -> cond.false\nProbability 50.00%" ];
+	Node0x556bfec22650 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{cond.true:\l|  %4 = load i64, ptr %f, align 8\l  %add = add i64 %4, 1\l  br label %cond.end\l}"];
+	Node0x556bfec22650 -> Node0x556bfec22930[tooltip="cond.true -> cond.end\nProbability 100.00%" ];
+	Node0x556bfec226d0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{cond.false:\l|  %5 = load i64, ptr %f, align 8\l  br label %cond.end\l}"];
+	Node0x556bfec226d0 -> Node0x556bfec22930[tooltip="cond.false -> cond.end\nProbability 100.00%" ];
+	Node0x556bfec22930 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{cond.end:\l|  %cond = phi i64 [ %add, %cond.true ], [ %5, %cond.false ]\l  ret i64 %cond\l}"];
+}

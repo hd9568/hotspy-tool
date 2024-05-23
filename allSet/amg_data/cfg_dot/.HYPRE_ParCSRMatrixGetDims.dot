@@ -1,0 +1,12 @@
+digraph "CFG for 'HYPRE_ParCSRMatrixGetDims' function" {
+	label="CFG for 'HYPRE_ParCSRMatrixGetDims' function";
+
+	Node0x562ae1c65730 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %retval = alloca i32, align 4\l  %matrix.addr = alloca ptr, align 8\l  %M.addr = alloca ptr, align 8\l  %N.addr = alloca ptr, align 8\l  store ptr %matrix, ptr %matrix.addr, align 8\l  store ptr %M, ptr %M.addr, align 8\l  store ptr %N, ptr %N.addr, align 8\l  %0 = load ptr, ptr %matrix.addr, align 8\l  %tobool = icmp ne ptr %0, null\l  br i1 %tobool, label %if.end, label %if.then\l|{<s0>T|<s1>F}}"];
+	Node0x562ae1c65730:s0 -> Node0x562ae1c65cf0[tooltip="entry -> if.end\nProbability 62.50%" ];
+	Node0x562ae1c65730:s1 -> Node0x562ae1c65d60[tooltip="entry -> if.then\nProbability 37.50%" ];
+	Node0x562ae1c65d60 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{if.then:\l|  call void @hypre_error_handler(ptr noundef @.str, i32 noundef 134, i32\l... noundef 12, ptr noundef null)\l  %1 = load i32, ptr @hypre__global_error, align 4\l  store i32 %1, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x562ae1c65d60 -> Node0x562ae1c66190[tooltip="if.then -> return\nProbability 100.00%" ];
+	Node0x562ae1c65cf0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.end:\l|  %2 = load ptr, ptr %matrix.addr, align 8\l  %global_num_rows = getelementptr inbounds %struct.hypre_ParCSRMatrix_struct,\l... ptr %2, i32 0, i32 1\l  %3 = load i32, ptr %global_num_rows, align 8\l  %4 = load ptr, ptr %M.addr, align 8\l  store i32 %3, ptr %4, align 4\l  %5 = load ptr, ptr %matrix.addr, align 8\l  %global_num_cols = getelementptr inbounds %struct.hypre_ParCSRMatrix_struct,\l... ptr %5, i32 0, i32 2\l  %6 = load i32, ptr %global_num_cols, align 4\l  %7 = load ptr, ptr %N.addr, align 8\l  store i32 %6, ptr %7, align 4\l  %8 = load i32, ptr @hypre__global_error, align 4\l  store i32 %8, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x562ae1c65cf0 -> Node0x562ae1c66190[tooltip="if.end -> return\nProbability 100.00%" ];
+	Node0x562ae1c66190 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{return:\l|  %9 = load i32, ptr %retval, align 4\l  ret i32 %9\l}"];
+}

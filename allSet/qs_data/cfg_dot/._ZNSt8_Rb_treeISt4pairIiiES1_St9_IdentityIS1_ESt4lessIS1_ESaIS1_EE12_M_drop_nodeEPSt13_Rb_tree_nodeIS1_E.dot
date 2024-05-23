@@ -1,0 +1,5 @@
+digraph "CFG for '_ZNSt8_Rb_treeISt4pairIiiES1_St9_IdentityIS1_ESt4lessIS1_ESaIS1_EE12_M_drop_nodeEPSt13_Rb_tree_nodeIS1_E' function" {
+	label="CFG for '_ZNSt8_Rb_treeISt4pairIiiES1_St9_IdentityIS1_ESt4lessIS1_ESaIS1_EE12_M_drop_nodeEPSt13_Rb_tree_nodeIS1_E' function";
+
+	Node0x55579cda40f0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %__p.addr = alloca ptr, align 8\l  store ptr %this, ptr %this.addr, align 8\l  store ptr %__p, ptr %__p.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %0 = load ptr, ptr %__p.addr, align 8\l  call void\l... @_ZNSt8_Rb_treeISt4pairIiiES1_St9_IdentityIS1_ESt4lessIS1_ESaIS1_EE15_M_destro\l...y_nodeEPSt13_Rb_tree_nodeIS1_E(ptr noundef nonnull align 8 dereferenceable(48)\l... %this1, ptr noundef %0) #12\l  %1 = load ptr, ptr %__p.addr, align 8\l  call void\l... @_ZNSt8_Rb_treeISt4pairIiiES1_St9_IdentityIS1_ESt4lessIS1_ESaIS1_EE11_M_put_no\l...deEPSt13_Rb_tree_nodeIS1_E(ptr noundef nonnull align 8 dereferenceable(48)\l... %this1, ptr noundef %1) #12\l  ret void\l}"];
+}

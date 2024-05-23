@@ -1,0 +1,5 @@
+digraph "CFG for 'HYPRE_ClearError' function" {
+	label="CFG for 'HYPRE_ClearError' function";
+
+	Node0x5645847adcc0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %hypre_error_code.addr = alloca i32, align 4\l  store i32 %hypre_error_code, ptr %hypre_error_code.addr, align 4\l  %0 = load i32, ptr %hypre_error_code.addr, align 4\l  %not = xor i32 %0, -1\l  %1 = load i32, ptr @hypre__global_error, align 4\l  %and = and i32 %1, %not\l  store i32 %and, ptr @hypre__global_error, align 4\l  %2 = load i32, ptr @hypre__global_error, align 4\l  %3 = load i32, ptr %hypre_error_code.addr, align 4\l  %and1 = and i32 %2, %3\l  ret i32 %and1\l}"];
+}

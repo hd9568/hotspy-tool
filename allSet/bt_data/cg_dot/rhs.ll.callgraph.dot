@@ -1,0 +1,11 @@
+digraph "Call graph: rhs.ll" {
+	label="Call graph: rhs.ll";
+
+	Node0x5603cb1fdcb0 [shape=record,label="{compute_rhs_}"];
+	Node0x5603cb1fdcb0 -> Node0x5603cb1fdd60;
+	Node0x5603cb1fdcb0 -> Node0x5603cb1fdda0;
+	Node0x5603cb1fdd60 [shape=record,label="{timer_start_}"];
+	Node0x5603cb1fdda0 [shape=record,label="{timer_stop_}"];
+	Node0x5603cb1fde20 [shape=record,label="{llvm.stacksave.p0}"];
+	Node0x5603cb1fdea0 [shape=record,label="{llvm.stackrestore.p0}"];
+}

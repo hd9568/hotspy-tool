@@ -1,0 +1,17 @@
+digraph "CFG for '_ZN9LAMMPS_NS16ComputeChunkAtom5setupEv' function" {
+	label="CFG for '_ZN9LAMMPS_NS16ComputeChunkAtom5setupEv' function";
+
+	Node0x56369a7c54c0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %nchunkflag = getelementptr inbounds %\"class.LAMMPS_NS::ComputeChunkAtom\",\l... ptr %this1, i32 0, i32 16\l  %0 = load i32, ptr %nchunkflag, align 8\l  %cmp = icmp eq i32 %0, 0\l  br i1 %cmp, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x56369a7c54c0:s0 -> Node0x56369a7c5750[tooltip="entry -> if.then\nProbability 37.50%" ];
+	Node0x56369a7c54c0:s1 -> Node0x56369a7c57c0[tooltip="entry -> if.end\nProbability 62.50%" ];
+	Node0x56369a7c5750 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{if.then:\l|  %call = call noundef i32\l... @_ZN9LAMMPS_NS16ComputeChunkAtom12setup_chunksEv(ptr noundef nonnull align 8\l... dereferenceable(1272) %this1)\l  br label %if.end\l}"];
+	Node0x56369a7c5750 -> Node0x56369a7c57c0[tooltip="if.then -> if.end\nProbability 100.00%" ];
+	Node0x56369a7c57c0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  %idsflag = getelementptr inbounds %\"class.LAMMPS_NS::ComputeChunkAtom\",\l... ptr %this1, i32 0, i32 4\l  %1 = load i32, ptr %idsflag, align 8\l  %cmp2 = icmp eq i32 %1, 0\l  br i1 %cmp2, label %if.then3, label %if.else\l|{<s0>T|<s1>F}}"];
+	Node0x56369a7c57c0:s0 -> Node0x56369a7c5d70[tooltip="if.end -> if.then3\nProbability 37.50%" ];
+	Node0x56369a7c57c0:s1 -> Node0x56369a68fa80[tooltip="if.end -> if.else\nProbability 62.50%" ];
+	Node0x56369a7c5d70 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{if.then3:\l|  call void @_ZN9LAMMPS_NS16ComputeChunkAtom14compute_ichunkEv(ptr noundef\l... nonnull align 8 dereferenceable(1272) %this1)\l  br label %if.end4\l}"];
+	Node0x56369a7c5d70 -> Node0x56369a7c7a90[tooltip="if.then3 -> if.end4\nProbability 100.00%" ];
+	Node0x56369a68fa80 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.else:\l|  %invoked_ichunk = getelementptr inbounds\l... %\"class.LAMMPS_NS::ComputeChunkAtom\", ptr %this1, i32 0, i32 72\l  store i64 -1, ptr %invoked_ichunk, align 8\l  br label %if.end4\l}"];
+	Node0x56369a68fa80 -> Node0x56369a7c7a90[tooltip="if.else -> if.end4\nProbability 100.00%" ];
+	Node0x56369a7c7a90 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end4:\l|  ret void\l}"];
+}

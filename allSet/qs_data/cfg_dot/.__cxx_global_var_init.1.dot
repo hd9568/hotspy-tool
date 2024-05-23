@@ -1,0 +1,5 @@
+digraph "CFG for '__cxx_global_var_init.1' function" {
+	label="CFG for '__cxx_global_var_init.1' function";
+
+	Node0x55ce00292e80 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  call void @_ZN21MPI_Stubs_Data_structC2Ev(ptr noundef nonnull align 8\l... dereferenceable(20512) @_ZL14mpi_stubs_data)\l  %0 = call i32 @__cxa_atexit(ptr @_ZN21MPI_Stubs_Data_structD2Ev, ptr\l... @_ZL14mpi_stubs_data, ptr @__dso_handle) #3\l  ret void\l}"];
+}

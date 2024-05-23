@@ -1,0 +1,12 @@
+digraph "CFG for '_ZNSt11char_traitsIcE6lengthEPKc' function" {
+	label="CFG for '_ZNSt11char_traitsIcE6lengthEPKc' function";
+
+	Node0x557ad5cda850 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %__s.addr.i = alloca ptr, align 8\l  %retval = alloca i64, align 8\l  %__s.addr = alloca ptr, align 8\l  store ptr %__s, ptr %__s.addr, align 8\l  %0 = load ptr, ptr %__s.addr, align 8\l  store ptr %0, ptr %__s.addr.i, align 8\l  br i1 false, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x557ad5cda850:s0 -> Node0x557ad5cdab90[tooltip="entry -> if.then\nProbability 50.00%" ];
+	Node0x557ad5cda850:s1 -> Node0x557ad5cdac00[tooltip="entry -> if.end\nProbability 50.00%" ];
+	Node0x557ad5cdab90 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.then:\l|  %1 = load ptr, ptr %__s.addr, align 8\l  %call1 = call noundef i64 @_ZN9__gnu_cxx11char_traitsIcE6lengthEPKc(ptr\l... noundef %1)\l  store i64 %call1, ptr %retval, align 8\l  br label %return\l}"];
+	Node0x557ad5cdab90 -> Node0x557ad5cdb010[tooltip="if.then -> return\nProbability 100.00%" ];
+	Node0x557ad5cdac00 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.end:\l|  %2 = load ptr, ptr %__s.addr, align 8\l  %call2 = call i64 @strlen(ptr noundef %2) #13\l  store i64 %call2, ptr %retval, align 8\l  br label %return\l}"];
+	Node0x557ad5cdac00 -> Node0x557ad5cdb010[tooltip="if.end -> return\nProbability 100.00%" ];
+	Node0x557ad5cdb010 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{return:\l|  %3 = load i64, ptr %retval, align 8\l  ret i64 %3\l}"];
+}

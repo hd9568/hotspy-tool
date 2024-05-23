@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN3fmt6v9_lmp6detail10locale_refC2ISt6localeEERKT_' function" {
+	label="CFG for '_ZN3fmt6v9_lmp6detail10locale_refC2ISt6localeEERKT_' function";
+
+	Node0x55fec3027990 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %loc.addr = alloca ptr, align 8\l  store ptr %this, ptr %this.addr, align 8\l  store ptr %loc, ptr %loc.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %locale_ = getelementptr inbounds %\"class.fmt::v9_lmp::detail::locale_ref\",\l... ptr %this1, i32 0, i32 0\l  %0 = load ptr, ptr %loc.addr, align 8\l  store ptr %0, ptr %locale_, align 8\l  ret void\l}"];
+}

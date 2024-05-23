@@ -1,0 +1,5 @@
+digraph "CFG for '_ZNSt8_Rb_treeI5TupleS0_St9_IdentityIS0_ESt4lessIS0_ESaIS0_EE8_M_beginEv' function" {
+	label="CFG for '_ZNSt8_Rb_treeI5TupleS0_St9_IdentityIS0_ESt4lessIS0_ESaIS0_EE8_M_beginEv' function";
+
+	Node0x55dab47d5a40 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %_M_impl = getelementptr inbounds %\"class.std::_Rb_tree.73\", ptr %this1, i32\l... 0, i32 0\l  %add.ptr = getelementptr inbounds i8, ptr %_M_impl, i64 8\l  %_M_header = getelementptr inbounds %\"struct.std::_Rb_tree_header\", ptr\l... %add.ptr, i32 0, i32 0\l  %_M_parent = getelementptr inbounds %\"struct.std::_Rb_tree_node_base\", ptr\l... %_M_header, i32 0, i32 1\l  %0 = load ptr, ptr %_M_parent, align 8\l  ret ptr %0\l}"];
+}

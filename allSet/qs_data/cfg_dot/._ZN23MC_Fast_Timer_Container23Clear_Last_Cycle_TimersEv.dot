@@ -1,0 +1,14 @@
+digraph "CFG for '_ZN23MC_Fast_Timer_Container23Clear_Last_Cycle_TimersEv' function" {
+	label="CFG for '_ZN23MC_Fast_Timer_Container23Clear_Last_Cycle_TimersEv' function";
+
+	Node0x55feb2d4f490 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %timer_index = alloca i32, align 4\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  store i32 0, ptr %timer_index, align 4\l  br label %for.cond\l}"];
+	Node0x55feb2d4f490 -> Node0x55feb2d4f780[tooltip="entry -> for.cond\nProbability 100.00%" ];
+	Node0x55feb2d4f780 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.cond:\l|  %0 = load i32, ptr %timer_index, align 4\l  %cmp = icmp slt i32 %0, 7\l  br i1 %cmp, label %for.body, label %for.end\l|{<s0>T|<s1>F}}"];
+	Node0x55feb2d4f780:s0 -> Node0x55feb2d67730[tooltip="for.cond -> for.body\nProbability 96.88%" ];
+	Node0x55feb2d4f780:s1 -> Node0x55feb2d677b0[tooltip="for.cond -> for.end\nProbability 3.12%" ];
+	Node0x55feb2d67730 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.body:\l|  %timers = getelementptr inbounds %class.MC_Fast_Timer_Container, ptr\l... %this1, i32 0, i32 0\l  %1 = load i32, ptr %timer_index, align 4\l  %idxprom = sext i32 %1 to i64\l  %arrayidx = getelementptr inbounds [7 x %class.MC_Fast_Timer], ptr %timers,\l... i64 0, i64 %idxprom\l  %lastCycleClock = getelementptr inbounds %class.MC_Fast_Timer, ptr\l... %arrayidx, i32 0, i32 3\l  store i64 0, ptr %lastCycleClock, align 8\l  br label %for.inc\l}"];
+	Node0x55feb2d67730 -> Node0x55feb2d67e40[tooltip="for.body -> for.inc\nProbability 100.00%" ];
+	Node0x55feb2d67e40 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.inc:\l|  %2 = load i32, ptr %timer_index, align 4\l  %inc = add nsw i32 %2, 1\l  store i32 %inc, ptr %timer_index, align 4\l  br label %for.cond, !llvm.loop !6\l}"];
+	Node0x55feb2d67e40 -> Node0x55feb2d4f780[tooltip="for.inc -> for.cond\nProbability 100.00%" ];
+	Node0x55feb2d677b0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{for.end:\l|  ret void\l}"];
+}

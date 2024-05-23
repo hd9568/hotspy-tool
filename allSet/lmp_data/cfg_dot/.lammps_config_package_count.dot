@@ -1,0 +1,12 @@
+digraph "CFG for 'lammps_config_package_count' function" {
+	label="CFG for 'lammps_config_package_count' function";
+
+	Node0x55bdf81003f0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{entry:\l|  %i = alloca i32, align 4\l  store i32 0, ptr %i, align 4\l  br label %while.cond\l}"];
+	Node0x55bdf81003f0 -> Node0x55bdf81005e0[tooltip="entry -> while.cond\nProbability 100.00%" ];
+	Node0x55bdf81005e0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{while.cond:\l|  %0 = load i32, ptr %i, align 4\l  %idxprom = sext i32 %0 to i64\l  %arrayidx = getelementptr inbounds [0 x ptr], ptr\l... @_ZN9LAMMPS_NS6LAMMPS18installed_packagesE, i64 0, i64 %idxprom\l  %1 = load ptr, ptr %arrayidx, align 8\l  %cmp = icmp ne ptr %1, null\l  br i1 %cmp, label %while.body, label %while.end\l|{<s0>T|<s1>F}}"];
+	Node0x55bdf81005e0:s0 -> Node0x55bdf8100a50[tooltip="while.cond -> while.body\nProbability 96.88%" ];
+	Node0x55bdf81005e0:s1 -> Node0x55bdf8100ad0[tooltip="while.cond -> while.end\nProbability 3.12%" ];
+	Node0x55bdf8100a50 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{while.body:\l|  %2 = load i32, ptr %i, align 4\l  %inc = add nsw i32 %2, 1\l  store i32 %inc, ptr %i, align 4\l  br label %while.cond, !llvm.loop !6\l}"];
+	Node0x55bdf8100a50 -> Node0x55bdf81005e0[tooltip="while.body -> while.cond\nProbability 100.00%" ];
+	Node0x55bdf8100ad0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{while.end:\l|  %3 = load i32, ptr %i, align 4\l  ret i32 %3\l}"];
+}

@@ -1,0 +1,19 @@
+digraph "Call graph: make_set.ll" {
+	label="Call graph: make_set.ll";
+
+	Node0x55c9fd74bbb0 [shape=record,label="{make_set_}"];
+	Node0x55c9fd74bbb0 -> Node0x55c9fd74c110;
+	Node0x55c9fd74bbb0 -> Node0x55c9fd725810;
+	Node0x55c9fd74bbb0 -> Node0x55c9fd725890;
+	Node0x55c9fd74bbb0 -> Node0x55c9fd75d3f0;
+	Node0x55c9fd74bbb0 -> Node0x55c9fd75d470;
+	Node0x55c9fd74bbb0 -> Node0x55c9fd75d4f0;
+	Node0x55c9fd761ed0 [shape=record,label="{llvm.stacksave.p0}"];
+	Node0x55c9fd761f50 [shape=record,label="{llvm.stackrestore.p0}"];
+	Node0x55c9fd74c110 [shape=record,label="{llvm.sqrt.f64}"];
+	Node0x55c9fd725810 [shape=record,label="{llvm.trunc.f64}"];
+	Node0x55c9fd725890 [shape=record,label="{_FortranAioBeginExternalFormattedOutput}"];
+	Node0x55c9fd75d3f0 [shape=record,label="{_FortranAioEndIoStatement}"];
+	Node0x55c9fd75d470 [shape=record,label="{mpi_abort_}"];
+	Node0x55c9fd75d4f0 [shape=record,label="{_FortranAStopStatement}"];
+}

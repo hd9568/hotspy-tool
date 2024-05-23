@@ -1,0 +1,5 @@
+digraph "CFG for '_ZStoRRSt13_Ios_FmtflagsS_' function" {
+	label="CFG for '_ZStoRRSt13_Ios_FmtflagsS_' function";
+
+	Node0x55ca701cd5c0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %__a.addr = alloca ptr, align 8\l  %__b.addr = alloca i32, align 4\l  store ptr %__a, ptr %__a.addr, align 8\l  store i32 %__b, ptr %__b.addr, align 4\l  %0 = load ptr, ptr %__a.addr, align 8\l  %1 = load i32, ptr %0, align 4\l  %2 = load i32, ptr %__b.addr, align 4\l  %call = call noundef i32 @_ZStorSt13_Ios_FmtflagsS_(i32 noundef %1, i32\l... noundef %2)\l  %3 = load ptr, ptr %__a.addr, align 8\l  store i32 %call, ptr %3, align 4\l  ret ptr %3\l}"];
+}

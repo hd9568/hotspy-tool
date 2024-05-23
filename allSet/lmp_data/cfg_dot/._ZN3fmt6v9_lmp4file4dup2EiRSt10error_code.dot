@@ -1,0 +1,22 @@
+digraph "CFG for '_ZN3fmt6v9_lmp4file4dup2EiRSt10error_code' function" {
+	label="CFG for '_ZN3fmt6v9_lmp4file4dup2EiRSt10error_code' function";
+
+	Node0x55957a4b1ea0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %fd.addr = alloca i32, align 4\l  %ec.addr = alloca ptr, align 8\l  %result = alloca i32, align 4\l  %ref.tmp = alloca %\"struct.std::error_code\", align 8\l  store ptr %this, ptr %this.addr, align 8\l  store i32 %fd, ptr %fd.addr, align 4\l  store ptr %ec, ptr %ec.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  store i32 0, ptr %result, align 4\l  br label %do.body\l}"];
+	Node0x55957a4b1ea0 -> Node0x55957a4b2570[tooltip="entry -> do.body\nProbability 100.00%" ];
+	Node0x55957a4b2570 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{do.body:\l|  %fd_ = getelementptr inbounds %\"class.fmt::v9_lmp::file\", ptr %this1, i32\l... 0, i32 0\l  %0 = load i32, ptr %fd_, align 4\l  %1 = load i32, ptr %fd.addr, align 4\l  %call = call i32 @dup2(i32 noundef %0, i32 noundef %1) #8\l  store i32 %call, ptr %result, align 4\l  br label %do.cond\l}"];
+	Node0x55957a4b2570 -> Node0x55957a4b2be0[tooltip="do.body -> do.cond\nProbability 100.00%" ];
+	Node0x55957a4b2be0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{do.cond:\l|  %2 = load i32, ptr %result, align 4\l  %cmp = icmp eq i32 %2, -1\l  br i1 %cmp, label %land.rhs, label %land.end\l|{<s0>T|<s1>F}}"];
+	Node0x55957a4b2be0:s0 -> Node0x55957a4b2d40[tooltip="do.cond -> land.rhs\nProbability 37.50%" ];
+	Node0x55957a4b2be0:s1 -> Node0x55957a4b2dc0[tooltip="do.cond -> land.end\nProbability 62.50%" ];
+	Node0x55957a4b2d40 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{land.rhs:\l|  %call2 = call ptr @__errno_location() #9\l  %3 = load i32, ptr %call2, align 4\l  %cmp3 = icmp eq i32 %3, 4\l  br label %land.end\l}"];
+	Node0x55957a4b2d40 -> Node0x55957a4b2dc0[tooltip="land.rhs -> land.end\nProbability 100.00%" ];
+	Node0x55957a4b2dc0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{land.end:\l|  %4 = phi i1 [ false, %do.cond ], [ %cmp3, %land.rhs ]\l  br i1 %4, label %do.body, label %do.end, !llvm.loop !6\l|{<s0>T|<s1>F}}"];
+	Node0x55957a4b2dc0:s0 -> Node0x55957a4b2570[tooltip="land.end -> do.body\nProbability 96.88%" ];
+	Node0x55957a4b2dc0:s1 -> Node0x55957a4b31b0[tooltip="land.end -> do.end\nProbability 3.12%" ];
+	Node0x55957a4b31b0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{do.end:\l|  %5 = load i32, ptr %result, align 4\l  %cmp4 = icmp eq i32 %5, -1\l  br i1 %cmp4, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x55957a4b31b0:s0 -> Node0x55957a4b34f0[tooltip="do.end -> if.then\nProbability 37.50%" ];
+	Node0x55957a4b31b0:s1 -> Node0x55957a4b3560[tooltip="do.end -> if.end\nProbability 62.50%" ];
+	Node0x55957a4b34f0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#de614d70" fontname="Courier",label="{if.then:\l|  %call5 = call ptr @__errno_location() #9\l  %6 = load i32, ptr %call5, align 4\l  %call6 = call noundef nonnull align 8 dereferenceable(8) ptr\l... @_ZNSt3_V216generic_categoryEv() #9\l  call void @_ZNSt10error_codeC2EiRKNSt3_V214error_categoryE(ptr noundef\l... nonnull align 8 dereferenceable(16) %ref.tmp, i32 noundef %6, ptr noundef\l... nonnull align 8 dereferenceable(8) %call6) #8\l  %7 = load ptr, ptr %ec.addr, align 8\l  call void @llvm.memcpy.p0.p0.i64(ptr align 8 %7, ptr align 8 %ref.tmp, i64\l... 16, i1 false)\l  br label %if.end\l}"];
+	Node0x55957a4b34f0 -> Node0x55957a4b3560[tooltip="if.then -> if.end\nProbability 100.00%" ];
+	Node0x55957a4b3560 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{if.end:\l|  ret void\l}"];
+}

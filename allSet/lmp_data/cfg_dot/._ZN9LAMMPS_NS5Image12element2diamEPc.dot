@@ -1,0 +1,21 @@
+digraph "CFG for '_ZN9LAMMPS_NS5Image12element2diamEPc' function" {
+	label="CFG for '_ZN9LAMMPS_NS5Image12element2diamEPc' function";
+
+	Node0x55d95326e5d0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d0473d70" fontname="Courier",label="{entry:\l|  %retval = alloca double, align 8\l  %this.addr = alloca ptr, align 8\l  %element.addr = alloca ptr, align 8\l  %i = alloca i32, align 4\l  store ptr %this, ptr %this.addr, align 8\l  store ptr %element, ptr %element.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  store i32 0, ptr %i, align 4\l  br label %for.cond\l}"];
+	Node0x55d95326e5d0 -> Node0x55d95326eaf0[tooltip="entry -> for.cond\nProbability 100.00%" ];
+	Node0x55d95326eaf0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.cond:\l|  %0 = load i32, ptr %i, align 4\l  %cmp = icmp slt i32 %0, 109\l  br i1 %cmp, label %for.body, label %for.end\l|{<s0>T|<s1>F}}"];
+	Node0x55d95326eaf0:s0 -> Node0x55d95326ed10[tooltip="for.cond -> for.body\nProbability 96.88%" ];
+	Node0x55d95326eaf0:s1 -> Node0x55d95326ed90[tooltip="for.cond -> for.end\nProbability 3.12%" ];
+	Node0x55d95326ed10 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.body:\l|  %1 = load ptr, ptr %element.addr, align 8\l  %2 = load i32, ptr %i, align 4\l  %idxprom = sext i32 %2 to i64\l  %arrayidx = getelementptr inbounds [109 x ptr], ptr\l... @_ZZN9LAMMPS_NS5Image12element2diamEPcE4name, i64 0, i64 %idxprom\l  %3 = load ptr, ptr %arrayidx, align 8\l  %call = call i32 @strcmp(ptr noundef %1, ptr noundef %3) #10\l  %cmp2 = icmp eq i32 %call, 0\l  br i1 %cmp2, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x55d95326ed10:s0 -> Node0x55d95326f5d0[tooltip="for.body -> if.then\nProbability 3.12%" ];
+	Node0x55d95326ed10:s1 -> Node0x55d95326f640[tooltip="for.body -> if.end\nProbability 96.88%" ];
+	Node0x55d95326f5d0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{if.then:\l|  %4 = load i32, ptr %i, align 4\l  %idxprom3 = sext i32 %4 to i64\l  %arrayidx4 = getelementptr inbounds [109 x double], ptr\l... @_ZZN9LAMMPS_NS5Image12element2diamEPcE8diameter, i64 0, i64 %idxprom3\l  %5 = load double, ptr %arrayidx4, align 8\l  store double %5, ptr %retval, align 8\l  br label %return\l}"];
+	Node0x55d95326f5d0 -> Node0x55d95326fa90[tooltip="if.then -> return\nProbability 100.00%" ];
+	Node0x55d95326f640 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  br label %for.inc\l}"];
+	Node0x55d95326f640 -> Node0x55d95326fb70[tooltip="if.end -> for.inc\nProbability 100.00%" ];
+	Node0x55d95326fb70 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.inc:\l|  %6 = load i32, ptr %i, align 4\l  %inc = add nsw i32 %6, 1\l  store i32 %inc, ptr %i, align 4\l  br label %for.cond, !llvm.loop !6\l}"];
+	Node0x55d95326fb70 -> Node0x55d95326eaf0[tooltip="for.inc -> for.cond\nProbability 100.00%" ];
+	Node0x55d95326ed90 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{for.end:\l|  store double 0.000000e+00, ptr %retval, align 8\l  br label %return\l}"];
+	Node0x55d95326ed90 -> Node0x55d95326fa90[tooltip="for.end -> return\nProbability 100.00%" ];
+	Node0x55d95326fa90 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d0473d70" fontname="Courier",label="{return:\l|  %7 = load double, ptr %retval, align 8\l  ret double %7\l}"];
+}

@@ -1,0 +1,13 @@
+digraph "CFG for '_ZN3fmt6v9_lmp6detail6bigintaSIiEEvT_' function" {
+	label="CFG for '_ZN3fmt6v9_lmp6detail6bigintaSIiEEvT_' function";
+
+	Node0x556bfec3b350 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %n.addr = alloca i32, align 4\l  store ptr %this, ptr %this.addr, align 8\l  store i32 %n, ptr %n.addr, align 4\l  %this1 = load ptr, ptr %this.addr, align 8\l  %0 = load i32, ptr %n.addr, align 4\l  %cmp = icmp sgt i32 %0, 0\l  br i1 %cmp, label %cond.true, label %cond.false\l|{<s0>T|<s1>F}}"];
+	Node0x556bfec3b350:s0 -> Node0x556bfec3b730[tooltip="entry -> cond.true\nProbability 100.00%" ];
+	Node0x556bfec3b350:s1 -> Node0x556bfec3b780[tooltip="entry -> cond.false\nProbability 0.00%" ];
+	Node0x556bfec3b730 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{cond.true:\l|  br label %cond.end\l}"];
+	Node0x556bfec3b730 -> Node0x556bfec3b8b0[tooltip="cond.true -> cond.end\nProbability 100.00%" ];
+	Node0x556bfec3b780 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f4c5ad70" fontname="Courier",label="{cond.false:\l|  call void @_ZN3fmt6v9_lmp6detail11assert_failEPKciS3_(ptr noundef\l... @.str.339, i32 noundef 2814, ptr noundef @.str.75) #21\l  unreachable\l}"];
+	Node0x556bfec3bb50 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#3d50c370" fontname="Courier",label="{1:\l|  br label %cond.end\l}"];
+	Node0x556bfec3bb50 -> Node0x556bfec3b8b0[tooltip="1 -> cond.end\nProbability 100.00%" ];
+	Node0x556bfec3b8b0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{cond.end:\l|  %2 = load i32, ptr %n.addr, align 4\l  %conv = sext i32 %2 to i64\l  call void\l... @_ZN3fmt6v9_lmp6detail6bigint6assignImTnNSt9enable_ifIXoosr3std7is_sameIT_mEE5\l...valuesr3std7is_sameIS5_oEE5valueEiE4typeELi0EEEvS5_(ptr noundef nonnull align\l... 8 dereferenceable(172) %this1, i64 noundef %conv)\l  ret void\l}"];
+}

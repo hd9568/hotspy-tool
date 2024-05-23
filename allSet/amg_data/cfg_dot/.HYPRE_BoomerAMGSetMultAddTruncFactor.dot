@@ -1,0 +1,5 @@
+digraph "CFG for 'HYPRE_BoomerAMGSetMultAddTruncFactor' function" {
+	label="CFG for 'HYPRE_BoomerAMGSetMultAddTruncFactor' function";
+
+	Node0x55f5a9a65ce0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %solver.addr = alloca ptr, align 8\l  %add_trunc_factor.addr = alloca double, align 8\l  store ptr %solver, ptr %solver.addr, align 8\l  store double %add_trunc_factor, ptr %add_trunc_factor.addr, align 8\l  %0 = load ptr, ptr %solver.addr, align 8\l  %1 = load double, ptr %add_trunc_factor.addr, align 8\l  %call = call i32 @hypre_BoomerAMGSetMultAddTruncFactor(ptr noundef %0,\l... double noundef %1)\l  ret i32 %call\l}"];
+}

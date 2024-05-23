@@ -1,0 +1,29 @@
+digraph "CFG for 'do_manual_omp_version' function" {
+	label="CFG for 'do_manual_omp_version' function";
+
+	Node0x5567ef5bc500 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{entry:\l|  %num_iterations.addr = alloca i64, align 8\l  %iteration = alloca i64, align 8\l  %startPidx = alloca i32, align 4\l  %endPidx = alloca i32, align 4\l  %dparts_per_thread = alloca double, align 8\l  %thread_id = alloca i32, align 4\l  %numThreads = alloca i32, align 4\l  store i64 %num_iterations, ptr %num_iterations.addr, align 8\l  %call = call i32 @omp_get_thread_num()\l  store i32 %call, ptr %thread_id, align 4\l  %call1 = call i32 @omp_get_num_threads()\l  store i32 %call1, ptr %numThreads, align 4\l  %0 = load i64, ptr @CLOMP_numParts, align 8\l  %conv = sitofp i64 %0 to double\l  %1 = load i32, ptr %numThreads, align 4\l  %conv2 = sitofp i32 %1 to double\l  %div = fdiv double %conv, %conv2\l  store double %div, ptr %dparts_per_thread, align 8\l  %2 = load double, ptr %dparts_per_thread, align 8\l  %cmp = fcmp olt double %2, 1.000000e+00\l  br i1 %cmp, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x5567ef5bc500:s0 -> Node0x5567ef5bd540[tooltip="entry -> if.then\nProbability 50.00%" ];
+	Node0x5567ef5bc500:s1 -> Node0x5567ef5bd610[tooltip="entry -> if.end\nProbability 50.00%" ];
+	Node0x5567ef5bd540 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#dc5d4a70" fontname="Courier",label="{if.then:\l|  store double 1.000000e+00, ptr %dparts_per_thread, align 8\l  br label %if.end\l}"];
+	Node0x5567ef5bd540 -> Node0x5567ef5bd610[tooltip="if.then -> if.end\nProbability 100.00%" ];
+	Node0x5567ef5bd610 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{if.end:\l|  %3 = load i32, ptr %thread_id, align 4\l  %conv4 = sitofp i32 %3 to double\l  %4 = load double, ptr %dparts_per_thread, align 8\l  %mul = fmul double %conv4, %4\l  %5 = call double @llvm.nearbyint.f64(double %mul)\l  %conv5 = fptosi double %5 to i32\l  store i32 %conv5, ptr %startPidx, align 4\l  %6 = load i32, ptr %thread_id, align 4\l  %conv6 = sitofp i32 %6 to double\l  %add = fadd double %conv6, 1.000000e+00\l  %7 = load double, ptr %dparts_per_thread, align 8\l  %mul7 = fmul double %add, %7\l  %8 = call double @llvm.nearbyint.f64(double %mul7)\l  %conv8 = fptosi double %8 to i32\l  %sub = sub nsw i32 %conv8, 1\l  store i32 %sub, ptr %endPidx, align 4\l  %9 = load i32, ptr %endPidx, align 4\l  %conv9 = sext i32 %9 to i64\l  %10 = load i64, ptr @CLOMP_numParts, align 8\l  %cmp10 = icmp sge i64 %conv9, %10\l  br i1 %cmp10, label %if.then12, label %if.end15\l|{<s0>T|<s1>F}}"];
+	Node0x5567ef5bd610:s0 -> Node0x5567ef5be730[tooltip="if.end -> if.then12\nProbability 50.00%" ];
+	Node0x5567ef5bd610:s1 -> Node0x5567ef5be780[tooltip="if.end -> if.end15\nProbability 50.00%" ];
+	Node0x5567ef5be730 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#dc5d4a70" fontname="Courier",label="{if.then12:\l|  %11 = load i64, ptr @CLOMP_numParts, align 8\l  %sub13 = sub nsw i64 %11, 1\l  %conv14 = trunc i64 %sub13 to i32\l  store i32 %conv14, ptr %endPidx, align 4\l  br label %if.end15\l}"];
+	Node0x5567ef5be730 -> Node0x5567ef5be780[tooltip="if.then12 -> if.end15\nProbability 100.00%" ];
+	Node0x5567ef5be780 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{if.end15:\l|  %12 = load i32, ptr %startPidx, align 4\l  %conv16 = sext i32 %12 to i64\l  %13 = load i64, ptr @CLOMP_numParts, align 8\l  %cmp17 = icmp sge i64 %conv16, %13\l  br i1 %cmp17, label %if.then19, label %if.end21\l|{<s0>T|<s1>F}}"];
+	Node0x5567ef5be780:s0 -> Node0x5567ef5bedf0[tooltip="if.end15 -> if.then19\nProbability 50.00%" ];
+	Node0x5567ef5be780:s1 -> Node0x5567ef5bee40[tooltip="if.end15 -> if.end21\nProbability 50.00%" ];
+	Node0x5567ef5bedf0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#dc5d4a70" fontname="Courier",label="{if.then19:\l|  %14 = load i32, ptr %thread_id, align 4\l  %call20 = call i32 (ptr, ...) @printf(ptr noundef @.str.59, i32 noundef %14)\l  br label %if.end21\l}"];
+	Node0x5567ef5bedf0 -> Node0x5567ef5bee40[tooltip="if.then19 -> if.end21\nProbability 100.00%" ];
+	Node0x5567ef5bee40 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{if.end21:\l|  store i64 0, ptr %iteration, align 8\l  br label %for.cond\l}"];
+	Node0x5567ef5bee40 -> Node0x5567ef5bf200[tooltip="if.end21 -> for.cond\nProbability 100.00%" ];
+	Node0x5567ef5bf200 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.cond:\l|  %15 = load i64, ptr %iteration, align 8\l  %16 = load i64, ptr %num_iterations.addr, align 8\l  %cmp22 = icmp slt i64 %15, %16\l  br i1 %cmp22, label %for.body, label %for.end\l|{<s0>T|<s1>F}}"];
+	Node0x5567ef5bf200:s0 -> Node0x5567ef5bf500[tooltip="for.cond -> for.body\nProbability 96.88%" ];
+	Node0x5567ef5bf200:s1 -> Node0x5567ef5bf550[tooltip="for.cond -> for.end\nProbability 3.12%" ];
+	Node0x5567ef5bf500 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.body:\l|  %17 = load i32, ptr %startPidx, align 4\l  %18 = load i32, ptr %endPidx, align 4\l  call void @manual_omp_cycle(i32 noundef %17, i32 noundef %18)\l  br label %for.inc\l}"];
+	Node0x5567ef5bf500 -> Node0x5567ef5bf8f0[tooltip="for.body -> for.inc\nProbability 100.00%" ];
+	Node0x5567ef5bf8f0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.inc:\l|  %19 = load i64, ptr %iteration, align 8\l  %inc = add nsw i64 %19, 1\l  store i64 %inc, ptr %iteration, align 8\l  br label %for.cond, !llvm.loop !6\l}"];
+	Node0x5567ef5bf8f0 -> Node0x5567ef5bf200[tooltip="for.inc -> for.cond\nProbability 100.00%" ];
+	Node0x5567ef5bf550 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{for.end:\l|  ret void\l}"];
+}

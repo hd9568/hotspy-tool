@@ -1,0 +1,11 @@
+digraph "Call graph: erhs.ll" {
+	label="Call graph: erhs.ll";
+
+	Node0x562546b123f0 [shape=record,label="{erhs_}"];
+	Node0x562546b123f0 -> Node0x562546b124a0;
+	Node0x562546b123f0 -> Node0x562546b12550;
+	Node0x562546b124a0 [shape=record,label="{exchange_3_}"];
+	Node0x562546b125d0 [shape=record,label="{llvm.stacksave.p0}"];
+	Node0x562546b0cd80 [shape=record,label="{llvm.stackrestore.p0}"];
+	Node0x562546b12550 [shape=record,label="{llvm.powi.f64.i32}"];
+}

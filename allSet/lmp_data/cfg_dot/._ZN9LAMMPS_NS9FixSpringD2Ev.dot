@@ -1,0 +1,10 @@
+digraph "CFG for '_ZN9LAMMPS_NS9FixSpringD2Ev' function" {
+	label="CFG for '_ZN9LAMMPS_NS9FixSpringD2Ev' function";
+
+	Node0x5557f2989c50 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  store ptr getelementptr inbounds (\{ [106 x ptr] \}, ptr\l... @_ZTVN9LAMMPS_NS9FixSpringE, i32 0, inrange i32 0, i32 2), ptr %this1, align 8\l  %group2 = getelementptr inbounds %\"class.LAMMPS_NS::FixSpring\", ptr %this1,\l... i32 0, i32 10\l  %0 = load ptr, ptr %group2, align 8\l  %isnull = icmp eq ptr %0, null\l  br i1 %isnull, label %delete.end, label %delete.notnull\l|{<s0>T|<s1>F}}"];
+	Node0x5557f2989c50:s0 -> Node0x5557f2989fd0[tooltip="entry -> delete.end\nProbability 37.50%" ];
+	Node0x5557f2989c50:s1 -> Node0x5557f298a020[tooltip="entry -> delete.notnull\nProbability 62.50%" ];
+	Node0x5557f298a020 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{delete.notnull:\l|  call void @_ZdaPv(ptr noundef %0) #10\l  br label %delete.end\l}"];
+	Node0x5557f298a020 -> Node0x5557f2989fd0[tooltip="delete.notnull -> delete.end\nProbability 100.00%" ];
+	Node0x5557f2989fd0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{delete.end:\l|  call void @_ZN9LAMMPS_NS3FixD2Ev(ptr noundef nonnull align 8\l... dereferenceable(656) %this1) #11\l  ret void\l}"];
+}

@@ -1,0 +1,5 @@
+digraph "CFG for 'HYPRE_BoomerAMGGetRedundant' function" {
+	label="CFG for 'HYPRE_BoomerAMGGetRedundant' function";
+
+	Node0x55f5a9a4e0a0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %solver.addr = alloca ptr, align 8\l  %redundant.addr = alloca ptr, align 8\l  store ptr %solver, ptr %solver.addr, align 8\l  store ptr %redundant, ptr %redundant.addr, align 8\l  %0 = load ptr, ptr %solver.addr, align 8\l  %1 = load ptr, ptr %redundant.addr, align 8\l  %call = call i32 @hypre_BoomerAMGGetRedundant(ptr noundef %0, ptr noundef %1)\l  ret i32 %call\l}"];
+}

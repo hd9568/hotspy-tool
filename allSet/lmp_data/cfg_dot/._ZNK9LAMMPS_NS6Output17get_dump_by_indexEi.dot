@@ -1,0 +1,15 @@
+digraph "CFG for '_ZNK9LAMMPS_NS6Output17get_dump_by_indexEi' function" {
+	label="CFG for '_ZNK9LAMMPS_NS6Output17get_dump_by_indexEi' function";
+
+	Node0x55bdf813c890 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %idx.addr = alloca i32, align 4\l  store ptr %this, ptr %this.addr, align 8\l  store i32 %idx, ptr %idx.addr, align 4\l  %this1 = load ptr, ptr %this.addr, align 8\l  %0 = load i32, ptr %idx.addr, align 4\l  %cmp = icmp sge i32 %0, 0\l  br i1 %cmp, label %land.lhs.true, label %cond.false\l|{<s0>T|<s1>F}}"];
+	Node0x55bdf813c890:s0 -> Node0x55bdf813ccb0[tooltip="entry -> land.lhs.true\nProbability 50.00%" ];
+	Node0x55bdf813c890:s1 -> Node0x55bdf813cd30[tooltip="entry -> cond.false\nProbability 50.00%" ];
+	Node0x55bdf813ccb0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{land.lhs.true:\l|  %1 = load i32, ptr %idx.addr, align 4\l  %ndump = getelementptr inbounds %\"class.LAMMPS_NS::Output\", ptr %this1, i32\l... 0, i32 8\l  %2 = load i32, ptr %ndump, align 8\l  %cmp2 = icmp slt i32 %1, %2\l  br i1 %cmp2, label %cond.true, label %cond.false\l|{<s0>T|<s1>F}}"];
+	Node0x55bdf813ccb0:s0 -> Node0x55bdf813d0f0[tooltip="land.lhs.true -> cond.true\nProbability 50.00%" ];
+	Node0x55bdf813ccb0:s1 -> Node0x55bdf813cd30[tooltip="land.lhs.true -> cond.false\nProbability 50.00%" ];
+	Node0x55bdf813d0f0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470" fontname="Courier",label="{cond.true:\l|  %dump = getelementptr inbounds %\"class.LAMMPS_NS::Output\", ptr %this1, i32\l... 0, i32 21\l  %3 = load ptr, ptr %dump, align 8\l  %4 = load i32, ptr %idx.addr, align 4\l  %idxprom = sext i32 %4 to i64\l  %arrayidx = getelementptr inbounds ptr, ptr %3, i64 %idxprom\l  %5 = load ptr, ptr %arrayidx, align 8\l  br label %cond.end\l}"];
+	Node0x55bdf813d0f0 -> Node0x55bdf813d780[tooltip="cond.true -> cond.end\nProbability 100.00%" ];
+	Node0x55bdf813cd30 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{cond.false:\l|  br label %cond.end\l}"];
+	Node0x55bdf813cd30 -> Node0x55bdf813d780[tooltip="cond.false -> cond.end\nProbability 100.00%" ];
+	Node0x55bdf813d780 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{cond.end:\l|  %cond = phi ptr [ %5, %cond.true ], [ null, %cond.false ]\l  ret ptr %cond\l}"];
+}

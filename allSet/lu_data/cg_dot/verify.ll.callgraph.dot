@@ -1,0 +1,21 @@
+digraph "Call graph: verify.ll" {
+	label="Call graph: verify.ll";
+
+	Node0x55e68d3b9fc0 [shape=record,label="{verify_}"];
+	Node0x55e68d3b9fc0 -> Node0x55e68d3ba7a0;
+	Node0x55e68d3b9fc0 -> Node0x55e68d3bb5e0;
+	Node0x55e68d3b9fc0 -> Node0x55e68d3bb4d0;
+	Node0x55e68d3b9fc0 -> Node0x55e68d3bb1b0;
+	Node0x55e68d3b9fc0 -> Node0x55e68d3bb870;
+	Node0x55e68d3b9fc0 -> Node0x55e68d3c7c00;
+	Node0x55e68d3b9fc0 -> Node0x55e68d3bbaf0;
+	Node0x55e68d3bb1b0 [shape=record,label="{_FortranACharacterCompareScalar1}"];
+	Node0x55e68d3bb4d0 [shape=record,label="{_FortranAioBeginExternalFormattedOutput}"];
+	Node0x55e68d3c7c00 [shape=record,label="{_FortranAioOutputAscii}"];
+	Node0x55e68d3bb5e0 [shape=record,label="{_FortranAioEndIoStatement}"];
+	Node0x55e68d3bb870 [shape=record,label="{_FortranAioOutputReal64}"];
+	Node0x55e68d3bbaf0 [shape=record,label="{_FortranAioOutputInteger32}"];
+	Node0x55e68d3c0f50 [shape=record,label="{llvm.stacksave.p0}"];
+	Node0x55e68d3c15a0 [shape=record,label="{llvm.stackrestore.p0}"];
+	Node0x55e68d3ba7a0 [shape=record,label="{llvm.fabs.f64}"];
+}

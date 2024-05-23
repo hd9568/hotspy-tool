@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN9LAMMPS_NS4Info14has_gpu_deviceEv' function" {
+	label="CFG for '_ZN9LAMMPS_NS4Info14has_gpu_deviceEv' function";
+
+	Node0x562846675780 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  ret i1 false\l}"];
+}

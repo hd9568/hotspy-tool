@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN26particle_buffer_task_classC2Ev' function" {
+	label="CFG for '_ZN26particle_buffer_task_classC2Ev' function";
+
+	Node0x558b69449f50 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %send_buffer = getelementptr inbounds %class.particle_buffer_task_class, ptr\l... %this1, i32 0, i32 0\l  store ptr null, ptr %send_buffer, align 8\l  %recv_buffer = getelementptr inbounds %class.particle_buffer_task_class, ptr\l... %this1, i32 0, i32 1\l  store ptr null, ptr %recv_buffer, align 8\l  %extra_send_buffer = getelementptr inbounds\l... %class.particle_buffer_task_class, ptr %this1, i32 0, i32 2\l  call void @llvm.memset.p0.i64(ptr align 8 %extra_send_buffer, i8 0, i64 24,\l... i1 false)\l  call void @_ZNSt7__cxx114listI25particle_buffer_base_typeSaIS1_EEC2Ev(ptr\l... noundef nonnull align 8 dereferenceable(24) %extra_send_buffer) #3\l  ret void\l}"];
+}

@@ -1,0 +1,17 @@
+digraph "CFG for 'uintcpy' function" {
+	label="CFG for 'uintcpy' function";
+
+	Node0x559aeb33ec50 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %dst.addr = alloca ptr, align 8\l  %src.addr = alloca ptr, align 8\l  %n.addr = alloca i32, align 4\l  store ptr %dst, ptr %dst.addr, align 8\l  store ptr %src, ptr %src.addr, align 8\l  store i32 %n, ptr %n.addr, align 4\l  %0 = load ptr, ptr %dst.addr, align 8\l  %1 = load i32, ptr %n.addr, align 4\l  %idx.ext = zext i32 %1 to i64\l  %add.ptr = getelementptr inbounds i32, ptr %0, i64 %idx.ext\l  %2 = load ptr, ptr %src.addr, align 8\l  %cmp = icmp ule ptr %add.ptr, %2\l  br i1 %cmp, label %if.then, label %if.else\l|{<s0>T|<s1>F}}"];
+	Node0x559aeb33ec50:s0 -> Node0x559aeb33f320[tooltip="entry -> if.then\nProbability 50.00%" ];
+	Node0x559aeb33ec50:s1 -> Node0x559aeb33f390[tooltip="entry -> if.else\nProbability 50.00%" ];
+	Node0x559aeb33f320 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.then:\l|  %3 = load ptr, ptr %dst.addr, align 8\l  %4 = load ptr, ptr %src.addr, align 8\l  %5 = load i32, ptr %n.addr, align 4\l  %conv = zext i32 %5 to i64\l  %mul = mul i64 %conv, 4\l  call void @llvm.memcpy.p0.p0.i64(ptr align 4 %3, ptr align 4 %4, i64 %mul,\l... i1 false)\l  br label %if.end6\l}"];
+	Node0x559aeb33f320 -> Node0x559aeb33fb00[tooltip="if.then -> if.end6\nProbability 100.00%" ];
+	Node0x559aeb33f390 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.else:\l|  %6 = load ptr, ptr %dst.addr, align 8\l  %7 = load ptr, ptr %src.addr, align 8\l  %cmp1 = icmp ne ptr %6, %7\l  br i1 %cmp1, label %if.then3, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x559aeb33f390:s0 -> Node0x559aeb33fd50[tooltip="if.else -> if.then3\nProbability 62.50%" ];
+	Node0x559aeb33f390:s1 -> Node0x559aeb33fda0[tooltip="if.else -> if.end\nProbability 37.50%" ];
+	Node0x559aeb33fd50 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{if.then3:\l|  %8 = load ptr, ptr %dst.addr, align 8\l  %9 = load ptr, ptr %src.addr, align 8\l  %10 = load i32, ptr %n.addr, align 4\l  %conv4 = zext i32 %10 to i64\l  %mul5 = mul i64 %conv4, 4\l  call void @llvm.memmove.p0.p0.i64(ptr align 4 %8, ptr align 4 %9, i64 %mul5,\l... i1 false)\l  br label %if.end\l}"];
+	Node0x559aeb33fd50 -> Node0x559aeb33fda0[tooltip="if.then3 -> if.end\nProbability 100.00%" ];
+	Node0x559aeb33fda0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.end:\l|  br label %if.end6\l}"];
+	Node0x559aeb33fda0 -> Node0x559aeb33fb00[tooltip="if.end -> if.end6\nProbability 100.00%" ];
+	Node0x559aeb33fb00 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end6:\l|  ret void\l}"];
+}

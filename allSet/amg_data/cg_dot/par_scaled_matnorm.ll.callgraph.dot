@@ -1,0 +1,37 @@
+digraph "Call graph: par_scaled_matnorm.ll" {
+	label="Call graph: par_scaled_matnorm.ll";
+
+	Node0x55c98f4dd2c0 [shape=record,label="{hypre_ParCSRMatrixScaledNorm}"];
+	Node0x55c98f4dd2c0 -> Node0x55c98f4de2c0;
+	Node0x55c98f4dd2c0 -> Node0x55c98f4decb0;
+	Node0x55c98f4dd2c0 -> Node0x55c98f4e0750;
+	Node0x55c98f4dd2c0 -> Node0x55c98f4e35e0;
+	Node0x55c98f4dd2c0 -> Node0x55c98f4e4960;
+	Node0x55c98f4dd2c0 -> Node0x55c98f4ecd80;
+	Node0x55c98f4dd2c0 -> Node0x55c98f4de410;
+	Node0x55c98f4dd2c0 -> Node0x55c98f4e49d0;
+	Node0x55c98f4dd2c0 -> Node0x55c98f4e4f80;
+	Node0x55c98f4dd2c0 -> Node0x55c98f4e7e30;
+	Node0x55c98f4dd2c0 -> Node0x55c98f4e8140;
+	Node0x55c98f4dd2c0 -> Node0x55c98f4e8520;
+	Node0x55c98f4dd2c0 -> Node0x55c98f4e5330;
+	Node0x55c98f4dd2c0 -> Node0x55c98f4e8820;
+	Node0x55c98f4dd2c0 -> Node0x55c98f4e4630;
+	Node0x55c98f4dd2c0 -> Node0x55c98f4ea850;
+	Node0x55c98f4e8820 [shape=record,label="{llvm.fmuladd.f64}"];
+	Node0x55c98f4e4630 [shape=record,label="{hypre_ParCSRCommHandleDestroy}"];
+	Node0x55c98f4ea850 [shape=record,label="{hypre_MPI_Allreduce}"];
+	Node0x55c98f4e5330 [shape=record,label="{hypre_ParVectorDestroy}"];
+	Node0x55c98f4de410 [shape=record,label="{hypre_SeqVectorDestroy}"];
+	Node0x55c98f4ecd80 [shape=record,label="{hypre_Free}"];
+	Node0x55c98f4de2c0 [shape=record,label="{hypre_ParVectorCreate}"];
+	Node0x55c98f4decb0 [shape=record,label="{hypre_ParVectorInitialize}"];
+	Node0x55c98f4e0750 [shape=record,label="{hypre_ParVectorSetPartitioningOwner}"];
+	Node0x55c98f4e35e0 [shape=record,label="{hypre_SeqVectorCreate}"];
+	Node0x55c98f4e4960 [shape=record,label="{hypre_SeqVectorInitialize}"];
+	Node0x55c98f4e4f80 [shape=record,label="{sqrt}"];
+	Node0x55c98f4e49d0 [shape=record,label="{llvm.fabs.f64}"];
+	Node0x55c98f4e7e30 [shape=record,label="{hypre_MatvecCommPkgCreate}"];
+	Node0x55c98f4e8140 [shape=record,label="{hypre_CAlloc}"];
+	Node0x55c98f4e8520 [shape=record,label="{hypre_ParCSRCommHandleCreate}"];
+}

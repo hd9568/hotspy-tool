@@ -1,0 +1,17 @@
+digraph "CFG for 'hypre_CAlloc' function" {
+	label="CFG for 'hypre_CAlloc' function";
+
+	Node0x55fce37c1480 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %count.addr = alloca i64, align 8\l  %elt_size.addr = alloca i64, align 8\l  %ptr = alloca ptr, align 8\l  %size = alloca i64, align 8\l  store i64 %count, ptr %count.addr, align 8\l  store i64 %elt_size, ptr %elt_size.addr, align 8\l  %0 = load i64, ptr %count.addr, align 8\l  %1 = load i64, ptr %elt_size.addr, align 8\l  %mul = mul i64 %0, %1\l  store i64 %mul, ptr %size, align 8\l  %2 = load i64, ptr %size, align 8\l  %cmp = icmp ugt i64 %2, 0\l  br i1 %cmp, label %if.then, label %if.else\l|{<s0>T|<s1>F}}"];
+	Node0x55fce37c1480:s0 -> Node0x55fce37c1b90[tooltip="entry -> if.then\nProbability 50.00%" ];
+	Node0x55fce37c1480:s1 -> Node0x55fce37c1c00[tooltip="entry -> if.else\nProbability 50.00%" ];
+	Node0x55fce37c1b90 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.then:\l|  %3 = load i64, ptr %count.addr, align 8\l  %4 = load i64, ptr %elt_size.addr, align 8\l  %call = call noalias ptr @calloc(i64 noundef %3, i64 noundef %4) #6\l  store ptr %call, ptr %ptr, align 8\l  %5 = load ptr, ptr %ptr, align 8\l  %cmp1 = icmp eq ptr %5, null\l  br i1 %cmp1, label %if.then2, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x55fce37c1b90:s0 -> Node0x55fce37c2360[tooltip="if.then -> if.then2\nProbability 37.50%" ];
+	Node0x55fce37c1b90:s1 -> Node0x55fce37c23e0[tooltip="if.then -> if.end\nProbability 62.50%" ];
+	Node0x55fce37c2360 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470" fontname="Courier",label="{if.then2:\l|  %6 = load i64, ptr %size, align 8\l  %call3 = call i32 @hypre_OutOfMemory(i64 noundef %6)\l  br label %if.end\l}"];
+	Node0x55fce37c2360 -> Node0x55fce37c23e0[tooltip="if.then2 -> if.end\nProbability 100.00%" ];
+	Node0x55fce37c23e0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.end:\l|  br label %if.end4\l}"];
+	Node0x55fce37c23e0 -> Node0x55fce37c27c0[tooltip="if.end -> if.end4\nProbability 100.00%" ];
+	Node0x55fce37c1c00 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.else:\l|  store ptr null, ptr %ptr, align 8\l  br label %if.end4\l}"];
+	Node0x55fce37c1c00 -> Node0x55fce37c27c0[tooltip="if.else -> if.end4\nProbability 100.00%" ];
+	Node0x55fce37c27c0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end4:\l|  %7 = load ptr, ptr %ptr, align 8\l  ret ptr %7\l}"];
+}

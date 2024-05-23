@@ -1,0 +1,13 @@
+digraph "CFG for '_ZN9LAMMPS_NS11ReadRestart8read_intEv' function" {
+	label="CFG for '_ZN9LAMMPS_NS11ReadRestart8read_intEv' function";
+
+	Node0x55bc18c51f20 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %value = alloca i32, align 4\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %me = getelementptr inbounds %\"class.LAMMPS_NS::ReadRestart\", ptr %this1,\l... i32 0, i32 1\l  %0 = load i32, ptr %me, align 8\l  %cmp = icmp eq i32 %0, 0\l  br i1 %cmp, label %land.lhs.true, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x55bc18c51f20:s0 -> Node0x55bc18c52340[tooltip="entry -> land.lhs.true\nProbability 37.50%" ];
+	Node0x55bc18c51f20:s1 -> Node0x55bc18c523c0[tooltip="entry -> if.end\nProbability 62.50%" ];
+	Node0x55bc18c52340 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{land.lhs.true:\l|  %fp = getelementptr inbounds %\"class.LAMMPS_NS::ReadRestart\", ptr %this1,\l... i32 0, i32 3\l  %1 = load ptr, ptr %fp, align 8\l  %call = call i64 @fread(ptr noundef %value, i64 noundef 4, i64 noundef 1,\l... ptr noundef %1)\l  %cmp2 = icmp ult i64 %call, 1\l  br i1 %cmp2, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x55bc18c52340:s0 -> Node0x55bc18c52890[tooltip="land.lhs.true -> if.then\nProbability 50.00%" ];
+	Node0x55bc18c52340:s1 -> Node0x55bc18c523c0[tooltip="land.lhs.true -> if.end\nProbability 50.00%" ];
+	Node0x55bc18c52890 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470" fontname="Courier",label="{if.then:\l|  store i32 -1, ptr %value, align 4\l  br label %if.end\l}"];
+	Node0x55bc18c52890 -> Node0x55bc18c523c0[tooltip="if.then -> if.end\nProbability 100.00%" ];
+	Node0x55bc18c523c0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  %world = getelementptr inbounds %\"class.LAMMPS_NS::Pointers\", ptr %this1,\l... i32 0, i32 16\l  %2 = load ptr, ptr %world, align 8\l  %3 = load ptr, ptr %2, align 8\l  %call3 = call i32 @MPI_Bcast(ptr noundef %value, i32 noundef 1, ptr noundef\l... @ompi_mpi_int, i32 noundef 0, ptr noundef %3)\l  %4 = load i32, ptr %value, align 4\l  ret i32 %4\l}"];
+}

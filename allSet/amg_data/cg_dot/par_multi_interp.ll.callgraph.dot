@@ -1,0 +1,33 @@
+digraph "Call graph: par_multi_interp.ll" {
+	label="Call graph: par_multi_interp.ll";
+
+	Node0x55e81040a7e0 [shape=record,label="{hypre_BoomerAMGBuildMultipass}"];
+	Node0x55e81040a7e0 -> Node0x55e8104080f0;
+	Node0x55e81040a7e0 -> Node0x55e810433c90;
+	Node0x55e81040a7e0 -> Node0x55e810436f00;
+	Node0x55e81040a7e0 -> Node0x55e810403960;
+	Node0x55e81040a7e0 -> Node0x55e8103fee70;
+	Node0x55e81040a7e0 -> Node0x55e81038a800;
+	Node0x55e81040a7e0 -> Node0x55e81043e620;
+	Node0x55e81040a7e0 -> Node0x55e8103f4180;
+	Node0x55e81040a7e0 -> Node0x55e810465ca0;
+	Node0x55e81040a7e0 -> Node0x55e8104461e0;
+	Node0x55e81040a7e0 -> Node0x55e8103c7df0;
+	Node0x55e81040a7e0 -> Node0x55e8103cacb0;
+	Node0x55e81040a7e0 -> Node0x55e81043d210;
+	Node0x55e81040a7e0 -> Node0x55e810443810;
+	Node0x55e8104080f0 [shape=record,label="{hypre_CAlloc}"];
+	Node0x55e810403960 [shape=record,label="{hypre_MPI_Comm_size}"];
+	Node0x55e8103fee70 [shape=record,label="{hypre_MPI_Comm_rank}"];
+	Node0x55e81038a800 [shape=record,label="{hypre_MPI_Bcast}"];
+	Node0x55e810433c90 [shape=record,label="{hypre_MatvecCommPkgCreate}"];
+	Node0x55e8103cacb0 [shape=record,label="{hypre_ParCSRCommHandleCreate}"];
+	Node0x55e8103c7df0 [shape=record,label="{hypre_ParCSRCommHandleDestroy}"];
+	Node0x55e810436f00 [shape=record,label="{hypre_Free}"];
+	Node0x55e810443810 [shape=record,label="{hypre_MPI_Allreduce}"];
+	Node0x55e81043e620 [shape=record,label="{hypre_BinarySearch}"];
+	Node0x55e81043d210 [shape=record,label="{hypre_qsort2i}"];
+	Node0x55e8104461e0 [shape=record,label="{hypre_ParCSRMatrixCreate}"];
+	Node0x55e810465ca0 [shape=record,label="{hypre_BoomerAMGInterpTruncation}"];
+	Node0x55e8103f4180 [shape=record,label="{hypre_qsort0}"];
+}

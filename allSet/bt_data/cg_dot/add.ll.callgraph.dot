@@ -1,0 +1,7 @@
+digraph "Call graph: add.ll" {
+	label="Call graph: add.ll";
+
+	Node0x559302699e10 [shape=record,label="{add_}"];
+	Node0x5593026b03d0 [shape=record,label="{llvm.stacksave.p0}"];
+	Node0x5593026b0410 [shape=record,label="{llvm.stackrestore.p0}"];
+}

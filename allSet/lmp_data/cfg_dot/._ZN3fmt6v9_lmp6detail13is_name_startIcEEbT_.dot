@@ -1,0 +1,19 @@
+digraph "CFG for '_ZN3fmt6v9_lmp6detail13is_name_startIcEEbT_' function" {
+	label="CFG for '_ZN3fmt6v9_lmp6detail13is_name_startIcEEbT_' function";
+
+	Node0x556bfeacfc70 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %c.addr = alloca i8, align 1\l  store i8 %c, ptr %c.addr, align 1\l  %0 = load i8, ptr %c.addr, align 1\l  %conv = sext i8 %0 to i32\l  %cmp = icmp sle i32 97, %conv\l  br i1 %cmp, label %land.lhs.true, label %lor.lhs.false\l|{<s0>T|<s1>F}}"];
+	Node0x556bfeacfc70:s0 -> Node0x556bfeacff20[tooltip="entry -> land.lhs.true\nProbability 50.00%" ];
+	Node0x556bfeacfc70:s1 -> Node0x556bfeacffa0[tooltip="entry -> lor.lhs.false\nProbability 50.00%" ];
+	Node0x556bfeacff20 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{land.lhs.true:\l|  %1 = load i8, ptr %c.addr, align 1\l  %conv1 = sext i8 %1 to i32\l  %cmp2 = icmp sle i32 %conv1, 122\l  br i1 %cmp2, label %lor.end, label %lor.lhs.false\l|{<s0>T|<s1>F}}"];
+	Node0x556bfeacff20:s0 -> Node0x556bfead0290[tooltip="land.lhs.true -> lor.end\nProbability 50.00%" ];
+	Node0x556bfeacff20:s1 -> Node0x556bfeacffa0[tooltip="land.lhs.true -> lor.lhs.false\nProbability 50.00%" ];
+	Node0x556bfeacffa0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{lor.lhs.false:\l|  %2 = load i8, ptr %c.addr, align 1\l  %conv3 = sext i8 %2 to i32\l  %cmp4 = icmp sle i32 65, %conv3\l  br i1 %cmp4, label %land.lhs.true5, label %lor.rhs\l|{<s0>T|<s1>F}}"];
+	Node0x556bfeacffa0:s0 -> Node0x556bfead0570[tooltip="lor.lhs.false -> land.lhs.true5\nProbability 50.00%" ];
+	Node0x556bfeacffa0:s1 -> Node0x556bfead0790[tooltip="lor.lhs.false -> lor.rhs\nProbability 50.00%" ];
+	Node0x556bfead0570 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{land.lhs.true5:\l|  %3 = load i8, ptr %c.addr, align 1\l  %conv6 = sext i8 %3 to i32\l  %cmp7 = icmp sle i32 %conv6, 90\l  br i1 %cmp7, label %lor.end, label %lor.rhs\l|{<s0>T|<s1>F}}"];
+	Node0x556bfead0570:s0 -> Node0x556bfead0290[tooltip="land.lhs.true5 -> lor.end\nProbability 50.00%" ];
+	Node0x556bfead0570:s1 -> Node0x556bfead0790[tooltip="land.lhs.true5 -> lor.rhs\nProbability 50.00%" ];
+	Node0x556bfead0790 [shape=record,color="#b70d28ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{lor.rhs:\l|  %4 = load i8, ptr %c.addr, align 1\l  %conv8 = sext i8 %4 to i32\l  %cmp9 = icmp eq i32 95, %conv8\l  br label %lor.end\l}"];
+	Node0x556bfead0790 -> Node0x556bfead0290[tooltip="lor.rhs -> lor.end\nProbability 100.00%" ];
+	Node0x556bfead0290 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{lor.end:\l|  %5 = phi i1 [ true, %land.lhs.true5 ], [ true, %land.lhs.true ], [ %cmp9,\l... %lor.rhs ]\l  ret i1 %5\l}"];
+}

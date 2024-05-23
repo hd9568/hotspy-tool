@@ -1,0 +1,15 @@
+digraph "CFG for '_ZN9LAMMPS_NS6Domain13delete_regionEPNS_6RegionE' function" {
+	label="CFG for '_ZN9LAMMPS_NS6Domain13delete_regionEPNS_6RegionE' function";
+
+	Node0x561837de5d10 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %reg.addr = alloca ptr, align 8\l  store ptr %this, ptr %this.addr, align 8\l  store ptr %reg, ptr %reg.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %0 = load ptr, ptr %reg.addr, align 8\l  %tobool = icmp ne ptr %0, null\l  br i1 %tobool, label %if.end, label %if.then\l|{<s0>T|<s1>F}}"];
+	Node0x561837de5d10:s0 -> Node0x561837de6130[tooltip="entry -> if.end\nProbability 62.50%" ];
+	Node0x561837de5d10:s1 -> Node0x561837de61a0[tooltip="entry -> if.then\nProbability 37.50%" ];
+	Node0x561837de61a0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{if.then:\l|  br label %delete.end\l}"];
+	Node0x561837de61a0 -> Node0x561837de6270[tooltip="if.then -> delete.end\nProbability 100.00%" ];
+	Node0x561837de6130 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.end:\l|  %regions = getelementptr inbounds %\"class.LAMMPS_NS::Domain\", ptr %this1,\l... i32 0, i32 55\l  %call = call noundef i64\l... @_ZNSt13unordered_setIPN9LAMMPS_NS6RegionESt4hashIS2_ESt8equal_toIS2_ESaIS2_EE\l...5eraseERKS2_(ptr noundef nonnull align 8 dereferenceable(56) %regions, ptr\l... noundef nonnull align 8 dereferenceable(8) %reg.addr)\l  %1 = load ptr, ptr %reg.addr, align 8\l  %isnull = icmp eq ptr %1, null\l  br i1 %isnull, label %delete.end, label %delete.notnull\l|{<s0>T|<s1>F}}"];
+	Node0x561837de6130:s0 -> Node0x561837de6270[tooltip="if.end -> delete.end\nProbability 37.50%" ];
+	Node0x561837de6130:s1 -> Node0x561837de68c0[tooltip="if.end -> delete.notnull\nProbability 62.50%" ];
+	Node0x561837de68c0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{delete.notnull:\l|  %vtable = load ptr, ptr %1, align 8\l  %vfn = getelementptr inbounds ptr, ptr %vtable, i64 1\l  %2 = load ptr, ptr %vfn, align 8\l  call void %2(ptr noundef nonnull align 8 dereferenceable(672) %1) #15\l  br label %delete.end\l}"];
+	Node0x561837de68c0 -> Node0x561837de6270[tooltip="delete.notnull -> delete.end\nProbability 100.00%" ];
+	Node0x561837de6270 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{delete.end:\l|  ret void\l}"];
+}

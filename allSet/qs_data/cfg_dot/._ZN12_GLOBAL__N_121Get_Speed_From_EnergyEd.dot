@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN12_GLOBAL__N_121Get_Speed_From_EnergyEd' function" {
+	label="CFG for '_ZN12_GLOBAL__N_121Get_Speed_From_EnergyEd' function";
+
+	Node0x55f4622ba950 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %energy.addr = alloca double, align 8\l  store double %energy, ptr %energy.addr, align 8\l  %0 = load double, ptr %energy.addr, align 8\l  %1 = load double, ptr %energy.addr, align 8\l  %add = fadd double %1, 0x409D5C868CBAFDB1\l  %mul = fmul double %0, %add\l  %2 = load double, ptr %energy.addr, align 8\l  %add1 = fadd double %2, 0x408D5C868CBAFDB1\l  %3 = load double, ptr %energy.addr, align 8\l  %add2 = fadd double %3, 0x408D5C868CBAFDB1\l  %mul3 = fmul double %add1, %add2\l  %div = fdiv double %mul, %mul3\l  %call = call double @sqrt(double noundef %div) #3\l  %mul4 = fmul double 0x421BEB9BF3A00000, %call\l  ret double %mul4\l}"];
+}

@@ -1,0 +1,12 @@
+digraph "CFG for 'mpi_copy_integer_' function" {
+	label="CFG for 'mpi_copy_integer_' function";
+
+	Node0x5560a31c1720 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{4:\l|  %5 = alloca i32, i64 1, align 4\l  %6 = load i32, ptr %2, align 4\l  %7 = sext i32 %6 to i64\l  %8 = icmp sgt i64 %7, 0\l  %9 = select i1 %8, i64 %7, i64 0\l  %10 = load i32, ptr %2, align 4\l  %11 = sext i32 %10 to i64\l  %12 = icmp sgt i64 %11, 0\l  %13 = select i1 %12, i64 %11, i64 0\l  store i32 0, ptr %3, align 4\l  %14 = load i32, ptr %2, align 4\l  %15 = sext i32 %14 to i64\l  br label %16\l}"];
+	Node0x5560a31c1720 -> Node0x5560a31c1d60[tooltip="4 -> 16\nProbability 100.00%" ];
+	Node0x5560a31c1d60 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{16:\l|  %17 = phi i32 [ %37, %20 ], [ 1, %4 ]\l  %18 = phi i64 [ %38, %20 ], [ %15, %4 ]\l  %19 = icmp sgt i64 %18, 0\l  br i1 %19, label %20, label %39\l|{<s0>T|<s1>F}}"];
+	Node0x5560a31c1d60:s0 -> Node0x5560a31c1e20[tooltip="16 -> 20\nProbability 96.88%" ];
+	Node0x5560a31c1d60:s1 -> Node0x5560a31c2020[tooltip="16 -> 39\nProbability 3.12%" ];
+	Node0x5560a31c1e20 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{20:\l|  store i32 %17, ptr %5, align 4\l  %21 = load i32, ptr %5, align 4\l  %22 = sext i32 %21 to i64\l  %23 = sub nsw i64 %22, 1\l  %24 = mul nsw i64 %23, 1\l  %25 = mul nsw i64 %24, 1\l  %26 = add nsw i64 %25, 0\l  %27 = mul nsw i64 1, %9\l  %28 = getelementptr i32, ptr %0, i64 %26\l  %29 = load i32, ptr %28, align 4\l  %30 = sub nsw i64 %22, 1\l  %31 = mul nsw i64 %30, 1\l  %32 = mul nsw i64 %31, 1\l  %33 = add nsw i64 %32, 0\l  %34 = mul nsw i64 1, %13\l  %35 = getelementptr i32, ptr %1, i64 %33\l  store i32 %29, ptr %35, align 4\l  %36 = load i32, ptr %5, align 4\l  %37 = add i32 %36, 1\l  %38 = sub i64 %18, 1\l  br label %16\l}"];
+	Node0x5560a31c1e20 -> Node0x5560a31c1d60[tooltip="20 -> 16\nProbability 100.00%" ];
+	Node0x5560a31c2020 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{39:\l|  store i32 %17, ptr %5, align 4\l  ret void\l}"];
+}

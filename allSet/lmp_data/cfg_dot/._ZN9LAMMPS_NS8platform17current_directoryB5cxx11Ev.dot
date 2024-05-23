@@ -1,0 +1,29 @@
+digraph "CFG for '_ZN9LAMMPS_NS8platform17current_directoryB5cxx11Ev' function" {
+	label="CFG for '_ZN9LAMMPS_NS8platform17current_directoryB5cxx11Ev' function";
+
+	Node0x5651cd7eeb80 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %result.ptr = alloca ptr, align 8\l  %nrvo = alloca i1, align 1\l  %buf = alloca ptr, align 8\l  %exn.slot = alloca ptr, align 8\l  %ehselector.slot = alloca i32, align 4\l  store ptr %agg.result, ptr %result.ptr, align 8\l  store i1 false, ptr %nrvo, align 1\l  call void @_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC1Ev(ptr\l... noundef nonnull align 8 dereferenceable(32) %agg.result) #4\l  %call = invoke noalias noundef nonnull ptr @_Znam(i64 noundef 4096) #20\l          to label %invoke.cont unwind label %lpad\l}"];
+	Node0x5651cd7eeb80 -> Node0x5651cd7eefc0[tooltip="entry -> invoke.cont\nProbability 100.00%" ];
+	Node0x5651cd7eeb80 -> Node0x5651cd7ef1a0[tooltip="entry -> lpad\nProbability 0.00%" ];
+	Node0x5651cd7eefc0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{invoke.cont:\l|  store ptr %call, ptr %buf, align 8\l  %0 = load ptr, ptr %buf, align 8\l  %call1 = call ptr @getcwd(ptr noundef %0, i64 noundef 4096) #4\l  %tobool = icmp ne ptr %call1, null\l  br i1 %tobool, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x5651cd7eefc0:s0 -> Node0x5651cd7ef760[tooltip="invoke.cont -> if.then\nProbability 62.50%" ];
+	Node0x5651cd7eefc0:s1 -> Node0x5651cd7ef9d0[tooltip="invoke.cont -> if.end\nProbability 37.50%" ];
+	Node0x5651cd7ef760 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.then:\l|  %1 = load ptr, ptr %buf, align 8\l  %call3 = invoke noundef nonnull align 8 dereferenceable(32) ptr\l... @_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEaSEPKc(ptr noundef\l... nonnull align 8 dereferenceable(32) %agg.result, ptr noundef %1)\l          to label %invoke.cont2 unwind label %lpad\l}"];
+	Node0x5651cd7ef760 -> Node0x5651cd7efc20[tooltip="if.then -> invoke.cont2\nProbability 100.00%" ];
+	Node0x5651cd7ef760 -> Node0x5651cd7ef1a0[tooltip="if.then -> lpad\nProbability 0.00%" ];
+	Node0x5651cd7efc20 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{invoke.cont2:\l|  br label %if.end\l}"];
+	Node0x5651cd7efc20 -> Node0x5651cd7ef9d0[tooltip="invoke.cont2 -> if.end\nProbability 100.00%" ];
+	Node0x5651cd7ef1a0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f6bfa670" fontname="Courier",label="{lpad:\l|  %2 = landingpad \{ ptr, i32 \}\l          cleanup\l  %3 = extractvalue \{ ptr, i32 \} %2, 0\l  store ptr %3, ptr %exn.slot, align 8\l  %4 = extractvalue \{ ptr, i32 \} %2, 1\l  store i32 %4, ptr %ehselector.slot, align 4\l  call void @_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEED1Ev(ptr\l... noundef nonnull align 8 dereferenceable(32) %agg.result) #4\l  br label %eh.resume\l}"];
+	Node0x5651cd7ef1a0 -> Node0x5651cd7efbd0[tooltip="lpad -> eh.resume\nProbability 100.00%" ];
+	Node0x5651cd7ef9d0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  %5 = load ptr, ptr %buf, align 8\l  %isnull = icmp eq ptr %5, null\l  br i1 %isnull, label %delete.end, label %delete.notnull\l|{<s0>T|<s1>F}}"];
+	Node0x5651cd7ef9d0:s0 -> Node0x5651cd7f03e0[tooltip="if.end -> delete.end\nProbability 37.50%" ];
+	Node0x5651cd7ef9d0:s1 -> Node0x5651cd7f0460[tooltip="if.end -> delete.notnull\nProbability 62.50%" ];
+	Node0x5651cd7f0460 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{delete.notnull:\l|  call void @_ZdaPv(ptr noundef %5) #21\l  br label %delete.end\l}"];
+	Node0x5651cd7f0460 -> Node0x5651cd7f03e0[tooltip="delete.notnull -> delete.end\nProbability 100.00%" ];
+	Node0x5651cd7f03e0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{delete.end:\l|  store i1 true, ptr %nrvo, align 1\l  %nrvo.val = load i1, ptr %nrvo, align 1\l  br i1 %nrvo.val, label %nrvo.skipdtor, label %nrvo.unused\l|{<s0>T|<s1>F}}"];
+	Node0x5651cd7f03e0:s0 -> Node0x5651cd7f0960[tooltip="delete.end -> nrvo.skipdtor\nProbability 50.00%" ];
+	Node0x5651cd7f03e0:s1 -> Node0x5651cd7f09e0[tooltip="delete.end -> nrvo.unused\nProbability 50.00%" ];
+	Node0x5651cd7f09e0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{nrvo.unused:\l|  call void @_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEED1Ev(ptr\l... noundef nonnull align 8 dereferenceable(32) %agg.result) #4\l  br label %nrvo.skipdtor\l}"];
+	Node0x5651cd7f09e0 -> Node0x5651cd7f0960[tooltip="nrvo.unused -> nrvo.skipdtor\nProbability 100.00%" ];
+	Node0x5651cd7f0960 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{nrvo.skipdtor:\l|  ret void\l}"];
+	Node0x5651cd7efbd0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f6bfa670" fontname="Courier",label="{eh.resume:\l|  %exn = load ptr, ptr %exn.slot, align 8\l  %sel = load i32, ptr %ehselector.slot, align 4\l  %lpad.val = insertvalue \{ ptr, i32 \} poison, ptr %exn, 0\l  %lpad.val4 = insertvalue \{ ptr, i32 \} %lpad.val, i32 %sel, 1\l  resume \{ ptr, i32 \} %lpad.val4\l}"];
+}

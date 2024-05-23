@@ -1,0 +1,12 @@
+digraph "CFG for '_ZZN3fmt6v9_lmp6detail12count_digitsILi3EmEEiT0_ENKUlmE_clEm' function" {
+	label="CFG for '_ZZN3fmt6v9_lmp6detail12count_digitsILi3EmEEiT0_ENKUlmE_clEm' function";
+
+	Node0x55fec3598620 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %m.addr = alloca i64, align 8\l  %num_digits = alloca i32, align 4\l  store ptr %this, ptr %this.addr, align 8\l  store i64 %m, ptr %m.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  store i32 0, ptr %num_digits, align 4\l  br label %do.body\l}"];
+	Node0x55fec3598620 -> Node0x55fec3598670[tooltip="entry -> do.body\nProbability 100.00%" ];
+	Node0x55fec3598670 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{do.body:\l|  %0 = load i32, ptr %num_digits, align 4\l  %inc = add nsw i32 %0, 1\l  store i32 %inc, ptr %num_digits, align 4\l  br label %do.cond\l}"];
+	Node0x55fec3598670 -> Node0x55fec3598e80[tooltip="do.body -> do.cond\nProbability 100.00%" ];
+	Node0x55fec3598e80 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{do.cond:\l|  %1 = load i64, ptr %m.addr, align 8\l  %shr = lshr i64 %1, 3\l  store i64 %shr, ptr %m.addr, align 8\l  %cmp = icmp ne i64 %shr, 0\l  br i1 %cmp, label %do.body, label %do.end, !llvm.loop !6\l|{<s0>T|<s1>F}}"];
+	Node0x55fec3598e80:s0 -> Node0x55fec3598670[tooltip="do.cond -> do.body\nProbability 96.88%" ];
+	Node0x55fec3598e80:s1 -> Node0x55fec35991e0[tooltip="do.cond -> do.end\nProbability 3.12%" ];
+	Node0x55fec35991e0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{do.end:\l|  %2 = load i32, ptr %num_digits, align 4\l  ret i32 %2\l}"];
+}

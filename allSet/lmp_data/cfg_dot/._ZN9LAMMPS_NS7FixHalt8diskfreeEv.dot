@@ -1,0 +1,17 @@
+digraph "CFG for '_ZN9LAMMPS_NS7FixHalt8diskfreeEv' function" {
+	label="CFG for '_ZN9LAMMPS_NS7FixHalt8diskfreeEv' function";
+
+	Node0x5603f57dc7d0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %fs = alloca %struct.statvfs, align 8\l  %disk_free = alloca double, align 8\l  %rv = alloca i32, align 4\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  store double -1.000000e+00, ptr %disk_free, align 8\l  %dlimit_path = getelementptr inbounds %\"class.LAMMPS_NS::FixHalt\", ptr\l... %this1, i32 0, i32 11\l  %0 = load ptr, ptr %dlimit_path, align 8\l  %tobool = icmp ne ptr %0, null\l  br i1 %tobool, label %if.then, label %if.end5\l|{<s0>T|<s1>F}}"];
+	Node0x5603f57dc7d0:s0 -> Node0x5603f57dda60[tooltip="entry -> if.then\nProbability 62.50%" ];
+	Node0x5603f57dc7d0:s1 -> Node0x5603f57ddad0[tooltip="entry -> if.end5\nProbability 37.50%" ];
+	Node0x5603f57dda60 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.then:\l|  store double 1.000000e+100, ptr %disk_free, align 8\l  %dlimit_path2 = getelementptr inbounds %\"class.LAMMPS_NS::FixHalt\", ptr\l... %this1, i32 0, i32 11\l  %1 = load ptr, ptr %dlimit_path2, align 8\l  %call = call i32 @statvfs(ptr noundef %1, ptr noundef %fs) #11\l  store i32 %call, ptr %rv, align 4\l  %2 = load i32, ptr %rv, align 4\l  %cmp = icmp eq i32 %2, 0\l  br i1 %cmp, label %if.then3, label %if.else\l|{<s0>T|<s1>F}}"];
+	Node0x5603f57dda60:s0 -> Node0x5603f57de380[tooltip="if.then -> if.then3\nProbability 37.50%" ];
+	Node0x5603f57dda60:s1 -> Node0x5603f57de400[tooltip="if.then -> if.else\nProbability 62.50%" ];
+	Node0x5603f57de380 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470" fontname="Courier",label="{if.then3:\l|  %f_bavail = getelementptr inbounds %struct.statvfs, ptr %fs, i32 0, i32 4\l  %3 = load i64, ptr %f_bavail, align 8\l  %f_bsize = getelementptr inbounds %struct.statvfs, ptr %fs, i32 0, i32 0\l  %4 = load i64, ptr %f_bsize, align 8\l  %mul = mul i64 %3, %4\l  %conv = uitofp i64 %mul to double\l  %div = fdiv double %conv, 0x4130000000000000\l  store double %div, ptr %disk_free, align 8\l  br label %if.end\l}"];
+	Node0x5603f57de380 -> Node0x5603f57deac0[tooltip="if.then3 -> if.end\nProbability 100.00%" ];
+	Node0x5603f57de400 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.else:\l|  store double -1.000000e+00, ptr %disk_free, align 8\l  br label %if.end\l}"];
+	Node0x5603f57de400 -> Node0x5603f57deac0[tooltip="if.else -> if.end\nProbability 100.00%" ];
+	Node0x5603f57deac0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.end:\l|  %world = getelementptr inbounds %\"class.LAMMPS_NS::Pointers\", ptr %this1,\l... i32 0, i32 16\l  %5 = load ptr, ptr %world, align 8\l  %6 = load ptr, ptr %5, align 8\l  %call4 = call i32 @MPI_Bcast(ptr noundef %disk_free, i32 noundef 1, ptr\l... noundef @ompi_mpi_double, i32 noundef 0, ptr noundef %6)\l  br label %if.end5\l}"];
+	Node0x5603f57deac0 -> Node0x5603f57ddad0[tooltip="if.end -> if.end5\nProbability 100.00%" ];
+	Node0x5603f57ddad0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end5:\l|  %7 = load double, ptr %disk_free, align 8\l  ret double %7\l}"];
+}

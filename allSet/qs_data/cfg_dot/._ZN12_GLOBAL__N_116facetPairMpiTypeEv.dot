@@ -1,0 +1,10 @@
+digraph "CFG for '_ZN12_GLOBAL__N_116facetPairMpiTypeEv' function" {
+	label="CFG for '_ZN12_GLOBAL__N_116facetPairMpiTypeEv' function";
+
+	Node0x5606e006e3e0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %0 = load i8, ptr @_ZZN12_GLOBAL__N_116facetPairMpiTypeEvE12inititalized,\l... align 1\l  %tobool = trunc i8 %0 to i1\l  br i1 %tobool, label %if.end, label %if.then\l|{<s0>T|<s1>F}}"];
+	Node0x5606e006e3e0:s0 -> Node0x5606e006e620[tooltip="entry -> if.end\nProbability 50.00%" ];
+	Node0x5606e006e3e0:s1 -> Node0x5606e006e690[tooltip="entry -> if.then\nProbability 50.00%" ];
+	Node0x5606e006e690 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.then:\l|  call void @_Z18mpiType_contiguousiiPi(i32 noundef 8, i32 noundef 2, ptr\l... noundef @_ZZN12_GLOBAL__N_116facetPairMpiTypeEvE8datatype)\l  call void @_Z14mpiType_commitPi(ptr noundef\l... @_ZZN12_GLOBAL__N_116facetPairMpiTypeEvE8datatype)\l  store i8 1, ptr @_ZZN12_GLOBAL__N_116facetPairMpiTypeEvE12inititalized,\l... align 1\l  br label %if.end\l}"];
+	Node0x5606e006e690 -> Node0x5606e006e620[tooltip="if.then -> if.end\nProbability 100.00%" ];
+	Node0x5606e006e620 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  %1 = load i32, ptr @_ZZN12_GLOBAL__N_116facetPairMpiTypeEvE8datatype,\l... align 4\l  ret i32 %1\l}"];
+}

@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN3fmt6v9_lmp6detail16uint128_fallbackC2Emm' function" {
+	label="CFG for '_ZN3fmt6v9_lmp6detail16uint128_fallbackC2Emm' function";
+
+	Node0x55fec2fec0e0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %hi.addr = alloca i64, align 8\l  %lo.addr = alloca i64, align 8\l  store ptr %this, ptr %this.addr, align 8\l  store i64 %hi, ptr %hi.addr, align 8\l  store i64 %lo, ptr %lo.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %lo_ = getelementptr inbounds\l... %\"class.fmt::v9_lmp::detail::uint128_fallback\", ptr %this1, i32 0, i32 0\l  %0 = load i64, ptr %lo.addr, align 8\l  store i64 %0, ptr %lo_, align 8\l  %hi_ = getelementptr inbounds\l... %\"class.fmt::v9_lmp::detail::uint128_fallback\", ptr %this1, i32 0, i32 1\l  %1 = load i64, ptr %hi.addr, align 8\l  store i64 %1, ptr %hi_, align 8\l  ret void\l}"];
+}

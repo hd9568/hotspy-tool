@@ -1,0 +1,5 @@
+digraph "CFG for 'hypre_MPI_Wait' function" {
+	label="CFG for 'hypre_MPI_Wait' function";
+
+	Node0x5555d6654650 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %request.addr = alloca ptr, align 8\l  %status.addr = alloca ptr, align 8\l  store ptr %request, ptr %request.addr, align 8\l  store ptr %status, ptr %status.addr, align 8\l  %0 = load ptr, ptr %request.addr, align 8\l  %1 = load ptr, ptr %status.addr, align 8\l  %call = call i32 @MPI_Wait(ptr noundef %0, ptr noundef %1)\l  ret i32 %call\l}"];
+}

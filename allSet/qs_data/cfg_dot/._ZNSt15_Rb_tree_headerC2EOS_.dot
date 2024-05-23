@@ -1,0 +1,16 @@
+digraph "CFG for '_ZNSt15_Rb_tree_headerC2EOS_' function" {
+	label="CFG for '_ZNSt15_Rb_tree_headerC2EOS_' function";
+
+	Node0x562c4e55a5e0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %__x.addr = alloca ptr, align 8\l  store ptr %this, ptr %this.addr, align 8\l  store ptr %__x, ptr %__x.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %_M_header = getelementptr inbounds %\"struct.std::_Rb_tree_header\", ptr\l... %this1, i32 0, i32 0\l  %0 = load ptr, ptr %__x.addr, align 8\l  %_M_header2 = getelementptr inbounds %\"struct.std::_Rb_tree_header\", ptr %0,\l... i32 0, i32 0\l  %_M_parent = getelementptr inbounds %\"struct.std::_Rb_tree_node_base\", ptr\l... %_M_header2, i32 0, i32 1\l  %1 = load ptr, ptr %_M_parent, align 8\l  %cmp = icmp ne ptr %1, null\l  br i1 %cmp, label %if.then, label %if.else\l|{<s0>T|<s1>F}}"];
+	Node0x562c4e55a5e0:s0 -> Node0x562c4e55acc0[tooltip="entry -> if.then\nProbability 62.50%" ];
+	Node0x562c4e55a5e0:s1 -> Node0x562c4e55ad30[tooltip="entry -> if.else\nProbability 37.50%" ];
+	Node0x562c4e55acc0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.then:\l|  %2 = load ptr, ptr %__x.addr, align 8\l  invoke void @_ZNSt15_Rb_tree_header12_M_move_dataERS_(ptr noundef nonnull\l... align 8 dereferenceable(40) %this1, ptr noundef nonnull align 8\l... dereferenceable(40) %2)\l          to label %invoke.cont unwind label %terminate.lpad\l}"];
+	Node0x562c4e55acc0 -> Node0x562c4e55aec0[tooltip="if.then -> invoke.cont\nProbability 100.00%" ];
+	Node0x562c4e55acc0 -> Node0x562c4e55b0e0[tooltip="if.then -> terminate.lpad\nProbability 0.00%" ];
+	Node0x562c4e55aec0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{invoke.cont:\l|  br label %if.end\l}"];
+	Node0x562c4e55aec0 -> Node0x562c4e55b470[tooltip="invoke.cont -> if.end\nProbability 100.00%" ];
+	Node0x562c4e55ad30 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{if.else:\l|  %_M_header3 = getelementptr inbounds %\"struct.std::_Rb_tree_header\", ptr\l... %this1, i32 0, i32 0\l  %_M_color = getelementptr inbounds %\"struct.std::_Rb_tree_node_base\", ptr\l... %_M_header3, i32 0, i32 0\l  store i32 0, ptr %_M_color, align 8\l  call void @_ZNSt15_Rb_tree_header8_M_resetEv(ptr noundef nonnull align 8\l... dereferenceable(40) %this1)\l  br label %if.end\l}"];
+	Node0x562c4e55ad30 -> Node0x562c4e55b470[tooltip="if.else -> if.end\nProbability 100.00%" ];
+	Node0x562c4e55b470 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  ret void\l}"];
+	Node0x562c4e55b0e0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f3c7b170" fontname="Courier",label="{terminate.lpad:\l|  %3 = landingpad \{ ptr, i32 \}\l          catch ptr null\l  %4 = extractvalue \{ ptr, i32 \} %3, 0\l  call void @__clang_call_terminate(ptr %4) #15\l  unreachable\l}"];
+}

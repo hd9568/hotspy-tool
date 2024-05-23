@@ -1,0 +1,5 @@
+digraph "CFG for '_ZNK19DecompositionObject7getRankEi' function" {
+	label="CFG for '_ZNK19DecompositionObject7getRankEi' function";
+
+	Node0x5606e004c870 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %domainGid.addr = alloca i32, align 4\l  store ptr %this, ptr %this.addr, align 8\l  store i32 %domainGid, ptr %domainGid.addr, align 4\l  %this1 = load ptr, ptr %this.addr, align 8\l  %_rank = getelementptr inbounds %class.DecompositionObject, ptr %this1, i32\l... 0, i32 1\l  %0 = load i32, ptr %domainGid.addr, align 4\l  %conv = sext i32 %0 to i64\l  %call = call noundef nonnull align 4 dereferenceable(4) ptr\l... @_ZNKSt6vectorIiSaIiEEixEm(ptr noundef nonnull align 8 dereferenceable(24)\l... %_rank, i64 noundef %conv) #12\l  %1 = load i32, ptr %call, align 4\l  ret i32 %1\l}"];
+}

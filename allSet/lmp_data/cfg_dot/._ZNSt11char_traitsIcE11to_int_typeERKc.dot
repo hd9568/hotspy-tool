@@ -1,0 +1,5 @@
+digraph "CFG for '_ZNSt11char_traitsIcE11to_int_typeERKc' function" {
+	label="CFG for '_ZNSt11char_traitsIcE11to_int_typeERKc' function";
+
+	Node0x55fec30714b0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %__c.addr = alloca ptr, align 8\l  store ptr %__c, ptr %__c.addr, align 8\l  %0 = load ptr, ptr %__c.addr, align 8\l  %1 = load i8, ptr %0, align 1\l  %conv = zext i8 %1 to i32\l  ret i32 %conv\l}"];
+}

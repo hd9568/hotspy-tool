@@ -1,0 +1,36 @@
+digraph "CFG for '_ZL9re_matchpPKcP7regex_tPi' function" {
+	label="CFG for '_ZL9re_matchpPKcP7regex_tPi' function";
+
+	Node0x5584167903b0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470" fontname="Courier",label="{entry:\l|  %retval = alloca i32, align 4\l  %text.addr = alloca ptr, align 8\l  %pattern.addr = alloca ptr, align 8\l  %matchlen.addr = alloca ptr, align 8\l  %idx = alloca i32, align 4\l  store ptr %text, ptr %text.addr, align 8\l  store ptr %pattern, ptr %pattern.addr, align 8\l  store ptr %matchlen, ptr %matchlen.addr, align 8\l  %0 = load ptr, ptr %matchlen.addr, align 8\l  store i32 0, ptr %0, align 4\l  %1 = load ptr, ptr %pattern.addr, align 8\l  %cmp = icmp ne ptr %1, null\l  br i1 %cmp, label %if.then, label %if.end15\l|{<s0>T|<s1>F}}"];
+	Node0x5584167903b0:s0 -> Node0x558416790a20[tooltip="entry -> if.then\nProbability 62.50%" ];
+	Node0x5584167903b0:s1 -> Node0x558416790a90[tooltip="entry -> if.end15\nProbability 37.50%" ];
+	Node0x558416790a20 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#cc403a70" fontname="Courier",label="{if.then:\l|  %2 = load ptr, ptr %pattern.addr, align 8\l  %arrayidx = getelementptr inbounds %struct.regex_t, ptr %2, i64 0\l  %type = getelementptr inbounds %struct.regex_t, ptr %arrayidx, i32 0, i32 0\l  %3 = load i8, ptr %type, align 8\l  %conv = zext i8 %3 to i32\l  %cmp1 = icmp eq i32 %conv, 2\l  br i1 %cmp1, label %if.then2, label %if.else\l|{<s0>T|<s1>F}}"];
+	Node0x558416790a20:s0 -> Node0x558416791150[tooltip="if.then -> if.then2\nProbability 50.00%" ];
+	Node0x558416790a20:s1 -> Node0x5584167911d0[tooltip="if.then -> if.else\nProbability 50.00%" ];
+	Node0x558416791150 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d0473d70" fontname="Courier",label="{if.then2:\l|  %4 = load ptr, ptr %pattern.addr, align 8\l  %arrayidx3 = getelementptr inbounds %struct.regex_t, ptr %4, i64 1\l  %5 = load ptr, ptr %text.addr, align 8\l  %6 = load ptr, ptr %matchlen.addr, align 8\l  %call = call noundef i32 @_ZL12matchpatternP7regex_tPKcPi(ptr noundef\l... %arrayidx3, ptr noundef %5, ptr noundef %6)\l  %tobool = icmp ne i32 %call, 0\l  %7 = zext i1 %tobool to i64\l  %cond = select i1 %tobool, i32 0, i32 -1\l  store i32 %cond, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x558416791150 -> Node0x558416791920[tooltip="if.then2 -> return\nProbability 100.00%" ];
+	Node0x5584167911d0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d0473d70" fontname="Courier",label="{if.else:\l|  store i32 -1, ptr %idx, align 4\l  br label %do.body\l}"];
+	Node0x5584167911d0 -> Node0x558416791aa0[tooltip="if.else -> do.body\nProbability 100.00%" ];
+	Node0x558416791aa0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{do.body:\l|  %8 = load i32, ptr %idx, align 4\l  %add = add nsw i32 %8, 1\l  store i32 %add, ptr %idx, align 4\l  %9 = load ptr, ptr %pattern.addr, align 8\l  %10 = load ptr, ptr %text.addr, align 8\l  %11 = load ptr, ptr %matchlen.addr, align 8\l  %call4 = call noundef i32 @_ZL12matchpatternP7regex_tPKcPi(ptr noundef %9,\l... ptr noundef %10, ptr noundef %11)\l  %tobool5 = icmp ne i32 %call4, 0\l  br i1 %tobool5, label %if.then6, label %if.end11\l|{<s0>T|<s1>F}}"];
+	Node0x558416791aa0:s0 -> Node0x5584167921a0[tooltip="do.body -> if.then6\nProbability 3.12%" ];
+	Node0x558416791aa0:s1 -> Node0x5584167921f0[tooltip="do.body -> if.end11\nProbability 96.88%" ];
+	Node0x5584167921a0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{if.then6:\l|  %12 = load ptr, ptr %text.addr, align 8\l  %arrayidx7 = getelementptr inbounds i8, ptr %12, i64 0\l  %13 = load i8, ptr %arrayidx7, align 1\l  %conv8 = sext i8 %13 to i32\l  %cmp9 = icmp eq i32 %conv8, 0\l  br i1 %cmp9, label %if.then10, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x5584167921a0:s0 -> Node0x558416792600[tooltip="if.then6 -> if.then10\nProbability 37.50%" ];
+	Node0x5584167921a0:s1 -> Node0x558416792680[tooltip="if.then6 -> if.end\nProbability 62.50%" ];
+	Node0x558416792600 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#de614d70" fontname="Courier",label="{if.then10:\l|  store i32 -1, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x558416792600 -> Node0x558416791920[tooltip="if.then10 -> return\nProbability 100.00%" ];
+	Node0x558416792680 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d8564670" fontname="Courier",label="{if.end:\l|  %14 = load i32, ptr %idx, align 4\l  store i32 %14, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x558416792680 -> Node0x558416791920[tooltip="if.end -> return\nProbability 100.00%" ];
+	Node0x5584167921f0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end11:\l|  br label %do.cond\l}"];
+	Node0x5584167921f0 -> Node0x558416792a40[tooltip="if.end11 -> do.cond\nProbability 100.00%" ];
+	Node0x558416792a40 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{do.cond:\l|  %15 = load ptr, ptr %text.addr, align 8\l  %incdec.ptr = getelementptr inbounds i8, ptr %15, i32 1\l  store ptr %incdec.ptr, ptr %text.addr, align 8\l  %16 = load i8, ptr %15, align 1\l  %conv12 = sext i8 %16 to i32\l  %cmp13 = icmp ne i32 %conv12, 0\l  br i1 %cmp13, label %do.body, label %do.end, !llvm.loop !6\l|{<s0>T|<s1>F}}"];
+	Node0x558416792a40:s0 -> Node0x558416791aa0[tooltip="do.cond -> do.body\nProbability 96.88%" ];
+	Node0x558416792a40:s1 -> Node0x558416792ed0[tooltip="do.cond -> do.end\nProbability 3.12%" ];
+	Node0x558416792ed0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{do.end:\l|  br label %if.end14\l}"];
+	Node0x558416792ed0 -> Node0x558416793100[tooltip="do.end -> if.end14\nProbability 100.00%" ];
+	Node0x558416793100 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{if.end14:\l|  br label %if.end15\l}"];
+	Node0x558416793100 -> Node0x558416790a90[tooltip="if.end14 -> if.end15\nProbability 100.00%" ];
+	Node0x558416790a90 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#cc403a70" fontname="Courier",label="{if.end15:\l|  store i32 -1, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x558416790a90 -> Node0x558416791920[tooltip="if.end15 -> return\nProbability 100.00%" ];
+	Node0x558416791920 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470" fontname="Courier",label="{return:\l|  %17 = load i32, ptr %retval, align 4\l  ret i32 %17\l}"];
+}

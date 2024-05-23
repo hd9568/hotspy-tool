@@ -1,0 +1,5 @@
+digraph "CFG for '_ZNSt16allocator_traitsISaIN9LAMMPS_NS18ComputeReduceChunk7value_tEEE10deallocateERS3_PS2_m' function" {
+	label="CFG for '_ZNSt16allocator_traitsISaIN9LAMMPS_NS18ComputeReduceChunk7value_tEEE10deallocateERS3_PS2_m' function";
+
+	Node0x562fdb260630 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %__a.addr = alloca ptr, align 8\l  %__p.addr = alloca ptr, align 8\l  %__n.addr = alloca i64, align 8\l  store ptr %__a, ptr %__a.addr, align 8\l  store ptr %__p, ptr %__p.addr, align 8\l  store i64 %__n, ptr %__n.addr, align 8\l  %0 = load ptr, ptr %__a.addr, align 8\l  %1 = load ptr, ptr %__p.addr, align 8\l  %2 = load i64, ptr %__n.addr, align 8\l  call void\l... @_ZN9__gnu_cxx13new_allocatorIN9LAMMPS_NS18ComputeReduceChunk7value_tEE10deall\l...ocateEPS3_m(ptr noundef nonnull align 1 dereferenceable(1) %0, ptr noundef %1,\l... i64 noundef %2)\l  ret void\l}"];
+}

@@ -1,0 +1,5 @@
+digraph "CFG for 'HYPRE_BoomerAMGSetPrintFileName' function" {
+	label="CFG for 'HYPRE_BoomerAMGSetPrintFileName' function";
+
+	Node0x55f5a9a7f050 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %solver.addr = alloca ptr, align 8\l  %print_file_name.addr = alloca ptr, align 8\l  store ptr %solver, ptr %solver.addr, align 8\l  store ptr %print_file_name, ptr %print_file_name.addr, align 8\l  %0 = load ptr, ptr %solver.addr, align 8\l  %1 = load ptr, ptr %print_file_name.addr, align 8\l  %call = call i32 @hypre_BoomerAMGSetPrintFileName(ptr noundef %0, ptr\l... noundef %1)\l  ret i32 %call\l}"];
+}

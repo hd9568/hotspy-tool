@@ -1,0 +1,14 @@
+digraph "CFG for '_ZN9LAMMPS_NS12NeighRequestD2Ev' function" {
+	label="CFG for '_ZN9LAMMPS_NS12NeighRequestD2Ev' function";
+
+	Node0x561f337c9380 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  store ptr getelementptr inbounds (\{ [4 x ptr] \}, ptr\l... @_ZTVN9LAMMPS_NS12NeighRequestE, i32 0, inrange i32 0, i32 2), ptr %this1,\l... align 8\l  %iskip = getelementptr inbounds %\"class.LAMMPS_NS::NeighRequest\", ptr\l... %this1, i32 0, i32 31\l  %0 = load ptr, ptr %iskip, align 8\l  %isnull = icmp eq ptr %0, null\l  br i1 %isnull, label %delete.end, label %delete.notnull\l|{<s0>T|<s1>F}}"];
+	Node0x561f337c9380:s0 -> Node0x561f337d0260[tooltip="entry -> delete.end\nProbability 37.50%" ];
+	Node0x561f337c9380:s1 -> Node0x561f337d02b0[tooltip="entry -> delete.notnull\nProbability 62.50%" ];
+	Node0x561f337d02b0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{delete.notnull:\l|  call void @_ZdaPv(ptr noundef %0) #7\l  br label %delete.end\l}"];
+	Node0x561f337d02b0 -> Node0x561f337d0260[tooltip="delete.notnull -> delete.end\nProbability 100.00%" ];
+	Node0x561f337d0260 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{delete.end:\l|  %memory = getelementptr inbounds %\"class.LAMMPS_NS::Pointers\", ptr %this1,\l... i32 0, i32 2\l  %1 = load ptr, ptr %memory, align 8\l  %2 = load ptr, ptr %1, align 8\l  %ijskip = getelementptr inbounds %\"class.LAMMPS_NS::NeighRequest\", ptr\l... %this1, i32 0, i32 32\l  invoke void @_ZN9LAMMPS_NS6Memory7destroyIiEEvRPPT_(ptr noundef nonnull\l... align 8 dereferenceable(184) %2, ptr noundef nonnull align 8\l... dereferenceable(8) %ijskip)\l          to label %invoke.cont unwind label %terminate.lpad\l}"];
+	Node0x561f337d0260 -> Node0x561f337d08a0[tooltip="delete.end -> invoke.cont\nProbability 100.00%" ];
+	Node0x561f337d0260 -> Node0x561f337d0920[tooltip="delete.end -> terminate.lpad\nProbability 0.00%" ];
+	Node0x561f337d08a0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{invoke.cont:\l|  call void @_ZN9LAMMPS_NS8PointersD2Ev(ptr noundef nonnull align 8\l... dereferenceable(184) %this1) #8\l  ret void\l}"];
+	Node0x561f337d0920 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f4c5ad70" fontname="Courier",label="{terminate.lpad:\l|  %3 = landingpad \{ ptr, i32 \}\l          catch ptr null\l  %4 = extractvalue \{ ptr, i32 \} %3, 0\l  call void @__clang_call_terminate(ptr %4) #9\l  unreachable\l}"];
+}

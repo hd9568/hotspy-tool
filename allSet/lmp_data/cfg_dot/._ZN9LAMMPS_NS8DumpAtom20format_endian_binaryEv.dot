@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN9LAMMPS_NS8DumpAtom20format_endian_binaryEv' function" {
+	label="CFG for '_ZN9LAMMPS_NS8DumpAtom20format_endian_binaryEv' function";
+
+	Node0x562c263bdbb0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %endian = alloca i32, align 4\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %ENDIAN = getelementptr inbounds %\"class.LAMMPS_NS::DumpAtom\", ptr %this1,\l... i32 0, i32 3\l  %0 = load i32, ptr %ENDIAN, align 4\l  store i32 %0, ptr %endian, align 4\l  %fp = getelementptr inbounds %\"class.LAMMPS_NS::Dump\", ptr %this1, i32 0,\l... i32 56\l  %1 = load ptr, ptr %fp, align 8\l  %call = call i64 @fwrite(ptr noundef %endian, i64 noundef 4, i64 noundef 1,\l... ptr noundef %1)\l  ret void\l}"];
+}

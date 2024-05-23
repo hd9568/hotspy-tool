@@ -1,0 +1,5 @@
+digraph "CFG for '_Z10exit_usagePKc' function" {
+	label="CFG for '_Z10exit_usagePKc' function";
+
+	Node0x563b368566d0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %argv0.addr = alloca ptr, align 8\l  store ptr %argv0, ptr %argv0.addr, align 8\l  %0 = load ptr, ptr %argv0.addr, align 8\l  %call = call i32 (ptr, ...) @printf(ptr noundef @.str, ptr noundef %0)\l  call void @exit(i32 noundef -1) #10\l  unreachable\l}"];
+}

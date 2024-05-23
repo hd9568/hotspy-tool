@@ -1,0 +1,9 @@
+digraph "CFG for '_ZNSt8_Rb_treeI5TupleS0_St9_IdentityIS0_ESt4lessIS0_ESaIS0_EED2Ev' function" {
+	label="CFG for '_ZNSt8_Rb_treeI5TupleS0_St9_IdentityIS0_ESt4lessIS0_ESaIS0_EED2Ev' function";
+
+	Node0x55dab480bd30 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %call = call noundef ptr\l... @_ZNSt8_Rb_treeI5TupleS0_St9_IdentityIS0_ESt4lessIS0_ESaIS0_EE8_M_beginEv(ptr\l... noundef nonnull align 8 dereferenceable(48) %this1) #3\l  invoke void\l... @_ZNSt8_Rb_treeI5TupleS0_St9_IdentityIS0_ESt4lessIS0_ESaIS0_EE8_M_eraseEPSt13_\l...Rb_tree_nodeIS0_E(ptr noundef nonnull align 8 dereferenceable(48) %this1, ptr\l... noundef %call)\l          to label %invoke.cont unwind label %terminate.lpad\l}"];
+	Node0x55dab480bd30 -> Node0x55dab480c370[tooltip="entry -> invoke.cont\nProbability 100.00%" ];
+	Node0x55dab480bd30 -> Node0x55dab480c3f0[tooltip="entry -> terminate.lpad\nProbability 0.00%" ];
+	Node0x55dab480c370 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{invoke.cont:\l|  %_M_impl = getelementptr inbounds %\"class.std::_Rb_tree.73\", ptr %this1,\l... i32 0, i32 0\l  call void\l... @_ZNSt8_Rb_treeI5TupleS0_St9_IdentityIS0_ESt4lessIS0_ESaIS0_EE13_Rb_tree_implI\l...S4_Lb1EED2Ev(ptr noundef nonnull align 8 dereferenceable(48) %_M_impl) #3\l  ret void\l}"];
+	Node0x55dab480c3f0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f4c5ad70" fontname="Courier",label="{terminate.lpad:\l|  %0 = landingpad \{ ptr, i32 \}\l          catch ptr null\l  %1 = extractvalue \{ ptr, i32 \} %0, 0\l  call void @__clang_call_terminate(ptr %1) #15\l  unreachable\l}"];
+}

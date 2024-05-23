@@ -1,0 +1,15 @@
+digraph "CFG for '_ZN3fmt6v9_lmp6detail9tm_writerINS0_8appenderEcE10on_24_hourENS1_14numeric_systemE' function" {
+	label="CFG for '_ZN3fmt6v9_lmp6detail9tm_writerINS0_8appenderEcE10on_24_hourENS1_14numeric_systemE' function";
+
+	Node0x5584169729b0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %ns.addr = alloca i32, align 4\l  store ptr %this, ptr %this.addr, align 8\l  store i32 %ns, ptr %ns.addr, align 4\l  %this1 = load ptr, ptr %this.addr, align 8\l  %is_classic_ = getelementptr inbounds\l... %\"class.fmt::v9_lmp::detail::tm_writer\", ptr %this1, i32 0, i32 1\l  %0 = load i8, ptr %is_classic_, align 8\l  %tobool = trunc i8 %0 to i1\l  br i1 %tobool, label %if.then, label %lor.lhs.false\l|{<s0>T|<s1>F}}"];
+	Node0x5584169729b0:s0 -> Node0x558416972e90[tooltip="entry -> if.then\nProbability 50.00%" ];
+	Node0x5584169729b0:s1 -> Node0x558416972f00[tooltip="entry -> lor.lhs.false\nProbability 50.00%" ];
+	Node0x558416972f00 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{lor.lhs.false:\l|  %1 = load i32, ptr %ns.addr, align 4\l  %cmp = icmp eq i32 %1, 0\l  br i1 %cmp, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x558416972f00:s0 -> Node0x558416972e90[tooltip="lor.lhs.false -> if.then\nProbability 37.50%" ];
+	Node0x558416972f00:s1 -> Node0x558416973160[tooltip="lor.lhs.false -> if.end\nProbability 62.50%" ];
+	Node0x558416972e90 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.then:\l|  %call = call noundef i32\l... @_ZNK3fmt6v9_lmp6detail9tm_writerINS0_8appenderEcE7tm_hourEv(ptr noundef\l... nonnull align 8 dereferenceable(32) %this1) #18\l  call void @_ZN3fmt6v9_lmp6detail9tm_writerINS0_8appenderEcE6write2Ei(ptr\l... noundef nonnull align 8 dereferenceable(32) %this1, i32 noundef %call)\l  br label %return\l}"];
+	Node0x558416972e90 -> Node0x558416973280[tooltip="if.then -> return\nProbability 100.00%" ];
+	Node0x558416973160 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{if.end:\l|  call void\l... @_ZN3fmt6v9_lmp6detail9tm_writerINS0_8appenderEcE16format_localizedEcc(ptr\l... noundef nonnull align 8 dereferenceable(32) %this1, i8 noundef signext 72, i8\l... noundef signext 79)\l  br label %return\l}"];
+	Node0x558416973160 -> Node0x558416973280[tooltip="if.end -> return\nProbability 100.00%" ];
+	Node0x558416973280 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{return:\l|  ret void\l}"];
+}

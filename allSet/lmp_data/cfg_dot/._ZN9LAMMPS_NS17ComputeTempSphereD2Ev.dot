@@ -1,0 +1,15 @@
+digraph "CFG for '_ZN9LAMMPS_NS17ComputeTempSphereD2Ev' function" {
+	label="CFG for '_ZN9LAMMPS_NS17ComputeTempSphereD2Ev' function";
+
+	Node0x55f2e400e570 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  store ptr getelementptr inbounds (\{ [43 x ptr] \}, ptr\l... @_ZTVN9LAMMPS_NS17ComputeTempSphereE, i32 0, inrange i32 0, i32 2), ptr\l... %this1, align 8\l  %id_bias = getelementptr inbounds %\"class.LAMMPS_NS::ComputeTempSphere\", ptr\l... %this1, i32 0, i32 3\l  %0 = load ptr, ptr %id_bias, align 8\l  %isnull = icmp eq ptr %0, null\l  br i1 %isnull, label %delete.end, label %delete.notnull\l|{<s0>T|<s1>F}}"];
+	Node0x55f2e400e570:s0 -> Node0x55f2e400e8f0[tooltip="entry -> delete.end\nProbability 37.50%" ];
+	Node0x55f2e400e570:s1 -> Node0x55f2e400e940[tooltip="entry -> delete.notnull\nProbability 62.50%" ];
+	Node0x55f2e400e940 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{delete.notnull:\l|  call void @_ZdaPv(ptr noundef %0) #10\l  br label %delete.end\l}"];
+	Node0x55f2e400e940 -> Node0x55f2e400e8f0[tooltip="delete.notnull -> delete.end\nProbability 100.00%" ];
+	Node0x55f2e400e8f0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{delete.end:\l|  %vector = getelementptr inbounds %\"class.LAMMPS_NS::Compute\", ptr %this1,\l... i32 0, i32 6\l  %1 = load ptr, ptr %vector, align 8\l  %isnull2 = icmp eq ptr %1, null\l  br i1 %isnull2, label %delete.end4, label %delete.notnull3\l|{<s0>T|<s1>F}}"];
+	Node0x55f2e400e8f0:s0 -> Node0x55f2e400ed50[tooltip="delete.end -> delete.end4\nProbability 37.50%" ];
+	Node0x55f2e400e8f0:s1 -> Node0x55f2e400edd0[tooltip="delete.end -> delete.notnull3\nProbability 62.50%" ];
+	Node0x55f2e400edd0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{delete.notnull3:\l|  call void @_ZdaPv(ptr noundef %1) #10\l  br label %delete.end4\l}"];
+	Node0x55f2e400edd0 -> Node0x55f2e400ed50[tooltip="delete.notnull3 -> delete.end4\nProbability 100.00%" ];
+	Node0x55f2e400ed50 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{delete.end4:\l|  call void @_ZN9LAMMPS_NS7ComputeD2Ev(ptr noundef nonnull align 8\l... dereferenceable(564) %this1) #11\l  ret void\l}"];
+}

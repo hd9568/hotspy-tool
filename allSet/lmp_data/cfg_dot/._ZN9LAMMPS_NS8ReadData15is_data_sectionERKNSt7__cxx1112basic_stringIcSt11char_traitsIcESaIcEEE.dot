@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN9LAMMPS_NS8ReadData15is_data_sectionERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE' function" {
+	label="CFG for '_ZN9LAMMPS_NS8ReadData15is_data_sectionERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE' function";
+
+	Node0x55c7e04c5720 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %keyword.addr = alloca ptr, align 8\l  store ptr %keyword, ptr %keyword.addr, align 8\l  %0 = load ptr, ptr %keyword.addr, align 8\l  %call = call noundef i64\l... @_ZNKSt13unordered_setINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4\l...hashIS5_ESt8equal_toIS5_ESaIS5_EE5countERKS5_(ptr noundef nonnull align 8\l... dereferenceable(56) @_ZL16section_keywordsB5cxx11, ptr noundef nonnull align\l... 8 dereferenceable(32) %0)\l  %cmp = icmp ugt i64 %call, 0\l  ret i1 %cmp\l}"];
+}

@@ -1,0 +1,28 @@
+digraph "Call graph: verify.ll" {
+	label="Call graph: verify.ll";
+
+	Node0x555c59633ed0 [shape=record,label="{verify_}"];
+	Node0x555c59633ed0 -> Node0x555c59634d20;
+	Node0x555c59633ed0 -> Node0x555c59635ab0;
+	Node0x555c59633ed0 -> Node0x555c59636030;
+	Node0x555c59633ed0 -> Node0x555c596362e0;
+	Node0x555c59633ed0 -> Node0x555c59636d20;
+	Node0x555c59633ed0 -> Node0x555c59636450;
+	Node0x555c59633ed0 -> Node0x555c59636870;
+	Node0x555c59633ed0 -> Node0x555c59636a90;
+	Node0x555c59633ed0 -> Node0x555c59636fa0;
+	Node0x555c59633ed0 -> Node0x555c5963a9a0;
+	Node0x555c5963aed0 [shape=record,label="{accumulate_norms_}"];
+	Node0x555c59634d20 [shape=record,label="{error_norm_}"];
+	Node0x555c59635ab0 [shape=record,label="{copy_faces_}"];
+	Node0x555c59636030 [shape=record,label="{rhs_norm_}"];
+	Node0x555c59636450 [shape=record,label="{_FortranACharacterCompareScalar1}"];
+	Node0x555c59636870 [shape=record,label="{_FortranAioBeginExternalFormattedOutput}"];
+	Node0x555c59636a90 [shape=record,label="{_FortranAioOutputAscii}"];
+	Node0x555c59636d20 [shape=record,label="{_FortranAioEndIoStatement}"];
+	Node0x555c59636fa0 [shape=record,label="{_FortranAioOutputReal64}"];
+	Node0x555c5963a9a0 [shape=record,label="{_FortranAioOutputInteger32}"];
+	Node0x555c5963d500 [shape=record,label="{llvm.stacksave.p0}"];
+	Node0x555c5963dfc0 [shape=record,label="{llvm.stackrestore.p0}"];
+	Node0x555c596362e0 [shape=record,label="{llvm.fabs.f64}"];
+}

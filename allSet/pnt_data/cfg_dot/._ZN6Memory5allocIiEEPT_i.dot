@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN6Memory5allocIiEEPT_i' function" {
+	label="CFG for '_ZN6Memory5allocIiEEPT_i' function";
+
+	Node0x56307d5e9d30 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %count.addr = alloca i32, align 4\l  store i32 %count, ptr %count.addr, align 4\l  %0 = load i32, ptr %count.addr, align 4\l  %conv = sext i32 %0 to i64\l  %mul = mul i64 %conv, 4\l  %call = call noalias ptr @malloc(i64 noundef %mul) #17\l  ret ptr %call\l}"];
+}

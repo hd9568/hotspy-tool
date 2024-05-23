@@ -1,0 +1,12 @@
+digraph "CFG for '_ZN9LAMMPS_NS11AtomVecBody16write_data_bonusEP8_IO_FILEiPdi' function" {
+	label="CFG for '_ZN9LAMMPS_NS11AtomVecBody16write_data_bonusEP8_IO_FILEiPdi' function";
+
+	Node0x564c7b4e0a50 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %fp.addr = alloca ptr, align 8\l  %n.addr = alloca i32, align 4\l  %buf.addr = alloca ptr, align 8\l  %.addr = alloca i32, align 4\l  %i = alloca i32, align 4\l  store ptr %this, ptr %this.addr, align 8\l  store ptr %fp, ptr %fp.addr, align 8\l  store i32 %n, ptr %n.addr, align 4\l  store ptr %buf, ptr %buf.addr, align 8\l  store i32 %0, ptr %.addr, align 4\l  %this1 = load ptr, ptr %this.addr, align 8\l  store i32 0, ptr %i, align 4\l  br label %while.cond\l}"];
+	Node0x564c7b4e0a50 -> Node0x564c7b4e0b30[tooltip="entry -> while.cond\nProbability 100.00%" ];
+	Node0x564c7b4e0b30 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{while.cond:\l|  %1 = load i32, ptr %i, align 4\l  %2 = load i32, ptr %n.addr, align 4\l  %cmp = icmp slt i32 %1, %2\l  br i1 %cmp, label %while.body, label %while.end\l|{<s0>T|<s1>F}}"];
+	Node0x564c7b4e0b30:s0 -> Node0x564c7b4e0d70[tooltip="while.cond -> while.body\nProbability 96.88%" ];
+	Node0x564c7b4e0b30:s1 -> Node0x564c7b4e1920[tooltip="while.cond -> while.end\nProbability 3.12%" ];
+	Node0x564c7b4e0d70 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{while.body:\l|  %bptr = getelementptr inbounds %\"class.LAMMPS_NS::AtomVecBody\", ptr\l... %this1, i32 0, i32 1\l  %3 = load ptr, ptr %bptr, align 8\l  %4 = load ptr, ptr %fp.addr, align 8\l  %5 = load ptr, ptr %buf.addr, align 8\l  %6 = load i32, ptr %i, align 4\l  %idxprom = sext i32 %6 to i64\l  %arrayidx = getelementptr inbounds double, ptr %5, i64 %idxprom\l  %vtable = load ptr, ptr %3, align 8\l  %vfn = getelementptr inbounds ptr, ptr %vtable, i64 8\l  %7 = load ptr, ptr %vfn, align 8\l  %call = call noundef i32 %7(ptr noundef nonnull align 8 dereferenceable(232)\l... %3, ptr noundef %4, ptr noundef %arrayidx)\l  %8 = load i32, ptr %i, align 4\l  %add = add nsw i32 %8, %call\l  store i32 %add, ptr %i, align 4\l  br label %while.cond, !llvm.loop !6\l}"];
+	Node0x564c7b4e0d70 -> Node0x564c7b4e0b30[tooltip="while.body -> while.cond\nProbability 100.00%" ];
+	Node0x564c7b4e1920 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{while.end:\l|  ret void\l}"];
+}

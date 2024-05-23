@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN9LAMMPS_NS14ValueTokenizer11next_stringB5cxx11Ev' function" {
+	label="CFG for '_ZN9LAMMPS_NS14ValueTokenizer11next_stringB5cxx11Ev' function";
+
+	Node0x55ce20be2770 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %result.ptr = alloca ptr, align 8\l  %this.addr = alloca ptr, align 8\l  store ptr %agg.result, ptr %result.ptr, align 8\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %tokens = getelementptr inbounds %\"class.LAMMPS_NS::ValueTokenizer\", ptr\l... %this1, i32 0, i32 0\l  call void @_ZN9LAMMPS_NS9Tokenizer4nextB5cxx11Ev(ptr dead_on_unwind writable\l... sret(%\"class.std::__cxx11::basic_string\") align 8 %agg.result, ptr noundef\l... nonnull align 8 dereferenceable(80) %tokens)\l  ret void\l}"];
+}

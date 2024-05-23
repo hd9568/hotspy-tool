@@ -1,0 +1,16 @@
+digraph "CFG for '_ZN9qs_vectorI22MC_Facet_Geometry_CellEaSERKS1_' function" {
+	label="CFG for '_ZN9qs_vectorI22MC_Facet_Geometry_CellEaSERKS1_' function";
+
+	Node0x55dab48aac80 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %aa.addr = alloca ptr, align 8\l  %temp = alloca %class.qs_vector.66, align 8\l  %exn.slot = alloca ptr, align 8\l  %ehselector.slot = alloca i32, align 4\l  store ptr %this, ptr %this.addr, align 8\l  store ptr %aa, ptr %aa.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %0 = load ptr, ptr %aa.addr, align 8\l  %cmp = icmp ne ptr %0, %this1\l  br i1 %cmp, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x55dab48aac80:s0 -> Node0x55dab48ab260[tooltip="entry -> if.then\nProbability 62.50%" ];
+	Node0x55dab48aac80:s1 -> Node0x55dab48ab2d0[tooltip="entry -> if.end\nProbability 37.50%" ];
+	Node0x55dab48ab260 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.then:\l|  %1 = load ptr, ptr %aa.addr, align 8\l  call void @_ZN9qs_vectorI22MC_Facet_Geometry_CellEC2ERKS1_(ptr noundef\l... nonnull align 8 dereferenceable(24) %temp, ptr noundef nonnull align 8\l... dereferenceable(24) %1)\l  invoke void @_ZN9qs_vectorI22MC_Facet_Geometry_CellE4swapERS1_(ptr noundef\l... nonnull align 8 dereferenceable(24) %this1, ptr noundef nonnull align 8\l... dereferenceable(24) %temp)\l          to label %invoke.cont unwind label %lpad\l}"];
+	Node0x55dab48ab260 -> Node0x55dab48ab640[tooltip="if.then -> invoke.cont\nProbability 100.00%" ];
+	Node0x55dab48ab260 -> Node0x55dab48aabc0[tooltip="if.then -> lpad\nProbability 0.00%" ];
+	Node0x55dab48ab640 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{invoke.cont:\l|  call void @_ZN9qs_vectorI22MC_Facet_Geometry_CellED2Ev(ptr noundef nonnull\l... align 8 dereferenceable(24) %temp) #3\l  br label %if.end\l}"];
+	Node0x55dab48ab640 -> Node0x55dab48ab2d0[tooltip="invoke.cont -> if.end\nProbability 100.00%" ];
+	Node0x55dab48aabc0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f3c7b170" fontname="Courier",label="{lpad:\l|  %2 = landingpad \{ ptr, i32 \}\l          cleanup\l  %3 = extractvalue \{ ptr, i32 \} %2, 0\l  store ptr %3, ptr %exn.slot, align 8\l  %4 = extractvalue \{ ptr, i32 \} %2, 1\l  store i32 %4, ptr %ehselector.slot, align 4\l  call void @_ZN9qs_vectorI22MC_Facet_Geometry_CellED2Ev(ptr noundef nonnull\l... align 8 dereferenceable(24) %temp) #3\l  br label %eh.resume\l}"];
+	Node0x55dab48aabc0 -> Node0x55dab48ac040[tooltip="lpad -> eh.resume\nProbability 100.00%" ];
+	Node0x55dab48ab2d0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  ret ptr %this1\l}"];
+	Node0x55dab48ac040 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f3c7b170" fontname="Courier",label="{eh.resume:\l|  %exn = load ptr, ptr %exn.slot, align 8\l  %sel = load i32, ptr %ehselector.slot, align 4\l  %lpad.val = insertvalue \{ ptr, i32 \} poison, ptr %exn, 0\l  %lpad.val2 = insertvalue \{ ptr, i32 \} %lpad.val, i32 %sel, 1\l  resume \{ ptr, i32 \} %lpad.val2\l}"];
+}

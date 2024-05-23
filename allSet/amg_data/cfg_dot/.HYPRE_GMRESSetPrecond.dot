@@ -1,0 +1,5 @@
+digraph "CFG for 'HYPRE_GMRESSetPrecond' function" {
+	label="CFG for 'HYPRE_GMRESSetPrecond' function";
+
+	Node0x561d3dbf2470 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %solver.addr = alloca ptr, align 8\l  %precond.addr = alloca ptr, align 8\l  %precond_setup.addr = alloca ptr, align 8\l  %precond_solver.addr = alloca ptr, align 8\l  store ptr %solver, ptr %solver.addr, align 8\l  store ptr %precond, ptr %precond.addr, align 8\l  store ptr %precond_setup, ptr %precond_setup.addr, align 8\l  store ptr %precond_solver, ptr %precond_solver.addr, align 8\l  %0 = load ptr, ptr %solver.addr, align 8\l  %1 = load ptr, ptr %precond.addr, align 8\l  %2 = load ptr, ptr %precond_setup.addr, align 8\l  %3 = load ptr, ptr %precond_solver.addr, align 8\l  %call = call i32 @hypre_GMRESSetPrecond(ptr noundef %0, ptr noundef %1, ptr\l... noundef %2, ptr noundef %3)\l  ret i32 %call\l}"];
+}

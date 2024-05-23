@@ -1,0 +1,22 @@
+digraph "CFG for '_ZN3fmt6v9_lmp6detail13specs_checkerINS1_13specs_handlerIcEEE7on_signENS0_4sign4typeE' function" {
+	label="CFG for '_ZN3fmt6v9_lmp6detail13specs_checkerINS1_13specs_handlerIcEEE7on_signENS0_4sign4typeE' function";
+
+	Node0x55fec34d87d0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %s.addr = alloca i8, align 1\l  store ptr %this, ptr %this.addr, align 8\l  store i8 %s, ptr %s.addr, align 1\l  %this1 = load ptr, ptr %this.addr, align 8\l  call void\l... @_ZN3fmt6v9_lmp6detail13specs_checkerINS1_13specs_handlerIcEEE24require_numeri\l...c_argumentEv(ptr noundef nonnull align 8 dereferenceable(28) %this1)\l  %arg_type_ = getelementptr inbounds\l... %\"class.fmt::v9_lmp::detail::specs_checker\", ptr %this1, i32 0, i32 1\l  %0 = load i32, ptr %arg_type_, align 8\l  %call = call noundef zeroext i1\l... @_ZN3fmt6v9_lmp6detail16is_integral_typeENS1_4typeE(i32 noundef %0)\l  br i1 %call, label %land.lhs.true, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x55fec34d87d0:s0 -> Node0x55fec34d8f90[tooltip="entry -> land.lhs.true\nProbability 50.00%" ];
+	Node0x55fec34d87d0:s1 -> Node0x55fec34d9010[tooltip="entry -> if.end\nProbability 50.00%" ];
+	Node0x55fec34d8f90 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{land.lhs.true:\l|  %arg_type_2 = getelementptr inbounds\l... %\"class.fmt::v9_lmp::detail::specs_checker\", ptr %this1, i32 0, i32 1\l  %1 = load i32, ptr %arg_type_2, align 8\l  %cmp = icmp ne i32 %1, 1\l  br i1 %cmp, label %land.lhs.true3, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x55fec34d8f90:s0 -> Node0x55fec34d9350[tooltip="land.lhs.true -> land.lhs.true3\nProbability 50.00%" ];
+	Node0x55fec34d8f90:s1 -> Node0x55fec34d9010[tooltip="land.lhs.true -> if.end\nProbability 50.00%" ];
+	Node0x55fec34d9350 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470" fontname="Courier",label="{land.lhs.true3:\l|  %arg_type_4 = getelementptr inbounds\l... %\"class.fmt::v9_lmp::detail::specs_checker\", ptr %this1, i32 0, i32 1\l  %2 = load i32, ptr %arg_type_4, align 8\l  %cmp5 = icmp ne i32 %2, 3\l  br i1 %cmp5, label %land.lhs.true6, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x55fec34d9350:s0 -> Node0x55fec34d9840[tooltip="land.lhs.true3 -> land.lhs.true6\nProbability 50.00%" ];
+	Node0x55fec34d9350:s1 -> Node0x55fec34d9010[tooltip="land.lhs.true3 -> if.end\nProbability 50.00%" ];
+	Node0x55fec34d9840 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#ca3b3770" fontname="Courier",label="{land.lhs.true6:\l|  %arg_type_7 = getelementptr inbounds\l... %\"class.fmt::v9_lmp::detail::specs_checker\", ptr %this1, i32 0, i32 1\l  %3 = load i32, ptr %arg_type_7, align 8\l  %cmp8 = icmp ne i32 %3, 5\l  br i1 %cmp8, label %land.lhs.true9, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x55fec34d9840:s0 -> Node0x55fec34d9b90[tooltip="land.lhs.true6 -> land.lhs.true9\nProbability 50.00%" ];
+	Node0x55fec34d9840:s1 -> Node0x55fec34d9010[tooltip="land.lhs.true6 -> if.end\nProbability 50.00%" ];
+	Node0x55fec34d9b90 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d0473d70" fontname="Courier",label="{land.lhs.true9:\l|  %arg_type_10 = getelementptr inbounds\l... %\"class.fmt::v9_lmp::detail::specs_checker\", ptr %this1, i32 0, i32 1\l  %4 = load i32, ptr %arg_type_10, align 8\l  %cmp11 = icmp ne i32 %4, 8\l  br i1 %cmp11, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x55fec34d9b90:s0 -> Node0x55fec34d9ee0[tooltip="land.lhs.true9 -> if.then\nProbability 50.00%" ];
+	Node0x55fec34d9b90:s1 -> Node0x55fec34d9010[tooltip="land.lhs.true9 -> if.end\nProbability 50.00%" ];
+	Node0x55fec34d9ee0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{if.then:\l|  call void @_ZN3fmt6v9_lmp6detail13specs_handlerIcE8on_errorEPKc(ptr\l... noundef nonnull align 8 dereferenceable(24) %this1, ptr noundef @.str.43)\l  br label %if.end\l}"];
+	Node0x55fec34d9ee0 -> Node0x55fec34d9010[tooltip="if.then -> if.end\nProbability 100.00%" ];
+	Node0x55fec34d9010 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  %5 = load i8, ptr %s.addr, align 1\l  call void\l... @_ZN3fmt6v9_lmp6detail12specs_setterIcE7on_signENS0_4sign4typeE(ptr noundef\l... nonnull align 8 dereferenceable(8) %this1, i8 noundef zeroext %5)\l  ret void\l}"];
+}

@@ -1,0 +1,5 @@
+digraph "CFG for 'InitBucket' function" {
+	label="CFG for 'InitBucket' function";
+
+	Node0x55e2c2bc9380 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %b.addr = alloca ptr, align 8\l  store ptr %b, ptr %b.addr, align 8\l  %0 = load ptr, ptr %b.addr, align 8\l  %hopInfo = getelementptr inbounds %struct.hypre_HopscotchBucket, ptr %0, i32\l... 0, i32 0\l  store volatile i32 0, ptr %hopInfo, align 4\l  %1 = load ptr, ptr %b.addr, align 8\l  %hash = getelementptr inbounds %struct.hypre_HopscotchBucket, ptr %1, i32 0,\l... i32 1\l  store volatile i32 0, ptr %hash, align 4\l  ret void\l}"];
+}

@@ -1,0 +1,12 @@
+digraph "CFG for '_ZZN3fmt6v9_lmp6detail12count_digitsILi4EoEEiT0_ENKUloE_clEo' function" {
+	label="CFG for '_ZZN3fmt6v9_lmp6detail12count_digitsILi4EoEEiT0_ENKUloE_clEo' function";
+
+	Node0x55fec35f2a70 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{entry:\l|  %m = alloca i128, align 16\l  %this.addr = alloca ptr, align 8\l  %m.addr = alloca i128, align 16\l  %num_digits = alloca i32, align 4\l  %0 = getelementptr inbounds \{ i64, i64 \}, ptr %m, i32 0, i32 0\l  store i64 %m.coerce0, ptr %0, align 16\l  %1 = getelementptr inbounds \{ i64, i64 \}, ptr %m, i32 0, i32 1\l  store i64 %m.coerce1, ptr %1, align 8\l  %m1 = load i128, ptr %m, align 16\l  store ptr %this, ptr %this.addr, align 8\l  store i128 %m1, ptr %m.addr, align 16\l  %this2 = load ptr, ptr %this.addr, align 8\l  store i32 0, ptr %num_digits, align 4\l  br label %do.body\l}"];
+	Node0x55fec35f2a70 -> Node0x55fec35f2ac0[tooltip="entry -> do.body\nProbability 100.00%" ];
+	Node0x55fec35f2ac0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{do.body:\l|  %2 = load i32, ptr %num_digits, align 4\l  %inc = add nsw i32 %2, 1\l  store i32 %inc, ptr %num_digits, align 4\l  br label %do.cond\l}"];
+	Node0x55fec35f2ac0 -> Node0x55fec35f3770[tooltip="do.body -> do.cond\nProbability 100.00%" ];
+	Node0x55fec35f3770 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{do.cond:\l|  %3 = load i128, ptr %m.addr, align 16\l  %shr = lshr i128 %3, 4\l  store i128 %shr, ptr %m.addr, align 16\l  %cmp = icmp ne i128 %shr, 0\l  br i1 %cmp, label %do.body, label %do.end, !llvm.loop !6\l|{<s0>T|<s1>F}}"];
+	Node0x55fec35f3770:s0 -> Node0x55fec35f2ac0[tooltip="do.cond -> do.body\nProbability 96.88%" ];
+	Node0x55fec35f3770:s1 -> Node0x55fec35f3ce0[tooltip="do.cond -> do.end\nProbability 3.12%" ];
+	Node0x55fec35f3ce0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{do.end:\l|  %4 = load i32, ptr %num_digits, align 4\l  ret i32 %4\l}"];
+}

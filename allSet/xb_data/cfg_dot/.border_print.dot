@@ -1,0 +1,5 @@
+digraph "CFG for 'border_print' function" {
+	label="CFG for 'border_print' function";
+
+	Node0x55c2a7fb1d40 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %call = call i32 (ptr, ...) @printf(ptr noundef @.str.36)\l  ret void\l}"];
+}

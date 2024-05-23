@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN9LAMMPS_NS18ComputeTempProfile15reset_extra_dofEv' function" {
+	label="CFG for '_ZN9LAMMPS_NS18ComputeTempProfile15reset_extra_dofEv' function";
+
+	Node0x5623988006d0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %domain = getelementptr inbounds %\"class.LAMMPS_NS::Pointers\", ptr %this1,\l... i32 0, i32 10\l  %0 = load ptr, ptr %domain, align 8\l  %1 = load ptr, ptr %0, align 8\l  %dimension = getelementptr inbounds %\"class.LAMMPS_NS::Domain\", ptr %1, i32\l... 0, i32 2\l  %2 = load i32, ptr %dimension, align 4\l  %conv = sitofp i32 %2 to double\l  %nstreaming = getelementptr inbounds %\"class.LAMMPS_NS::ComputeTempProfile\",\l... ptr %this1, i32 0, i32 14\l  %3 = load double, ptr %nstreaming, align 8\l  %sub = fsub double %conv, %3\l  %extra_dof = getelementptr inbounds %\"class.LAMMPS_NS::Compute\", ptr %this1,\l... i32 0, i32 62\l  store double %sub, ptr %extra_dof, align 8\l  ret void\l}"];
+}

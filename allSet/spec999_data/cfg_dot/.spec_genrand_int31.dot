@@ -1,0 +1,5 @@
+digraph "CFG for 'spec_genrand_int31' function" {
+	label="CFG for 'spec_genrand_int31' function";
+
+	Node0x5614a63e8830 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %call = call i64 @spec_genrand_int32()\l  %shr = lshr i64 %call, 1\l  ret i64 %shr\l}"];
+}

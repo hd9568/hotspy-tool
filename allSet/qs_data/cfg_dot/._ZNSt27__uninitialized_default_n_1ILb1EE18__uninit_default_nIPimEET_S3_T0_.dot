@@ -1,0 +1,5 @@
+digraph "CFG for '_ZNSt27__uninitialized_default_n_1ILb1EE18__uninit_default_nIPimEET_S3_T0_' function" {
+	label="CFG for '_ZNSt27__uninitialized_default_n_1ILb1EE18__uninit_default_nIPimEET_S3_T0_' function";
+
+	Node0x562da20443f0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %__first.addr = alloca ptr, align 8\l  %__n.addr = alloca i64, align 8\l  %ref.tmp = alloca i32, align 4\l  store ptr %__first, ptr %__first.addr, align 8\l  store i64 %__n, ptr %__n.addr, align 8\l  %0 = load ptr, ptr %__first.addr, align 8\l  %1 = load i64, ptr %__n.addr, align 8\l  store i32 0, ptr %ref.tmp, align 4\l  %call = call noundef ptr @_ZSt6fill_nIPimiET_S1_T0_RKT1_(ptr noundef %0, i64\l... noundef %1, ptr noundef nonnull align 4 dereferenceable(4) %ref.tmp)\l  ret ptr %call\l}"];
+}

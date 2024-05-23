@@ -1,0 +1,5 @@
+digraph "CFG for '_ZSt3powIiiEN9__gnu_cxx11__promote_2IT_T0_NS0_9__promoteIS2_Xsr3std12__is_integerIS2_EE7__valueEE6__typeENS4_IS3_Xsr3std12__is_integerIS3_EE7__valueEE6__typeEE6__typeES2_S3_' function" {
+	label="CFG for '_ZSt3powIiiEN9__gnu_cxx11__promote_2IT_T0_NS0_9__promoteIS2_Xsr3std12__is_integerIS2_EE7__valueEE6__typeENS4_IS3_Xsr3std12__is_integerIS3_EE7__valueEE6__typeEE6__typeES2_S3_' function";
+
+	Node0x555f5b0d35e0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %__x.addr = alloca i32, align 4\l  %__y.addr = alloca i32, align 4\l  store i32 %__x, ptr %__x.addr, align 4\l  store i32 %__y, ptr %__y.addr, align 4\l  %0 = load i32, ptr %__x.addr, align 4\l  %conv = sitofp i32 %0 to double\l  %1 = load i32, ptr %__y.addr, align 4\l  %conv1 = sitofp i32 %1 to double\l  %call = call double @pow(double noundef %conv, double noundef %conv1) #12\l  ret double %call\l}"];
+}

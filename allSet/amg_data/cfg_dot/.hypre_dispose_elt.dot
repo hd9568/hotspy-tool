@@ -1,0 +1,5 @@
+digraph "CFG for 'hypre_dispose_elt' function" {
+	label="CFG for 'hypre_dispose_elt' function";
+
+	Node0x564798d609e0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %element_ptr.addr = alloca ptr, align 8\l  store ptr %element_ptr, ptr %element_ptr.addr, align 8\l  %0 = load ptr, ptr %element_ptr.addr, align 8\l  call void @free(ptr noundef %0) #4\l  ret void\l}"];
+}

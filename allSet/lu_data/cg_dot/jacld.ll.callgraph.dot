@@ -1,0 +1,13 @@
+digraph "Call graph: jacld.ll" {
+	label="Call graph: jacld.ll";
+
+	Node0x55ecf7bea650 [shape=record,label="{jacld_}"];
+	Node0x55ecf7bea650 -> Node0x55ecf7bf0390;
+	Node0x55ecf7bea650 -> Node0x55ecf7bf0820;
+	Node0x55ecf7bea650 -> Node0x55ecf7bf0c80;
+	Node0x55ecf7bf0390 [shape=record,label="{timer_start_}"];
+	Node0x55ecf7bf0c80 [shape=record,label="{timer_stop_}"];
+	Node0x55ecf7bf1210 [shape=record,label="{llvm.stacksave.p0}"];
+	Node0x55ecf7bf1290 [shape=record,label="{llvm.stackrestore.p0}"];
+	Node0x55ecf7bf0820 [shape=record,label="{llvm.powi.f64.i32}"];
+}

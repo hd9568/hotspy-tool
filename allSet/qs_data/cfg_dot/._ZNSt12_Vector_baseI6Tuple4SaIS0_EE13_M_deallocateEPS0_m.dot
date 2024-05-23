@@ -1,0 +1,10 @@
+digraph "CFG for '_ZNSt12_Vector_baseI6Tuple4SaIS0_EE13_M_deallocateEPS0_m' function" {
+	label="CFG for '_ZNSt12_Vector_baseI6Tuple4SaIS0_EE13_M_deallocateEPS0_m' function";
+
+	Node0x55c6063c2df0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %__p.addr = alloca ptr, align 8\l  %__n.addr = alloca i64, align 8\l  store ptr %this, ptr %this.addr, align 8\l  store ptr %__p, ptr %__p.addr, align 8\l  store i64 %__n, ptr %__n.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %0 = load ptr, ptr %__p.addr, align 8\l  %tobool = icmp ne ptr %0, null\l  br i1 %tobool, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x55c6063c2df0:s0 -> Node0x55c6063c2e60[tooltip="entry -> if.then\nProbability 62.50%" ];
+	Node0x55c6063c2df0:s1 -> Node0x55c6063c36b0[tooltip="entry -> if.end\nProbability 37.50%" ];
+	Node0x55c6063c2e60 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.then:\l|  %_M_impl = getelementptr inbounds %\"struct.std::_Vector_base\", ptr %this1,\l... i32 0, i32 0\l  %1 = load ptr, ptr %__p.addr, align 8\l  %2 = load i64, ptr %__n.addr, align 8\l  call void @_ZNSt16allocator_traitsISaI6Tuple4EE10deallocateERS1_PS0_m(ptr\l... noundef nonnull align 1 dereferenceable(1) %_M_impl, ptr noundef %1, i64\l... noundef %2)\l  br label %if.end\l}"];
+	Node0x55c6063c2e60 -> Node0x55c6063c36b0[tooltip="if.then -> if.end\nProbability 100.00%" ];
+	Node0x55c6063c36b0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  ret void\l}"];
+}

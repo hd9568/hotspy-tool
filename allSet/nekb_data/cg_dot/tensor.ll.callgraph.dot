@@ -1,0 +1,9 @@
+digraph "Call graph: tensor.ll" {
+	label="Call graph: tensor.ll";
+
+	Node0x55fbdd417200 [shape=record,label="{tensor_dot}"];
+	Node0x55fbdd417200 -> Node0x55fbdd4172b0;
+	Node0x55fbdd4172b0 [shape=record,label="{llvm.fmuladd.f64}"];
+	Node0x55fbdd417770 [shape=record,label="{tensor_mtxm}"];
+	Node0x55fbdd417770 -> Node0x55fbdd417200;
+}

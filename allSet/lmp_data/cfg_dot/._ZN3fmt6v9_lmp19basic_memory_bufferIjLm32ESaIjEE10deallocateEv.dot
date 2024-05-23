@@ -1,0 +1,10 @@
+digraph "CFG for '_ZN3fmt6v9_lmp19basic_memory_bufferIjLm32ESaIjEE10deallocateEv' function" {
+	label="CFG for '_ZN3fmt6v9_lmp19basic_memory_bufferIjLm32ESaIjEE10deallocateEv' function";
+
+	Node0x556bfec81220 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %data = alloca ptr, align 8\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %call = call noundef ptr @_ZN3fmt6v9_lmp6detail6bufferIjE4dataEv(ptr noundef\l... nonnull align 8 dereferenceable(32) %this1) #3\l  store ptr %call, ptr %data, align 8\l  %0 = load ptr, ptr %data, align 8\l  %store_ = getelementptr inbounds\l... %\"class.fmt::v9_lmp::basic_memory_buffer.113\", ptr %this1, i32 0, i32 1\l  %arraydecay = getelementptr inbounds [32 x i32], ptr %store_, i64 0, i64 0\l  %cmp = icmp ne ptr %0, %arraydecay\l  br i1 %cmp, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x556bfec81220:s0 -> Node0x556bfec81bb0[tooltip="entry -> if.then\nProbability 62.50%" ];
+	Node0x556bfec81220:s1 -> Node0x556bfec81c20[tooltip="entry -> if.end\nProbability 37.50%" ];
+	Node0x556bfec81bb0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.then:\l|  %alloc_ = getelementptr inbounds\l... %\"class.fmt::v9_lmp::basic_memory_buffer.113\", ptr %this1, i32 0, i32 2\l  %1 = load ptr, ptr %data, align 8\l  %call2 = call noundef i64 @_ZNK3fmt6v9_lmp6detail6bufferIjE8capacityEv(ptr\l... noundef nonnull align 8 dereferenceable(32) %this1) #3\l  call void @_ZN9__gnu_cxx13new_allocatorIjE10deallocateEPjm(ptr noundef\l... nonnull align 1 dereferenceable(1) %alloc_, ptr noundef %1, i64 noundef\l... %call2)\l  br label %if.end\l}"];
+	Node0x556bfec81bb0 -> Node0x556bfec81c20[tooltip="if.then -> if.end\nProbability 100.00%" ];
+	Node0x556bfec81c20 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  ret void\l}"];
+}

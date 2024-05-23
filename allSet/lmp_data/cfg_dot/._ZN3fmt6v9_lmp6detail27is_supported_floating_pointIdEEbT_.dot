@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN3fmt6v9_lmp6detail27is_supported_floating_pointIdEEbT_' function" {
+	label="CFG for '_ZN3fmt6v9_lmp6detail27is_supported_floating_pointIdEEbT_' function";
+
+	Node0x556bfeb4fc10 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %.addr = alloca double, align 8\l  store double %0, ptr %.addr, align 8\l  ret i1 true\l}"];
+}

@@ -1,0 +1,9 @@
+digraph "CFG for '_ZN9__gnu_cxx13new_allocatorISt13_Rb_tree_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEPFPN9LAMMPS_NS7AtomVecEPNSA_6LAMMPSEEEEE8allocateEmPKv' function" {
+	label="CFG for '_ZN9__gnu_cxx13new_allocatorISt13_Rb_tree_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEPFPN9LAMMPS_NS7AtomVecEPNSA_6LAMMPSEEEEE8allocateEmPKv' function";
+
+	Node0x55aea9202ed0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %__n.addr = alloca i64, align 8\l  %.addr = alloca ptr, align 8\l  store ptr %this, ptr %this.addr, align 8\l  store i64 %__n, ptr %__n.addr, align 8\l  store ptr %0, ptr %.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %1 = load i64, ptr %__n.addr, align 8\l  %call = call noundef i64\l... @_ZNK9__gnu_cxx13new_allocatorISt13_Rb_tree_nodeISt4pairIKNSt7__cxx1112basic_s\l...tringIcSt11char_traitsIcESaIcEEEPFPN9LAMMPS_NS7AtomVecEPNSA_6LAMMPSEEEEE8max_si\l...zeEv(ptr noundef nonnull align 1 dereferenceable(1) %this1) #15\l  %cmp = icmp ugt i64 %1, %call\l  br i1 %cmp, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x55aea9202ed0:s0 -> Node0x55aea92035d0[tooltip="entry -> if.then\nProbability 0.00%" ];
+	Node0x55aea9202ed0:s1 -> Node0x55aea9203640[tooltip="entry -> if.end\nProbability 100.00%" ];
+	Node0x55aea92035d0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f4c5ad70" fontname="Courier",label="{if.then:\l|  call void @_ZSt17__throw_bad_allocv() #16\l  unreachable\l}"];
+	Node0x55aea9203640 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  %2 = load i64, ptr %__n.addr, align 8\l  %mul = mul i64 %2, 72\l  %call2 = call noalias noundef nonnull ptr @_Znwm(i64 noundef %mul) #17\l  ret ptr %call2\l}"];
+}

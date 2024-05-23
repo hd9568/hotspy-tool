@@ -1,0 +1,5 @@
+digraph "CFG for '__cxx_global_var_init.17' function" {
+	label="CFG for '__cxx_global_var_init.17' function";
+
+	Node0x56285a89c2c0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  call void @llvm.memset.p0.i64(ptr align 8\l... @_ZN9LAMMPS_NS7AtomVec16default_data_velB5cxx11E, i8 0, i64 24, i1 false)\l  call void\l... @_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EEC2Ev\l...(ptr noundef nonnull align 8 dereferenceable(24)\l... @_ZN9LAMMPS_NS7AtomVec16default_data_velB5cxx11E) #4\l  %0 = call i32 @__cxa_atexit(ptr\l... @_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EED2Ev\l..., ptr @_ZN9LAMMPS_NS7AtomVec16default_data_velB5cxx11E, ptr @__dso_handle) #4\l  ret void\l}"];
+}

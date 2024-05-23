@@ -1,0 +1,5 @@
+digraph "CFG for '_Z25mc_get_num_physical_procsv' function" {
+	label="CFG for '_Z25mc_get_num_physical_procsv' function";
+
+	Node0x561c73bf1a40 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %num_physical_cores = alloca i32, align 4\l  store i32 1, ptr %num_physical_cores, align 4\l  %0 = load i32, ptr %num_physical_cores, align 4\l  ret i32 %0\l}"];
+}

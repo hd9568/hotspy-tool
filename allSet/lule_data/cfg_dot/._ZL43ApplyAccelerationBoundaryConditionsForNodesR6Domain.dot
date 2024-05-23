@@ -1,0 +1,47 @@
+digraph "CFG for '_ZL43ApplyAccelerationBoundaryConditionsForNodesR6Domain' function" {
+	label="CFG for '_ZL43ApplyAccelerationBoundaryConditionsForNodesR6Domain' function";
+
+	Node0x561418b77730 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d24b4070" fontname="Courier",label="{entry:\l|  %domain.addr = alloca ptr, align 8\l  %size = alloca i32, align 4\l  %numNodeBC = alloca i32, align 4\l  %i = alloca i32, align 4\l  %i11 = alloca i32, align 4\l  %i26 = alloca i32, align 4\l  store ptr %domain, ptr %domain.addr, align 8\l  %0 = load ptr, ptr %domain.addr, align 8\l  %call = call noundef nonnull align 4 dereferenceable(4) ptr\l... @_ZN6Domain5sizeXEv(ptr noundef nonnull align 8 dereferenceable(1744) %0)\l  %1 = load i32, ptr %call, align 4\l  store i32 %1, ptr %size, align 4\l  %2 = load i32, ptr %size, align 4\l  %add = add nsw i32 %2, 1\l  %3 = load i32, ptr %size, align 4\l  %add1 = add nsw i32 %3, 1\l  %mul = mul nsw i32 %add, %add1\l  store i32 %mul, ptr %numNodeBC, align 4\l  %4 = load ptr, ptr %domain.addr, align 8\l  %call2 = call noundef zeroext i1 @_ZN6Domain10symmXemptyEv(ptr noundef\l... nonnull align 8 dereferenceable(1744) %4)\l  %lnot = xor i1 %call2, true\l  %conv = zext i1 %lnot to i32\l  %cmp = icmp ne i32 %conv, 0\l  br i1 %cmp, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x561418b77730:s0 -> Node0x561418b78a60[tooltip="entry -> if.then\nProbability 62.50%" ];
+	Node0x561418b77730:s1 -> Node0x561418b78ad0[tooltip="entry -> if.end\nProbability 37.50%" ];
+	Node0x561418b78a60 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{if.then:\l|  store i32 0, ptr %i, align 4\l  br label %for.cond\l}"];
+	Node0x561418b78a60 -> Node0x561418b78c90[tooltip="if.then -> for.cond\nProbability 100.00%" ];
+	Node0x561418b78c90 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.cond:\l|  %5 = load i32, ptr %i, align 4\l  %6 = load i32, ptr %numNodeBC, align 4\l  %cmp3 = icmp slt i32 %5, %6\l  br i1 %cmp3, label %for.body, label %for.end\l|{<s0>T|<s1>F}}"];
+	Node0x561418b78c90:s0 -> Node0x561418b78f00[tooltip="for.cond -> for.body\nProbability 96.88%" ];
+	Node0x561418b78c90:s1 -> Node0x561418b78f80[tooltip="for.cond -> for.end\nProbability 3.12%" ];
+	Node0x561418b78f00 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.body:\l|  %7 = load ptr, ptr %domain.addr, align 8\l  %8 = load ptr, ptr %domain.addr, align 8\l  %9 = load i32, ptr %i, align 4\l  %call4 = call noundef i32 @_ZN6Domain5symmXEi(ptr noundef nonnull align 8\l... dereferenceable(1744) %8, i32 noundef %9)\l  %call5 = call noundef nonnull align 8 dereferenceable(8) ptr\l... @_ZN6Domain3xddEi(ptr noundef nonnull align 8 dereferenceable(1744) %7, i32\l... noundef %call4)\l  store double 0.000000e+00, ptr %call5, align 8\l  br label %for.inc\l}"];
+	Node0x561418b78f00 -> Node0x561418b79640[tooltip="for.body -> for.inc\nProbability 100.00%" ];
+	Node0x561418b79640 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.inc:\l|  %10 = load i32, ptr %i, align 4\l  %inc = add nsw i32 %10, 1\l  store i32 %inc, ptr %i, align 4\l  br label %for.cond, !llvm.loop !6\l}"];
+	Node0x561418b79640 -> Node0x561418b78c90[tooltip="for.inc -> for.cond\nProbability 100.00%" ];
+	Node0x561418b78f80 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{for.end:\l|  br label %if.end\l}"];
+	Node0x561418b78f80 -> Node0x561418b78ad0[tooltip="for.end -> if.end\nProbability 100.00%" ];
+	Node0x561418b78ad0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d24b4070" fontname="Courier",label="{if.end:\l|  %11 = load ptr, ptr %domain.addr, align 8\l  %call6 = call noundef zeroext i1 @_ZN6Domain10symmYemptyEv(ptr noundef\l... nonnull align 8 dereferenceable(1744) %11)\l  %lnot7 = xor i1 %call6, true\l  %conv8 = zext i1 %lnot7 to i32\l  %cmp9 = icmp ne i32 %conv8, 0\l  br i1 %cmp9, label %if.then10, label %if.end20\l|{<s0>T|<s1>F}}"];
+	Node0x561418b78ad0:s0 -> Node0x561418b7a280[tooltip="if.end -> if.then10\nProbability 62.50%" ];
+	Node0x561418b78ad0:s1 -> Node0x561418b7a2d0[tooltip="if.end -> if.end20\nProbability 37.50%" ];
+	Node0x561418b7a280 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{if.then10:\l|  store i32 0, ptr %i11, align 4\l  br label %for.cond12\l}"];
+	Node0x561418b7a280 -> Node0x561418b7a4a0[tooltip="if.then10 -> for.cond12\nProbability 100.00%" ];
+	Node0x561418b7a4a0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.cond12:\l|  %12 = load i32, ptr %i11, align 4\l  %13 = load i32, ptr %numNodeBC, align 4\l  %cmp13 = icmp slt i32 %12, %13\l  br i1 %cmp13, label %for.body14, label %for.end19\l|{<s0>T|<s1>F}}"];
+	Node0x561418b7a4a0:s0 -> Node0x561418b7a740[tooltip="for.cond12 -> for.body14\nProbability 96.88%" ];
+	Node0x561418b7a4a0:s1 -> Node0x561418b7a7c0[tooltip="for.cond12 -> for.end19\nProbability 3.12%" ];
+	Node0x561418b7a740 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.body14:\l|  %14 = load ptr, ptr %domain.addr, align 8\l  %15 = load ptr, ptr %domain.addr, align 8\l  %16 = load i32, ptr %i11, align 4\l  %call15 = call noundef i32 @_ZN6Domain5symmYEi(ptr noundef nonnull align 8\l... dereferenceable(1744) %15, i32 noundef %16)\l  %call16 = call noundef nonnull align 8 dereferenceable(8) ptr\l... @_ZN6Domain3yddEi(ptr noundef nonnull align 8 dereferenceable(1744) %14, i32\l... noundef %call15)\l  store double 0.000000e+00, ptr %call16, align 8\l  br label %for.inc17\l}"];
+	Node0x561418b7a740 -> Node0x561418b7aef0[tooltip="for.body14 -> for.inc17\nProbability 100.00%" ];
+	Node0x561418b7aef0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.inc17:\l|  %17 = load i32, ptr %i11, align 4\l  %inc18 = add nsw i32 %17, 1\l  store i32 %inc18, ptr %i11, align 4\l  br label %for.cond12, !llvm.loop !8\l}"];
+	Node0x561418b7aef0 -> Node0x561418b7a4a0[tooltip="for.inc17 -> for.cond12\nProbability 100.00%" ];
+	Node0x561418b7a7c0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{for.end19:\l|  br label %if.end20\l}"];
+	Node0x561418b7a7c0 -> Node0x561418b7a2d0[tooltip="for.end19 -> if.end20\nProbability 100.00%" ];
+	Node0x561418b7a2d0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d24b4070" fontname="Courier",label="{if.end20:\l|  %18 = load ptr, ptr %domain.addr, align 8\l  %call21 = call noundef zeroext i1 @_ZN6Domain10symmZemptyEv(ptr noundef\l... nonnull align 8 dereferenceable(1744) %18)\l  %lnot22 = xor i1 %call21, true\l  %conv23 = zext i1 %lnot22 to i32\l  %cmp24 = icmp ne i32 %conv23, 0\l  br i1 %cmp24, label %if.then25, label %if.end35\l|{<s0>T|<s1>F}}"];
+	Node0x561418b7a2d0:s0 -> Node0x561418b7b820[tooltip="if.end20 -> if.then25\nProbability 62.50%" ];
+	Node0x561418b7a2d0:s1 -> Node0x561418b7b870[tooltip="if.end20 -> if.end35\nProbability 37.50%" ];
+	Node0x561418b7b820 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{if.then25:\l|  store i32 0, ptr %i26, align 4\l  br label %for.cond27\l}"];
+	Node0x561418b7b820 -> Node0x561418b7ba40[tooltip="if.then25 -> for.cond27\nProbability 100.00%" ];
+	Node0x561418b7ba40 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.cond27:\l|  %19 = load i32, ptr %i26, align 4\l  %20 = load i32, ptr %numNodeBC, align 4\l  %cmp28 = icmp slt i32 %19, %20\l  br i1 %cmp28, label %for.body29, label %for.end34\l|{<s0>T|<s1>F}}"];
+	Node0x561418b7ba40:s0 -> Node0x561418b7bce0[tooltip="for.cond27 -> for.body29\nProbability 96.88%" ];
+	Node0x561418b7ba40:s1 -> Node0x561418b79690[tooltip="for.cond27 -> for.end34\nProbability 3.12%" ];
+	Node0x561418b7bce0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.body29:\l|  %21 = load ptr, ptr %domain.addr, align 8\l  %22 = load ptr, ptr %domain.addr, align 8\l  %23 = load i32, ptr %i26, align 4\l  %call30 = call noundef i32 @_ZN6Domain5symmZEi(ptr noundef nonnull align 8\l... dereferenceable(1744) %22, i32 noundef %23)\l  %call31 = call noundef nonnull align 8 dereferenceable(8) ptr\l... @_ZN6Domain3zddEi(ptr noundef nonnull align 8 dereferenceable(1744) %21, i32\l... noundef %call30)\l  store double 0.000000e+00, ptr %call31, align 8\l  br label %for.inc32\l}"];
+	Node0x561418b7bce0 -> Node0x561418b7c7a0[tooltip="for.body29 -> for.inc32\nProbability 100.00%" ];
+	Node0x561418b7c7a0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.inc32:\l|  %24 = load i32, ptr %i26, align 4\l  %inc33 = add nsw i32 %24, 1\l  store i32 %inc33, ptr %i26, align 4\l  br label %for.cond27, !llvm.loop !9\l}"];
+	Node0x561418b7c7a0 -> Node0x561418b7ba40[tooltip="for.inc32 -> for.cond27\nProbability 100.00%" ];
+	Node0x561418b79690 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{for.end34:\l|  br label %if.end35\l}"];
+	Node0x561418b79690 -> Node0x561418b7b870[tooltip="for.end34 -> if.end35\nProbability 100.00%" ];
+	Node0x561418b7b870 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d24b4070" fontname="Courier",label="{if.end35:\l|  ret void\l}"];
+}

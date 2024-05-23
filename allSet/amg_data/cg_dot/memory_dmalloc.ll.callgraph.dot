@@ -1,0 +1,4 @@
+digraph "Call graph: memory_dmalloc.ll" {
+	label="Call graph: memory_dmalloc.ll";
+
+}

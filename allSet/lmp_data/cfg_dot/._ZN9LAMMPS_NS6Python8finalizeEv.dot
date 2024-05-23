@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN9LAMMPS_NS6Python8finalizeEv' function" {
+	label="CFG for '_ZN9LAMMPS_NS6Python8finalizeEv' function";
+
+	Node0x5636967742e0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  ret void\l}"];
+}

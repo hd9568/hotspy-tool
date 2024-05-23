@@ -1,0 +1,5 @@
+digraph "CFG for 'get_time' function" {
+	label="CFG for 'get_time' function";
+
+	Node0x55bfd5c1bd90 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %timecheck = alloca %struct.timeval, align 8\l  %ms = alloca i64, align 8\l  %time = alloca double, align 8\l  %call = call i32 @gettimeofday(ptr noundef %timecheck, ptr noundef null) #4\l  %tv_sec = getelementptr inbounds %struct.timeval, ptr %timecheck, i32 0, i32\l... 0\l  %0 = load i64, ptr %tv_sec, align 8\l  %mul = mul nsw i64 %0, 1000\l  %tv_usec = getelementptr inbounds %struct.timeval, ptr %timecheck, i32 0,\l... i32 1\l  %1 = load i64, ptr %tv_usec, align 8\l  %div = sdiv i64 %1, 1000\l  %add = add nsw i64 %mul, %div\l  store i64 %add, ptr %ms, align 8\l  %2 = load i64, ptr %ms, align 8\l  %conv = sitofp i64 %2 to double\l  %div1 = fdiv double %conv, 1.000000e+03\l  store double %div1, ptr %time, align 8\l  %3 = load double, ptr %time, align 8\l  ret double %3\l}"];
+}

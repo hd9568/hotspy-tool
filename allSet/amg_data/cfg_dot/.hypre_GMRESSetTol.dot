@@ -1,0 +1,5 @@
+digraph "CFG for 'hypre_GMRESSetTol' function" {
+	label="CFG for 'hypre_GMRESSetTol' function";
+
+	Node0x56458ac143e0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %gmres_vdata.addr = alloca ptr, align 8\l  %tol.addr = alloca double, align 8\l  %gmres_data = alloca ptr, align 8\l  store ptr %gmres_vdata, ptr %gmres_vdata.addr, align 8\l  store double %tol, ptr %tol.addr, align 8\l  %0 = load ptr, ptr %gmres_vdata.addr, align 8\l  store ptr %0, ptr %gmres_data, align 8\l  %1 = load double, ptr %tol.addr, align 8\l  %2 = load ptr, ptr %gmres_data, align 8\l  %tol1 = getelementptr inbounds %struct.hypre_GMRESData, ptr %2, i32 0, i32 7\l  store double %1, ptr %tol1, align 8\l  %3 = load i32, ptr @hypre__global_error, align 4\l  ret i32 %3\l}"];
+}

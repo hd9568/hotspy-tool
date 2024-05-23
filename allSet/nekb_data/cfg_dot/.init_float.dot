@@ -1,0 +1,12 @@
+digraph "CFG for 'init_float' function" {
+	label="CFG for 'init_float' function";
+
+	Node0x55e011d08220 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{entry:\l|  %out.addr = alloca ptr, align 8\l  %map.addr = alloca ptr, align 8\l  %op.addr = alloca i32, align 4\l  %i = alloca i32, align 4\l  %e = alloca float, align 4\l  store ptr %out, ptr %out.addr, align 8\l  store ptr %map, ptr %map.addr, align 8\l  store i32 %op, ptr %op.addr, align 4\l  %0 = load i32, ptr %op.addr, align 4\l  %idxprom = zext i32 %0 to i64\l  %arrayidx = getelementptr inbounds [5 x float], ptr @gs_identity_float, i64\l... 0, i64 %idxprom\l  %1 = load float, ptr %arrayidx, align 4\l  store float %1, ptr %e, align 4\l  br label %while.cond\l}"];
+	Node0x55e011d08220 -> Node0x55e011d08a30[tooltip="entry -> while.cond\nProbability 100.00%" ];
+	Node0x55e011d08a30 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{while.cond:\l|  %2 = load ptr, ptr %map.addr, align 8\l  %incdec.ptr = getelementptr inbounds i32, ptr %2, i32 1\l  store ptr %incdec.ptr, ptr %map.addr, align 8\l  %3 = load i32, ptr %2, align 4\l  store i32 %3, ptr %i, align 4\l  %cmp = icmp ne i32 %3, -1\l  br i1 %cmp, label %while.body, label %while.end\l|{<s0>T|<s1>F}}"];
+	Node0x55e011d08a30:s0 -> Node0x55e011d09050[tooltip="while.cond -> while.body\nProbability 96.88%" ];
+	Node0x55e011d08a30:s1 -> Node0x55e011d090d0[tooltip="while.cond -> while.end\nProbability 3.12%" ];
+	Node0x55e011d09050 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{while.body:\l|  %4 = load float, ptr %e, align 4\l  %5 = load ptr, ptr %out.addr, align 8\l  %6 = load i32, ptr %i, align 4\l  %idxprom1 = zext i32 %6 to i64\l  %arrayidx2 = getelementptr inbounds float, ptr %5, i64 %idxprom1\l  store float %4, ptr %arrayidx2, align 4\l  br label %while.cond, !llvm.loop !6\l}"];
+	Node0x55e011d09050 -> Node0x55e011d08a30[tooltip="while.body -> while.cond\nProbability 100.00%" ];
+	Node0x55e011d090d0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{while.end:\l|  ret void\l}"];
+}

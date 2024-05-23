@@ -1,0 +1,5 @@
+digraph "CFG for 'hypre_Rand' function" {
+	label="CFG for 'hypre_Rand' function";
+
+	Node0x563400a315c0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %call = call i32 @hypre_RandI()\l  %conv = sitofp i32 %call to double\l  %div = fdiv double %conv, 0x41DFFFFFFFC00000\l  ret double %div\l}"];
+}

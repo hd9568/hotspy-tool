@@ -1,0 +1,5 @@
+digraph "CFG for '_ZNSt16allocator_traitsISaIN9LAMMPS_NS11FixAveChunk7value_tEEE8max_sizeERKS3_' function" {
+	label="CFG for '_ZNSt16allocator_traitsISaIN9LAMMPS_NS11FixAveChunk7value_tEEE8max_sizeERKS3_' function";
+
+	Node0x5612895a5b70 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %__a.addr = alloca ptr, align 8\l  store ptr %__a, ptr %__a.addr, align 8\l  %0 = load ptr, ptr %__a.addr, align 8\l  %call = call noundef i64\l... @_ZNK9__gnu_cxx13new_allocatorIN9LAMMPS_NS11FixAveChunk7value_tEE8max_sizeEv(p\l...tr noundef nonnull align 1 dereferenceable(1) %0) #12\l  ret i64 %call\l}"];
+}

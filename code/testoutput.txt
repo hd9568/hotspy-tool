@@ -1,0 +1,57 @@
+MODEL BEGINNING!
+this is GPU0: Tesla V100-PCIE-32GB
+All functions have been obtained! All graphs are being parsed:
+test dataloader's time is 0.0 mins
+========== all test data has already been ready! ===========
+| TN=38 FP=17 |
+| FN=11 TP=14 |
+test accuracy: 65.00%
+precision: 45.16%
+recall: 56.00%
+f1 score: 0.500
+nekb_data datasize: 34; acc: 0.59
+xb_data datasize: 13; acc: 0.46
+clp_data datasize: 19; acc: 0.95
+spec648_data datasize: 2; acc: 0.50
+ft_data datasize: 4; acc: 0.50
+spec999_data datasize: 5; acc: 0.60
+mg_data datasize: 3; acc: 0.67
+
+MODEL BEGINNING!
+this is GPU0: Tesla V100-PCIE-32GB
+All functions have been obtained! All graphs are being parsed:
+test dataloader's time is 0.0 mins
+========== all test data has already been ready! ===========
+| TN=39 FP=16 |
+| FN=10 TP=15 |
+test accuracy: 67.50%
+precision: 48.39%
+recall: 60.00%
+f1 score: 0.536
+spec999_data datasize: 5; hot: 0.40; acc: 0.60
+ft_data datasize: 4; hot: 0.25; acc: 1.00
+clp_data datasize: 19; hot: 0.26; acc: 0.84
+nekb_data datasize: 34; hot: 0.29; acc: 0.68
+xb_data datasize: 13; hot: 0.46; acc: 0.54
+spec648_data datasize: 2; hot: 0.00; acc: 0.00
+mg_data datasize: 3; hot: 0.33; acc: 0.33
+
+MODEL BEGINNING!
+this is GPU0: Tesla V100-PCIE-32GB
+All functions have been obtained! All graphs are being parsed:
+test dataloader's time is 0.0 mins
+========== all test data has already been ready! ===========
+| TN=40 FP=15 |
+| FN=10 TP=15 |
+test accuracy: 68.75%
+precision: 50.00%
+recall: 60.00%
+f1 score: 0.545
+nekb_data datasize: 34; hot: 0.29; acc: 0.68
+xb_data datasize: 13; hot: 0.46; acc: 0.54
+ft_data datasize: 4; hot: 0.25; acc: 0.25
+clp_data datasize: 19; hot: 0.26; acc: 0.89
+mg_data datasize: 3; hot: 0.33; acc: 1.00
+spec648_data datasize: 2; hot: 0.00; acc: 0.50
+spec999_data datasize: 5; hot: 0.40; acc: 0.60
+MODEL BEGINNING!

@@ -1,0 +1,5 @@
+digraph "CFG for '_ZStplIcSt11char_traitsIcESaIcEENSt7__cxx1112basic_stringIT_T0_T1_EEOS8_PKS5_' function" {
+	label="CFG for '_ZStplIcSt11char_traitsIcESaIcEENSt7__cxx1112basic_stringIT_T0_T1_EEOS8_PKS5_' function";
+
+	Node0x556bfe97ea70 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %result.ptr = alloca ptr, align 8\l  %__lhs.addr = alloca ptr, align 8\l  %__rhs.addr = alloca ptr, align 8\l  store ptr %agg.result, ptr %result.ptr, align 8\l  store ptr %__lhs, ptr %__lhs.addr, align 8\l  store ptr %__rhs, ptr %__rhs.addr, align 8\l  %0 = load ptr, ptr %__lhs.addr, align 8\l  %1 = load ptr, ptr %__rhs.addr, align 8\l  %call = call noundef nonnull align 8 dereferenceable(32) ptr\l... @_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6appendEPKc(ptr noundef\l... nonnull align 8 dereferenceable(32) %0, ptr noundef %1)\l  call void @_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC1EOS4_(ptr\l... noundef nonnull align 8 dereferenceable(32) %agg.result, ptr noundef nonnull\l... align 8 dereferenceable(32) %call) #3\l  ret void\l}"];
+}

@@ -1,0 +1,16 @@
+digraph "CFG for '_ZL12avec_creatorIN9LAMMPS_NS13AtomVecChargeEEPNS0_7AtomVecEPNS0_6LAMMPSE' function" {
+	label="CFG for '_ZL12avec_creatorIN9LAMMPS_NS13AtomVecChargeEEPNS0_7AtomVecEPNS0_6LAMMPSE' function";
+
+	Node0x55aea8cffbd0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %_lmp.addr = alloca ptr, align 8\l  %exn.slot = alloca ptr, align 8\l  %ehselector.slot = alloca i32, align 4\l  store ptr %_lmp, ptr %_lmp.addr, align 8\l  %call = call noalias noundef nonnull ptr @_Znwm(i64 noundef 2760) #15\l  %0 = load ptr, ptr %_lmp.addr, align 8\l  invoke void @_ZN9LAMMPS_NS13AtomVecChargeC1EPNS_6LAMMPSE(ptr noundef nonnull\l... align 8 dereferenceable(8) %call, ptr noundef %0)\l          to label %invoke.cont unwind label %lpad\l}"];
+	Node0x55aea8cffbd0 -> Node0x55aea8cfffe0[tooltip="entry -> invoke.cont\nProbability 100.00%" ];
+	Node0x55aea8cffbd0 -> Node0x55aea8d00060[tooltip="entry -> lpad\nProbability 0.00%" ];
+	Node0x55aea8cfffe0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{invoke.cont:\l|  %1 = icmp eq ptr %call, null\l  br i1 %1, label %cast.end, label %cast.notnull\l|{<s0>T|<s1>F}}"];
+	Node0x55aea8cfffe0:s0 -> Node0x55aea8d003b0[tooltip="invoke.cont -> cast.end\nProbability 37.50%" ];
+	Node0x55aea8cfffe0:s1 -> Node0x55aea8d00430[tooltip="invoke.cont -> cast.notnull\nProbability 62.50%" ];
+	Node0x55aea8d00430 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{cast.notnull:\l|  %vtable = load ptr, ptr %call, align 8\l  %vbase.offset.ptr = getelementptr i8, ptr %vtable, i64 -24\l  %vbase.offset = load i64, ptr %vbase.offset.ptr, align 8\l  %add.ptr = getelementptr inbounds i8, ptr %call, i64 %vbase.offset\l  br label %cast.end\l}"];
+	Node0x55aea8d00430 -> Node0x55aea8d003b0[tooltip="cast.notnull -> cast.end\nProbability 100.00%" ];
+	Node0x55aea8d003b0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{cast.end:\l|  %cast.result = phi ptr [ %add.ptr, %cast.notnull ], [ null, %invoke.cont ]\l  ret ptr %cast.result\l}"];
+	Node0x55aea8d00060 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f4c5ad70" fontname="Courier",label="{lpad:\l|  %2 = landingpad \{ ptr, i32 \}\l          cleanup\l  %3 = extractvalue \{ ptr, i32 \} %2, 0\l  store ptr %3, ptr %exn.slot, align 8\l  %4 = extractvalue \{ ptr, i32 \} %2, 1\l  store i32 %4, ptr %ehselector.slot, align 4\l  call void @_ZdlPv(ptr noundef %call) #16\l  br label %eh.resume\l}"];
+	Node0x55aea8d00060 -> Node0x55aea8d00ef0[tooltip="lpad -> eh.resume\nProbability 100.00%" ];
+	Node0x55aea8d00ef0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f4c5ad70" fontname="Courier",label="{eh.resume:\l|  %exn = load ptr, ptr %exn.slot, align 8\l  %sel = load i32, ptr %ehselector.slot, align 4\l  %lpad.val = insertvalue \{ ptr, i32 \} poison, ptr %exn, 0\l  %lpad.val1 = insertvalue \{ ptr, i32 \} %lpad.val, i32 %sel, 1\l  resume \{ ptr, i32 \} %lpad.val1\l}"];
+}

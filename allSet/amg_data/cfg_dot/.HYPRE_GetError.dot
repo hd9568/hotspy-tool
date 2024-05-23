@@ -1,0 +1,5 @@
+digraph "CFG for 'HYPRE_GetError' function" {
+	label="CFG for 'HYPRE_GetError' function";
+
+	Node0x5645847a8b30 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %0 = load i32, ptr @hypre__global_error, align 4\l  ret i32 %0\l}"];
+}

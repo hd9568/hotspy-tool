@@ -1,0 +1,12 @@
+digraph "CFG for '_ZSt16__deque_buf_sizem' function" {
+	label="CFG for '_ZSt16__deque_buf_sizem' function";
+
+	Node0x560dc9fdb1d0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %__size.addr = alloca i64, align 8\l  store i64 %__size, ptr %__size.addr, align 8\l  %0 = load i64, ptr %__size.addr, align 8\l  %cmp = icmp ult i64 %0, 512\l  br i1 %cmp, label %cond.true, label %cond.false\l|{<s0>T|<s1>F}}"];
+	Node0x560dc9fdb1d0:s0 -> Node0x560dc9fdb400[tooltip="entry -> cond.true\nProbability 50.00%" ];
+	Node0x560dc9fdb1d0:s1 -> Node0x560dc9fdb480[tooltip="entry -> cond.false\nProbability 50.00%" ];
+	Node0x560dc9fdb400 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{cond.true:\l|  %1 = load i64, ptr %__size.addr, align 8\l  %div = udiv i64 512, %1\l  br label %cond.end\l}"];
+	Node0x560dc9fdb400 -> Node0x560dc9fdb6e0[tooltip="cond.true -> cond.end\nProbability 100.00%" ];
+	Node0x560dc9fdb480 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{cond.false:\l|  br label %cond.end\l}"];
+	Node0x560dc9fdb480 -> Node0x560dc9fdb6e0[tooltip="cond.false -> cond.end\nProbability 100.00%" ];
+	Node0x560dc9fdb6e0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{cond.end:\l|  %cond = phi i64 [ %div, %cond.true ], [ 1, %cond.false ]\l  ret i64 %cond\l}"];
+}

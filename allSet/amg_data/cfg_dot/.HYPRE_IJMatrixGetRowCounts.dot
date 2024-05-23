@@ -1,0 +1,39 @@
+digraph "CFG for 'HYPRE_IJMatrixGetRowCounts' function" {
+	label="CFG for 'HYPRE_IJMatrixGetRowCounts' function";
+
+	Node0x55c120a4e270 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %retval = alloca i32, align 4\l  %matrix.addr = alloca ptr, align 8\l  %nrows.addr = alloca i32, align 4\l  %rows.addr = alloca ptr, align 8\l  %ncols.addr = alloca ptr, align 8\l  %ijmatrix = alloca ptr, align 8\l  store ptr %matrix, ptr %matrix.addr, align 8\l  store i32 %nrows, ptr %nrows.addr, align 4\l  store ptr %rows, ptr %rows.addr, align 8\l  store ptr %ncols, ptr %ncols.addr, align 8\l  %0 = load ptr, ptr %matrix.addr, align 8\l  store ptr %0, ptr %ijmatrix, align 8\l  %1 = load i32, ptr %nrows.addr, align 4\l  %cmp = icmp eq i32 %1, 0\l  br i1 %cmp, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x55c120a4e270:s0 -> Node0x55c120a4eac0[tooltip="entry -> if.then\nProbability 37.50%" ];
+	Node0x55c120a4e270:s1 -> Node0x55c120a4e130[tooltip="entry -> if.end\nProbability 62.50%" ];
+	Node0x55c120a4eac0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{if.then:\l|  %2 = load i32, ptr @hypre__global_error, align 4\l  store i32 %2, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x55c120a4eac0 -> Node0x55c120a4eea0[tooltip="if.then -> return\nProbability 100.00%" ];
+	Node0x55c120a4e130 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.end:\l|  %3 = load ptr, ptr %ijmatrix, align 8\l  %tobool = icmp ne ptr %3, null\l  br i1 %tobool, label %if.end2, label %if.then1\l|{<s0>T|<s1>F}}"];
+	Node0x55c120a4e130:s0 -> Node0x55c120a4f0b0[tooltip="if.end -> if.end2\nProbability 62.50%" ];
+	Node0x55c120a4e130:s1 -> Node0x55c120a4f120[tooltip="if.end -> if.then1\nProbability 37.50%" ];
+	Node0x55c120a4f120 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470" fontname="Courier",label="{if.then1:\l|  call void @hypre_error_handler(ptr noundef @.str, i32 noundef 506, i32\l... noundef 12, ptr noundef null)\l  %4 = load i32, ptr @hypre__global_error, align 4\l  store i32 %4, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x55c120a4f120 -> Node0x55c120a4eea0[tooltip="if.then1 -> return\nProbability 100.00%" ];
+	Node0x55c120a4f0b0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.end2:\l|  %5 = load i32, ptr %nrows.addr, align 4\l  %cmp3 = icmp slt i32 %5, 0\l  br i1 %cmp3, label %if.then4, label %if.end5\l|{<s0>T|<s1>F}}"];
+	Node0x55c120a4f0b0:s0 -> Node0x55c120a4f6e0[tooltip="if.end2 -> if.then4\nProbability 37.50%" ];
+	Node0x55c120a4f0b0:s1 -> Node0x55c120a4f730[tooltip="if.end2 -> if.end5\nProbability 62.50%" ];
+	Node0x55c120a4f6e0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#ca3b3770" fontname="Courier",label="{if.then4:\l|  call void @hypre_error_handler(ptr noundef @.str, i32 noundef 512, i32\l... noundef 20, ptr noundef null)\l  %6 = load i32, ptr @hypre__global_error, align 4\l  store i32 %6, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x55c120a4f6e0 -> Node0x55c120a4eea0[tooltip="if.then4 -> return\nProbability 100.00%" ];
+	Node0x55c120a4f730 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470" fontname="Courier",label="{if.end5:\l|  %7 = load ptr, ptr %rows.addr, align 8\l  %tobool6 = icmp ne ptr %7, null\l  br i1 %tobool6, label %if.end8, label %if.then7\l|{<s0>T|<s1>F}}"];
+	Node0x55c120a4f730:s0 -> Node0x55c120a4fcc0[tooltip="if.end5 -> if.end8\nProbability 62.50%" ];
+	Node0x55c120a4f730:s1 -> Node0x55c120a4fd10[tooltip="if.end5 -> if.then7\nProbability 37.50%" ];
+	Node0x55c120a4fd10 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#cc403a70" fontname="Courier",label="{if.then7:\l|  call void @hypre_error_handler(ptr noundef @.str, i32 noundef 518, i32\l... noundef 28, ptr noundef null)\l  %8 = load i32, ptr @hypre__global_error, align 4\l  store i32 %8, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x55c120a4fd10 -> Node0x55c120a4eea0[tooltip="if.then7 -> return\nProbability 100.00%" ];
+	Node0x55c120a4fcc0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#ca3b3770" fontname="Courier",label="{if.end8:\l|  %9 = load ptr, ptr %ncols.addr, align 8\l  %tobool9 = icmp ne ptr %9, null\l  br i1 %tobool9, label %if.end11, label %if.then10\l|{<s0>T|<s1>F}}"];
+	Node0x55c120a4fcc0:s0 -> Node0x55c120a4eb30[tooltip="if.end8 -> if.end11\nProbability 62.50%" ];
+	Node0x55c120a4fcc0:s1 -> Node0x55c120a4eb80[tooltip="if.end8 -> if.then10\nProbability 37.50%" ];
+	Node0x55c120a4eb80 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d24b4070" fontname="Courier",label="{if.then10:\l|  call void @hypre_error_handler(ptr noundef @.str, i32 noundef 524, i32\l... noundef 36, ptr noundef null)\l  %10 = load i32, ptr @hypre__global_error, align 4\l  store i32 %10, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x55c120a4eb80 -> Node0x55c120a4eea0[tooltip="if.then10 -> return\nProbability 100.00%" ];
+	Node0x55c120a4eb30 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#cc403a70" fontname="Courier",label="{if.end11:\l|  %11 = load ptr, ptr %ijmatrix, align 8\l  %object_type = getelementptr inbounds %struct.hypre_IJMatrix_struct, ptr\l... %11, i32 0, i32 3\l  %12 = load i32, ptr %object_type, align 8\l  %cmp12 = icmp eq i32 %12, 5555\l  br i1 %cmp12, label %if.then13, label %if.else\l|{<s0>T|<s1>F}}"];
+	Node0x55c120a4eb30:s0 -> Node0x55c120a50b50[tooltip="if.end11 -> if.then13\nProbability 50.00%" ];
+	Node0x55c120a4eb30:s1 -> Node0x55c120a50ba0[tooltip="if.end11 -> if.else\nProbability 50.00%" ];
+	Node0x55c120a50b50 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d24b4070" fontname="Courier",label="{if.then13:\l|  %13 = load ptr, ptr %ijmatrix, align 8\l  %14 = load i32, ptr %nrows.addr, align 4\l  %15 = load ptr, ptr %rows.addr, align 8\l  %16 = load ptr, ptr %ncols.addr, align 8\l  %call = call i32 @hypre_IJMatrixGetRowCountsParCSR(ptr noundef %13, i32\l... noundef %14, ptr noundef %15, ptr noundef %16)\l  br label %if.end14\l}"];
+	Node0x55c120a50b50 -> Node0x55c120a51110[tooltip="if.then13 -> if.end14\nProbability 100.00%" ];
+	Node0x55c120a50ba0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d24b4070" fontname="Courier",label="{if.else:\l|  call void @hypre_error_handler(ptr noundef @.str, i32 noundef 534, i32\l... noundef 12, ptr noundef null)\l  br label %if.end14\l}"];
+	Node0x55c120a50ba0 -> Node0x55c120a51110[tooltip="if.else -> if.end14\nProbability 100.00%" ];
+	Node0x55c120a51110 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#cc403a70" fontname="Courier",label="{if.end14:\l|  %17 = load i32, ptr @hypre__global_error, align 4\l  store i32 %17, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x55c120a51110 -> Node0x55c120a4eea0[tooltip="if.end14 -> return\nProbability 100.00%" ];
+	Node0x55c120a4eea0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{return:\l|  %18 = load i32, ptr %retval, align 4\l  ret i32 %18\l}"];
+}

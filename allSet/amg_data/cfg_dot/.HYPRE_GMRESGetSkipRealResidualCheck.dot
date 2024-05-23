@@ -1,0 +1,5 @@
+digraph "CFG for 'HYPRE_GMRESGetSkipRealResidualCheck' function" {
+	label="CFG for 'HYPRE_GMRESGetSkipRealResidualCheck' function";
+
+	Node0x561d3dbf1970 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %solver.addr = alloca ptr, align 8\l  %skip_real_r_check.addr = alloca ptr, align 8\l  store ptr %solver, ptr %solver.addr, align 8\l  store ptr %skip_real_r_check, ptr %skip_real_r_check.addr, align 8\l  %0 = load ptr, ptr %solver.addr, align 8\l  %1 = load ptr, ptr %skip_real_r_check.addr, align 8\l  %call = call i32 @hypre_GMRESGetSkipRealResidualCheck(ptr noundef %0, ptr\l... noundef %1)\l  ret i32 %call\l}"];
+}

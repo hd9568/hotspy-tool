@@ -1,0 +1,10 @@
+digraph "CFG for 'lammps_mpi_init' function" {
+	label="CFG for 'lammps_mpi_init' function";
+
+	Node0x55bdf7d86f50 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %flag = alloca i32, align 4\l  %argc = alloca i32, align 4\l  %args = alloca [2 x ptr], align 16\l  %argv = alloca ptr, align 8\l  %call = call i32 @MPI_Initialized(ptr noundef %flag)\l  %0 = load i32, ptr %flag, align 4\l  %tobool = icmp ne i32 %0, 0\l  br i1 %tobool, label %if.end, label %if.then\l|{<s0>T|<s1>F}}"];
+	Node0x55bdf7d86f50:s0 -> Node0x55bdf7d87540[tooltip="entry -> if.end\nProbability 62.50%" ];
+	Node0x55bdf7d86f50:s1 -> Node0x55bdf7d875b0[tooltip="entry -> if.then\nProbability 37.50%" ];
+	Node0x55bdf7d875b0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{if.then:\l|  store i32 1, ptr %argc, align 4\l  call void @llvm.memcpy.p0.p0.i64(ptr align 16 %args, ptr align 16\l... @__const.lammps_mpi_init.args, i64 16, i1 false)\l  %arraydecay = getelementptr inbounds [2 x ptr], ptr %args, i64 0, i64 0\l  store ptr %arraydecay, ptr %argv, align 8\l  %call1 = call i32 @MPI_Init(ptr noundef %argc, ptr noundef %argv)\l  br label %if.end\l}"];
+	Node0x55bdf7d875b0 -> Node0x55bdf7d87540[tooltip="if.then -> if.end\nProbability 100.00%" ];
+	Node0x55bdf7d87540 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  ret void\l}"];
+}

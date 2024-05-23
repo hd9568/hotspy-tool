@@ -1,0 +1,31 @@
+digraph "CFG for '_ZN9LAMMPS_NS6Domain19minimum_image_checkEddd' function" {
+	label="CFG for '_ZN9LAMMPS_NS6Domain19minimum_image_checkEddd' function";
+
+	Node0x563200d0d420 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %retval = alloca i32, align 4\l  %this.addr = alloca ptr, align 8\l  %dx.addr = alloca double, align 8\l  %dy.addr = alloca double, align 8\l  %dz.addr = alloca double, align 8\l  store ptr %this, ptr %this.addr, align 8\l  store double %dx, ptr %dx.addr, align 8\l  store double %dy, ptr %dy.addr, align 8\l  store double %dz, ptr %dz.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %xperiodic = getelementptr inbounds %\"class.LAMMPS_NS::Domain\", ptr %this1,\l... i32 0, i32 4\l  %0 = load i32, ptr %xperiodic, align 4\l  %tobool = icmp ne i32 %0, 0\l  br i1 %tobool, label %land.lhs.true, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x563200d0d420:s0 -> Node0x563200d0d2e0[tooltip="entry -> land.lhs.true\nProbability 62.50%" ];
+	Node0x563200d0d420:s1 -> Node0x563200d0d360[tooltip="entry -> if.end\nProbability 37.50%" ];
+	Node0x563200d0d2e0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{land.lhs.true:\l|  %1 = load double, ptr %dx.addr, align 8\l  %2 = call double @llvm.fabs.f64(double %1)\l  %xprd_half = getelementptr inbounds %\"class.LAMMPS_NS::Domain\", ptr %this1,\l... i32 0, i32 13\l  %3 = load double, ptr %xprd_half, align 8\l  %cmp = fcmp ogt double %2, %3\l  br i1 %cmp, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x563200d0d2e0:s0 -> Node0x563200d0e2b0[tooltip="land.lhs.true -> if.then\nProbability 50.00%" ];
+	Node0x563200d0d2e0:s1 -> Node0x563200d0d360[tooltip="land.lhs.true -> if.end\nProbability 50.00%" ];
+	Node0x563200d0e2b0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{if.then:\l|  store i32 1, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x563200d0e2b0 -> Node0x563200d0e470[tooltip="if.then -> return\nProbability 100.00%" ];
+	Node0x563200d0d360 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.end:\l|  %yperiodic = getelementptr inbounds %\"class.LAMMPS_NS::Domain\", ptr\l... %this1, i32 0, i32 5\l  %4 = load i32, ptr %yperiodic, align 8\l  %tobool2 = icmp ne i32 %4, 0\l  br i1 %tobool2, label %land.lhs.true3, label %if.end6\l|{<s0>T|<s1>F}}"];
+	Node0x563200d0d360:s0 -> Node0x563200d0e770[tooltip="if.end -> land.lhs.true3\nProbability 62.50%" ];
+	Node0x563200d0d360:s1 -> Node0x563200d0e7f0[tooltip="if.end -> if.end6\nProbability 37.50%" ];
+	Node0x563200d0e770 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{land.lhs.true3:\l|  %5 = load double, ptr %dy.addr, align 8\l  %6 = call double @llvm.fabs.f64(double %5)\l  %yprd_half = getelementptr inbounds %\"class.LAMMPS_NS::Domain\", ptr %this1,\l... i32 0, i32 14\l  %7 = load double, ptr %yprd_half, align 8\l  %cmp4 = fcmp ogt double %6, %7\l  br i1 %cmp4, label %if.then5, label %if.end6\l|{<s0>T|<s1>F}}"];
+	Node0x563200d0e770:s0 -> Node0x563200d0dc30[tooltip="land.lhs.true3 -> if.then5\nProbability 50.00%" ];
+	Node0x563200d0e770:s1 -> Node0x563200d0e7f0[tooltip="land.lhs.true3 -> if.end6\nProbability 50.00%" ];
+	Node0x563200d0dc30 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470" fontname="Courier",label="{if.then5:\l|  store i32 1, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x563200d0dc30 -> Node0x563200d0e470[tooltip="if.then5 -> return\nProbability 100.00%" ];
+	Node0x563200d0e7f0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.end6:\l|  %zperiodic = getelementptr inbounds %\"class.LAMMPS_NS::Domain\", ptr\l... %this1, i32 0, i32 6\l  %8 = load i32, ptr %zperiodic, align 4\l  %tobool7 = icmp ne i32 %8, 0\l  br i1 %tobool7, label %land.lhs.true8, label %if.end11\l|{<s0>T|<s1>F}}"];
+	Node0x563200d0e7f0:s0 -> Node0x563200d0f2b0[tooltip="if.end6 -> land.lhs.true8\nProbability 62.50%" ];
+	Node0x563200d0e7f0:s1 -> Node0x563200d0f330[tooltip="if.end6 -> if.end11\nProbability 37.50%" ];
+	Node0x563200d0f2b0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{land.lhs.true8:\l|  %9 = load double, ptr %dz.addr, align 8\l  %10 = call double @llvm.fabs.f64(double %9)\l  %zprd_half = getelementptr inbounds %\"class.LAMMPS_NS::Domain\", ptr %this1,\l... i32 0, i32 15\l  %11 = load double, ptr %zprd_half, align 8\l  %cmp9 = fcmp ogt double %10, %11\l  br i1 %cmp9, label %if.then10, label %if.end11\l|{<s0>T|<s1>F}}"];
+	Node0x563200d0f2b0:s0 -> Node0x563200d0f820[tooltip="land.lhs.true8 -> if.then10\nProbability 50.00%" ];
+	Node0x563200d0f2b0:s1 -> Node0x563200d0f330[tooltip="land.lhs.true8 -> if.end11\nProbability 50.00%" ];
+	Node0x563200d0f820 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#ca3b3770" fontname="Courier",label="{if.then10:\l|  store i32 1, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x563200d0f820 -> Node0x563200d0e470[tooltip="if.then10 -> return\nProbability 100.00%" ];
+	Node0x563200d0f330 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{if.end11:\l|  store i32 0, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x563200d0f330 -> Node0x563200d0e470[tooltip="if.end11 -> return\nProbability 100.00%" ];
+	Node0x563200d0e470 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{return:\l|  %12 = load i32, ptr %retval, align 4\l  ret i32 %12\l}"];
+}

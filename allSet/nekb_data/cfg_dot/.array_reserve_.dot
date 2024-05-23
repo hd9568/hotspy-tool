@@ -1,0 +1,15 @@
+digraph "CFG for 'array_reserve_' function" {
+	label="CFG for 'array_reserve_' function";
+
+	Node0x5564aad91260 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %a.addr = alloca ptr, align 8\l  %min.addr = alloca i64, align 8\l  %size.addr = alloca i64, align 8\l  %file.addr = alloca ptr, align 8\l  %line.addr = alloca i32, align 4\l  %max = alloca i64, align 8\l  store ptr %a, ptr %a.addr, align 8\l  store i64 %min, ptr %min.addr, align 8\l  store i64 %size, ptr %size.addr, align 8\l  store ptr %file, ptr %file.addr, align 8\l  store i32 %line, ptr %line.addr, align 4\l  %0 = load ptr, ptr %a.addr, align 8\l  %max1 = getelementptr inbounds %struct.array, ptr %0, i32 0, i32 2\l  %1 = load i64, ptr %max1, align 8\l  store i64 %1, ptr %max, align 8\l  %2 = load i64, ptr %max, align 8\l  %3 = load i64, ptr %min.addr, align 8\l  %cmp = icmp ult i64 %2, %3\l  br i1 %cmp, label %if.then, label %if.end5\l|{<s0>T|<s1>F}}"];
+	Node0x5564aad91260:s0 -> Node0x5564aad93d60[tooltip="entry -> if.then\nProbability 50.00%" ];
+	Node0x5564aad91260:s1 -> Node0x5564aad93db0[tooltip="entry -> if.end5\nProbability 50.00%" ];
+	Node0x5564aad93d60 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.then:\l|  %4 = load i64, ptr %max, align 8\l  %div = udiv i64 %4, 2\l  %add = add i64 %div, 1\l  %5 = load i64, ptr %max, align 8\l  %add2 = add i64 %5, %add\l  store i64 %add2, ptr %max, align 8\l  %6 = load i64, ptr %max, align 8\l  %7 = load i64, ptr %min.addr, align 8\l  %cmp3 = icmp ult i64 %6, %7\l  br i1 %cmp3, label %if.then4, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x5564aad93d60:s0 -> Node0x5564aad94460[tooltip="if.then -> if.then4\nProbability 50.00%" ];
+	Node0x5564aad93d60:s1 -> Node0x5564aad944e0[tooltip="if.then -> if.end\nProbability 50.00%" ];
+	Node0x5564aad94460 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470" fontname="Courier",label="{if.then4:\l|  %8 = load i64, ptr %min.addr, align 8\l  store i64 %8, ptr %max, align 8\l  br label %if.end\l}"];
+	Node0x5564aad94460 -> Node0x5564aad944e0[tooltip="if.then4 -> if.end\nProbability 100.00%" ];
+	Node0x5564aad944e0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.end:\l|  %9 = load ptr, ptr %a.addr, align 8\l  %10 = load i64, ptr %max, align 8\l  %11 = load i64, ptr %size.addr, align 8\l  %12 = load ptr, ptr %file.addr, align 8\l  %13 = load i32, ptr %line.addr, align 4\l  call void @array_resize_(ptr noundef %9, i64 noundef %10, i64 noundef %11,\l... ptr noundef %12, i32 noundef %13)\l  br label %if.end5\l}"];
+	Node0x5564aad944e0 -> Node0x5564aad93db0[tooltip="if.end -> if.end5\nProbability 100.00%" ];
+	Node0x5564aad93db0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end5:\l|  %14 = load ptr, ptr %a.addr, align 8\l  %ptr = getelementptr inbounds %struct.array, ptr %14, i32 0, i32 0\l  %15 = load ptr, ptr %ptr, align 8\l  ret ptr %15\l}"];
+}

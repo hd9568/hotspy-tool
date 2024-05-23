@@ -1,0 +1,5 @@
+digraph "CFG for 'hypre_SeedRand' function" {
+	label="CFG for 'hypre_SeedRand' function";
+
+	Node0x563400a2d400 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %seed.addr = alloca i32, align 4\l  store i32 %seed, ptr %seed.addr, align 4\l  %0 = load i32, ptr %seed.addr, align 4\l  store i32 %0, ptr @Seed, align 4\l  ret void\l}"];
+}

@@ -1,0 +1,10 @@
+digraph "CFG for '_ZN3fmt6v9_lmp7ostream4growEm' function" {
+	label="CFG for '_ZN3fmt6v9_lmp7ostream4growEm' function";
+
+	Node0x55957a4c6c40 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %.addr = alloca i64, align 8\l  store ptr %this, ptr %this.addr, align 8\l  store i64 %0, ptr %.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %call = call noundef i64 @_ZNK3fmt6v9_lmp6detail6bufferIcE4sizeEv(ptr\l... noundef nonnull align 8 dereferenceable(32) %this1) #8\l  %call2 = call noundef i64 @_ZNK3fmt6v9_lmp6detail6bufferIcE8capacityEv(ptr\l... noundef nonnull align 8 dereferenceable(32) %this1) #8\l  %cmp = icmp eq i64 %call, %call2\l  br i1 %cmp, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x55957a4c6c40:s0 -> Node0x55957a4c72e0[tooltip="entry -> if.then\nProbability 50.00%" ];
+	Node0x55957a4c6c40:s1 -> Node0x55957a4c73b0[tooltip="entry -> if.end\nProbability 50.00%" ];
+	Node0x55957a4c72e0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.then:\l|  call void @_ZN3fmt6v9_lmp7ostream5flushEv(ptr noundef nonnull align 8\l... dereferenceable(40) %this1)\l  br label %if.end\l}"];
+	Node0x55957a4c72e0 -> Node0x55957a4c73b0[tooltip="if.then -> if.end\nProbability 100.00%" ];
+	Node0x55957a4c73b0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  ret void\l}"];
+}

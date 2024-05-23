@@ -1,0 +1,27 @@
+digraph "CFG for 'pnleg_' function" {
+	label="CFG for 'pnleg_' function";
+
+	Node0x55ec1735f380 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d24b4070" fontname="Courier",label="{2:\l|  %3 = alloca float, i64 1, align 4\l  %4 = alloca i32, i64 1, align 4\l  %5 = alloca float, i64 1, align 4\l  %6 = alloca float, i64 1, align 4\l  %7 = alloca float, i64 1, align 4\l  %8 = alloca float, i64 1, align 4\l  %9 = load float, ptr %0, align 4\l  %10 = call contract float @llvm.fabs.f32(float %9)\l  %11 = fcmp contract olt float %10, 0x3ABEF2D100000000\l  br i1 %11, label %12, label %13\l|{<s0>T|<s1>F}}"];
+	Node0x55ec1735f380:s0 -> Node0x55ec1735f850[tooltip="2 -> 12\nProbability 50.00%" ];
+	Node0x55ec1735f380:s1 -> Node0x55ec1735f8a0[tooltip="2 -> 13\nProbability 50.00%" ];
+	Node0x55ec1735f850 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d8564670" fontname="Courier",label="{12:\l|  store float 0.000000e+00, ptr %0, align 4\l  br label %13\l}"];
+	Node0x55ec1735f850 -> Node0x55ec1735f8a0[tooltip="12 -> 13\nProbability 100.00%" ];
+	Node0x55ec1735f8a0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d24b4070" fontname="Courier",label="{13:\l|  store float 1.000000e+00, ptr %5, align 4\l  %14 = load i32, ptr %1, align 4\l  %15 = icmp eq i32 %14, 0\l  br i1 %15, label %16, label %18\l|{<s0>T|<s1>F}}"];
+	Node0x55ec1735f8a0:s0 -> Node0x55ec1735fa40[tooltip="13 -> 16\nProbability 37.50%" ];
+	Node0x55ec1735f8a0:s1 -> Node0x55ec1735feb0[tooltip="13 -> 18\nProbability 62.50%" ];
+	Node0x55ec1735fa40 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#dc5d4a70" fontname="Courier",label="{16:\l|  %17 = load float, ptr %5, align 4\l  store float %17, ptr %8, align 4\l  br label %53\l}"];
+	Node0x55ec1735fa40 -> Node0x55ec173600d0[tooltip="16 -> 53\nProbability 100.00%" ];
+	Node0x55ec1735feb0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{18:\l|  %19 = load float, ptr %0, align 4\l  store float %19, ptr %6, align 4\l  %20 = load float, ptr %6, align 4\l  store float %20, ptr %7, align 4\l  %21 = load i32, ptr %1, align 4\l  %22 = sub i32 %21, 1\l  %23 = sext i32 %22 to i64\l  br label %24\l}"];
+	Node0x55ec1735feb0 -> Node0x55ec17360550[tooltip="18 -> 24\nProbability 100.00%" ];
+	Node0x55ec17360550 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{24:\l|  %25 = phi i32 [ %46, %28 ], [ 1, %18 ]\l  %26 = phi i64 [ %47, %28 ], [ %23, %18 ]\l  %27 = icmp sgt i64 %26, 0\l  br i1 %27, label %28, label %48\l|{<s0>T|<s1>F}}"];
+	Node0x55ec17360550:s0 -> Node0x55ec17360610[tooltip="24 -> 28\nProbability 96.88%" ];
+	Node0x55ec17360550:s1 -> Node0x55ec17360870[tooltip="24 -> 48\nProbability 3.12%" ];
+	Node0x55ec17360610 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{28:\l|  store i32 %25, ptr %4, align 4\l  %29 = load i32, ptr %4, align 4\l  %30 = sitofp i32 %29 to float\l  store float %30, ptr %3, align 4\l  %31 = load float, ptr %3, align 4\l  %32 = fmul contract float %31, 2.000000e+00\l  %33 = fadd contract float %32, 1.000000e+00\l  %34 = load float, ptr %0, align 4\l  %35 = fmul contract float %33, %34\l  %36 = load float, ptr %6, align 4\l  %37 = fmul contract float %35, %36\l  %38 = load float, ptr %5, align 4\l  %39 = fmul contract float %31, %38\l  %40 = fsub contract float %37, %39\l  %41 = fadd contract float %31, 1.000000e+00\l  %42 = fdiv contract float %40, %41\l  store float %42, ptr %7, align 4\l  %43 = load float, ptr %6, align 4\l  store float %43, ptr %5, align 4\l  %44 = load float, ptr %7, align 4\l  store float %44, ptr %6, align 4\l  %45 = load i32, ptr %4, align 4\l  %46 = add i32 %45, 1\l  %47 = sub i64 %26, 1\l  br label %24\l}"];
+	Node0x55ec17360610 -> Node0x55ec17360550[tooltip="28 -> 24\nProbability 100.00%" ];
+	Node0x55ec17360870 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{48:\l|  store i32 %25, ptr %4, align 4\l  %49 = load float, ptr %7, align 4\l  store float %49, ptr %8, align 4\l  %50 = load i32, ptr %1, align 4\l  %51 = icmp eq i32 %50, 0\l  br i1 %51, label %52, label %53\l|{<s0>T|<s1>F}}"];
+	Node0x55ec17360870:s0 -> Node0x55ec173621f0[tooltip="48 -> 52\nProbability 37.50%" ];
+	Node0x55ec17360870:s1 -> Node0x55ec173600d0[tooltip="48 -> 53\nProbability 62.50%" ];
+	Node0x55ec173621f0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#de614d70" fontname="Courier",label="{52:\l|  store float 1.000000e+00, ptr %8, align 4\l  br label %53\l}"];
+	Node0x55ec173621f0 -> Node0x55ec173600d0[tooltip="52 -> 53\nProbability 100.00%" ];
+	Node0x55ec173600d0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d24b4070" fontname="Courier",label="{53:\l|  %54 = load float, ptr %8, align 4\l  ret float %54\l}"];
+}

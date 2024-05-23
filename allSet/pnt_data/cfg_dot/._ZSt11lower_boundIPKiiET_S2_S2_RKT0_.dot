@@ -1,0 +1,5 @@
+digraph "CFG for '_ZSt11lower_boundIPKiiET_S2_S2_RKT0_' function" {
+	label="CFG for '_ZSt11lower_boundIPKiiET_S2_S2_RKT0_' function";
+
+	Node0x56307d673a80 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %__first.addr = alloca ptr, align 8\l  %__last.addr = alloca ptr, align 8\l  %__val.addr = alloca ptr, align 8\l  %agg.tmp = alloca %\"struct.__gnu_cxx::__ops::_Iter_less_val\", align 1\l  %undef.agg.tmp = alloca %\"struct.__gnu_cxx::__ops::_Iter_less_val\", align 1\l  store ptr %__first, ptr %__first.addr, align 8\l  store ptr %__last, ptr %__last.addr, align 8\l  store ptr %__val, ptr %__val.addr, align 8\l  %0 = load ptr, ptr %__first.addr, align 8\l  %1 = load ptr, ptr %__last.addr, align 8\l  %2 = load ptr, ptr %__val.addr, align 8\l  call void @_ZN9__gnu_cxx5__ops15__iter_less_valEv()\l  %call = call noundef ptr\l... @_ZSt13__lower_boundIPKiiN9__gnu_cxx5__ops14_Iter_less_valEET_S5_S5_RKT0_T1_(p\l...tr noundef %0, ptr noundef %1, ptr noundef nonnull align 4 dereferenceable(4)\l... %2)\l  ret ptr %call\l}"];
+}

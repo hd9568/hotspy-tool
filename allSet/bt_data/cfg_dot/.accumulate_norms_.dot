@@ -1,0 +1,5 @@
+digraph "CFG for 'accumulate_norms_' function" {
+	label="CFG for 'accumulate_norms_' function";
+
+	Node0x55ab5a6061a0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{1:\l|  ret void\l}"];
+}

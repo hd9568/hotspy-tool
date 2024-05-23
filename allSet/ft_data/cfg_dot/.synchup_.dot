@@ -1,0 +1,5 @@
+digraph "CFG for 'synchup_' function" {
+	label="CFG for 'synchup_' function";
+
+	Node0x55cdf5dc6b90 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{0:\l|  %1 = alloca i32, i64 1, align 4\l  %2 = alloca i32, i64 1, align 4\l  %3 = alloca i32, i64 1, align 4\l  %4 = alloca i32, i64 1, align 4\l  store i32 15, ptr %3, align 4\l  call void @timer_start_(ptr %3)\l  store i32 0, ptr %2, align 4\l  call void @mpi_barrier_(ptr %2, ptr %4)\l  store i32 15, ptr %1, align 4\l  call void @timer_stop_(ptr %1)\l  ret void\l}"];
+}

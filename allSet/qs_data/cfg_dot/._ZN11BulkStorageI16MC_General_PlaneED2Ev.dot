@@ -1,0 +1,24 @@
+digraph "CFG for '_ZN11BulkStorageI16MC_General_PlaneED2Ev' function" {
+	label="CFG for '_ZN11BulkStorageI16MC_General_PlaneED2Ev' function";
+
+	Node0x564271a89710 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %_bulkStorage = getelementptr inbounds %class.BulkStorage.50, ptr %this1,\l... i32 0, i32 0\l  %0 = load ptr, ptr %_bulkStorage, align 8\l  %cmp = icmp eq ptr %0, null\l  br i1 %cmp, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x564271a89710:s0 -> Node0x564271a89ad0[tooltip="entry -> if.then\nProbability 37.50%" ];
+	Node0x564271a89710:s1 -> Node0x564271a89b40[tooltip="entry -> if.end\nProbability 62.50%" ];
+	Node0x564271a89ad0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{if.then:\l|  br label %delete.end\l}"];
+	Node0x564271a89ad0 -> Node0x564271a89c60[tooltip="if.then -> delete.end\nProbability 100.00%" ];
+	Node0x564271a89b40 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.end:\l|  %_refCount = getelementptr inbounds %class.BulkStorage.50, ptr %this1, i32\l... 0, i32 1\l  %1 = load ptr, ptr %_refCount, align 8\l  %2 = load i32, ptr %1, align 4\l  %dec = add nsw i32 %2, -1\l  store i32 %dec, ptr %1, align 4\l  %_refCount2 = getelementptr inbounds %class.BulkStorage.50, ptr %this1, i32\l... 0, i32 1\l  %3 = load ptr, ptr %_refCount2, align 8\l  %4 = load i32, ptr %3, align 4\l  %cmp3 = icmp sgt i32 %4, 0\l  br i1 %cmp3, label %if.then4, label %if.end5\l|{<s0>T|<s1>F}}"];
+	Node0x564271a89b40:s0 -> Node0x564271a8a4d0[tooltip="if.end -> if.then4\nProbability 62.50%" ];
+	Node0x564271a89b40:s1 -> Node0x564271a8a550[tooltip="if.end -> if.end5\nProbability 37.50%" ];
+	Node0x564271a8a4d0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.then4:\l|  br label %delete.end\l}"];
+	Node0x564271a8a4d0 -> Node0x564271a89c60[tooltip="if.then4 -> delete.end\nProbability 100.00%" ];
+	Node0x564271a8a550 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470" fontname="Courier",label="{if.end5:\l|  %_bulkStorage6 = getelementptr inbounds %class.BulkStorage.50, ptr %this1,\l... i32 0, i32 0\l  %5 = load ptr, ptr %_bulkStorage6, align 8\l  %_capacity = getelementptr inbounds %class.BulkStorage.50, ptr %this1, i32\l... 0, i32 3\l  %6 = load i32, ptr %_capacity, align 4\l  %_memPolicy = getelementptr inbounds %class.BulkStorage.50, ptr %this1, i32\l... 0, i32 4\l  %7 = load i32, ptr %_memPolicy, align 8\l  invoke void\l... @_ZN13MemoryControl10deallocateI16MC_General_PlaneEEvPT_iNS_16AllocationPolicy\l...E(ptr noundef %5, i32 noundef %6, i32 noundef %7)\l          to label %invoke.cont unwind label %terminate.lpad\l}"];
+	Node0x564271a8a550 -> Node0x564271a8ab30[tooltip="if.end5 -> invoke.cont\nProbability 100.00%" ];
+	Node0x564271a8a550 -> Node0x564271a8abb0[tooltip="if.end5 -> terminate.lpad\nProbability 0.00%" ];
+	Node0x564271a8ab30 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470" fontname="Courier",label="{invoke.cont:\l|  %_refCount7 = getelementptr inbounds %class.BulkStorage.50, ptr %this1,\l... i32 0, i32 1\l  %8 = load ptr, ptr %_refCount7, align 8\l  %isnull = icmp eq ptr %8, null\l  br i1 %isnull, label %delete.end, label %delete.notnull\l|{<s0>T|<s1>F}}"];
+	Node0x564271a8ab30:s0 -> Node0x564271a89c60[tooltip="invoke.cont -> delete.end\nProbability 37.50%" ];
+	Node0x564271a8ab30:s1 -> Node0x564271a8b180[tooltip="invoke.cont -> delete.notnull\nProbability 62.50%" ];
+	Node0x564271a8b180 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#ca3b3770" fontname="Courier",label="{delete.notnull:\l|  call void @_ZdlPv(ptr noundef %8) #14\l  br label %delete.end\l}"];
+	Node0x564271a8b180 -> Node0x564271a89c60[tooltip="delete.notnull -> delete.end\nProbability 100.00%" ];
+	Node0x564271a89c60 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{delete.end:\l|  ret void\l}"];
+	Node0x564271a8abb0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#efcebd70" fontname="Courier",label="{terminate.lpad:\l|  %9 = landingpad \{ ptr, i32 \}\l          catch ptr null\l  %10 = extractvalue \{ ptr, i32 \} %9, 0\l  call void @__clang_call_terminate(ptr %10) #15\l  unreachable\l}"];
+}

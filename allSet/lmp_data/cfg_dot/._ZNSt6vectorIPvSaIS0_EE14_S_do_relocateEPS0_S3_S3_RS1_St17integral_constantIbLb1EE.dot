@@ -1,0 +1,5 @@
+digraph "CFG for '_ZNSt6vectorIPvSaIS0_EE14_S_do_relocateEPS0_S3_S3_RS1_St17integral_constantIbLb1EE' function" {
+	label="CFG for '_ZNSt6vectorIPvSaIS0_EE14_S_do_relocateEPS0_S3_S3_RS1_St17integral_constantIbLb1EE' function";
+
+	Node0x56285ad36bf0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %0 = alloca %\"struct.std::integral_constant\", align 1\l  %__first.addr = alloca ptr, align 8\l  %__last.addr = alloca ptr, align 8\l  %__result.addr = alloca ptr, align 8\l  %__alloc.addr = alloca ptr, align 8\l  store ptr %__first, ptr %__first.addr, align 8\l  store ptr %__last, ptr %__last.addr, align 8\l  store ptr %__result, ptr %__result.addr, align 8\l  store ptr %__alloc, ptr %__alloc.addr, align 8\l  %1 = load ptr, ptr %__first.addr, align 8\l  %2 = load ptr, ptr %__last.addr, align 8\l  %3 = load ptr, ptr %__result.addr, align 8\l  %4 = load ptr, ptr %__alloc.addr, align 8\l  %call = call noundef ptr\l... @_ZSt12__relocate_aIPPvS1_SaIS0_EET0_T_S4_S3_RT1_(ptr noundef %1, ptr noundef\l... %2, ptr noundef %3, ptr noundef nonnull align 1 dereferenceable(1) %4) #4\l  ret ptr %call\l}"];
+}

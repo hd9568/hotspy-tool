@@ -1,0 +1,5 @@
+digraph "CFG for '_ZSt4__lgl' function" {
+	label="CFG for '_ZSt4__lgl' function";
+
+	Node0x55aea9350140 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %__n.addr = alloca i64, align 8\l  store i64 %__n, ptr %__n.addr, align 8\l  %0 = load i64, ptr %__n.addr, align 8\l  %1 = call i64 @llvm.ctlz.i64(i64 %0, i1 true)\l  %cast = trunc i64 %1 to i32\l  %sub = sub nsw i32 63, %cast\l  %conv = sext i32 %sub to i64\l  ret i64 %conv\l}"];
+}

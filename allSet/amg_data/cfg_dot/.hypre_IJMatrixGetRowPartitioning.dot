@@ -1,0 +1,19 @@
+digraph "CFG for 'hypre_IJMatrixGetRowPartitioning' function" {
+	label="CFG for 'hypre_IJMatrixGetRowPartitioning' function";
+
+	Node0x556fa5241760 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %retval = alloca i32, align 4\l  %matrix.addr = alloca ptr, align 8\l  %row_partitioning.addr = alloca ptr, align 8\l  %ijmatrix = alloca ptr, align 8\l  store ptr %matrix, ptr %matrix.addr, align 8\l  store ptr %row_partitioning, ptr %row_partitioning.addr, align 8\l  %0 = load ptr, ptr %matrix.addr, align 8\l  store ptr %0, ptr %ijmatrix, align 8\l  %1 = load ptr, ptr %ijmatrix, align 8\l  %tobool = icmp ne ptr %1, null\l  br i1 %tobool, label %if.end, label %if.then\l|{<s0>T|<s1>F}}"];
+	Node0x556fa5241760:s0 -> Node0x556fa5244be0[tooltip="entry -> if.end\nProbability 62.50%" ];
+	Node0x556fa5241760:s1 -> Node0x556fa5244c50[tooltip="entry -> if.then\nProbability 37.50%" ];
+	Node0x556fa5244c50 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{if.then:\l|  call void @hypre_error_handler(ptr noundef @.str, i32 noundef 51, i32\l... noundef 1, ptr noundef @.str.1)\l  %2 = load i32, ptr @hypre__global_error, align 4\l  store i32 %2, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x556fa5244c50 -> Node0x556fa5245710[tooltip="if.then -> return\nProbability 100.00%" ];
+	Node0x556fa5244be0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.end:\l|  %3 = load ptr, ptr %ijmatrix, align 8\l  %row_partitioning1 = getelementptr inbounds %struct.hypre_IJMatrix_struct,\l... ptr %3, i32 0, i32 1\l  %4 = load ptr, ptr %row_partitioning1, align 8\l  %tobool2 = icmp ne ptr %4, null\l  br i1 %tobool2, label %if.then3, label %if.else\l|{<s0>T|<s1>F}}"];
+	Node0x556fa5244be0:s0 -> Node0x556fa52460e0[tooltip="if.end -> if.then3\nProbability 62.50%" ];
+	Node0x556fa5244be0:s1 -> Node0x556fa5246130[tooltip="if.end -> if.else\nProbability 37.50%" ];
+	Node0x556fa52460e0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.then3:\l|  %5 = load ptr, ptr %ijmatrix, align 8\l  %row_partitioning4 = getelementptr inbounds %struct.hypre_IJMatrix_struct,\l... ptr %5, i32 0, i32 1\l  %6 = load ptr, ptr %row_partitioning4, align 8\l  %7 = load ptr, ptr %row_partitioning.addr, align 8\l  store ptr %6, ptr %7, align 8\l  br label %if.end5\l}"];
+	Node0x556fa52460e0 -> Node0x556fa52465f0[tooltip="if.then3 -> if.end5\nProbability 100.00%" ];
+	Node0x556fa5246130 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470" fontname="Courier",label="{if.else:\l|  call void @hypre_error_handler(ptr noundef @.str, i32 noundef 59, i32\l... noundef 1, ptr noundef null)\l  %8 = load i32, ptr @hypre__global_error, align 4\l  store i32 %8, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x556fa5246130 -> Node0x556fa5245710[tooltip="if.else -> return\nProbability 100.00%" ];
+	Node0x556fa52465f0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.end5:\l|  %9 = load i32, ptr @hypre__global_error, align 4\l  store i32 %9, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x556fa52465f0 -> Node0x556fa5245710[tooltip="if.end5 -> return\nProbability 100.00%" ];
+	Node0x556fa5245710 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{return:\l|  %10 = load i32, ptr %retval, align 4\l  ret i32 %10\l}"];
+}

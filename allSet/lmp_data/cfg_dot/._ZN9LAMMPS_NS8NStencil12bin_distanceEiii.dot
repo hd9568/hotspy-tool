@@ -1,0 +1,47 @@
+digraph "CFG for '_ZN9LAMMPS_NS8NStencil12bin_distanceEiii' function" {
+	label="CFG for '_ZN9LAMMPS_NS8NStencil12bin_distanceEiii' function";
+
+	Node0x55b8be8a8810 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %i.addr = alloca i32, align 4\l  %j.addr = alloca i32, align 4\l  %k.addr = alloca i32, align 4\l  %delx = alloca double, align 8\l  %dely = alloca double, align 8\l  %delz = alloca double, align 8\l  store ptr %this, ptr %this.addr, align 8\l  store i32 %i, ptr %i.addr, align 4\l  store i32 %j, ptr %j.addr, align 4\l  store i32 %k, ptr %k.addr, align 4\l  %this1 = load ptr, ptr %this.addr, align 8\l  %0 = load i32, ptr %i.addr, align 4\l  %cmp = icmp sgt i32 %0, 0\l  br i1 %cmp, label %if.then, label %if.else\l|{<s0>T|<s1>F}}"];
+	Node0x55b8be8a8810:s0 -> Node0x55b8be8a9190[tooltip="entry -> if.then\nProbability 62.50%" ];
+	Node0x55b8be8a8810:s1 -> Node0x55b8be8a9200[tooltip="entry -> if.else\nProbability 37.50%" ];
+	Node0x55b8be8a9190 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.then:\l|  %1 = load i32, ptr %i.addr, align 4\l  %sub = sub nsw i32 %1, 1\l  %conv = sitofp i32 %sub to double\l  %binsizex = getelementptr inbounds %\"class.LAMMPS_NS::NStencil\", ptr %this1,\l... i32 0, i32 35\l  %2 = load double, ptr %binsizex, align 8\l  %mul = fmul double %conv, %2\l  store double %mul, ptr %delx, align 8\l  br label %if.end8\l}"];
+	Node0x55b8be8a9190 -> Node0x55b8be8a97a0[tooltip="if.then -> if.end8\nProbability 100.00%" ];
+	Node0x55b8be8a9200 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{if.else:\l|  %3 = load i32, ptr %i.addr, align 4\l  %cmp2 = icmp eq i32 %3, 0\l  br i1 %cmp2, label %if.then3, label %if.else4\l|{<s0>T|<s1>F}}"];
+	Node0x55b8be8a9200:s0 -> Node0x55b8be8a99b0[tooltip="if.else -> if.then3\nProbability 37.50%" ];
+	Node0x55b8be8a9200:s1 -> Node0x55b8be8a9a30[tooltip="if.else -> if.else4\nProbability 62.50%" ];
+	Node0x55b8be8a99b0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#ca3b3770" fontname="Courier",label="{if.then3:\l|  store double 0.000000e+00, ptr %delx, align 8\l  br label %if.end\l}"];
+	Node0x55b8be8a99b0 -> Node0x55b8be8a9c00[tooltip="if.then3 -> if.end\nProbability 100.00%" ];
+	Node0x55b8be8a9a30 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470" fontname="Courier",label="{if.else4:\l|  %4 = load i32, ptr %i.addr, align 4\l  %add = add nsw i32 %4, 1\l  %conv5 = sitofp i32 %add to double\l  %binsizex6 = getelementptr inbounds %\"class.LAMMPS_NS::NStencil\", ptr\l... %this1, i32 0, i32 35\l  %5 = load double, ptr %binsizex6, align 8\l  %mul7 = fmul double %conv5, %5\l  store double %mul7, ptr %delx, align 8\l  br label %if.end\l}"];
+	Node0x55b8be8a9a30 -> Node0x55b8be8a9c00[tooltip="if.else4 -> if.end\nProbability 100.00%" ];
+	Node0x55b8be8a9c00 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{if.end:\l|  br label %if.end8\l}"];
+	Node0x55b8be8a9c00 -> Node0x55b8be8a97a0[tooltip="if.end -> if.end8\nProbability 100.00%" ];
+	Node0x55b8be8a97a0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end8:\l|  %6 = load i32, ptr %j.addr, align 4\l  %cmp9 = icmp sgt i32 %6, 0\l  br i1 %cmp9, label %if.then10, label %if.else14\l|{<s0>T|<s1>F}}"];
+	Node0x55b8be8a97a0:s0 -> Node0x55b8be8aa4f0[tooltip="if.end8 -> if.then10\nProbability 62.50%" ];
+	Node0x55b8be8a97a0:s1 -> Node0x55b8be8aa570[tooltip="if.end8 -> if.else14\nProbability 37.50%" ];
+	Node0x55b8be8aa4f0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.then10:\l|  %7 = load i32, ptr %j.addr, align 4\l  %sub11 = sub nsw i32 %7, 1\l  %conv12 = sitofp i32 %sub11 to double\l  %binsizey = getelementptr inbounds %\"class.LAMMPS_NS::NStencil\", ptr %this1,\l... i32 0, i32 36\l  %8 = load double, ptr %binsizey, align 8\l  %mul13 = fmul double %conv12, %8\l  store double %mul13, ptr %dely, align 8\l  br label %if.end23\l}"];
+	Node0x55b8be8aa4f0 -> Node0x55b8be8aab20[tooltip="if.then10 -> if.end23\nProbability 100.00%" ];
+	Node0x55b8be8aa570 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{if.else14:\l|  %9 = load i32, ptr %j.addr, align 4\l  %cmp15 = icmp eq i32 %9, 0\l  br i1 %cmp15, label %if.then16, label %if.else17\l|{<s0>T|<s1>F}}"];
+	Node0x55b8be8aa570:s0 -> Node0x55b8be8aad40[tooltip="if.else14 -> if.then16\nProbability 37.50%" ];
+	Node0x55b8be8aa570:s1 -> Node0x55b8be8aadc0[tooltip="if.else14 -> if.else17\nProbability 62.50%" ];
+	Node0x55b8be8aad40 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#ca3b3770" fontname="Courier",label="{if.then16:\l|  store double 0.000000e+00, ptr %dely, align 8\l  br label %if.end22\l}"];
+	Node0x55b8be8aad40 -> Node0x55b8be8aaf90[tooltip="if.then16 -> if.end22\nProbability 100.00%" ];
+	Node0x55b8be8aadc0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470" fontname="Courier",label="{if.else17:\l|  %10 = load i32, ptr %j.addr, align 4\l  %add18 = add nsw i32 %10, 1\l  %conv19 = sitofp i32 %add18 to double\l  %binsizey20 = getelementptr inbounds %\"class.LAMMPS_NS::NStencil\", ptr\l... %this1, i32 0, i32 36\l  %11 = load double, ptr %binsizey20, align 8\l  %mul21 = fmul double %conv19, %11\l  store double %mul21, ptr %dely, align 8\l  br label %if.end22\l}"];
+	Node0x55b8be8aadc0 -> Node0x55b8be8aaf90[tooltip="if.else17 -> if.end22\nProbability 100.00%" ];
+	Node0x55b8be8aaf90 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{if.end22:\l|  br label %if.end23\l}"];
+	Node0x55b8be8aaf90 -> Node0x55b8be8aab20[tooltip="if.end22 -> if.end23\nProbability 100.00%" ];
+	Node0x55b8be8aab20 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end23:\l|  %12 = load i32, ptr %k.addr, align 4\l  %cmp24 = icmp sgt i32 %12, 0\l  br i1 %cmp24, label %if.then25, label %if.else29\l|{<s0>T|<s1>F}}"];
+	Node0x55b8be8aab20:s0 -> Node0x55b8be8ab710[tooltip="if.end23 -> if.then25\nProbability 62.50%" ];
+	Node0x55b8be8aab20:s1 -> Node0x55b8be8ab790[tooltip="if.end23 -> if.else29\nProbability 37.50%" ];
+	Node0x55b8be8ab710 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.then25:\l|  %13 = load i32, ptr %k.addr, align 4\l  %sub26 = sub nsw i32 %13, 1\l  %conv27 = sitofp i32 %sub26 to double\l  %binsizez = getelementptr inbounds %\"class.LAMMPS_NS::NStencil\", ptr %this1,\l... i32 0, i32 37\l  %14 = load double, ptr %binsizez, align 8\l  %mul28 = fmul double %conv27, %14\l  store double %mul28, ptr %delz, align 8\l  br label %if.end38\l}"];
+	Node0x55b8be8ab710 -> Node0x55b8be875100[tooltip="if.then25 -> if.end38\nProbability 100.00%" ];
+	Node0x55b8be8ab790 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{if.else29:\l|  %15 = load i32, ptr %k.addr, align 4\l  %cmp30 = icmp eq i32 %15, 0\l  br i1 %cmp30, label %if.then31, label %if.else32\l|{<s0>T|<s1>F}}"];
+	Node0x55b8be8ab790:s0 -> Node0x55b8be86dbe0[tooltip="if.else29 -> if.then31\nProbability 37.50%" ];
+	Node0x55b8be8ab790:s1 -> Node0x55b8be835db0[tooltip="if.else29 -> if.else32\nProbability 62.50%" ];
+	Node0x55b8be86dbe0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#ca3b3770" fontname="Courier",label="{if.then31:\l|  store double 0.000000e+00, ptr %delz, align 8\l  br label %if.end37\l}"];
+	Node0x55b8be86dbe0 -> Node0x55b8be8ac5f0[tooltip="if.then31 -> if.end37\nProbability 100.00%" ];
+	Node0x55b8be835db0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470" fontname="Courier",label="{if.else32:\l|  %16 = load i32, ptr %k.addr, align 4\l  %add33 = add nsw i32 %16, 1\l  %conv34 = sitofp i32 %add33 to double\l  %binsizez35 = getelementptr inbounds %\"class.LAMMPS_NS::NStencil\", ptr\l... %this1, i32 0, i32 37\l  %17 = load double, ptr %binsizez35, align 8\l  %mul36 = fmul double %conv34, %17\l  store double %mul36, ptr %delz, align 8\l  br label %if.end37\l}"];
+	Node0x55b8be835db0 -> Node0x55b8be8ac5f0[tooltip="if.else32 -> if.end37\nProbability 100.00%" ];
+	Node0x55b8be8ac5f0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{if.end37:\l|  br label %if.end38\l}"];
+	Node0x55b8be8ac5f0 -> Node0x55b8be875100[tooltip="if.end37 -> if.end38\nProbability 100.00%" ];
+	Node0x55b8be875100 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end38:\l|  %18 = load double, ptr %delx, align 8\l  %19 = load double, ptr %delx, align 8\l  %20 = load double, ptr %dely, align 8\l  %21 = load double, ptr %dely, align 8\l  %mul40 = fmul double %20, %21\l  %22 = call double @llvm.fmuladd.f64(double %18, double %19, double %mul40)\l  %23 = load double, ptr %delz, align 8\l  %24 = load double, ptr %delz, align 8\l  %25 = call double @llvm.fmuladd.f64(double %23, double %24, double %22)\l  ret double %25\l}"];
+}

@@ -1,0 +1,5 @@
+digraph "CFG for 'hypre_MPI_Wtick' function" {
+	label="CFG for 'hypre_MPI_Wtick' function";
+
+	Node0x5555d661ea80 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %call = call double @MPI_Wtick()\l  ret double %call\l}"];
+}

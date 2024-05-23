@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN9LAMMPS_NS6LAMMPS10git_branchEv' function" {
+	label="CFG for '_ZN9LAMMPS_NS6LAMMPS10git_branchEv' function";
+
+	Node0x56529128ddb0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  ret ptr @.str\l}"];
+}

@@ -1,0 +1,47 @@
+digraph "Call graph: csr_matop.ll" {
+	label="Call graph: csr_matop.ll";
+
+	Node0x55f669c23a30 [shape=record,label="{hypre_CSRMatrixAdd}"];
+	Node0x55f669c23a30 -> Node0x55f669bd5d40;
+	Node0x55f669c23a30 -> Node0x55f669bc7e40;
+	Node0x55f669c23a30 -> Node0x55f669bcfd20;
+	Node0x55f669c23a30 -> Node0x55f669bc4ba0;
+	Node0x55f669c23a30 -> Node0x55f669c23b80;
+	Node0x55f669bd5d40 [shape=record,label="{hypre_error_handler}"];
+	Node0x55f669bc7e40 [shape=record,label="{hypre_CAlloc}"];
+	Node0x55f669bc4ba0 [shape=record,label="{hypre_CSRMatrixCreate}"];
+	Node0x55f669c23b80 [shape=record,label="{hypre_CSRMatrixInitialize}"];
+	Node0x55f669bcfd20 [shape=record,label="{hypre_Free}"];
+	Node0x55f669c29f20 [shape=record,label="{hypre_CSRMatrixMultiply}"];
+	Node0x55f669c29f20 -> Node0x55f669bd5d40;
+	Node0x55f669c29f20 -> Node0x55f669bc7e40;
+	Node0x55f669c29f20 -> Node0x55f669bcfd20;
+	Node0x55f669c29f20 -> Node0x55f669c05380;
+	Node0x55f669c29f20 -> Node0x55f669bc4ba0;
+	Node0x55f669c29f20 -> Node0x55f669c23b80;
+	Node0x55f669c05380 [shape=record,label="{llvm.fmuladd.f64}"];
+	Node0x55f669bf1f90 [shape=record,label="{hypre_CSRMatrixDeleteZeros}"];
+	Node0x55f669bf1f90 -> Node0x55f669bc3020;
+	Node0x55f669bf1f90 -> Node0x55f669bc4ba0;
+	Node0x55f669bf1f90 -> Node0x55f669c23b80;
+	Node0x55f669bc3020 [shape=record,label="{llvm.fabs.f64}"];
+	Node0x55f669bc3870 [shape=record,label="{hypre_CSRMatrixTranspose}"];
+	Node0x55f669bc3870 -> Node0x55f669bc4ba0;
+	Node0x55f669bc3870 -> Node0x55f669c23b80;
+	Node0x55f669bc3870 -> Node0x55f669bc7e40;
+	Node0x55f669bc3870 -> Node0x55f669be6650;
+	Node0x55f669bc3870 -> Node0x55f669bcde30;
+	Node0x55f669bc3870 -> Node0x55f669bce2d0;
+	Node0x55f669bc3870 -> Node0x55f669be61c0;
+	Node0x55f669bc3870 -> Node0x55f669bd8be0;
+	Node0x55f669bc3870 -> Node0x55f669bd5d40;
+	Node0x55f669bc3870 -> Node0x55f669bd97e0;
+	Node0x55f669bcde30 [shape=record,label="{hypre_MAlloc}"];
+	Node0x55f669bce2d0 [shape=record,label="{hypre_CSRMatrixGetLoadBalancedPartitionBegin}"];
+	Node0x55f669be61c0 [shape=record,label="{hypre_CSRMatrixGetLoadBalancedPartitionEnd}"];
+	Node0x55f669bd8be0 [shape=record,label="{hypre_fprintf}"];
+	Node0x55f669bd97e0 [shape=record,label="{llvm.memset.p0.i64}"];
+	Node0x55f669be6650 [shape=record,label="{transpose_idx}"];
+	Node0x55f669bf43a0 [shape=record,label="{hypre_CSRMatrixReorder}"];
+	Node0x55f669bf79e0 [shape=record,label="{hypre_CSRMatrixSumElts}"];
+}

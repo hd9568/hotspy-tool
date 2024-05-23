@@ -1,0 +1,5 @@
+digraph "CFG for 'lammps_python_finalize' function" {
+	label="CFG for 'lammps_python_finalize' function";
+
+	Node0x55bdf7d8e3a0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  call void @_ZN9LAMMPS_NS6Python8finalizeEv()\l  ret void\l}"];
+}

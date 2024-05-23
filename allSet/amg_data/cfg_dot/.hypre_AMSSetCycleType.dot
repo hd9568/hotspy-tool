@@ -1,0 +1,5 @@
+digraph "CFG for 'hypre_AMSSetCycleType' function" {
+	label="CFG for 'hypre_AMSSetCycleType' function";
+
+	Node0x56058d79b9f0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %solver.addr = alloca ptr, align 8\l  %cycle_type.addr = alloca i32, align 4\l  %ams_data = alloca ptr, align 8\l  store ptr %solver, ptr %solver.addr, align 8\l  store i32 %cycle_type, ptr %cycle_type.addr, align 4\l  %0 = load ptr, ptr %solver.addr, align 8\l  store ptr %0, ptr %ams_data, align 8\l  %1 = load i32, ptr %cycle_type.addr, align 4\l  %2 = load ptr, ptr %ams_data, align 8\l  %cycle_type1 = getelementptr inbounds %struct.hypre_AMSData, ptr %2, i32 0,\l... i32 35\l  store i32 %1, ptr %cycle_type1, align 8\l  %3 = load i32, ptr @hypre__global_error, align 4\l  ret i32 %3\l}"];
+}

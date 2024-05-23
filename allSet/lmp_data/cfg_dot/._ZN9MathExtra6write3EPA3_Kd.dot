@@ -1,0 +1,23 @@
+digraph "CFG for '_ZN9MathExtra6write3EPA3_Kd' function" {
+	label="CFG for '_ZN9MathExtra6write3EPA3_Kd' function";
+
+	Node0x55837359ac60 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#ec7f6370" fontname="Courier",label="{entry:\l|  %mat.addr = alloca ptr, align 8\l  %i = alloca i32, align 4\l  %j = alloca i32, align 4\l  store ptr %mat, ptr %mat.addr, align 8\l  store i32 0, ptr %i, align 4\l  br label %for.cond\l}"];
+	Node0x55837359ac60 -> Node0x55837359b810[tooltip="entry -> for.cond\nProbability 100.00%" ];
+	Node0x55837359b810 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{for.cond:\l|  %0 = load i32, ptr %i, align 4\l  %cmp = icmp ult i32 %0, 3\l  br i1 %cmp, label %for.body, label %for.end9\l|{<s0>T|<s1>F}}"];
+	Node0x55837359b810:s0 -> Node0x55837359c480[tooltip="for.cond -> for.body\nProbability 96.88%" ];
+	Node0x55837359b810:s1 -> Node0x55837359c500[tooltip="for.cond -> for.end9\nProbability 3.12%" ];
+	Node0x55837359c480 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{for.body:\l|  store i32 0, ptr %j, align 4\l  br label %for.cond1\l}"];
+	Node0x55837359c480 -> Node0x55837359c6d0[tooltip="for.body -> for.cond1\nProbability 100.00%" ];
+	Node0x55837359c6d0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.cond1:\l|  %1 = load i32, ptr %j, align 4\l  %cmp2 = icmp ult i32 %1, 3\l  br i1 %cmp2, label %for.body3, label %for.end\l|{<s0>T|<s1>F}}"];
+	Node0x55837359c6d0:s0 -> Node0x55837359c8f0[tooltip="for.cond1 -> for.body3\nProbability 96.88%" ];
+	Node0x55837359c6d0:s1 -> Node0x55837359c970[tooltip="for.cond1 -> for.end\nProbability 3.12%" ];
+	Node0x55837359c8f0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.body3:\l|  %2 = load ptr, ptr %mat.addr, align 8\l  %3 = load i32, ptr %i, align 4\l  %idxprom = zext i32 %3 to i64\l  %arrayidx = getelementptr inbounds [3 x double], ptr %2, i64 %idxprom\l  %4 = load i32, ptr %j, align 4\l  %idxprom4 = zext i32 %4 to i64\l  %arrayidx5 = getelementptr inbounds [3 x double], ptr %arrayidx, i64 0, i64\l... %idxprom4\l  %5 = load double, ptr %arrayidx5, align 8\l  %call = call i32 (ptr, ...) @printf(ptr noundef @.str, double noundef %5)\l  br label %for.inc\l}"];
+	Node0x55837359c8f0 -> Node0x55837359d360[tooltip="for.body3 -> for.inc\nProbability 100.00%" ];
+	Node0x55837359d360 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.inc:\l|  %6 = load i32, ptr %j, align 4\l  %inc = add i32 %6, 1\l  store i32 %inc, ptr %j, align 4\l  br label %for.cond1, !llvm.loop !6\l}"];
+	Node0x55837359d360 -> Node0x55837359c6d0[tooltip="for.inc -> for.cond1\nProbability 100.00%" ];
+	Node0x55837359c970 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{for.end:\l|  %call6 = call i32 (ptr, ...) @printf(ptr noundef @.str.1)\l  br label %for.inc7\l}"];
+	Node0x55837359c970 -> Node0x55837359e350[tooltip="for.end -> for.inc7\nProbability 100.00%" ];
+	Node0x55837359e350 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{for.inc7:\l|  %7 = load i32, ptr %i, align 4\l  %inc8 = add i32 %7, 1\l  store i32 %inc8, ptr %i, align 4\l  br label %for.cond, !llvm.loop !8\l}"];
+	Node0x55837359e350 -> Node0x55837359b810[tooltip="for.inc7 -> for.cond\nProbability 100.00%" ];
+	Node0x55837359c500 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#ec7f6370" fontname="Courier",label="{for.end9:\l|  ret void\l}"];
+}

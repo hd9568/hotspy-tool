@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN3fmt6v9_lmp6detail8make_argILb0ENS0_20basic_format_contextINS0_8appenderEcEELNS1_4typeE12ERA7_KcTnNSt9enable_ifIXntT_EiE4typeELi0EEENS0_16basic_format_argIT0_EEOT2_' function" {
+	label="CFG for '_ZN3fmt6v9_lmp6detail8make_argILb0ENS0_20basic_format_contextINS0_8appenderEcEELNS1_4typeE12ERA7_KcTnNSt9enable_ifIXntT_EiE4typeELi0EEENS0_16basic_format_argIT0_EEOT2_' function";
+
+	Node0x557bd1610310 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %value.addr = alloca ptr, align 8\l  store ptr %value, ptr %value.addr, align 8\l  %0 = load ptr, ptr %value.addr, align 8\l  call void\l... @_ZN3fmt6v9_lmp6detail8make_argINS0_20basic_format_contextINS0_8appenderEcEERA\l...7_KcEENS0_16basic_format_argIT_EEOT0_(ptr dead_on_unwind writable\l... sret(%\"class.fmt::v9_lmp::basic_format_arg\") align 16 %agg.result, ptr\l... noundef nonnull align 1 dereferenceable(7) %0)\l  ret void\l}"];
+}

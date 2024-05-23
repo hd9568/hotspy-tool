@@ -1,0 +1,12 @@
+digraph "CFG for '_ZNK3fmt6v9_lmp6detail10get_localecvRKSt6localeEv' function" {
+	label="CFG for '_ZNK3fmt6v9_lmp6detail10get_localecvRKSt6localeEv' function";
+
+	Node0x5584168fc550 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %has_locale_ = getelementptr inbounds\l... %\"class.fmt::v9_lmp::detail::get_locale\", ptr %this1, i32 0, i32 1\l  %0 = load i8, ptr %has_locale_, align 8\l  %tobool = trunc i8 %0 to i1\l  br i1 %tobool, label %cond.true, label %cond.false\l|{<s0>T|<s1>F}}"];
+	Node0x5584168fc550:s0 -> Node0x5584168fc8f0[tooltip="entry -> cond.true\nProbability 50.00%" ];
+	Node0x5584168fc550:s1 -> Node0x5584168fc970[tooltip="entry -> cond.false\nProbability 50.00%" ];
+	Node0x5584168fc8f0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{cond.true:\l|  %1 = getelementptr inbounds %\"class.fmt::v9_lmp::detail::get_locale\", ptr\l... %this1, i32 0, i32 0\l  br label %cond.end\l}"];
+	Node0x5584168fc8f0 -> Node0x5584168fcb60[tooltip="cond.true -> cond.end\nProbability 100.00%" ];
+	Node0x5584168fc970 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{cond.false:\l|  %call = call noundef nonnull align 8 dereferenceable(8) ptr\l... @_ZN3fmt6v9_lmp6detail18get_classic_localeEv()\l  br label %cond.end\l}"];
+	Node0x5584168fc970 -> Node0x5584168fcb60[tooltip="cond.false -> cond.end\nProbability 100.00%" ];
+	Node0x5584168fcb60 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{cond.end:\l|  %cond-lvalue = phi ptr [ %1, %cond.true ], [ %call, %cond.false ]\l  ret ptr %cond-lvalue\l}"];
+}

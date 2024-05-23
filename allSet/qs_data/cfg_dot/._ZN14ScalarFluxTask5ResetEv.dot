@@ -1,0 +1,23 @@
+digraph "CFG for '_ZN14ScalarFluxTask5ResetEv' function" {
+	label="CFG for '_ZN14ScalarFluxTask5ResetEv' function";
+
+	Node0x556c3c7463b0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#ec7f6370" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %numGroups = alloca i32, align 4\l  %cellIndex = alloca i32, align 4\l  %groupIndex = alloca i32, align 4\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %_cell = getelementptr inbounds %class.ScalarFluxTask, ptr %this1, i32 0,\l... i32 0\l  %call = call noundef nonnull align 8 dereferenceable(12) ptr\l... @_ZN9qs_vectorI14ScalarFluxCellEixEi(ptr noundef nonnull align 8\l... dereferenceable(24) %_cell, i32 noundef 0)\l  %call2 = call noundef i32 @_ZNK14ScalarFluxCell4sizeEv(ptr noundef nonnull\l... align 8 dereferenceable(12) %call)\l  store i32 %call2, ptr %numGroups, align 4\l  store i32 0, ptr %cellIndex, align 4\l  br label %for.cond\l}"];
+	Node0x556c3c7463b0 -> Node0x556c3c746bf0[tooltip="entry -> for.cond\nProbability 100.00%" ];
+	Node0x556c3c746bf0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{for.cond:\l|  %0 = load i32, ptr %cellIndex, align 4\l  %_cell3 = getelementptr inbounds %class.ScalarFluxTask, ptr %this1, i32 0,\l... i32 0\l  %call4 = call noundef i32 @_ZNK9qs_vectorI14ScalarFluxCellE4sizeEv(ptr\l... noundef nonnull align 8 dereferenceable(24) %_cell3)\l  %cmp = icmp slt i32 %0, %call4\l  br i1 %cmp, label %for.body, label %for.end12\l|{<s0>T|<s1>F}}"];
+	Node0x556c3c746bf0:s0 -> Node0x556c3c76e0c0[tooltip="for.cond -> for.body\nProbability 96.88%" ];
+	Node0x556c3c746bf0:s1 -> Node0x556c3c76e110[tooltip="for.cond -> for.end12\nProbability 3.12%" ];
+	Node0x556c3c76e0c0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{for.body:\l|  store i32 0, ptr %groupIndex, align 4\l  br label %for.cond5\l}"];
+	Node0x556c3c76e0c0 -> Node0x556c3c76e2e0[tooltip="for.body -> for.cond5\nProbability 100.00%" ];
+	Node0x556c3c76e2e0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.cond5:\l|  %1 = load i32, ptr %groupIndex, align 4\l  %2 = load i32, ptr %numGroups, align 4\l  %cmp6 = icmp ult i32 %1, %2\l  br i1 %cmp6, label %for.body7, label %for.end\l|{<s0>T|<s1>F}}"];
+	Node0x556c3c76e2e0:s0 -> Node0x556c3c76e580[tooltip="for.cond5 -> for.body7\nProbability 96.88%" ];
+	Node0x556c3c76e2e0:s1 -> Node0x556c3c76e600[tooltip="for.cond5 -> for.end\nProbability 3.12%" ];
+	Node0x556c3c76e580 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.body7:\l|  %_cell8 = getelementptr inbounds %class.ScalarFluxTask, ptr %this1, i32 0,\l... i32 0\l  %3 = load i32, ptr %cellIndex, align 4\l  %call9 = call noundef nonnull align 8 dereferenceable(12) ptr\l... @_ZN9qs_vectorI14ScalarFluxCellEixEi(ptr noundef nonnull align 8\l... dereferenceable(24) %_cell8, i32 noundef %3)\l  %_group = getelementptr inbounds %class.ScalarFluxCell, ptr %call9, i32 0,\l... i32 0\l  %4 = load ptr, ptr %_group, align 8\l  %5 = load i32, ptr %groupIndex, align 4\l  %idxprom = sext i32 %5 to i64\l  %arrayidx = getelementptr inbounds double, ptr %4, i64 %idxprom\l  store double 0.000000e+00, ptr %arrayidx, align 8\l  br label %for.inc\l}"];
+	Node0x556c3c76e580 -> Node0x556c3c76df10[tooltip="for.body7 -> for.inc\nProbability 100.00%" ];
+	Node0x556c3c76df10 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.inc:\l|  %6 = load i32, ptr %groupIndex, align 4\l  %inc = add nsw i32 %6, 1\l  store i32 %inc, ptr %groupIndex, align 4\l  br label %for.cond5, !llvm.loop !6\l}"];
+	Node0x556c3c76df10 -> Node0x556c3c76e2e0[tooltip="for.inc -> for.cond5\nProbability 100.00%" ];
+	Node0x556c3c76e600 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{for.end:\l|  br label %for.inc10\l}"];
+	Node0x556c3c76e600 -> Node0x556c3c76f3b0[tooltip="for.end -> for.inc10\nProbability 100.00%" ];
+	Node0x556c3c76f3b0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{for.inc10:\l|  %7 = load i32, ptr %cellIndex, align 4\l  %inc11 = add nsw i32 %7, 1\l  store i32 %inc11, ptr %cellIndex, align 4\l  br label %for.cond, !llvm.loop !8\l}"];
+	Node0x556c3c76f3b0 -> Node0x556c3c746bf0[tooltip="for.inc10 -> for.cond\nProbability 100.00%" ];
+	Node0x556c3c76e110 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#ec7f6370" fontname="Courier",label="{for.end12:\l|  ret void\l}"];
+}

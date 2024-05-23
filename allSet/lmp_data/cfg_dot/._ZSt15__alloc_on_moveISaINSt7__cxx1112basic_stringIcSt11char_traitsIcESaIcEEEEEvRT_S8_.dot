@@ -1,0 +1,5 @@
+digraph "CFG for '_ZSt15__alloc_on_moveISaINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEEvRT_S8_' function" {
+	label="CFG for '_ZSt15__alloc_on_moveISaINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEEvRT_S8_' function";
+
+	Node0x55e069410f30 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %__one.addr = alloca ptr, align 8\l  %__two.addr = alloca ptr, align 8\l  %agg.tmp = alloca %\"struct.std::integral_constant\", align 1\l  store ptr %__one, ptr %__one.addr, align 8\l  store ptr %__two, ptr %__two.addr, align 8\l  %0 = load ptr, ptr %__one.addr, align 8\l  %1 = load ptr, ptr %__two.addr, align 8\l  call void\l... @_ZSt18__do_alloc_on_moveISaINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIc\l...EEEEEvRT_S8_St17integral_constantIbLb1EE(ptr noundef nonnull align 1\l... dereferenceable(1) %0, ptr noundef nonnull align 1 dereferenceable(1) %1)\l  ret void\l}"];
+}

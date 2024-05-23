@@ -1,0 +1,29 @@
+digraph "Call graph: GridInit.ll" {
+	label="Call graph: GridInit.ll";
+
+	Node0x55a70b22b280 [shape=record,label="{grid_init_do_not_profile}"];
+	Node0x55a70b22b280 -> Node0x55a70b22ea20;
+	Node0x55a70b22b280 -> Node0x55a70b2317e0;
+	Node0x55a70b22b280 -> Node0x55a70b234650;
+	Node0x55a70b22b280 -> Node0x55a70b2356a0;
+	Node0x55a70b22b280 -> Node0x55a70b243fa0;
+	Node0x55a70b22b280 -> Node0x55a70b240d20;
+	Node0x55a70b22b280 -> Node0x55a70b23f940;
+	Node0x55a70b22b280 -> Node0x55a70b23d240;
+	Node0x55a70b22b280 -> Node0x55a70b23cee0;
+	Node0x55a70b22b280 -> Node0x55a70b236030;
+	Node0x55a70b22b280 -> Node0x55a70b23cb90;
+	Node0x55a70b22ea20 [shape=record,label="{printf}"];
+	Node0x55a70b2317e0 [shape=record,label="{malloc}"];
+	Node0x55a70b234650 [shape=record,label="{__assert_fail}"];
+	Node0x55a70b2356a0 [shape=record,label="{LCG_random_double}"];
+	Node0x55a70b236030 [shape=record,label="{qsort}"];
+	Node0x55a70b229810 [shape=record,label="{NGP_compare}"];
+	Node0x55a70b235970 [shape=record,label="{double_compare}"];
+	Node0x55a70b23cb90 [shape=record,label="{calloc}"];
+	Node0x55a70b23cee0 [shape=record,label="{free}"];
+	Node0x55a70b23d240 [shape=record,label="{grid_search_nuclide}"];
+	Node0x55a70b23f940 [shape=record,label="{load_num_nucs}"];
+	Node0x55a70b240d20 [shape=record,label="{load_mats}"];
+	Node0x55a70b243fa0 [shape=record,label="{load_concs}"];
+}

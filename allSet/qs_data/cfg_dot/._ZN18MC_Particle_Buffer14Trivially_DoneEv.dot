@@ -1,0 +1,17 @@
+digraph "CFG for '_ZN18MC_Particle_Buffer14Trivially_DoneEv' function" {
+	label="CFG for '_ZN18MC_Particle_Buffer14Trivially_DoneEv' function";
+
+	Node0x558b69464bd0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %retval = alloca i1, align 1\l  %this.addr = alloca ptr, align 8\l  %processingSize = alloca i64, align 8\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %mcco = getelementptr inbounds %class.MC_Particle_Buffer, ptr %this1, i32 0,\l... i32 0\l  %0 = load ptr, ptr %mcco, align 8\l  %processor_info = getelementptr inbounds %class.MonteCarlo, ptr %0, i32 0,\l... i32 8\l  %1 = load ptr, ptr %processor_info, align 8\l  %num_processors = getelementptr inbounds %class.MC_Processor_Info, ptr %1,\l... i32 0, i32 1\l  %2 = load i32, ptr %num_processors, align 4\l  %cmp = icmp sgt i32 %2, 1\l  br i1 %cmp, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x558b69464bd0:s0 -> Node0x558b69465330[tooltip="entry -> if.then\nProbability 50.00%" ];
+	Node0x558b69464bd0:s1 -> Node0x558b694653a0[tooltip="entry -> if.end\nProbability 50.00%" ];
+	Node0x558b69465330 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.then:\l|  store i1 false, ptr %retval, align 1\l  br label %return\l}"];
+	Node0x558b69465330 -> Node0x558b69465560[tooltip="if.then -> return\nProbability 100.00%" ];
+	Node0x558b694653a0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.end:\l|  %mcco2 = getelementptr inbounds %class.MC_Particle_Buffer, ptr %this1, i32\l... 0, i32 0\l  %3 = load ptr, ptr %mcco2, align 8\l  %_particleVaultContainer = getelementptr inbounds %class.MonteCarlo, ptr %3,\l... i32 0, i32 3\l  %4 = load ptr, ptr %_particleVaultContainer, align 8\l  %call = call noundef i64 @_ZN22ParticleVaultContainer14sizeProcessingEv(ptr\l... noundef nonnull align 8 dereferenceable(104) %4)\l  store i64 %call, ptr %processingSize, align 8\l  %5 = load i64, ptr %processingSize, align 8\l  %cmp3 = icmp eq i64 %5, 0\l  br i1 %cmp3, label %if.then4, label %if.end5\l|{<s0>T|<s1>F}}"];
+	Node0x558b694653a0:s0 -> Node0x558b69465ee0[tooltip="if.end -> if.then4\nProbability 37.50%" ];
+	Node0x558b694653a0:s1 -> Node0x558b69465f30[tooltip="if.end -> if.end5\nProbability 62.50%" ];
+	Node0x558b69465ee0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470" fontname="Courier",label="{if.then4:\l|  store i1 true, ptr %retval, align 1\l  br label %return\l}"];
+	Node0x558b69465ee0 -> Node0x558b69465560[tooltip="if.then4 -> return\nProbability 100.00%" ];
+	Node0x558b69465f30 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{if.end5:\l|  store i1 false, ptr %retval, align 1\l  br label %return\l}"];
+	Node0x558b69465f30 -> Node0x558b69465560[tooltip="if.end5 -> return\nProbability 100.00%" ];
+	Node0x558b69465560 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{return:\l|  %6 = load i1, ptr %retval, align 1\l  ret i1 %6\l}"];
+}

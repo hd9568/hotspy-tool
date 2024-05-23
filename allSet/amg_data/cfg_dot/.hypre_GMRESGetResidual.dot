@@ -1,0 +1,5 @@
+digraph "CFG for 'hypre_GMRESGetResidual' function" {
+	label="CFG for 'hypre_GMRESGetResidual' function";
+
+	Node0x56458aba7940 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %gmres_vdata.addr = alloca ptr, align 8\l  %residual.addr = alloca ptr, align 8\l  %gmres_data = alloca ptr, align 8\l  store ptr %gmres_vdata, ptr %gmres_vdata.addr, align 8\l  store ptr %residual, ptr %residual.addr, align 8\l  %0 = load ptr, ptr %gmres_vdata.addr, align 8\l  store ptr %0, ptr %gmres_data, align 8\l  %1 = load ptr, ptr %gmres_data, align 8\l  %r = getelementptr inbounds %struct.hypre_GMRESData, ptr %1, i32 0, i32 12\l  %2 = load ptr, ptr %r, align 8\l  %3 = load ptr, ptr %residual.addr, align 8\l  store ptr %2, ptr %3, align 8\l  %4 = load i32, ptr @hypre__global_error, align 4\l  ret i32 %4\l}"];
+}

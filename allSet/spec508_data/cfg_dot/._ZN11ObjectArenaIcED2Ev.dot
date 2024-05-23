@@ -1,0 +1,26 @@
+digraph "CFG for '_ZN11ObjectArenaIcED2Ev' function" {
+	label="CFG for '_ZN11ObjectArenaIcED2Ev' function";
+
+	Node0x55775c3a8530 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %i = alloca i32, align 4\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  store i32 0, ptr %i, align 4\l  br label %for.cond\l}"];
+	Node0x55775c3a8530 -> Node0x55775c3a87e0[tooltip="entry -> for.cond\nProbability 100.00%" ];
+	Node0x55775c3a87e0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.cond:\l|  %0 = load i32, ptr %i, align 4\l  %blocks = getelementptr inbounds %class.ObjectArena, ptr %this1, i32 0, i32 2\l  %call = invoke noundef i32 @_ZNK11ResizeArrayIPcE4sizeEv(ptr noundef nonnull\l... align 8 dereferenceable(16) %blocks)\l          to label %invoke.cont unwind label %terminate.lpad\l}"];
+	Node0x55775c3a87e0 -> Node0x55775c3a8a60[tooltip="for.cond -> invoke.cont\nProbability 100.00%" ];
+	Node0x55775c3a87e0 -> Node0x55775c3a8ae0[tooltip="for.cond -> terminate.lpad\nProbability 0.00%" ];
+	Node0x55775c3a8a60 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{invoke.cont:\l|  %cmp = icmp slt i32 %0, %call\l  br i1 %cmp, label %for.body, label %for.end\l|{<s0>T|<s1>F}}"];
+	Node0x55775c3a8a60:s0 -> Node0x55775c3a8d30[tooltip="invoke.cont -> for.body\nProbability 96.88%" ];
+	Node0x55775c3a8a60:s1 -> Node0x55775c3a8d80[tooltip="invoke.cont -> for.end\nProbability 3.12%" ];
+	Node0x55775c3a8d30 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.body:\l|  %blocks2 = getelementptr inbounds %class.ObjectArena, ptr %this1, i32 0,\l... i32 2\l  %1 = load i32, ptr %i, align 4\l  %call4 = invoke noundef nonnull align 8 dereferenceable(8) ptr\l... @_ZN11ResizeArrayIPcEixEi(ptr noundef nonnull align 8 dereferenceable(16)\l... %blocks2, i32 noundef %1)\l          to label %invoke.cont3 unwind label %terminate.lpad\l}"];
+	Node0x55775c3a8d30 -> Node0x55775c3a9230[tooltip="for.body -> invoke.cont3\nProbability 100.00%" ];
+	Node0x55775c3a8d30 -> Node0x55775c3a8ae0[tooltip="for.body -> terminate.lpad\nProbability 0.00%" ];
+	Node0x55775c3a9230 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{invoke.cont3:\l|  %2 = load ptr, ptr %call4, align 8\l  %isnull = icmp eq ptr %2, null\l  br i1 %isnull, label %delete.end, label %delete.notnull\l|{<s0>T|<s1>F}}"];
+	Node0x55775c3a9230:s0 -> Node0x55775c3a96c0[tooltip="invoke.cont3 -> delete.end\nProbability 37.50%" ];
+	Node0x55775c3a9230:s1 -> Node0x55775c3a9710[tooltip="invoke.cont3 -> delete.notnull\nProbability 62.50%" ];
+	Node0x55775c3a9710 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{delete.notnull:\l|  call void @_ZdaPv(ptr noundef %2) #9\l  br label %delete.end\l}"];
+	Node0x55775c3a9710 -> Node0x55775c3a96c0[tooltip="delete.notnull -> delete.end\nProbability 100.00%" ];
+	Node0x55775c3a96c0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{delete.end:\l|  br label %for.inc\l}"];
+	Node0x55775c3a96c0 -> Node0x55775c3a9a40[tooltip="delete.end -> for.inc\nProbability 100.00%" ];
+	Node0x55775c3a9a40 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.inc:\l|  %3 = load i32, ptr %i, align 4\l  %inc = add nsw i32 %3, 1\l  store i32 %inc, ptr %i, align 4\l  br label %for.cond, !llvm.loop !6\l}"];
+	Node0x55775c3a9a40 -> Node0x55775c3a87e0[tooltip="for.inc -> for.cond\nProbability 100.00%" ];
+	Node0x55775c3a8d80 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{for.end:\l|  %blocks5 = getelementptr inbounds %class.ObjectArena, ptr %this1, i32 0,\l... i32 2\l  call void @_ZN11ResizeArrayIPcED2Ev(ptr noundef nonnull align 8\l... dereferenceable(16) %blocks5) #10\l  ret void\l}"];
+	Node0x55775c3a8ae0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f6bfa670" fontname="Courier",label="{terminate.lpad:\l|  %4 = landingpad \{ ptr, i32 \}\l          catch ptr null\l  %5 = extractvalue \{ ptr, i32 \} %4, 0\l  call void @__clang_call_terminate(ptr %5) #11\l  unreachable\l}"];
+}

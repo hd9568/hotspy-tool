@@ -1,0 +1,5 @@
+digraph "CFG for '_ZSt8_DestroyIPZN12_GLOBAL__N_118checkCrossSectionsEP10MonteCarloRK10ParametersE7XC_DataS6_EvT_S8_RSaIT0_E' function" {
+	label="CFG for '_ZSt8_DestroyIPZN12_GLOBAL__N_118checkCrossSectionsEP10MonteCarloRK10ParametersE7XC_DataS6_EvT_S8_RSaIT0_E' function";
+
+	Node0x55dab495b850 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %__first.addr = alloca ptr, align 8\l  %__last.addr = alloca ptr, align 8\l  %.addr = alloca ptr, align 8\l  store ptr %__first, ptr %__first.addr, align 8\l  store ptr %__last, ptr %__last.addr, align 8\l  store ptr %0, ptr %.addr, align 8\l  %1 = load ptr, ptr %__first.addr, align 8\l  %2 = load ptr, ptr %__last.addr, align 8\l  call void\l... @_ZSt8_DestroyIPZN12_GLOBAL__N_118checkCrossSectionsEP10MonteCarloRK10Paramete\l...rsE7XC_DataEvT_S8_(ptr noundef %1, ptr noundef %2)\l  ret void\l}"];
+}

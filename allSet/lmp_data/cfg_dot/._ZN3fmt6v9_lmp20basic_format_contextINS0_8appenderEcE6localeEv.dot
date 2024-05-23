@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN3fmt6v9_lmp20basic_format_contextINS0_8appenderEcE6localeEv' function" {
+	label="CFG for '_ZN3fmt6v9_lmp20basic_format_contextINS0_8appenderEcE6localeEv' function";
+
+	Node0x556bfeb0ac30 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %retval = alloca %\"class.fmt::v9_lmp::detail::locale_ref\", align 8\l  %this.addr = alloca ptr, align 8\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %loc_ = getelementptr inbounds %\"class.fmt::v9_lmp::basic_format_context\",\l... ptr %this1, i32 0, i32 2\l  call void @llvm.memcpy.p0.p0.i64(ptr align 8 %retval, ptr align 8 %loc_, i64\l... 8, i1 false)\l  %coerce.dive = getelementptr inbounds\l... %\"class.fmt::v9_lmp::detail::locale_ref\", ptr %retval, i32 0, i32 0\l  %0 = load ptr, ptr %coerce.dive, align 8\l  ret ptr %0\l}"];
+}

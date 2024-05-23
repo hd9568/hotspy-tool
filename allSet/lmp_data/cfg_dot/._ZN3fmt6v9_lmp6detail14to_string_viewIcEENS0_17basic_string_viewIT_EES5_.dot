@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN3fmt6v9_lmp6detail14to_string_viewIcEENS0_17basic_string_viewIT_EES5_' function" {
+	label="CFG for '_ZN3fmt6v9_lmp6detail14to_string_viewIcEENS0_17basic_string_viewIT_EES5_' function";
+
+	Node0x55fec3711b10 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %retval = alloca %\"class.fmt::v9_lmp::basic_string_view\", align 8\l  %s = alloca %\"class.fmt::v9_lmp::basic_string_view\", align 8\l  %0 = getelementptr inbounds \{ ptr, i64 \}, ptr %s, i32 0, i32 0\l  store ptr %s.coerce0, ptr %0, align 8\l  %1 = getelementptr inbounds \{ ptr, i64 \}, ptr %s, i32 0, i32 1\l  store i64 %s.coerce1, ptr %1, align 8\l  call void @llvm.memcpy.p0.p0.i64(ptr align 8 %retval, ptr align 8 %s, i64\l... 16, i1 false)\l  %2 = load \{ ptr, i64 \}, ptr %retval, align 8\l  ret \{ ptr, i64 \} %2\l}"];
+}

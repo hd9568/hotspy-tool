@@ -1,0 +1,13 @@
+digraph "Call graph: aux_par_vector.ll" {
+	label="Call graph: aux_par_vector.ll";
+
+	Node0x5618c5727420 [shape=record,label="{hypre_AuxParVectorCreate}"];
+	Node0x5618c5727420 -> Node0x5618c57274d0;
+	Node0x5618c57274d0 [shape=record,label="{hypre_CAlloc}"];
+	Node0x5618c5727990 [shape=record,label="{hypre_AuxParVectorDestroy}"];
+	Node0x5618c5727990 -> Node0x5618c5727a10;
+	Node0x5618c5727a10 [shape=record,label="{hypre_Free}"];
+	Node0x5618c5727b70 [shape=record,label="{hypre_AuxParVectorInitialize}"];
+	Node0x5618c5727b70 -> Node0x5618c57274d0;
+	Node0x5618c5727d70 [shape=record,label="{hypre_AuxParVectorSetMaxOffPRocElmts}"];
+}

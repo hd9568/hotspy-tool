@@ -1,0 +1,5 @@
+digraph "CFG for 'logo' function" {
+	label="CFG for 'logo' function";
+
+	Node0x55c2a7fafe80 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %version.addr = alloca i32, align 4\l  %v = alloca [100 x i8], align 16\l  store i32 %version, ptr %version.addr, align 4\l  call void @border_print()\l  %call = call i32 (ptr, ...) @printf(ptr noundef @.str)\l  call void @border_print()\l  call void @center_print(ptr noundef @.str.1, i32 noundef 79)\l  %arraydecay = getelementptr inbounds [100 x i8], ptr %v, i64 0, i64 0\l  %0 = load i32, ptr %version.addr, align 4\l  %call1 = call i32 (ptr, ptr, ...) @sprintf(ptr noundef %arraydecay, ptr\l... noundef @.str.2, i32 noundef %0) #6\l  %arraydecay2 = getelementptr inbounds [100 x i8], ptr %v, i64 0, i64 0\l  call void @center_print(ptr noundef %arraydecay2, i32 noundef 79)\l  call void @border_print()\l  ret void\l}"];
+}

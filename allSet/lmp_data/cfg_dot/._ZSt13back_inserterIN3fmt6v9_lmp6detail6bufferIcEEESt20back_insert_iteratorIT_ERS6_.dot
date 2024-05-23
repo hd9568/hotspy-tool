@@ -1,0 +1,5 @@
+digraph "CFG for '_ZSt13back_inserterIN3fmt6v9_lmp6detail6bufferIcEEESt20back_insert_iteratorIT_ERS6_' function" {
+	label="CFG for '_ZSt13back_inserterIN3fmt6v9_lmp6detail6bufferIcEEESt20back_insert_iteratorIT_ERS6_' function";
+
+	Node0x55fec2f8eea0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %retval = alloca %\"class.std::back_insert_iterator\", align 8\l  %__x.addr = alloca ptr, align 8\l  store ptr %__x, ptr %__x.addr, align 8\l  %0 = load ptr, ptr %__x.addr, align 8\l  call void\l... @_ZNSt20back_insert_iteratorIN3fmt6v9_lmp6detail6bufferIcEEEC2ERS4_(ptr\l... noundef nonnull align 8 dereferenceable(8) %retval, ptr noundef nonnull align\l... 8 dereferenceable(32) %0)\l  %coerce.dive = getelementptr inbounds %\"class.std::back_insert_iterator\",\l... ptr %retval, i32 0, i32 0\l  %1 = load ptr, ptr %coerce.dive, align 8\l  ret ptr %1\l}"];
+}

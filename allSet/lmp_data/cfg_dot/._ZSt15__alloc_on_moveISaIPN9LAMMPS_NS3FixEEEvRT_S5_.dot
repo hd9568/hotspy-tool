@@ -1,0 +1,5 @@
+digraph "CFG for '_ZSt15__alloc_on_moveISaIPN9LAMMPS_NS3FixEEEvRT_S5_' function" {
+	label="CFG for '_ZSt15__alloc_on_moveISaIPN9LAMMPS_NS3FixEEEvRT_S5_' function";
+
+	Node0x561f16532760 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %__one.addr = alloca ptr, align 8\l  %__two.addr = alloca ptr, align 8\l  %agg.tmp = alloca %\"struct.std::integral_constant\", align 1\l  store ptr %__one, ptr %__one.addr, align 8\l  store ptr %__two, ptr %__two.addr, align 8\l  %0 = load ptr, ptr %__one.addr, align 8\l  %1 = load ptr, ptr %__two.addr, align 8\l  call void\l... @_ZSt18__do_alloc_on_moveISaIPN9LAMMPS_NS3FixEEEvRT_S5_St17integral_constantIb\l...Lb1EE(ptr noundef nonnull align 1 dereferenceable(1) %0, ptr noundef nonnull\l... align 1 dereferenceable(1) %1)\l  ret void\l}"];
+}

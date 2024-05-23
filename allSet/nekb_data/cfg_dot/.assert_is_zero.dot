@@ -1,0 +1,9 @@
+digraph "CFG for 'assert_is_zero' function" {
+	label="CFG for 'assert_is_zero' function";
+
+	Node0x5601d96fd9e0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %v.addr = alloca i64, align 8\l  store i64 %v, ptr %v.addr, align 8\l  %0 = load i64, ptr %v.addr, align 8\l  %conv = sitofp i64 %0 to double\l  %1 = call double @llvm.fabs.f64(double %conv)\l  %cmp = fcmp olt double %1, 0x3BC79CA10C924223\l  br i1 %cmp, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x5601d96fd9e0:s0 -> Node0x5601d97014c0[tooltip="entry -> if.then\nProbability 100.00%" ];
+	Node0x5601d96fd9e0:s1 -> Node0x5601d9701530[tooltip="entry -> if.end\nProbability 0.00%" ];
+	Node0x5601d97014c0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.then:\l|  ret void\l}"];
+	Node0x5601d9701530 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f4c5ad70" fontname="Courier",label="{if.end:\l|  %call = call i32 (ptr, ...) @printf(ptr noundef @.str)\l  call void @exit(i32 noundef 1) #6\l  unreachable\l}"];
+}

@@ -1,0 +1,13 @@
+digraph "Call graph: exchange_3.ll" {
+	label="Call graph: exchange_3.ll";
+
+	Node0x55ffffe6cd40 [shape=record,label="{exchange_3_}"];
+	Node0x55ffffe6cd40 -> Node0x55ffffe6cdf0;
+	Node0x55ffffe6cd40 -> Node0x55ffffe6cea0;
+	Node0x55ffffe6cd40 -> Node0x55ffffe6cf20;
+	Node0x55ffffe6cea0 [shape=record,label="{mpi_send_}"];
+	Node0x55ffffe6cf20 [shape=record,label="{mpi_wait_}"];
+	Node0x55ffffe72050 [shape=record,label="{llvm.stacksave.p0}"];
+	Node0x55ffffe720d0 [shape=record,label="{llvm.stackrestore.p0}"];
+	Node0x55ffffe6cdf0 [shape=record,label="{mpi_irecv_}"];
+}

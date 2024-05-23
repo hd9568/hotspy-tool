@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN3fmt6v9_lmp6detail6fill_tIcEC2Ev' function" {
+	label="CFG for '_ZN3fmt6v9_lmp6detail6fill_tIcEC2Ev' function";
+
+	Node0x556bfea6fd20 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %data_ = getelementptr inbounds %\"struct.fmt::v9_lmp::detail::fill_t\", ptr\l... %this1, i32 0, i32 0\l  %arrayinit.begin = getelementptr inbounds [4 x i8], ptr %data_, i64 0, i64 0\l  store i8 32, ptr %arrayinit.begin, align 1\l  %arrayinit.element = getelementptr inbounds i8, ptr %arrayinit.begin, i64 1\l  store i8 0, ptr %arrayinit.element, align 1\l  %arrayinit.element2 = getelementptr inbounds i8, ptr %arrayinit.element, i64\l... 1\l  store i8 0, ptr %arrayinit.element2, align 1\l  %arrayinit.element3 = getelementptr inbounds i8, ptr %arrayinit.element2,\l... i64 1\l  store i8 0, ptr %arrayinit.element3, align 1\l  %size_ = getelementptr inbounds %\"struct.fmt::v9_lmp::detail::fill_t\", ptr\l... %this1, i32 0, i32 1\l  store i8 1, ptr %size_, align 1\l  ret void\l}"];
+}

@@ -1,0 +1,9 @@
+digraph "CFG for '_ZNSt6chrono8durationIlSt5ratioILl1ELl1000000EEE4zeroEv' function" {
+	label="CFG for '_ZNSt6chrono8durationIlSt5ratioILl1ELl1000000EEE4zeroEv' function";
+
+	Node0x5651cd873bc0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %retval = alloca %\"struct.std::chrono::duration.18\", align 8\l  %ref.tmp = alloca i64, align 8\l  %call = call noundef i64 @_ZNSt6chrono15duration_valuesIlE4zeroEv() #4\l  store i64 %call, ptr %ref.tmp, align 8\l  invoke void @_ZNSt6chrono8durationIlSt5ratioILl1ELl1000000EEEC2IlvEERKT_(ptr\l... noundef nonnull align 8 dereferenceable(8) %retval, ptr noundef nonnull align\l... 8 dereferenceable(8) %ref.tmp)\l          to label %invoke.cont unwind label %terminate.lpad\l}"];
+	Node0x5651cd873bc0 -> Node0x5651cd874060[tooltip="entry -> invoke.cont\nProbability 100.00%" ];
+	Node0x5651cd873bc0 -> Node0x5651cd8740b0[tooltip="entry -> terminate.lpad\nProbability 0.00%" ];
+	Node0x5651cd874060 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{invoke.cont:\l|  %coerce.dive = getelementptr inbounds %\"struct.std::chrono::duration.18\",\l... ptr %retval, i32 0, i32 0\l  %0 = load i64, ptr %coerce.dive, align 8\l  ret i64 %0\l}"];
+	Node0x5651cd8740b0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f4c5ad70" fontname="Courier",label="{terminate.lpad:\l|  %1 = landingpad \{ ptr, i32 \}\l          catch ptr null\l  %2 = extractvalue \{ ptr, i32 \} %1, 0\l  call void @__clang_call_terminate(ptr %2) #20\l  unreachable\l}"];
+}

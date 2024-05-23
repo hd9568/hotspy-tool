@@ -1,0 +1,21 @@
+digraph "CFG for '_ZN13MemoryControl10deallocateI22MC_Facet_Geometry_CellEEvPT_iNS_16AllocationPolicyE' function" {
+	label="CFG for '_ZN13MemoryControl10deallocateI22MC_Facet_Geometry_CellEEvPT_iNS_16AllocationPolicyE' function";
+
+	Node0x564271a97370 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %data.addr = alloca ptr, align 8\l  %size.addr = alloca i32, align 4\l  %policy.addr = alloca i32, align 4\l  store ptr %data, ptr %data.addr, align 8\l  store i32 %size, ptr %size.addr, align 4\l  store i32 %policy, ptr %policy.addr, align 4\l  %0 = load i32, ptr %policy.addr, align 4\l  switch i32 %0, label %sw.default [\l    i32 0, label %sw.bb\l  ]\l|{<s0>def|<s1>0}}"];
+	Node0x564271a97370:s0 -> Node0x564271a97780[tooltip="entry -> sw.default\nProbability 50.00%" ];
+	Node0x564271a97370:s1 -> Node0x564271a97800[tooltip="entry -> sw.bb\nProbability 50.00%" ];
+	Node0x564271a97800 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{sw.bb:\l|  %1 = load ptr, ptr %data.addr, align 8\l  %isnull = icmp eq ptr %1, null\l  br i1 %isnull, label %delete.end, label %delete.notnull\l|{<s0>T|<s1>F}}"];
+	Node0x564271a97800:s0 -> Node0x564271a97a30[tooltip="sw.bb -> delete.end\nProbability 37.50%" ];
+	Node0x564271a97800:s1 -> Node0x564271a97ab0[tooltip="sw.bb -> delete.notnull\nProbability 62.50%" ];
+	Node0x564271a97ab0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{delete.notnull:\l|  call void @_ZdaPv(ptr noundef %1) #14\l  br label %delete.end\l}"];
+	Node0x564271a97ab0 -> Node0x564271a97a30[tooltip="delete.notnull -> delete.end\nProbability 100.00%" ];
+	Node0x564271a97a30 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{delete.end:\l|  br label %sw.epilog\l}"];
+	Node0x564271a97a30 -> Node0x564271a97d80[tooltip="delete.end -> sw.epilog\nProbability 100.00%" ];
+	Node0x564271a97780 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{sw.default:\l|  br label %do.body\l}"];
+	Node0x564271a97780 -> Node0x564271a98010[tooltip="sw.default -> do.body\nProbability 100.00%" ];
+	Node0x564271a98010 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{do.body:\l|  %call = call i32 (ptr, ...) @printf(ptr noundef @.str, ptr noundef\l... @.str.3, i32 noundef 53)\l  br label %do.end\l}"];
+	Node0x564271a98010 -> Node0x564271a98140[tooltip="do.body -> do.end\nProbability 100.00%" ];
+	Node0x564271a98140 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{do.end:\l|  br label %sw.epilog\l}"];
+	Node0x564271a98140 -> Node0x564271a97d80[tooltip="do.end -> sw.epilog\nProbability 100.00%" ];
+	Node0x564271a97d80 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{sw.epilog:\l|  ret void\l}"];
+}

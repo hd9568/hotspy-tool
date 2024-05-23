@@ -1,0 +1,5 @@
+digraph "CFG for 'hypre_MPI_Waitall' function" {
+	label="CFG for 'hypre_MPI_Waitall' function";
+
+	Node0x5555d6655100 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %count.addr = alloca i32, align 4\l  %array_of_requests.addr = alloca ptr, align 8\l  %array_of_statuses.addr = alloca ptr, align 8\l  store i32 %count, ptr %count.addr, align 4\l  store ptr %array_of_requests, ptr %array_of_requests.addr, align 8\l  store ptr %array_of_statuses, ptr %array_of_statuses.addr, align 8\l  %0 = load i32, ptr %count.addr, align 4\l  %1 = load ptr, ptr %array_of_requests.addr, align 8\l  %2 = load ptr, ptr %array_of_statuses.addr, align 8\l  %call = call i32 @MPI_Waitall(i32 noundef %0, ptr noundef %1, ptr noundef %2)\l  ret i32 %call\l}"];
+}

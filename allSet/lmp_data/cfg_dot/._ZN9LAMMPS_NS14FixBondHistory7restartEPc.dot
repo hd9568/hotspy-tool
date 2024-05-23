@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN9LAMMPS_NS14FixBondHistory7restartEPc' function" {
+	label="CFG for '_ZN9LAMMPS_NS14FixBondHistory7restartEPc' function";
+
+	Node0x55e722ceba20 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %buf.addr = alloca ptr, align 8\l  %n = alloca i32, align 4\l  %list = alloca ptr, align 8\l  store ptr %this, ptr %this.addr, align 8\l  store ptr %buf, ptr %buf.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  store i32 0, ptr %n, align 4\l  %0 = load ptr, ptr %buf.addr, align 8\l  store ptr %0, ptr %list, align 8\l  %1 = load ptr, ptr %list, align 8\l  %2 = load i32, ptr %n, align 4\l  %inc = add nsw i32 %2, 1\l  store i32 %inc, ptr %n, align 4\l  %idxprom = sext i32 %2 to i64\l  %arrayidx = getelementptr inbounds double, ptr %1, i64 %idxprom\l  %3 = load double, ptr %arrayidx, align 8\l  %conv = fptosi double %3 to i32\l  %stored_flag = getelementptr inbounds %\"class.LAMMPS_NS::FixBondHistory\",\l... ptr %this1, i32 0, i32 3\l  store i32 %conv, ptr %stored_flag, align 8\l  ret void\l}"];
+}

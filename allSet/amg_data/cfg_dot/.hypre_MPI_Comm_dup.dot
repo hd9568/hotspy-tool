@@ -1,0 +1,5 @@
+digraph "CFG for 'hypre_MPI_Comm_dup' function" {
+	label="CFG for 'hypre_MPI_Comm_dup' function";
+
+	Node0x5555d6620eb0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %comm.addr = alloca ptr, align 8\l  %newcomm.addr = alloca ptr, align 8\l  store ptr %comm, ptr %comm.addr, align 8\l  store ptr %newcomm, ptr %newcomm.addr, align 8\l  %0 = load ptr, ptr %comm.addr, align 8\l  %1 = load ptr, ptr %newcomm.addr, align 8\l  %call = call i32 @MPI_Comm_dup(ptr noundef %0, ptr noundef %1)\l  ret i32 %call\l}"];
+}

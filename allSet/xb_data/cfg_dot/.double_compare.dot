@@ -1,0 +1,17 @@
+digraph "CFG for 'double_compare' function" {
+	label="CFG for 'double_compare' function";
+
+	Node0x55bfd5c10fe0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %retval = alloca i32, align 4\l  %a.addr = alloca ptr, align 8\l  %b.addr = alloca ptr, align 8\l  %A = alloca double, align 8\l  %B = alloca double, align 8\l  store ptr %a, ptr %a.addr, align 8\l  store ptr %b, ptr %b.addr, align 8\l  %0 = load ptr, ptr %a.addr, align 8\l  %1 = load double, ptr %0, align 8\l  store double %1, ptr %A, align 8\l  %2 = load ptr, ptr %b.addr, align 8\l  %3 = load double, ptr %2, align 8\l  store double %3, ptr %B, align 8\l  %4 = load double, ptr %A, align 8\l  %5 = load double, ptr %B, align 8\l  %cmp = fcmp ogt double %4, %5\l  br i1 %cmp, label %if.then, label %if.else\l|{<s0>T|<s1>F}}"];
+	Node0x55bfd5c10fe0:s0 -> Node0x55bfd5c13840[tooltip="entry -> if.then\nProbability 50.00%" ];
+	Node0x55bfd5c10fe0:s1 -> Node0x55bfd5c138b0[tooltip="entry -> if.else\nProbability 50.00%" ];
+	Node0x55bfd5c13840 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.then:\l|  store i32 1, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x55bfd5c13840 -> Node0x55bfd5c13ad0[tooltip="if.then -> return\nProbability 100.00%" ];
+	Node0x55bfd5c138b0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.else:\l|  %6 = load double, ptr %A, align 8\l  %7 = load double, ptr %B, align 8\l  %cmp1 = fcmp olt double %6, %7\l  br i1 %cmp1, label %if.then2, label %if.else3\l|{<s0>T|<s1>F}}"];
+	Node0x55bfd5c138b0:s0 -> Node0x55bfd5c13f00[tooltip="if.else -> if.then2\nProbability 50.00%" ];
+	Node0x55bfd5c138b0:s1 -> Node0x55bfd5c13f80[tooltip="if.else -> if.else3\nProbability 50.00%" ];
+	Node0x55bfd5c13f00 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470" fontname="Courier",label="{if.then2:\l|  store i32 -1, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x55bfd5c13f00 -> Node0x55bfd5c13ad0[tooltip="if.then2 -> return\nProbability 100.00%" ];
+	Node0x55bfd5c13f80 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470" fontname="Courier",label="{if.else3:\l|  store i32 0, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x55bfd5c13f80 -> Node0x55bfd5c13ad0[tooltip="if.else3 -> return\nProbability 100.00%" ];
+	Node0x55bfd5c13ad0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{return:\l|  %8 = load i32, ptr %retval, align 4\l  ret i32 %8\l}"];
+}

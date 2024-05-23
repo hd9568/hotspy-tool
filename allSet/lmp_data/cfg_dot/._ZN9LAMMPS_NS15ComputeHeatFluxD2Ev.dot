@@ -1,0 +1,25 @@
+digraph "CFG for '_ZN9LAMMPS_NS15ComputeHeatFluxD2Ev' function" {
+	label="CFG for '_ZN9LAMMPS_NS15ComputeHeatFluxD2Ev' function";
+
+	Node0x56263569be80 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  store ptr getelementptr inbounds (\{ [43 x ptr] \}, ptr\l... @_ZTVN9LAMMPS_NS15ComputeHeatFluxE, i32 0, inrange i32 0, i32 2), ptr %this1,\l... align 8\l  %id_ke = getelementptr inbounds %\"class.LAMMPS_NS::ComputeHeatFlux\", ptr\l... %this1, i32 0, i32 1\l  %0 = load ptr, ptr %id_ke, align 8\l  %isnull = icmp eq ptr %0, null\l  br i1 %isnull, label %delete.end, label %delete.notnull\l|{<s0>T|<s1>F}}"];
+	Node0x56263569be80:s0 -> Node0x56263569c200[tooltip="entry -> delete.end\nProbability 37.50%" ];
+	Node0x56263569be80:s1 -> Node0x56263569c250[tooltip="entry -> delete.notnull\nProbability 62.50%" ];
+	Node0x56263569c250 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{delete.notnull:\l|  call void @_ZdaPv(ptr noundef %0) #11\l  br label %delete.end\l}"];
+	Node0x56263569c250 -> Node0x56263569c200[tooltip="delete.notnull -> delete.end\nProbability 100.00%" ];
+	Node0x56263569c200 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{delete.end:\l|  %id_pe = getelementptr inbounds %\"class.LAMMPS_NS::ComputeHeatFlux\", ptr\l... %this1, i32 0, i32 2\l  %1 = load ptr, ptr %id_pe, align 8\l  %isnull2 = icmp eq ptr %1, null\l  br i1 %isnull2, label %delete.end4, label %delete.notnull3\l|{<s0>T|<s1>F}}"];
+	Node0x56263569c200:s0 -> Node0x56263569c5f0[tooltip="delete.end -> delete.end4\nProbability 37.50%" ];
+	Node0x56263569c200:s1 -> Node0x56263569c670[tooltip="delete.end -> delete.notnull3\nProbability 62.50%" ];
+	Node0x56263569c670 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{delete.notnull3:\l|  call void @_ZdaPv(ptr noundef %1) #11\l  br label %delete.end4\l}"];
+	Node0x56263569c670 -> Node0x56263569c5f0[tooltip="delete.notnull3 -> delete.end4\nProbability 100.00%" ];
+	Node0x56263569c5f0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{delete.end4:\l|  %id_stress = getelementptr inbounds %\"class.LAMMPS_NS::ComputeHeatFlux\",\l... ptr %this1, i32 0, i32 3\l  %2 = load ptr, ptr %id_stress, align 8\l  %isnull5 = icmp eq ptr %2, null\l  br i1 %isnull5, label %delete.end7, label %delete.notnull6\l|{<s0>T|<s1>F}}"];
+	Node0x56263569c5f0:s0 -> Node0x56263569cbf0[tooltip="delete.end4 -> delete.end7\nProbability 37.50%" ];
+	Node0x56263569c5f0:s1 -> Node0x56263569cc70[tooltip="delete.end4 -> delete.notnull6\nProbability 62.50%" ];
+	Node0x56263569cc70 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{delete.notnull6:\l|  call void @_ZdaPv(ptr noundef %2) #11\l  br label %delete.end7\l}"];
+	Node0x56263569cc70 -> Node0x56263569cbf0[tooltip="delete.notnull6 -> delete.end7\nProbability 100.00%" ];
+	Node0x56263569cbf0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{delete.end7:\l|  %vector = getelementptr inbounds %\"class.LAMMPS_NS::Compute\", ptr %this1,\l... i32 0, i32 6\l  %3 = load ptr, ptr %vector, align 8\l  %isnull8 = icmp eq ptr %3, null\l  br i1 %isnull8, label %delete.end10, label %delete.notnull9\l|{<s0>T|<s1>F}}"];
+	Node0x56263569cbf0:s0 -> Node0x56263569d0e0[tooltip="delete.end7 -> delete.end10\nProbability 37.50%" ];
+	Node0x56263569cbf0:s1 -> Node0x56263569d130[tooltip="delete.end7 -> delete.notnull9\nProbability 62.50%" ];
+	Node0x56263569d130 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{delete.notnull9:\l|  call void @_ZdaPv(ptr noundef %3) #11\l  br label %delete.end10\l}"];
+	Node0x56263569d130 -> Node0x56263569d0e0[tooltip="delete.notnull9 -> delete.end10\nProbability 100.00%" ];
+	Node0x56263569d0e0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{delete.end10:\l|  call void @_ZN9LAMMPS_NS7ComputeD2Ev(ptr noundef nonnull align 8\l... dereferenceable(564) %this1) #12\l  ret void\l}"];
+}

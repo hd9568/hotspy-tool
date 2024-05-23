@@ -1,0 +1,12 @@
+digraph "CFG for '_Z13mpiComm_splitiiiPi' function" {
+	label="CFG for '_Z13mpiComm_splitiiiPi' function";
+
+	Node0x55ce002ab1b0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %comm.addr = alloca i32, align 4\l  %color.addr = alloca i32, align 4\l  %key.addr = alloca i32, align 4\l  %newcomm.addr = alloca ptr, align 8\l  store i32 %comm, ptr %comm.addr, align 4\l  store i32 %color, ptr %color.addr, align 4\l  store i32 %key, ptr %key.addr, align 4\l  store ptr %newcomm, ptr %newcomm.addr, align 8\l  %0 = load i32, ptr %color.addr, align 4\l  %cmp = icmp eq i32 %0, -1\l  br i1 %cmp, label %if.then, label %if.else\l|{<s0>T|<s1>F}}"];
+	Node0x55ce002ab1b0:s0 -> Node0x55ce002ab7c0[tooltip="entry -> if.then\nProbability 37.50%" ];
+	Node0x55ce002ab1b0:s1 -> Node0x55ce002ab830[tooltip="entry -> if.else\nProbability 62.50%" ];
+	Node0x55ce002ab7c0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{if.then:\l|  %1 = load ptr, ptr %newcomm.addr, align 8\l  store i32 0, ptr %1, align 4\l  br label %if.end\l}"];
+	Node0x55ce002ab7c0 -> Node0x55ce002aba70[tooltip="if.then -> if.end\nProbability 100.00%" ];
+	Node0x55ce002ab830 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.else:\l|  %call = call noundef i32 @_ZL18mpi_stubs_comm_newv()\l  %2 = load ptr, ptr %newcomm.addr, align 8\l  store i32 %call, ptr %2, align 4\l  br label %if.end\l}"];
+	Node0x55ce002ab830 -> Node0x55ce002aba70[tooltip="if.else -> if.end\nProbability 100.00%" ];
+	Node0x55ce002aba70 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  ret i32 0\l}"];
+}

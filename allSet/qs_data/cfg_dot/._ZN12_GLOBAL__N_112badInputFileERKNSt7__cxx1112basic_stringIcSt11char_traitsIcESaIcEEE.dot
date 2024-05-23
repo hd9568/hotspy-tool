@@ -1,0 +1,9 @@
+digraph "CFG for '_ZN12_GLOBAL__N_112badInputFileERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE' function" {
+	label="CFG for '_ZN12_GLOBAL__N_112badInputFileERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE' function";
+
+	Node0x562c4e4e2c00 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %filename.addr = alloca ptr, align 8\l  store ptr %filename, ptr %filename.addr, align 8\l  br label %do.body\l}"];
+	Node0x562c4e4e2c00 -> Node0x562c4e4e2d20[tooltip="entry -> do.body\nProbability 100.00%" ];
+	Node0x562c4e4e2d20 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{do.body:\l|  %call = call i32 (ptr, ...) @printf(ptr noundef @.str.47, ptr noundef\l... @.str.48, i32 noundef 497)\l  br label %do.end\l}"];
+	Node0x562c4e4e2d20 -> Node0x562c4e4e2f60[tooltip="do.body -> do.end\nProbability 100.00%" ];
+	Node0x562c4e4e2f60 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{do.end:\l|  ret void\l}"];
+}

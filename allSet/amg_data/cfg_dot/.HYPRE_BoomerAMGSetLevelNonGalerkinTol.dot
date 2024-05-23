@@ -1,0 +1,5 @@
+digraph "CFG for 'HYPRE_BoomerAMGSetLevelNonGalerkinTol' function" {
+	label="CFG for 'HYPRE_BoomerAMGSetLevelNonGalerkinTol' function";
+
+	Node0x55f5a9a9dc10 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %solver.addr = alloca ptr, align 8\l  %nongalerkin_tol.addr = alloca double, align 8\l  %level.addr = alloca i32, align 4\l  store ptr %solver, ptr %solver.addr, align 8\l  store double %nongalerkin_tol, ptr %nongalerkin_tol.addr, align 8\l  store i32 %level, ptr %level.addr, align 4\l  %0 = load ptr, ptr %solver.addr, align 8\l  %1 = load double, ptr %nongalerkin_tol.addr, align 8\l  %2 = load i32, ptr %level.addr, align 4\l  %call = call i32 @hypre_BoomerAMGSetLevelNonGalerkinTol(ptr noundef %0,\l... double noundef %1, i32 noundef %2)\l  ret i32 %call\l}"];
+}

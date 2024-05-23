@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN18MC_Particle_Buffer15Buffer_ParticleEP11MC_Particlei' function" {
+	label="CFG for '_ZN18MC_Particle_Buffer15Buffer_ParticleEP11MC_Particlei' function";
+
+	Node0x558b69480a40 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %particle.addr = alloca ptr, align 8\l  %buffer.addr = alloca i32, align 4\l  %base_particle = alloca %class.MC_Base_Particle, align 8\l  store ptr %this, ptr %this.addr, align 8\l  store ptr %particle, ptr %particle.addr, align 8\l  store i32 %buffer, ptr %buffer.addr, align 4\l  %this1 = load ptr, ptr %this.addr, align 8\l  %0 = load ptr, ptr %particle.addr, align 8\l  call void @_ZN16MC_Base_ParticleC2ERK11MC_Particle(ptr noundef nonnull align\l... 8 dereferenceable(136) %base_particle, ptr noundef nonnull align 8\l... dereferenceable(208) %0)\l  %1 = load i32, ptr %buffer.addr, align 4\l  call void @_ZN18MC_Particle_Buffer15Buffer_ParticleER16MC_Base_Particlei(ptr\l... noundef nonnull align 8 dereferenceable(132) %this1, ptr noundef nonnull\l... align 8 dereferenceable(136) %base_particle, i32 noundef %1)\l  ret void\l}"];
+}

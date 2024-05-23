@@ -1,0 +1,5 @@
+digraph "CFG for '_ZNSt6vectorI7double2SaIS0_EE5beginEv' function" {
+	label="CFG for '_ZNSt6vectorI7double2SaIS0_EE5beginEv' function";
+
+	Node0x55799251af30 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %retval = alloca %\"class.__gnu_cxx::__normal_iterator.18\", align 8\l  %this.addr = alloca ptr, align 8\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %_M_impl = getelementptr inbounds %\"struct.std::_Vector_base.8\", ptr %this1,\l... i32 0, i32 0\l  %_M_start = getelementptr inbounds %\"struct.std::_Vector_base\<double2,\l... std::allocator\<double2\>\>::_Vector_impl_data\", ptr %_M_impl, i32 0, i32 0\l  call void\l... @_ZN9__gnu_cxx17__normal_iteratorIP7double2St6vectorIS1_SaIS1_EEEC2ERKS2_(ptr\l... noundef nonnull align 8 dereferenceable(8) %retval, ptr noundef nonnull align\l... 8 dereferenceable(8) %_M_start) #3\l  %coerce.dive = getelementptr inbounds\l... %\"class.__gnu_cxx::__normal_iterator.18\", ptr %retval, i32 0, i32 0\l  %0 = load ptr, ptr %coerce.dive, align 8\l  ret ptr %0\l}"];
+}

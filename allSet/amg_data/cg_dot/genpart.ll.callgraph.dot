@@ -1,0 +1,9 @@
+digraph "Call graph: genpart.ll" {
+	label="Call graph: genpart.ll";
+
+	Node0x55a743e51dc0 [shape=record,label="{hypre_GeneratePartitioning}"];
+	Node0x55a743e51dc0 -> Node0x55a743e51e70;
+	Node0x55a743e51e70 [shape=record,label="{hypre_CAlloc}"];
+	Node0x55a743e52330 [shape=record,label="{hypre_GenerateLocalPartitioning}"];
+	Node0x55a743e52330 -> Node0x55a743e51e70;
+}

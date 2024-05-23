@@ -1,0 +1,10 @@
+digraph "CFG for '__cxx_global_array_dtor' function" {
+	label="CFG for '__cxx_global_array_dtor' function";
+
+	Node0x55f573179140 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{entry:\l|  %.addr = alloca ptr, align 8\l  store ptr %0, ptr %.addr, align 8\l  br label %arraydestroy.body\l}"];
+	Node0x55f573179140 -> Node0x55f573179460[tooltip="entry -> arraydestroy.body\nProbability 100.00%" ];
+	Node0x55f573179460 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{arraydestroy.body:\l|  %arraydestroy.elementPast = phi ptr [ getelementptr inbounds\l... (%\"class.std::__cxx11::basic_string\", ptr @_ZL17mixing_rule_namesB5cxx11, i64\l... 3), %entry ], [ %arraydestroy.element, %arraydestroy.body ]\l  %arraydestroy.element = getelementptr inbounds\l... %\"class.std::__cxx11::basic_string\", ptr %arraydestroy.elementPast, i64 -1\l  call void @_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEED1Ev(ptr\l... noundef nonnull align 8 dereferenceable(32) %arraydestroy.element) #3\l  %arraydestroy.done = icmp eq ptr %arraydestroy.element,\l... @_ZL17mixing_rule_namesB5cxx11\l  br i1 %arraydestroy.done, label %arraydestroy.done1, label %arraydestroy.body\l|{<s0>T|<s1>F}}"];
+	Node0x55f573179460:s0 -> Node0x55f5731797e0[tooltip="arraydestroy.body -> arraydestroy.done1\nProbability 3.12%" ];
+	Node0x55f573179460:s1 -> Node0x55f573179460[tooltip="arraydestroy.body -> arraydestroy.body\nProbability 96.88%" ];
+	Node0x55f5731797e0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{arraydestroy.done1:\l|  ret void\l}"];
+}

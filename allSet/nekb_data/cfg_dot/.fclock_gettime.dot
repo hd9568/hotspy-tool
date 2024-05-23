@@ -1,0 +1,5 @@
+digraph "CFG for 'fclock_gettime' function" {
+	label="CFG for 'fclock_gettime' function";
+
+	Node0x55619632b390 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %ts = alloca %struct.timespec, align 8\l  %timeval = alloca double, align 8\l  %call = call i32 @clock_gettime(i32 noundef 1, ptr noundef %ts) #3\l  %tv_sec = getelementptr inbounds %struct.timespec, ptr %ts, i32 0, i32 0\l  %0 = load i64, ptr %tv_sec, align 8\l  %conv = sitofp i64 %0 to double\l  %tv_nsec = getelementptr inbounds %struct.timespec, ptr %ts, i32 0, i32 1\l  %1 = load i64, ptr %tv_nsec, align 8\l  %conv1 = sitofp i64 %1 to double\l  %2 = call double @llvm.fmuladd.f64(double %conv1, double 1.000000e-09,\l... double %conv)\l  store double %2, ptr %timeval, align 8\l  %3 = load double, ptr %timeval, align 8\l  ret double %3\l}"];
+}

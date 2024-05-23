@@ -1,0 +1,22 @@
+digraph "CFG for 'mpi_reduce_' function" {
+	label="CFG for 'mpi_reduce_' function";
+
+	Node0x5560a31c8b20 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{8:\l|  store i32 0, ptr %7, align 4\l  %9 = load i32, ptr %3, align 4\l  %10 = icmp eq i32 %9, 3\l  br i1 %10, label %11, label %12\l|{<s0>T|<s1>F}}"];
+	Node0x5560a31c8b20:s0 -> Node0x5560a31c8f50[tooltip="8 -> 11\nProbability 50.00%" ];
+	Node0x5560a31c8b20:s1 -> Node0x5560a31c8fa0[tooltip="8 -> 12\nProbability 50.00%" ];
+	Node0x5560a31c8f50 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{11:\l|  call void @mpi_reduce_double_precision_(ptr %0, ptr %1, ptr %2, ptr %4,\l... ptr %7)\l  br label %21\l}"];
+	Node0x5560a31c8f50 -> Node0x5560a31c9240[tooltip="11 -> 21\nProbability 100.00%" ];
+	Node0x5560a31c8fa0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{12:\l|  %13 = load i32, ptr %3, align 4\l  %14 = icmp eq i32 %13, 1\l  br i1 %14, label %15, label %16\l|{<s0>T|<s1>F}}"];
+	Node0x5560a31c8fa0:s0 -> Node0x5560a31c9410[tooltip="12 -> 15\nProbability 50.00%" ];
+	Node0x5560a31c8fa0:s1 -> Node0x5560a31c9460[tooltip="12 -> 16\nProbability 50.00%" ];
+	Node0x5560a31c9410 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470" fontname="Courier",label="{15:\l|  call void @mpi_reduce_integer_(ptr %0, ptr %1, ptr %2, ptr %4, ptr %7)\l  br label %21\l}"];
+	Node0x5560a31c9410 -> Node0x5560a31c9240[tooltip="15 -> 21\nProbability 100.00%" ];
+	Node0x5560a31c9460 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470" fontname="Courier",label="{16:\l|  %17 = load i32, ptr %3, align 4\l  %18 = icmp eq i32 %17, 2\l  br i1 %18, label %19, label %20\l|{<s0>T|<s1>F}}"];
+	Node0x5560a31c9460:s0 -> Node0x5560a31c9850[tooltip="16 -> 19\nProbability 50.00%" ];
+	Node0x5560a31c9460:s1 -> Node0x5560a31c98a0[tooltip="16 -> 20\nProbability 50.00%" ];
+	Node0x5560a31c9850 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#ca3b3770" fontname="Courier",label="{19:\l|  call void @mpi_reduce_real_(ptr %0, ptr %1, ptr %2, ptr %4, ptr %7)\l  br label %21\l}"];
+	Node0x5560a31c9850 -> Node0x5560a31c9240[tooltip="19 -> 21\nProbability 100.00%" ];
+	Node0x5560a31c98a0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#ca3b3770" fontname="Courier",label="{20:\l|  store i32 1, ptr %7, align 4\l  br label %21\l}"];
+	Node0x5560a31c98a0 -> Node0x5560a31c9240[tooltip="20 -> 21\nProbability 100.00%" ];
+	Node0x5560a31c9240 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{21:\l|  ret void\l}"];
+}

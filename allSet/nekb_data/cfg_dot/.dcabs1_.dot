@@ -1,0 +1,5 @@
+digraph "CFG for 'dcabs1_' function" {
+	label="CFG for 'dcabs1_' function";
+
+	Node0x55ee1004eb00 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{1:\l|  %2 = alloca [16 x i8], i64 1, align 1\l  %3 = alloca double, i64 1, align 8\l  %4 = getelementptr [16 x i8], ptr %2, i32 0, i64 0\l  %5 = load \{ double, double \}, ptr %0, align 8\l  store \{ double, double \} %5, ptr %4, align 8\l  %6 = getelementptr double, ptr %4, i64 0\l  %7 = load double, ptr %6, align 8\l  %8 = call contract double @llvm.fabs.f64(double %7)\l  %9 = getelementptr double, ptr %4, i64 1\l  %10 = load double, ptr %9, align 8\l  %11 = call contract double @llvm.fabs.f64(double %10)\l  %12 = fadd contract double %8, %11\l  store double %12, ptr %3, align 8\l  %13 = load double, ptr %3, align 8\l  ret double %13\l}"];
+}

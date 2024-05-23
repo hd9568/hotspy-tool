@@ -1,0 +1,11 @@
+randlc_ 1
+vranlc_ 1
+bubble_ 0
+zero3_ 1
+timer_clear_ 0
+power_ 0
+timer_start_ 0
+setup_ 0
+timer_stop_ 0
+timer_read_ 0
+print_results_ 0

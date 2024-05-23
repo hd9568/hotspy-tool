@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN3fmt6v9_lmp6detail8isfiniteIdTnNSt9enable_ifIXaasr3std17is_floating_pointIT_EE5valuesr12has_isfiniteIS4_EE5valueEiE4typeELi0EEEbS4_' function" {
+	label="CFG for '_ZN3fmt6v9_lmp6detail8isfiniteIdTnNSt9enable_ifIXaasr3std17is_floating_pointIT_EE5valuesr12has_isfiniteIS4_EE5valueEiE4typeELi0EEEbS4_' function";
+
+	Node0x556bfeb57650 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %value.addr = alloca double, align 8\l  %inf = alloca double, align 8\l  store double %value, ptr %value.addr, align 8\l  store double 0x7FF0000000000000, ptr %inf, align 8\l  %0 = load double, ptr %value.addr, align 8\l  %call = call noundef zeroext i1 @_ZSt8isfinited(double noundef %0)\l  ret i1 %call\l}"];
+}

@@ -1,0 +1,37 @@
+digraph "CFG for 'convert_to_positive_long' function" {
+	label="CFG for 'convert_to_positive_long' function";
+
+	Node0x5567ef556020 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %parm_name.addr = alloca ptr, align 8\l  %parm_val.addr = alloca ptr, align 8\l  %val = alloca i64, align 8\l  %endPtr = alloca ptr, align 8\l  store ptr %parm_name, ptr %parm_name.addr, align 8\l  store ptr %parm_val, ptr %parm_val.addr, align 8\l  %0 = load ptr, ptr %parm_name.addr, align 8\l  %cmp = icmp eq ptr %0, null\l  br i1 %cmp, label %if.then, label %lor.lhs.false\l|{<s0>T|<s1>F}}"];
+	Node0x5567ef556020:s0 -> Node0x5567ef556530[tooltip="entry -> if.then\nProbability 0.00%" ];
+	Node0x5567ef556020:s1 -> Node0x5567ef5565a0[tooltip="entry -> lor.lhs.false\nProbability 100.00%" ];
+	Node0x5567ef5565a0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{lor.lhs.false:\l|  %1 = load ptr, ptr %parm_val.addr, align 8\l  %cmp1 = icmp eq ptr %1, null\l  br i1 %cmp1, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x5567ef5565a0:s0 -> Node0x5567ef556530[tooltip="lor.lhs.false -> if.then\nProbability 0.00%" ];
+	Node0x5567ef5565a0:s1 -> Node0x5567ef556800[tooltip="lor.lhs.false -> if.end\nProbability 100.00%" ];
+	Node0x5567ef556530 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f6bfa670" fontname="Courier",label="{if.then:\l|  %2 = load ptr, ptr @stderr, align 8\l  %call = call i32 (ptr, ptr, ...) @fprintf(ptr noundef %2, ptr noundef\l... @.str.26)\l  call void @exit(i32 noundef 1) #8\l  unreachable\l}"];
+	Node0x5567ef556800 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  %3 = load ptr, ptr %parm_val.addr, align 8\l  %call2 = call i64 @strtol(ptr noundef %3, ptr noundef %endPtr, i32 noundef\l... 0) #9\l  store i64 %call2, ptr %val, align 8\l  %4 = load ptr, ptr %endPtr, align 8\l  %arrayidx = getelementptr inbounds i8, ptr %4, i64 0\l  %5 = load i8, ptr %arrayidx, align 1\l  %conv = sext i8 %5 to i32\l  %cmp3 = icmp ne i32 %conv, 0\l  br i1 %cmp3, label %if.then5, label %if.end7\l|{<s0>T|<s1>F}}"];
+	Node0x5567ef556800:s0 -> Node0x5567ef557310[tooltip="if.end -> if.then5\nProbability 0.00%" ];
+	Node0x5567ef556800:s1 -> Node0x5567ef557390[tooltip="if.end -> if.end7\nProbability 100.00%" ];
+	Node0x5567ef557310 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f4c5ad70" fontname="Courier",label="{if.then5:\l|  %6 = load ptr, ptr @stderr, align 8\l  %7 = load ptr, ptr %parm_name.addr, align 8\l  %8 = load ptr, ptr %parm_val.addr, align 8\l  %9 = load ptr, ptr %endPtr, align 8\l  %call6 = call i32 (ptr, ptr, ...) @fprintf(ptr noundef %6, ptr noundef\l... @.str.27, ptr noundef %7, ptr noundef %8, ptr noundef %9)\l  call void @exit(i32 noundef 1) #8\l  unreachable\l}"];
+	Node0x5567ef557390 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end7:\l|  %10 = load ptr, ptr %parm_name.addr, align 8\l  %call8 = call i32 @strcmp(ptr noundef %10, ptr noundef @.str.28) #10\l  %cmp9 = icmp eq i32 %call8, 0\l  br i1 %cmp9, label %if.then15, label %lor.lhs.false11\l|{<s0>T|<s1>F}}"];
+	Node0x5567ef557390:s0 -> Node0x5567ef558d10[tooltip="if.end7 -> if.then15\nProbability 37.50%" ];
+	Node0x5567ef557390:s1 -> Node0x5567ef558d90[tooltip="if.end7 -> lor.lhs.false11\nProbability 62.50%" ];
+	Node0x5567ef558d90 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{lor.lhs.false11:\l|  %11 = load ptr, ptr %parm_name.addr, align 8\l  %call12 = call i32 @strcmp(ptr noundef %11, ptr noundef @.str.29) #10\l  %cmp13 = icmp eq i32 %call12, 0\l  br i1 %cmp13, label %if.then15, label %if.else\l|{<s0>T|<s1>F}}"];
+	Node0x5567ef558d90:s0 -> Node0x5567ef558d10[tooltip="lor.lhs.false11 -> if.then15\nProbability 37.50%" ];
+	Node0x5567ef558d90:s1 -> Node0x5567ef5594f0[tooltip="lor.lhs.false11 -> if.else\nProbability 62.50%" ];
+	Node0x5567ef558d10 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.then15:\l|  %12 = load i64, ptr %val, align 8\l  %cmp16 = icmp slt i64 %12, 1\l  br i1 %cmp16, label %land.lhs.true, label %if.end22\l|{<s0>T|<s1>F}}"];
+	Node0x5567ef558d10:s0 -> Node0x5567ef559740[tooltip="if.then15 -> land.lhs.true\nProbability 37.50%" ];
+	Node0x5567ef558d10:s1 -> Node0x5567ef5597c0[tooltip="if.then15 -> if.end22\nProbability 62.50%" ];
+	Node0x5567ef559740 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470" fontname="Courier",label="{land.lhs.true:\l|  %13 = load i64, ptr %val, align 8\l  %cmp18 = icmp ne i64 %13, -1\l  br i1 %cmp18, label %if.then20, label %if.end22\l|{<s0>T|<s1>F}}"];
+	Node0x5567ef559740:s0 -> Node0x5567ef559a80[tooltip="land.lhs.true -> if.then20\nProbability 0.00%" ];
+	Node0x5567ef559740:s1 -> Node0x5567ef5597c0[tooltip="land.lhs.true -> if.end22\nProbability 100.00%" ];
+	Node0x5567ef559a80 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#efcebd70" fontname="Courier",label="{if.then20:\l|  %14 = load ptr, ptr @stderr, align 8\l  %15 = load i64, ptr %val, align 8\l  %16 = load ptr, ptr %parm_name.addr, align 8\l  %call21 = call i32 (ptr, ptr, ...) @fprintf(ptr noundef %14, ptr noundef\l... @.str.30, i64 noundef %15, ptr noundef %16)\l  call void @print_usage()\l  call void @exit(i32 noundef 1) #8\l  unreachable\l}"];
+	Node0x5567ef5597c0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.end22:\l|  br label %if.end28\l}"];
+	Node0x5567ef5597c0 -> Node0x5567ef55a0f0[tooltip="if.end22 -> if.end28\nProbability 100.00%" ];
+	Node0x5567ef5594f0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.else:\l|  %17 = load i64, ptr %val, align 8\l  %cmp23 = icmp slt i64 %17, 1\l  br i1 %cmp23, label %if.then25, label %if.end27\l|{<s0>T|<s1>F}}"];
+	Node0x5567ef5594f0:s0 -> Node0x5567ef55a2f0[tooltip="if.else -> if.then25\nProbability 0.00%" ];
+	Node0x5567ef5594f0:s1 -> Node0x5567ef55a370[tooltip="if.else -> if.end27\nProbability 100.00%" ];
+	Node0x5567ef55a2f0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f2cab570" fontname="Courier",label="{if.then25:\l|  %18 = load ptr, ptr @stderr, align 8\l  %19 = load i64, ptr %val, align 8\l  %20 = load ptr, ptr %parm_name.addr, align 8\l  %call26 = call i32 (ptr, ptr, ...) @fprintf(ptr noundef %18, ptr noundef\l... @.str.31, i64 noundef %19, ptr noundef %20)\l  call void @print_usage()\l  call void @exit(i32 noundef 1) #8\l  unreachable\l}"];
+	Node0x5567ef55a370 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.end27:\l|  br label %if.end28\l}"];
+	Node0x5567ef55a370 -> Node0x5567ef55a0f0[tooltip="if.end27 -> if.end28\nProbability 100.00%" ];
+	Node0x5567ef55a0f0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end28:\l|  %21 = load i64, ptr %val, align 8\l  ret i64 %21\l}"];
+}

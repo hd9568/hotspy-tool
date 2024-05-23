@@ -1,0 +1,31 @@
+digraph "Call graph: gs_unique_test.ll" {
+	label="Call graph: gs_unique_test.ll";
+
+	Node0x5618ab0d3bb0 [shape=record,label="{main}"];
+	Node0x5618ab0d3bb0 -> Node0x5618ab0d75b0;
+	Node0x5618ab0d3bb0 -> Node0x5618ab0d9a60;
+	Node0x5618ab0d3bb0 -> Node0x5618ab0dea60;
+	Node0x5618ab0d75b0 [shape=record,label="{comm_init}"];
+	Node0x5618ab0d9a60 [shape=record,label="{test}"];
+	Node0x5618ab0d9a60 -> Node0x5618ab0e3060;
+	Node0x5618ab0d9a60 -> Node0x5618ab0e8160;
+	Node0x5618ab0d9a60 -> Node0x5618ab0e5090;
+	Node0x5618ab0d9a60 -> Node0x5618ab0e6e60;
+	Node0x5618ab0d9a60 -> Node0x5618ab0e88e0;
+	Node0x5618ab0d9a60 -> Node0x5618ab0e61a0;
+	Node0x5618ab0d9a60 -> Node0x5618ab0e7640;
+	Node0x5618ab0d9a60 -> Node0x5618ab0d7b10;
+	Node0x5618ab0dea60 [shape=record,label="{comm_free}"];
+	Node0x5618ab0e3060 [shape=record,label="{smalloc}"];
+	Node0x5618ab0e3060 -> Node0x5618ab0e1930;
+	Node0x5618ab0e3060 -> Node0x5618ab0ea060;
+	Node0x5618ab0e5090 [shape=record,label="{sprintf}"];
+	Node0x5618ab0e6e60 [shape=record,label="{puts}"];
+	Node0x5618ab0e7640 [shape=record,label="{gs_unique}"];
+	Node0x5618ab0d7b10 [shape=record,label="{gs_setup}"];
+	Node0x5618ab0e61a0 [shape=record,label="{gs}"];
+	Node0x5618ab0e88e0 [shape=record,label="{gs_free}"];
+	Node0x5618ab0e8160 [shape=record,label="{free}"];
+	Node0x5618ab0e1930 [shape=record,label="{malloc}"];
+	Node0x5618ab0ea060 [shape=record,label="{fail}"];
+}

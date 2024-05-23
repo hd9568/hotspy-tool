@@ -1,0 +1,23 @@
+digraph "CFG for 'manual_omp_module2' function" {
+	label="CFG for 'manual_omp_module2' function";
+
+	Node0x5567ef5afbf0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{entry:\l|  %startPidx.addr = alloca i32, align 4\l  %endPidx.addr = alloca i32, align 4\l  %pidx = alloca i64, align 8\l  %part = alloca ptr, align 8\l  store i32 %startPidx, ptr %startPidx.addr, align 4\l  store i32 %endPidx, ptr %endPidx.addr, align 4\l  %call = call double @calc_deposit()\l  store double %call, ptr @manual_omp_module2.deposit, align 8\l  %0 = load i32, ptr %startPidx.addr, align 4\l  %conv = sext i32 %0 to i64\l  store i64 %conv, ptr %pidx, align 8\l  br label %for.cond\l}"];
+	Node0x5567ef5afbf0 -> Node0x5567ef5b0370[tooltip="entry -> for.cond\nProbability 100.00%" ];
+	Node0x5567ef5b0370 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.cond:\l|  %1 = load i64, ptr %pidx, align 8\l  %2 = load i32, ptr %endPidx.addr, align 4\l  %conv1 = sext i32 %2 to i64\l  %cmp = icmp sle i64 %1, %conv1\l  br i1 %cmp, label %for.body, label %for.end\l|{<s0>T|<s1>F}}"];
+	Node0x5567ef5b0370:s0 -> Node0x5567ef5b0670[tooltip="for.cond -> for.body\nProbability 96.88%" ];
+	Node0x5567ef5b0370:s1 -> Node0x5567ef5afac0[tooltip="for.cond -> for.end\nProbability 3.12%" ];
+	Node0x5567ef5b0670 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.body:\l|  %3 = load ptr, ptr @partArray, align 8\l  %4 = load i64, ptr %pidx, align 8\l  %arrayidx = getelementptr inbounds ptr, ptr %3, i64 %4\l  %5 = load ptr, ptr %arrayidx, align 8\l  %6 = load double, ptr @manual_omp_module2.deposit, align 8\l  call void @update_part(ptr noundef %5, double noundef %6)\l  br label %for.inc\l}"];
+	Node0x5567ef5b0670 -> Node0x5567ef5b0d30[tooltip="for.body -> for.inc\nProbability 100.00%" ];
+	Node0x5567ef5b0d30 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.inc:\l|  %7 = load i64, ptr %pidx, align 8\l  %inc = add nsw i64 %7, 1\l  store i64 %inc, ptr %pidx, align 8\l  br label %for.cond, !llvm.loop !6\l}"];
+	Node0x5567ef5b0d30 -> Node0x5567ef5b0370[tooltip="for.inc -> for.cond\nProbability 100.00%" ];
+	Node0x5567ef5afac0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{for.end:\l|  %call3 = call double @calc_deposit()\l  store double %call3, ptr @manual_omp_module2.deposit, align 8\l  %8 = load i32, ptr %startPidx.addr, align 4\l  %conv4 = sext i32 %8 to i64\l  store i64 %conv4, ptr %pidx, align 8\l  br label %for.cond5\l}"];
+	Node0x5567ef5afac0 -> Node0x5567ef55db20[tooltip="for.end -> for.cond5\nProbability 100.00%" ];
+	Node0x5567ef55db20 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.cond5:\l|  %9 = load i64, ptr %pidx, align 8\l  %10 = load i32, ptr %endPidx.addr, align 4\l  %conv6 = sext i32 %10 to i64\l  %cmp7 = icmp sle i64 %9, %conv6\l  br i1 %cmp7, label %for.body9, label %for.end13\l|{<s0>T|<s1>F}}"];
+	Node0x5567ef55db20:s0 -> Node0x5567ef55de20[tooltip="for.cond5 -> for.body9\nProbability 96.88%" ];
+	Node0x5567ef55db20:s1 -> Node0x5567ef55de70[tooltip="for.cond5 -> for.end13\nProbability 3.12%" ];
+	Node0x5567ef55de20 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.body9:\l|  %11 = load ptr, ptr @partArray, align 8\l  %12 = load i64, ptr %pidx, align 8\l  %arrayidx10 = getelementptr inbounds ptr, ptr %11, i64 %12\l  %13 = load ptr, ptr %arrayidx10, align 8\l  %14 = load double, ptr @manual_omp_module2.deposit, align 8\l  call void @update_part(ptr noundef %13, double noundef %14)\l  br label %for.inc11\l}"];
+	Node0x5567ef55de20 -> Node0x5567ef5b2910[tooltip="for.body9 -> for.inc11\nProbability 100.00%" ];
+	Node0x5567ef5b2910 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.inc11:\l|  %15 = load i64, ptr %pidx, align 8\l  %inc12 = add nsw i64 %15, 1\l  store i64 %inc12, ptr %pidx, align 8\l  br label %for.cond5, !llvm.loop !8\l}"];
+	Node0x5567ef5b2910 -> Node0x5567ef55db20[tooltip="for.inc11 -> for.cond5\nProbability 100.00%" ];
+	Node0x5567ef55de70 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{for.end13:\l|  ret void\l}"];
+}

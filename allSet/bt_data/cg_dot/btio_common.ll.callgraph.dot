@@ -1,0 +1,7 @@
+digraph "Call graph: btio_common.ll" {
+	label="Call graph: btio_common.ll";
+
+	Node0x56454152da00 [shape=record,label="{clear_timestep_}"];
+	Node0x56454152dab0 [shape=record,label="{llvm.stacksave.p0}"];
+	Node0x56454152db30 [shape=record,label="{llvm.stackrestore.p0}"];
+}

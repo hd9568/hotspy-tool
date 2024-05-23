@@ -1,0 +1,5 @@
+digraph "CFG for 'lammps_get_mpi_comm' function" {
+	label="CFG for 'lammps_get_mpi_comm' function";
+
+	Node0x55bdf7df6ba0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %handle.addr = alloca ptr, align 8\l  %lmp = alloca ptr, align 8\l  %f_comm = alloca i32, align 4\l  store ptr %handle, ptr %handle.addr, align 8\l  %0 = load ptr, ptr %handle.addr, align 8\l  store ptr %0, ptr %lmp, align 8\l  %1 = load ptr, ptr %lmp, align 8\l  %world = getelementptr inbounds %\"class.LAMMPS_NS::LAMMPS\", ptr %1, i32 0,\l... i32 22\l  %2 = load ptr, ptr %world, align 8\l  %call = call i32 @MPI_Comm_c2f(ptr noundef %2)\l  store i32 %call, ptr %f_comm, align 4\l  %3 = load i32, ptr %f_comm, align 4\l  ret i32 %3\l}"];
+}

@@ -1,0 +1,28 @@
+digraph "Call graph: gs_test_old.ll" {
+	label="Call graph: gs_test_old.ll";
+
+	Node0x5631b9e30020 [shape=record,label="{assert_is_zero}"];
+	Node0x5631b9e30020 -> Node0x5631b9e193b0;
+	Node0x5631b9e30020 -> Node0x5631b9e11cc0;
+	Node0x5631b9e30020 -> Node0x5631b9e04ae0;
+	Node0x5631b9e193b0 [shape=record,label="{llvm.fabs.f64}"];
+	Node0x5631b9e11cc0 [shape=record,label="{printf}"];
+	Node0x5631b9e04ae0 [shape=record,label="{exit}"];
+	Node0x5631b9e08820 [shape=record,label="{main}"];
+	Node0x5631b9e08820 -> Node0x5631b9e34110;
+	Node0x5631b9e08820 -> Node0x5631b9e0d700;
+	Node0x5631b9e08820 -> Node0x5631b9e0e920;
+	Node0x5631b9e08820 -> Node0x5631b9e11cc0;
+	Node0x5631b9e08820 -> Node0x5631b9e11310;
+	Node0x5631b9e08820 -> Node0x5631b9e30020;
+	Node0x5631b9e08820 -> Node0x5631b9e19d70;
+	Node0x5631b9e08820 -> Node0x5631b9e13970;
+	Node0x5631b9e08820 -> Node0x5631b9e12880;
+	Node0x5631b9e34110 [shape=record,label="{malloc}"];
+	Node0x5631b9e0d700 [shape=record,label="{gs_setup}"];
+	Node0x5631b9e0e920 [shape=record,label="{free}"];
+	Node0x5631b9e11310 [shape=record,label="{gs_op}"];
+	Node0x5631b9e12880 [shape=record,label="{gs_op_vec}"];
+	Node0x5631b9e19d70 [shape=record,label="{gs_free}"];
+	Node0x5631b9e13970 [shape=record,label="{gs_op_many}"];
+}

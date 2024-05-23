@@ -1,0 +1,22 @@
+digraph "CFG for '_ZN3fmt6v9_lmp6detail23check_cstring_type_specINS1_13error_handlerEEEbNS0_17presentation_typeEOT_' function" {
+	label="CFG for '_ZN3fmt6v9_lmp6detail23check_cstring_type_specINS1_13error_handlerEEEbNS0_17presentation_typeEOT_' function";
+
+	Node0x55fec36afed0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %retval = alloca i1, align 1\l  %type.addr = alloca i8, align 1\l  %eh.addr = alloca ptr, align 8\l  store i8 %type, ptr %type.addr, align 1\l  store ptr %eh, ptr %eh.addr, align 8\l  %0 = load i8, ptr %type.addr, align 1\l  %cmp = icmp eq i8 %0, 0\l  br i1 %cmp, label %if.then, label %lor.lhs.false\l|{<s0>T|<s1>F}}"];
+	Node0x55fec36afed0:s0 -> Node0x55fec36b02e0[tooltip="entry -> if.then\nProbability 37.50%" ];
+	Node0x55fec36afed0:s1 -> Node0x55fec36b0350[tooltip="entry -> lor.lhs.false\nProbability 62.50%" ];
+	Node0x55fec36b0350 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{lor.lhs.false:\l|  %1 = load i8, ptr %type.addr, align 1\l  %cmp1 = icmp eq i8 %1, 16\l  br i1 %cmp1, label %if.then, label %lor.lhs.false2\l|{<s0>T|<s1>F}}"];
+	Node0x55fec36b0350:s0 -> Node0x55fec36b02e0[tooltip="lor.lhs.false -> if.then\nProbability 50.00%" ];
+	Node0x55fec36b0350:s1 -> Node0x55fec36b0500[tooltip="lor.lhs.false -> lor.lhs.false2\nProbability 50.00%" ];
+	Node0x55fec36b0500 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{lor.lhs.false2:\l|  %2 = load i8, ptr %type.addr, align 1\l  %cmp3 = icmp eq i8 %2, 18\l  br i1 %cmp3, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x55fec36b0500:s0 -> Node0x55fec36b02e0[tooltip="lor.lhs.false2 -> if.then\nProbability 50.00%" ];
+	Node0x55fec36b0500:s1 -> Node0x55fec36b06b0[tooltip="lor.lhs.false2 -> if.end\nProbability 50.00%" ];
+	Node0x55fec36b02e0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.then:\l|  store i1 true, ptr %retval, align 1\l  br label %return\l}"];
+	Node0x55fec36b02e0 -> Node0x55fec36b0a10[tooltip="if.then -> return\nProbability 100.00%" ];
+	Node0x55fec36b06b0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#ca3b3770" fontname="Courier",label="{if.end:\l|  %3 = load i8, ptr %type.addr, align 1\l  %cmp4 = icmp ne i8 %3, 17\l  br i1 %cmp4, label %if.then5, label %if.end6\l|{<s0>T|<s1>F}}"];
+	Node0x55fec36b06b0:s0 -> Node0x55fec36b0bb0[tooltip="if.end -> if.then5\nProbability 0.00%" ];
+	Node0x55fec36b06b0:s1 -> Node0x55fec36b0c30[tooltip="if.end -> if.end6\nProbability 100.00%" ];
+	Node0x55fec36b0bb0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#eed0c070" fontname="Courier",label="{if.then5:\l|  %4 = load ptr, ptr %eh.addr, align 8\l  call void @_ZN3fmt6v9_lmp6detail13error_handler8on_errorEPKc(ptr noundef\l... nonnull align 1 dereferenceable(1) %4, ptr noundef @.str.18) #17\l  unreachable\l}"];
+	Node0x55fec36b0c30 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#ca3b3770" fontname="Courier",label="{if.end6:\l|  store i1 false, ptr %retval, align 1\l  br label %return\l}"];
+	Node0x55fec36b0c30 -> Node0x55fec36b0a10[tooltip="if.end6 -> return\nProbability 100.00%" ];
+	Node0x55fec36b0a10 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{return:\l|  %5 = load i1, ptr %retval, align 1\l  ret i1 %5\l}"];
+}

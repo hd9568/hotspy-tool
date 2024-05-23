@@ -1,0 +1,5 @@
+digraph "CFG for 'hypre_MPI_Op_free' function" {
+	label="CFG for 'hypre_MPI_Op_free' function";
+
+	Node0x5555d6662c50 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %op.addr = alloca ptr, align 8\l  store ptr %op, ptr %op.addr, align 8\l  %0 = load ptr, ptr %op.addr, align 8\l  %call = call i32 @MPI_Op_free(ptr noundef %0)\l  ret i32 %call\l}"];
+}

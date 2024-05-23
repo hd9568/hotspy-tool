@@ -1,0 +1,17 @@
+digraph "CFG for '_ZN9LAMMPS_NS8platform5popenERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES8_' function" {
+	label="CFG for '_ZN9LAMMPS_NS8platform5popenERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES8_' function";
+
+	Node0x5651cd822e20 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %cmd.addr = alloca ptr, align 8\l  %mode.addr = alloca ptr, align 8\l  %fp = alloca ptr, align 8\l  store ptr %cmd, ptr %cmd.addr, align 8\l  store ptr %mode, ptr %mode.addr, align 8\l  store ptr null, ptr %fp, align 8\l  %0 = load ptr, ptr %mode.addr, align 8\l  %call = call noundef zeroext i1\l... @_ZSteqIcSt11char_traitsIcESaIcEEbRKNSt7__cxx1112basic_stringIT_T0_T1_EEPKS5_(\l...ptr noundef nonnull align 8 dereferenceable(32) %0, ptr noundef @.str.34)\l  br i1 %call, label %if.then, label %if.else\l|{<s0>T|<s1>F}}"];
+	Node0x5651cd822e20:s0 -> Node0x5651cd823380[tooltip="entry -> if.then\nProbability 50.00%" ];
+	Node0x5651cd822e20:s1 -> Node0x5651cd8233d0[tooltip="entry -> if.else\nProbability 50.00%" ];
+	Node0x5651cd823380 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.then:\l|  %1 = load ptr, ptr %cmd.addr, align 8\l  %call1 = call noundef ptr\l... @_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE5c_strEv(ptr noundef\l... nonnull align 8 dereferenceable(32) %1) #4\l  %call2 = call noalias ptr @popen(ptr noundef %call1, ptr noundef @.str.34)\l  store ptr %call2, ptr %fp, align 8\l  br label %if.end7\l}"];
+	Node0x5651cd823380 -> Node0x5651cd823910[tooltip="if.then -> if.end7\nProbability 100.00%" ];
+	Node0x5651cd8233d0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.else:\l|  %2 = load ptr, ptr %mode.addr, align 8\l  %call3 = call noundef zeroext i1\l... @_ZSteqIcSt11char_traitsIcESaIcEEbRKNSt7__cxx1112basic_stringIT_T0_T1_EEPKS5_(\l...ptr noundef nonnull align 8 dereferenceable(32) %2, ptr noundef @.str.35)\l  br i1 %call3, label %if.then4, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x5651cd8233d0:s0 -> Node0x5651cd823da0[tooltip="if.else -> if.then4\nProbability 50.00%" ];
+	Node0x5651cd8233d0:s1 -> Node0x5651cd823e20[tooltip="if.else -> if.end\nProbability 50.00%" ];
+	Node0x5651cd823da0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470" fontname="Courier",label="{if.then4:\l|  %3 = load ptr, ptr %cmd.addr, align 8\l  %call5 = call noundef ptr\l... @_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE5c_strEv(ptr noundef\l... nonnull align 8 dereferenceable(32) %3) #4\l  %call6 = call noalias ptr @popen(ptr noundef %call5, ptr noundef @.str.35)\l  store ptr %call6, ptr %fp, align 8\l  br label %if.end\l}"];
+	Node0x5651cd823da0 -> Node0x5651cd823e20[tooltip="if.then4 -> if.end\nProbability 100.00%" ];
+	Node0x5651cd823e20 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.end:\l|  br label %if.end7\l}"];
+	Node0x5651cd823e20 -> Node0x5651cd823910[tooltip="if.end -> if.end7\nProbability 100.00%" ];
+	Node0x5651cd823910 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end7:\l|  %4 = load ptr, ptr %fp, align 8\l  ret ptr %4\l}"];
+}

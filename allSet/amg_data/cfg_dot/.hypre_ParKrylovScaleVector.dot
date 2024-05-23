@@ -1,0 +1,5 @@
+digraph "CFG for 'hypre_ParKrylovScaleVector' function" {
+	label="CFG for 'hypre_ParKrylovScaleVector' function";
+
+	Node0x557950114a10 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %alpha.addr = alloca double, align 8\l  %x.addr = alloca ptr, align 8\l  store double %alpha, ptr %alpha.addr, align 8\l  store ptr %x, ptr %x.addr, align 8\l  %0 = load double, ptr %alpha.addr, align 8\l  %1 = load ptr, ptr %x.addr, align 8\l  %call = call i32 @hypre_ParVectorScale(double noundef %0, ptr noundef %1)\l  ret i32 %call\l}"];
+}

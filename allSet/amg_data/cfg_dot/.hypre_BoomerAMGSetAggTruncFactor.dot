@@ -1,0 +1,17 @@
+digraph "CFG for 'hypre_BoomerAMGSetAggTruncFactor' function" {
+	label="CFG for 'hypre_BoomerAMGSetAggTruncFactor' function";
+
+	Node0x55fa809c58e0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %retval = alloca i32, align 4\l  %data.addr = alloca ptr, align 8\l  %agg_trunc_factor.addr = alloca double, align 8\l  %amg_data = alloca ptr, align 8\l  store ptr %data, ptr %data.addr, align 8\l  store double %agg_trunc_factor, ptr %agg_trunc_factor.addr, align 8\l  %0 = load ptr, ptr %data.addr, align 8\l  store ptr %0, ptr %amg_data, align 8\l  %1 = load ptr, ptr %amg_data, align 8\l  %tobool = icmp ne ptr %1, null\l  br i1 %tobool, label %if.end, label %if.then\l|{<s0>T|<s1>F}}"];
+	Node0x55fa809c58e0:s0 -> Node0x55fa809c5f10[tooltip="entry -> if.end\nProbability 62.50%" ];
+	Node0x55fa809c58e0:s1 -> Node0x55fa809c5f80[tooltip="entry -> if.then\nProbability 37.50%" ];
+	Node0x55fa809c5f80 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{if.then:\l|  call void @hypre_error_handler(ptr noundef @.str.2, i32 noundef 2437, i32\l... noundef 12, ptr noundef null)\l  %2 = load i32, ptr @hypre__global_error, align 4\l  store i32 %2, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x55fa809c5f80 -> Node0x55fa809c6350[tooltip="if.then -> return\nProbability 100.00%" ];
+	Node0x55fa809c5f10 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.end:\l|  %3 = load double, ptr %agg_trunc_factor.addr, align 8\l  %cmp = fcmp olt double %3, 0.000000e+00\l  br i1 %cmp, label %if.then1, label %if.end2\l|{<s0>T|<s1>F}}"];
+	Node0x55fa809c5f10:s0 -> Node0x55fa809c6520[tooltip="if.end -> if.then1\nProbability 50.00%" ];
+	Node0x55fa809c5f10:s1 -> Node0x55fa809c6710[tooltip="if.end -> if.end2\nProbability 50.00%" ];
+	Node0x55fa809c6520 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{if.then1:\l|  call void @hypre_error_handler(ptr noundef @.str.2, i32 noundef 2442, i32\l... noundef 20, ptr noundef null)\l  %4 = load i32, ptr @hypre__global_error, align 4\l  store i32 %4, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x55fa809c6520 -> Node0x55fa809c6350[tooltip="if.then1 -> return\nProbability 100.00%" ];
+	Node0x55fa809c6710 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{if.end2:\l|  %5 = load double, ptr %agg_trunc_factor.addr, align 8\l  %6 = load ptr, ptr %amg_data, align 8\l  %agg_trunc_factor3 = getelementptr inbounds %struct.hypre_ParAMGData, ptr\l... %6, i32 0, i32 4\l  store double %5, ptr %agg_trunc_factor3, align 8\l  %7 = load i32, ptr @hypre__global_error, align 4\l  store i32 %7, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x55fa809c6710 -> Node0x55fa809c6350[tooltip="if.end2 -> return\nProbability 100.00%" ];
+	Node0x55fa809c6350 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{return:\l|  %8 = load i32, ptr %retval, align 4\l  ret i32 %8\l}"];
+}

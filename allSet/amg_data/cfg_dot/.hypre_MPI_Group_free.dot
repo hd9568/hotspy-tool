@@ -1,0 +1,5 @@
+digraph "CFG for 'hypre_MPI_Group_free' function" {
+	label="CFG for 'hypre_MPI_Group_free' function";
+
+	Node0x5555d662a640 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %group.addr = alloca ptr, align 8\l  store ptr %group, ptr %group.addr, align 8\l  %0 = load ptr, ptr %group.addr, align 8\l  %call = call i32 @MPI_Group_free(ptr noundef %0)\l  ret i32 %call\l}"];
+}

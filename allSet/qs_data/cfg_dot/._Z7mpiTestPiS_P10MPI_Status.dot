@@ -1,0 +1,9 @@
+digraph "CFG for '_Z7mpiTestPiS_P10MPI_Status' function" {
+	label="CFG for '_Z7mpiTestPiS_P10MPI_Status' function";
+
+	Node0x558b6942be60 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %.addr = alloca ptr, align 8\l  %.addr1 = alloca ptr, align 8\l  %.addr2 = alloca ptr, align 8\l  store ptr %0, ptr %.addr, align 8\l  store ptr %1, ptr %.addr1, align 8\l  store ptr %2, ptr %.addr2, align 8\l  %call = call i32 (ptr, ...) @printf(ptr noundef @.str.9)\l  br label %do.body\l}"];
+	Node0x558b6942be60 -> Node0x558b6942c3c0[tooltip="entry -> do.body\nProbability 100.00%" ];
+	Node0x558b6942c3c0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{do.body:\l|  %call3 = call i32 (ptr, ...) @printf(ptr noundef @.str, ptr noundef\l... @.str.10, i32 noundef 106)\l  br label %do.end\l}"];
+	Node0x558b6942c3c0 -> Node0x558b6942c5f0[tooltip="do.body -> do.end\nProbability 100.00%" ];
+	Node0x558b6942c5f0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{do.end:\l|  ret void\l}"];
+}

@@ -1,0 +1,14 @@
+digraph "CFG for 'spec_init_genrand' function" {
+	label="CFG for 'spec_init_genrand' function";
+
+	Node0x5614a63d4560 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{entry:\l|  %s.addr = alloca i64, align 8\l  store i64 %s, ptr %s.addr, align 8\l  %0 = load i64, ptr %s.addr, align 8\l  %and = and i64 %0, 4294967295\l  store i64 %and, ptr @mt, align 16\l  store i32 1, ptr @mti, align 4\l  br label %for.cond\l}"];
+	Node0x5614a63d4560 -> Node0x5614a63d48c0[tooltip="entry -> for.cond\nProbability 100.00%" ];
+	Node0x5614a63d48c0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.cond:\l|  %1 = load i32, ptr @mti, align 4\l  %cmp = icmp slt i32 %1, 624\l  br i1 %cmp, label %for.body, label %for.end\l|{<s0>T|<s1>F}}"];
+	Node0x5614a63d48c0:s0 -> Node0x5614a63d4b10[tooltip="for.cond -> for.body\nProbability 96.88%" ];
+	Node0x5614a63d48c0:s1 -> Node0x5614a63d4b90[tooltip="for.cond -> for.end\nProbability 3.12%" ];
+	Node0x5614a63d4b10 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.body:\l|  %2 = load i32, ptr @mti, align 4\l  %sub = sub nsw i32 %2, 1\l  %idxprom = sext i32 %sub to i64\l  %arrayidx = getelementptr inbounds [624 x i64], ptr @mt, i64 0, i64 %idxprom\l  %3 = load i64, ptr %arrayidx, align 8\l  %4 = load i32, ptr @mti, align 4\l  %sub1 = sub nsw i32 %4, 1\l  %idxprom2 = sext i32 %sub1 to i64\l  %arrayidx3 = getelementptr inbounds [624 x i64], ptr @mt, i64 0, i64\l... %idxprom2\l  %5 = load i64, ptr %arrayidx3, align 8\l  %shr = lshr i64 %5, 30\l  %xor = xor i64 %3, %shr\l  %mul = mul i64 1812433253, %xor\l  %6 = load i32, ptr @mti, align 4\l  %conv = sext i32 %6 to i64\l  %add = add i64 %mul, %conv\l  %7 = load i32, ptr @mti, align 4\l  %idxprom4 = sext i32 %7 to i64\l  %arrayidx5 = getelementptr inbounds [624 x i64], ptr @mt, i64 0, i64\l... %idxprom4\l  store i64 %add, ptr %arrayidx5, align 8\l  %8 = load i32, ptr @mti, align 4\l  %idxprom6 = sext i32 %8 to i64\l  %arrayidx7 = getelementptr inbounds [624 x i64], ptr @mt, i64 0, i64\l... %idxprom6\l  %9 = load i64, ptr %arrayidx7, align 8\l  %and8 = and i64 %9, 4294967295\l  store i64 %and8, ptr %arrayidx7, align 8\l  br label %for.inc\l}"];
+	Node0x5614a63d4b10 -> Node0x5614a63d5f80[tooltip="for.body -> for.inc\nProbability 100.00%" ];
+	Node0x5614a63d5f80 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.inc:\l|  %10 = load i32, ptr @mti, align 4\l  %inc = add nsw i32 %10, 1\l  store i32 %inc, ptr @mti, align 4\l  br label %for.cond, !llvm.loop !6\l}"];
+	Node0x5614a63d5f80 -> Node0x5614a63d48c0[tooltip="for.inc -> for.cond\nProbability 100.00%" ];
+	Node0x5614a63d4b90 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{for.end:\l|  ret void\l}"];
+}

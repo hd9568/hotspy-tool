@@ -1,0 +1,13 @@
+digraph "Call graph: buts.ll" {
+	label="Call graph: buts.ll";
+
+	Node0x55af51da5c90 [shape=record,label="{buts_}"];
+	Node0x55af51da5c90 -> Node0x55af51da5d40;
+	Node0x55af51da5c90 -> Node0x55af51da5df0;
+	Node0x55af51da5c90 -> Node0x55af51da5750;
+	Node0x55af51da5d40 [shape=record,label="{timer_start_}"];
+	Node0x55af51da5df0 [shape=record,label="{exchange_1_}"];
+	Node0x55af51da5750 [shape=record,label="{timer_stop_}"];
+	Node0x55af51dab430 [shape=record,label="{llvm.stacksave.p0}"];
+	Node0x55af51dab600 [shape=record,label="{llvm.stackrestore.p0}"];
+}

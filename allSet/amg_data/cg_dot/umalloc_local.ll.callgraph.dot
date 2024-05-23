@@ -1,0 +1,4 @@
+digraph "Call graph: umalloc_local.ll" {
+	label="Call graph: umalloc_local.ll";
+
+}

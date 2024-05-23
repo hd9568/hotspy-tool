@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN3fmt6v9_lmp6detail8to_asciiIcTnNSt9enable_ifIXsr3std11is_integralIT_EE5valueEiE4typeELi0EEES4_S4_' function" {
+	label="CFG for '_ZN3fmt6v9_lmp6detail8to_asciiIcTnNSt9enable_ifIXsr3std11is_integralIT_EE5valueEiE4typeELi0EEES4_S4_' function";
+
+	Node0x556bfeaa2c20 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %c.addr = alloca i8, align 1\l  store i8 %c, ptr %c.addr, align 1\l  %0 = load i8, ptr %c.addr, align 1\l  ret i8 %0\l}"];
+}

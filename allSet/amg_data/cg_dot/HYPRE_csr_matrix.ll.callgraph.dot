@@ -1,0 +1,22 @@
+digraph "Call graph: HYPRE_csr_matrix.ll" {
+	label="Call graph: HYPRE_csr_matrix.ll";
+
+	Node0x5570d4847140 [shape=record,label="{HYPRE_CSRMatrixCreate}"];
+	Node0x5570d4847140 -> Node0x5570d48471f0;
+	Node0x5570d4847140 -> Node0x5570d48476b0;
+	Node0x5570d48471f0 [shape=record,label="{hypre_CAlloc}"];
+	Node0x5570d48476b0 [shape=record,label="{hypre_CSRMatrixCreate}"];
+	Node0x5570d4847730 [shape=record,label="{HYPRE_CSRMatrixDestroy}"];
+	Node0x5570d4847730 -> Node0x5570d48477b0;
+	Node0x5570d48477b0 [shape=record,label="{hypre_CSRMatrixDestroy}"];
+	Node0x5570d48479e0 [shape=record,label="{HYPRE_CSRMatrixInitialize}"];
+	Node0x5570d48479e0 -> Node0x5570d4847a60;
+	Node0x5570d4847a60 [shape=record,label="{hypre_CSRMatrixInitialize}"];
+	Node0x5570d4847b40 [shape=record,label="{HYPRE_CSRMatrixRead}"];
+	Node0x5570d4847b40 -> Node0x5570d4847bc0;
+	Node0x5570d4847bc0 [shape=record,label="{hypre_CSRMatrixRead}"];
+	Node0x5570d4847f30 [shape=record,label="{HYPRE_CSRMatrixPrint}"];
+	Node0x5570d4847f30 -> Node0x5570d4847fb0;
+	Node0x5570d4847fb0 [shape=record,label="{hypre_CSRMatrixPrint}"];
+	Node0x5570d4848090 [shape=record,label="{HYPRE_CSRMatrixGetNumRows}"];
+}

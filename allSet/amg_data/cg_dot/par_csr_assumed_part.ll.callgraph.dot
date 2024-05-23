@@ -1,0 +1,45 @@
+digraph "Call graph: par_csr_assumed_part.ll" {
+	label="Call graph: par_csr_assumed_part.ll";
+
+	Node0x5624635a7b20 [shape=record,label="{hypre_LocateAssummedPartition}"];
+	Node0x5624635a7b20 -> Node0x5624635a96e0;
+	Node0x5624635a7b20 -> Node0x5624635abca0;
+	Node0x5624635a7b20 -> Node0x5624635b4ce0;
+	Node0x5624635a7b20 -> Node0x5624635ac0c0;
+	Node0x5624635a7b20 -> Node0x5624635ad430;
+	Node0x5624635a7b20 -> Node0x5624635b3720;
+	Node0x5624635a7b20 -> Node0x5624635c3e10;
+	Node0x5624635a7b20 -> Node0x5624635b2c40;
+	Node0x5624635a7b20 -> Node0x5624635c3e90;
+	Node0x5624635a7b20 -> Node0x5624635b2d50;
+	Node0x5624635a96e0 [shape=record,label="{hypre_MAlloc}"];
+	Node0x5624635abca0 [shape=record,label="{hypre_GetAssumedPartitionProcFromRow}"];
+	Node0x5624635abca0 -> Node0x5624635b5400;
+	Node0x5624635ac0c0 [shape=record,label="{hypre_ReAlloc}"];
+	Node0x5624635ad430 [shape=record,label="{hypre_GetAssumedPartitionRowRange}"];
+	Node0x5624635ad430 -> Node0x5624635b5400;
+	Node0x5624635c3e10 [shape=record,label="{hypre_CAlloc}"];
+	Node0x5624635c3e90 [shape=record,label="{hypre_MPI_Isend}"];
+	Node0x5624635b2d50 [shape=record,label="{hypre_MPI_Recv}"];
+	Node0x5624635b2c40 [shape=record,label="{hypre_qsort2i}"];
+	Node0x5624635b3720 [shape=record,label="{hypre_MPI_Waitall}"];
+	Node0x5624635b4ce0 [shape=record,label="{hypre_Free}"];
+	Node0x5624635b9930 [shape=record,label="{hypre_ParCSRMatrixCreateAssumedPartition}"];
+	Node0x5624635b9930 -> Node0x5624635b9dc0;
+	Node0x5624635b9930 -> Node0x562463585c90;
+	Node0x5624635b9930 -> Node0x5624635c3e10;
+	Node0x5624635b9930 -> Node0x5624635ad430;
+	Node0x5624635b9930 -> Node0x5624635a96e0;
+	Node0x5624635b9930 -> Node0x5624635a7b20;
+	Node0x5624635b9dc0 [shape=record,label="{hypre_ParCSRMatrixGetLocalRange}"];
+	Node0x562463585c90 [shape=record,label="{hypre_MPI_Comm_rank}"];
+	Node0x5624635aacf0 [shape=record,label="{hypre_AssumedPartitionDestroy}"];
+	Node0x5624635aacf0 -> Node0x5624635b4ce0;
+	Node0x5624635b5400 [shape=record,label="{hypre_MPI_Comm_size}"];
+	Node0x56246358c8a0 [shape=record,label="{hypre_ParVectorCreateAssumedPartition}"];
+	Node0x56246358c8a0 -> Node0x562463585c90;
+	Node0x56246358c8a0 -> Node0x5624635c3e10;
+	Node0x56246358c8a0 -> Node0x5624635ad430;
+	Node0x56246358c8a0 -> Node0x5624635a96e0;
+	Node0x56246358c8a0 -> Node0x5624635a7b20;
+}

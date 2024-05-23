@@ -1,0 +1,5 @@
+digraph "CFG for '_GLOBAL__sub_I_CollisionEvent.cc' function" {
+	label="CFG for '_GLOBAL__sub_I_CollisionEvent.cc' function";
+
+	Node0x5642d216cc20 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  call void @__cxx_global_var_init()\l  ret void\l}"];
+}

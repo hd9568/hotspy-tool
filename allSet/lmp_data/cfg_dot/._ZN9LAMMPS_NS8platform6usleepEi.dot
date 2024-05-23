@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN9LAMMPS_NS8platform6usleepEi' function" {
+	label="CFG for '_ZN9LAMMPS_NS8platform6usleepEi' function";
+
+	Node0x5651cd785b40 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %usec.addr = alloca i32, align 4\l  %ref.tmp = alloca %\"struct.std::chrono::duration.18\", align 8\l  store i32 %usec, ptr %usec.addr, align 4\l  call void @_ZNSt6chrono8durationIlSt5ratioILl1ELl1000000EEEC2IivEERKT_(ptr\l... noundef nonnull align 8 dereferenceable(8) %ref.tmp, ptr noundef nonnull\l... align 4 dereferenceable(4) %usec.addr)\l  call void\l... @_ZNSt11this_thread9sleep_forIlSt5ratioILl1ELl1000000EEEEvRKNSt6chrono8duratio\l...nIT_T0_EE(ptr noundef nonnull align 8 dereferenceable(8) %ref.tmp)\l  ret void\l}"];
+}

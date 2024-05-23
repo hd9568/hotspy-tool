@@ -1,0 +1,14 @@
+digraph "CFG for '_ZN9LAMMPS_NS15ComputeTempRampD2Ev' function" {
+	label="CFG for '_ZN9LAMMPS_NS15ComputeTempRampD2Ev' function";
+
+	Node0x5563a4171d70 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  store ptr getelementptr inbounds (\{ [43 x ptr] \}, ptr\l... @_ZTVN9LAMMPS_NS15ComputeTempRampE, i32 0, inrange i32 0, i32 2), ptr %this1,\l... align 8\l  %memory = getelementptr inbounds %\"class.LAMMPS_NS::Pointers\", ptr %this1,\l... i32 0, i32 2\l  %0 = load ptr, ptr %memory, align 8\l  %1 = load ptr, ptr %0, align 8\l  %vbiasall = getelementptr inbounds %\"class.LAMMPS_NS::Compute\", ptr %this1,\l... i32 0, i32 67\l  invoke void @_ZN9LAMMPS_NS6Memory7destroyIdEEvRPPT_(ptr noundef nonnull\l... align 8 dereferenceable(184) %1, ptr noundef nonnull align 8\l... dereferenceable(8) %vbiasall)\l          to label %invoke.cont unwind label %terminate.lpad\l}"];
+	Node0x5563a4171d70 -> Node0x5563a4147ab0[tooltip="entry -> invoke.cont\nProbability 100.00%" ];
+	Node0x5563a4171d70 -> Node0x5563a415d7e0[tooltip="entry -> terminate.lpad\nProbability 0.00%" ];
+	Node0x5563a4147ab0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{invoke.cont:\l|  %vector = getelementptr inbounds %\"class.LAMMPS_NS::Compute\", ptr %this1,\l... i32 0, i32 6\l  %2 = load ptr, ptr %vector, align 8\l  %isnull = icmp eq ptr %2, null\l  br i1 %isnull, label %delete.end, label %delete.notnull\l|{<s0>T|<s1>F}}"];
+	Node0x5563a4147ab0:s0 -> Node0x5563a415db70[tooltip="invoke.cont -> delete.end\nProbability 37.50%" ];
+	Node0x5563a4147ab0:s1 -> Node0x5563a415dbc0[tooltip="invoke.cont -> delete.notnull\nProbability 62.50%" ];
+	Node0x5563a415dbc0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{delete.notnull:\l|  call void @_ZdaPv(ptr noundef %2) #10\l  br label %delete.end\l}"];
+	Node0x5563a415dbc0 -> Node0x5563a415db70[tooltip="delete.notnull -> delete.end\nProbability 100.00%" ];
+	Node0x5563a415db70 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{delete.end:\l|  call void @_ZN9LAMMPS_NS7ComputeD2Ev(ptr noundef nonnull align 8\l... dereferenceable(564) %this1) #11\l  ret void\l}"];
+	Node0x5563a415d7e0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f4c5ad70" fontname="Courier",label="{terminate.lpad:\l|  %3 = landingpad \{ ptr, i32 \}\l          catch ptr null\l  %4 = extractvalue \{ ptr, i32 \} %3, 0\l  call void @__clang_call_terminate(ptr %4) #12\l  unreachable\l}"];
+}

@@ -1,0 +1,5 @@
+digraph "CFG for '_ZSt8distanceIPKcENSt15iterator_traitsIT_E15difference_typeES3_S3_' function" {
+	label="CFG for '_ZSt8distanceIPKcENSt15iterator_traitsIT_E15difference_typeES3_S3_' function";
+
+	Node0x561c73c0f9f0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %__first.addr = alloca ptr, align 8\l  %__last.addr = alloca ptr, align 8\l  %agg.tmp = alloca %\"struct.std::random_access_iterator_tag\", align 1\l  %undef.agg.tmp = alloca %\"struct.std::random_access_iterator_tag\", align 1\l  store ptr %__first, ptr %__first.addr, align 8\l  store ptr %__last, ptr %__last.addr, align 8\l  %0 = load ptr, ptr %__first.addr, align 8\l  %1 = load ptr, ptr %__last.addr, align 8\l  call void\l... @_ZSt19__iterator_categoryIPKcENSt15iterator_traitsIT_E17iterator_categoryERKS\l...3_(ptr noundef nonnull align 8 dereferenceable(8) %__first.addr)\l  %call = call noundef i64\l... @_ZSt10__distanceIPKcENSt15iterator_traitsIT_E15difference_typeES3_S3_St26rand\l...om_access_iterator_tag(ptr noundef %0, ptr noundef %1)\l  ret i64 %call\l}"];
+}

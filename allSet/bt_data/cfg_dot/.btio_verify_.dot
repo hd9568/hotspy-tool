@@ -1,0 +1,5 @@
+digraph "CFG for 'btio_verify_' function" {
+	label="CFG for 'btio_verify_' function";
+
+	Node0x55ab5a605a60 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{1:\l|  store i32 1, ptr %0, align 4\l  ret void\l}"];
+}

@@ -1,0 +1,5 @@
+digraph "CFG for '_ZL10matchalphac' function" {
+	label="CFG for '_ZL10matchalphac' function";
+
+	Node0x5584167d5d90 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %c.addr = alloca i8, align 1\l  store i8 %c, ptr %c.addr, align 1\l  %0 = load i8, ptr %c.addr, align 1\l  %conv = sext i8 %0 to i32\l  %call = call i32 @isalpha(i32 noundef %conv) #21\l  ret i32 %call\l}"];
+}

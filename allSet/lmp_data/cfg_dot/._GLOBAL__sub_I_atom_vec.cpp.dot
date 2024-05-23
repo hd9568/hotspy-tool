@@ -1,0 +1,5 @@
+digraph "CFG for '_GLOBAL__sub_I_atom_vec.cpp' function" {
+	label="CFG for '_GLOBAL__sub_I_atom_vec.cpp' function";
+
+	Node0x56285ad6f410 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  call void @__cxx_global_var_init()\l  call void @__cxx_global_var_init.7()\l  call void @__cxx_global_var_init.8()\l  call void @__cxx_global_var_init.9()\l  call void @__cxx_global_var_init.10()\l  call void @__cxx_global_var_init.11()\l  call void @__cxx_global_var_init.12()\l  call void @__cxx_global_var_init.13()\l  call void @__cxx_global_var_init.14()\l  call void @__cxx_global_var_init.15()\l  call void @__cxx_global_var_init.16()\l  call void @__cxx_global_var_init.17()\l  ret void\l}"];
+}

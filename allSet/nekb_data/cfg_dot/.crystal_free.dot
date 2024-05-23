@@ -1,0 +1,5 @@
+digraph "CFG for 'crystal_free' function" {
+	label="CFG for 'crystal_free' function";
+
+	Node0x559aeb322740 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %p.addr = alloca ptr, align 8\l  store ptr %p, ptr %p.addr, align 8\l  %0 = load ptr, ptr %p.addr, align 8\l  %comm = getelementptr inbounds %struct.crystal, ptr %0, i32 0, i32 0\l  call void @comm_free(ptr noundef %comm)\l  %1 = load ptr, ptr %p.addr, align 8\l  %data = getelementptr inbounds %struct.crystal, ptr %1, i32 0, i32 1\l  %ptr = getelementptr inbounds %struct.array, ptr %data, i32 0, i32 0\l  %2 = load ptr, ptr %ptr, align 8\l  call void @free(ptr noundef %2) #7\l  %3 = load ptr, ptr %p.addr, align 8\l  %work = getelementptr inbounds %struct.crystal, ptr %3, i32 0, i32 2\l  %ptr1 = getelementptr inbounds %struct.array, ptr %work, i32 0, i32 0\l  %4 = load ptr, ptr %ptr1, align 8\l  call void @free(ptr noundef %4) #7\l  ret void\l}"];
+}

@@ -1,0 +1,29 @@
+digraph "CFG for '_ZN13ParticleVault8collapseEmPS_' function" {
+	label="CFG for '_ZN13ParticleVault8collapseEmPS_' function";
+
+	Node0x55f692538990 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d0473d70" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %fill_size.addr = alloca i64, align 8\l  %vault2.addr = alloca ptr, align 8\l  %notEmpty = alloca i8, align 1\l  %fill = alloca i64, align 8\l  %base_particle = alloca %class.MC_Base_Particle, align 8\l  store ptr %this, ptr %this.addr, align 8\l  store i64 %fill_size, ptr %fill_size.addr, align 8\l  store ptr %vault2, ptr %vault2.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %0 = load ptr, ptr %vault2.addr, align 8\l  %call = call noundef i64 @_ZNK13ParticleVault4sizeEv(ptr noundef nonnull\l... align 8 dereferenceable(24) %0)\l  %1 = load i64, ptr %fill_size.addr, align 8\l  %cmp = icmp ult i64 %call, %1\l  br i1 %cmp, label %if.then, label %if.else\l|{<s0>T|<s1>F}}"];
+	Node0x55f692538990:s0 -> Node0x55f692539910[tooltip="entry -> if.then\nProbability 50.00%" ];
+	Node0x55f692538990:s1 -> Node0x55f692539980[tooltip="entry -> if.else\nProbability 50.00%" ];
+	Node0x55f692539910 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{if.then:\l|  %2 = load ptr, ptr %vault2.addr, align 8\l  call void @_ZN13ParticleVault6appendERS_(ptr noundef nonnull align 8\l... dereferenceable(24) %this1, ptr noundef nonnull align 8 dereferenceable(24)\l... %2)\l  %3 = load ptr, ptr %vault2.addr, align 8\l  call void @_ZN13ParticleVault5clearEv(ptr noundef nonnull align 8\l... dereferenceable(24) %3)\l  br label %if.end6\l}"];
+	Node0x55f692539910 -> Node0x55f69253a000[tooltip="if.then -> if.end6\nProbability 100.00%" ];
+	Node0x55f692539980 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{if.else:\l|  store i8 0, ptr %notEmpty, align 1\l  store i64 0, ptr %fill, align 8\l  br label %do.body\l}"];
+	Node0x55f692539980 -> Node0x55f69253a6a0[tooltip="if.else -> do.body\nProbability 100.00%" ];
+	Node0x55f69253a6a0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{do.body:\l|  call void @_ZN16MC_Base_ParticleC2Ev(ptr noundef nonnull align 8\l... dereferenceable(136) %base_particle)\l  %4 = load ptr, ptr %vault2.addr, align 8\l  %call2 = call noundef zeroext i1\l... @_ZN13ParticleVault15popBaseParticleER16MC_Base_Particle(ptr noundef nonnull\l... align 8 dereferenceable(24) %4, ptr noundef nonnull align 8\l... dereferenceable(136) %base_particle)\l  %frombool = zext i1 %call2 to i8\l  store i8 %frombool, ptr %notEmpty, align 1\l  %5 = load i8, ptr %notEmpty, align 1\l  %tobool = trunc i8 %5 to i1\l  br i1 %tobool, label %if.then3, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x55f69253a6a0:s0 -> Node0x55f69253af10[tooltip="do.body -> if.then3\nProbability 50.00%" ];
+	Node0x55f69253a6a0:s1 -> Node0x55f69253aff0[tooltip="do.body -> if.end\nProbability 50.00%" ];
+	Node0x55f69253af10 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.then3:\l|  call void @_ZN13ParticleVault16pushBaseParticleER16MC_Base_Particle(ptr\l... noundef nonnull align 8 dereferenceable(24) %this1, ptr noundef nonnull align\l... 8 dereferenceable(136) %base_particle)\l  %6 = load i64, ptr %fill, align 8\l  %inc = add i64 %6, 1\l  store i64 %inc, ptr %fill, align 8\l  br label %if.end\l}"];
+	Node0x55f69253af10 -> Node0x55f69253aff0[tooltip="if.then3 -> if.end\nProbability 100.00%" ];
+	Node0x55f69253aff0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  br label %do.cond\l}"];
+	Node0x55f69253aff0 -> Node0x55f69253b170[tooltip="if.end -> do.cond\nProbability 100.00%" ];
+	Node0x55f69253b170 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{do.cond:\l|  %7 = load i8, ptr %notEmpty, align 1\l  %tobool4 = trunc i8 %7 to i1\l  br i1 %tobool4, label %land.rhs, label %land.end\l|{<s0>T|<s1>F}}"];
+	Node0x55f69253b170:s0 -> Node0x55f69253bad0[tooltip="do.cond -> land.rhs\nProbability 50.00%" ];
+	Node0x55f69253b170:s1 -> Node0x55f69253bb50[tooltip="do.cond -> land.end\nProbability 50.00%" ];
+	Node0x55f69253bad0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{land.rhs:\l|  %8 = load i64, ptr %fill, align 8\l  %9 = load i64, ptr %fill_size.addr, align 8\l  %cmp5 = icmp ult i64 %8, %9\l  br label %land.end\l}"];
+	Node0x55f69253bad0 -> Node0x55f69253bb50[tooltip="land.rhs -> land.end\nProbability 100.00%" ];
+	Node0x55f69253bb50 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{land.end:\l|  %10 = phi i1 [ false, %do.cond ], [ %cmp5, %land.rhs ]\l  br i1 %10, label %do.body, label %do.end, !llvm.loop !6\l|{<s0>T|<s1>F}}"];
+	Node0x55f69253bb50:s0 -> Node0x55f69253a6a0[tooltip="land.end -> do.body\nProbability 96.88%" ];
+	Node0x55f69253bb50:s1 -> Node0x55f69253bf30[tooltip="land.end -> do.end\nProbability 3.12%" ];
+	Node0x55f69253bf30 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{do.end:\l|  br label %if.end6\l}"];
+	Node0x55f69253bf30 -> Node0x55f69253a000[tooltip="do.end -> if.end6\nProbability 100.00%" ];
+	Node0x55f69253a000 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d0473d70" fontname="Courier",label="{if.end6:\l|  ret void\l}"];
+}

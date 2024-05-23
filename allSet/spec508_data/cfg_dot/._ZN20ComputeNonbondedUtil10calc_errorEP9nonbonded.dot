@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN20ComputeNonbondedUtil10calc_errorEP9nonbonded' function" {
+	label="CFG for '_ZN20ComputeNonbondedUtil10calc_errorEP9nonbonded' function";
+
+	Node0x5634d870f620 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %.addr = alloca ptr, align 8\l  store ptr %0, ptr %.addr, align 8\l  call void @_Z8NAMD_bugPKc(ptr noundef @.str)\l  ret void\l}"];
+}

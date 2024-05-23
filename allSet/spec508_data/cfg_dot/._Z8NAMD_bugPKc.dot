@@ -1,0 +1,5 @@
+digraph "CFG for '_Z8NAMD_bugPKc' function" {
+	label="CFG for '_Z8NAMD_bugPKc' function";
+
+	Node0x563b36858090 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %msg.addr = alloca ptr, align 8\l  store ptr %msg, ptr %msg.addr, align 8\l  %0 = load ptr, ptr %msg.addr, align 8\l  %call = call i32 (ptr, ...) @printf(ptr noundef @.str.1, ptr noundef %0)\l  call void @exit(i32 noundef -1) #10\l  unreachable\l}"];
+}

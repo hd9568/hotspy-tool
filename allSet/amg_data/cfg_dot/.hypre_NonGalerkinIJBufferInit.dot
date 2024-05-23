@@ -1,0 +1,5 @@
+digraph "CFG for 'hypre_NonGalerkinIJBufferInit' function" {
+	label="CFG for 'hypre_NonGalerkinIJBufferInit' function";
+
+	Node0x558f78bcc8d0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %ijbuf_cnt.addr = alloca ptr, align 8\l  %ijbuf_rowcounter.addr = alloca ptr, align 8\l  %ijbuf_numcols.addr = alloca ptr, align 8\l  %ierr = alloca i32, align 4\l  store ptr %ijbuf_cnt, ptr %ijbuf_cnt.addr, align 8\l  store ptr %ijbuf_rowcounter, ptr %ijbuf_rowcounter.addr, align 8\l  store ptr %ijbuf_numcols, ptr %ijbuf_numcols.addr, align 8\l  store i32 0, ptr %ierr, align 4\l  %0 = load ptr, ptr %ijbuf_cnt.addr, align 8\l  store i32 0, ptr %0, align 4\l  %1 = load ptr, ptr %ijbuf_rowcounter.addr, align 8\l  store i32 1, ptr %1, align 4\l  %2 = load ptr, ptr %ijbuf_numcols.addr, align 8\l  %arrayidx = getelementptr inbounds i32, ptr %2, i64 0\l  store i32 0, ptr %arrayidx, align 4\l  %3 = load i32, ptr %ierr, align 4\l  ret i32 %3\l}"];
+}

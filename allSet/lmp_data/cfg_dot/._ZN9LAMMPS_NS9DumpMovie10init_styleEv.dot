@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN9LAMMPS_NS9DumpMovie10init_styleEv' function" {
+	label="CFG for '_ZN9LAMMPS_NS9DumpMovie10init_styleEv' function";
+
+	Node0x55651ed3ef80 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %multifile = getelementptr inbounds %\"class.LAMMPS_NS::Dump\", ptr %this1,\l... i32 0, i32 14\l  store i32 1, ptr %multifile, align 8\l  call void @_ZN9LAMMPS_NS9DumpImage10init_styleEv(ptr noundef nonnull align 8\l... dereferenceable(1988) %this1)\l  %multifile2 = getelementptr inbounds %\"class.LAMMPS_NS::Dump\", ptr %this1,\l... i32 0, i32 14\l  store i32 0, ptr %multifile2, align 8\l  ret void\l}"];
+}

@@ -1,0 +1,8 @@
+digraph "Call graph: random.ll" {
+	label="Call graph: random.ll";
+
+	Node0x560d88565930 [shape=record,label="{hypre_SeedRand}"];
+	Node0x560d885659e0 [shape=record,label="{hypre_RandI}"];
+	Node0x560d88565a60 [shape=record,label="{hypre_Rand}"];
+	Node0x560d88565a60 -> Node0x560d885659e0;
+}

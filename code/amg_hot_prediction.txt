@@ -1,0 +1,73 @@
+MODEL BEGINNING!
+this is GPU0: Tesla V100-PCIE-32GB
+All functions have been obtained! All graphs are being parsed:
+big is 0 ,0 of which is hot!
+18 is ignored,  0 of which is hot!
+test dataloader's time is 0.0 mins
+========== all test data has already been ready! ===========
+hypre_DestroyBinaryTree
+hypre_ParKrylovDestroyVector
+transpose_idx
+HYPRE_ParCSRGMRESDestroy
+hypre_swap2i
+HYPRE_BoomerAMGSetPMaxElmts
+hypre_AuxParVectorCreate
+hypre_ParKrylovFree
+HYPRE_GMRESSetLogging
+hypre_ParKrylovMatvecCreate
+hypre_BoomerAMGSetRAP2
+hypre_RandI
+HYPRE_BoomerAMGSetRelaxType
+hypre_CSRMatrixCreate
+HYPRE_BoomerAMGSetDebugFlag
+hypre_GMRESFunctionsCreate
+InitBucket
+hypre_BoomerAMGCreate
+HYPRE_GMRESSetTol
+hypre_SeedRand
+HYPRE_BoomerAMGSetAggNumLevels
+hypre_MPI_Get_count
+HYPRE_BoomerAMGSetMaxIter
+hypre_GMRESCreate
+hypre_SeqVectorCreate
+hypre_printf
+HYPRE_BoomerAMGSetKeepTranspose
+HYPRE_GMRESGetNumIterations
+HYPRE_GMRESSetMaxIter
+hypre_error_handler
+HYPRE_BoomerAMGSetCoarsenType
+time_getWallclockSeconds
+HYPRE_GMRESSetPrintLevel
+HYPRE_GMRESSetKDim
+HYPRE_GMRESGetFinalRelativeResidualNorm
+hypre_MPI_Wtime
+hypre_CSRMatrixGetLoadBalancedPartitionEnd
+hypre_swap
+HYPRE_GMRESGetPrecond
+hypre_IJVectorDestroyPar
+HYPRE_BoomerAMGSetNumSweeps
+free_format
+hypre_BoomerAMGSetKeepTranspose
+NearestPowerOfTwo
+hypre_Rand
+HYPRE_GMRESSetPrecond
+HYPRE_BoomerAMGSetPrintLevel
+HYPRE_BoomerAMGGetCumNnzAP
+hypre_CSRMatrixGetLoadBalancedPartitionBegin
+HYPRE_BoomerAMGSetRAP2
+HYPRE_BoomerAMGSetTol
+HYPRE_GMRESSetAbsoluteTol
+hypre_SeqVectorSetDataOwner
+| TN=90 FP=50 |
+| FN=1 TP=3 |
+test accuracy: 64.58%
+precision: 5.66%
+recall: 75.00%
+f1 score: 0.105
+amg_data datasize: 144; hot: 0.0278; acc: 0.6458
+MODEL BEGINNING!
+this is GPU0: Tesla V100-PCIE-32GB
+All functions have been obtained! All graphs are being parsed:
+big is 0 ,0 of which is hot!
+18 is ignored,  0 of which is hot!
+test dataloader's time is 0.0 mins

@@ -1,0 +1,15 @@
+digraph "Call graph: hypre_merge_sort.ll" {
+	label="Call graph: hypre_merge_sort.ll";
+
+	Node0x5597028c2bf0 [shape=record,label="{hypre_merge_sort}"];
+	Node0x5597028c2bf0 -> Node0x5597028e2530;
+	Node0x5597028c2bf0 -> Node0x5597028e5220;
+	Node0x5597028e2530 [shape=record,label="{hypre_qsort0}"];
+	Node0x5597028e5220 [shape=record,label="{hypre_parallel_merge}"];
+	Node0x5597028e5220 -> Node0x5597028e52e0;
+	Node0x5597028e5220 -> Node0x5597028e49f0;
+	Node0x5597028e52e0 [shape=record,label="{kth_element}"];
+	Node0x5597028e52e0 -> Node0x5597028e4a70;
+	Node0x5597028e4a70 [shape=record,label="{kth_element_}"];
+	Node0x5597028e49f0 [shape=record,label="{hypre_merge}"];
+}

@@ -1,0 +1,5 @@
+digraph "CFG for 'hypre_CSRMatrixSetDataOwner' function" {
+	label="CFG for 'hypre_CSRMatrixSetDataOwner' function";
+
+	Node0x558241d17d40 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %matrix.addr = alloca ptr, align 8\l  %owns_data.addr = alloca i32, align 4\l  %ierr = alloca i32, align 4\l  store ptr %matrix, ptr %matrix.addr, align 8\l  store i32 %owns_data, ptr %owns_data.addr, align 4\l  store i32 0, ptr %ierr, align 4\l  %0 = load i32, ptr %owns_data.addr, align 4\l  %1 = load ptr, ptr %matrix.addr, align 8\l  %owns_data1 = getelementptr inbounds %struct.hypre_CSRMatrix, ptr %1, i32 0,\l... i32 5\l  store i32 %0, ptr %owns_data1, align 4\l  %2 = load i32, ptr %ierr, align 4\l  ret i32 %2\l}"];
+}

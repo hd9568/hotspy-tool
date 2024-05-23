@@ -1,0 +1,14 @@
+digraph "CFG for '_ZSt10accumulateIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEEiET0_T_S8_S7_' function" {
+	label="CFG for '_ZSt10accumulateIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEEiET0_T_S8_S7_' function";
+
+	Node0x55b82446bac0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{entry:\l|  %__first = alloca %\"class.__gnu_cxx::__normal_iterator\", align 8\l  %__last = alloca %\"class.__gnu_cxx::__normal_iterator\", align 8\l  %__init.addr = alloca i32, align 4\l  %coerce.dive = getelementptr inbounds %\"class.__gnu_cxx::__normal_iterator\",\l... ptr %__first, i32 0, i32 0\l  store ptr %__first.coerce, ptr %coerce.dive, align 8\l  %coerce.dive1 = getelementptr inbounds\l... %\"class.__gnu_cxx::__normal_iterator\", ptr %__last, i32 0, i32 0\l  store ptr %__last.coerce, ptr %coerce.dive1, align 8\l  store i32 %__init, ptr %__init.addr, align 4\l  br label %for.cond\l}"];
+	Node0x55b82446bac0 -> Node0x55b82446c010[tooltip="entry -> for.cond\nProbability 100.00%" ];
+	Node0x55b82446c010 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.cond:\l|  %call = call noundef zeroext i1\l... @_ZN9__gnu_cxxneIPiSt6vectorIiSaIiEEEEbRKNS_17__normal_iteratorIT_T0_EESA_(ptr\l... noundef nonnull align 8 dereferenceable(8) %__first, ptr noundef nonnull\l... align 8 dereferenceable(8) %__last) #3\l  br i1 %call, label %for.body, label %for.end\l|{<s0>T|<s1>F}}"];
+	Node0x55b82446c010:s0 -> Node0x55b82446c270[tooltip="for.cond -> for.body\nProbability 96.88%" ];
+	Node0x55b82446c010:s1 -> Node0x55b82446c2f0[tooltip="for.cond -> for.end\nProbability 3.12%" ];
+	Node0x55b82446c270 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.body:\l|  %0 = load i32, ptr %__init.addr, align 4\l  %call2 = call noundef nonnull align 4 dereferenceable(4) ptr\l... @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEdeEv(ptr noundef\l... nonnull align 8 dereferenceable(8) %__first) #3\l  %1 = load i32, ptr %call2, align 4\l  %add = add nsw i32 %0, %1\l  store i32 %add, ptr %__init.addr, align 4\l  br label %for.inc\l}"];
+	Node0x55b82446c270 -> Node0x55b82446c610[tooltip="for.body -> for.inc\nProbability 100.00%" ];
+	Node0x55b82446c610 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.inc:\l|  %call3 = call noundef nonnull align 8 dereferenceable(8) ptr\l... @_ZN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEppEv(ptr noundef\l... nonnull align 8 dereferenceable(8) %__first) #3\l  br label %for.cond, !llvm.loop !6\l}"];
+	Node0x55b82446c610 -> Node0x55b82446c010[tooltip="for.inc -> for.cond\nProbability 100.00%" ];
+	Node0x55b82446c2f0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{for.end:\l|  %2 = load i32, ptr %__init.addr, align 4\l  ret i32 %2\l}"];
+}

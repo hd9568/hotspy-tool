@@ -1,0 +1,17 @@
+digraph "Call graph: adi.ll" {
+	label="Call graph: adi.ll";
+
+	Node0x564e6f1d5ec0 [shape=record,label="{adi_}"];
+	Node0x564e6f1d5ec0 -> Node0x564e6f1d5f70;
+	Node0x564e6f1d5ec0 -> Node0x564e6f1d6430;
+	Node0x564e6f1d5ec0 -> Node0x564e6f1d64b0;
+	Node0x564e6f1d5ec0 -> Node0x564e6f1d6530;
+	Node0x564e6f1d5ec0 -> Node0x564e6f1d65b0;
+	Node0x564e6f1d5f70 [shape=record,label="{copy_faces_}"];
+	Node0x564e6f1d6430 [shape=record,label="{x_solve_}"];
+	Node0x564e6f1d64b0 [shape=record,label="{y_solve_}"];
+	Node0x564e6f1d6530 [shape=record,label="{z_solve_}"];
+	Node0x564e6f1d65b0 [shape=record,label="{add_}"];
+	Node0x564e6f1d6960 [shape=record,label="{llvm.stacksave.p0}"];
+	Node0x564e6f1d69e0 [shape=record,label="{llvm.stackrestore.p0}"];
+}

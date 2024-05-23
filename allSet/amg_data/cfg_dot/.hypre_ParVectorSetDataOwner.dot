@@ -1,0 +1,12 @@
+digraph "CFG for 'hypre_ParVectorSetDataOwner' function" {
+	label="CFG for 'hypre_ParVectorSetDataOwner' function";
+
+	Node0x556ffb65a270 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %retval = alloca i32, align 4\l  %vector.addr = alloca ptr, align 8\l  %owns_data.addr = alloca i32, align 4\l  store ptr %vector, ptr %vector.addr, align 8\l  store i32 %owns_data, ptr %owns_data.addr, align 4\l  %0 = load ptr, ptr %vector.addr, align 8\l  %tobool = icmp ne ptr %0, null\l  br i1 %tobool, label %if.end, label %if.then\l|{<s0>T|<s1>F}}"];
+	Node0x556ffb65a270:s0 -> Node0x556ffb65a660[tooltip="entry -> if.end\nProbability 62.50%" ];
+	Node0x556ffb65a270:s1 -> Node0x556ffb65a6d0[tooltip="entry -> if.then\nProbability 37.50%" ];
+	Node0x556ffb65a6d0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{if.then:\l|  call void @hypre_error_handler(ptr noundef @.str, i32 noundef 166, i32\l... noundef 12, ptr noundef null)\l  %1 = load i32, ptr @hypre__global_error, align 4\l  store i32 %1, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x556ffb65a6d0 -> Node0x556ffb65ab30[tooltip="if.then -> return\nProbability 100.00%" ];
+	Node0x556ffb65a660 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.end:\l|  %2 = load i32, ptr %owns_data.addr, align 4\l  %3 = load ptr, ptr %vector.addr, align 8\l  %owns_data1 = getelementptr inbounds %struct.hypre_ParVector_struct, ptr %3,\l... i32 0, i32 7\l  store i32 %2, ptr %owns_data1, align 8\l  %4 = load i32, ptr @hypre__global_error, align 4\l  store i32 %4, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x556ffb65a660 -> Node0x556ffb65ab30[tooltip="if.end -> return\nProbability 100.00%" ];
+	Node0x556ffb65ab30 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{return:\l|  %5 = load i32, ptr %retval, align 4\l  ret i32 %5\l}"];
+}

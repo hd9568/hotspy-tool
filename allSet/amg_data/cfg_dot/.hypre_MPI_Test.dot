@@ -1,0 +1,5 @@
+digraph "CFG for 'hypre_MPI_Test' function" {
+	label="CFG for 'hypre_MPI_Test' function";
+
+	Node0x5555d6652470 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %request.addr = alloca ptr, align 8\l  %flag.addr = alloca ptr, align 8\l  %status.addr = alloca ptr, align 8\l  %mpi_flag = alloca i32, align 4\l  %ierr = alloca i32, align 4\l  store ptr %request, ptr %request.addr, align 8\l  store ptr %flag, ptr %flag.addr, align 8\l  store ptr %status, ptr %status.addr, align 8\l  %0 = load ptr, ptr %request.addr, align 8\l  %1 = load ptr, ptr %status.addr, align 8\l  %call = call i32 @MPI_Test(ptr noundef %0, ptr noundef %mpi_flag, ptr\l... noundef %1)\l  store i32 %call, ptr %ierr, align 4\l  %2 = load i32, ptr %mpi_flag, align 4\l  %3 = load ptr, ptr %flag.addr, align 8\l  store i32 %2, ptr %3, align 4\l  %4 = load i32, ptr %ierr, align 4\l  ret i32 %4\l}"];
+}

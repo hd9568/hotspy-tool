@@ -1,0 +1,22 @@
+digraph "CFG for 'hypre_BoomerAMGSetOmega' function" {
+	label="CFG for 'hypre_BoomerAMGSetOmega' function";
+
+	Node0x55fa80a93f00 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %retval = alloca i32, align 4\l  %data.addr = alloca ptr, align 8\l  %omega.addr = alloca ptr, align 8\l  %amg_data = alloca ptr, align 8\l  store ptr %data, ptr %data.addr, align 8\l  store ptr %omega, ptr %omega.addr, align 8\l  %0 = load ptr, ptr %data.addr, align 8\l  store ptr %0, ptr %amg_data, align 8\l  %1 = load ptr, ptr %amg_data, align 8\l  %tobool = icmp ne ptr %1, null\l  br i1 %tobool, label %if.end, label %if.then\l|{<s0>T|<s1>F}}"];
+	Node0x55fa80a93f00:s0 -> Node0x55fa80a94540[tooltip="entry -> if.end\nProbability 62.50%" ];
+	Node0x55fa80a93f00:s1 -> Node0x55fa80a945b0[tooltip="entry -> if.then\nProbability 37.50%" ];
+	Node0x55fa80a945b0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{if.then:\l|  call void @hypre_error_handler(ptr noundef @.str.2, i32 noundef 1862, i32\l... noundef 12, ptr noundef null)\l  %2 = load i32, ptr @hypre__global_error, align 4\l  store i32 %2, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x55fa80a945b0 -> Node0x55fa80a94a10[tooltip="if.then -> return\nProbability 100.00%" ];
+	Node0x55fa80a94540 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.end:\l|  %3 = load ptr, ptr %omega.addr, align 8\l  %tobool1 = icmp ne ptr %3, null\l  br i1 %tobool1, label %if.end3, label %if.then2\l|{<s0>T|<s1>F}}"];
+	Node0x55fa80a94540:s0 -> Node0x55fa80a94be0[tooltip="if.end -> if.end3\nProbability 62.50%" ];
+	Node0x55fa80a94540:s1 -> Node0x55fa80a93de0[tooltip="if.end -> if.then2\nProbability 37.50%" ];
+	Node0x55fa80a93de0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470" fontname="Courier",label="{if.then2:\l|  call void @hypre_error_handler(ptr noundef @.str.2, i32 noundef 1867, i32\l... noundef 20, ptr noundef null)\l  %4 = load i32, ptr @hypre__global_error, align 4\l  store i32 %4, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x55fa80a93de0 -> Node0x55fa80a94a10[tooltip="if.then2 -> return\nProbability 100.00%" ];
+	Node0x55fa80a94be0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.end3:\l|  %5 = load ptr, ptr %amg_data, align 8\l  %omega4 = getelementptr inbounds %struct.hypre_ParAMGData, ptr %5, i32 0,\l... i32 39\l  %6 = load ptr, ptr %omega4, align 8\l  %tobool5 = icmp ne ptr %6, null\l  br i1 %tobool5, label %if.then6, label %if.end9\l|{<s0>T|<s1>F}}"];
+	Node0x55fa80a94be0:s0 -> Node0x55fa80a95400[tooltip="if.end3 -> if.then6\nProbability 62.50%" ];
+	Node0x55fa80a94be0:s1 -> Node0x55fa80a95450[tooltip="if.end3 -> if.end9\nProbability 37.50%" ];
+	Node0x55fa80a95400 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470" fontname="Courier",label="{if.then6:\l|  %7 = load ptr, ptr %amg_data, align 8\l  %omega7 = getelementptr inbounds %struct.hypre_ParAMGData, ptr %7, i32 0,\l... i32 39\l  %8 = load ptr, ptr %omega7, align 8\l  call void @hypre_Free(ptr noundef %8)\l  %9 = load ptr, ptr %amg_data, align 8\l  %omega8 = getelementptr inbounds %struct.hypre_ParAMGData, ptr %9, i32 0,\l... i32 39\l  store ptr null, ptr %omega8, align 8\l  br label %if.end9\l}"];
+	Node0x55fa80a95400 -> Node0x55fa80a95450[tooltip="if.then6 -> if.end9\nProbability 100.00%" ];
+	Node0x55fa80a95450 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.end9:\l|  %10 = load ptr, ptr %omega.addr, align 8\l  %11 = load ptr, ptr %amg_data, align 8\l  %omega10 = getelementptr inbounds %struct.hypre_ParAMGData, ptr %11, i32 0,\l... i32 39\l  store ptr %10, ptr %omega10, align 8\l  %12 = load i32, ptr @hypre__global_error, align 4\l  store i32 %12, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x55fa80a95450 -> Node0x55fa80a94a10[tooltip="if.end9 -> return\nProbability 100.00%" ];
+	Node0x55fa80a94a10 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{return:\l|  %13 = load i32, ptr %retval, align 4\l  ret i32 %13\l}"];
+}

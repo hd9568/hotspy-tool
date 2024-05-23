@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN9LAMMPS_NS9AngleZero17equilibrium_angleEi' function" {
+	label="CFG for '_ZN9LAMMPS_NS9AngleZero17equilibrium_angleEi' function";
+
+	Node0x55d6952be170 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %i.addr = alloca i32, align 4\l  store ptr %this, ptr %this.addr, align 8\l  store i32 %i, ptr %i.addr, align 4\l  %this1 = load ptr, ptr %this.addr, align 8\l  %theta0 = getelementptr inbounds %\"class.LAMMPS_NS::AngleZero\", ptr %this1,\l... i32 0, i32 1\l  %0 = load ptr, ptr %theta0, align 8\l  %1 = load i32, ptr %i.addr, align 4\l  %idxprom = sext i32 %1 to i64\l  %arrayidx = getelementptr inbounds double, ptr %0, i64 %idxprom\l  %2 = load double, ptr %arrayidx, align 8\l  ret double %2\l}"];
+}

@@ -1,0 +1,5 @@
+digraph "CFG for 'adi_' function" {
+	label="CFG for 'adi_' function";
+
+	Node0x56277ca85e80 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{0:\l|  call void @copy_faces_()\l  call void @x_solve_()\l  call void @y_solve_()\l  call void @z_solve_()\l  call void @add_()\l  ret void\l}"];
+}

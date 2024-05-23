@@ -1,0 +1,5 @@
+digraph "CFG for '_ZNSt16allocator_traitsISaIN9LAMMPS_NS22ComputeChunkSpreadAtom7value_tEEE7destroyIS2_EEvRS3_PT_' function" {
+	label="CFG for '_ZNSt16allocator_traitsISaIN9LAMMPS_NS22ComputeChunkSpreadAtom7value_tEEE7destroyIS2_EEvRS3_PT_' function";
+
+	Node0x55a8964a84e0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %__a.addr = alloca ptr, align 8\l  %__p.addr = alloca ptr, align 8\l  store ptr %__a, ptr %__a.addr, align 8\l  store ptr %__p, ptr %__p.addr, align 8\l  %0 = load ptr, ptr %__a.addr, align 8\l  %1 = load ptr, ptr %__p.addr, align 8\l  call void\l... @_ZN9__gnu_cxx13new_allocatorIN9LAMMPS_NS22ComputeChunkSpreadAtom7value_tEE7de\l...stroyIS3_EEvPT_(ptr noundef nonnull align 1 dereferenceable(1) %0, ptr noundef\l... %1) #11\l  ret void\l}"];
+}

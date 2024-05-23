@@ -1,0 +1,5 @@
+digraph "CFG for 'mpi_comm_dup_' function" {
+	label="CFG for 'mpi_comm_dup_' function";
+
+	Node0x5560a31bec10 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{3:\l|  store i32 0, ptr %2, align 4\l  %4 = load i32, ptr %0, align 4\l  store i32 %4, ptr %1, align 4\l  ret void\l}"];
+}

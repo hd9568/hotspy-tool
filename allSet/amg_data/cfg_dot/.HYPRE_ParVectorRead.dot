@@ -1,0 +1,12 @@
+digraph "CFG for 'HYPRE_ParVectorRead' function" {
+	label="CFG for 'HYPRE_ParVectorRead' function";
+
+	Node0x55a672e103d0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %retval = alloca i32, align 4\l  %comm.addr = alloca ptr, align 8\l  %file_name.addr = alloca ptr, align 8\l  %vector.addr = alloca ptr, align 8\l  store ptr %comm, ptr %comm.addr, align 8\l  store ptr %file_name, ptr %file_name.addr, align 8\l  store ptr %vector, ptr %vector.addr, align 8\l  %0 = load ptr, ptr %vector.addr, align 8\l  %tobool = icmp ne ptr %0, null\l  br i1 %tobool, label %if.end, label %if.then\l|{<s0>T|<s1>F}}"];
+	Node0x55a672e103d0:s0 -> Node0x55a672e10980[tooltip="entry -> if.end\nProbability 62.50%" ];
+	Node0x55a672e103d0:s1 -> Node0x55a672e109f0[tooltip="entry -> if.then\nProbability 37.50%" ];
+	Node0x55a672e109f0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{if.then:\l|  call void @hypre_error_handler(ptr noundef @.str, i32 noundef 98, i32\l... noundef 28, ptr noundef null)\l  %1 = load i32, ptr @hypre__global_error, align 4\l  store i32 %1, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x55a672e109f0 -> Node0x55a672e10e80[tooltip="if.then -> return\nProbability 100.00%" ];
+	Node0x55a672e10980 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.end:\l|  %2 = load ptr, ptr %comm.addr, align 8\l  %3 = load ptr, ptr %file_name.addr, align 8\l  %call = call ptr @hypre_ParVectorRead(ptr noundef %2, ptr noundef %3)\l  %4 = load ptr, ptr %vector.addr, align 8\l  store ptr %call, ptr %4, align 8\l  %5 = load i32, ptr @hypre__global_error, align 4\l  store i32 %5, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x55a672e10980 -> Node0x55a672e10e80[tooltip="if.end -> return\nProbability 100.00%" ];
+	Node0x55a672e10e80 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{return:\l|  %6 = load i32, ptr %retval, align 4\l  ret i32 %6\l}"];
+}

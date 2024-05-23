@@ -1,0 +1,15 @@
+digraph "Call graph: Materials.ll" {
+	label="Call graph: Materials.ll";
+
+	Node0x55bb6a903360 [shape=record,label="{load_num_nucs}"];
+	Node0x55bb6a903360 -> Node0x55bb6a904120;
+	Node0x55bb6a904120 [shape=record,label="{malloc}"];
+	Node0x55bb6a904570 [shape=record,label="{load_mats}"];
+	Node0x55bb6a904570 -> Node0x55bb6a904120;
+	Node0x55bb6a904570 -> Node0x55bb6a904960;
+	Node0x55bb6a904960 [shape=record,label="{llvm.memcpy.p0.p0.i64}"];
+	Node0x55bb6a904c30 [shape=record,label="{load_concs}"];
+	Node0x55bb6a904c30 -> Node0x55bb6a904120;
+	Node0x55bb6a904c30 -> Node0x55bb6a906d00;
+	Node0x55bb6a906d00 [shape=record,label="{LCG_random_double}"];
+}

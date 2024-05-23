@@ -1,0 +1,5 @@
+digraph "CFG for 'mpi_wait_' function" {
+	label="CFG for 'mpi_wait_' function";
+
+	Node0x5560a31d3290 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{3:\l|  store i32 1, ptr %2, align 4\l  %4 = call ptr @_FortranAioBeginExternalFormattedOutput(ptr @_QQclX286129,\l... i64 3, ptr null, i32 6, ptr @_QQclX0af9d94bac08fc9d43efd2ca751dd82f, i32 926)\l  %5 = call i1 @_FortranAioOutputAscii(ptr %4, ptr @_QQclX20, i64 1)\l  %6 = call i32 @_FortranAioEndIoStatement(ptr %4)\l  %7 = call ptr @_FortranAioBeginExternalFormattedOutput(ptr @_QQclX286129,\l... i64 3, ptr null, i32 6, ptr @_QQclX0af9d94bac08fc9d43efd2ca751dd82f, i32 927)\l  %8 = call i1 @_FortranAioOutputAscii(ptr %7, ptr\l... @_QQclX4D50495F57414954202D204572726F7221, i64 17)\l  %9 = call i32 @_FortranAioEndIoStatement(ptr %7)\l  %10 = call ptr @_FortranAioBeginExternalFormattedOutput(ptr @_QQclX286129,\l... i64 3, ptr null, i32 6, ptr @_QQclX0af9d94bac08fc9d43efd2ca751dd82f, i32 928)\l  %11 = call i1 @_FortranAioOutputAscii(ptr %10, ptr\l... @_QQclXb3ac30f2784aaa6c940b983d43db4b47, i64 39)\l  %12 = call i32 @_FortranAioEndIoStatement(ptr %10)\l  ret void\l}"];
+}

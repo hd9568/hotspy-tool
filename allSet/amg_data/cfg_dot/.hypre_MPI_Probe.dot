@@ -1,0 +1,5 @@
+digraph "CFG for 'hypre_MPI_Probe' function" {
+	label="CFG for 'hypre_MPI_Probe' function";
+
+	Node0x5555d6650080 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %source.addr = alloca i32, align 4\l  %tag.addr = alloca i32, align 4\l  %comm.addr = alloca ptr, align 8\l  %status.addr = alloca ptr, align 8\l  store i32 %source, ptr %source.addr, align 4\l  store i32 %tag, ptr %tag.addr, align 4\l  store ptr %comm, ptr %comm.addr, align 8\l  store ptr %status, ptr %status.addr, align 8\l  %0 = load i32, ptr %source.addr, align 4\l  %1 = load i32, ptr %tag.addr, align 4\l  %2 = load ptr, ptr %comm.addr, align 8\l  %3 = load ptr, ptr %status.addr, align 8\l  %call = call i32 @MPI_Probe(i32 noundef %0, i32 noundef %1, ptr noundef %2,\l... ptr noundef %3)\l  ret i32 %call\l}"];
+}

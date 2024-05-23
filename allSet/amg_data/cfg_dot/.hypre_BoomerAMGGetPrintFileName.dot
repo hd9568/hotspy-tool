@@ -1,0 +1,12 @@
+digraph "CFG for 'hypre_BoomerAMGGetPrintFileName' function" {
+	label="CFG for 'hypre_BoomerAMGGetPrintFileName' function";
+
+	Node0x55fa80aa07c0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %retval = alloca i32, align 4\l  %data.addr = alloca ptr, align 8\l  %print_file_name.addr = alloca ptr, align 8\l  %amg_data = alloca ptr, align 8\l  store ptr %data, ptr %data.addr, align 8\l  store ptr %print_file_name, ptr %print_file_name.addr, align 8\l  %0 = load ptr, ptr %data.addr, align 8\l  store ptr %0, ptr %amg_data, align 8\l  %1 = load ptr, ptr %amg_data, align 8\l  %tobool = icmp ne ptr %1, null\l  br i1 %tobool, label %if.end, label %if.then\l|{<s0>T|<s1>F}}"];
+	Node0x55fa80aa07c0:s0 -> Node0x55fa80aa0e10[tooltip="entry -> if.end\nProbability 62.50%" ];
+	Node0x55fa80aa07c0:s1 -> Node0x55fa80aa0e80[tooltip="entry -> if.then\nProbability 37.50%" ];
+	Node0x55fa80aa0e80 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{if.then:\l|  call void @hypre_error_handler(ptr noundef @.str.2, i32 noundef 2076, i32\l... noundef 12, ptr noundef null)\l  %2 = load i32, ptr @hypre__global_error, align 4\l  store i32 %2, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x55fa80aa0e80 -> Node0x55fa80aa1250[tooltip="if.then -> return\nProbability 100.00%" ];
+	Node0x55fa80aa0e10 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.end:\l|  %3 = load ptr, ptr %print_file_name.addr, align 8\l  %4 = load ptr, ptr %3, align 8\l  %5 = load ptr, ptr %amg_data, align 8\l  %log_file_name = getelementptr inbounds %struct.hypre_ParAMGData, ptr %5,\l... i32 0, i32 89\l  %arraydecay = getelementptr inbounds [256 x i8], ptr %log_file_name, i64 0,\l... i64 0\l  %call = call i32 (ptr, ptr, ...) @hypre_sprintf(ptr noundef %4, ptr noundef\l... @.str, ptr noundef %arraydecay)\l  %6 = load i32, ptr @hypre__global_error, align 4\l  store i32 %6, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x55fa80aa0e10 -> Node0x55fa80aa1250[tooltip="if.end -> return\nProbability 100.00%" ];
+	Node0x55fa80aa1250 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{return:\l|  %7 = load i32, ptr %retval, align 4\l  ret i32 %7\l}"];
+}

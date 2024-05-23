@@ -1,0 +1,14 @@
+digraph "CFG for '_ZN22ParticleVaultContainer14sizeProcessingEv' function" {
+	label="CFG for '_ZN22ParticleVaultContainer14sizeProcessingEv' function";
+
+	Node0x559071108490 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %sum_size = alloca i64, align 8\l  %vault = alloca i64, align 8\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  store i64 0, ptr %sum_size, align 8\l  store i64 0, ptr %vault, align 8\l  br label %for.cond\l}"];
+	Node0x559071108490 -> Node0x559071108940[tooltip="entry -> for.cond\nProbability 100.00%" ];
+	Node0x559071108940 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.cond:\l|  %0 = load i64, ptr %vault, align 8\l  %_processingVault = getelementptr inbounds %class.ParticleVaultContainer,\l... ptr %this1, i32 0, i32 4\l  %call = call noundef i64 @_ZNKSt6vectorIP13ParticleVaultSaIS1_EE4sizeEv(ptr\l... noundef nonnull align 8 dereferenceable(24) %_processingVault) #3\l  %cmp = icmp ult i64 %0, %call\l  br i1 %cmp, label %for.body, label %for.end\l|{<s0>T|<s1>F}}"];
+	Node0x559071108940:s0 -> Node0x559071108e10[tooltip="for.cond -> for.body\nProbability 96.88%" ];
+	Node0x559071108940:s1 -> Node0x559071108e60[tooltip="for.cond -> for.end\nProbability 3.12%" ];
+	Node0x559071108e10 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.body:\l|  %_processingVault2 = getelementptr inbounds %class.ParticleVaultContainer,\l... ptr %this1, i32 0, i32 4\l  %1 = load i64, ptr %vault, align 8\l  %call3 = call noundef nonnull align 8 dereferenceable(8) ptr\l... @_ZNSt6vectorIP13ParticleVaultSaIS1_EEixEm(ptr noundef nonnull align 8\l... dereferenceable(24) %_processingVault2, i64 noundef %1) #3\l  %2 = load ptr, ptr %call3, align 8\l  %call4 = call noundef i64 @_ZNK13ParticleVault4sizeEv(ptr noundef nonnull\l... align 8 dereferenceable(24) %2)\l  %3 = load i64, ptr %sum_size, align 8\l  %add = add i64 %3, %call4\l  store i64 %add, ptr %sum_size, align 8\l  br label %for.inc\l}"];
+	Node0x559071108e10 -> Node0x5590711097d0[tooltip="for.body -> for.inc\nProbability 100.00%" ];
+	Node0x5590711097d0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.inc:\l|  %4 = load i64, ptr %vault, align 8\l  %inc = add i64 %4, 1\l  store i64 %inc, ptr %vault, align 8\l  br label %for.cond, !llvm.loop !6\l}"];
+	Node0x5590711097d0 -> Node0x559071108940[tooltip="for.inc -> for.cond\nProbability 100.00%" ];
+	Node0x559071108e60 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{for.end:\l|  %5 = load i64, ptr %sum_size, align 8\l  ret i64 %5\l}"];
+}

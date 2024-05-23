@@ -1,0 +1,5 @@
+digraph "CFG for 'hypre_GMRESGetRelChange' function" {
+	label="CFG for 'hypre_GMRESGetRelChange' function";
+
+	Node0x56458ac218b0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %gmres_vdata.addr = alloca ptr, align 8\l  %rel_change.addr = alloca ptr, align 8\l  %gmres_data = alloca ptr, align 8\l  store ptr %gmres_vdata, ptr %gmres_vdata.addr, align 8\l  store ptr %rel_change, ptr %rel_change.addr, align 8\l  %0 = load ptr, ptr %gmres_vdata.addr, align 8\l  store ptr %0, ptr %gmres_data, align 8\l  %1 = load ptr, ptr %gmres_data, align 8\l  %rel_change1 = getelementptr inbounds %struct.hypre_GMRESData, ptr %1, i32\l... 0, i32 3\l  %2 = load i32, ptr %rel_change1, align 4\l  %3 = load ptr, ptr %rel_change.addr, align 8\l  store i32 %2, ptr %3, align 4\l  %4 = load i32, ptr @hypre__global_error, align 4\l  ret i32 %4\l}"];
+}

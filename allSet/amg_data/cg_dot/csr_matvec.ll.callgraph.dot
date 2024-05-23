@@ -1,0 +1,33 @@
+digraph "Call graph: csr_matvec.ll" {
+	label="Call graph: csr_matvec.ll";
+
+	Node0x55ea8c35c2b0 [shape=record,label="{hypre_CSRMatrixMatvecOutOfPlace}"];
+	Node0x55ea8c35c2b0 -> Node0x55ea8c359690;
+	Node0x55ea8c35c2b0 -> Node0x55ea8c356610;
+	Node0x55ea8c35c2b0 -> Node0x55ea8c362e00;
+	Node0x55ea8c35c2b0 -> Node0x55ea8c35fcb0;
+	Node0x55ea8c35c2b0 -> Node0x55ea8c337fb0;
+	Node0x55ea8c35c2b0 -> Node0x55ea8c365c80;
+	Node0x55ea8c35c2b0 -> Node0x55ea8c3732e0;
+	Node0x55ea8c359690 [shape=record,label="{hypre_fprintf}"];
+	Node0x55ea8c356610 [shape=record,label="{hypre_error_handler}"];
+	Node0x55ea8c337fb0 [shape=record,label="{hypre_SeqVectorCloneDeep}"];
+	Node0x55ea8c35fcb0 [shape=record,label="{llvm.fmuladd.f64}"];
+	Node0x55ea8c3732e0 [shape=record,label="{hypre_CSRMatrixGetLoadBalancedPartitionBegin}"];
+	Node0x55ea8c365c80 [shape=record,label="{hypre_CSRMatrixGetLoadBalancedPartitionEnd}"];
+	Node0x55ea8c362e00 [shape=record,label="{hypre_SeqVectorDestroy}"];
+	Node0x55ea8c362640 [shape=record,label="{hypre_CSRMatrixMatvec}"];
+	Node0x55ea8c362640 -> Node0x55ea8c35c2b0;
+	Node0x55ea8c38bdb0 [shape=record,label="{hypre_CSRMatrixMatvecT}"];
+	Node0x55ea8c38bdb0 -> Node0x55ea8c359690;
+	Node0x55ea8c38bdb0 -> Node0x55ea8c356610;
+	Node0x55ea8c38bdb0 -> Node0x55ea8c337fb0;
+	Node0x55ea8c38bdb0 -> Node0x55ea8c38e910;
+	Node0x55ea8c38bdb0 -> Node0x55ea8c35fcb0;
+	Node0x55ea8c38bdb0 -> Node0x55ea8c362e00;
+	Node0x55ea8c38bdb0 -> Node0x55ea8c38a8e0;
+	Node0x55ea8c38e910 [shape=record,label="{hypre_CAlloc}"];
+	Node0x55ea8c38a8e0 [shape=record,label="{hypre_Free}"];
+	Node0x55ea8c327120 [shape=record,label="{hypre_CSRMatrixMatvec_FF}"];
+	Node0x55ea8c327120 -> Node0x55ea8c35fcb0;
+}

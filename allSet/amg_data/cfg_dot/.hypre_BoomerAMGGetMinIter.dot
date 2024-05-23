@@ -1,0 +1,12 @@
+digraph "CFG for 'hypre_BoomerAMGGetMinIter' function" {
+	label="CFG for 'hypre_BoomerAMGGetMinIter' function";
+
+	Node0x55fa80a664a0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %retval = alloca i32, align 4\l  %data.addr = alloca ptr, align 8\l  %min_iter.addr = alloca ptr, align 8\l  %amg_data = alloca ptr, align 8\l  store ptr %data, ptr %data.addr, align 8\l  store ptr %min_iter, ptr %min_iter.addr, align 8\l  %0 = load ptr, ptr %data.addr, align 8\l  store ptr %0, ptr %amg_data, align 8\l  %1 = load ptr, ptr %amg_data, align 8\l  %tobool = icmp ne ptr %1, null\l  br i1 %tobool, label %if.end, label %if.then\l|{<s0>T|<s1>F}}"];
+	Node0x55fa80a664a0:s0 -> Node0x55fa80a66ae0[tooltip="entry -> if.end\nProbability 62.50%" ];
+	Node0x55fa80a664a0:s1 -> Node0x55fa80a66b50[tooltip="entry -> if.then\nProbability 37.50%" ];
+	Node0x55fa80a66b50 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{if.then:\l|  call void @hypre_error_handler(ptr noundef @.str.2, i32 noundef 1133, i32\l... noundef 12, ptr noundef null)\l  %2 = load i32, ptr @hypre__global_error, align 4\l  store i32 %2, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x55fa80a66b50 -> Node0x55fa80a67010[tooltip="if.then -> return\nProbability 100.00%" ];
+	Node0x55fa80a66ae0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.end:\l|  %3 = load ptr, ptr %amg_data, align 8\l  %min_iter1 = getelementptr inbounds %struct.hypre_ParAMGData, ptr %3, i32 0,\l... i32 27\l  %4 = load i32, ptr %min_iter1, align 4\l  %5 = load ptr, ptr %min_iter.addr, align 8\l  store i32 %4, ptr %5, align 4\l  %6 = load i32, ptr @hypre__global_error, align 4\l  store i32 %6, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x55fa80a66ae0 -> Node0x55fa80a67010[tooltip="if.end -> return\nProbability 100.00%" ];
+	Node0x55fa80a67010 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{return:\l|  %7 = load i32, ptr %retval, align 4\l  ret i32 %7\l}"];
+}

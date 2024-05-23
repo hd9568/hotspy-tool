@@ -1,0 +1,43 @@
+digraph "CFG for '_ZN9LAMMPS_NS7MinHFTND2Ev' function" {
+	label="CFG for '_ZN9LAMMPS_NS7MinHFTND2Ev' function";
+
+	Node0x556e84461fd0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %i = alloca i32, align 4\l  %i6 = alloca i32, align 4\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  store ptr getelementptr inbounds (\{ [19 x ptr] \}, ptr\l... @_ZTVN9LAMMPS_NS7MinHFTNE, i32 0, inrange i32 0, i32 2), ptr %this1, align 8\l  store i32 1, ptr %i, align 4\l  br label %for.cond\l}"];
+	Node0x556e84461fd0 -> Node0x556e844623a0[tooltip="entry -> for.cond\nProbability 100.00%" ];
+	Node0x556e844623a0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.cond:\l|  %0 = load i32, ptr %i, align 4\l  %cmp = icmp slt i32 %0, 7\l  br i1 %cmp, label %for.body, label %for.end\l|{<s0>T|<s1>F}}"];
+	Node0x556e844623a0:s0 -> Node0x556e84462590[tooltip="for.cond -> for.body\nProbability 96.88%" ];
+	Node0x556e844623a0:s1 -> Node0x556e844625e0[tooltip="for.cond -> for.end\nProbability 3.12%" ];
+	Node0x556e84462590 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.body:\l|  %_daExtraGlobal = getelementptr inbounds %\"class.LAMMPS_NS::MinHFTN\", ptr\l... %this1, i32 0, i32 3\l  %1 = load i32, ptr %i, align 4\l  %idxprom = sext i32 %1 to i64\l  %arrayidx = getelementptr inbounds [7 x ptr], ptr %_daExtraGlobal, i64 0,\l... i64 %idxprom\l  %2 = load ptr, ptr %arrayidx, align 8\l  %cmp2 = icmp ne ptr %2, null\l  br i1 %cmp2, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x556e84462590:s0 -> Node0x556e84462c20[tooltip="for.body -> if.then\nProbability 62.50%" ];
+	Node0x556e84462590:s1 -> Node0x556e84462c70[tooltip="for.body -> if.end\nProbability 37.50%" ];
+	Node0x556e84462c20 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.then:\l|  %_daExtraGlobal3 = getelementptr inbounds %\"class.LAMMPS_NS::MinHFTN\", ptr\l... %this1, i32 0, i32 3\l  %3 = load i32, ptr %i, align 4\l  %idxprom4 = sext i32 %3 to i64\l  %arrayidx5 = getelementptr inbounds [7 x ptr], ptr %_daExtraGlobal3, i64 0,\l... i64 %idxprom4\l  %4 = load ptr, ptr %arrayidx5, align 8\l  %isnull = icmp eq ptr %4, null\l  br i1 %isnull, label %delete.end, label %delete.notnull\l|{<s0>T|<s1>F}}"];
+	Node0x556e84462c20:s0 -> Node0x556e844631a0[tooltip="if.then -> delete.end\nProbability 37.50%" ];
+	Node0x556e84462c20:s1 -> Node0x556e84463220[tooltip="if.then -> delete.notnull\nProbability 62.50%" ];
+	Node0x556e84463220 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{delete.notnull:\l|  call void @_ZdaPv(ptr noundef %4) #11\l  br label %delete.end\l}"];
+	Node0x556e84463220 -> Node0x556e844631a0[tooltip="delete.notnull -> delete.end\nProbability 100.00%" ];
+	Node0x556e844631a0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{delete.end:\l|  br label %if.end\l}"];
+	Node0x556e844631a0 -> Node0x556e84462c70[tooltip="delete.end -> if.end\nProbability 100.00%" ];
+	Node0x556e84462c70 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  br label %for.inc\l}"];
+	Node0x556e84462c70 -> Node0x556e84463640[tooltip="if.end -> for.inc\nProbability 100.00%" ];
+	Node0x556e84463640 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.inc:\l|  %5 = load i32, ptr %i, align 4\l  %inc = add nsw i32 %5, 1\l  store i32 %inc, ptr %i, align 4\l  br label %for.cond, !llvm.loop !6\l}"];
+	Node0x556e84463640 -> Node0x556e844623a0[tooltip="for.inc -> for.cond\nProbability 100.00%" ];
+	Node0x556e844625e0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{for.end:\l|  store i32 0, ptr %i6, align 4\l  br label %for.cond7\l}"];
+	Node0x556e844625e0 -> Node0x556e84463b30[tooltip="for.end -> for.cond7\nProbability 100.00%" ];
+	Node0x556e84463b30 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.cond7:\l|  %6 = load i32, ptr %i6, align 4\l  %cmp8 = icmp slt i32 %6, 7\l  br i1 %cmp8, label %for.body9, label %for.end23\l|{<s0>T|<s1>F}}"];
+	Node0x556e84463b30:s0 -> Node0x556e84464070[tooltip="for.cond7 -> for.body9\nProbability 96.88%" ];
+	Node0x556e84463b30:s1 -> Node0x556e844640f0[tooltip="for.cond7 -> for.end23\nProbability 3.12%" ];
+	Node0x556e84464070 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.body9:\l|  %_daExtraAtom = getelementptr inbounds %\"class.LAMMPS_NS::MinHFTN\", ptr\l... %this1, i32 0, i32 2\l  %7 = load i32, ptr %i6, align 4\l  %idxprom10 = sext i32 %7 to i64\l  %arrayidx11 = getelementptr inbounds [7 x ptr], ptr %_daExtraAtom, i64 0,\l... i64 %idxprom10\l  %8 = load ptr, ptr %arrayidx11, align 8\l  %cmp12 = icmp ne ptr %8, null\l  br i1 %cmp12, label %if.then13, label %if.end20\l|{<s0>T|<s1>F}}"];
+	Node0x556e84464070:s0 -> Node0x556e84464650[tooltip="for.body9 -> if.then13\nProbability 62.50%" ];
+	Node0x556e84464070:s1 -> Node0x556e844646d0[tooltip="for.body9 -> if.end20\nProbability 37.50%" ];
+	Node0x556e84464650 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.then13:\l|  %_daExtraAtom14 = getelementptr inbounds %\"class.LAMMPS_NS::MinHFTN\", ptr\l... %this1, i32 0, i32 2\l  %9 = load i32, ptr %i6, align 4\l  %idxprom15 = sext i32 %9 to i64\l  %arrayidx16 = getelementptr inbounds [7 x ptr], ptr %_daExtraAtom14, i64 0,\l... i64 %idxprom15\l  %10 = load ptr, ptr %arrayidx16, align 8\l  %isnull17 = icmp eq ptr %10, null\l  br i1 %isnull17, label %delete.end19, label %delete.notnull18\l|{<s0>T|<s1>F}}"];
+	Node0x556e84464650:s0 -> Node0x556e84460440[tooltip="if.then13 -> delete.end19\nProbability 37.50%" ];
+	Node0x556e84464650:s1 -> Node0x556e844604f0[tooltip="if.then13 -> delete.notnull18\nProbability 62.50%" ];
+	Node0x556e844604f0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{delete.notnull18:\l|  call void @_ZdaPv(ptr noundef %10) #11\l  br label %delete.end19\l}"];
+	Node0x556e844604f0 -> Node0x556e84460440[tooltip="delete.notnull18 -> delete.end19\nProbability 100.00%" ];
+	Node0x556e84460440 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{delete.end19:\l|  br label %if.end20\l}"];
+	Node0x556e84460440 -> Node0x556e844646d0[tooltip="delete.end19 -> if.end20\nProbability 100.00%" ];
+	Node0x556e844646d0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end20:\l|  br label %for.inc21\l}"];
+	Node0x556e844646d0 -> Node0x556e844608c0[tooltip="if.end20 -> for.inc21\nProbability 100.00%" ];
+	Node0x556e844608c0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.inc21:\l|  %11 = load i32, ptr %i6, align 4\l  %inc22 = add nsw i32 %11, 1\l  store i32 %inc22, ptr %i6, align 4\l  br label %for.cond7, !llvm.loop !8\l}"];
+	Node0x556e844608c0 -> Node0x556e84463b30[tooltip="for.inc21 -> for.cond7\nProbability 100.00%" ];
+	Node0x556e844640f0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{for.end23:\l|  call void @_ZN9LAMMPS_NS3MinD2Ev(ptr noundef nonnull align 8\l... dereferenceable(632) %this1) #12\l  ret void\l}"];
+}

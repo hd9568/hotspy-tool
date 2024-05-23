@@ -1,0 +1,5 @@
+digraph "CFG for 'time_getCPUSeconds' function" {
+	label="CFG for 'time_getCPUSeconds' function";
+
+	Node0x556512b384c0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %cpuclock = alloca i64, align 8\l  %call = call i64 @clock() #2\l  store i64 %call, ptr %cpuclock, align 8\l  %0 = load i64, ptr %cpuclock, align 8\l  %conv = sitofp i64 %0 to double\l  %div = fdiv double %conv, 1.000000e+06\l  ret double %div\l}"];
+}

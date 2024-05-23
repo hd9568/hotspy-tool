@@ -1,0 +1,11 @@
+digraph "Call graph: initialize.ll" {
+	label="Call graph: initialize.ll";
+
+	Node0x5579150319f0 [shape=record,label="{initialize_}"];
+	Node0x5579150319f0 -> Node0x557915031aa0;
+	Node0x557915033dc0 [shape=record,label="{lhsinit_}"];
+	Node0x557915037110 [shape=record,label="{lhsabinit_}"];
+	Node0x557915031aa0 [shape=record,label="{exact_solution_}"];
+	Node0x557915037190 [shape=record,label="{llvm.stacksave.p0}"];
+	Node0x557915037210 [shape=record,label="{llvm.stackrestore.p0}"];
+}

@@ -1,0 +1,35 @@
+digraph "CFG for 'sortv_ui' function" {
+	label="CFG for 'sortv_ui' function";
+
+	Node0x5564aad819d0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %out.addr = alloca ptr, align 8\l  %A.addr = alloca ptr, align 8\l  %n.addr = alloca i32, align 4\l  %stride.addr = alloca i32, align 4\l  %buf.addr = alloca ptr, align 8\l  store ptr %out, ptr %out.addr, align 8\l  store ptr %A, ptr %A.addr, align 8\l  store i32 %n, ptr %n.addr, align 4\l  store i32 %stride, ptr %stride.addr, align 4\l  store ptr %buf, ptr %buf.addr, align 8\l  %0 = load i32, ptr %n.addr, align 4\l  %cmp = icmp ult i32 %0, 256\l  br i1 %cmp, label %if.then, label %if.else15\l|{<s0>T|<s1>F}}"];
+	Node0x5564aad819d0:s0 -> Node0x5564aad85780[tooltip="entry -> if.then\nProbability 50.00%" ];
+	Node0x5564aad819d0:s1 -> Node0x5564aad85990[tooltip="entry -> if.else15\nProbability 50.00%" ];
+	Node0x5564aad85780 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.then:\l|  %1 = load i32, ptr %n.addr, align 4\l  %cmp1 = icmp ult i32 %1, 2\l  br i1 %cmp1, label %if.then2, label %if.else\l|{<s0>T|<s1>F}}"];
+	Node0x5564aad85780:s0 -> Node0x5564aad85c20[tooltip="if.then -> if.then2\nProbability 50.00%" ];
+	Node0x5564aad85780:s1 -> Node0x5564aad85ca0[tooltip="if.then -> if.else\nProbability 50.00%" ];
+	Node0x5564aad85c20 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470" fontname="Courier",label="{if.then2:\l|  %2 = load i32, ptr %n.addr, align 4\l  %cmp3 = icmp eq i32 %2, 0\l  br i1 %cmp3, label %if.then4, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x5564aad85c20:s0 -> Node0x5564aad86390[tooltip="if.then2 -> if.then4\nProbability 37.50%" ];
+	Node0x5564aad85c20:s1 -> Node0x5564aad86410[tooltip="if.then2 -> if.end\nProbability 62.50%" ];
+	Node0x5564aad86390 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#cc403a70" fontname="Courier",label="{if.then4:\l|  br label %if.end20\l}"];
+	Node0x5564aad86390 -> Node0x5564aad86590[tooltip="if.then4 -> if.end20\nProbability 100.00%" ];
+	Node0x5564aad86410 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#ca3b3770" fontname="Courier",label="{if.end:\l|  %3 = load ptr, ptr %A.addr, align 8\l  %4 = load i32, ptr %3, align 4\l  %5 = load ptr, ptr %out.addr, align 8\l  store i32 %4, ptr %5, align 4\l  br label %if.end14\l}"];
+	Node0x5564aad86410 -> Node0x5564aad868a0[tooltip="if.end -> if.end14\nProbability 100.00%" ];
+	Node0x5564aad85ca0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470" fontname="Courier",label="{if.else:\l|  %6 = load ptr, ptr %out.addr, align 8\l  %7 = load ptr, ptr %A.addr, align 8\l  %cmp5 = icmp eq ptr %6, %7\l  br i1 %cmp5, label %if.then6, label %if.else11\l|{<s0>T|<s1>F}}"];
+	Node0x5564aad85ca0:s0 -> Node0x5564aad86b40[tooltip="if.else -> if.then6\nProbability 37.50%" ];
+	Node0x5564aad85ca0:s1 -> Node0x5564aad86bc0[tooltip="if.else -> if.else11\nProbability 62.50%" ];
+	Node0x5564aad86b40 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#cc403a70" fontname="Courier",label="{if.then6:\l|  %8 = load i32, ptr %stride.addr, align 4\l  %conv = zext i32 %8 to i64\l  %cmp7 = icmp ne i64 %conv, 4\l  br i1 %cmp7, label %if.then9, label %if.end10\l|{<s0>T|<s1>F}}"];
+	Node0x5564aad86b40:s0 -> Node0x5564aad87260[tooltip="if.then6 -> if.then9\nProbability 0.00%" ];
+	Node0x5564aad86b40:s1 -> Node0x5564aad872e0[tooltip="if.then6 -> if.end10\nProbability 100.00%" ];
+	Node0x5564aad87260 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#ecd3c570" fontname="Courier",label="{if.then9:\l|  call void (i32, ptr, i32, ptr, ...) @fail(i32 noundef 1, ptr noundef\l... @.str, i32 noundef 455, ptr noundef @.str.1) #5\l  unreachable\l}"];
+	Node0x5564aad872e0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#cc403a70" fontname="Courier",label="{if.end10:\l|  %9 = load ptr, ptr %out.addr, align 8\l  %10 = load i32, ptr %n.addr, align 4\l  call void @heap_sortv_ui(ptr noundef %9, i32 noundef %10)\l  br label %if.end13\l}"];
+	Node0x5564aad872e0 -> Node0x5564aad879b0[tooltip="if.end10 -> if.end13\nProbability 100.00%" ];
+	Node0x5564aad86bc0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#ca3b3770" fontname="Courier",label="{if.else11:\l|  %11 = load ptr, ptr %buf.addr, align 8\l  %12 = load i32, ptr %n.addr, align 4\l  %conv12 = zext i32 %12 to i64\l  %mul = mul i64 %conv12, 4\l  %call = call ptr @array_reserve_(ptr noundef %11, i64 noundef %mul, i64\l... noundef 1, ptr noundef @.str, i32 noundef 458)\l  %13 = load ptr, ptr %out.addr, align 8\l  %14 = load ptr, ptr %A.addr, align 8\l  %15 = load i32, ptr %n.addr, align 4\l  %16 = load i32, ptr %stride.addr, align 4\l  %17 = load ptr, ptr %buf.addr, align 8\l  %ptr = getelementptr inbounds %struct.array, ptr %17, i32 0, i32 0\l  %18 = load ptr, ptr %ptr, align 8\l  call void @merge_sortv_ui(ptr noundef %13, ptr noundef %14, i32 noundef %15,\l... i32 noundef %16, ptr noundef %18)\l  br label %if.end13\l}"];
+	Node0x5564aad86bc0 -> Node0x5564aad879b0[tooltip="if.else11 -> if.end13\nProbability 100.00%" ];
+	Node0x5564aad879b0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470" fontname="Courier",label="{if.end13:\l|  br label %if.end14\l}"];
+	Node0x5564aad879b0 -> Node0x5564aad868a0[tooltip="if.end13 -> if.end14\nProbability 100.00%" ];
+	Node0x5564aad868a0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.end14:\l|  br label %if.end20\l}"];
+	Node0x5564aad868a0 -> Node0x5564aad86590[tooltip="if.end14 -> if.end20\nProbability 100.00%" ];
+	Node0x5564aad85990 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.else15:\l|  %19 = load ptr, ptr %buf.addr, align 8\l  %20 = load i32, ptr %n.addr, align 4\l  %conv16 = zext i32 %20 to i64\l  %mul17 = mul i64 %conv16, 4\l  %call18 = call ptr @array_reserve_(ptr noundef %19, i64 noundef %mul17, i64\l... noundef 1, ptr noundef @.str, i32 noundef 464)\l  %21 = load ptr, ptr %out.addr, align 8\l  %22 = load ptr, ptr %A.addr, align 8\l  %23 = load i32, ptr %n.addr, align 4\l  %24 = load i32, ptr %stride.addr, align 4\l  %25 = load ptr, ptr %buf.addr, align 8\l  %ptr19 = getelementptr inbounds %struct.array, ptr %25, i32 0, i32 0\l  %26 = load ptr, ptr %ptr19, align 8\l  call void @radix_sortv_ui(ptr noundef %21, ptr noundef %22, i32 noundef %23,\l... i32 noundef %24, ptr noundef %26, ptr noundef @sortv_ui.count)\l  br label %if.end20\l}"];
+	Node0x5564aad85990 -> Node0x5564aad86590[tooltip="if.else15 -> if.end20\nProbability 100.00%" ];
+	Node0x5564aad86590 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end20:\l|  ret void\l}"];
+}

@@ -1,0 +1,9 @@
+digraph "CFG for '_ZNSt6vectorIPN9LAMMPS_NS3FixESaIS2_EE17_S_check_init_lenEmRKS3_' function" {
+	label="CFG for '_ZNSt6vectorIPN9LAMMPS_NS3FixESaIS2_EE17_S_check_init_lenEmRKS3_' function";
+
+	Node0x561f1651fb90 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %__n.addr = alloca i64, align 8\l  %__a.addr = alloca ptr, align 8\l  %ref.tmp = alloca %\"class.std::allocator\", align 1\l  store i64 %__n, ptr %__n.addr, align 8\l  store ptr %__a, ptr %__a.addr, align 8\l  %0 = load i64, ptr %__n.addr, align 8\l  %1 = load ptr, ptr %__a.addr, align 8\l  call void @_ZNSaIPN9LAMMPS_NS3FixEEC2ERKS2_(ptr noundef nonnull align 1\l... dereferenceable(1) %ref.tmp, ptr noundef nonnull align 1 dereferenceable(1)\l... %1) #13\l  %call = call noundef i64\l... @_ZNSt6vectorIPN9LAMMPS_NS3FixESaIS2_EE11_S_max_sizeERKS3_(ptr noundef\l... nonnull align 1 dereferenceable(1) %ref.tmp) #13\l  %cmp = icmp ugt i64 %0, %call\l  call void @_ZNSaIPN9LAMMPS_NS3FixEED2Ev(ptr noundef nonnull align 1\l... dereferenceable(1) %ref.tmp) #13\l  br i1 %cmp, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x561f1651fb90:s0 -> Node0x561f165207f0[tooltip="entry -> if.then\nProbability 0.00%" ];
+	Node0x561f1651fb90:s1 -> Node0x561f165208a0[tooltip="entry -> if.end\nProbability 100.00%" ];
+	Node0x561f165207f0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f4c5ad70" fontname="Courier",label="{if.then:\l|  call void @_ZSt20__throw_length_errorPKc(ptr noundef @.str.191) #14\l  unreachable\l}"];
+	Node0x561f165208a0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  %2 = load i64, ptr %__n.addr, align 8\l  ret i64 %2\l}"];
+}

@@ -1,0 +1,27 @@
+digraph "Call graph: specrand.ll" {
+	label="Call graph: specrand.ll";
+
+	Node0x55c4969b9ed0 [shape=record,label="{spec_srand}"];
+	Node0x55c4969b9ed0 -> Node0x55c4969a1810;
+	Node0x55c4969a1810 [shape=record,label="{spec_init_genrand}"];
+	Node0x55c4969c0ab0 [shape=record,label="{spec_rand}"];
+	Node0x55c4969c0ab0 -> Node0x55c4969c0b30;
+	Node0x55c4969c0b30 [shape=record,label="{spec_genrand_int32}"];
+	Node0x55c4969c0b30 -> Node0x55c4969a1810;
+	Node0x55c4969c5aa0 [shape=record,label="{spec_lrand48}"];
+	Node0x55c4969c5aa0 -> Node0x55c4969c0b30;
+	Node0x55c4969c5ca0 [shape=record,label="{spec_init_by_array}"];
+	Node0x55c4969c5ca0 -> Node0x55c4969a1810;
+	Node0x55c4969c5d50 [shape=record,label="{spec_genrand_int31}"];
+	Node0x55c4969c5d50 -> Node0x55c4969c0b30;
+	Node0x55c4969c5e00 [shape=record,label="{spec_genrand_real1}"];
+	Node0x55c4969c5e00 -> Node0x55c4969c0b30;
+	Node0x55c4969c5eb0 [shape=record,label="{spec_genrand_real2}"];
+	Node0x55c4969c5eb0 -> Node0x55c4969c0b30;
+	Node0x55c4969c61f0 [shape=record,label="{spec_genrand_real3}"];
+	Node0x55c4969c61f0 -> Node0x55c4969c0b30;
+	Node0x55c4969c62a0 [shape=record,label="{spec_genrand_res53}"];
+	Node0x55c4969c62a0 -> Node0x55c4969c0b30;
+	Node0x55c4969c62a0 -> Node0x55c4969c6350;
+	Node0x55c4969c6350 [shape=record,label="{llvm.fmuladd.f64}"];
+}

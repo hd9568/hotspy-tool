@@ -1,0 +1,5 @@
+digraph "CFG for 'HYPRE_BoomerAMGSetSCommPkgSwitch' function" {
+	label="CFG for 'HYPRE_BoomerAMGSetSCommPkgSwitch' function";
+
+	Node0x55f5a9a57f80 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %solver.addr = alloca ptr, align 8\l  %S_commpkg_switch.addr = alloca double, align 8\l  store ptr %solver, ptr %solver.addr, align 8\l  store double %S_commpkg_switch, ptr %S_commpkg_switch.addr, align 8\l  %0 = load ptr, ptr %solver.addr, align 8\l  %1 = load double, ptr %S_commpkg_switch.addr, align 8\l  %call = call i32 @hypre_BoomerAMGSetSCommPkgSwitch(ptr noundef %0, double\l... noundef %1)\l  ret i32 %call\l}"];
+}

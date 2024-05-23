@@ -1,0 +1,10 @@
+digraph "CFG for '_ZN9LAMMPS_NS3RCB12memory_usageEv' function" {
+	label="CFG for '_ZN9LAMMPS_NS3RCB12memory_usageEv' function";
+
+	Node0x557c0c5e2d60 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %bytes = alloca double, align 8\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  store double 0.000000e+00, ptr %bytes, align 8\l  %irregular = getelementptr inbounds %\"class.LAMMPS_NS::RCB\", ptr %this1, i32\l... 0, i32 32\l  %0 = load ptr, ptr %irregular, align 8\l  %tobool = icmp ne ptr %0, null\l  br i1 %tobool, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x557c0c5e2d60:s0 -> Node0x557c0c5e32b0[tooltip="entry -> if.then\nProbability 62.50%" ];
+	Node0x557c0c5e2d60:s1 -> Node0x557c0c5e3320[tooltip="entry -> if.end\nProbability 37.50%" ];
+	Node0x557c0c5e32b0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.then:\l|  %irregular2 = getelementptr inbounds %\"class.LAMMPS_NS::RCB\", ptr %this1,\l... i32 0, i32 32\l  %1 = load ptr, ptr %irregular2, align 8\l  %call = call noundef double @_ZN9LAMMPS_NS9Irregular12memory_usageEv(ptr\l... noundef nonnull align 8 dereferenceable(424) %1)\l  %2 = load double, ptr %bytes, align 8\l  %add = fadd double %2, %call\l  store double %add, ptr %bytes, align 8\l  br label %if.end\l}"];
+	Node0x557c0c5e32b0 -> Node0x557c0c5e3320[tooltip="if.then -> if.end\nProbability 100.00%" ];
+	Node0x557c0c5e3320 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  %3 = load double, ptr %bytes, align 8\l  ret double %3\l}"];
+}

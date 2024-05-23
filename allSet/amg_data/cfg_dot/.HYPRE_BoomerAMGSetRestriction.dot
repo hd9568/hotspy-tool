@@ -1,0 +1,5 @@
+digraph "CFG for 'HYPRE_BoomerAMGSetRestriction' function" {
+	label="CFG for 'HYPRE_BoomerAMGSetRestriction' function";
+
+	Node0x55f5a9a46390 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %solver.addr = alloca ptr, align 8\l  %restr_par.addr = alloca i32, align 4\l  store ptr %solver, ptr %solver.addr, align 8\l  store i32 %restr_par, ptr %restr_par.addr, align 4\l  %0 = load ptr, ptr %solver.addr, align 8\l  %1 = load i32, ptr %restr_par.addr, align 4\l  %call = call i32 @hypre_BoomerAMGSetRestriction(ptr noundef %0, i32 noundef\l... %1)\l  ret i32 %call\l}"];
+}

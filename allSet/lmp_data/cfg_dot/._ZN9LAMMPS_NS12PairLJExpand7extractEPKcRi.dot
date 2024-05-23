@@ -1,0 +1,22 @@
+digraph "CFG for '_ZN9LAMMPS_NS12PairLJExpand7extractEPKcRi' function" {
+	label="CFG for '_ZN9LAMMPS_NS12PairLJExpand7extractEPKcRi' function";
+
+	Node0x55d88da08a20 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %retval = alloca ptr, align 8\l  %this.addr = alloca ptr, align 8\l  %str.addr = alloca ptr, align 8\l  %dim.addr = alloca ptr, align 8\l  store ptr %this, ptr %this.addr, align 8\l  store ptr %str, ptr %str.addr, align 8\l  store ptr %dim, ptr %dim.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %0 = load ptr, ptr %dim.addr, align 8\l  store i32 2, ptr %0, align 4\l  %1 = load ptr, ptr %str.addr, align 8\l  %call = call i32 @strcmp(ptr noundef %1, ptr noundef @.str.16) #9\l  %cmp = icmp eq i32 %call, 0\l  br i1 %cmp, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x55d88da08a20:s0 -> Node0x55d88da09bc0[tooltip="entry -> if.then\nProbability 37.50%" ];
+	Node0x55d88da08a20:s1 -> Node0x55d88da09c30[tooltip="entry -> if.end\nProbability 62.50%" ];
+	Node0x55d88da09bc0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{if.then:\l|  %epsilon = getelementptr inbounds %\"class.LAMMPS_NS::PairLJExpand\", ptr\l... %this1, i32 0, i32 3\l  %2 = load ptr, ptr %epsilon, align 8\l  store ptr %2, ptr %retval, align 8\l  br label %return\l}"];
+	Node0x55d88da09bc0 -> Node0x55d88da0a0f0[tooltip="if.then -> return\nProbability 100.00%" ];
+	Node0x55d88da09c30 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.end:\l|  %3 = load ptr, ptr %str.addr, align 8\l  %call2 = call i32 @strcmp(ptr noundef %3, ptr noundef @.str.17) #9\l  %cmp3 = icmp eq i32 %call2, 0\l  br i1 %cmp3, label %if.then4, label %if.end5\l|{<s0>T|<s1>F}}"];
+	Node0x55d88da09c30:s0 -> Node0x55d88da0a450[tooltip="if.end -> if.then4\nProbability 37.50%" ];
+	Node0x55d88da09c30:s1 -> Node0x55d88da0a4a0[tooltip="if.end -> if.end5\nProbability 62.50%" ];
+	Node0x55d88da0a450 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470" fontname="Courier",label="{if.then4:\l|  %sigma = getelementptr inbounds %\"class.LAMMPS_NS::PairLJExpand\", ptr\l... %this1, i32 0, i32 4\l  %4 = load ptr, ptr %sigma, align 8\l  store ptr %4, ptr %retval, align 8\l  br label %return\l}"];
+	Node0x55d88da0a450 -> Node0x55d88da0a0f0[tooltip="if.then4 -> return\nProbability 100.00%" ];
+	Node0x55d88da0a4a0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.end5:\l|  %5 = load ptr, ptr %str.addr, align 8\l  %call6 = call i32 @strcmp(ptr noundef %5, ptr noundef @.str.18) #9\l  %cmp7 = icmp eq i32 %call6, 0\l  br i1 %cmp7, label %if.then8, label %if.end9\l|{<s0>T|<s1>F}}"];
+	Node0x55d88da0a4a0:s0 -> Node0x55d88da0aab0[tooltip="if.end5 -> if.then8\nProbability 37.50%" ];
+	Node0x55d88da0a4a0:s1 -> Node0x55d88da0ab30[tooltip="if.end5 -> if.end9\nProbability 62.50%" ];
+	Node0x55d88da0aab0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#ca3b3770" fontname="Courier",label="{if.then8:\l|  %shift = getelementptr inbounds %\"class.LAMMPS_NS::PairLJExpand\", ptr\l... %this1, i32 0, i32 5\l  %6 = load ptr, ptr %shift, align 8\l  store ptr %6, ptr %retval, align 8\l  br label %return\l}"];
+	Node0x55d88da0aab0 -> Node0x55d88da0a0f0[tooltip="if.then8 -> return\nProbability 100.00%" ];
+	Node0x55d88da0ab30 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470" fontname="Courier",label="{if.end9:\l|  store ptr null, ptr %retval, align 8\l  br label %return\l}"];
+	Node0x55d88da0ab30 -> Node0x55d88da0a0f0[tooltip="if.end9 -> return\nProbability 100.00%" ];
+	Node0x55d88da0a0f0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{return:\l|  %7 = load ptr, ptr %retval, align 8\l  ret ptr %7\l}"];
+}

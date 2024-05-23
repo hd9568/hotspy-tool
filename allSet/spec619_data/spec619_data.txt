@@ -1,0 +1,8 @@
+LBM_swapGrids 0
+LBM_showGridStatistics 1
+LBM_allocateGrid 0
+LBM_loadObstacleFile 0
+LBM_freeGrid 0
+MAIN_parseCommandLine 0
+MAIN_printInfo 0
+MAIN_finalize 0

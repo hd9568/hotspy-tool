@@ -1,0 +1,5 @@
+digraph "CFG for 'mpi_scan_' function" {
+	label="CFG for 'mpi_scan_' function";
+
+	Node0x5560a31b5cf0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{7:\l|  %8 = load i32, ptr %0, align 4\l  store i32 %8, ptr %1, align 4\l  ret void\l}"];
+}

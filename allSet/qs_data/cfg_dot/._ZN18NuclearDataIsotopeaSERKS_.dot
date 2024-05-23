@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN18NuclearDataIsotopeaSERKS_' function" {
+	label="CFG for '_ZN18NuclearDataIsotopeaSERKS_' function";
+
+	Node0x55cf63430f80 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %.addr = alloca ptr, align 8\l  store ptr %this, ptr %this.addr, align 8\l  store ptr %0, ptr %.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %_species = getelementptr inbounds %class.NuclearDataIsotope, ptr %this1,\l... i32 0, i32 0\l  %1 = load ptr, ptr %.addr, align 8\l  %_species2 = getelementptr inbounds %class.NuclearDataIsotope, ptr %1, i32\l... 0, i32 0\l  %call = call noundef nonnull align 8 dereferenceable(24) ptr\l... @_ZN9qs_vectorI18NuclearDataSpeciesEaSERKS1_(ptr noundef nonnull align 8\l... dereferenceable(24) %_species, ptr noundef nonnull align 8\l... dereferenceable(24) %_species2)\l  ret ptr %this1\l}"];
+}

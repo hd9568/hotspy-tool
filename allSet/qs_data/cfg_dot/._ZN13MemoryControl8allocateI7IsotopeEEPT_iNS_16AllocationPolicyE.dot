@@ -1,0 +1,43 @@
+digraph "CFG for '_ZN13MemoryControl8allocateI7IsotopeEEPT_iNS_16AllocationPolicyE' function" {
+	label="CFG for '_ZN13MemoryControl8allocateI7IsotopeEEPT_iNS_16AllocationPolicyE' function";
+
+	Node0x55dab4761620 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#ca3b3770" fontname="Courier",label="{entry:\l|  %retval = alloca ptr, align 8\l  %size.addr = alloca i32, align 4\l  %policy.addr = alloca i32, align 4\l  %tmp = alloca ptr, align 8\l  %exn.slot = alloca ptr, align 8\l  %ehselector.slot = alloca i32, align 4\l  store i32 %size, ptr %size.addr, align 4\l  store i32 %policy, ptr %policy.addr, align 4\l  %0 = load i32, ptr %size.addr, align 4\l  %cmp = icmp eq i32 %0, 0\l  br i1 %cmp, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x55dab4761620:s0 -> Node0x55dab4761690[tooltip="entry -> if.then\nProbability 37.50%" ];
+	Node0x55dab4761620:s1 -> Node0x55dab4761f60[tooltip="entry -> if.end\nProbability 62.50%" ];
+	Node0x55dab4761690 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d0473d70" fontname="Courier",label="{if.then:\l|  store ptr null, ptr %retval, align 8\l  br label %return\l}"];
+	Node0x55dab4761690 -> Node0x55dab4762070[tooltip="if.then -> return\nProbability 100.00%" ];
+	Node0x55dab4761f60 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#cc403a70" fontname="Courier",label="{if.end:\l|  store ptr null, ptr %tmp, align 8\l  %1 = load i32, ptr %policy.addr, align 4\l  switch i32 %1, label %sw.default [\l    i32 0, label %sw.bb\l  ]\l|{<s0>def|<s1>0}}"];
+	Node0x55dab4761f60:s0 -> Node0x55dab4762410[tooltip="if.end -> sw.default\nProbability 50.00%" ];
+	Node0x55dab4761f60:s1 -> Node0x55dab4762490[tooltip="if.end -> sw.bb\nProbability 50.00%" ];
+	Node0x55dab4762490 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d24b4070" fontname="Courier",label="{sw.bb:\l|  %2 = load i32, ptr %size.addr, align 4\l  %conv = sext i32 %2 to i64\l  %3 = call \{ i64, i1 \} @llvm.umul.with.overflow.i64(i64 %conv, i64 16)\l  %4 = extractvalue \{ i64, i1 \} %3, 1\l  %5 = extractvalue \{ i64, i1 \} %3, 0\l  %6 = call \{ i64, i1 \} @llvm.uadd.with.overflow.i64(i64 %5, i64 8)\l  %7 = extractvalue \{ i64, i1 \} %6, 1\l  %8 = or i1 %4, %7\l  %9 = extractvalue \{ i64, i1 \} %6, 0\l  %10 = select i1 %8, i64 -1, i64 %9\l  %call = call noalias noundef nonnull ptr @_Znam(i64 noundef %10) #15\l  store i64 %conv, ptr %call, align 16\l  %11 = getelementptr inbounds i8, ptr %call, i64 8\l  %isempty = icmp eq i64 %conv, 0\l  br i1 %isempty, label %arrayctor.cont, label %new.ctorloop\l|{<s0>T|<s1>F}}"];
+	Node0x55dab4762490:s0 -> Node0x55dab4762f40[tooltip="sw.bb -> arrayctor.cont\nProbability 37.50%" ];
+	Node0x55dab4762490:s1 -> Node0x55dab4762f90[tooltip="sw.bb -> new.ctorloop\nProbability 62.50%" ];
+	Node0x55dab4762f90 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{new.ctorloop:\l|  %arrayctor.end = getelementptr inbounds %class.Isotope, ptr %11, i64 %conv\l  br label %arrayctor.loop\l}"];
+	Node0x55dab4762f90 -> Node0x55dab47630b0[tooltip="new.ctorloop -> arrayctor.loop\nProbability 100.00%" ];
+	Node0x55dab47630b0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{arrayctor.loop:\l|  %arrayctor.cur = phi ptr [ %11, %new.ctorloop ], [ %arrayctor.next,\l... %invoke.cont ]\l  invoke void @_ZN7IsotopeC2Ev(ptr noundef nonnull align 8 dereferenceable(16)\l... %arrayctor.cur)\l          to label %invoke.cont unwind label %lpad\l}"];
+	Node0x55dab47630b0 -> Node0x55dab4763200[tooltip="arrayctor.loop -> invoke.cont\nProbability 100.00%" ];
+	Node0x55dab47630b0 -> Node0x55dab4763370[tooltip="arrayctor.loop -> lpad\nProbability 0.00%" ];
+	Node0x55dab4763200 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{invoke.cont:\l|  %arrayctor.next = getelementptr inbounds %class.Isotope, ptr\l... %arrayctor.cur, i64 1\l  %arrayctor.done = icmp eq ptr %arrayctor.next, %arrayctor.end\l  br i1 %arrayctor.done, label %arrayctor.cont, label %arrayctor.loop\l|{<s0>T|<s1>F}}"];
+	Node0x55dab4763200:s0 -> Node0x55dab4762f40[tooltip="invoke.cont -> arrayctor.cont\nProbability 3.12%" ];
+	Node0x55dab4763200:s1 -> Node0x55dab47630b0[tooltip="invoke.cont -> arrayctor.loop\nProbability 96.88%" ];
+	Node0x55dab4762f40 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d24b4070" fontname="Courier",label="{arrayctor.cont:\l|  store ptr %11, ptr %tmp, align 8\l  br label %sw.epilog\l}"];
+	Node0x55dab4762f40 -> Node0x55dab4763920[tooltip="arrayctor.cont -> sw.epilog\nProbability 100.00%" ];
+	Node0x55dab4763370 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f4c5ad70" fontname="Courier",label="{lpad:\l|  %12 = landingpad \{ ptr, i32 \}\l          cleanup\l  %13 = extractvalue \{ ptr, i32 \} %12, 0\l  store ptr %13, ptr %exn.slot, align 8\l  %14 = extractvalue \{ ptr, i32 \} %12, 1\l  store i32 %14, ptr %ehselector.slot, align 4\l  %arraydestroy.isempty = icmp eq ptr %11, %arrayctor.cur\l  br i1 %arraydestroy.isempty, label %arraydestroy.done1, label\l... %arraydestroy.body\l|{<s0>T|<s1>F}}"];
+	Node0x55dab4763370:s0 -> Node0x55dab4763d90[tooltip="lpad -> arraydestroy.done1\nProbability 37.50%" ];
+	Node0x55dab4763370:s1 -> Node0x55dab4763e00[tooltip="lpad -> arraydestroy.body\nProbability 62.50%" ];
+	Node0x55dab4763e00 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f7ac8e70" fontname="Courier",label="{arraydestroy.body:\l|  %arraydestroy.elementPast = phi ptr [ %arrayctor.cur, %lpad ], [\l... %arraydestroy.element, %arraydestroy.body ]\l  %arraydestroy.element = getelementptr inbounds %class.Isotope, ptr\l... %arraydestroy.elementPast, i64 -1\l  call void @_ZN7IsotopeD2Ev(ptr noundef nonnull align 8 dereferenceable(16)\l... %arraydestroy.element) #3\l  %arraydestroy.done = icmp eq ptr %arraydestroy.element, %11\l  br i1 %arraydestroy.done, label %arraydestroy.done1, label %arraydestroy.body\l|{<s0>T|<s1>F}}"];
+	Node0x55dab4763e00:s0 -> Node0x55dab4763d90[tooltip="arraydestroy.body -> arraydestroy.done1\nProbability 3.12%" ];
+	Node0x55dab4763e00:s1 -> Node0x55dab4763e00[tooltip="arraydestroy.body -> arraydestroy.body\nProbability 96.88%" ];
+	Node0x55dab4763d90 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f4c5ad70" fontname="Courier",label="{arraydestroy.done1:\l|  call void @_ZdaPv(ptr noundef %call) #16\l  br label %eh.resume\l}"];
+	Node0x55dab4763d90 -> Node0x55dab4764440[tooltip="arraydestroy.done1 -> eh.resume\nProbability 100.00%" ];
+	Node0x55dab4762410 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d24b4070" fontname="Courier",label="{sw.default:\l|  br label %do.body\l}"];
+	Node0x55dab4762410 -> Node0x55dab4764500[tooltip="sw.default -> do.body\nProbability 100.00%" ];
+	Node0x55dab4764500 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d24b4070" fontname="Courier",label="{do.body:\l|  %call2 = call i32 (ptr, ...) @printf(ptr noundef @.str, ptr noundef\l... @.str.2, i32 noundef 31)\l  br label %do.end\l}"];
+	Node0x55dab4764500 -> Node0x55dab4764630[tooltip="do.body -> do.end\nProbability 100.00%" ];
+	Node0x55dab4764630 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d24b4070" fontname="Courier",label="{do.end:\l|  br label %sw.epilog\l}"];
+	Node0x55dab4764630 -> Node0x55dab4763920[tooltip="do.end -> sw.epilog\nProbability 100.00%" ];
+	Node0x55dab4763920 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#cc403a70" fontname="Courier",label="{sw.epilog:\l|  %15 = load ptr, ptr %tmp, align 8\l  store ptr %15, ptr %retval, align 8\l  br label %return\l}"];
+	Node0x55dab4763920 -> Node0x55dab4762070[tooltip="sw.epilog -> return\nProbability 100.00%" ];
+	Node0x55dab4762070 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#ca3b3770" fontname="Courier",label="{return:\l|  %16 = load ptr, ptr %retval, align 8\l  ret ptr %16\l}"];
+	Node0x55dab4764440 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f4c5ad70" fontname="Courier",label="{eh.resume:\l|  %exn = load ptr, ptr %exn.slot, align 8\l  %sel = load i32, ptr %ehselector.slot, align 4\l  %lpad.val = insertvalue \{ ptr, i32 \} poison, ptr %exn, 0\l  %lpad.val3 = insertvalue \{ ptr, i32 \} %lpad.val, i32 %sel, 1\l  resume \{ ptr, i32 \} %lpad.val3\l}"];
+}

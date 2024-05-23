@@ -1,0 +1,17 @@
+digraph "Call graph: pintgr.ll" {
+	label="Call graph: pintgr.ll";
+
+	Node0x55b68f198a40 [shape=record,label="{pintgr_}"];
+	Node0x55b68f198a40 -> Node0x55b68f199020;
+	Node0x55b68f198a40 -> Node0x55b68f19ade0;
+	Node0x55b68f198a40 -> Node0x55b68f19a480;
+	Node0x55b68f198a40 -> Node0x55b68f19a400;
+	Node0x55b68f198a40 -> Node0x55b68f199c30;
+	Node0x55b68f19ade0 [shape=record,label="{mpi_allreduce_}"];
+	Node0x55b68f19a400 [shape=record,label="{exchange_5_}"];
+	Node0x55b68f19a480 [shape=record,label="{exchange_6_}"];
+	Node0x55b68f19a280 [shape=record,label="{llvm.stacksave.p0}"];
+	Node0x55b68f19a300 [shape=record,label="{llvm.stackrestore.p0}"];
+	Node0x55b68f199020 [shape=record,label="{llvm.powi.f64.i32}"];
+	Node0x55b68f199c30 [shape=record,label="{exchange_4_}"];
+}

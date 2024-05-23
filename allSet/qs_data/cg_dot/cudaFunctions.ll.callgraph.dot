@@ -1,0 +1,4 @@
+digraph "Call graph: cudaFunctions.ll" {
+	label="Call graph: cudaFunctions.ll";
+
+}

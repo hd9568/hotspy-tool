@@ -1,0 +1,47 @@
+digraph "CFG for '_ZN12_GLOBAL__N_112findMaterialB5cxx11ERK10ParametersRK9MC_Vector' function" {
+	label="CFG for '_ZN12_GLOBAL__N_112findMaterialB5cxx11ERK10ParametersRK9MC_Vector' function";
+
+	Node0x55dfe4b9b380 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{entry:\l|  %result.ptr = alloca ptr, align 8\l  %params.addr = alloca ptr, align 8\l  %rr.addr = alloca ptr, align 8\l  %nrvo = alloca i1, align 1\l  %ii = alloca i32, align 4\l  %exn.slot = alloca ptr, align 8\l  %ehselector.slot = alloca i32, align 4\l  store ptr %agg.result, ptr %result.ptr, align 8\l  store ptr %params, ptr %params.addr, align 8\l  store ptr %rr, ptr %rr.addr, align 8\l  store i1 false, ptr %nrvo, align 1\l  call void @_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC1Ev(ptr\l... noundef nonnull align 8 dereferenceable(32) %agg.result) #3\l  store i32 0, ptr %ii, align 4\l  br label %for.cond\l}"];
+	Node0x55dfe4b9b380 -> Node0x55dfe4b9bcd0[tooltip="entry -> for.cond\nProbability 100.00%" ];
+	Node0x55dfe4b9bcd0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.cond:\l|  %0 = load i32, ptr %ii, align 4\l  %conv = zext i32 %0 to i64\l  %1 = load ptr, ptr %params.addr, align 8\l  %geometryParams = getelementptr inbounds %struct.Parameters, ptr %1, i32 0,\l... i32 1\l  %call = call noundef i64\l... @_ZNKSt6vectorI18GeometryParametersSaIS0_EE4sizeEv(ptr noundef nonnull align\l... 8 dereferenceable(24) %geometryParams) #3\l  %cmp = icmp ult i64 %conv, %call\l  br i1 %cmp, label %for.body, label %for.end\l|{<s0>T|<s1>F}}"];
+	Node0x55dfe4b9bcd0:s0 -> Node0x55dfe4b9c700[tooltip="for.cond -> for.body\nProbability 96.88%" ];
+	Node0x55dfe4b9bcd0:s1 -> Node0x55dfe4b9c780[tooltip="for.cond -> for.end\nProbability 3.12%" ];
+	Node0x55dfe4b9c700 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.body:\l|  %2 = load ptr, ptr %params.addr, align 8\l  %geometryParams1 = getelementptr inbounds %struct.Parameters, ptr %2, i32 0,\l... i32 1\l  %3 = load i32, ptr %ii, align 4\l  %conv2 = zext i32 %3 to i64\l  %call3 = call noundef nonnull align 8 dereferenceable(120) ptr\l... @_ZNKSt6vectorI18GeometryParametersSaIS0_EEixEm(ptr noundef nonnull align 8\l... dereferenceable(24) %geometryParams1, i64 noundef %conv2) #3\l  %4 = load ptr, ptr %rr.addr, align 8\l  %call4 = invoke noundef zeroext i1\l... @_ZN12_GLOBAL__N_18isInsideERK18GeometryParametersRK9MC_Vector(ptr noundef\l... nonnull align 8 dereferenceable(120) %call3, ptr noundef nonnull align 8\l... dereferenceable(24) %4)\l          to label %invoke.cont unwind label %lpad\l}"];
+	Node0x55dfe4b9c700 -> Node0x55dfe4b9ce50[tooltip="for.body -> invoke.cont\nProbability 100.00%" ];
+	Node0x55dfe4b9c700 -> Node0x55dfe4b9cea0[tooltip="for.body -> lpad\nProbability 0.00%" ];
+	Node0x55dfe4b9ce50 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{invoke.cont:\l|  br i1 %call4, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x55dfe4b9ce50:s0 -> Node0x55dfe4b9ce00[tooltip="invoke.cont -> if.then\nProbability 50.00%" ];
+	Node0x55dfe4b9ce50:s1 -> Node0x55dfe4b9c150[tooltip="invoke.cont -> if.end\nProbability 50.00%" ];
+	Node0x55dfe4b9ce00 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.then:\l|  %5 = load ptr, ptr %params.addr, align 8\l  %geometryParams5 = getelementptr inbounds %struct.Parameters, ptr %5, i32 0,\l... i32 1\l  %6 = load i32, ptr %ii, align 4\l  %conv6 = zext i32 %6 to i64\l  %call7 = call noundef nonnull align 8 dereferenceable(120) ptr\l... @_ZNKSt6vectorI18GeometryParametersSaIS0_EEixEm(ptr noundef nonnull align 8\l... dereferenceable(24) %geometryParams5, i64 noundef %conv6) #3\l  %materialName = getelementptr inbounds %struct.GeometryParameters, ptr\l... %call7, i32 0, i32 0\l  %call9 = invoke noundef nonnull align 8 dereferenceable(32) ptr\l... @_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEaSERKS4_(ptr noundef\l... nonnull align 8 dereferenceable(32) %agg.result, ptr noundef nonnull align 8\l... dereferenceable(32) %materialName)\l          to label %invoke.cont8 unwind label %lpad\l}"];
+	Node0x55dfe4b9ce00 -> Node0x55dfe4b9d9c0[tooltip="if.then -> invoke.cont8\nProbability 100.00%" ];
+	Node0x55dfe4b9ce00 -> Node0x55dfe4b9cea0[tooltip="if.then -> lpad\nProbability 0.00%" ];
+	Node0x55dfe4b9d9c0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{invoke.cont8:\l|  br label %if.end\l}"];
+	Node0x55dfe4b9d9c0 -> Node0x55dfe4b9c150[tooltip="invoke.cont8 -> if.end\nProbability 100.00%" ];
+	Node0x55dfe4b9cea0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f5c1a970" fontname="Courier",label="{lpad:\l|  %7 = landingpad \{ ptr, i32 \}\l          cleanup\l  %8 = extractvalue \{ ptr, i32 \} %7, 0\l  store ptr %8, ptr %exn.slot, align 8\l  %9 = extractvalue \{ ptr, i32 \} %7, 1\l  store i32 %9, ptr %ehselector.slot, align 4\l  call void @_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEED1Ev(ptr\l... noundef nonnull align 8 dereferenceable(32) %agg.result) #3\l  br label %eh.resume\l}"];
+	Node0x55dfe4b9cea0 -> Node0x55dfe4b9d970[tooltip="lpad -> eh.resume\nProbability 100.00%" ];
+	Node0x55dfe4b9c150 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  br label %for.inc\l}"];
+	Node0x55dfe4b9c150 -> Node0x55dfe4b9e180[tooltip="if.end -> for.inc\nProbability 100.00%" ];
+	Node0x55dfe4b9e180 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.inc:\l|  %10 = load i32, ptr %ii, align 4\l  %inc = add i32 %10, 1\l  store i32 %inc, ptr %ii, align 4\l  br label %for.cond, !llvm.loop !6\l}"];
+	Node0x55dfe4b9e180 -> Node0x55dfe4b9bcd0[tooltip="for.inc -> for.cond\nProbability 100.00%" ];
+	Node0x55dfe4b9c780 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{for.end:\l|  br label %do.body\l}"];
+	Node0x55dfe4b9c780 -> Node0x55dfe4b9e550[tooltip="for.end -> do.body\nProbability 100.00%" ];
+	Node0x55dfe4b9e550 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{do.body:\l|  %call10 = call noundef i64\l... @_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4sizeEv(ptr noundef\l... nonnull align 8 dereferenceable(32) %agg.result) #3\l  %cmp11 = icmp ugt i64 %call10, 0\l  br i1 %cmp11, label %if.end15, label %if.then12\l|{<s0>T|<s1>F}}"];
+	Node0x55dfe4b9e550:s0 -> Node0x55dfe4b9e630[tooltip="do.body -> if.end15\nProbability 50.00%" ];
+	Node0x55dfe4b9e550:s1 -> Node0x55dfe4b9e960[tooltip="do.body -> if.then12\nProbability 50.00%" ];
+	Node0x55dfe4b9e960 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#dc5d4a70" fontname="Courier",label="{if.then12:\l|  %call14 = invoke i32 (ptr, ...) @printf(ptr noundef @.str, ptr noundef\l... @.str.1, i32 noundef 447)\l          to label %invoke.cont13 unwind label %lpad\l}"];
+	Node0x55dfe4b9e960 -> Node0x55dfe4b9eb20[tooltip="if.then12 -> invoke.cont13\nProbability 100.00%" ];
+	Node0x55dfe4b9e960 -> Node0x55dfe4b9cea0[tooltip="if.then12 -> lpad\nProbability 0.00%" ];
+	Node0x55dfe4b9eb20 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#dc5d4a70" fontname="Courier",label="{invoke.cont13:\l|  br label %if.end15\l}"];
+	Node0x55dfe4b9eb20 -> Node0x55dfe4b9e630[tooltip="invoke.cont13 -> if.end15\nProbability 100.00%" ];
+	Node0x55dfe4b9e630 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{if.end15:\l|  br label %do.cond\l}"];
+	Node0x55dfe4b9e630 -> Node0x55dfe4b9eda0[tooltip="if.end15 -> do.cond\nProbability 100.00%" ];
+	Node0x55dfe4b9eda0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{do.cond:\l|  br label %do.end\l}"];
+	Node0x55dfe4b9eda0 -> Node0x55dfe4b9ee80[tooltip="do.cond -> do.end\nProbability 100.00%" ];
+	Node0x55dfe4b9ee80 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{do.end:\l|  store i1 true, ptr %nrvo, align 1\l  %nrvo.val = load i1, ptr %nrvo, align 1\l  br i1 %nrvo.val, label %nrvo.skipdtor, label %nrvo.unused\l|{<s0>T|<s1>F}}"];
+	Node0x55dfe4b9ee80:s0 -> Node0x55dfe4b9f0b0[tooltip="do.end -> nrvo.skipdtor\nProbability 50.00%" ];
+	Node0x55dfe4b9ee80:s1 -> Node0x55dfe4b9f130[tooltip="do.end -> nrvo.unused\nProbability 50.00%" ];
+	Node0x55dfe4b9f130 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#dc5d4a70" fontname="Courier",label="{nrvo.unused:\l|  call void @_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEED1Ev(ptr\l... noundef nonnull align 8 dereferenceable(32) %agg.result) #3\l  br label %nrvo.skipdtor\l}"];
+	Node0x55dfe4b9f130 -> Node0x55dfe4b9f0b0[tooltip="nrvo.unused -> nrvo.skipdtor\nProbability 100.00%" ];
+	Node0x55dfe4b9f0b0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{nrvo.skipdtor:\l|  ret void\l}"];
+	Node0x55dfe4b9d970 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f5c1a970" fontname="Courier",label="{eh.resume:\l|  %exn = load ptr, ptr %exn.slot, align 8\l  %sel = load i32, ptr %ehselector.slot, align 4\l  %lpad.val = insertvalue \{ ptr, i32 \} poison, ptr %exn, 0\l  %lpad.val16 = insertvalue \{ ptr, i32 \} %lpad.val, i32 %sel, 1\l  resume \{ ptr, i32 \} %lpad.val16\l}"];
+}

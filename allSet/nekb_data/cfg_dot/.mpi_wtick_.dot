@@ -1,0 +1,5 @@
+digraph "CFG for 'mpi_wtick_' function" {
+	label="CFG for 'mpi_wtick_' function";
+
+	Node0x5560a31d6510 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{0:\l|  %1 = alloca double, i64 1, align 8\l  store double 1.000000e+00, ptr %1, align 8\l  %2 = load double, ptr %1, align 8\l  ret double %2\l}"];
+}

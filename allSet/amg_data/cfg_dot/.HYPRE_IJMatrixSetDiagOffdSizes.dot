@@ -1,0 +1,19 @@
+digraph "CFG for 'HYPRE_IJMatrixSetDiagOffdSizes' function" {
+	label="CFG for 'HYPRE_IJMatrixSetDiagOffdSizes' function";
+
+	Node0x55c120a60eb0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %retval = alloca i32, align 4\l  %matrix.addr = alloca ptr, align 8\l  %diag_sizes.addr = alloca ptr, align 8\l  %offdiag_sizes.addr = alloca ptr, align 8\l  %ijmatrix = alloca ptr, align 8\l  store ptr %matrix, ptr %matrix.addr, align 8\l  store ptr %diag_sizes, ptr %diag_sizes.addr, align 8\l  store ptr %offdiag_sizes, ptr %offdiag_sizes.addr, align 8\l  %0 = load ptr, ptr %matrix.addr, align 8\l  store ptr %0, ptr %ijmatrix, align 8\l  %1 = load ptr, ptr %ijmatrix, align 8\l  %tobool = icmp ne ptr %1, null\l  br i1 %tobool, label %if.end, label %if.then\l|{<s0>T|<s1>F}}"];
+	Node0x55c120a60eb0:s0 -> Node0x55c120a616c0[tooltip="entry -> if.end\nProbability 62.50%" ];
+	Node0x55c120a60eb0:s1 -> Node0x55c120a61730[tooltip="entry -> if.then\nProbability 37.50%" ];
+	Node0x55c120a61730 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{if.then:\l|  call void @hypre_error_handler(ptr noundef @.str, i32 noundef 764, i32\l... noundef 12, ptr noundef null)\l  %2 = load i32, ptr @hypre__global_error, align 4\l  store i32 %2, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x55c120a61730 -> Node0x55c120a61b00[tooltip="if.then -> return\nProbability 100.00%" ];
+	Node0x55c120a616c0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.end:\l|  %3 = load ptr, ptr %ijmatrix, align 8\l  %object_type = getelementptr inbounds %struct.hypre_IJMatrix_struct, ptr %3,\l... i32 0, i32 3\l  %4 = load i32, ptr %object_type, align 8\l  %cmp = icmp eq i32 %4, 5555\l  br i1 %cmp, label %if.then1, label %if.else\l|{<s0>T|<s1>F}}"];
+	Node0x55c120a616c0:s0 -> Node0x55c120a60de0[tooltip="if.end -> if.then1\nProbability 50.00%" ];
+	Node0x55c120a616c0:s1 -> Node0x55c120a61f40[tooltip="if.end -> if.else\nProbability 50.00%" ];
+	Node0x55c120a60de0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{if.then1:\l|  %5 = load ptr, ptr %ijmatrix, align 8\l  %6 = load ptr, ptr %diag_sizes.addr, align 8\l  %7 = load ptr, ptr %offdiag_sizes.addr, align 8\l  %call = call i32 @hypre_IJMatrixSetDiagOffdSizesParCSR(ptr noundef %5, ptr\l... noundef %6, ptr noundef %7)\l  br label %if.end2\l}"];
+	Node0x55c120a60de0 -> Node0x55c120a62390[tooltip="if.then1 -> if.end2\nProbability 100.00%" ];
+	Node0x55c120a61f40 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{if.else:\l|  call void @hypre_error_handler(ptr noundef @.str, i32 noundef 774, i32\l... noundef 12, ptr noundef null)\l  br label %if.end2\l}"];
+	Node0x55c120a61f40 -> Node0x55c120a62390[tooltip="if.else -> if.end2\nProbability 100.00%" ];
+	Node0x55c120a62390 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.end2:\l|  %8 = load i32, ptr @hypre__global_error, align 4\l  store i32 %8, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x55c120a62390 -> Node0x55c120a61b00[tooltip="if.end2 -> return\nProbability 100.00%" ];
+	Node0x55c120a61b00 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{return:\l|  %9 = load i32, ptr %retval, align 4\l  ret i32 %9\l}"];
+}

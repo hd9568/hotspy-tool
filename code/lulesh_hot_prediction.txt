@@ -1,0 +1,131 @@
+MODEL BEGINNING!
+this is GPU0: Tesla V100-PCIE-32GB
+All functions have been obtained! All graphs are being parsed:
+big is 0 ,0 of which is hot!
+17 is ignored,  1 of which is hot!
+test dataloader's time is 0.0 mins
+========== all test data has already been ready! ===========
+_ZN6Domain2zdEi
+_ZNK6Domain18monoq_limiter_multEv
+_ZN6Domain1xEi
+_ZNSt6vectorIdSaIdEEixEm
+_ZNKSt6vectorIiSaIiEE4sizeEv
+_ZNSt6vectorIiSaIiEE11_S_relocateEPiS2_S2_RS0_
+_ZN6Domain2qqEi
+_ZN6Domain1zEi
+_ZNK6Domain7refdensEv
+_ZSt12setprecisioni
+_ZSt8_DestroyIPdEvT_S1_
+_ZNK6Domain4pminEv
+_ZN6Domain3xddEi
+_ZN6Domain5dtmaxEv
+_ZSt10scientificRSt8ios_base
+_ZL17SumElemFaceNormalPdS_S_S_S_S_S_S_S_S_S_S_dddddddddddd
+_ZNSt12_Vector_baseIdSaIdEE17_Vector_impl_dataC2Ev
+_ZN6Domain4vnewEi
+_ZNK6Domain9qqc_monoqEv
+_ZNK6Domain9qlc_monoqEv
+_ZN6Domain15deltatimemultubEv
+_ZL8AreaFacedddddddddddd
+_ZN6Domain1pEi
+_ZN6Domain3zddEi
+_ZN6Domain22AllocateElemPersistentEi
+_ZNK6Domain7eosvmaxEv
+_ZN6Domain8delx_etaEi
+_ZL24CalcElemVolumeDerivativePdS_S_PKdS1_S1_
+_ZNK6Domain7dvovmaxEv
+_ZN6Domain2qlEi
+_ZN6Domain22AllocateNodePersistentEi
+_ZSt3powIiiEN9__gnu_cxx11__promote_2IT_T0_NS0_9__promoteIS2_Xsr3std12__is_integerIS2_EE7__valueEE6__typeENS4_IS3_Xsr3std12__is_integerIS3_EE7__valueEE6__typeEE6__typeES2_S3_
+_ZN6Domain6lzetamEi
+_ZSt8_DestroyIPddEvT_S1_RSaIT0_E
+_ZNSt12_Destroy_auxILb1EE9__destroyIPiEEvT_S3_
+_ZN6Domain11regElemlistEi
+_ZStoRRSt13_Ios_FmtflagsS_
+_ZN6Domain3dzzEi
+_ZN6Domain19DeallocateGradientsEv
+_ZN6Domain15AllocateStrainsEi
+_ZN9__gnu_cxx17__normal_iteratorIPKiSt6vectorIiSaIiEEEC2ERKS2_
+_ZL28CalcElemCharacteristicLengthPKdS0_S0_d
+_ZStorSt13_Ios_FmtflagsS_
+_ZN6Domain15deltatimemultlbEv
+_ZN6Domain3dxxEi
+_ZNK6Domain3qqcEv
+_ZN6Domain2xdEi
+_Z4FABSd
+_ZNK6Domain5u_cutEv
+_ZL7VoluDerddddddddddddddddddPdS_S_
+_ZNSt8ios_base4setfESt13_Ios_FmtflagsS0_
+_ZN6Domain4costEv
+_ZN6Domain9nodalMassEi
+_ZN6Domain3dyyEi
+_ZN6Domain4voloEi
+_ZNK6Domain5qstopEv
+_ZNSt6vectorIiSaIiEEixEm
+_ZN6Domain11regElemlistEii
+_ZN6Domain4timeEv
+_ZN6Domain1yEi
+_ZN6Domain8numRanksEv
+_ZNSt12_Destroy_auxILb1EE9__destroyIPdEEvT_S3_
+_ZN6Domain6arealgEi
+_ZN6Domain8delv_etaEi
+_ZN6Domain8stoptimeEv
+_ZNK6Domain15monoq_max_slopeEv
+_ZN6Domain17AllocateGradientsEii
+_ZN6Domain2fxEi
+_ZNK6Domain5ss4o3Ev
+_ZL27SumElemStressesToNodeForcesPA8_KddddPdS2_S2_
+_ZN6Domain7dtfixedEv
+_ZNK6Domain4eminEv
+_ZL14CalcElemVolumedddddddddddddddddddddddd
+_ZN6Domain3yddEi
+_Z14CalcElemVolumePKdS0_S0_
+_ZNK6Domain5q_cutEv
+_ZN6Domain1eEi
+_ZStaNRSt13_Ios_FmtflagsS_
+_ZNSt12_Vector_baseIiSaIiEE17_Vector_impl_dataC2Ev
+_ZNK6Domain6hgcoefEv
+_ZN6Domain7numNodeEv
+_ZNK6Domain5p_cutEv
+_ZN6Domain7dthydroEv
+_ZNK6Domain7eosvminEv
+_ZN6Domain5symmXEi
+_ZN6Domain5symmYEi
+_ZStanSt13_Ios_FmtflagsS_
+_ZNKSt12_Vector_baseIdSaIdEE19_M_get_Tp_allocatorEv
+_ZN6Domain7delv_xiEi
+_ZNK6Domain5e_cutEv
+_ZN6Domain8nodelistEi
+_ZNSt8ios_base6unsetfESt13_Ios_Fmtflags
+_ZStcoSt13_Ios_Fmtflags
+_Z4CBRTd
+_ZN6Domain5symmZEi
+_Z4SQRTd
+_ZN6Domain9delv_zetaEi
+_ZN6Domain4delvEi
+_ZNSt12_Vector_baseIdSaIdEE19_M_get_Tp_allocatorEv
+_ZSt4setwi
+_ZL19CalcElemNodeNormalsPdS_S_PKdS1_S1_
+_ZN6Domain1qEi
+_ZN6Domain5cycleEv
+_ZN6Domain4vdovEi
+_ZN6Domain9delx_zetaEi
+_ZN6Domain10regNumListEi
+_ZL24CalcElemVelocityGradientPKdS0_S0_PA8_S_dPd
+_ZL32CalcElemShapeFunctionDerivativesPKdS0_S0_PA8_dPd
+_ZN6Domain7delx_xiEi
+_ZL29CollectDomainNodesToElemNodesR6DomainPKiPdS3_S3_
+_ZN6Domain9dtcourantEv
+| TN=88 FP=61 |
+| FN=13 TP=50 |
+test accuracy: 65.09%
+precision: 45.05%
+recall: 79.37%
+f1 score: 0.575
+lule_data datasize: 212; hot: 0.2972; acc: 0.6509
+MODEL BEGINNING!
+this is GPU0: Tesla V100-PCIE-32GB
+All functions have been obtained! All graphs are being parsed:
+big is 0 ,0 of which is hot!
+17 is ignored,  1 of which is hot!
+test dataloader's time is 0.0 mins

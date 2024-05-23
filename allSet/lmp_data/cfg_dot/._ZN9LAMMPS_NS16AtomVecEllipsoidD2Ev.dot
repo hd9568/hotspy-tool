@@ -1,0 +1,9 @@
+digraph "CFG for '_ZN9LAMMPS_NS16AtomVecEllipsoidD2Ev' function" {
+	label="CFG for '_ZN9LAMMPS_NS16AtomVecEllipsoidD2Ev' function";
+
+	Node0x556728d59d70 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  store ptr getelementptr inbounds (\{ [68 x ptr] \}, ptr\l... @_ZTVN9LAMMPS_NS16AtomVecEllipsoidE, i32 0, inrange i32 0, i32 2), ptr\l... %this1, align 8\l  %memory = getelementptr inbounds %\"class.LAMMPS_NS::Pointers\", ptr %this1,\l... i32 0, i32 2\l  %0 = load ptr, ptr %memory, align 8\l  %1 = load ptr, ptr %0, align 8\l  %bonus = getelementptr inbounds %\"class.LAMMPS_NS::AtomVecEllipsoid\", ptr\l... %this1, i32 0, i32 1\l  %2 = load ptr, ptr %bonus, align 8\l  invoke void @_ZN9LAMMPS_NS6Memory5sfreeEPv(ptr noundef nonnull align 8\l... dereferenceable(184) %1, ptr noundef %2)\l          to label %invoke.cont unwind label %terminate.lpad\l}"];
+	Node0x556728d59d70 -> Node0x556728d5a0f0[tooltip="entry -> invoke.cont\nProbability 100.00%" ];
+	Node0x556728d59d70 -> Node0x556728d5a140[tooltip="entry -> terminate.lpad\nProbability 0.00%" ];
+	Node0x556728d5a0f0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{invoke.cont:\l|  call void @_ZN9LAMMPS_NS7AtomVecD2Ev(ptr noundef nonnull align 8\l... dereferenceable(2752) %this1) #12\l  ret void\l}"];
+	Node0x556728d5a140 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f4c5ad70" fontname="Courier",label="{terminate.lpad:\l|  %3 = landingpad \{ ptr, i32 \}\l          catch ptr null\l  %4 = extractvalue \{ ptr, i32 \} %3, 0\l  call void @__clang_call_terminate(ptr %4) #13\l  unreachable\l}"];
+}

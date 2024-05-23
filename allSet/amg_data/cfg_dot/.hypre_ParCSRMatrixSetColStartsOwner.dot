@@ -1,0 +1,12 @@
+digraph "CFG for 'hypre_ParCSRMatrixSetColStartsOwner' function" {
+	label="CFG for 'hypre_ParCSRMatrixSetColStartsOwner' function";
+
+	Node0x55b0c8130240 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %retval = alloca i32, align 4\l  %matrix.addr = alloca ptr, align 8\l  %owns_col_starts.addr = alloca i32, align 4\l  store ptr %matrix, ptr %matrix.addr, align 8\l  store i32 %owns_col_starts, ptr %owns_col_starts.addr, align 4\l  %0 = load ptr, ptr %matrix.addr, align 8\l  %tobool = icmp ne ptr %0, null\l  br i1 %tobool, label %if.end, label %if.then\l|{<s0>T|<s1>F}}"];
+	Node0x55b0c8130240:s0 -> Node0x55b0c8130740[tooltip="entry -> if.end\nProbability 62.50%" ];
+	Node0x55b0c8130240:s1 -> Node0x55b0c81307b0[tooltip="entry -> if.then\nProbability 37.50%" ];
+	Node0x55b0c81307b0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{if.then:\l|  call void @hypre_error_handler(ptr noundef @.str, i32 noundef 335, i32\l... noundef 12, ptr noundef null)\l  %1 = load i32, ptr @hypre__global_error, align 4\l  store i32 %1, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x55b0c81307b0 -> Node0x55b0c8130b80[tooltip="if.then -> return\nProbability 100.00%" ];
+	Node0x55b0c8130740 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.end:\l|  %2 = load i32, ptr %owns_col_starts.addr, align 4\l  %3 = load ptr, ptr %matrix.addr, align 8\l  %owns_col_starts1 = getelementptr inbounds\l... %struct.hypre_ParCSRMatrix_struct, ptr %3, i32 0, i32 18\l  store i32 %2, ptr %owns_col_starts1, align 8\l  %4 = load i32, ptr @hypre__global_error, align 4\l  store i32 %4, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x55b0c8130740 -> Node0x55b0c8130b80[tooltip="if.end -> return\nProbability 100.00%" ];
+	Node0x55b0c8130b80 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{return:\l|  %5 = load i32, ptr %retval, align 4\l  ret i32 %5\l}"];
+}

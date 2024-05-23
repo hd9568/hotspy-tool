@@ -1,0 +1,5 @@
+digraph "CFG for 'comm_reduce_double' function" {
+	label="CFG for 'comm_reduce_double' function";
+
+	Node0x556b0555d2f0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %c.addr = alloca ptr, align 8\l  %op.addr = alloca i32, align 4\l  %v.addr = alloca ptr, align 8\l  %vn.addr = alloca i32, align 4\l  store ptr %c, ptr %c.addr, align 8\l  store i32 %op, ptr %op.addr, align 4\l  store ptr %v, ptr %v.addr, align 8\l  store i32 %vn, ptr %vn.addr, align 4\l  %0 = load ptr, ptr %c.addr, align 8\l  %1 = load i32, ptr %op.addr, align 4\l  %2 = load ptr, ptr %v.addr, align 8\l  %3 = load i32, ptr %vn.addr, align 4\l  %call = call double @comm_reduce__double(ptr noundef %0, i32 noundef %1, ptr\l... noundef %2, i32 noundef %3)\l  ret double %call\l}"];
+}

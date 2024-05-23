@@ -1,0 +1,5 @@
+digraph "CFG for 'comm_wait' function" {
+	label="CFG for 'comm_wait' function";
+
+	Node0x559aeb3475f0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %req.addr = alloca ptr, align 8\l  %n.addr = alloca i32, align 4\l  store ptr %req, ptr %req.addr, align 8\l  store i32 %n, ptr %n.addr, align 4\l  ret void\l}"];
+}

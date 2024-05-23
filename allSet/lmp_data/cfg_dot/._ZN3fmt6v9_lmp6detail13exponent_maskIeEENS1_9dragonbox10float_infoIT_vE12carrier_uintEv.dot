@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN3fmt6v9_lmp6detail13exponent_maskIeEENS1_9dragonbox10float_infoIT_vE12carrier_uintEv' function" {
+	label="CFG for '_ZN3fmt6v9_lmp6detail13exponent_maskIeEENS1_9dragonbox10float_infoIT_vE12carrier_uintEv' function";
+
+	Node0x55fec333e2c0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %retval = alloca i128, align 16\l  %call = call noundef i32 @_ZN3fmt6v9_lmp6detail20num_significand_bitsIeEEiv()\l  %sh_prom = zext i32 %call to i128\l  %shl = shl i128 32767, %sh_prom\l  store i128 %shl, ptr %retval, align 16\l  %0 = load \{ i64, i64 \}, ptr %retval, align 16\l  ret \{ i64, i64 \} %0\l}"];
+}

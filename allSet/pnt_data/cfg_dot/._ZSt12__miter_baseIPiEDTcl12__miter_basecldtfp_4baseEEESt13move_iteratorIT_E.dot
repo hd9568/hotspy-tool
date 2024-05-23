@@ -1,0 +1,5 @@
+digraph "CFG for '_ZSt12__miter_baseIPiEDTcl12__miter_basecldtfp_4baseEEESt13move_iteratorIT_E' function" {
+	label="CFG for '_ZSt12__miter_baseIPiEDTcl12__miter_basecldtfp_4baseEEESt13move_iteratorIT_E' function";
+
+	Node0x557992574df0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %__it = alloca %\"class.std::move_iterator\", align 8\l  %coerce.dive = getelementptr inbounds %\"class.std::move_iterator\", ptr\l... %__it, i32 0, i32 0\l  store ptr %__it.coerce, ptr %coerce.dive, align 8\l  %call = call noundef ptr @_ZNKSt13move_iteratorIPiE4baseEv(ptr noundef\l... nonnull align 8 dereferenceable(8) %__it)\l  %call1 = call noundef ptr @_ZSt12__miter_baseIPiET_S1_(ptr noundef %call)\l  ret ptr %call1\l}"];
+}

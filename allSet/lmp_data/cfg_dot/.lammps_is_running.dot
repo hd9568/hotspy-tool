@@ -1,0 +1,5 @@
+digraph "CFG for 'lammps_is_running' function" {
+	label="CFG for 'lammps_is_running' function";
+
+	Node0x55bdf818c0f0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %handle.addr = alloca ptr, align 8\l  %lmp = alloca ptr, align 8\l  store ptr %handle, ptr %handle.addr, align 8\l  %0 = load ptr, ptr %handle.addr, align 8\l  store ptr %0, ptr %lmp, align 8\l  %1 = load ptr, ptr %lmp, align 8\l  %update = getelementptr inbounds %\"class.LAMMPS_NS::LAMMPS\", ptr %1, i32 0,\l... i32 5\l  %2 = load ptr, ptr %update, align 8\l  %whichflag = getelementptr inbounds %\"class.LAMMPS_NS::Update\", ptr %2, i32\l... 0, i32 6\l  %3 = load i32, ptr %whichflag, align 4\l  ret i32 %3\l}"];
+}

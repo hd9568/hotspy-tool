@@ -1,0 +1,19 @@
+digraph "Call graph: proc_grid.ll" {
+	label="Call graph: proc_grid.ll";
+
+	Node0x55e166fd9410 [shape=record,label="{proc_grid_}"];
+	Node0x55e166fd9410 -> Node0x55e166fdf6f0;
+	Node0x55e166fd9410 -> Node0x55e166fdfbb0;
+	Node0x55e166fd9410 -> Node0x55e166fdfc30;
+	Node0x55e166fd9410 -> Node0x55e166fdfcb0;
+	Node0x55e166fd9410 -> Node0x55e166fdfd30;
+	Node0x55e166fd9410 -> Node0x55e166fdff00;
+	Node0x55e166fdfbb0 [shape=record,label="{_FortranAioBeginExternalFormattedOutput}"];
+	Node0x55e166fdfc30 [shape=record,label="{_FortranAioOutputInteger32}"];
+	Node0x55e166fdfcb0 [shape=record,label="{_FortranAioEndIoStatement}"];
+	Node0x55e166fdfd30 [shape=record,label="{mpi_abort_}"];
+	Node0x55e166fe0260 [shape=record,label="{llvm.stacksave.p0}"];
+	Node0x55e166fe02e0 [shape=record,label="{llvm.stackrestore.p0}"];
+	Node0x55e166fdff00 [shape=record,label="{__mlir_math_ipowi_i32}"];
+	Node0x55e166fdf6f0 [shape=record,label="{llvm.sqrt.f64}"];
+}

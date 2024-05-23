@@ -1,0 +1,5 @@
+digraph "CFG for '_Z10mpiBarrieri' function" {
+	label="CFG for '_Z10mpiBarrieri' function";
+
+	Node0x5606e0047ff0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %comm.addr = alloca i32, align 4\l  store i32 %comm, ptr %comm.addr, align 4\l  ret void\l}"];
+}

@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN3fmt6v9_lmp6detail13decimal_pointIcEET_NS1_10locale_refE' function" {
+	label="CFG for '_ZN3fmt6v9_lmp6detail13decimal_pointIcEET_NS1_10locale_refE' function";
+
+	Node0x556bfecb4cb0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %loc = alloca %\"class.fmt::v9_lmp::detail::locale_ref\", align 8\l  %agg.tmp = alloca %\"class.fmt::v9_lmp::detail::locale_ref\", align 8\l  %coerce.dive = getelementptr inbounds\l... %\"class.fmt::v9_lmp::detail::locale_ref\", ptr %loc, i32 0, i32 0\l  store ptr %loc.coerce, ptr %coerce.dive, align 8\l  call void @llvm.memcpy.p0.p0.i64(ptr align 8 %agg.tmp, ptr align 8 %loc, i64\l... 8, i1 false)\l  %coerce.dive1 = getelementptr inbounds\l... %\"class.fmt::v9_lmp::detail::locale_ref\", ptr %agg.tmp, i32 0, i32 0\l  %0 = load ptr, ptr %coerce.dive1, align 8\l  %call = call noundef signext i8\l... @_ZN3fmt6v9_lmp6detail18decimal_point_implIcEET_NS1_10locale_refE(ptr %0)\l  ret i8 %call\l}"];
+}

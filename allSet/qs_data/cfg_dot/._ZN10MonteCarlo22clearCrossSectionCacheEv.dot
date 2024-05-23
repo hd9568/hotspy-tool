@@ -1,0 +1,14 @@
+digraph "CFG for '_ZN10MonteCarlo22clearCrossSectionCacheEv' function" {
+	label="CFG for '_ZN10MonteCarlo22clearCrossSectionCacheEv' function";
+
+	Node0x564271985b80 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %numEnergyGroups = alloca i32, align 4\l  %ii = alloca i32, align 4\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %_nuclearData = getelementptr inbounds %class.MonteCarlo, ptr %this1, i32 0,\l... i32 2\l  %0 = load ptr, ptr %_nuclearData, align 8\l  %_numEnergyGroups = getelementptr inbounds %class.NuclearData, ptr %0, i32\l... 0, i32 0\l  %1 = load i32, ptr %_numEnergyGroups, align 8\l  store i32 %1, ptr %numEnergyGroups, align 4\l  store i32 0, ptr %ii, align 4\l  br label %for.cond\l}"];
+	Node0x564271985b80 -> Node0x564271986370[tooltip="entry -> for.cond\nProbability 100.00%" ];
+	Node0x564271986370 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.cond:\l|  %2 = load i32, ptr %ii, align 4\l  %domain = getelementptr inbounds %class.MonteCarlo, ptr %this1, i32 0, i32 0\l  %call = call noundef i32 @_ZNK9qs_vectorI9MC_DomainE4sizeEv(ptr noundef\l... nonnull align 8 dereferenceable(24) %domain)\l  %cmp = icmp ult i32 %2, %call\l  br i1 %cmp, label %for.body, label %for.end\l|{<s0>T|<s1>F}}"];
+	Node0x564271986370:s0 -> Node0x5642719867d0[tooltip="for.cond -> for.body\nProbability 96.88%" ];
+	Node0x564271986370:s1 -> Node0x564271986a20[tooltip="for.cond -> for.end\nProbability 3.12%" ];
+	Node0x5642719867d0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.body:\l|  %domain2 = getelementptr inbounds %class.MonteCarlo, ptr %this1, i32 0,\l... i32 0\l  %3 = load i32, ptr %ii, align 4\l  %call3 = call noundef nonnull align 8 dereferenceable(288) ptr\l... @_ZN9qs_vectorI9MC_DomainEixEi(ptr noundef nonnull align 8\l... dereferenceable(24) %domain2, i32 noundef %3)\l  %4 = load i32, ptr %numEnergyGroups, align 4\l  call void @_ZN9MC_Domain22clearCrossSectionCacheEi(ptr noundef nonnull align\l... 8 dereferenceable(288) %call3, i32 noundef %4)\l  br label %for.inc\l}"];
+	Node0x5642719867d0 -> Node0x564271988200[tooltip="for.body -> for.inc\nProbability 100.00%" ];
+	Node0x564271988200 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.inc:\l|  %5 = load i32, ptr %ii, align 4\l  %inc = add i32 %5, 1\l  store i32 %inc, ptr %ii, align 4\l  br label %for.cond, !llvm.loop !6\l}"];
+	Node0x564271988200 -> Node0x564271986370[tooltip="for.inc -> for.cond\nProbability 100.00%" ];
+	Node0x564271986a20 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{for.end:\l|  ret void\l}"];
+}

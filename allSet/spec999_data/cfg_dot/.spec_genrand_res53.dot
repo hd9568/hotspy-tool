@@ -1,0 +1,5 @@
+digraph "CFG for 'spec_genrand_res53' function" {
+	label="CFG for 'spec_genrand_res53' function";
+
+	Node0x5614a63e9fb0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %a = alloca i64, align 8\l  %b = alloca i64, align 8\l  %call = call i64 @spec_genrand_int32()\l  %shr = lshr i64 %call, 5\l  store i64 %shr, ptr %a, align 8\l  %call1 = call i64 @spec_genrand_int32()\l  %shr2 = lshr i64 %call1, 6\l  store i64 %shr2, ptr %b, align 8\l  %0 = load i64, ptr %a, align 8\l  %conv = uitofp i64 %0 to double\l  %1 = load i64, ptr %b, align 8\l  %conv3 = uitofp i64 %1 to double\l  %2 = call double @llvm.fmuladd.f64(double %conv, double 0x4190000000000000,\l... double %conv3)\l  %mul = fmul double %2, 0x3CA0000000000000\l  ret double %mul\l}"];
+}

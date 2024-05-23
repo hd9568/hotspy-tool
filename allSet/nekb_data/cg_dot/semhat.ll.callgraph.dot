@@ -1,0 +1,13 @@
+digraph "Call graph: semhat.ll" {
+	label="Call graph: semhat.ll";
+
+	Node0x556ec2a8b390 [shape=record,label="{semhat_}"];
+	Node0x556ec2a8b390 -> Node0x556ec2a8b440;
+	Node0x556ec2a8b390 -> Node0x556ec2a8b900;
+	Node0x556ec2a8b390 -> Node0x556ec2a8b980;
+	Node0x556ec2a8b900 [shape=record,label="{fd_weights_full_}"];
+	Node0x556ec2a8b440 [shape=record,label="{zwgll_}"];
+	Node0x556ec2a8b980 [shape=record,label="{rzero_}"];
+	Node0x556ec2a8bb60 [shape=record,label="{llvm.stacksave.p0}"];
+	Node0x556ec2a8bd30 [shape=record,label="{llvm.stackrestore.p0}"];
+}

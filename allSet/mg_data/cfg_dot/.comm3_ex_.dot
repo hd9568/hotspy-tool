@@ -1,0 +1,27 @@
+digraph "CFG for 'comm3_ex_' function" {
+	label="CFG for 'comm3_ex_' function";
+
+	Node0x559626d3a0e0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{5:\l|  %6 = alloca i32, i64 1, align 4\l  %7 = alloca i32, i64 1, align 4\l  %8 = alloca i32, i64 1, align 4\l  %9 = alloca i32, i64 1, align 4\l  %10 = alloca i32, i64 1, align 4\l  %11 = alloca i32, i64 1, align 4\l  %12 = alloca i32, i64 1, align 4\l  br label %13\l}"];
+	Node0x559626d3a0e0 -> Node0x559626d3a5e0[tooltip="5 -> 13\nProbability 100.00%" ];
+	Node0x559626d3a5e0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{13:\l|  %14 = phi i32 [ %57, %55 ], [ 1, %5 ]\l  %15 = phi i64 [ %58, %55 ], [ 3, %5 ]\l  %16 = icmp sgt i64 %15, 0\l  br i1 %16, label %17, label %59\l|{<s0>T|<s1>F}}"];
+	Node0x559626d3a5e0:s0 -> Node0x559626d3a8d0[tooltip="13 -> 17\nProbability 96.88%" ];
+	Node0x559626d3a5e0:s1 -> Node0x559626d3a920[tooltip="13 -> 59\nProbability 3.12%" ];
+	Node0x559626d3a8d0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{17:\l|  store i32 %14, ptr %12, align 4\l  %18 = load i32, ptr getelementptr (i8, ptr @mpistuff_, i64 4), align 4\l  %19 = icmp ne i32 %18, 1\l  br i1 %19, label %20, label %54\l|{<s0>T|<s1>F}}"];
+	Node0x559626d3a8d0:s0 -> Node0x559626d3abd0[tooltip="17 -> 20\nProbability 50.00%" ];
+	Node0x559626d3a8d0:s1 -> Node0x559626d3ac20[tooltip="17 -> 54\nProbability 50.00%" ];
+	Node0x559626d3abd0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{20:\l|  %21 = load i32, ptr %12, align 4\l  %22 = sext i32 %21 to i64\l  %23 = load i32, ptr %4, align 4\l  %24 = sext i32 %23 to i64\l  %25 = sub nsw i64 %22, 1\l  %26 = mul nsw i64 %25, 1\l  %27 = mul nsw i64 %26, 1\l  %28 = add nsw i64 %27, 0\l  %29 = sub nsw i64 %24, 1\l  %30 = mul nsw i64 %29, 1\l  %31 = mul nsw i64 %30, 3\l  %32 = add nsw i64 %31, %28\l  %33 = getelementptr i32, ptr getelementptr (i8, ptr @comm_ex_, i64 144), i64\l... %32\l  %34 = load i32, ptr %33, align 4\l  %35 = icmp ne i32 %34, 0\l  br i1 %35, label %36, label %37\l|{<s0>T|<s1>F}}"];
+	Node0x559626d3abd0:s0 -> Node0x559626d3b530[tooltip="20 -> 36\nProbability 62.50%" ];
+	Node0x559626d3abd0:s1 -> Node0x559626d3b580[tooltip="20 -> 37\nProbability 37.50%" ];
+	Node0x559626d3b530 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{36:\l|  store i32 -1, ptr %11, align 4\l  call void @ready_(ptr %12, ptr %11, ptr %4)\l  store i32 1, ptr %10, align 4\l  call void @ready_(ptr %12, ptr %10, ptr %4)\l  store i32 -1, ptr %9, align 4\l  call void @take3_ex_(ptr %12, ptr %9, ptr %0, ptr %1, ptr %2, ptr %3)\l  store i32 1, ptr %8, align 4\l  call void @take3_ex_(ptr %12, ptr %8, ptr %0, ptr %1, ptr %2, ptr %3)\l  br label %37\l}"];
+	Node0x559626d3b530 -> Node0x559626d3b580[tooltip="36 -> 37\nProbability 100.00%" ];
+	Node0x559626d3b580 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{37:\l|  %38 = load i32, ptr %12, align 4\l  %39 = sext i32 %38 to i64\l  %40 = load i32, ptr %4, align 4\l  %41 = sext i32 %40 to i64\l  %42 = sub nsw i64 %39, 1\l  %43 = mul nsw i64 %42, 1\l  %44 = mul nsw i64 %43, 1\l  %45 = add nsw i64 %44, 0\l  %46 = sub nsw i64 %41, 1\l  %47 = mul nsw i64 %46, 1\l  %48 = mul nsw i64 %47, 3\l  %49 = add nsw i64 %48, %45\l  %50 = getelementptr i32, ptr getelementptr (i8, ptr @comm_ex_, i64 36), i64\l... %49\l  %51 = load i32, ptr %50, align 4\l  %52 = icmp ne i32 %51, 0\l  br i1 %52, label %53, label %55\l|{<s0>T|<s1>F}}"];
+	Node0x559626d3b580:s0 -> Node0x559626d3d020[tooltip="37 -> 53\nProbability 62.50%" ];
+	Node0x559626d3b580:s1 -> Node0x559626d3a6a0[tooltip="37 -> 55\nProbability 37.50%" ];
+	Node0x559626d3d020 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{53:\l|  store i32 1, ptr %7, align 4\l  call void @give3_ex_(ptr %12, ptr %7, ptr %0, ptr %1, ptr %2, ptr %3, ptr %4)\l  store i32 -1, ptr %6, align 4\l  call void @give3_ex_(ptr %12, ptr %6, ptr %0, ptr %1, ptr %2, ptr %3, ptr %4)\l  br label %55\l}"];
+	Node0x559626d3d020 -> Node0x559626d3a6a0[tooltip="53 -> 55\nProbability 100.00%" ];
+	Node0x559626d3ac20 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{54:\l|  call void @comm1p_ex_(ptr %12, ptr %0, ptr %1, ptr %2, ptr %3, ptr %4)\l  br label %55\l}"];
+	Node0x559626d3ac20 -> Node0x559626d3a6a0[tooltip="54 -> 55\nProbability 100.00%" ];
+	Node0x559626d3a6a0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{55:\l|  %56 = load i32, ptr %12, align 4\l  %57 = add i32 %56, 1\l  %58 = sub i64 %15, 1\l  br label %13\l}"];
+	Node0x559626d3a6a0 -> Node0x559626d3a5e0[tooltip="55 -> 13\nProbability 100.00%" ];
+	Node0x559626d3a920 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{59:\l|  store i32 %14, ptr %12, align 4\l  ret void\l}"];
+}

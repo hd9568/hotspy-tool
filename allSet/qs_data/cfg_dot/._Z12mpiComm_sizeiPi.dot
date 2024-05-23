@@ -1,0 +1,5 @@
+digraph "CFG for '_Z12mpiComm_sizeiPi' function" {
+	label="CFG for '_Z12mpiComm_sizeiPi' function";
+
+	Node0x561c73bf6290 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %comm.addr = alloca i32, align 4\l  %size.addr = alloca ptr, align 8\l  store i32 %comm, ptr %comm.addr, align 4\l  store ptr %size, ptr %size.addr, align 8\l  %0 = load ptr, ptr %size.addr, align 8\l  store i32 1, ptr %0, align 4\l  ret void\l}"];
+}

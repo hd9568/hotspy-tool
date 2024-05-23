@@ -1,0 +1,12 @@
+digraph "CFG for '_ZL20ptr_argument_warningv' function" {
+	label="CFG for '_ZL20ptr_argument_warningv' function";
+
+	Node0x55bdf7d88ed0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %0 = load i32, ptr @_ZL17ptr_argument_flag, align 4\l  %tobool = icmp ne i32 %0, 0\l  br i1 %tobool, label %if.end, label %if.then\l|{<s0>T|<s1>F}}"];
+	Node0x55bdf7d88ed0:s0 -> Node0x55bdf7d890e0[tooltip="entry -> if.end\nProbability 62.50%" ];
+	Node0x55bdf7d88ed0:s1 -> Node0x55bdf7d89150[tooltip="entry -> if.then\nProbability 37.50%" ];
+	Node0x55bdf7d89150 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{if.then:\l|  br label %return\l}"];
+	Node0x55bdf7d89150 -> Node0x55bdf7d89270[tooltip="if.then -> return\nProbability 100.00%" ];
+	Node0x55bdf7d890e0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.end:\l|  %1 = load ptr, ptr @stderr, align 8\l  %call = call i32 (ptr, ptr, ...) @fprintf(ptr noundef %1, ptr noundef\l... @.str.213)\l  store i32 0, ptr @_ZL17ptr_argument_flag, align 4\l  br label %return\l}"];
+	Node0x55bdf7d890e0 -> Node0x55bdf7d89270[tooltip="if.end -> return\nProbability 100.00%" ];
+	Node0x55bdf7d89270 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{return:\l|  ret void\l}"];
+}

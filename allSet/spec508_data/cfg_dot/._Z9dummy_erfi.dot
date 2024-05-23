@@ -1,0 +1,5 @@
+digraph "CFG for '_Z9dummy_erfi' function" {
+	label="CFG for '_Z9dummy_erfi' function";
+
+	Node0x55af39d86e10 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %i.addr = alloca i32, align 4\l  store i32 %i, ptr %i.addr, align 4\l  %0 = load i32, ptr %i.addr, align 4\l  ret i32 %0\l}"];
+}

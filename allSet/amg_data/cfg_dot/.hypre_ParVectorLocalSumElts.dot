@@ -1,0 +1,5 @@
+digraph "CFG for 'hypre_ParVectorLocalSumElts' function" {
+	label="CFG for 'hypre_ParVectorLocalSumElts' function";
+
+	Node0x556ffb6bb230 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %vector.addr = alloca ptr, align 8\l  store ptr %vector, ptr %vector.addr, align 8\l  %0 = load ptr, ptr %vector.addr, align 8\l  %local_vector = getelementptr inbounds %struct.hypre_ParVector_struct, ptr\l... %0, i32 0, i32 6\l  %1 = load ptr, ptr %local_vector, align 8\l  %call = call double @hypre_VectorSumElts(ptr noundef %1)\l  ret double %call\l}"];
+}

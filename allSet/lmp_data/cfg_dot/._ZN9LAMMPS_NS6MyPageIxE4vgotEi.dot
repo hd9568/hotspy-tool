@@ -1,0 +1,10 @@
+digraph "CFG for '_ZN9LAMMPS_NS6MyPageIxE4vgotEi' function" {
+	label="CFG for '_ZN9LAMMPS_NS6MyPageIxE4vgotEi' function";
+
+	Node0x556aef9d8bd0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %n.addr = alloca i32, align 4\l  store ptr %this, ptr %this.addr, align 8\l  store i32 %n, ptr %n.addr, align 4\l  %this1 = load ptr, ptr %this.addr, align 8\l  %0 = load i32, ptr %n.addr, align 4\l  %maxchunk = getelementptr inbounds %\"class.LAMMPS_NS::MyPage.2\", ptr %this1,\l... i32 0, i32 8\l  %1 = load i32, ptr %maxchunk, align 4\l  %cmp = icmp sgt i32 %0, %1\l  br i1 %cmp, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x556aef9d8bd0:s0 -> Node0x556aef9d9190[tooltip="entry -> if.then\nProbability 50.00%" ];
+	Node0x556aef9d8bd0:s1 -> Node0x556aef9d9200[tooltip="entry -> if.end\nProbability 50.00%" ];
+	Node0x556aef9d9190 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.then:\l|  %errorflag = getelementptr inbounds %\"class.LAMMPS_NS::MyPage.2\", ptr\l... %this1, i32 0, i32 11\l  store i32 1, ptr %errorflag, align 8\l  br label %if.end\l}"];
+	Node0x556aef9d9190 -> Node0x556aef9d9200[tooltip="if.then -> if.end\nProbability 100.00%" ];
+	Node0x556aef9d9200 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  %2 = load i32, ptr %n.addr, align 4\l  %ndatum = getelementptr inbounds %\"class.LAMMPS_NS::MyPage.2\", ptr %this1,\l... i32 0, i32 1\l  %3 = load i32, ptr %ndatum, align 8\l  %add = add nsw i32 %3, %2\l  store i32 %add, ptr %ndatum, align 8\l  %nchunk = getelementptr inbounds %\"class.LAMMPS_NS::MyPage.2\", ptr %this1,\l... i32 0, i32 2\l  %4 = load i32, ptr %nchunk, align 4\l  %inc = add nsw i32 %4, 1\l  store i32 %inc, ptr %nchunk, align 4\l  %5 = load i32, ptr %n.addr, align 4\l  %index = getelementptr inbounds %\"class.LAMMPS_NS::MyPage.2\", ptr %this1,\l... i32 0, i32 7\l  %6 = load i32, ptr %index, align 8\l  %add2 = add nsw i32 %6, %5\l  store i32 %add2, ptr %index, align 8\l  ret void\l}"];
+}

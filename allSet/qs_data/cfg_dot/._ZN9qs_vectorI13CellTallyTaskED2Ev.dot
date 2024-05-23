@@ -1,0 +1,9 @@
+digraph "CFG for '_ZN9qs_vectorI13CellTallyTaskED2Ev' function" {
+	label="CFG for '_ZN9qs_vectorI13CellTallyTaskED2Ev' function";
+
+	Node0x556c3c7e11f0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %_data = getelementptr inbounds %class.qs_vector.24, ptr %this1, i32 0, i32 0\l  %0 = load ptr, ptr %_data, align 8\l  %_size = getelementptr inbounds %class.qs_vector.24, ptr %this1, i32 0, i32 2\l  %1 = load i32, ptr %_size, align 4\l  %_memPolicy = getelementptr inbounds %class.qs_vector.24, ptr %this1, i32 0,\l... i32 4\l  %2 = load i32, ptr %_memPolicy, align 4\l  invoke void\l... @_ZN13MemoryControl10deallocateI13CellTallyTaskEEvPT_iNS_16AllocationPolicyE(p\l...tr noundef %0, i32 noundef %1, i32 noundef %2)\l          to label %invoke.cont unwind label %terminate.lpad\l}"];
+	Node0x556c3c7e11f0 -> Node0x556c3c7e1760[tooltip="entry -> invoke.cont\nProbability 100.00%" ];
+	Node0x556c3c7e11f0 -> Node0x556c3c7e17e0[tooltip="entry -> terminate.lpad\nProbability 0.00%" ];
+	Node0x556c3c7e1760 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{invoke.cont:\l|  ret void\l}"];
+	Node0x556c3c7e17e0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f4c5ad70" fontname="Courier",label="{terminate.lpad:\l|  %3 = landingpad \{ ptr, i32 \}\l          catch ptr null\l  %4 = extractvalue \{ ptr, i32 \} %3, 0\l  call void @__clang_call_terminate(ptr %4) #12\l  unreachable\l}"];
+}

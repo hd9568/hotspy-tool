@@ -1,0 +1,12 @@
+digraph "CFG for '_ZN9LAMMPS_NS8platform16file_is_readableERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE' function" {
+	label="CFG for '_ZN9LAMMPS_NS8platform16file_is_readableERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE' function";
+
+	Node0x5651cd79b500 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %retval = alloca i1, align 1\l  %path.addr = alloca ptr, align 8\l  %fp = alloca ptr, align 8\l  store ptr %path, ptr %path.addr, align 8\l  %0 = load ptr, ptr %path.addr, align 8\l  %call = call noundef ptr\l... @_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE5c_strEv(ptr noundef\l... nonnull align 8 dereferenceable(32) %0) #4\l  %call1 = call noalias ptr @fopen(ptr noundef %call, ptr noundef @.str.34)\l  store ptr %call1, ptr %fp, align 8\l  %1 = load ptr, ptr %fp, align 8\l  %tobool = icmp ne ptr %1, null\l  br i1 %tobool, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x5651cd79b500:s0 -> Node0x5651cd79da30[tooltip="entry -> if.then\nProbability 62.50%" ];
+	Node0x5651cd79b500:s1 -> Node0x5651cd79daa0[tooltip="entry -> if.end\nProbability 37.50%" ];
+	Node0x5651cd79da30 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.then:\l|  %2 = load ptr, ptr %fp, align 8\l  %call2 = call i32 @fclose(ptr noundef %2)\l  store i1 true, ptr %retval, align 1\l  br label %return\l}"];
+	Node0x5651cd79da30 -> Node0x5651cd79de70[tooltip="if.then -> return\nProbability 100.00%" ];
+	Node0x5651cd79daa0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{if.end:\l|  store i1 false, ptr %retval, align 1\l  br label %return\l}"];
+	Node0x5651cd79daa0 -> Node0x5651cd79de70[tooltip="if.end -> return\nProbability 100.00%" ];
+	Node0x5651cd79de70 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{return:\l|  %3 = load i1, ptr %retval, align 1\l  ret i1 %3\l}"];
+}

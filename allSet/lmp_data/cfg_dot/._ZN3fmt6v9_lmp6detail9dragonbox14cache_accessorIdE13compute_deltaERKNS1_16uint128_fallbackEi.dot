@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN3fmt6v9_lmp6detail9dragonbox14cache_accessorIdE13compute_deltaERKNS1_16uint128_fallbackEi' function" {
+	label="CFG for '_ZN3fmt6v9_lmp6detail9dragonbox14cache_accessorIdE13compute_deltaERKNS1_16uint128_fallbackEi' function";
+
+	Node0x55fec301f560 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %cache.addr = alloca ptr, align 8\l  %beta.addr = alloca i32, align 4\l  store ptr %cache, ptr %cache.addr, align 8\l  store i32 %beta, ptr %beta.addr, align 4\l  %0 = load ptr, ptr %cache.addr, align 8\l  %call = call noundef i64\l... @_ZNK3fmt6v9_lmp6detail16uint128_fallback4highEv(ptr noundef nonnull align 8\l... dereferenceable(16) %0) #17\l  %1 = load i32, ptr %beta.addr, align 4\l  %sub = sub nsw i32 63, %1\l  %sh_prom = zext i32 %sub to i64\l  %shr = lshr i64 %call, %sh_prom\l  %conv = trunc i64 %shr to i32\l  ret i32 %conv\l}"];
+}

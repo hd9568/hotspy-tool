@@ -1,0 +1,5 @@
+digraph "CFG for '_ZStcoSt13_Ios_Fmtflags' function" {
+	label="CFG for '_ZStcoSt13_Ios_Fmtflags' function";
+
+	Node0x561f53d30930 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %__a.addr = alloca i32, align 4\l  store i32 %__a, ptr %__a.addr, align 4\l  %0 = load i32, ptr %__a.addr, align 4\l  %not = xor i32 %0, -1\l  ret i32 %not\l}"];
+}

@@ -1,0 +1,149 @@
+MODEL BEGINNING!
+This is GPU0: Tesla V100-PCIE-32GB
+=========== 1 ===========
+GOD:32 ;MNN:10 ;MEN:10 ;GSN:10 ;CMNN:10
+CODCFG:20 ;CODCG:12 ;MHS:30 ;LR0.0005
+All functions have been obtained! All graphs are being parsed:
+The number of function which is only with one node is 65 ,4 of that is Hot
+65 is ignored, 12 of which is hot
+dataloader is done! the final number is 426
+All functions have been obtained! All graphs are being parsed:
+The number of function which is only with one node is 4179 ,140 of that is Hot
+4683 is ignored, 71 of which is hot
+dataloader is done! the final number is 2983
+Epoch [1/5], Loss: 0.16327
+Epoch [2/5], Loss: 0.06096
+Epoch [3/5], Loss: 0.07973
+Epoch [4/5], Loss: 0.04229
+Epoch [5/5], Loss: 0.00059
+model_1.pth test accuracy: 78.87%
+=========== 2 ===========
+GOD:32 ;MNN:10 ;MEN:10 ;GSN:10 ;CMNN:10
+CODCFG:20 ;CODCG:12 ;MHS:32 ;LR0.0005
+All functions have been obtained! All graphs are being parsed:
+The number of function which is only with one node is 65 ,4 of that is Hot
+65 is ignored, 12 of which is hot
+dataloader is done! the final number is 426
+All functions have been obtained! All graphs are being parsed:
+The number of function which is only with one node is 4179 ,140 of that is Hot
+4683 is ignored, 71 of which is hot
+dataloader is done! the final number is 2983
+Epoch [1/5], Loss: 0.00039
+Epoch [2/5], Loss: 0.00002
+Epoch [3/5], Loss: 0.00000
+Epoch [4/5], Loss: 0.00000
+Epoch [5/5], Loss: 0.00100
+model_2.pth test accuracy: 81.69%
+=========== 3 ===========
+GOD:32 ;MNN:10 ;MEN:10 ;GSN:10 ;CMNN:10
+CODCFG:24 ;CODCG:12 ;MHS:30 ;LR0.0005
+All functions have been obtained! All graphs are being parsed:
+The number of function which is only with one node is 65 ,4 of that is Hot
+65 is ignored, 12 of which is hot
+dataloader is done! the final number is 426
+All functions have been obtained! All graphs are being parsed:
+The number of function which is only with one node is 4179 ,140 of that is Hot
+4683 is ignored, 71 of which is hot
+dataloader is done! the final number is 2983
+Epoch [1/5], Loss: 0.01216
+Epoch [2/5], Loss: 0.00193
+Epoch [3/5], Loss: 0.00443
+Epoch [4/5], Loss: 0.00134
+Epoch [5/5], Loss: 0.00062
+model_3.pth test accuracy: 79.81%
+=========== 4 ===========
+GOD:32 ;MNN:10 ;MEN:10 ;GSN:10 ;CMNN:10
+CODCFG:24 ;CODCG:12 ;MHS:32 ;LR0.0005
+All functions have been obtained! All graphs are being parsed:
+The number of function which is only with one node is 65 ,4 of that is Hot
+65 is ignored, 12 of which is hot
+dataloader is done! the final number is 426
+All functions have been obtained! All graphs are being parsed:
+The number of function which is only with one node is 4179 ,140 of that is Hot
+4683 is ignored, 71 of which is hot
+dataloader is done! the final number is 2983
+Epoch [1/5], Loss: 0.01390
+Epoch [2/5], Loss: 0.00132
+Epoch [3/5], Loss: 0.01035
+Epoch [4/5], Loss: 0.00331
+Epoch [5/5], Loss: 0.00508
+model_4.pth test accuracy: 78.87%
+=========== 5 ===========
+GOD:32 ;MNN:10 ;MEN:10 ;GSN:12 ;CMNN:10
+CODCFG:20 ;CODCG:12 ;MHS:30 ;LR0.0005
+All functions have been obtained! All graphs are being parsed:
+The number of function which is only with one node is 65 ,4 of that is Hot
+65 is ignored, 12 of which is hot
+dataloader is done! the final number is 426
+All functions have been obtained! All graphs are being parsed:
+The number of function which is only with one node is 4179 ,140 of that is Hot
+4683 is ignored, 71 of which is hot
+dataloader is done! the final number is 2983
+Epoch [1/5], Loss: 0.00016
+Epoch [2/5], Loss: 0.00040
+Epoch [3/5], Loss: 0.00004
+Epoch [4/5], Loss: 0.00001
+Epoch [5/5], Loss: 0.00000
+model_5.pth test accuracy: 79.34%
+=========== 6 ===========
+GOD:32 ;MNN:10 ;MEN:10 ;GSN:12 ;CMNN:10
+CODCFG:20 ;CODCG:12 ;MHS:32 ;LR0.0005
+All functions have been obtained! All graphs are being parsed:
+The number of function which is only with one node is 65 ,4 of that is Hot
+65 is ignored, 12 of which is hot
+dataloader is done! the final number is 426
+All functions have been obtained! All graphs are being parsed:
+The number of function which is only with one node is 4179 ,140 of that is Hot
+4683 is ignored, 71 of which is hot
+dataloader is done! the final number is 2983
+Epoch [1/5], Loss: 0.85737
+Epoch [2/5], Loss: 0.72825
+Epoch [3/5], Loss: 0.82446
+Epoch [4/5], Loss: 0.67814
+Epoch [5/5], Loss: 0.78904
+model_6.pth test accuracy: 78.87%
+=========== 7 ===========
+GOD:32 ;MNN:10 ;MEN:10 ;GSN:12 ;CMNN:10
+CODCFG:24 ;CODCG:12 ;MHS:30 ;LR0.0005
+All functions have been obtained! All graphs are being parsed:
+The number of function which is only with one node is 65 ,4 of that is Hot
+65 is ignored, 12 of which is hot
+dataloader is done! the final number is 426
+All functions have been obtained! All graphs are being parsed:
+The number of function which is only with one node is 4179 ,140 of that is Hot
+4683 is ignored, 71 of which is hot
+dataloader is done! the final number is 2983
+Epoch [1/5], Loss: 0.75393
+Epoch [2/5], Loss: 0.78125
+Epoch [3/5], Loss: 0.75266
+Epoch [4/5], Loss: 0.79709
+Epoch [5/5], Loss: 0.87746
+model_7.pth test accuracy: 78.87%
+=========== 8 ===========
+GOD:32 ;MNN:10 ;MEN:10 ;GSN:12 ;CMNN:10
+CODCFG:24 ;CODCG:12 ;MHS:32 ;LR0.0005
+All functions have been obtained! All graphs are being parsed:
+The number of function which is only with one node is 65 ,4 of that is Hot
+65 is ignored, 12 of which is hot
+dataloader is done! the final number is 426
+All functions have been obtained! All graphs are being parsed:
+The number of function which is only with one node is 4179 ,140 of that is Hot
+4683 is ignored, 71 of which is hot
+dataloader is done! the final number is 2983
+Epoch [1/5], Loss: 0.00002
+Epoch [2/5], Loss: 0.00007
+Epoch [3/5], Loss: 0.00031
+Epoch [4/5], Loss: 0.00000
+Epoch [5/5], Loss: 0.00000
+model_8.pth test accuracy: 78.87%
+=========== 9 ===========
+GOD:32 ;MNN:15 ;MEN:10 ;GSN:10 ;CMNN:10
+CODCFG:20 ;CODCG:12 ;MHS:30 ;LR0.0005
+All functions have been obtained! All graphs are being parsed:
+The number of function which is only with one node is 65 ,4 of that is Hot
+65 is ignored, 12 of which is hot
+dataloader is done! the final number is 426
+All functions have been obtained! All graphs are being parsed:
+The number of function which is only with one node is 4179 ,140 of that is Hot
+4681 is ignored, 71 of which is hot
+dataloader is done! the final number is 2987

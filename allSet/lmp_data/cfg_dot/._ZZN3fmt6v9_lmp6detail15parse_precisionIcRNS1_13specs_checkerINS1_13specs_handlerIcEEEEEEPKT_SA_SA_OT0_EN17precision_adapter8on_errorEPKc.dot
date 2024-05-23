@@ -1,0 +1,10 @@
+digraph "CFG for '_ZZN3fmt6v9_lmp6detail15parse_precisionIcRNS1_13specs_checkerINS1_13specs_handlerIcEEEEEEPKT_SA_SA_OT0_EN17precision_adapter8on_errorEPKc' function" {
+	label="CFG for '_ZZN3fmt6v9_lmp6detail15parse_precisionIcRNS1_13specs_checkerINS1_13specs_handlerIcEEEEEEPKT_SA_SA_OT0_EN17precision_adapter8on_errorEPKc' function";
+
+	Node0x55fec3526f30 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %message.addr = alloca ptr, align 8\l  store ptr %this, ptr %this.addr, align 8\l  store ptr %message, ptr %message.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %0 = load ptr, ptr %message.addr, align 8\l  %tobool = icmp ne ptr %0, null\l  br i1 %tobool, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x55fec3526f30:s0 -> Node0x55fec3527180[tooltip="entry -> if.then\nProbability 62.50%" ];
+	Node0x55fec3526f30:s1 -> Node0x55fec35271f0[tooltip="entry -> if.end\nProbability 37.50%" ];
+	Node0x55fec3527180 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.then:\l|  %handler = getelementptr inbounds %struct.precision_adapter, ptr %this1,\l... i32 0, i32 0\l  %1 = load ptr, ptr %handler, align 8\l  %2 = load ptr, ptr %message.addr, align 8\l  call void @_ZN3fmt6v9_lmp6detail13specs_handlerIcE8on_errorEPKc(ptr noundef\l... nonnull align 8 dereferenceable(24) %1, ptr noundef %2)\l  br label %if.end\l}"];
+	Node0x55fec3527180 -> Node0x55fec35271f0[tooltip="if.then -> if.end\nProbability 100.00%" ];
+	Node0x55fec35271f0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  ret void\l}"];
+}

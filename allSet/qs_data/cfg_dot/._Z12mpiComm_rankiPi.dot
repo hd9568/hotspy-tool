@@ -1,0 +1,5 @@
+digraph "CFG for '_Z12mpiComm_rankiPi' function" {
+	label="CFG for '_Z12mpiComm_rankiPi' function";
+
+	Node0x561c73bf5910 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %comm.addr = alloca i32, align 4\l  %rank.addr = alloca ptr, align 8\l  store i32 %comm, ptr %comm.addr, align 4\l  store ptr %rank, ptr %rank.addr, align 8\l  %0 = load ptr, ptr %rank.addr, align 8\l  store i32 0, ptr %0, align 4\l  ret void\l}"];
+}

@@ -1,0 +1,17 @@
+digraph "CFG for '_ZN9LAMMPS_NS10FixBalance14compute_vectorEi' function" {
+	label="CFG for '_ZN9LAMMPS_NS10FixBalance14compute_vectorEi' function";
+
+	Node0x558dde571670 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %retval = alloca double, align 8\l  %this.addr = alloca ptr, align 8\l  %i.addr = alloca i32, align 4\l  store ptr %this, ptr %this.addr, align 8\l  store i32 %i, ptr %i.addr, align 4\l  %this1 = load ptr, ptr %this.addr, align 8\l  %0 = load i32, ptr %i.addr, align 4\l  %cmp = icmp eq i32 %0, 0\l  br i1 %cmp, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x558dde571670:s0 -> Node0x558dde571920[tooltip="entry -> if.then\nProbability 37.50%" ];
+	Node0x558dde571670:s1 -> Node0x558dde571990[tooltip="entry -> if.end\nProbability 62.50%" ];
+	Node0x558dde571920 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{if.then:\l|  %maxloadperproc = getelementptr inbounds %\"class.LAMMPS_NS::FixBalance\",\l... ptr %this1, i32 0, i32 12\l  %1 = load double, ptr %maxloadperproc, align 8\l  store double %1, ptr %retval, align 8\l  br label %return\l}"];
+	Node0x558dde571920 -> Node0x558dde571cc0[tooltip="if.then -> return\nProbability 100.00%" ];
+	Node0x558dde571990 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.end:\l|  %2 = load i32, ptr %i.addr, align 4\l  %cmp2 = icmp eq i32 %2, 1\l  br i1 %cmp2, label %if.then3, label %if.end4\l|{<s0>T|<s1>F}}"];
+	Node0x558dde571990:s0 -> Node0x558dde589dd0[tooltip="if.end -> if.then3\nProbability 50.00%" ];
+	Node0x558dde571990:s1 -> Node0x558dde5881c0[tooltip="if.end -> if.end4\nProbability 50.00%" ];
+	Node0x558dde589dd0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{if.then3:\l|  %itercount = getelementptr inbounds %\"class.LAMMPS_NS::FixBalance\", ptr\l... %this1, i32 0, i32 13\l  %3 = load i32, ptr %itercount, align 8\l  %conv = sitofp i32 %3 to double\l  store double %conv, ptr %retval, align 8\l  br label %return\l}"];
+	Node0x558dde589dd0 -> Node0x558dde571cc0[tooltip="if.then3 -> return\nProbability 100.00%" ];
+	Node0x558dde5881c0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{if.end4:\l|  %imbprev = getelementptr inbounds %\"class.LAMMPS_NS::FixBalance\", ptr\l... %this1, i32 0, i32 10\l  %4 = load double, ptr %imbprev, align 8\l  store double %4, ptr %retval, align 8\l  br label %return\l}"];
+	Node0x558dde5881c0 -> Node0x558dde571cc0[tooltip="if.end4 -> return\nProbability 100.00%" ];
+	Node0x558dde571cc0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{return:\l|  %5 = load double, ptr %retval, align 8\l  ret double %5\l}"];
+}

@@ -1,0 +1,29 @@
+digraph "CFG for '_ZN3fmt6v9_lmp6detail21count_digits_fallbackIoEEiT_' function" {
+	label="CFG for '_ZN3fmt6v9_lmp6detail21count_digits_fallbackIoEEiT_' function";
+
+	Node0x55fec30ce390 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#cc403a70" fontname="Courier",label="{entry:\l|  %retval = alloca i32, align 4\l  %n = alloca i128, align 16\l  %n.addr = alloca i128, align 16\l  %count = alloca i32, align 4\l  %0 = getelementptr inbounds \{ i64, i64 \}, ptr %n, i32 0, i32 0\l  store i64 %n.coerce0, ptr %0, align 16\l  %1 = getelementptr inbounds \{ i64, i64 \}, ptr %n, i32 0, i32 1\l  store i64 %n.coerce1, ptr %1, align 8\l  %n1 = load i128, ptr %n, align 16\l  store i128 %n1, ptr %n.addr, align 16\l  store i32 1, ptr %count, align 4\l  br label %for.cond\l}"];
+	Node0x55fec30ce390 -> Node0x55fec30cea60[tooltip="entry -> for.cond\nProbability 100.00%" ];
+	Node0x55fec30cea60 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.cond:\l|  %2 = load i128, ptr %n.addr, align 16\l  %cmp = icmp ult i128 %2, 10\l  br i1 %cmp, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x55fec30cea60:s0 -> Node0x55fec30cec80[tooltip="for.cond -> if.then\nProbability 3.12%" ];
+	Node0x55fec30cea60:s1 -> Node0x55fec30cecf0[tooltip="for.cond -> if.end\nProbability 96.88%" ];
+	Node0x55fec30cec80 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{if.then:\l|  %3 = load i32, ptr %count, align 4\l  store i32 %3, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x55fec30cec80 -> Node0x55fec30cef30[tooltip="if.then -> return\nProbability 100.00%" ];
+	Node0x55fec30cecf0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  %4 = load i128, ptr %n.addr, align 16\l  %cmp2 = icmp ult i128 %4, 100\l  br i1 %cmp2, label %if.then3, label %if.end4\l|{<s0>T|<s1>F}}"];
+	Node0x55fec30cecf0:s0 -> Node0x55fec30cf2e0[tooltip="if.end -> if.then3\nProbability 3.12%" ];
+	Node0x55fec30cecf0:s1 -> Node0x55fec30cf360[tooltip="if.end -> if.end4\nProbability 96.88%" ];
+	Node0x55fec30cf2e0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{if.then3:\l|  %5 = load i32, ptr %count, align 4\l  %add = add nsw i32 %5, 1\l  store i32 %add, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x55fec30cf2e0 -> Node0x55fec30cef30[tooltip="if.then3 -> return\nProbability 100.00%" ];
+	Node0x55fec30cf360 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end4:\l|  %6 = load i128, ptr %n.addr, align 16\l  %cmp5 = icmp ult i128 %6, 1000\l  br i1 %cmp5, label %if.then6, label %if.end8\l|{<s0>T|<s1>F}}"];
+	Node0x55fec30cf360:s0 -> Node0x55fec30cf860[tooltip="if.end4 -> if.then6\nProbability 3.12%" ];
+	Node0x55fec30cf360:s1 -> Node0x55fec30cf8e0[tooltip="if.end4 -> if.end8\nProbability 96.88%" ];
+	Node0x55fec30cf860 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{if.then6:\l|  %7 = load i32, ptr %count, align 4\l  %add7 = add nsw i32 %7, 2\l  store i32 %add7, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x55fec30cf860 -> Node0x55fec30cef30[tooltip="if.then6 -> return\nProbability 100.00%" ];
+	Node0x55fec30cf8e0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end8:\l|  %8 = load i128, ptr %n.addr, align 16\l  %cmp9 = icmp ult i128 %8, 10000\l  br i1 %cmp9, label %if.then10, label %if.end12\l|{<s0>T|<s1>F}}"];
+	Node0x55fec30cf8e0:s0 -> Node0x55fec30cfde0[tooltip="if.end8 -> if.then10\nProbability 3.12%" ];
+	Node0x55fec30cf8e0:s1 -> Node0x55fec30cfe60[tooltip="if.end8 -> if.end12\nProbability 96.88%" ];
+	Node0x55fec30cfde0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{if.then10:\l|  %9 = load i32, ptr %count, align 4\l  %add11 = add nsw i32 %9, 3\l  store i32 %add11, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x55fec30cfde0 -> Node0x55fec30cef30[tooltip="if.then10 -> return\nProbability 100.00%" ];
+	Node0x55fec30cfe60 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end12:\l|  %10 = load i128, ptr %n.addr, align 16\l  %div = udiv i128 %10, 10000\l  store i128 %div, ptr %n.addr, align 16\l  %11 = load i32, ptr %count, align 4\l  %add13 = add nsw i32 %11, 4\l  store i32 %add13, ptr %count, align 4\l  br label %for.cond, !llvm.loop !6\l}"];
+	Node0x55fec30cfe60 -> Node0x55fec30cea60[tooltip="if.end12 -> for.cond\nProbability 100.00%" ];
+	Node0x55fec30cef30 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#cc403a70" fontname="Courier",label="{return:\l|  %12 = load i32, ptr %retval, align 4\l  ret i32 %12\l}"];
+}

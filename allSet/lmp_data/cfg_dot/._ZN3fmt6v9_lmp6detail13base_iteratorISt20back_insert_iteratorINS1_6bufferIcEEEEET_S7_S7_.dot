@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN3fmt6v9_lmp6detail13base_iteratorISt20back_insert_iteratorINS1_6bufferIcEEEEET_S7_S7_' function" {
+	label="CFG for '_ZN3fmt6v9_lmp6detail13base_iteratorISt20back_insert_iteratorINS1_6bufferIcEEEEET_S7_S7_' function";
+
+	Node0x55fec30614a0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %retval = alloca %\"class.std::back_insert_iterator\", align 8\l  %0 = alloca %\"class.std::back_insert_iterator\", align 8\l  %it = alloca %\"class.std::back_insert_iterator\", align 8\l  %coerce.dive = getelementptr inbounds %\"class.std::back_insert_iterator\",\l... ptr %0, i32 0, i32 0\l  store ptr %.coerce, ptr %coerce.dive, align 8\l  %coerce.dive1 = getelementptr inbounds %\"class.std::back_insert_iterator\",\l... ptr %it, i32 0, i32 0\l  store ptr %it.coerce, ptr %coerce.dive1, align 8\l  call void @llvm.memcpy.p0.p0.i64(ptr align 8 %retval, ptr align 8 %it, i64\l... 8, i1 false)\l  %coerce.dive2 = getelementptr inbounds %\"class.std::back_insert_iterator\",\l... ptr %retval, i32 0, i32 0\l  %1 = load ptr, ptr %coerce.dive2, align 8\l  ret ptr %1\l}"];
+}

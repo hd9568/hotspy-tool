@@ -1,0 +1,5 @@
+digraph "CFG for 'LBM_freeGrid' function" {
+	label="CFG for 'LBM_freeGrid' function";
+
+	Node0x5598b3ccba10 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %ptr.addr = alloca ptr, align 8\l  %margin = alloca i64, align 8\l  store ptr %ptr, ptr %ptr.addr, align 8\l  store i64 400000, ptr %margin, align 8\l  %0 = load ptr, ptr %ptr.addr, align 8\l  %1 = load ptr, ptr %0, align 8\l  %add.ptr = getelementptr inbounds double, ptr %1, i64 -400000\l  call void @free(ptr noundef %add.ptr) #6\l  %2 = load ptr, ptr %ptr.addr, align 8\l  store ptr null, ptr %2, align 8\l  ret void\l}"];
+}

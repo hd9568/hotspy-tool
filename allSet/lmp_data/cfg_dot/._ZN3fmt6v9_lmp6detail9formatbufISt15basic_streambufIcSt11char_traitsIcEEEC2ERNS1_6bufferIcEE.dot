@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN3fmt6v9_lmp6detail9formatbufISt15basic_streambufIcSt11char_traitsIcEEEC2ERNS1_6bufferIcEE' function" {
+	label="CFG for '_ZN3fmt6v9_lmp6detail9formatbufISt15basic_streambufIcSt11char_traitsIcEEEC2ERNS1_6bufferIcEE' function";
+
+	Node0x5584169b6d00 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %buf.addr = alloca ptr, align 8\l  store ptr %this, ptr %this.addr, align 8\l  store ptr %buf, ptr %buf.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  call void @_ZNSt15basic_streambufIcSt11char_traitsIcEEC2Ev(ptr noundef\l... nonnull align 8 dereferenceable(64) %this1)\l  store ptr getelementptr inbounds (\{ [16 x ptr] \}, ptr\l... @_ZTVN3fmt6v9_lmp6detail9formatbufISt15basic_streambufIcSt11char_traitsIcEEEE,\l... i32 0, inrange i32 0, i32 2), ptr %this1, align 8\l  %buffer_ = getelementptr inbounds %\"class.fmt::v9_lmp::detail::formatbuf\",\l... ptr %this1, i32 0, i32 1\l  %0 = load ptr, ptr %buf.addr, align 8\l  store ptr %0, ptr %buffer_, align 8\l  ret void\l}"];
+}

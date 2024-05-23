@@ -1,0 +1,5 @@
+digraph "CFG for 'lammps_encode_image_flags' function" {
+	label="CFG for 'lammps_encode_image_flags' function";
+
+	Node0x55bdf81407a0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %ix.addr = alloca i32, align 4\l  %iy.addr = alloca i32, align 4\l  %iz.addr = alloca i32, align 4\l  %image = alloca i32, align 4\l  store i32 %ix, ptr %ix.addr, align 4\l  store i32 %iy, ptr %iy.addr, align 4\l  store i32 %iz, ptr %iz.addr, align 4\l  %0 = load i32, ptr %ix.addr, align 4\l  %add = add nsw i32 %0, 512\l  %and = and i32 %add, 1023\l  %1 = load i32, ptr %iy.addr, align 4\l  %add1 = add nsw i32 %1, 512\l  %and2 = and i32 %add1, 1023\l  %shl = shl i32 %and2, 10\l  %or = or i32 %and, %shl\l  %2 = load i32, ptr %iz.addr, align 4\l  %add3 = add nsw i32 %2, 512\l  %and4 = and i32 %add3, 1023\l  %shl5 = shl i32 %and4, 20\l  %or6 = or i32 %or, %shl5\l  store i32 %or6, ptr %image, align 4\l  %3 = load i32, ptr %image, align 4\l  ret i32 %3\l}"];
+}

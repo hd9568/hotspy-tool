@@ -1,0 +1,21 @@
+digraph "Call graph: setup_mpi.ll" {
+	label="Call graph: setup_mpi.ll";
+
+	Node0x55c1dd0afbc0 [shape=record,label="{setup_mpi_}"];
+	Node0x55c1dd0afbc0 -> Node0x55c1dd0afc70;
+	Node0x55c1dd0afbc0 -> Node0x55c1dd0b0130;
+	Node0x55c1dd0afbc0 -> Node0x55c1dd0b01b0;
+	Node0x55c1dd0afbc0 -> Node0x55c1dd0b0230;
+	Node0x55c1dd0afbc0 -> Node0x55c1dd0b02b0;
+	Node0x55c1dd0afbc0 -> Node0x55c1dd0b0480;
+	Node0x55c1dd0afbc0 -> Node0x55c1dd0b0500;
+	Node0x55c1dd0afc70 [shape=record,label="{mpi_init_}"];
+	Node0x55c1dd0b0130 [shape=record,label="{mpi_comm_size_}"];
+	Node0x55c1dd0b01b0 [shape=record,label="{mpi_comm_rank_}"];
+	Node0x55c1dd0b02b0 [shape=record,label="{llvm.trunc.f64}"];
+	Node0x55c1dd0b0480 [shape=record,label="{mpi_comm_split_}"];
+	Node0x55c1dd0b0500 [shape=record,label="{mpi_comm_dup_}"];
+	Node0x55c1dd0b08a0 [shape=record,label="{llvm.stacksave.p0}"];
+	Node0x55c1dd0b0920 [shape=record,label="{llvm.stackrestore.p0}"];
+	Node0x55c1dd0b0230 [shape=record,label="{llvm.sqrt.f64}"];
+}

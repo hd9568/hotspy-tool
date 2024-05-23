@@ -1,0 +1,5 @@
+digraph "CFG for 'lammps_kokkos_finalize' function" {
+	label="CFG for 'lammps_kokkos_finalize' function";
+
+	Node0x55bdf7d8dd80 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  call void @_ZN9LAMMPS_NS9KokkosLMP8finalizeEv()\l  ret void\l}"];
+}

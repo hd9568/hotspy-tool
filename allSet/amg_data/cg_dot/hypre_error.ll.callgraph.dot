@@ -1,0 +1,14 @@
+digraph "Call graph: hypre_error.ll" {
+	label="Call graph: hypre_error.ll";
+
+	Node0x55abf265b720 [shape=record,label="{hypre_error_handler}"];
+	Node0x55abf265b7d0 [shape=record,label="{HYPRE_GetError}"];
+	Node0x55abf265b850 [shape=record,label="{HYPRE_CheckError}"];
+	Node0x55abf265b8d0 [shape=record,label="{HYPRE_DescribeError}"];
+	Node0x55abf265b8d0 -> Node0x55abf265b950;
+	Node0x55abf265b8d0 -> Node0x55abf26600e0;
+	Node0x55abf265b950 [shape=record,label="{hypre_sprintf}"];
+	Node0x55abf26600e0 [shape=record,label="{HYPRE_GetErrorArg}"];
+	Node0x55abf2660400 [shape=record,label="{HYPRE_ClearAllErrors}"];
+	Node0x55abf2660480 [shape=record,label="{HYPRE_ClearError}"];
+}

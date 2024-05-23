@@ -1,0 +1,15 @@
+digraph "Call graph: MC_Location.ll" {
+	label="Call graph: MC_Location.ll";
+
+	Node0x56219f917ef0 [shape=record,label="{__cxx_global_var_init}"];
+	Node0x56219f917ef0 -> Node0x56219f91aec0;
+	Node0x56219f917ef0 -> Node0x56219f8cb330;
+	Node0x56219f91aec0 [shape=record,label="{_ZNSt8ios_base4InitC1Ev}"];
+	Node0x56219f922130 [shape=record,label="{_ZNSt8ios_base4InitD1Ev}"];
+	Node0x56219f8cb330 [shape=record,label="{__cxa_atexit}"];
+	Node0x56219f9221e0 [shape=record,label="{_ZNK11MC_Location10get_domainEP10MonteCarlo}"];
+	Node0x56219f9221e0 -> Node0x56219f922260;
+	Node0x56219f922260 [shape=record,label="{_ZN9qs_vectorI9MC_DomainEixEi}"];
+	Node0x56219f924f40 [shape=record,label="{_GLOBAL__sub_I_MC_Location.cc}"];
+	Node0x56219f924f40 -> Node0x56219f917ef0;
+}

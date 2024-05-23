@@ -1,0 +1,5 @@
+digraph "CFG for 'HYPRE_ParCSRMatrixDestroy' function" {
+	label="CFG for 'HYPRE_ParCSRMatrixDestroy' function";
+
+	Node0x562ae1c608d0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %matrix.addr = alloca ptr, align 8\l  store ptr %matrix, ptr %matrix.addr, align 8\l  %0 = load ptr, ptr %matrix.addr, align 8\l  %call = call i32 @hypre_ParCSRMatrixDestroy(ptr noundef %0)\l  ret i32 %call\l}"];
+}

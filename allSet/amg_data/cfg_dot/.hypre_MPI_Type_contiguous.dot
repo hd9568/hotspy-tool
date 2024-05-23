@@ -1,0 +1,5 @@
+digraph "CFG for 'hypre_MPI_Type_contiguous' function" {
+	label="CFG for 'hypre_MPI_Type_contiguous' function";
+
+	Node0x5555d665b940 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %count.addr = alloca i32, align 4\l  %oldtype.addr = alloca ptr, align 8\l  %newtype.addr = alloca ptr, align 8\l  store i32 %count, ptr %count.addr, align 4\l  store ptr %oldtype, ptr %oldtype.addr, align 8\l  store ptr %newtype, ptr %newtype.addr, align 8\l  %0 = load i32, ptr %count.addr, align 4\l  %1 = load ptr, ptr %oldtype.addr, align 8\l  %2 = load ptr, ptr %newtype.addr, align 8\l  %call = call i32 @MPI_Type_contiguous(i32 noundef %0, ptr noundef %1, ptr\l... noundef %2)\l  ret i32 %call\l}"];
+}

@@ -1,0 +1,17 @@
+digraph "Call graph: MC_Adjacent_Facet.ll" {
+	label="Call graph: MC_Adjacent_Facet.ll";
+
+	Node0x556495bdb670 [shape=record,label="{__cxx_global_var_init}"];
+	Node0x556495bdb670 -> Node0x556495be1880;
+	Node0x556495bdb670 -> Node0x556495be23d0;
+	Node0x556495be1880 [shape=record,label="{_ZNSt8ios_base4InitC1Ev}"];
+	Node0x556495bdb3f0 [shape=record,label="{_ZNSt8ios_base4InitD1Ev}"];
+	Node0x556495be23d0 [shape=record,label="{__cxa_atexit}"];
+	Node0x556495be7130 [shape=record,label="{_Z18MCT_Adjacent_FacetRK11MC_LocationR11MC_ParticleP10MonteCarlo}"];
+	Node0x556495be7130 -> Node0x556495b942f0;
+	Node0x556495be7130 -> Node0x556495bdaff0;
+	Node0x556495b942f0 [shape=record,label="{_ZN9qs_vectorI9MC_DomainEixEi}"];
+	Node0x556495bdaff0 [shape=record,label="{_ZN9qs_vectorI23MC_Facet_Adjacency_CellEixEi}"];
+	Node0x556495be73b0 [shape=record,label="{_GLOBAL__sub_I_MC_Adjacent_Facet.cc}"];
+	Node0x556495be73b0 -> Node0x556495bdb670;
+}

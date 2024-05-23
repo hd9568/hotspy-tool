@@ -1,0 +1,16 @@
+digraph "Call graph: error.ll" {
+	label="Call graph: error.ll";
+
+	Node0x55c274945950 [shape=record,label="{error_norm_}"];
+	Node0x55c274945950 -> Node0x55c274959120;
+	Node0x55c274945950 -> Node0x55c27490f7b0;
+	Node0x55c274945950 -> Node0x55c27490f830;
+	Node0x55c27495eb00 [shape=record,label="{rhs_norm_}"];
+	Node0x55c27495eb00 -> Node0x55c27490f7b0;
+	Node0x55c27495eb00 -> Node0x55c27490f830;
+	Node0x55c274959120 [shape=record,label="{exact_solution_}"];
+	Node0x55c27490f7b0 [shape=record,label="{mpi_allreduce_}"];
+	Node0x55c27495ec30 [shape=record,label="{llvm.stacksave.p0}"];
+	Node0x55c27495ee00 [shape=record,label="{llvm.stackrestore.p0}"];
+	Node0x55c27490f830 [shape=record,label="{llvm.sqrt.f64}"];
+}

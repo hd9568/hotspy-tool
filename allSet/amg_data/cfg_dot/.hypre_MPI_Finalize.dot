@@ -1,0 +1,5 @@
+digraph "CFG for 'hypre_MPI_Finalize' function" {
+	label="CFG for 'hypre_MPI_Finalize' function";
+
+	Node0x5555d661d510 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %call = call i32 @MPI_Finalize()\l  ret i32 %call\l}"];
+}

@@ -1,0 +1,12 @@
+digraph "CFG for '_ZN9LAMMPS_NS8Variable13internalstyleEi' function" {
+	label="CFG for '_ZN9LAMMPS_NS8Variable13internalstyleEi' function";
+
+	Node0x556bfe2e99b0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %retval = alloca i32, align 4\l  %this.addr = alloca ptr, align 8\l  %ivar.addr = alloca i32, align 4\l  store ptr %this, ptr %this.addr, align 8\l  store i32 %ivar, ptr %ivar.addr, align 4\l  %this1 = load ptr, ptr %this.addr, align 8\l  %style = getelementptr inbounds %\"class.LAMMPS_NS::Variable\", ptr %this1,\l... i32 0, i32 5\l  %0 = load ptr, ptr %style, align 8\l  %1 = load i32, ptr %ivar.addr, align 4\l  %idxprom = sext i32 %1 to i64\l  %arrayidx = getelementptr inbounds i32, ptr %0, i64 %idxprom\l  %2 = load i32, ptr %arrayidx, align 4\l  %cmp = icmp eq i32 %2, 15\l  br i1 %cmp, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x556bfe2e99b0:s0 -> Node0x556bfe2ea200[tooltip="entry -> if.then\nProbability 50.00%" ];
+	Node0x556bfe2e99b0:s1 -> Node0x556bfe2ea270[tooltip="entry -> if.end\nProbability 50.00%" ];
+	Node0x556bfe2ea200 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.then:\l|  store i32 1, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x556bfe2ea200 -> Node0x556bfe2ea520[tooltip="if.then -> return\nProbability 100.00%" ];
+	Node0x556bfe2ea270 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.end:\l|  store i32 0, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x556bfe2ea270 -> Node0x556bfe2ea520[tooltip="if.end -> return\nProbability 100.00%" ];
+	Node0x556bfe2ea520 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{return:\l|  %3 = load i32, ptr %retval, align 4\l  ret i32 %3\l}"];
+}

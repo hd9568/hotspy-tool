@@ -1,0 +1,27 @@
+digraph "Call graph: hypre_memory.ll" {
+	label="Call graph: hypre_memory.ll";
+
+	Node0x560406e734e0 [shape=record,label="{hypre_OutOfMemory}"];
+	Node0x560406e734e0 -> Node0x560406e73590;
+	Node0x560406e734e0 -> Node0x560406e73640;
+	Node0x560406e734e0 -> Node0x560406e736c0;
+	Node0x560406e73590 [shape=record,label="{hypre_printf}"];
+	Node0x560406e73640 [shape=record,label="{fflush}"];
+	Node0x560406e736c0 [shape=record,label="{hypre_error_handler}"];
+	Node0x560406e76a90 [shape=record,label="{hypre_MAlloc}"];
+	Node0x560406e76a90 -> Node0x560406e76c60;
+	Node0x560406e76a90 -> Node0x560406e734e0;
+	Node0x560406e76c60 [shape=record,label="{malloc}"];
+	Node0x560406e76ce0 [shape=record,label="{hypre_CAlloc}"];
+	Node0x560406e76ce0 -> Node0x560406e76d60;
+	Node0x560406e76ce0 -> Node0x560406e734e0;
+	Node0x560406e76d60 [shape=record,label="{calloc}"];
+	Node0x560406e76e10 [shape=record,label="{hypre_ReAlloc}"];
+	Node0x560406e76e10 -> Node0x560406e76c60;
+	Node0x560406e76e10 -> Node0x560406e77150;
+	Node0x560406e76e10 -> Node0x560406e734e0;
+	Node0x560406e77150 [shape=record,label="{realloc}"];
+	Node0x560406e771d0 [shape=record,label="{hypre_Free}"];
+	Node0x560406e771d0 -> Node0x560406e77250;
+	Node0x560406e77250 [shape=record,label="{free}"];
+}

@@ -1,0 +1,14 @@
+digraph "Call graph: XSutils.ll" {
+	label="Call graph: XSutils.ll";
+
+	Node0x5581283f2b50 [shape=record,label="{double_compare}"];
+	Node0x5581283f2c00 [shape=record,label="{NGP_compare}"];
+	Node0x5581283f2c00 -> Node0x5581283f2c80;
+	Node0x5581283f2c80 [shape=record,label="{llvm.memcpy.p0.p0.i64}"];
+	Node0x5581283f3110 [shape=record,label="{estimate_mem_usage}"];
+	Node0x5581283f3110 -> Node0x5581283f3190;
+	Node0x5581283f3190 [shape=record,label="{llvm.ceil.f64}"];
+	Node0x5581283f3360 [shape=record,label="{get_time}"];
+	Node0x5581283f3360 -> Node0x5581283f33e0;
+	Node0x5581283f33e0 [shape=record,label="{gettimeofday}"];
+}

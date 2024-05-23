@@ -1,0 +1,5 @@
+digraph "CFG for '_ZNSt14numeric_limitsIiE3maxEv' function" {
+	label="CFG for '_ZNSt14numeric_limitsIiE3maxEv' function";
+
+	Node0x556bfeace420 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  ret i32 2147483647\l}"];
+}

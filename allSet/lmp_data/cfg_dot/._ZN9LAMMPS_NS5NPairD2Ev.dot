@@ -1,0 +1,21 @@
+digraph "CFG for '_ZN9LAMMPS_NS5NPairD2Ev' function" {
+	label="CFG for '_ZN9LAMMPS_NS5NPairD2Ev' function";
+
+	Node0x5584d484bc30 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %cleanup.dest.slot = alloca i32, align 4\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  store ptr getelementptr inbounds (\{ [8 x ptr] \}, ptr\l... @_ZTVN9LAMMPS_NS5NPairE, i32 0, inrange i32 0, i32 2), ptr %this1, align 8\l  %copymode = getelementptr inbounds %\"class.LAMMPS_NS::NPair\", ptr %this1,\l... i32 0, i32 78\l  %0 = load i32, ptr %copymode, align 4\l  %tobool = icmp ne i32 %0, 0\l  br i1 %tobool, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x5584d484bc30:s0 -> Node0x5584d484c170[tooltip="entry -> if.then\nProbability 62.50%" ];
+	Node0x5584d484bc30:s1 -> Node0x5584d484c1e0[tooltip="entry -> if.end\nProbability 37.50%" ];
+	Node0x5584d484c170 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.then:\l|  store i32 1, ptr %cleanup.dest.slot, align 4\l  br label %cleanup\l}"];
+	Node0x5584d484c170 -> Node0x5584d484c400[tooltip="if.then -> cleanup\nProbability 100.00%" ];
+	Node0x5584d484c1e0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{if.end:\l|  %memory = getelementptr inbounds %\"class.LAMMPS_NS::Pointers\", ptr %this1,\l... i32 0, i32 2\l  %1 = load ptr, ptr %memory, align 8\l  %2 = load ptr, ptr %1, align 8\l  %mycutneighsq = getelementptr inbounds %\"class.LAMMPS_NS::NPair\", ptr\l... %this1, i32 0, i32 7\l  invoke void @_ZN9LAMMPS_NS6Memory7destroyIdEEvRPPT_(ptr noundef nonnull\l... align 8 dereferenceable(184) %2, ptr noundef nonnull align 8\l... dereferenceable(8) %mycutneighsq)\l          to label %invoke.cont unwind label %terminate.lpad\l}"];
+	Node0x5584d484c1e0 -> Node0x5584d484c780[tooltip="if.end -> invoke.cont\nProbability 100.00%" ];
+	Node0x5584d484c1e0 -> Node0x5584d484bb90[tooltip="if.end -> terminate.lpad\nProbability 0.00%" ];
+	Node0x5584d484c780 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{invoke.cont:\l|  store i32 0, ptr %cleanup.dest.slot, align 4\l  br label %cleanup\l}"];
+	Node0x5584d484c780 -> Node0x5584d484c400[tooltip="invoke.cont -> cleanup\nProbability 100.00%" ];
+	Node0x5584d484c400 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{cleanup:\l|  call void @_ZN9LAMMPS_NS8PointersD2Ev(ptr noundef nonnull align 8\l... dereferenceable(184) %this1) #9\l  %cleanup.dest = load i32, ptr %cleanup.dest.slot, align 4\l  switch i32 %cleanup.dest, label %unreachable [\l    i32 0, label %cleanup.cont\l    i32 1, label %cleanup.cont\l  ]\l|{<s0>def|<s1>0|<s2>1}}"];
+	Node0x5584d484c400:s0 -> Node0x5584d4847860[tooltip="cleanup -> unreachable\nProbability 0.00%" ];
+	Node0x5584d484c400:s1 -> Node0x5584d48478b0[tooltip="cleanup -> cleanup.cont\nProbability 100.00%" ];
+	Node0x5584d484c400:s2 -> Node0x5584d48478b0[tooltip="cleanup -> cleanup.cont\nProbability 100.00%" ];
+	Node0x5584d48478b0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{cleanup.cont:\l|  ret void\l}"];
+	Node0x5584d484bb90 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f2cab570" fontname="Courier",label="{terminate.lpad:\l|  %3 = landingpad \{ ptr, i32 \}\l          catch ptr null\l  %4 = extractvalue \{ ptr, i32 \} %3, 0\l  call void @__clang_call_terminate(ptr %4) #10\l  unreachable\l}"];
+	Node0x5584d4847860 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c7d7f070" fontname="Courier",label="{unreachable:\l|  unreachable\l}"];
+}

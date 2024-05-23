@@ -1,0 +1,5 @@
+digraph "CFG for 'crystal_init' function" {
+	label="CFG for 'crystal_init' function";
+
+	Node0x559aeb31a9e0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %p.addr = alloca ptr, align 8\l  %comm.addr = alloca ptr, align 8\l  store ptr %p, ptr %p.addr, align 8\l  store ptr %comm, ptr %comm.addr, align 8\l  %0 = load ptr, ptr %p.addr, align 8\l  %comm1 = getelementptr inbounds %struct.crystal, ptr %0, i32 0, i32 0\l  %1 = load ptr, ptr %comm.addr, align 8\l  call void @comm_dup_(ptr noundef %comm1, ptr noundef %1, ptr noundef @.str,\l... i32 noundef 57)\l  %2 = load ptr, ptr %p.addr, align 8\l  %data = getelementptr inbounds %struct.crystal, ptr %2, i32 0, i32 1\l  call void @array_init_(ptr noundef %data, i64 noundef 1000, i64 noundef 1,\l... ptr noundef @.str, i32 noundef 58)\l  %3 = load ptr, ptr %p.addr, align 8\l  %work = getelementptr inbounds %struct.crystal, ptr %3, i32 0, i32 2\l  call void @array_init_(ptr noundef %work, i64 noundef 1000, i64 noundef 1,\l... ptr noundef @.str, i32 noundef 59)\l  ret void\l}"];
+}

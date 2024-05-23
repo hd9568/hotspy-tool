@@ -1,0 +1,5 @@
+digraph "CFG for '_ZSt4copyIPK7double2PS0_ET0_T_S5_S4_' function" {
+	label="CFG for '_ZSt4copyIPK7double2PS0_ET0_T_S5_S4_' function";
+
+	Node0x55fc3be2e590 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %__first.addr = alloca ptr, align 8\l  %__last.addr = alloca ptr, align 8\l  %__result.addr = alloca ptr, align 8\l  store ptr %__first, ptr %__first.addr, align 8\l  store ptr %__last, ptr %__last.addr, align 8\l  store ptr %__result, ptr %__result.addr, align 8\l  %0 = load ptr, ptr %__first.addr, align 8\l  %call = call noundef ptr @_ZSt12__miter_baseIPK7double2ET_S3_(ptr noundef %0)\l  %1 = load ptr, ptr %__last.addr, align 8\l  %call1 = call noundef ptr @_ZSt12__miter_baseIPK7double2ET_S3_(ptr noundef\l... %1)\l  %2 = load ptr, ptr %__result.addr, align 8\l  %call2 = call noundef ptr\l... @_ZSt14__copy_move_a2ILb0EPK7double2PS0_ET1_T0_S5_S4_(ptr noundef %call, ptr\l... noundef %call1, ptr noundef %2)\l  ret ptr %call2\l}"];
+}

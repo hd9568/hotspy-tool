@@ -1,0 +1,19 @@
+digraph "Call graph: par_stats.ll" {
+	label="Call graph: par_stats.ll";
+
+	Node0x5627eca98a50 [shape=record,label="{hypre_BoomerAMGSetupStats}"];
+	Node0x5627eca98a50 -> Node0x5627eca7d440;
+	Node0x5627eca98a50 -> Node0x5627eca98d30;
+	Node0x5627eca98a50 -> Node0x5627eca98be0;
+	Node0x5627eca98a50 -> Node0x5627eca89930;
+	Node0x5627eca98a50 -> Node0x5627eca45d40;
+	Node0x5627eca98a50 -> Node0x5627ecaa07a0;
+	Node0x5627eca7d440 [shape=record,label="{hypre_MPI_Comm_size}"];
+	Node0x5627eca98d30 [shape=record,label="{hypre_MPI_Comm_rank}"];
+	Node0x5627eca98be0 [shape=record,label="{hypre_CAlloc}"];
+	Node0x5627eca45d40 [shape=record,label="{hypre_printf}"];
+	Node0x5627ecaa07a0 [shape=record,label="{hypre_MPI_Reduce}"];
+	Node0x5627eca89930 [shape=record,label="{hypre_Free}"];
+	Node0x5627ecaa0720 [shape=record,label="{hypre_BoomerAMGWriteSolverParams}"];
+	Node0x5627ecaa0720 -> Node0x5627eca45d40;
+}

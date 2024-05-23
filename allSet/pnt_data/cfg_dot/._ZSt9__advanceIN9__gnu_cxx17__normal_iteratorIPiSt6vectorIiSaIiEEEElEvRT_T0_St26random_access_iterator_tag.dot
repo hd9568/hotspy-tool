@@ -1,0 +1,25 @@
+digraph "CFG for '_ZSt9__advanceIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEElEvRT_T0_St26random_access_iterator_tag' function" {
+	label="CFG for '_ZSt9__advanceIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEElEvRT_T0_St26random_access_iterator_tag' function";
+
+	Node0x55799257e520 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %0 = alloca %\"struct.std::random_access_iterator_tag\", align 1\l  %__i.addr = alloca ptr, align 8\l  %__n.addr = alloca i64, align 8\l  store ptr %__i, ptr %__i.addr, align 8\l  store i64 %__n, ptr %__n.addr, align 8\l  %1 = load i64, ptr %__n.addr, align 8\l  %2 = call i1 @llvm.is.constant.i64(i64 %1)\l  br i1 %2, label %land.lhs.true, label %if.else\l|{<s0>T|<s1>F}}"];
+	Node0x55799257e520:s0 -> Node0x55799257e880[tooltip="entry -> land.lhs.true\nProbability 50.00%" ];
+	Node0x55799257e520:s1 -> Node0x55799257e8d0[tooltip="entry -> if.else\nProbability 50.00%" ];
+	Node0x55799257e880 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{land.lhs.true:\l|  %3 = load i64, ptr %__n.addr, align 8\l  %cmp = icmp eq i64 %3, 1\l  br i1 %cmp, label %if.then, label %if.else\l|{<s0>T|<s1>F}}"];
+	Node0x55799257e880:s0 -> Node0x55799257eb20[tooltip="land.lhs.true -> if.then\nProbability 50.00%" ];
+	Node0x55799257e880:s1 -> Node0x55799257e8d0[tooltip="land.lhs.true -> if.else\nProbability 50.00%" ];
+	Node0x55799257eb20 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470" fontname="Courier",label="{if.then:\l|  %4 = load ptr, ptr %__i.addr, align 8\l  %call = call noundef nonnull align 8 dereferenceable(8) ptr\l... @_ZN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEppEv(ptr noundef\l... nonnull align 8 dereferenceable(8) %4) #3\l  br label %if.end7\l}"];
+	Node0x55799257eb20 -> Node0x55799257ecc0[tooltip="if.then -> if.end7\nProbability 100.00%" ];
+	Node0x55799257e8d0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.else:\l|  %5 = load i64, ptr %__n.addr, align 8\l  %6 = call i1 @llvm.is.constant.i64(i64 %5)\l  br i1 %6, label %land.lhs.true1, label %if.else5\l|{<s0>T|<s1>F}}"];
+	Node0x55799257e8d0:s0 -> Node0x55799257f190[tooltip="if.else -> land.lhs.true1\nProbability 50.00%" ];
+	Node0x55799257e8d0:s1 -> Node0x55799257f1e0[tooltip="if.else -> if.else5\nProbability 50.00%" ];
+	Node0x55799257f190 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{land.lhs.true1:\l|  %7 = load i64, ptr %__n.addr, align 8\l  %cmp2 = icmp eq i64 %7, -1\l  br i1 %cmp2, label %if.then3, label %if.else5\l|{<s0>T|<s1>F}}"];
+	Node0x55799257f190:s0 -> Node0x55799257f590[tooltip="land.lhs.true1 -> if.then3\nProbability 37.50%" ];
+	Node0x55799257f190:s1 -> Node0x55799257f1e0[tooltip="land.lhs.true1 -> if.else5\nProbability 62.50%" ];
+	Node0x55799257f590 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#ca3b3770" fontname="Courier",label="{if.then3:\l|  %8 = load ptr, ptr %__i.addr, align 8\l  %call4 = call noundef nonnull align 8 dereferenceable(8) ptr\l... @_ZN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEmmEv(ptr noundef\l... nonnull align 8 dereferenceable(8) %8) #3\l  br label %if.end\l}"];
+	Node0x55799257f590 -> Node0x55799257f740[tooltip="if.then3 -> if.end\nProbability 100.00%" ];
+	Node0x55799257f1e0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.else5:\l|  %9 = load i64, ptr %__n.addr, align 8\l  %10 = load ptr, ptr %__i.addr, align 8\l  %call6 = call noundef nonnull align 8 dereferenceable(8) ptr\l... @_ZN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEpLEl(ptr noundef\l... nonnull align 8 dereferenceable(8) %10, i64 noundef %9) #3\l  br label %if.end\l}"];
+	Node0x55799257f1e0 -> Node0x55799257f740[tooltip="if.else5 -> if.end\nProbability 100.00%" ];
+	Node0x55799257f740 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.end:\l|  br label %if.end7\l}"];
+	Node0x55799257f740 -> Node0x55799257ecc0[tooltip="if.end -> if.end7\nProbability 100.00%" ];
+	Node0x55799257ecc0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end7:\l|  ret void\l}"];
+}

@@ -1,0 +1,12 @@
+digraph "CFG for '_ZN9LAMMPS_NS6Grid3d11set_zfactorEd' function" {
+	label="CFG for '_ZN9LAMMPS_NS6Grid3d11set_zfactorEd' function";
+
+	Node0x55fcd5f804d0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %factor.addr = alloca double, align 8\l  store ptr %this, ptr %this.addr, align 8\l  store double %factor, ptr %factor.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %0 = load double, ptr %factor.addr, align 8\l  %cmp = fcmp oeq double %0, 1.000000e+00\l  br i1 %cmp, label %if.then, label %if.else\l|{<s0>T|<s1>F}}"];
+	Node0x55fcd5f804d0:s0 -> Node0x55fcd5f80940[tooltip="entry -> if.then\nProbability 62.50%" ];
+	Node0x55fcd5f804d0:s1 -> Node0x55fcd5f809b0[tooltip="entry -> if.else\nProbability 37.50%" ];
+	Node0x55fcd5f80940 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.then:\l|  %zextra = getelementptr inbounds %\"class.LAMMPS_NS::Grid3d\", ptr %this1,\l... i32 0, i32 15\l  store i32 0, ptr %zextra, align 8\l  br label %if.end\l}"];
+	Node0x55fcd5f80940 -> Node0x55fcd5f80c50[tooltip="if.then -> if.end\nProbability 100.00%" ];
+	Node0x55fcd5f809b0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{if.else:\l|  %zextra2 = getelementptr inbounds %\"class.LAMMPS_NS::Grid3d\", ptr %this1,\l... i32 0, i32 15\l  store i32 1, ptr %zextra2, align 8\l  br label %if.end\l}"];
+	Node0x55fcd5f809b0 -> Node0x55fcd5f80c50[tooltip="if.else -> if.end\nProbability 100.00%" ];
+	Node0x55fcd5f80c50 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  %1 = load double, ptr %factor.addr, align 8\l  %zfactor = getelementptr inbounds %\"class.LAMMPS_NS::Grid3d\", ptr %this1,\l... i32 0, i32 16\l  store double %1, ptr %zfactor, align 8\l  ret void\l}"];
+}

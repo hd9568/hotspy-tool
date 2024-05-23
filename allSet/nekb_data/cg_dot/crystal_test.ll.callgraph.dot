@@ -1,0 +1,28 @@
+digraph "Call graph: crystal_test.ll" {
+	label="Call graph: crystal_test.ll";
+
+	Node0x55616ff0d070 [shape=record,label="{main}"];
+	Node0x55616ff0d070 -> Node0x55616ff0d120;
+	Node0x55616ff0d070 -> Node0x55616ff0d5e0;
+	Node0x55616ff0d070 -> Node0x55616ff0d660;
+	Node0x55616ff0d070 -> Node0x55616ff0d6e0;
+	Node0x55616ff0d070 -> Node0x55616ff0d760;
+	Node0x55616ff0d070 -> Node0x55616ff0dcc0;
+	Node0x55616ff0d070 -> Node0x55616ff0dc40;
+	Node0x55616ff0d070 -> Node0x55616ff0d930;
+	Node0x55616ff0dfb0 [shape=record,label="{realloc}"];
+	Node0x55616ff0d120 [shape=record,label="{comm_init}"];
+	Node0x55616ff0d5e0 [shape=record,label="{crystal_init}"];
+	Node0x55616ff0d660 [shape=record,label="{array_reserve_}"];
+	Node0x55616ff0d660 -> Node0x55616ff0ddc0;
+	Node0x55616ff0d6e0 [shape=record,label="{crystal_router}"];
+	Node0x55616ff0d760 [shape=record,label="{fail}"];
+	Node0x55616ff0d930 [shape=record,label="{crystal_free}"];
+	Node0x55616ff0dc40 [shape=record,label="{comm_free}"];
+	Node0x55616ff0dcc0 [shape=record,label="{diagnostic}"];
+	Node0x55616ff0ddc0 [shape=record,label="{array_resize_}"];
+	Node0x55616ff0ddc0 -> Node0x55616ff0df00;
+	Node0x55616ff0df00 [shape=record,label="{srealloc}"];
+	Node0x55616ff0df00 -> Node0x55616ff0dfb0;
+	Node0x55616ff0df00 -> Node0x55616ff0d760;
+}

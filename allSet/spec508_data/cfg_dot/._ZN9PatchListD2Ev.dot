@@ -1,0 +1,21 @@
+digraph "CFG for '_ZN9PatchListD2Ev' function" {
+	label="CFG for '_ZN9PatchListD2Ev' function";
+
+	Node0x55cd7f058440 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d0473d70" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %patches = getelementptr inbounds %class.PatchList, ptr %this1, i32 0, i32 5\l  %0 = load ptr, ptr %patches, align 8\l  %isnull = icmp eq ptr %0, null\l  br i1 %isnull, label %delete.end3, label %delete.notnull\l|{<s0>T|<s1>F}}"];
+	Node0x55cd7f058440:s0 -> Node0x55cd7f058740[tooltip="entry -> delete.end3\nProbability 37.50%" ];
+	Node0x55cd7f058440:s1 -> Node0x55cd7f0587c0[tooltip="entry -> delete.notnull\nProbability 62.50%" ];
+	Node0x55cd7f0587c0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d24b4070" fontname="Courier",label="{delete.notnull:\l|  %1 = getelementptr inbounds i8, ptr %0, i64 -8\l  %2 = load i64, ptr %1, align 8\l  %delete.end = getelementptr inbounds %class.Patch, ptr %0, i64 %2\l  %arraydestroy.isempty = icmp eq ptr %0, %delete.end\l  br i1 %arraydestroy.isempty, label %arraydestroy.done2, label\l... %arraydestroy.body\l|{<s0>T|<s1>F}}"];
+	Node0x55cd7f0587c0:s0 -> Node0x55cd7f058c60[tooltip="delete.notnull -> arraydestroy.done2\nProbability 37.50%" ];
+	Node0x55cd7f0587c0:s1 -> Node0x55cd7f058cd0[tooltip="delete.notnull -> arraydestroy.body\nProbability 62.50%" ];
+	Node0x55cd7f058cd0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{arraydestroy.body:\l|  %arraydestroy.elementPast = phi ptr [ %delete.end, %delete.notnull ], [\l... %arraydestroy.element, %arraydestroy.body ]\l  %arraydestroy.element = getelementptr inbounds %class.Patch, ptr\l... %arraydestroy.elementPast, i64 -1\l  call void @_ZN5PatchD1Ev(ptr noundef nonnull align 8 dereferenceable(52)\l... %arraydestroy.element) #8\l  %arraydestroy.done = icmp eq ptr %arraydestroy.element, %0\l  br i1 %arraydestroy.done, label %arraydestroy.done2, label %arraydestroy.body\l|{<s0>T|<s1>F}}"];
+	Node0x55cd7f058cd0:s0 -> Node0x55cd7f058c60[tooltip="arraydestroy.body -> arraydestroy.done2\nProbability 3.12%" ];
+	Node0x55cd7f058cd0:s1 -> Node0x55cd7f058cd0[tooltip="arraydestroy.body -> arraydestroy.body\nProbability 96.88%" ];
+	Node0x55cd7f058c60 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d24b4070" fontname="Courier",label="{arraydestroy.done2:\l|  call void @_ZdaPv(ptr noundef %1) #9\l  br label %delete.end3\l}"];
+	Node0x55cd7f058c60 -> Node0x55cd7f058740[tooltip="arraydestroy.done2 -> delete.end3\nProbability 100.00%" ];
+	Node0x55cd7f058740 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d0473d70" fontname="Courier",label="{delete.end3:\l|  %reductionData = getelementptr inbounds %class.PatchList, ptr %this1, i32\l... 0, i32 7\l  %3 = load ptr, ptr %reductionData, align 8\l  %isnull4 = icmp eq ptr %3, null\l  br i1 %isnull4, label %delete.end6, label %delete.notnull5\l|{<s0>T|<s1>F}}"];
+	Node0x55cd7f058740:s0 -> Node0x55cd7f059990[tooltip="delete.end3 -> delete.end6\nProbability 37.50%" ];
+	Node0x55cd7f058740:s1 -> Node0x55cd7f0599e0[tooltip="delete.end3 -> delete.notnull5\nProbability 62.50%" ];
+	Node0x55cd7f0599e0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d24b4070" fontname="Courier",label="{delete.notnull5:\l|  call void @_ZdaPv(ptr noundef %3) #9\l  br label %delete.end6\l}"];
+	Node0x55cd7f0599e0 -> Node0x55cd7f059990[tooltip="delete.notnull5 -> delete.end6\nProbability 100.00%" ];
+	Node0x55cd7f059990 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d0473d70" fontname="Courier",label="{delete.end6:\l|  ret void\l}"];
+}

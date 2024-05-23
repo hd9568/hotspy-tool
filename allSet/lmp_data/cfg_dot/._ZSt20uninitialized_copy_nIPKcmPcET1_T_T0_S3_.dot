@@ -1,0 +1,5 @@
+digraph "CFG for '_ZSt20uninitialized_copy_nIPKcmPcET1_T_T0_S3_' function" {
+	label="CFG for '_ZSt20uninitialized_copy_nIPKcmPcET1_T_T0_S3_' function";
+
+	Node0x556bfec0e1d0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %__first.addr = alloca ptr, align 8\l  %__n.addr = alloca i64, align 8\l  %__result.addr = alloca ptr, align 8\l  %agg.tmp = alloca %\"struct.std::random_access_iterator_tag\", align 1\l  %undef.agg.tmp = alloca %\"struct.std::random_access_iterator_tag\", align 1\l  store ptr %__first, ptr %__first.addr, align 8\l  store i64 %__n, ptr %__n.addr, align 8\l  store ptr %__result, ptr %__result.addr, align 8\l  %0 = load ptr, ptr %__first.addr, align 8\l  %1 = load i64, ptr %__n.addr, align 8\l  %2 = load ptr, ptr %__result.addr, align 8\l  call void\l... @_ZSt19__iterator_categoryIPKcENSt15iterator_traitsIT_E17iterator_categoryERKS\l...3_(ptr noundef nonnull align 8 dereferenceable(8) %__first.addr)\l  %call = call noundef ptr\l... @_ZSt22__uninitialized_copy_nIPKcmPcET1_T_T0_S3_St26random_access_iterator_tag\l...(ptr noundef %0, i64 noundef %1, ptr noundef %2)\l  ret ptr %call\l}"];
+}

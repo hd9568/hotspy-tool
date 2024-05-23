@@ -1,0 +1,5 @@
+digraph "CFG for 'hypre_PCGSetAbsoluteTolFactor' function" {
+	label="CFG for 'hypre_PCGSetAbsoluteTolFactor' function";
+
+	Node0x55706164b7e0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %pcg_vdata.addr = alloca ptr, align 8\l  %atolf.addr = alloca double, align 8\l  %pcg_data = alloca ptr, align 8\l  store ptr %pcg_vdata, ptr %pcg_vdata.addr, align 8\l  store double %atolf, ptr %atolf.addr, align 8\l  %0 = load ptr, ptr %pcg_vdata.addr, align 8\l  store ptr %0, ptr %pcg_data, align 8\l  %1 = load double, ptr %atolf.addr, align 8\l  %2 = load ptr, ptr %pcg_data, align 8\l  %atolf1 = getelementptr inbounds %struct.hypre_PCGData, ptr %2, i32 0, i32 1\l  store double %1, ptr %atolf1, align 8\l  %3 = load i32, ptr @hypre__global_error, align 4\l  ret i32 %3\l}"];
+}

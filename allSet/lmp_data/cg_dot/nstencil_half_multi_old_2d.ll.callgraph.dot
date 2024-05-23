@@ -1,0 +1,19 @@
+digraph "Call graph: nstencil_half_multi_old_2d.ll" {
+	label="Call graph: nstencil_half_multi_old_2d.ll";
+
+	Node0x55929f694310 [shape=record,label="{_ZN9LAMMPS_NS22NStencilHalfMultiOld2dC2EPNS_6LAMMPSE}"];
+	Node0x55929f694310 -> Node0x55929f694390;
+	Node0x55929f694390 [shape=record,label="{_ZN9LAMMPS_NS8NStencilC2EPNS_6LAMMPSE}"];
+	Node0x55929f697040 [shape=record,label="{_ZN9LAMMPS_NS22NStencilHalfMultiOld2d6createEv}"];
+	Node0x55929f697040 -> Node0x55929f694410;
+	Node0x55929f6afd00 [shape=record,label="{_ZN9LAMMPS_NS8NStencilD2Ev}"];
+	Node0x55929f6afe60 [shape=record,label="{_ZdlPv}"];
+	Node0x55929f694410 [shape=record,label="{_ZN9LAMMPS_NS8NStencil12bin_distanceEiii}"];
+	Node0x55929f6944f0 [shape=record,label="{_ZN9LAMMPS_NS22NStencilHalfMultiOld2dD2Ev}"];
+	Node0x55929f6944f0 -> Node0x55929f6afd00;
+	Node0x55929f6afdb0 [shape=record,label="{_ZN9LAMMPS_NS22NStencilHalfMultiOld2dD0Ev}"];
+	Node0x55929f6afdb0 -> Node0x55929f6944f0;
+	Node0x55929f6afdb0 -> Node0x55929f6afe60;
+	Node0x55929f6afee0 [shape=record,label="{_ZN9LAMMPS_NS8NStencil12create_setupEv}"];
+	Node0x55929f6aff60 [shape=record,label="{_ZN9LAMMPS_NS8NStencil22set_stencil_propertiesEv}"];
+}

@@ -1,0 +1,41 @@
+digraph "Call graph: Patch.ll" {
+	label="Call graph: Patch.ll";
+
+	Node0x561f3c9e3f50 [shape=record,label="{_ZN5PatchC2Ev}"];
+	Node0x561f3c9e5170 [shape=record,label="{_ZN5PatchD2Ev}"];
+	Node0x561f3c9e5170 -> Node0x561f3c9e8940;
+	Node0x561f3c9e8940 [shape=record,label="{_ZdaPv}"];
+	Node0x561f3c9e9990 [shape=record,label="{_ZN5Patch9moveatomsEv}"];
+	Node0x561f3c9e9990 -> Node0x561f3c9ed6a0;
+	Node0x561f3c9e9990 -> Node0x561f3c9f56d0;
+	Node0x561f3c9ed6a0 [shape=record,label="{cos}"];
+	Node0x561f3c9f56d0 [shape=record,label="{llvm.fmuladd.f64}"];
+	Node0x561f3ca11b70 [shape=record,label="{_ZN5Patch10zeroforcesEv}"];
+	Node0x561f3ca11b70 -> Node0x561f3ca11bf0;
+	Node0x561f3ca11bf0 [shape=record,label="{_ZN6VectoraSERKd}"];
+	Node0x561f3ca11ca0 [shape=record,label="{_ZN5Patch9setforcesEP6VectorS1_}"];
+	Node0x561f3ca11ca0 -> Node0x561f3c9f15e0;
+	Node0x561f3c9f15e0 [shape=record,label="{llvm.memcpy.p0.p0.i64}"];
+	Node0x561f3c9f1fb0 [shape=record,label="{_ZN5Patch8readfileEP8_IO_FILEP8Molecule}"];
+	Node0x561f3c9f1fb0 -> Node0x561f3c9f4f30;
+	Node0x561f3c9f1fb0 -> Node0x561f3c9f5af0;
+	Node0x561f3c9f1fb0 -> Node0x561f3c9f6660;
+	Node0x561f3c9f1fb0 -> Node0x561f3c9f7d80;
+	Node0x561f3c9f1fb0 -> Node0x561f3c9fd2e0;
+	Node0x561f3c9f1fb0 -> Node0x561f3c9f8520;
+	Node0x561f3c9f1fb0 -> Node0x561f3c9f96c0;
+	Node0x561f3c9f1fb0 -> Node0x561f3c9fa750;
+	Node0x561f3c9f1fb0 -> Node0x561f3c9e8940;
+	Node0x561f3c9f1fb0 -> Node0x561f3c9fcbe0;
+	Node0x561f3c9f4f30 [shape=record,label="{fgets}"];
+	Node0x561f3c9f5af0 [shape=record,label="{strcmp}"];
+	Node0x561f3c9f6660 [shape=record,label="{printf}"];
+	Node0x561f3c9f7d80 [shape=record,label="{__isoc99_fscanf}"];
+	Node0x561f3c9f8520 [shape=record,label="{llvm.umul.with.overflow.i64}"];
+	Node0x561f3c9f96c0 [shape=record,label="{_Znam}"];
+	Node0x561f3c9fa750 [shape=record,label="{_ZN8CompAtomC2Ev}"];
+	Node0x561f3c9fa750 -> Node0x561f3c9fcbe0;
+	Node0x561f3ca00ab0 [shape=record,label="{__gxx_personality_v0}"];
+	Node0x561f3c9fcbe0 [shape=record,label="{_ZN6VectorC2Ev}"];
+	Node0x561f3c9fd2e0 [shape=record,label="{_ZNK8Molecule11atomvdwtypeEi}"];
+}

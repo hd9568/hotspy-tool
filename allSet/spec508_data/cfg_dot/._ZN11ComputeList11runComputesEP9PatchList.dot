@@ -1,0 +1,23 @@
+digraph "CFG for '_ZN11ComputeList11runComputesEP9PatchList' function" {
+	label="CFG for '_ZN11ComputeList11runComputesEP9PatchList' function";
+
+	Node0x55695a5903a0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %patchList.addr = alloca ptr, align 8\l  %i = alloca i32, align 4\l  store ptr %this, ptr %this.addr, align 8\l  store ptr %patchList, ptr %patchList.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  store i32 0, ptr %i, align 4\l  br label %for.cond\l}"];
+	Node0x55695a5903a0 -> Node0x55695a590850[tooltip="entry -> for.cond\nProbability 100.00%" ];
+	Node0x55695a590850 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.cond:\l|  %0 = load i32, ptr %i, align 4\l  %numSelfComputes = getelementptr inbounds %class.ComputeList, ptr %this1,\l... i32 0, i32 0\l  %1 = load i32, ptr %numSelfComputes, align 8\l  %cmp = icmp slt i32 %0, %1\l  br i1 %cmp, label %for.body, label %for.end\l|{<s0>T|<s1>F}}"];
+	Node0x55695a590850:s0 -> Node0x55695a590c10[tooltip="for.cond -> for.body\nProbability 96.88%" ];
+	Node0x55695a590850:s1 -> Node0x55695a590c60[tooltip="for.cond -> for.end\nProbability 3.12%" ];
+	Node0x55695a590c10 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.body:\l|  %selfComputes = getelementptr inbounds %class.ComputeList, ptr %this1, i32\l... 0, i32 2\l  %2 = load ptr, ptr %selfComputes, align 8\l  %3 = load i32, ptr %i, align 4\l  %idxprom = sext i32 %3 to i64\l  %arrayidx = getelementptr inbounds %class.SelfCompute, ptr %2, i64 %idxprom\l  %4 = load ptr, ptr %patchList.addr, align 8\l  call void @_ZN11SelfCompute6doWorkEP9PatchList(ptr noundef nonnull align 8\l... dereferenceable(40) %arrayidx, ptr noundef %4)\l  br label %for.inc\l}"];
+	Node0x55695a590c10 -> Node0x55695a591520[tooltip="for.body -> for.inc\nProbability 100.00%" ];
+	Node0x55695a591520 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.inc:\l|  %5 = load i32, ptr %i, align 4\l  %inc = add nsw i32 %5, 1\l  store i32 %inc, ptr %i, align 4\l  br label %for.cond, !llvm.loop !6\l}"];
+	Node0x55695a591520 -> Node0x55695a590850[tooltip="for.inc -> for.cond\nProbability 100.00%" ];
+	Node0x55695a590c60 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{for.end:\l|  store i32 0, ptr %i, align 4\l  br label %for.cond2\l}"];
+	Node0x55695a590c60 -> Node0x55695a5919b0[tooltip="for.end -> for.cond2\nProbability 100.00%" ];
+	Node0x55695a5919b0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.cond2:\l|  %6 = load i32, ptr %i, align 4\l  %numPairComputes = getelementptr inbounds %class.ComputeList, ptr %this1,\l... i32 0, i32 1\l  %7 = load i32, ptr %numPairComputes, align 4\l  %cmp3 = icmp slt i32 %6, %7\l  br i1 %cmp3, label %for.body4, label %for.end9\l|{<s0>T|<s1>F}}"];
+	Node0x55695a5919b0:s0 -> Node0x55695a591d40[tooltip="for.cond2 -> for.body4\nProbability 96.88%" ];
+	Node0x55695a5919b0:s1 -> Node0x55695a591d90[tooltip="for.cond2 -> for.end9\nProbability 3.12%" ];
+	Node0x55695a591d40 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.body4:\l|  %pairComputes = getelementptr inbounds %class.ComputeList, ptr %this1, i32\l... 0, i32 3\l  %8 = load ptr, ptr %pairComputes, align 8\l  %9 = load i32, ptr %i, align 4\l  %idxprom5 = sext i32 %9 to i64\l  %arrayidx6 = getelementptr inbounds %class.PairCompute, ptr %8, i64 %idxprom5\l  %10 = load ptr, ptr %patchList.addr, align 8\l  call void @_ZN11PairCompute6doWorkEP9PatchList(ptr noundef nonnull align 8\l... dereferenceable(48) %arrayidx6, ptr noundef %10)\l  br label %for.inc7\l}"];
+	Node0x55695a591d40 -> Node0x55695a5927f0[tooltip="for.body4 -> for.inc7\nProbability 100.00%" ];
+	Node0x55695a5927f0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.inc7:\l|  %11 = load i32, ptr %i, align 4\l  %inc8 = add nsw i32 %11, 1\l  store i32 %inc8, ptr %i, align 4\l  br label %for.cond2, !llvm.loop !8\l}"];
+	Node0x55695a5927f0 -> Node0x55695a5919b0[tooltip="for.inc7 -> for.cond2\nProbability 100.00%" ];
+	Node0x55695a591d90 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{for.end9:\l|  ret void\l}"];
+}

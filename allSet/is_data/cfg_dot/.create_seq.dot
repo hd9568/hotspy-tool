@@ -1,0 +1,14 @@
+digraph "CFG for 'create_seq' function" {
+	label="CFG for 'create_seq' function";
+
+	Node0x55d651010240 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{entry:\l|  %seed.addr = alloca double, align 8\l  %a.addr = alloca double, align 8\l  %x = alloca double, align 8\l  %i = alloca i32, align 4\l  %k = alloca i32, align 4\l  store double %seed, ptr %seed.addr, align 8\l  store double %a, ptr %a.addr, align 8\l  store i32 524288, ptr %k, align 4\l  store i32 0, ptr %i, align 4\l  br label %for.cond\l}"];
+	Node0x55d651010240 -> Node0x55d651004c90[tooltip="entry -> for.cond\nProbability 100.00%" ];
+	Node0x55d651004c90 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.cond:\l|  %0 = load i32, ptr %i, align 4\l  %cmp = icmp slt i32 %0, 2097152\l  br i1 %cmp, label %for.body, label %for.end\l|{<s0>T|<s1>F}}"];
+	Node0x55d651004c90:s0 -> Node0x55d651004ee0[tooltip="for.cond -> for.body\nProbability 96.88%" ];
+	Node0x55d651004c90:s1 -> Node0x55d651004f60[tooltip="for.cond -> for.end\nProbability 3.12%" ];
+	Node0x55d651004ee0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.body:\l|  %call = call double @randlc(ptr noundef %seed.addr, ptr noundef %a.addr)\l  store double %call, ptr %x, align 8\l  %call1 = call double @randlc(ptr noundef %seed.addr, ptr noundef %a.addr)\l  %1 = load double, ptr %x, align 8\l  %add = fadd double %1, %call1\l  store double %add, ptr %x, align 8\l  %call2 = call double @randlc(ptr noundef %seed.addr, ptr noundef %a.addr)\l  %2 = load double, ptr %x, align 8\l  %add3 = fadd double %2, %call2\l  store double %add3, ptr %x, align 8\l  %call4 = call double @randlc(ptr noundef %seed.addr, ptr noundef %a.addr)\l  %3 = load double, ptr %x, align 8\l  %add5 = fadd double %3, %call4\l  store double %add5, ptr %x, align 8\l  %4 = load i32, ptr %k, align 4\l  %conv = sitofp i32 %4 to double\l  %5 = load double, ptr %x, align 8\l  %mul = fmul double %conv, %5\l  %conv6 = fptosi double %mul to i32\l  %6 = load i32, ptr %i, align 4\l  %idxprom = sext i32 %6 to i64\l  %arrayidx = getelementptr inbounds [3145728 x i32], ptr @key_array, i64 0,\l... i64 %idxprom\l  store i32 %conv6, ptr %arrayidx, align 4\l  br label %for.inc\l}"];
+	Node0x55d651004ee0 -> Node0x55d651012e20[tooltip="for.body -> for.inc\nProbability 100.00%" ];
+	Node0x55d651012e20 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.inc:\l|  %7 = load i32, ptr %i, align 4\l  %inc = add nsw i32 %7, 1\l  store i32 %inc, ptr %i, align 4\l  br label %for.cond, !llvm.loop !6\l}"];
+	Node0x55d651012e20 -> Node0x55d651004c90[tooltip="for.inc -> for.cond\nProbability 100.00%" ];
+	Node0x55d651004f60 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{for.end:\l|  ret void\l}"];
+}

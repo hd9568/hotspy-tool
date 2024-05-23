@@ -1,0 +1,9 @@
+digraph "Call graph: setbv.ll" {
+	label="Call graph: setbv.ll";
+
+	Node0x564a0a4c3870 [shape=record,label="{setbv_}"];
+	Node0x564a0a4c3870 -> Node0x564a0a4c3920;
+	Node0x564a0a4c3920 [shape=record,label="{exact_}"];
+	Node0x564a0a4c3e90 [shape=record,label="{llvm.stacksave.p0}"];
+	Node0x564a0a4c3f10 [shape=record,label="{llvm.stackrestore.p0}"];
+}

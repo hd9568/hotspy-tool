@@ -1,0 +1,5 @@
+digraph "CFG for 'serial_ref_cycle' function" {
+	label="CFG for 'serial_ref_cycle' function";
+
+	Node0x5567ef592e60 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  call void @serial_ref_module1()\l  call void @serial_ref_module2()\l  call void @serial_ref_module3()\l  call void @serial_ref_module4()\l  ret void\l}"];
+}

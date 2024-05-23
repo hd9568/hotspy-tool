@@ -1,0 +1,5 @@
+digraph "CFG for '_ZNSt14numeric_limitsIdE9quiet_NaNEv' function" {
+	label="CFG for '_ZNSt14numeric_limitsIdE9quiet_NaNEv' function";
+
+	Node0x5556d66f9c30 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  ret double 0x7FF8000000000000\l}"];
+}

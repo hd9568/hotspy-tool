@@ -1,0 +1,10 @@
+digraph "CFG for '_ZN8Parallel9globalSumERi' function" {
+	label="CFG for '_ZN8Parallel9globalSumERi' function";
+
+	Node0x55fc3be243f0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %x.addr = alloca ptr, align 8\l  store ptr %x, ptr %x.addr, align 8\l  %0 = load i32, ptr @_ZN8Parallel5numpeE, align 4\l  %cmp = icmp eq i32 %0, 1\l  br i1 %cmp, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x55fc3be243f0:s0 -> Node0x55fc3be246c0[tooltip="entry -> if.then\nProbability 50.00%" ];
+	Node0x55fc3be243f0:s1 -> Node0x55fc3be24730[tooltip="entry -> if.end\nProbability 50.00%" ];
+	Node0x55fc3be246c0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.then:\l|  br label %if.end\l}"];
+	Node0x55fc3be246c0 -> Node0x55fc3be24730[tooltip="if.then -> if.end\nProbability 100.00%" ];
+	Node0x55fc3be24730 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  ret void\l}"];
+}

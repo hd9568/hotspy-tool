@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN3fmt6v9_lmp6detail12count_digitsILi3EmEEiT0_' function" {
+	label="CFG for '_ZN3fmt6v9_lmp6detail12count_digitsILi3EmEEiT0_' function";
+
+	Node0x55fec3568230 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %n.addr = alloca i64, align 8\l  %ref.tmp = alloca %class.anon.94, align 1\l  store i64 %n, ptr %n.addr, align 8\l  %0 = load i64, ptr %n.addr, align 8\l  %call = call noundef i32\l... @_ZZN3fmt6v9_lmp6detail12count_digitsILi3EmEEiT0_ENKUlmE_clEm(ptr noundef\l... nonnull align 1 dereferenceable(1) %ref.tmp, i64 noundef %0)\l  ret i32 %call\l}"];
+}

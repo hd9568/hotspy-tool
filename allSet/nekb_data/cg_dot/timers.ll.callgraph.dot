@@ -1,0 +1,9 @@
+digraph "Call graph: timers.ll" {
+	label="Call graph: timers.ll";
+
+	Node0x560094956ee0 [shape=record,label="{fclock_gettime}"];
+	Node0x560094956ee0 -> Node0x560094956f90;
+	Node0x560094956ee0 -> Node0x560094957450;
+	Node0x560094956f90 [shape=record,label="{clock_gettime}"];
+	Node0x560094957450 [shape=record,label="{llvm.fmuladd.f64}"];
+}

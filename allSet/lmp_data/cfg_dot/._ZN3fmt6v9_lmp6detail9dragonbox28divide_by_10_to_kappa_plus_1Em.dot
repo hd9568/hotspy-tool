@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN3fmt6v9_lmp6detail9dragonbox28divide_by_10_to_kappa_plus_1Em' function" {
+	label="CFG for '_ZN3fmt6v9_lmp6detail9dragonbox28divide_by_10_to_kappa_plus_1Em' function";
+
+	Node0x55fec3021590 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %n.addr = alloca i64, align 8\l  store i64 %n, ptr %n.addr, align 8\l  %0 = load i64, ptr %n.addr, align 8\l  %call = call noundef i64\l... @_ZN3fmt6v9_lmp6detail9dragonbox15umul128_upper64Emm(i64 noundef %0, i64\l... noundef 2361183241434822607) #17\l  %shr = lshr i64 %call, 7\l  ret i64 %shr\l}"];
+}

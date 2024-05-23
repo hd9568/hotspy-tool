@@ -1,0 +1,17 @@
+digraph "CFG for '_ZN3fmt6v9_lmp4fileD2Ev' function" {
+	label="CFG for '_ZN3fmt6v9_lmp4fileD2Ev' function";
+
+	Node0x55957a48ec50 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %fd_ = getelementptr inbounds %\"class.fmt::v9_lmp::file\", ptr %this1, i32 0,\l... i32 0\l  %0 = load i32, ptr %fd_, align 4\l  %cmp = icmp ne i32 %0, -1\l  br i1 %cmp, label %land.lhs.true, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x55957a48ec50:s0 -> Node0x55957a48ef50[tooltip="entry -> land.lhs.true\nProbability 62.50%" ];
+	Node0x55957a48ec50:s1 -> Node0x55957a48efd0[tooltip="entry -> if.end\nProbability 37.50%" ];
+	Node0x55957a48ef50 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{land.lhs.true:\l|  %fd_2 = getelementptr inbounds %\"class.fmt::v9_lmp::file\", ptr %this1, i32\l... 0, i32 0\l  %1 = load i32, ptr %fd_2, align 4\l  %call = invoke i32 @close(i32 noundef %1)\l          to label %invoke.cont unwind label %terminate.lpad\l}"];
+	Node0x55957a48ef50 -> Node0x55957a48f1a0[tooltip="land.lhs.true -> invoke.cont\nProbability 100.00%" ];
+	Node0x55957a48ef50 -> Node0x55957a48f220[tooltip="land.lhs.true -> terminate.lpad\nProbability 0.00%" ];
+	Node0x55957a48f1a0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{invoke.cont:\l|  %cmp3 = icmp ne i32 %call, 0\l  br i1 %cmp3, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x55957a48f1a0:s0 -> Node0x55957a48f720[tooltip="invoke.cont -> if.then\nProbability 62.50%" ];
+	Node0x55957a48f1a0:s1 -> Node0x55957a48efd0[tooltip="invoke.cont -> if.end\nProbability 37.50%" ];
+	Node0x55957a48f720 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.then:\l|  %call4 = call ptr @__errno_location() #8\l  %2 = load i32, ptr %call4, align 4\l  call void @_ZN3fmt6v9_lmp19report_system_errorEiPKc(i32 noundef %2, ptr\l... noundef @.str) #9\l  br label %if.end\l}"];
+	Node0x55957a48f720 -> Node0x55957a48efd0[tooltip="if.then -> if.end\nProbability 100.00%" ];
+	Node0x55957a48efd0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  ret void\l}"];
+	Node0x55957a48f220 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f3c7b170" fontname="Courier",label="{terminate.lpad:\l|  %3 = landingpad \{ ptr, i32 \}\l          catch ptr null\l  %4 = extractvalue \{ ptr, i32 \} %3, 0\l  call void @__clang_call_terminate(ptr %4) #10\l  unreachable\l}"];
+}

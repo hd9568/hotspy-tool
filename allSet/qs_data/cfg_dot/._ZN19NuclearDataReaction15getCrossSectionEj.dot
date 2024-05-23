@@ -1,0 +1,14 @@
+digraph "CFG for '_ZN19NuclearDataReaction15getCrossSectionEj' function" {
+	label="CFG for '_ZN19NuclearDataReaction15getCrossSectionEj' function";
+
+	Node0x55cf63402820 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %group.addr = alloca i32, align 4\l  store ptr %this, ptr %this.addr, align 8\l  store i32 %group, ptr %group.addr, align 4\l  %this1 = load ptr, ptr %this.addr, align 8\l  br label %do.body\l}"];
+	Node0x55cf63402820 -> Node0x55cf63402b90[tooltip="entry -> do.body\nProbability 100.00%" ];
+	Node0x55cf63402b90 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{do.body:\l|  %0 = load i32, ptr %group.addr, align 4\l  %_crossSection = getelementptr inbounds %class.NuclearDataReaction, ptr\l... %this1, i32 0, i32 0\l  %call = call noundef i32 @_ZNK9qs_vectorIdE4sizeEv(ptr noundef nonnull align\l... 8 dereferenceable(24) %_crossSection)\l  %cmp = icmp ult i32 %0, %call\l  br i1 %cmp, label %if.end, label %if.then\l|{<s0>T|<s1>F}}"];
+	Node0x55cf63402b90:s0 -> Node0x55cf63403000[tooltip="do.body -> if.end\nProbability 50.00%" ];
+	Node0x55cf63402b90:s1 -> Node0x55cf63403070[tooltip="do.body -> if.then\nProbability 50.00%" ];
+	Node0x55cf63403070 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.then:\l|  %call2 = call i32 (ptr, ...) @printf(ptr noundef @.str, ptr noundef\l... @.str.1, i32 noundef 194)\l  br label %if.end\l}"];
+	Node0x55cf63403070 -> Node0x55cf63403000[tooltip="if.then -> if.end\nProbability 100.00%" ];
+	Node0x55cf63403000 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  br label %do.end\l}"];
+	Node0x55cf63403000 -> Node0x55cf63403410[tooltip="if.end -> do.end\nProbability 100.00%" ];
+	Node0x55cf63403410 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{do.end:\l|  %_crossSection3 = getelementptr inbounds %class.NuclearDataReaction, ptr\l... %this1, i32 0, i32 0\l  %1 = load i32, ptr %group.addr, align 4\l  %call4 = call noundef nonnull align 8 dereferenceable(8) ptr\l... @_ZN9qs_vectorIdEixEi(ptr noundef nonnull align 8 dereferenceable(24)\l... %_crossSection3, i32 noundef %1)\l  %2 = load double, ptr %call4, align 8\l  ret double %2\l}"];
+}

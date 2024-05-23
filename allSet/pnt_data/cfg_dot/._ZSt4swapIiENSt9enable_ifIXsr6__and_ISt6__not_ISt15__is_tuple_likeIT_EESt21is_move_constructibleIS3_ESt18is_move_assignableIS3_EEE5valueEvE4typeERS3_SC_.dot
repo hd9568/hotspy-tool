@@ -1,0 +1,5 @@
+digraph "CFG for '_ZSt4swapIiENSt9enable_ifIXsr6__and_ISt6__not_ISt15__is_tuple_likeIT_EESt21is_move_constructibleIS3_ESt18is_move_assignableIS3_EEE5valueEvE4typeERS3_SC_' function" {
+	label="CFG for '_ZSt4swapIiENSt9enable_ifIXsr6__and_ISt6__not_ISt15__is_tuple_likeIT_EESt21is_move_constructibleIS3_ESt18is_move_assignableIS3_EEE5valueEvE4typeERS3_SC_' function";
+
+	Node0x56307d765e90 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %__a.addr = alloca ptr, align 8\l  %__b.addr = alloca ptr, align 8\l  %__tmp = alloca i32, align 4\l  store ptr %__a, ptr %__a.addr, align 8\l  store ptr %__b, ptr %__b.addr, align 8\l  %0 = load ptr, ptr %__a.addr, align 8\l  %1 = load i32, ptr %0, align 4\l  store i32 %1, ptr %__tmp, align 4\l  %2 = load ptr, ptr %__b.addr, align 8\l  %3 = load i32, ptr %2, align 4\l  %4 = load ptr, ptr %__a.addr, align 8\l  store i32 %3, ptr %4, align 4\l  %5 = load i32, ptr %__tmp, align 4\l  %6 = load ptr, ptr %__b.addr, align 8\l  store i32 %5, ptr %6, align 4\l  ret void\l}"];
+}

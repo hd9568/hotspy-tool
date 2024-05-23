@@ -1,0 +1,21 @@
+digraph "Call graph: sarray_sort.ll" {
+	label="Call graph: sarray_sort.ll";
+
+	Node0x5648af2e6b20 [shape=record,label="{sarray_permute_}"];
+	Node0x5648af2e6b20 -> Node0x5648af2e6bd0;
+	Node0x5648af2e6bd0 [shape=record,label="{llvm.memcpy.p0.p0.i64}"];
+	Node0x5648af3031b0 [shape=record,label="{sarray_permute_buf_}"];
+	Node0x5648af3031b0 -> Node0x5648af3032e0;
+	Node0x5648af3031b0 -> Node0x5648af303360;
+	Node0x5648af3031b0 -> Node0x5648af2e6b20;
+	Node0x5648af303360 [shape=record,label="{array_reserve_}"];
+	Node0x5648af303360 -> Node0x5648af3034f0;
+	Node0x5648af3032e0 [shape=record,label="{align_as_}"];
+	Node0x5648af3034f0 [shape=record,label="{array_resize_}"];
+	Node0x5648af3034f0 -> Node0x5648af303570;
+	Node0x5648af303570 [shape=record,label="{srealloc}"];
+	Node0x5648af303570 -> Node0x5648af3035f0;
+	Node0x5648af303570 -> Node0x5648af3036a0;
+	Node0x5648af3035f0 [shape=record,label="{realloc}"];
+	Node0x5648af3036a0 [shape=record,label="{fail}"];
+}

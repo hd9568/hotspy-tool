@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN3fmt6v9_lmp6detail13is_big_endianEv' function" {
+	label="CFG for '_ZN3fmt6v9_lmp6detail13is_big_endianEv' function";
+
+	Node0x5584169415b0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  ret i1 false\l}"];
+}

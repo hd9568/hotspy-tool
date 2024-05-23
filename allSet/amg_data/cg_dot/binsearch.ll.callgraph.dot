@@ -1,0 +1,7 @@
+digraph "Call graph: binsearch.ll" {
+	label="Call graph: binsearch.ll";
+
+	Node0x557658efa7c0 [shape=record,label="{hypre_BinarySearch}"];
+	Node0x557658efa870 [shape=record,label="{hypre_BinarySearch2}"];
+	Node0x557658efa8f0 [shape=record,label="{hypre_LowerBound}"];
+}

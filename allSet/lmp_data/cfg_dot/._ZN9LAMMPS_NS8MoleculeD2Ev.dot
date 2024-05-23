@@ -1,0 +1,14 @@
+digraph "CFG for '_ZN9LAMMPS_NS8MoleculeD2Ev' function" {
+	label="CFG for '_ZN9LAMMPS_NS8MoleculeD2Ev' function";
+
+	Node0x558e6086c880 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  store ptr getelementptr inbounds (\{ [4 x ptr] \}, ptr\l... @_ZTVN9LAMMPS_NS8MoleculeE, i32 0, inrange i32 0, i32 2), ptr %this1, align 8\l  %id = getelementptr inbounds %\"class.LAMMPS_NS::Molecule\", ptr %this1, i32\l... 0, i32 1\l  %0 = load ptr, ptr %id, align 8\l  %isnull = icmp eq ptr %0, null\l  br i1 %isnull, label %delete.end, label %delete.notnull\l|{<s0>T|<s1>F}}"];
+	Node0x558e6086c880:s0 -> Node0x558e6086ccd0[tooltip="entry -> delete.end\nProbability 37.50%" ];
+	Node0x558e6086c880:s1 -> Node0x558e6086cd20[tooltip="entry -> delete.notnull\nProbability 62.50%" ];
+	Node0x558e6086cd20 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{delete.notnull:\l|  call void @_ZdaPv(ptr noundef %0) #15\l  br label %delete.end\l}"];
+	Node0x558e6086cd20 -> Node0x558e6086ccd0[tooltip="delete.notnull -> delete.end\nProbability 100.00%" ];
+	Node0x558e6086ccd0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{delete.end:\l|  invoke void @_ZN9LAMMPS_NS8Molecule10deallocateEv(ptr noundef nonnull\l... align 8 dereferenceable(1032) %this1)\l          to label %invoke.cont unwind label %terminate.lpad\l}"];
+	Node0x558e6086ccd0 -> Node0x558e6086cfc0[tooltip="delete.end -> invoke.cont\nProbability 100.00%" ];
+	Node0x558e6086ccd0 -> Node0x558e6086d040[tooltip="delete.end -> terminate.lpad\nProbability 0.00%" ];
+	Node0x558e6086cfc0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{invoke.cont:\l|  %fragmentnames = getelementptr inbounds %\"class.LAMMPS_NS::Molecule\", ptr\l... %this1, i32 0, i32 83\l  call void\l... @_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EED2Ev\l...(ptr noundef nonnull align 8 dereferenceable(24) %fragmentnames) #16\l  call void @_ZN9LAMMPS_NS8PointersD2Ev(ptr noundef nonnull align 8\l... dereferenceable(184) %this1) #16\l  ret void\l}"];
+	Node0x558e6086d040 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f4c5ad70" fontname="Courier",label="{terminate.lpad:\l|  %1 = landingpad \{ ptr, i32 \}\l          catch ptr null\l  %2 = extractvalue \{ ptr, i32 \} %1, 0\l  call void @__clang_call_terminate(ptr %2) #17\l  unreachable\l}"];
+}

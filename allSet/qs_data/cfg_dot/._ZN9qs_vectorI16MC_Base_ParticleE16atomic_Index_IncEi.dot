@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN9qs_vectorI16MC_Base_ParticleE16atomic_Index_IncEi' function" {
+	label="CFG for '_ZN9qs_vectorI16MC_Base_ParticleE16atomic_Index_IncEi' function";
+
+	Node0x559071136ad0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %inc.addr = alloca i32, align 4\l  %pos = alloca i32, align 4\l  store ptr %this, ptr %this.addr, align 8\l  store i32 %inc, ptr %inc.addr, align 4\l  %this1 = load ptr, ptr %this.addr, align 8\l  %_size = getelementptr inbounds %class.qs_vector.0, ptr %this1, i32 0, i32 2\l  %0 = load i32, ptr %_size, align 4\l  store i32 %0, ptr %pos, align 4\l  %_size2 = getelementptr inbounds %class.qs_vector.0, ptr %this1, i32 0, i32 2\l  %1 = load i32, ptr %_size2, align 4\l  %2 = load i32, ptr %inc.addr, align 4\l  %add = add nsw i32 %1, %2\l  %_size3 = getelementptr inbounds %class.qs_vector.0, ptr %this1, i32 0, i32 2\l  store i32 %add, ptr %_size3, align 4\l  %3 = load i32, ptr %pos, align 4\l  ret i32 %3\l}"];
+}

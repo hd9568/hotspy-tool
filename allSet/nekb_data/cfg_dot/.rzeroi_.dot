@@ -1,0 +1,12 @@
+digraph "CFG for 'rzeroi_' function" {
+	label="CFG for 'rzeroi_' function";
+
+	Node0x557942882610 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{4:\l|  %5 = alloca i32, i64 1, align 4\l  %6 = load i32, ptr %1, align 4\l  %7 = sext i32 %6 to i64\l  %8 = icmp sgt i64 %7, 0\l  %9 = select i1 %8, i64 %7, i64 0\l  %10 = load i32, ptr %2, align 4\l  %11 = sext i32 %10 to i64\l  %12 = load i32, ptr %3, align 4\l  %13 = sext i32 %12 to i64\l  %14 = trunc i64 %11 to i32\l  %15 = sub i64 %13, %11\l  %16 = add i64 %15, 1\l  br label %17\l}"];
+	Node0x557942882610 -> Node0x557942882510[tooltip="4 -> 17\nProbability 100.00%" ];
+	Node0x557942882510 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{17:\l|  %18 = phi i32 [ %31, %21 ], [ %14, %4 ]\l  %19 = phi i64 [ %32, %21 ], [ %16, %4 ]\l  %20 = icmp sgt i64 %19, 0\l  br i1 %20, label %21, label %33\l|{<s0>T|<s1>F}}"];
+	Node0x557942882510:s0 -> Node0x557942886bf0[tooltip="17 -> 21\nProbability 96.88%" ];
+	Node0x557942882510:s1 -> Node0x557942886e40[tooltip="17 -> 33\nProbability 3.12%" ];
+	Node0x557942886bf0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{21:\l|  store i32 %18, ptr %5, align 4\l  %22 = load i32, ptr %5, align 4\l  %23 = sext i32 %22 to i64\l  %24 = sub nsw i64 %23, 1\l  %25 = mul nsw i64 %24, 1\l  %26 = mul nsw i64 %25, 1\l  %27 = add nsw i64 %26, 0\l  %28 = mul nsw i64 1, %9\l  %29 = getelementptr float, ptr %0, i64 %27\l  store float 0.000000e+00, ptr %29, align 4\l  %30 = load i32, ptr %5, align 4\l  %31 = add i32 %30, 1\l  %32 = sub i64 %19, 1\l  br label %17\l}"];
+	Node0x557942886bf0 -> Node0x557942882510[tooltip="21 -> 17\nProbability 100.00%" ];
+	Node0x557942886e40 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{33:\l|  store i32 %18, ptr %5, align 4\l  ret void\l}"];
+}

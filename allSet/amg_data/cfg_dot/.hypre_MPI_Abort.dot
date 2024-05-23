@@ -1,0 +1,5 @@
+digraph "CFG for 'hypre_MPI_Abort' function" {
+	label="CFG for 'hypre_MPI_Abort' function";
+
+	Node0x5555d661dc00 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %comm.addr = alloca ptr, align 8\l  %errorcode.addr = alloca i32, align 4\l  store ptr %comm, ptr %comm.addr, align 8\l  store i32 %errorcode, ptr %errorcode.addr, align 4\l  %0 = load ptr, ptr %comm.addr, align 8\l  %1 = load i32, ptr %errorcode.addr, align 4\l  %call = call i32 @MPI_Abort(ptr noundef %0, i32 noundef %1)\l  ret i32 %call\l}"];
+}

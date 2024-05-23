@@ -1,0 +1,34 @@
+digraph "CFG for 'HYPRE_IJVectorAddToValues' function" {
+	label="CFG for 'HYPRE_IJVectorAddToValues' function";
+
+	Node0x5578cb1697b0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %retval = alloca i32, align 4\l  %vector.addr = alloca ptr, align 8\l  %nvalues.addr = alloca i32, align 4\l  %indices.addr = alloca ptr, align 8\l  %values.addr = alloca ptr, align 8\l  %vec = alloca ptr, align 8\l  store ptr %vector, ptr %vector.addr, align 8\l  store i32 %nvalues, ptr %nvalues.addr, align 4\l  store ptr %indices, ptr %indices.addr, align 8\l  store ptr %values, ptr %values.addr, align 8\l  %0 = load ptr, ptr %vector.addr, align 8\l  store ptr %0, ptr %vec, align 8\l  %1 = load i32, ptr %nvalues.addr, align 4\l  %cmp = icmp eq i32 %1, 0\l  br i1 %cmp, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x5578cb1697b0:s0 -> Node0x5578cb15fbd0[tooltip="entry -> if.then\nProbability 37.50%" ];
+	Node0x5578cb1697b0:s1 -> Node0x5578cb169670[tooltip="entry -> if.end\nProbability 62.50%" ];
+	Node0x5578cb15fbd0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{if.then:\l|  %2 = load i32, ptr @hypre__global_error, align 4\l  store i32 %2, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x5578cb15fbd0 -> Node0x5578cb160010[tooltip="if.then -> return\nProbability 100.00%" ];
+	Node0x5578cb169670 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.end:\l|  %3 = load ptr, ptr %vec, align 8\l  %tobool = icmp ne ptr %3, null\l  br i1 %tobool, label %if.end2, label %if.then1\l|{<s0>T|<s1>F}}"];
+	Node0x5578cb169670:s0 -> Node0x5578cb1601b0[tooltip="if.end -> if.end2\nProbability 62.50%" ];
+	Node0x5578cb169670:s1 -> Node0x5578cb160220[tooltip="if.end -> if.then1\nProbability 37.50%" ];
+	Node0x5578cb160220 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470" fontname="Courier",label="{if.then1:\l|  call void @hypre_error_handler(ptr noundef @.str, i32 noundef 305, i32\l... noundef 12, ptr noundef null)\l  %4 = load i32, ptr @hypre__global_error, align 4\l  store i32 %4, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x5578cb160220 -> Node0x5578cb160010[tooltip="if.then1 -> return\nProbability 100.00%" ];
+	Node0x5578cb1601b0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.end2:\l|  %5 = load i32, ptr %nvalues.addr, align 4\l  %cmp3 = icmp slt i32 %5, 0\l  br i1 %cmp3, label %if.then4, label %if.end5\l|{<s0>T|<s1>F}}"];
+	Node0x5578cb1601b0:s0 -> Node0x5578cb16bbd0[tooltip="if.end2 -> if.then4\nProbability 37.50%" ];
+	Node0x5578cb1601b0:s1 -> Node0x5578cb16bc20[tooltip="if.end2 -> if.end5\nProbability 62.50%" ];
+	Node0x5578cb16bbd0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#ca3b3770" fontname="Courier",label="{if.then4:\l|  call void @hypre_error_handler(ptr noundef @.str, i32 noundef 311, i32\l... noundef 20, ptr noundef null)\l  %6 = load i32, ptr @hypre__global_error, align 4\l  store i32 %6, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x5578cb16bbd0 -> Node0x5578cb160010[tooltip="if.then4 -> return\nProbability 100.00%" ];
+	Node0x5578cb16bc20 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470" fontname="Courier",label="{if.end5:\l|  %7 = load ptr, ptr %values.addr, align 8\l  %tobool6 = icmp ne ptr %7, null\l  br i1 %tobool6, label %if.end8, label %if.then7\l|{<s0>T|<s1>F}}"];
+	Node0x5578cb16bc20:s0 -> Node0x5578cb16c1b0[tooltip="if.end5 -> if.end8\nProbability 62.50%" ];
+	Node0x5578cb16bc20:s1 -> Node0x5578cb16c200[tooltip="if.end5 -> if.then7\nProbability 37.50%" ];
+	Node0x5578cb16c200 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#cc403a70" fontname="Courier",label="{if.then7:\l|  call void @hypre_error_handler(ptr noundef @.str, i32 noundef 317, i32\l... noundef 36, ptr noundef null)\l  %8 = load i32, ptr @hypre__global_error, align 4\l  store i32 %8, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x5578cb16c200 -> Node0x5578cb160010[tooltip="if.then7 -> return\nProbability 100.00%" ];
+	Node0x5578cb16c1b0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#ca3b3770" fontname="Courier",label="{if.end8:\l|  %9 = load ptr, ptr %vec, align 8\l  %object_type = getelementptr inbounds %struct.hypre_IJVector_struct, ptr %9,\l... i32 0, i32 2\l  %10 = load i32, ptr %object_type, align 8\l  %cmp9 = icmp eq i32 %10, 5555\l  br i1 %cmp9, label %if.then10, label %if.else\l|{<s0>T|<s1>F}}"];
+	Node0x5578cb16c1b0:s0 -> Node0x5578cb16cbf0[tooltip="if.end8 -> if.then10\nProbability 50.00%" ];
+	Node0x5578cb16c1b0:s1 -> Node0x5578cb16cc40[tooltip="if.end8 -> if.else\nProbability 50.00%" ];
+	Node0x5578cb16cbf0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d0473d70" fontname="Courier",label="{if.then10:\l|  %11 = load ptr, ptr %vec, align 8\l  %12 = load i32, ptr %nvalues.addr, align 4\l  %13 = load ptr, ptr %indices.addr, align 8\l  %14 = load ptr, ptr %values.addr, align 8\l  %call = call i32 @hypre_IJVectorAddToValuesPar(ptr noundef %11, i32 noundef\l... %12, ptr noundef %13, ptr noundef %14)\l  store i32 %call, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x5578cb16cbf0 -> Node0x5578cb160010[tooltip="if.then10 -> return\nProbability 100.00%" ];
+	Node0x5578cb16cc40 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d0473d70" fontname="Courier",label="{if.else:\l|  call void @hypre_error_handler(ptr noundef @.str, i32 noundef 327, i32\l... noundef 12, ptr noundef null)\l  br label %if.end11\l}"];
+	Node0x5578cb16cc40 -> Node0x5578cb16d490[tooltip="if.else -> if.end11\nProbability 100.00%" ];
+	Node0x5578cb16d490 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d0473d70" fontname="Courier",label="{if.end11:\l|  %15 = load i32, ptr @hypre__global_error, align 4\l  store i32 %15, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x5578cb16d490 -> Node0x5578cb160010[tooltip="if.end11 -> return\nProbability 100.00%" ];
+	Node0x5578cb160010 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{return:\l|  %16 = load i32, ptr %retval, align 4\l  ret i32 %16\l}"];
+}

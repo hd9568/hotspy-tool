@@ -1,0 +1,5 @@
+digraph "CFG for 'align_as_' function" {
+	label="CFG for 'align_as_' function";
+
+	Node0x5564aad83610 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %a.addr = alloca i64, align 8\l  %n.addr = alloca i64, align 8\l  store i64 %a, ptr %a.addr, align 8\l  store i64 %n, ptr %n.addr, align 8\l  %0 = load i64, ptr %n.addr, align 8\l  %1 = load i64, ptr %a.addr, align 8\l  %add = add i64 %0, %1\l  %sub = sub i64 %add, 1\l  %2 = load i64, ptr %a.addr, align 8\l  %div = udiv i64 %sub, %2\l  %3 = load i64, ptr %a.addr, align 8\l  %mul = mul i64 %div, %3\l  ret i64 %mul\l}"];
+}

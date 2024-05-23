@@ -1,0 +1,21 @@
+digraph "CFG for 'lammps_open' function" {
+	label="CFG for 'lammps_open' function";
+
+	Node0x55bdf7d84000 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %argc.addr = alloca i32, align 4\l  %argv.addr = alloca ptr, align 8\l  %comm.addr = alloca ptr, align 8\l  %ptr.addr = alloca ptr, align 8\l  %lmp = alloca ptr, align 8\l  %exn.slot = alloca ptr, align 8\l  %ehselector.slot = alloca i32, align 4\l  store i32 %argc, ptr %argc.addr, align 4\l  store ptr %argv, ptr %argv.addr, align 8\l  store ptr %comm, ptr %comm.addr, align 8\l  store ptr %ptr, ptr %ptr.addr, align 8\l  store ptr null, ptr %lmp, align 8\l  call void @lammps_mpi_init()\l  %0 = load ptr, ptr %ptr.addr, align 8\l  %tobool = icmp ne ptr %0, null\l  br i1 %tobool, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x55bdf7d84000:s0 -> Node0x55bdf7d84c00[tooltip="entry -> if.then\nProbability 62.50%" ];
+	Node0x55bdf7d84000:s1 -> Node0x55bdf7d84cd0[tooltip="entry -> if.end\nProbability 37.50%" ];
+	Node0x55bdf7d84c00 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.then:\l|  call void @_ZL20ptr_argument_warningv()\l  br label %if.end\l}"];
+	Node0x55bdf7d84c00 -> Node0x55bdf7d84cd0[tooltip="if.then -> if.end\nProbability 100.00%" ];
+	Node0x55bdf7d84cd0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  %call = call noalias noundef nonnull ptr @_Znwm(i64 noundef 288) #17\l  %1 = load i32, ptr %argc.addr, align 4\l  %2 = load ptr, ptr %argv.addr, align 8\l  %3 = load ptr, ptr %comm.addr, align 8\l  invoke void @_ZN9LAMMPS_NS6LAMMPSC1EiPPcP19ompi_communicator_t(ptr noundef\l... nonnull align 8 dereferenceable(288) %call, i32 noundef %1, ptr noundef %2,\l... ptr noundef %3)\l          to label %invoke.cont unwind label %lpad\l}"];
+	Node0x55bdf7d84cd0 -> Node0x55bdf7d85460[tooltip="if.end -> invoke.cont\nProbability 100.00%" ];
+	Node0x55bdf7d84cd0 -> Node0x55bdf7d85540[tooltip="if.end -> lpad\nProbability 0.00%" ];
+	Node0x55bdf7d85460 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{invoke.cont:\l|  store ptr %call, ptr %lmp, align 8\l  %4 = load ptr, ptr %ptr.addr, align 8\l  %tobool1 = icmp ne ptr %4, null\l  br i1 %tobool1, label %if.then2, label %if.end3\l|{<s0>T|<s1>F}}"];
+	Node0x55bdf7d85460:s0 -> Node0x55bdf7d85aa0[tooltip="invoke.cont -> if.then2\nProbability 62.50%" ];
+	Node0x55bdf7d85460:s1 -> Node0x55bdf7d85af0[tooltip="invoke.cont -> if.end3\nProbability 37.50%" ];
+	Node0x55bdf7d85aa0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.then2:\l|  %5 = load ptr, ptr %lmp, align 8\l  %6 = load ptr, ptr %ptr.addr, align 8\l  store ptr %5, ptr %6, align 8\l  br label %if.end3\l}"];
+	Node0x55bdf7d85aa0 -> Node0x55bdf7d85af0[tooltip="if.then2 -> if.end3\nProbability 100.00%" ];
+	Node0x55bdf7d85540 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f4c5ad70" fontname="Courier",label="{lpad:\l|  %7 = landingpad \{ ptr, i32 \}\l          cleanup\l  %8 = extractvalue \{ ptr, i32 \} %7, 0\l  store ptr %8, ptr %exn.slot, align 8\l  %9 = extractvalue \{ ptr, i32 \} %7, 1\l  store i32 %9, ptr %ehselector.slot, align 4\l  call void @_ZdlPv(ptr noundef %call) #18\l  br label %eh.resume\l}"];
+	Node0x55bdf7d85540 -> Node0x55bdf7d862c0[tooltip="lpad -> eh.resume\nProbability 100.00%" ];
+	Node0x55bdf7d85af0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end3:\l|  %10 = load ptr, ptr %lmp, align 8\l  ret ptr %10\l}"];
+	Node0x55bdf7d862c0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f4c5ad70" fontname="Courier",label="{eh.resume:\l|  %exn = load ptr, ptr %exn.slot, align 8\l  %sel = load i32, ptr %ehselector.slot, align 4\l  %lpad.val = insertvalue \{ ptr, i32 \} poison, ptr %exn, 0\l  %lpad.val4 = insertvalue \{ ptr, i32 \} %lpad.val, i32 %sel, 1\l  resume \{ ptr, i32 \} %lpad.val4\l}"];
+}

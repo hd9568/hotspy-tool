@@ -1,0 +1,5 @@
+digraph "CFG for '_Z7mpiWaitPiP10MPI_Status' function" {
+	label="CFG for '_Z7mpiWaitPiP10MPI_Status' function";
+
+	Node0x558b6942ab20 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %request.addr = alloca ptr, align 8\l  %status.addr = alloca ptr, align 8\l  store ptr %request, ptr %request.addr, align 8\l  store ptr %status, ptr %status.addr, align 8\l  ret void\l}"];
+}

@@ -1,0 +1,18 @@
+digraph "CFG for '_ZN9LAMMPS_NS11FixLangevin7setmaskEv' function" {
+	label="CFG for '_ZN9LAMMPS_NS11FixLangevin7setmaskEv' function";
+
+	Node0x55e6b1c42570 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %mask = alloca i32, align 4\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  store i32 0, ptr %mask, align 4\l  %gjfflag = getelementptr inbounds %\"class.LAMMPS_NS::FixLangevin\", ptr\l... %this1, i32 0, i32 1\l  %0 = load i32, ptr %gjfflag, align 8\l  %tobool = icmp ne i32 %0, 0\l  br i1 %tobool, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x55e6b1c42570:s0 -> Node0x55e6b1c42a30[tooltip="entry -> if.then\nProbability 62.50%" ];
+	Node0x55e6b1c42570:s1 -> Node0x55e6b1c42aa0[tooltip="entry -> if.end\nProbability 37.50%" ];
+	Node0x55e6b1c42a30 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.then:\l|  %1 = load i32, ptr %mask, align 4\l  %or = or i32 %1, 1\l  store i32 %or, ptr %mask, align 4\l  br label %if.end\l}"];
+	Node0x55e6b1c42a30 -> Node0x55e6b1c42aa0[tooltip="if.then -> if.end\nProbability 100.00%" ];
+	Node0x55e6b1c42aa0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  %2 = load i32, ptr %mask, align 4\l  %or2 = or i32 %2, 128\l  store i32 %or2, ptr %mask, align 4\l  %3 = load i32, ptr %mask, align 4\l  %or3 = or i32 %3, 16384\l  store i32 %or3, ptr %mask, align 4\l  %tallyflag = getelementptr inbounds %\"class.LAMMPS_NS::FixLangevin\", ptr\l... %this1, i32 0, i32 5\l  %4 = load i32, ptr %tallyflag, align 8\l  %tobool4 = icmp ne i32 %4, 0\l  br i1 %tobool4, label %if.then7, label %lor.lhs.false\l|{<s0>T|<s1>F}}"];
+	Node0x55e6b1c42aa0:s0 -> Node0x55e6b1c43520[tooltip="if.end -> if.then7\nProbability 62.50%" ];
+	Node0x55e6b1c42aa0:s1 -> Node0x55e6b1c435a0[tooltip="if.end -> lor.lhs.false\nProbability 37.50%" ];
+	Node0x55e6b1c435a0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{lor.lhs.false:\l|  %gjfflag5 = getelementptr inbounds %\"class.LAMMPS_NS::FixLangevin\", ptr\l... %this1, i32 0, i32 1\l  %5 = load i32, ptr %gjfflag5, align 8\l  %tobool6 = icmp ne i32 %5, 0\l  br i1 %tobool6, label %if.then7, label %if.end9\l|{<s0>T|<s1>F}}"];
+	Node0x55e6b1c435a0:s0 -> Node0x55e6b1c43520[tooltip="lor.lhs.false -> if.then7\nProbability 62.50%" ];
+	Node0x55e6b1c435a0:s1 -> Node0x55e6b1c438f0[tooltip="lor.lhs.false -> if.end9\nProbability 37.50%" ];
+	Node0x55e6b1c43520 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.then7:\l|  %6 = load i32, ptr %mask, align 4\l  %or8 = or i32 %6, 512\l  store i32 %or8, ptr %mask, align 4\l  br label %if.end9\l}"];
+	Node0x55e6b1c43520 -> Node0x55e6b1c438f0[tooltip="if.then7 -> if.end9\nProbability 100.00%" ];
+	Node0x55e6b1c438f0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end9:\l|  %7 = load i32, ptr %mask, align 4\l  ret i32 %7\l}"];
+}

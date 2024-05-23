@@ -1,0 +1,30 @@
+digraph "Call graph: par_cheby.ll" {
+	label="Call graph: par_cheby.ll";
+
+	Node0x55b1a0a54390 [shape=record,label="{hypre_ParCSRRelax_Cheby_Setup}"];
+	Node0x55b1a0a54390 -> Node0x55b1a0a46230;
+	Node0x55b1a0a54390 -> Node0x55b1a0a2b640;
+	Node0x55b1a0a54390 -> Node0x55b1a0a41b10;
+	Node0x55b1a0a54390 -> Node0x55b1a0a5a650;
+	Node0x55b1a0a46230 [shape=record,label="{hypre_CAlloc}"];
+	Node0x55b1a0a2b640 [shape=record,label="{llvm.fmuladd.f64}"];
+	Node0x55b1a0a5a650 [shape=record,label="{pow}"];
+	Node0x55b1a0a41b10 [shape=record,label="{sqrt}"];
+	Node0x55b1a0a27be0 [shape=record,label="{hypre_ParCSRRelax_Cheby_Solve}"];
+	Node0x55b1a0a27be0 -> Node0x55b1a0a46230;
+	Node0x55b1a0a27be0 -> Node0x55b1a0a28300;
+	Node0x55b1a0a27be0 -> Node0x55b1a0a29900;
+	Node0x55b1a0a27be0 -> Node0x55b1a0a2dc90;
+	Node0x55b1a0a27be0 -> Node0x55b1a0a2b640;
+	Node0x55b1a0a27be0 -> Node0x55b1a0a5a820;
+	Node0x55b1a0a27be0 -> Node0x55b1a0a2c750;
+	Node0x55b1a0a27be0 -> Node0x55b1a0a2cb20;
+	Node0x55b1a0a27be0 -> Node0x55b1a0a2d950;
+	Node0x55b1a0a28300 [shape=record,label="{hypre_ParVectorCopy}"];
+	Node0x55b1a0a29900 [shape=record,label="{hypre_ParCSRMatrixMatvec}"];
+	Node0x55b1a0a5a820 [shape=record,label="{hypre_ParVectorCreate}"];
+	Node0x55b1a0a2c750 [shape=record,label="{hypre_ParVectorInitialize}"];
+	Node0x55b1a0a2cb20 [shape=record,label="{hypre_ParVectorSetPartitioningOwner}"];
+	Node0x55b1a0a2d950 [shape=record,label="{hypre_ParVectorDestroy}"];
+	Node0x55b1a0a2dc90 [shape=record,label="{hypre_Free}"];
+}

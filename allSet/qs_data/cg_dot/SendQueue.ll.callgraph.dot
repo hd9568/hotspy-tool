@@ -1,0 +1,36 @@
+digraph "Call graph: SendQueue.ll" {
+	label="Call graph: SendQueue.ll";
+
+	Node0x562000ec3c10 [shape=record,label="{_ZN9SendQueueC2Ev}"];
+	Node0x562000ec3c10 -> Node0x562000ec5a30;
+	Node0x562000ec5a30 [shape=record,label="{_ZN9qs_vectorI14sendQueueTupleEC2Ev}"];
+	Node0x562000ec71b0 [shape=record,label="{_ZN9SendQueueC2Em}"];
+	Node0x562000ec71b0 -> Node0x562000ec5430;
+	Node0x562000ec5430 [shape=record,label="{_ZN9qs_vectorI14sendQueueTupleEC2EiN13MemoryControl16AllocationPolicyE}"];
+	Node0x562000ec5430 -> Node0x562000eca230;
+	Node0x562000ec9690 [shape=record,label="{_ZN9SendQueue4sizeEv}"];
+	Node0x562000ec9690 -> Node0x562000ed4510;
+	Node0x562000ed46c0 [shape=record,label="{_ZN9SendQueue4pushEii}"];
+	Node0x562000ed46c0 -> Node0x562000ed49d0;
+	Node0x562000ed46c0 -> Node0x562000ed4640;
+	Node0x562000ed4510 [shape=record,label="{_ZNK9qs_vectorI14sendQueueTupleE4sizeEv}"];
+	Node0x562000ed4590 [shape=record,label="{_ZN9SendQueue13neighbor_sizeEi}"];
+	Node0x562000ed4590 -> Node0x562000ed4510;
+	Node0x562000ed4590 -> Node0x562000ed4640;
+	Node0x562000ed4640 [shape=record,label="{_ZN9qs_vectorI14sendQueueTupleEixEi}"];
+	Node0x562000ed49d0 [shape=record,label="{_ZN9qs_vectorI14sendQueueTupleE16atomic_Index_IncEi}"];
+	Node0x562000ed4a50 [shape=record,label="{_ZN9SendQueue5clearEv}"];
+	Node0x562000ed4a50 -> Node0x562000ed4ad0;
+	Node0x562000ed4ad0 [shape=record,label="{_ZN9qs_vectorI14sendQueueTupleE5clearEv}"];
+	Node0x562000ed4b50 [shape=record,label="{_ZN9SendQueue8getTupleEi}"];
+	Node0x562000ed4b50 -> Node0x562000ed4bd0;
+	Node0x562000ed4b50 -> Node0x562000ed4510;
+	Node0x562000ed4b50 -> Node0x562000ed4640;
+	Node0x562000ed4bd0 [shape=record,label="{printf}"];
+	Node0x562000eca230 [shape=record,label="{_ZN13MemoryControl8allocateI14sendQueueTupleEEPT_iNS_16AllocationPolicyE}"];
+	Node0x562000eca230 -> Node0x562000ed4d30;
+	Node0x562000eca230 -> Node0x562000ed4de0;
+	Node0x562000eca230 -> Node0x562000ed4bd0;
+	Node0x562000ed4d30 [shape=record,label="{llvm.umul.with.overflow.i64}"];
+	Node0x562000ed4de0 [shape=record,label="{_Znam}"];
+}

@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN3fmt6v9_lmp6detail14digit_groupingIcED2Ev' function" {
+	label="CFG for '_ZN3fmt6v9_lmp6detail14digit_groupingIcED2Ev' function";
+
+	Node0x556bfeccc3b0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %sep_ = getelementptr inbounds %\"class.fmt::v9_lmp::detail::digit_grouping\",\l... ptr %this1, i32 0, i32 0\l  call void @_ZN3fmt6v9_lmp6detail20thousands_sep_resultIcED2Ev(ptr noundef\l... nonnull align 8 dereferenceable(33) %sep_) #3\l  ret void\l}"];
+}

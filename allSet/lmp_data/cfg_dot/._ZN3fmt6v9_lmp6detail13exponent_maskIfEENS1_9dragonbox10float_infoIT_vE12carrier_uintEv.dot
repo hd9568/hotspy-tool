@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN3fmt6v9_lmp6detail13exponent_maskIfEENS1_9dragonbox10float_infoIT_vE12carrier_uintEv' function" {
+	label="CFG for '_ZN3fmt6v9_lmp6detail13exponent_maskIfEENS1_9dragonbox10float_infoIT_vE12carrier_uintEv' function";
+
+	Node0x556bfec33670 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %call = call noundef i32\l... @_ZN3fmt6v9_lmp6detail20num_significand_bitsIfEEiv()\l  %shl = shl i32 255, %call\l  ret i32 %shl\l}"];
+}

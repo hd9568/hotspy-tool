@@ -1,0 +1,180 @@
+MODEL BEGINNING!
+this is GPU0: Tesla V100-PCIE-32GB
+All functions have been obtained! All graphs are being parsed:
+test dataloader's time is 0.0 mins
+========== all test data has already been ready! ===========
+| TN=42 FP=13 |
+| FN=14 TP=11 |
+test accuracy: 66.25%
+precision: 45.83%
+recall: 44.00%
+f1 score: 0.449
+nekb_data datasize: 34; hot: 0.29; acc: 0.68
+spec999_data datasize: 5; hot: 0.40; acc: 0.60
+xb_data datasize: 13; hot: 0.46; acc: 0.46
+clp_data datasize: 19; hot: 0.26; acc: 0.84
+ft_data datasize: 4; hot: 0.25; acc: 0.50
+mg_data datasize: 3; hot: 0.33; acc: 1.00
+spec648_data datasize: 2; hot: 0.00; acc: 0.00
+MODEL BEGINNING!
+this is GPU0: Tesla V100-PCIE-32GB
+All functions have been obtained! All graphs are being parsed:
+test dataloader's time is 0.0 mins
+========== all test data has already been ready! ===========
+| TN=40 FP=15 |
+| FN=13 TP=12 |
+test accuracy: 65.00%
+precision: 44.44%
+recall: 48.00%
+f1 score: 0.462
+xb_data datasize: 13; hot: 0.46; acc: 0.46
+nekb_data datasize: 34; hot: 0.29; acc: 0.65
+spec648_data datasize: 2; hot: 0.00; acc: 0.00
+clp_data datasize: 19; hot: 0.26; acc: 0.79
+spec999_data datasize: 5; hot: 0.40; acc: 0.60
+ft_data datasize: 4; hot: 0.25; acc: 0.75
+mg_data datasize: 3; hot: 0.33; acc: 1.00
+MODEL BEGINNING!
+this is GPU0: Tesla V100-PCIE-32GB
+All functions have been obtained! All graphs are being parsed:
+test dataloader's time is 0.0 mins
+========== all test data has already been ready! ===========
+| TN=39 FP=16 |
+| FN=10 TP=15 |
+test accuracy: 67.50%
+precision: 48.39%
+recall: 60.00%
+f1 score: 0.536
+spec999_data datasize: 5; hot: 0.40; acc: 0.60
+ft_data datasize: 4; hot: 0.25; acc: 1.00
+clp_data datasize: 19; hot: 0.26; acc: 0.84
+nekb_data datasize: 34; hot: 0.29; acc: 0.68
+xb_data datasize: 13; hot: 0.46; acc: 0.54
+spec648_data datasize: 2; hot: 0.00; acc: 0.00
+mg_data datasize: 3; hot: 0.33; acc: 0.33
+MODEL BEGINNING!
+this is GPU0: Tesla V100-PCIE-32GB
+All functions have been obtained! All graphs are being parsed:
+test dataloader's time is 0.0 mins
+========== all test data has already been ready! ===========
+| TN=40 FP=15 |
+| FN=10 TP=15 |
+test accuracy: 68.75%
+precision: 50.00%
+recall: 60.00%
+f1 score: 0.545
+nekb_data datasize: 34; hot: 0.29; acc: 0.68
+xb_data datasize: 13; hot: 0.46; acc: 0.54
+ft_data datasize: 4; hot: 0.25; acc: 0.25
+clp_data datasize: 19; hot: 0.26; acc: 0.89
+mg_data datasize: 3; hot: 0.33; acc: 1.00
+spec648_data datasize: 2; hot: 0.00; acc: 0.50
+spec999_data datasize: 5; hot: 0.40; acc: 0.60
+MODEL BEGINNING!
+this is GPU0: Tesla V100-PCIE-32GB
+All functions have been obtained! All graphs are being parsed:
+test dataloader's time is 0.0 mins
+========== all test data has already been ready! ===========
+| TN=41 FP=14 |
+| FN=18 TP=7 |
+test accuracy: 60.00%
+precision: 33.33%
+recall: 28.00%
+f1 score: 0.304
+nekb_data datasize: 34; hot: 0.29; acc: 0.59
+spec999_data datasize: 5; hot: 0.40; acc: 0.60
+clp_data datasize: 19; hot: 0.26; acc: 0.79
+mg_data datasize: 3; hot: 0.33; acc: 0.00
+xb_data datasize: 13; hot: 0.46; acc: 0.46
+ft_data datasize: 4; hot: 0.25; acc: 0.75
+spec648_data datasize: 2; hot: 0.00; acc: 0.50
+MODEL BEGINNING!
+this is GPU0: Tesla V100-PCIE-32GB
+All functions have been obtained! All graphs are being parsed:
+test dataloader's time is 0.0 mins
+========== all test data has already been ready! ===========
+| TN=41 FP=14 |
+| FN=15 TP=10 |
+test accuracy: 63.75%
+precision: 41.67%
+recall: 40.00%
+f1 score: 0.408
+clp_data datasize: 19; hot: 0.26; acc: 0.79
+nekb_data datasize: 34; hot: 0.29; acc: 0.68
+mg_data datasize: 3; hot: 0.33; acc: 0.33
+spec999_data datasize: 5; hot: 0.40; acc: 0.60
+spec648_data datasize: 2; hot: 0.00; acc: 0.00
+xb_data datasize: 13; hot: 0.46; acc: 0.46
+ft_data datasize: 4; hot: 0.25; acc: 0.75
+MODEL BEGINNING!
+this is GPU0: Tesla V100-PCIE-32GB
+All functions have been obtained! All graphs are being parsed:
+test dataloader's time is 0.0 mins
+========== all test data has already been ready! ===========
+| TN=36 FP=19 |
+| FN=13 TP=12 |
+test accuracy: 60.00%
+precision: 38.71%
+recall: 48.00%
+f1 score: 0.429
+xb_data datasize: 13; hot: 0.46; acc: 0.46
+nekb_data datasize: 34; hot: 0.29; acc: 0.62
+spec999_data datasize: 5; hot: 0.40; acc: 0.60
+clp_data datasize: 19; hot: 0.26; acc: 0.79
+ft_data datasize: 4; hot: 0.25; acc: 0.25
+mg_data datasize: 3; hot: 0.33; acc: 0.00
+spec648_data datasize: 2; hot: 0.00; acc: 1.00
+MODEL BEGINNING!
+this is GPU0: Tesla V100-PCIE-32GB
+All functions have been obtained! All graphs are being parsed:
+test dataloader's time is 0.0 mins
+========== all test data has already been ready! ===========
+| TN=39 FP=16 |
+| FN=13 TP=12 |
+test accuracy: 63.75%
+precision: 42.86%
+recall: 48.00%
+f1 score: 0.453
+clp_data datasize: 19; hot: 0.26; acc: 0.84
+nekb_data datasize: 34; hot: 0.29; acc: 0.59
+xb_data datasize: 13; hot: 0.46; acc: 0.54
+ft_data datasize: 4; hot: 0.25; acc: 0.75
+spec999_data datasize: 5; hot: 0.40; acc: 0.60
+mg_data datasize: 3; hot: 0.33; acc: 0.33
+spec648_data datasize: 2; hot: 0.00; acc: 0.50
+MODEL BEGINNING!
+this is GPU0: Tesla V100-PCIE-32GB
+All functions have been obtained! All graphs are being parsed:
+test dataloader's time is 0.0 mins
+========== all test data has already been ready! ===========
+| TN=39 FP=16 |
+| FN=14 TP=11 |
+test accuracy: 62.50%
+precision: 40.74%
+recall: 44.00%
+f1 score: 0.423
+clp_data datasize: 19; hot: 0.26; acc: 0.74
+nekb_data datasize: 34; hot: 0.29; acc: 0.59
+mg_data datasize: 3; hot: 0.33; acc: 1.00
+xb_data datasize: 13; hot: 0.46; acc: 0.54
+ft_data datasize: 4; hot: 0.25; acc: 0.25
+spec999_data datasize: 5; hot: 0.40; acc: 0.60
+spec648_data datasize: 2; hot: 0.00; acc: 1.00
+MODEL BEGINNING!
+this is GPU0: Tesla V100-PCIE-32GB
+All functions have been obtained! All graphs are being parsed:
+test dataloader's time is 0.0 mins
+========== all test data has already been ready! ===========
+| TN=38 FP=17 |
+| FN=12 TP=13 |
+test accuracy: 63.75%
+precision: 43.33%
+recall: 52.00%
+f1 score: 0.473
+spec999_data datasize: 5; hot: 0.40; acc: 0.60
+clp_data datasize: 19; hot: 0.26; acc: 0.74
+xb_data datasize: 13; hot: 0.46; acc: 0.54
+nekb_data datasize: 34; hot: 0.29; acc: 0.62
+ft_data datasize: 4; hot: 0.25; acc: 0.75
+mg_data datasize: 3; hot: 0.33; acc: 0.67
+spec648_data datasize: 2; hot: 0.00; acc: 0.50

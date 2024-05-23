@@ -1,0 +1,5 @@
+digraph "CFG for 'lammps_config_has_gzip_support' function" {
+	label="CFG for 'lammps_config_has_gzip_support' function";
+
+	Node0x55bdf7d7cba0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %call = call noundef zeroext i1 @_ZN9LAMMPS_NS4Info16has_gzip_supportEv()\l  %0 = zext i1 %call to i64\l  %cond = select i1 %call, i32 1, i32 0\l  ret i32 %cond\l}"];
+}

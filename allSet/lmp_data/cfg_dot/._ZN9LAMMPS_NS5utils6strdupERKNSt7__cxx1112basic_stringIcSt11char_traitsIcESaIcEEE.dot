@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN9LAMMPS_NS5utils6strdupERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE' function" {
+	label="CFG for '_ZN9LAMMPS_NS5utils6strdupERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE' function";
+
+	Node0x558416677870 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %text.addr = alloca ptr, align 8\l  %tmp = alloca ptr, align 8\l  store ptr %text, ptr %text.addr, align 8\l  %0 = load ptr, ptr %text.addr, align 8\l  %call = call noundef i64\l... @_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4sizeEv(ptr noundef\l... nonnull align 8 dereferenceable(32) %0) #18\l  %add = add i64 %call, 1\l  %call1 = call noalias noundef nonnull ptr @_Znam(i64 noundef %add) #21\l  store ptr %call1, ptr %tmp, align 8\l  %1 = load ptr, ptr %tmp, align 8\l  %2 = load ptr, ptr %text.addr, align 8\l  %call2 = call noundef ptr\l... @_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE5c_strEv(ptr noundef\l... nonnull align 8 dereferenceable(32) %2) #18\l  %call3 = call ptr @strcpy(ptr noundef %1, ptr noundef %call2) #18\l  %3 = load ptr, ptr %tmp, align 8\l  ret ptr %3\l}"];
+}

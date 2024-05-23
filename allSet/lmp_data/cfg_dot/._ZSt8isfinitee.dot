@@ -1,0 +1,5 @@
+digraph "CFG for '_ZSt8isfinitee' function" {
+	label="CFG for '_ZSt8isfinitee' function";
+
+	Node0x55fec330c480 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %__x.addr = alloca x86_fp80, align 16\l  store x86_fp80 %__x, ptr %__x.addr, align 16\l  %0 = load x86_fp80, ptr %__x.addr, align 16\l  %1 = call i1 @llvm.is.fpclass.f80(x86_fp80 %0, i32 504)\l  ret i1 %1\l}"];
+}

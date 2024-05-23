@@ -1,0 +1,10 @@
+digraph "CFG for '_ZN12_GLOBAL__N_19isCommentENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE' function" {
+	label="CFG for '_ZN12_GLOBAL__N_19isCommentENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE' function";
+
+	Node0x55957e5b79b0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %line.indirect_addr = alloca ptr, align 8\l  %here = alloca i64, align 8\l  store ptr %line, ptr %line.indirect_addr, align 8\l  %call = call noundef i64\l... @_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4findEPKcm(ptr noundef\l... nonnull align 8 dereferenceable(32) %line, ptr noundef @.str.2, i64 noundef\l... 0) #3\l  store i64 %call, ptr %here, align 8\l  %0 = load i64, ptr %here, align 8\l  %cmp = icmp ne i64 %0, -1\l  br i1 %cmp, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x55957e5b79b0:s0 -> Node0x55957e5b7b60[tooltip="entry -> if.then\nProbability 62.50%" ];
+	Node0x55957e5b79b0:s1 -> Node0x55957e5b7e00[tooltip="entry -> if.end\nProbability 37.50%" ];
+	Node0x55957e5b7b60 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.then:\l|  %1 = load i64, ptr %here, align 8\l  %call1 = call noundef nonnull align 8 dereferenceable(32) ptr\l... @_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE5eraseEmm(ptr noundef\l... nonnull align 8 dereferenceable(32) %line, i64 noundef %1, i64 noundef -1)\l  br label %if.end\l}"];
+	Node0x55957e5b7b60 -> Node0x55957e5b7e00[tooltip="if.then -> if.end\nProbability 100.00%" ];
+	Node0x55957e5b7e00 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  %call2 = call noundef i64\l... @_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE16find_last_not_ofERKS4\l..._m(ptr noundef nonnull align 8 dereferenceable(32) %line, ptr noundef nonnull\l... align 8 dereferenceable(32) @_ZN12_GLOBAL__N_110whitespaceB5cxx11E, i64\l... noundef -1) #3\l  %cmp3 = icmp eq i64 %call2, -1\l  ret i1 %cmp3\l}"];
+}

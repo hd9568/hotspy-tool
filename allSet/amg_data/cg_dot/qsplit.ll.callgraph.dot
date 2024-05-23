@@ -1,0 +1,7 @@
+digraph "Call graph: qsplit.ll" {
+	label="Call graph: qsplit.ll";
+
+	Node0x5626dd037950 [shape=record,label="{hypre_DoubleQuickSplit}"];
+	Node0x5626dd037950 -> Node0x5626dd037a00;
+	Node0x5626dd037a00 [shape=record,label="{llvm.fabs.f64}"];
+}

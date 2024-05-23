@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN3fmt6v9_lmp6detail9dragonbox15umul128_upper64Emm' function" {
+	label="CFG for '_ZN3fmt6v9_lmp6detail9dragonbox15umul128_upper64Emm' function";
+
+	Node0x55fec3072700 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %x.addr = alloca i64, align 8\l  %y.addr = alloca i64, align 8\l  %p = alloca i128, align 16\l  store i64 %x, ptr %x.addr, align 8\l  store i64 %y, ptr %y.addr, align 8\l  %0 = load i64, ptr %x.addr, align 8\l  %conv = zext i64 %0 to i128\l  %1 = load i64, ptr %y.addr, align 8\l  %conv1 = zext i64 %1 to i128\l  %mul = mul i128 %conv, %conv1\l  store i128 %mul, ptr %p, align 16\l  %2 = load i128, ptr %p, align 16\l  %shr = lshr i128 %2, 64\l  %conv2 = trunc i128 %shr to i64\l  ret i64 %conv2\l}"];
+}

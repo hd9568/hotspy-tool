@@ -1,0 +1,5 @@
+digraph "CFG for '_ZNKSt5dequeIiSaIiEE4sizeEv' function" {
+	label="CFG for '_ZNKSt5dequeIiSaIiEE4sizeEv' function";
+
+	Node0x564619474d00 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %_M_impl = getelementptr inbounds %\"class.std::_Deque_base\", ptr %this1, i32\l... 0, i32 0\l  %_M_finish = getelementptr inbounds %\"struct.std::_Deque_base\<int,\l... std::allocator\<int\>\>::_Deque_impl\", ptr %_M_impl, i32 0, i32 3\l  %_M_impl2 = getelementptr inbounds %\"class.std::_Deque_base\", ptr %this1,\l... i32 0, i32 0\l  %_M_start = getelementptr inbounds %\"struct.std::_Deque_base\<int,\l... std::allocator\<int\>\>::_Deque_impl\", ptr %_M_impl2, i32 0, i32 2\l  %call = call noundef i64\l... @_ZStmiIiRiPiENSt15_Deque_iteratorIT_T0_T1_E15difference_typeERKS6_S9_(ptr\l... noundef nonnull align 8 dereferenceable(32) %_M_finish, ptr noundef nonnull\l... align 8 dereferenceable(32) %_M_start) #11\l  ret i64 %call\l}"];
+}

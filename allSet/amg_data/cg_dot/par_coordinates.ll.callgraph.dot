@@ -1,0 +1,11 @@
+digraph "Call graph: par_coordinates.ll" {
+	label="Call graph: par_coordinates.ll";
+
+	Node0x55aef5731ef0 [shape=record,label="{GenerateCoordinates}"];
+	Node0x55aef5731ef0 -> Node0x55aef5731fa0;
+	Node0x55aef5731ef0 -> Node0x55aef574a640;
+	Node0x55aef5731ef0 -> Node0x55aef5732050;
+	Node0x55aef5731fa0 [shape=record,label="{hypre_GeneratePartitioning}"];
+	Node0x55aef5732050 [shape=record,label="{hypre_CAlloc}"];
+	Node0x55aef574a640 [shape=record,label="{hypre_Free}"];
+}

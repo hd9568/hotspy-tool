@@ -1,0 +1,29 @@
+digraph "CFG for '_ZN9LAMMPS_NS7FixPair9pre_forceEi' function" {
+	label="CFG for '_ZN9LAMMPS_NS7FixPair9pre_forceEi' function";
+
+	Node0x5629e4cc1a50 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#ca3b3770" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %.addr = alloca i32, align 4\l  %ifield = alloca i32, align 4\l  store ptr %this, ptr %this.addr, align 8\l  store i32 %0, ptr %.addr, align 4\l  %this1 = load ptr, ptr %this.addr, align 8\l  %update = getelementptr inbounds %\"class.LAMMPS_NS::Pointers\", ptr %this1,\l... i32 0, i32 7\l  %1 = load ptr, ptr %update, align 8\l  %2 = load ptr, ptr %1, align 8\l  %ntimestep = getelementptr inbounds %\"class.LAMMPS_NS::Update\", ptr %2, i32\l... 0, i32 4\l  %3 = load i64, ptr %ntimestep, align 8\l  %nevery = getelementptr inbounds %\"class.LAMMPS_NS::FixPair\", ptr %this1,\l... i32 0, i32 1\l  %4 = load i32, ptr %nevery, align 8\l  %conv = sext i32 %4 to i64\l  %rem = srem i64 %3, %conv\l  %tobool = icmp ne i64 %rem, 0\l  br i1 %tobool, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x5629e4cc1a50:s0 -> Node0x5629e4cc2440[tooltip="entry -> if.then\nProbability 62.50%" ];
+	Node0x5629e4cc1a50:s1 -> Node0x5629e4cc2650[tooltip="entry -> if.end\nProbability 37.50%" ];
+	Node0x5629e4cc2440 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#cc403a70" fontname="Courier",label="{if.then:\l|  br label %for.end\l}"];
+	Node0x5629e4cc2440 -> Node0x5629e4cc2770[tooltip="if.then -> for.end\nProbability 100.00%" ];
+	Node0x5629e4cc2650 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d0473d70" fontname="Courier",label="{if.end:\l|  %update2 = getelementptr inbounds %\"class.LAMMPS_NS::Pointers\", ptr\l... %this1, i32 0, i32 7\l  %5 = load ptr, ptr %update2, align 8\l  %6 = load ptr, ptr %5, align 8\l  %ntimestep3 = getelementptr inbounds %\"class.LAMMPS_NS::Update\", ptr %6, i32\l... 0, i32 4\l  %7 = load i64, ptr %ntimestep3, align 8\l  %lasttime = getelementptr inbounds %\"class.LAMMPS_NS::FixPair\", ptr %this1,\l... i32 0, i32 4\l  %8 = load i64, ptr %lasttime, align 8\l  %cmp = icmp eq i64 %7, %8\l  br i1 %cmp, label %if.then4, label %if.end5\l|{<s0>T|<s1>F}}"];
+	Node0x5629e4cc2650:s0 -> Node0x5629e4cc2dc0[tooltip="if.end -> if.then4\nProbability 50.00%" ];
+	Node0x5629e4cc2650:s1 -> Node0x5629e4cc2e40[tooltip="if.end -> if.end5\nProbability 50.00%" ];
+	Node0x5629e4cc2dc0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{if.then4:\l|  br label %for.end\l}"];
+	Node0x5629e4cc2dc0 -> Node0x5629e4cc2770[tooltip="if.then4 -> for.end\nProbability 100.00%" ];
+	Node0x5629e4cc2e40 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{if.end5:\l|  store i32 0, ptr %ifield, align 4\l  br label %for.cond\l}"];
+	Node0x5629e4cc2e40 -> Node0x5629e4cc3070[tooltip="if.end5 -> for.cond\nProbability 100.00%" ];
+	Node0x5629e4cc3070 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.cond:\l|  %9 = load i32, ptr %ifield, align 4\l  %nfield = getelementptr inbounds %\"class.LAMMPS_NS::FixPair\", ptr %this1,\l... i32 0, i32 2\l  %10 = load i32, ptr %nfield, align 4\l  %cmp6 = icmp slt i32 %9, %10\l  br i1 %cmp6, label %for.body, label %for.end\l|{<s0>T|<s1>F}}"];
+	Node0x5629e4cc3070:s0 -> Node0x5629e4cc33f0[tooltip="for.cond -> for.body\nProbability 96.88%" ];
+	Node0x5629e4cc3070:s1 -> Node0x5629e4cc2770[tooltip="for.cond -> for.end\nProbability 3.12%" ];
+	Node0x5629e4cc33f0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.body:\l|  %trigger = getelementptr inbounds %\"class.LAMMPS_NS::FixPair\", ptr %this1,\l... i32 0, i32 8\l  %11 = load ptr, ptr %trigger, align 8\l  %12 = load i32, ptr %ifield, align 4\l  %idxprom = sext i32 %12 to i64\l  %arrayidx = getelementptr inbounds i32, ptr %11, i64 %idxprom\l  %13 = load i32, ptr %arrayidx, align 4\l  %tobool7 = icmp ne i32 %13, 0\l  br i1 %tobool7, label %if.then8, label %if.end11\l|{<s0>T|<s1>F}}"];
+	Node0x5629e4cc33f0:s0 -> Node0x5629e4cc3b20[tooltip="for.body -> if.then8\nProbability 62.50%" ];
+	Node0x5629e4cc33f0:s1 -> Node0x5629e4cc3ba0[tooltip="for.body -> if.end11\nProbability 37.50%" ];
+	Node0x5629e4cc3b20 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.then8:\l|  %triggerptr = getelementptr inbounds %\"class.LAMMPS_NS::FixPair\", ptr\l... %this1, i32 0, i32 9\l  %14 = load ptr, ptr %triggerptr, align 8\l  %15 = load i32, ptr %ifield, align 4\l  %idxprom9 = sext i32 %15 to i64\l  %arrayidx10 = getelementptr inbounds ptr, ptr %14, i64 %idxprom9\l  %16 = load ptr, ptr %arrayidx10, align 8\l  store i32 1, ptr %16, align 4\l  br label %if.end11\l}"];
+	Node0x5629e4cc3b20 -> Node0x5629e4cc3ba0[tooltip="if.then8 -> if.end11\nProbability 100.00%" ];
+	Node0x5629e4cc3ba0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end11:\l|  br label %for.inc\l}"];
+	Node0x5629e4cc3ba0 -> Node0x5629e4cc41c0[tooltip="if.end11 -> for.inc\nProbability 100.00%" ];
+	Node0x5629e4cc41c0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.inc:\l|  %17 = load i32, ptr %ifield, align 4\l  %inc = add nsw i32 %17, 1\l  store i32 %inc, ptr %ifield, align 4\l  br label %for.cond, !llvm.loop !6\l}"];
+	Node0x5629e4cc41c0 -> Node0x5629e4cc3070[tooltip="for.inc -> for.cond\nProbability 100.00%" ];
+	Node0x5629e4cc2770 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#ca3b3770" fontname="Courier",label="{for.end:\l|  ret void\l}"];
+}

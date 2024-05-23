@@ -1,0 +1,20 @@
+digraph "CFG for 'hypre_ReAlloc' function" {
+	label="CFG for 'hypre_ReAlloc' function";
+
+	Node0x55fce37c3660 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %ptr.addr = alloca ptr, align 8\l  %size.addr = alloca i64, align 8\l  store ptr %ptr, ptr %ptr.addr, align 8\l  store i64 %size, ptr %size.addr, align 8\l  %0 = load ptr, ptr %ptr.addr, align 8\l  %cmp = icmp eq ptr %0, null\l  br i1 %cmp, label %if.then, label %if.else\l|{<s0>T|<s1>F}}"];
+	Node0x55fce37c3660:s0 -> Node0x55fce37c39e0[tooltip="entry -> if.then\nProbability 37.50%" ];
+	Node0x55fce37c3660:s1 -> Node0x55fce37c3a50[tooltip="entry -> if.else\nProbability 62.50%" ];
+	Node0x55fce37c39e0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{if.then:\l|  %1 = load i64, ptr %size.addr, align 8\l  %call = call noalias ptr @malloc(i64 noundef %1) #6\l  store ptr %call, ptr %ptr.addr, align 8\l  br label %if.end\l}"];
+	Node0x55fce37c39e0 -> Node0x55fce37c3dc0[tooltip="if.then -> if.end\nProbability 100.00%" ];
+	Node0x55fce37c3a50 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.else:\l|  %2 = load ptr, ptr %ptr.addr, align 8\l  %3 = load i64, ptr %size.addr, align 8\l  %call1 = call ptr @realloc(ptr noundef %2, i64 noundef %3) #7\l  store ptr %call1, ptr %ptr.addr, align 8\l  br label %if.end\l}"];
+	Node0x55fce37c3a50 -> Node0x55fce37c3dc0[tooltip="if.else -> if.end\nProbability 100.00%" ];
+	Node0x55fce37c3dc0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  %4 = load ptr, ptr %ptr.addr, align 8\l  %cmp2 = icmp eq ptr %4, null\l  br i1 %cmp2, label %land.lhs.true, label %if.end6\l|{<s0>T|<s1>F}}"];
+	Node0x55fce37c3dc0:s0 -> Node0x55fce37c43b0[tooltip="if.end -> land.lhs.true\nProbability 37.50%" ];
+	Node0x55fce37c3dc0:s1 -> Node0x55fce37c45d0[tooltip="if.end -> if.end6\nProbability 62.50%" ];
+	Node0x55fce37c43b0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{land.lhs.true:\l|  %5 = load i64, ptr %size.addr, align 8\l  %cmp3 = icmp ugt i64 %5, 0\l  br i1 %cmp3, label %if.then4, label %if.end6\l|{<s0>T|<s1>F}}"];
+	Node0x55fce37c43b0:s0 -> Node0x55fce37c4880[tooltip="land.lhs.true -> if.then4\nProbability 50.00%" ];
+	Node0x55fce37c43b0:s1 -> Node0x55fce37c45d0[tooltip="land.lhs.true -> if.end6\nProbability 50.00%" ];
+	Node0x55fce37c4880 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470" fontname="Courier",label="{if.then4:\l|  %6 = load i64, ptr %size.addr, align 8\l  %call5 = call i32 @hypre_OutOfMemory(i64 noundef %6)\l  br label %if.end6\l}"];
+	Node0x55fce37c4880 -> Node0x55fce37c45d0[tooltip="if.then4 -> if.end6\nProbability 100.00%" ];
+	Node0x55fce37c45d0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end6:\l|  %7 = load ptr, ptr %ptr.addr, align 8\l  ret ptr %7\l}"];
+}

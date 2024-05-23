@@ -1,0 +1,7 @@
+digraph "Call graph: exact.ll" {
+	label="Call graph: exact.ll";
+
+	Node0x561a88c1ccf0 [shape=record,label="{exact_}"];
+	Node0x561a88c32b80 [shape=record,label="{llvm.stacksave.p0}"];
+	Node0x561a88c32c00 [shape=record,label="{llvm.stackrestore.p0}"];
+}

@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN3fmt6v9_lmp6detail20get_significand_sizeIfEEiRKNS1_9dragonbox10decimal_fpIT_EE' function" {
+	label="CFG for '_ZN3fmt6v9_lmp6detail20get_significand_sizeIfEEiRKNS1_9dragonbox10decimal_fpIT_EE' function";
+
+	Node0x55fec3206e20 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %f.addr = alloca ptr, align 8\l  store ptr %f, ptr %f.addr, align 8\l  %0 = load ptr, ptr %f.addr, align 8\l  %significand = getelementptr inbounds\l... %\"struct.fmt::v9_lmp::detail::dragonbox::decimal_fp\", ptr %0, i32 0, i32 0\l  %1 = load i32, ptr %significand, align 4\l  %call = call noundef i32 @_ZN3fmt6v9_lmp6detail12count_digitsEj(i32 noundef\l... %1)\l  ret i32 %call\l}"];
+}

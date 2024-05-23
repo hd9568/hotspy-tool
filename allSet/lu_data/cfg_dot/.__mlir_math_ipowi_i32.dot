@@ -1,0 +1,39 @@
+digraph "CFG for '__mlir_math_ipowi_i32' function" {
+	label="CFG for '__mlir_math_ipowi_i32' function";
+
+	Node0x561222059320 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#cc403a70" fontname="Courier",label="{2:\l|  %3 = icmp eq i32 %1, 0\l  br i1 %3, label %4, label %5\l|{<s0>T|<s1>F}}"];
+	Node0x561222059320:s0 -> Node0x561222059440[tooltip="2 -> 4\nProbability 37.50%" ];
+	Node0x561222059320:s1 -> Node0x561222059490[tooltip="2 -> 5\nProbability 62.50%" ];
+	Node0x561222059440 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{4:\l|  ret i32 1\l}"];
+	Node0x561222059490 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d0473d70" fontname="Courier",label="{5:\l|  %6 = icmp sle i32 %1, 0\l  br i1 %6, label %7, label %21\l|{<s0>T|<s1>F}}"];
+	Node0x561222059490:s0 -> Node0x5612220596d0[tooltip="5 -> 7\nProbability 50.00%" ];
+	Node0x561222059490:s1 -> Node0x561222059720[tooltip="5 -> 21\nProbability 50.00%" ];
+	Node0x5612220596d0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{7:\l|  %8 = icmp eq i32 %0, 0\l  br i1 %8, label %9, label %10\l|{<s0>T|<s1>F}}"];
+	Node0x5612220596d0:s0 -> Node0x5612220598b0[tooltip="7 -> 9\nProbability 37.50%" ];
+	Node0x5612220596d0:s1 -> Node0x561222059900[tooltip="7 -> 10\nProbability 62.50%" ];
+	Node0x5612220598b0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#de614d70" fontname="Courier",label="{9:\l|  ret i32 poison\l}"];
+	Node0x561222059900 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d8564670" fontname="Courier",label="{10:\l|  %11 = icmp eq i32 %0, 1\l  br i1 %11, label %12, label %13\l|{<s0>T|<s1>F}}"];
+	Node0x561222059900:s0 -> Node0x561222059f50[tooltip="10 -> 12\nProbability 50.00%" ];
+	Node0x561222059900:s1 -> Node0x561222059fa0[tooltip="10 -> 13\nProbability 50.00%" ];
+	Node0x561222059f50 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#de614d70" fontname="Courier",label="{12:\l|  ret i32 1\l}"];
+	Node0x561222059fa0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#de614d70" fontname="Courier",label="{13:\l|  %14 = icmp eq i32 %0, -1\l  br i1 %14, label %15, label %20\l|{<s0>T|<s1>F}}"];
+	Node0x561222059fa0:s0 -> Node0x56122205a1a0[tooltip="13 -> 15\nProbability 37.50%" ];
+	Node0x561222059fa0:s1 -> Node0x56122205a1f0[tooltip="13 -> 20\nProbability 62.50%" ];
+	Node0x56122205a1a0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#e5705870" fontname="Courier",label="{15:\l|  %16 = and i32 %1, 1\l  %17 = icmp ne i32 %16, 0\l  br i1 %17, label %18, label %19\l|{<s0>T|<s1>F}}"];
+	Node0x56122205a1a0:s0 -> Node0x56122205a410[tooltip="15 -> 18\nProbability 50.00%" ];
+	Node0x56122205a1a0:s1 -> Node0x56122205a460[tooltip="15 -> 19\nProbability 50.00%" ];
+	Node0x56122205a410 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#e97a5f70" fontname="Courier",label="{18:\l|  ret i32 -1\l}"];
+	Node0x56122205a460 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#e97a5f70" fontname="Courier",label="{19:\l|  ret i32 1\l}"];
+	Node0x56122205a1f0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#e1675170" fontname="Courier",label="{20:\l|  ret i32 0\l}"];
+	Node0x561222059720 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{21:\l|  %22 = phi i32 [ %30, %34 ], [ 1, %5 ]\l  %23 = phi i32 [ %35, %34 ], [ %0, %5 ]\l  %24 = phi i32 [ %31, %34 ], [ %1, %5 ]\l  %25 = and i32 %24, 1\l  %26 = icmp ne i32 %25, 0\l  br i1 %26, label %27, label %29\l|{<s0>T|<s1>F}}"];
+	Node0x561222059720:s0 -> Node0x56122205a9e0[tooltip="21 -> 27\nProbability 50.00%" ];
+	Node0x561222059720:s1 -> Node0x56122205aa70[tooltip="21 -> 29\nProbability 50.00%" ];
+	Node0x56122205a9e0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{27:\l|  %28 = mul i32 %22, %23\l  br label %29\l}"];
+	Node0x56122205a9e0 -> Node0x56122205aa70[tooltip="27 -> 29\nProbability 100.00%" ];
+	Node0x56122205aa70 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{29:\l|  %30 = phi i32 [ %28, %27 ], [ %22, %21 ]\l  %31 = lshr i32 %24, 1\l  %32 = icmp eq i32 %31, 0\l  br i1 %32, label %33, label %34\l|{<s0>T|<s1>F}}"];
+	Node0x56122205aa70:s0 -> Node0x56122205ae90[tooltip="29 -> 33\nProbability 3.12%" ];
+	Node0x56122205aa70:s1 -> Node0x56122205a6f0[tooltip="29 -> 34\nProbability 96.88%" ];
+	Node0x56122205ae90 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{33:\l|  ret i32 %30\l}"];
+	Node0x56122205a6f0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{34:\l|  %35 = mul i32 %23, %23\l  br label %21\l}"];
+	Node0x56122205a6f0 -> Node0x561222059720[tooltip="34 -> 21\nProbability 100.00%" ];
+}

@@ -1,0 +1,12 @@
+digraph "CFG for 'lammps_get_natoms' function" {
+	label="CFG for 'lammps_get_natoms' function";
+
+	Node0x55bdf7d91830 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %retval = alloca double, align 8\l  %handle.addr = alloca ptr, align 8\l  %lmp = alloca ptr, align 8\l  %natoms = alloca double, align 8\l  store ptr %handle, ptr %handle.addr, align 8\l  %0 = load ptr, ptr %handle.addr, align 8\l  store ptr %0, ptr %lmp, align 8\l  %1 = load ptr, ptr %lmp, align 8\l  %atom = getelementptr inbounds %\"class.LAMMPS_NS::LAMMPS\", ptr %1, i32 0,\l... i32 4\l  %2 = load ptr, ptr %atom, align 8\l  %natoms1 = getelementptr inbounds %\"class.LAMMPS_NS::Atom\", ptr %2, i32 0,\l... i32 3\l  %3 = load i64, ptr %natoms1, align 8\l  %conv = sitofp i64 %3 to double\l  store double %conv, ptr %natoms, align 8\l  %4 = load double, ptr %natoms, align 8\l  %cmp = fcmp ogt double %4, 9.000000e+15\l  br i1 %cmp, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x55bdf7d91830:s0 -> Node0x55bdf7dcecc0[tooltip="entry -> if.then\nProbability 50.00%" ];
+	Node0x55bdf7d91830:s1 -> Node0x55bdf7dced10[tooltip="entry -> if.end\nProbability 50.00%" ];
+	Node0x55bdf7dcecc0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.then:\l|  store double 0.000000e+00, ptr %retval, align 8\l  br label %return\l}"];
+	Node0x55bdf7dcecc0 -> Node0x55bdf7dcef10[tooltip="if.then -> return\nProbability 100.00%" ];
+	Node0x55bdf7dced10 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.end:\l|  %5 = load double, ptr %natoms, align 8\l  store double %5, ptr %retval, align 8\l  br label %return\l}"];
+	Node0x55bdf7dced10 -> Node0x55bdf7dcef10[tooltip="if.end -> return\nProbability 100.00%" ];
+	Node0x55bdf7dcef10 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{return:\l|  %6 = load double, ptr %retval, align 8\l  ret double %6\l}"];
+}

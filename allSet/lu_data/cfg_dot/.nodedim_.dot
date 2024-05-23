@@ -1,0 +1,5 @@
+digraph "CFG for 'nodedim_' function" {
+	label="CFG for 'nodedim_' function";
+
+	Node0x559de3d92050 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{1:\l|  %2 = alloca double, i64 1, align 8\l  %3 = alloca i32, i64 1, align 4\l  %4 = load i32, ptr %0, align 4\l  %5 = sitofp i32 %4 to double\l  store double %5, ptr %2, align 8\l  %6 = load double, ptr %2, align 8\l  %7 = call contract double @llvm.log.f64(double %6)\l  %8 = fdiv contract double %7, 0x3FE62E42FEFA39EF\l  %9 = fadd contract double %8, 0x3EE4F8B580000000\l  %10 = fptosi double %9 to i32\l  store i32 %10, ptr %3, align 4\l  %11 = load i32, ptr %3, align 4\l  ret i32 %11\l}"];
+}

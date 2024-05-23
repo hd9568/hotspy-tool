@@ -1,0 +1,12 @@
+digraph "CFG for '_ZN9LAMMPS_NS16ComputeChunkAtom10set_arraysEi' function" {
+	label="CFG for '_ZN9LAMMPS_NS16ComputeChunkAtom10set_arraysEi' function";
+
+	Node0x56369a911280 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %i.addr = alloca i32, align 4\l  %vstore = alloca ptr, align 8\l  store ptr %this, ptr %this.addr, align 8\l  store i32 %i, ptr %i.addr, align 4\l  %this1 = load ptr, ptr %this.addr, align 8\l  %fixstore = getelementptr inbounds %\"class.LAMMPS_NS::ComputeChunkAtom\", ptr\l... %this1, i32 0, i32 67\l  %0 = load ptr, ptr %fixstore, align 8\l  %tobool = icmp ne ptr %0, null\l  br i1 %tobool, label %if.end, label %if.then\l|{<s0>T|<s1>F}}"];
+	Node0x56369a911280:s0 -> Node0x56369a911720[tooltip="entry -> if.end\nProbability 62.50%" ];
+	Node0x56369a911280:s1 -> Node0x56369a911790[tooltip="entry -> if.then\nProbability 37.50%" ];
+	Node0x56369a911790 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{if.then:\l|  br label %return\l}"];
+	Node0x56369a911790 -> Node0x56369a9118b0[tooltip="if.then -> return\nProbability 100.00%" ];
+	Node0x56369a911720 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.end:\l|  %fixstore2 = getelementptr inbounds %\"class.LAMMPS_NS::ComputeChunkAtom\",\l... ptr %this1, i32 0, i32 67\l  %1 = load ptr, ptr %fixstore2, align 8\l  %vstore3 = getelementptr inbounds %\"class.LAMMPS_NS::FixStoreAtom\", ptr %1,\l... i32 0, i32 1\l  %2 = load ptr, ptr %vstore3, align 8\l  store ptr %2, ptr %vstore, align 8\l  %3 = load ptr, ptr %vstore, align 8\l  %4 = load i32, ptr %i.addr, align 4\l  %idxprom = sext i32 %4 to i64\l  %arrayidx = getelementptr inbounds double, ptr %3, i64 %idxprom\l  store double 0.000000e+00, ptr %arrayidx, align 8\l  br label %return\l}"];
+	Node0x56369a911720 -> Node0x56369a9118b0[tooltip="if.end -> return\nProbability 100.00%" ];
+	Node0x56369a9118b0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{return:\l|  ret void\l}"];
+}

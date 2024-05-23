@@ -1,0 +1,5 @@
+digraph "CFG for '_ZngRK7double2' function" {
+	label="CFG for '_ZngRK7double2' function";
+
+	Node0x5618698f2a70 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %result.ptr = alloca ptr, align 8\l  %v.addr = alloca ptr, align 8\l  %ref.tmp = alloca double, align 8\l  %ref.tmp1 = alloca double, align 8\l  store ptr %agg.result, ptr %result.ptr, align 8\l  store ptr %v, ptr %v.addr, align 8\l  %0 = load ptr, ptr %v.addr, align 8\l  %x = getelementptr inbounds %struct.double2, ptr %0, i32 0, i32 0\l  %1 = load double, ptr %x, align 8\l  %fneg = fneg double %1\l  store double %fneg, ptr %ref.tmp, align 8\l  %2 = load ptr, ptr %v.addr, align 8\l  %y = getelementptr inbounds %struct.double2, ptr %2, i32 0, i32 1\l  %3 = load double, ptr %y, align 8\l  %fneg2 = fneg double %3\l  store double %fneg2, ptr %ref.tmp1, align 8\l  call void @_ZN7double2C2ERKdS1_(ptr noundef nonnull align 8\l... dereferenceable(16) %agg.result, ptr noundef nonnull align 8\l... dereferenceable(8) %ref.tmp, ptr noundef nonnull align 8 dereferenceable(8)\l... %ref.tmp1)\l  ret void\l}"];
+}

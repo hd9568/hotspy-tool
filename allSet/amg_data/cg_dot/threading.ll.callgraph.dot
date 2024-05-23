@@ -1,0 +1,5 @@
+digraph "Call graph: threading.ll" {
+	label="Call graph: threading.ll";
+
+	Node0x55e807ecc7d0 [shape=record,label="{hypre_GetSimpleThreadPartition}"];
+}

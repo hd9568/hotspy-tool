@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN3fmt6v9_lmp10get_bufferIcEERNS0_6detail6bufferIcEENS0_8appenderE' function" {
+	label="CFG for '_ZN3fmt6v9_lmp10get_bufferIcEERNS0_6detail6bufferIcEENS0_8appenderE' function";
+
+	Node0x55fec3710140 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %out = alloca %\"class.fmt::v9_lmp::appender\", align 8\l  %agg.tmp = alloca %\"class.std::back_insert_iterator\", align 8\l  %coerce.dive = getelementptr inbounds %\"class.fmt::v9_lmp::appender\", ptr\l... %out, i32 0, i32 0\l  %coerce.dive1 = getelementptr inbounds %\"class.std::back_insert_iterator\",\l... ptr %coerce.dive, i32 0, i32 0\l  store ptr %out.coerce, ptr %coerce.dive1, align 8\l  call void @llvm.memcpy.p0.p0.i64(ptr align 8 %agg.tmp, ptr align 8 %out, i64\l... 8, i1 false)\l  %coerce.dive2 = getelementptr inbounds %\"class.std::back_insert_iterator\",\l... ptr %agg.tmp, i32 0, i32 0\l  %0 = load ptr, ptr %coerce.dive2, align 8\l  %call = call noundef nonnull align 8 dereferenceable(32) ptr\l... @_ZN3fmt6v9_lmp6detail13get_containerINS1_6bufferIcEEEERT_St20back_insert_iter\l...atorIS5_E(ptr %0)\l  ret ptr %call\l}"];
+}

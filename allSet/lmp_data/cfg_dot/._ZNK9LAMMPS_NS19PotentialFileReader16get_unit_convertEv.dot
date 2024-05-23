@@ -1,0 +1,5 @@
+digraph "CFG for '_ZNK9LAMMPS_NS19PotentialFileReader16get_unit_convertEv' function" {
+	label="CFG for '_ZNK9LAMMPS_NS19PotentialFileReader16get_unit_convertEv' function";
+
+	Node0x55f58a35eab0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %unit_convert = getelementptr inbounds\l... %\"class.LAMMPS_NS::PotentialFileReader\", ptr %this1, i32 0, i32 4\l  %0 = load i32, ptr %unit_convert, align 8\l  ret i32 %0\l}"];
+}

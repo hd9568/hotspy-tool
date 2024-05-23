@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN3fmt6v9_lmp6detail8basic_fpIoEC2Ev' function" {
+	label="CFG for '_ZN3fmt6v9_lmp6detail8basic_fpIoEC2Ev' function";
+
+	Node0x556bfebda930 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %f = getelementptr inbounds %\"struct.fmt::v9_lmp::detail::basic_fp.108\", ptr\l... %this1, i32 0, i32 0\l  store i128 0, ptr %f, align 16\l  %e = getelementptr inbounds %\"struct.fmt::v9_lmp::detail::basic_fp.108\", ptr\l... %this1, i32 0, i32 1\l  store i32 0, ptr %e, align 16\l  ret void\l}"];
+}

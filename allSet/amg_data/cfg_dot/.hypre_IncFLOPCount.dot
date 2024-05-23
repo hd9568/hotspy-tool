@@ -1,0 +1,12 @@
+digraph "CFG for 'hypre_IncFLOPCount' function" {
+	label="CFG for 'hypre_IncFLOPCount' function";
+
+	Node0x557f02a95aa0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %retval = alloca i32, align 4\l  %inc.addr = alloca i32, align 4\l  %ierr = alloca i32, align 4\l  store i32 %inc, ptr %inc.addr, align 4\l  store i32 0, ptr %ierr, align 4\l  %0 = load ptr, ptr @hypre_global_timing, align 8\l  %cmp = icmp eq ptr %0, null\l  br i1 %cmp, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x557f02a95aa0:s0 -> Node0x557f02a95f60[tooltip="entry -> if.then\nProbability 37.50%" ];
+	Node0x557f02a95aa0:s1 -> Node0x557f02a95fd0[tooltip="entry -> if.end\nProbability 62.50%" ];
+	Node0x557f02a95f60 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{if.then:\l|  %1 = load i32, ptr %ierr, align 4\l  store i32 %1, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x557f02a95f60 -> Node0x557f02a96f80[tooltip="if.then -> return\nProbability 100.00%" ];
+	Node0x557f02a95fd0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.end:\l|  %2 = load i32, ptr %inc.addr, align 4\l  %conv = sitofp i32 %2 to double\l  %3 = load ptr, ptr @hypre_global_timing, align 8\l  %FLOP_count = getelementptr inbounds %struct.hypre_TimingType, ptr %3, i32\l... 0, i32 10\l  %4 = load double, ptr %FLOP_count, align 8\l  %add = fadd double %4, %conv\l  store double %add, ptr %FLOP_count, align 8\l  %5 = load i32, ptr %ierr, align 4\l  store i32 %5, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x557f02a95fd0 -> Node0x557f02a96f80[tooltip="if.end -> return\nProbability 100.00%" ];
+	Node0x557f02a96f80 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{return:\l|  %6 = load i32, ptr %retval, align 4\l  ret i32 %6\l}"];
+}

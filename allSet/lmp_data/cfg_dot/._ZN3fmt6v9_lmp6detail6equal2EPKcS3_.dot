@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN3fmt6v9_lmp6detail6equal2EPKcS3_' function" {
+	label="CFG for '_ZN3fmt6v9_lmp6detail6equal2EPKcS3_' function";
+
+	Node0x55fec30340b0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %lhs.addr = alloca ptr, align 8\l  %rhs.addr = alloca ptr, align 8\l  store ptr %lhs, ptr %lhs.addr, align 8\l  store ptr %rhs, ptr %rhs.addr, align 8\l  %0 = load ptr, ptr %lhs.addr, align 8\l  %1 = load ptr, ptr %rhs.addr, align 8\l  %call = call i32 @memcmp(ptr noundef %0, ptr noundef %1, i64 noundef 2) #17\l  %cmp = icmp eq i32 %call, 0\l  ret i1 %cmp\l}"];
+}

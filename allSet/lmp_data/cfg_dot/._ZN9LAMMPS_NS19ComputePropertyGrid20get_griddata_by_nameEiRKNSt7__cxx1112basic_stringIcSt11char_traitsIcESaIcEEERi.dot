@@ -1,0 +1,22 @@
+digraph "CFG for '_ZN9LAMMPS_NS19ComputePropertyGrid20get_griddata_by_nameEiRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERi' function" {
+	label="CFG for '_ZN9LAMMPS_NS19ComputePropertyGrid20get_griddata_by_nameEiRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERi' function";
+
+	Node0x559142c504a0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %retval = alloca i32, align 4\l  %this.addr = alloca ptr, align 8\l  %igrid.addr = alloca i32, align 4\l  %name.addr = alloca ptr, align 8\l  %ncol.addr = alloca ptr, align 8\l  store ptr %this, ptr %this.addr, align 8\l  store i32 %igrid, ptr %igrid.addr, align 4\l  store ptr %name, ptr %name.addr, align 8\l  store ptr %ncol, ptr %ncol.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %0 = load i32, ptr %igrid.addr, align 4\l  %cmp = icmp eq i32 %0, 0\l  br i1 %cmp, label %land.lhs.true, label %if.end5\l|{<s0>T|<s1>F}}"];
+	Node0x559142c504a0:s0 -> Node0x559142c50af0[tooltip="entry -> land.lhs.true\nProbability 37.50%" ];
+	Node0x559142c504a0:s1 -> Node0x559142c50d10[tooltip="entry -> if.end5\nProbability 62.50%" ];
+	Node0x559142c50af0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{land.lhs.true:\l|  %1 = load ptr, ptr %name.addr, align 8\l  %call = call noundef zeroext i1\l... @_ZSteqIcSt11char_traitsIcESaIcEEbRKNSt7__cxx1112basic_stringIT_T0_T1_EEPKS5_(\l...ptr noundef nonnull align 8 dereferenceable(32) %1, ptr noundef @.str.23)\l  br i1 %call, label %if.then, label %if.end5\l|{<s0>T|<s1>F}}"];
+	Node0x559142c50af0:s0 -> Node0x559142c51000[tooltip="land.lhs.true -> if.then\nProbability 50.00%" ];
+	Node0x559142c50af0:s1 -> Node0x559142c50d10[tooltip="land.lhs.true -> if.end5\nProbability 50.00%" ];
+	Node0x559142c51000 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470" fontname="Courier",label="{if.then:\l|  %nvalues = getelementptr inbounds %\"class.LAMMPS_NS::ComputePropertyGrid\",\l... ptr %this1, i32 0, i32 4\l  %2 = load i32, ptr %nvalues, align 8\l  %cmp2 = icmp eq i32 %2, 1\l  br i1 %cmp2, label %if.then3, label %if.else\l|{<s0>T|<s1>F}}"];
+	Node0x559142c51000:s0 -> Node0x559142c51310[tooltip="if.then -> if.then3\nProbability 50.00%" ];
+	Node0x559142c51000:s1 -> Node0x559142c51390[tooltip="if.then -> if.else\nProbability 50.00%" ];
+	Node0x559142c51310 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#cc403a70" fontname="Courier",label="{if.then3:\l|  %3 = load ptr, ptr %ncol.addr, align 8\l  store i32 0, ptr %3, align 4\l  br label %if.end\l}"];
+	Node0x559142c51310 -> Node0x559142c515d0[tooltip="if.then3 -> if.end\nProbability 100.00%" ];
+	Node0x559142c51390 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#cc403a70" fontname="Courier",label="{if.else:\l|  %nvalues4 = getelementptr inbounds\l... %\"class.LAMMPS_NS::ComputePropertyGrid\", ptr %this1, i32 0, i32 4\l  %4 = load i32, ptr %nvalues4, align 8\l  %5 = load ptr, ptr %ncol.addr, align 8\l  store i32 %4, ptr %5, align 4\l  br label %if.end\l}"];
+	Node0x559142c51390 -> Node0x559142c515d0[tooltip="if.else -> if.end\nProbability 100.00%" ];
+	Node0x559142c515d0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470" fontname="Courier",label="{if.end:\l|  store i32 0, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x559142c515d0 -> Node0x559142c51a50[tooltip="if.end -> return\nProbability 100.00%" ];
+	Node0x559142c50d10 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.end5:\l|  store i32 -1, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x559142c50d10 -> Node0x559142c51a50[tooltip="if.end5 -> return\nProbability 100.00%" ];
+	Node0x559142c51a50 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{return:\l|  %6 = load i32, ptr %retval, align 4\l  ret i32 %6\l}"];
+}

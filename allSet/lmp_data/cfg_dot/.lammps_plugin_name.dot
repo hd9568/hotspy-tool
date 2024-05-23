@@ -1,0 +1,5 @@
+digraph "CFG for 'lammps_plugin_name' function" {
+	label="CFG for 'lammps_plugin_name' function";
+
+	Node0x55bdf813fe90 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %idx.addr = alloca i32, align 4\l  %stylebuf.addr = alloca ptr, align 8\l  %namebuf.addr = alloca ptr, align 8\l  %buf_size.addr = alloca i32, align 4\l  store i32 %idx, ptr %idx.addr, align 4\l  store ptr %stylebuf, ptr %stylebuf.addr, align 8\l  store ptr %namebuf, ptr %namebuf.addr, align 8\l  store i32 %buf_size, ptr %buf_size.addr, align 4\l  ret i32 0\l}"];
+}

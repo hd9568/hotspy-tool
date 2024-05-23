@@ -1,0 +1,41 @@
+digraph "CFG for '_ZN9LAMMPS_NS5utils20read_lines_from_fileEP8_IO_FILEiiPciP19ompi_communicator_t' function" {
+	label="CFG for '_ZN9LAMMPS_NS5utils20read_lines_from_fileEP8_IO_FILEiiPciP19ompi_communicator_t' function";
+
+	Node0x5584164ec460 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470" fontname="Courier",label="{entry:\l|  %retval = alloca i32, align 4\l  %fp.addr = alloca ptr, align 8\l  %nlines.addr = alloca i32, align 4\l  %nmax.addr = alloca i32, align 4\l  %buffer.addr = alloca ptr, align 8\l  %me.addr = alloca i32, align 4\l  %comm.addr = alloca ptr, align 8\l  %ptr = alloca ptr, align 8\l  %mylines = alloca i32, align 4\l  %i = alloca i32, align 4\l  %n = alloca i32, align 4\l  store ptr %fp, ptr %fp.addr, align 8\l  store i32 %nlines, ptr %nlines.addr, align 4\l  store i32 %nmax, ptr %nmax.addr, align 4\l  store ptr %buffer, ptr %buffer.addr, align 8\l  store i32 %me, ptr %me.addr, align 4\l  store ptr %comm, ptr %comm.addr, align 8\l  %0 = load ptr, ptr %buffer.addr, align 8\l  store ptr %0, ptr %ptr, align 8\l  %1 = load ptr, ptr %ptr, align 8\l  store i8 0, ptr %1, align 1\l  store i32 0, ptr %mylines, align 4\l  %2 = load i32, ptr %me.addr, align 4\l  %cmp = icmp eq i32 %2, 0\l  br i1 %cmp, label %if.then, label %if.end8\l|{<s0>T|<s1>F}}"];
+	Node0x5584164ec460:s0 -> Node0x5584164ed7c0[tooltip="entry -> if.then\nProbability 37.50%" ];
+	Node0x5584164ec460:s1 -> Node0x5584164ed830[tooltip="entry -> if.end8\nProbability 62.50%" ];
+	Node0x5584164ed7c0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#cc403a70" fontname="Courier",label="{if.then:\l|  %3 = load ptr, ptr %fp.addr, align 8\l  %tobool = icmp ne ptr %3, null\l  br i1 %tobool, label %if.then1, label %if.end7\l|{<s0>T|<s1>F}}"];
+	Node0x5584164ed7c0:s0 -> Node0x5584164eda80[tooltip="if.then -> if.then1\nProbability 62.50%" ];
+	Node0x5584164ed7c0:s1 -> Node0x5584164edb00[tooltip="if.then -> if.end7\nProbability 37.50%" ];
+	Node0x5584164eda80 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d0473d70" fontname="Courier",label="{if.then1:\l|  store i32 0, ptr %i, align 4\l  br label %for.cond\l}"];
+	Node0x5584164eda80 -> Node0x5584164edcc0[tooltip="if.then1 -> for.cond\nProbability 100.00%" ];
+	Node0x5584164edcc0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.cond:\l|  %4 = load i32, ptr %i, align 4\l  %5 = load i32, ptr %nlines.addr, align 4\l  %cmp2 = icmp slt i32 %4, %5\l  br i1 %cmp2, label %for.body, label %for.end\l|{<s0>T|<s1>F}}"];
+	Node0x5584164edcc0:s0 -> Node0x5584164ee0f0[tooltip="for.cond -> for.body\nProbability 96.88%" ];
+	Node0x5584164edcc0:s1 -> Node0x5584164ee170[tooltip="for.cond -> for.end\nProbability 3.12%" ];
+	Node0x5584164ee0f0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.body:\l|  %6 = load ptr, ptr %ptr, align 8\l  %7 = load i32, ptr %nmax.addr, align 4\l  %8 = load ptr, ptr %fp.addr, align 8\l  %call = call noundef ptr @_ZN9LAMMPS_NS5utils11fgets_truncEPciP8_IO_FILE(ptr\l... noundef %6, i32 noundef %7, ptr noundef %8)\l  store ptr %call, ptr %ptr, align 8\l  %9 = load ptr, ptr %ptr, align 8\l  %tobool3 = icmp ne ptr %9, null\l  br i1 %tobool3, label %if.end, label %if.then4\l|{<s0>T|<s1>F}}"];
+	Node0x5584164ee0f0:s0 -> Node0x5584164ee680[tooltip="for.body -> if.end\nProbability 96.88%" ];
+	Node0x5584164ee0f0:s1 -> Node0x5584164c65b0[tooltip="for.body -> if.then4\nProbability 3.12%" ];
+	Node0x5584164c65b0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{if.then4:\l|  br label %for.end\l}"];
+	Node0x5584164c65b0 -> Node0x5584164ee170[tooltip="if.then4 -> for.end\nProbability 100.00%" ];
+	Node0x5584164ee680 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  %10 = load ptr, ptr %ptr, align 8\l  %call5 = call i64 @strlen(ptr noundef %10) #21\l  %11 = load ptr, ptr %ptr, align 8\l  %add.ptr = getelementptr inbounds i8, ptr %11, i64 %call5\l  store ptr %add.ptr, ptr %ptr, align 8\l  %12 = load ptr, ptr %ptr, align 8\l  store i8 0, ptr %12, align 1\l  %13 = load i32, ptr %mylines, align 4\l  %inc = add nsw i32 %13, 1\l  store i32 %inc, ptr %mylines, align 4\l  br label %for.inc\l}"];
+	Node0x5584164ee680 -> Node0x5584164c6da0[tooltip="if.end -> for.inc\nProbability 100.00%" ];
+	Node0x5584164c6da0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.inc:\l|  %14 = load i32, ptr %i, align 4\l  %inc6 = add nsw i32 %14, 1\l  store i32 %inc6, ptr %i, align 4\l  br label %for.cond, !llvm.loop !6\l}"];
+	Node0x5584164c6da0 -> Node0x5584164edcc0[tooltip="for.inc -> for.cond\nProbability 100.00%" ];
+	Node0x5584164ee170 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d0473d70" fontname="Courier",label="{for.end:\l|  br label %if.end7\l}"];
+	Node0x5584164ee170 -> Node0x5584164edb00[tooltip="for.end -> if.end7\nProbability 100.00%" ];
+	Node0x5584164edb00 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#cc403a70" fontname="Courier",label="{if.end7:\l|  br label %if.end8\l}"];
+	Node0x5584164edb00 -> Node0x5584164ed830[tooltip="if.end7 -> if.end8\nProbability 100.00%" ];
+	Node0x5584164ed830 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470" fontname="Courier",label="{if.end8:\l|  %15 = load ptr, ptr %buffer.addr, align 8\l  %call9 = call i64 @strlen(ptr noundef %15) #21\l  %conv = trunc i64 %call9 to i32\l  store i32 %conv, ptr %n, align 4\l  %16 = load i32, ptr %nlines.addr, align 4\l  %17 = load i32, ptr %mylines, align 4\l  %cmp10 = icmp ne i32 %16, %17\l  br i1 %cmp10, label %if.then11, label %if.end12\l|{<s0>T|<s1>F}}"];
+	Node0x5584164ed830:s0 -> Node0x5584164c7700[tooltip="if.end8 -> if.then11\nProbability 50.00%" ];
+	Node0x5584164ed830:s1 -> Node0x5584164c7780[tooltip="if.end8 -> if.end12\nProbability 50.00%" ];
+	Node0x5584164c7700 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#ca3b3770" fontname="Courier",label="{if.then11:\l|  store i32 0, ptr %n, align 4\l  br label %if.end12\l}"];
+	Node0x5584164c7700 -> Node0x5584164c7780[tooltip="if.then11 -> if.end12\nProbability 100.00%" ];
+	Node0x5584164c7780 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470" fontname="Courier",label="{if.end12:\l|  %18 = load ptr, ptr %comm.addr, align 8\l  %call13 = call i32 @MPI_Bcast(ptr noundef %n, i32 noundef 1, ptr noundef\l... @ompi_mpi_int, i32 noundef 0, ptr noundef %18)\l  %19 = load i32, ptr %n, align 4\l  %cmp14 = icmp eq i32 %19, 0\l  br i1 %cmp14, label %if.then15, label %if.end16\l|{<s0>T|<s1>F}}"];
+	Node0x5584164c7780:s0 -> Node0x5584164c8dc0[tooltip="if.end12 -> if.then15\nProbability 37.50%" ];
+	Node0x5584164c7780:s1 -> Node0x5584164c8e10[tooltip="if.end12 -> if.end16\nProbability 62.50%" ];
+	Node0x5584164c8dc0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#cc403a70" fontname="Courier",label="{if.then15:\l|  store i32 1, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x5584164c8dc0 -> Node0x5584164c8fe0[tooltip="if.then15 -> return\nProbability 100.00%" ];
+	Node0x5584164c8e10 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#ca3b3770" fontname="Courier",label="{if.end16:\l|  %20 = load ptr, ptr %buffer.addr, align 8\l  %21 = load i32, ptr %n, align 4\l  %add = add nsw i32 %21, 1\l  %22 = load ptr, ptr %comm.addr, align 8\l  %call17 = call i32 @MPI_Bcast(ptr noundef %20, i32 noundef %add, ptr noundef\l... @ompi_mpi_char, i32 noundef 0, ptr noundef %22)\l  store i32 0, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x5584164c8e10 -> Node0x5584164c8fe0[tooltip="if.end16 -> return\nProbability 100.00%" ];
+	Node0x5584164c8fe0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470" fontname="Courier",label="{return:\l|  %23 = load i32, ptr %retval, align 4\l  ret i32 %23\l}"];
+}

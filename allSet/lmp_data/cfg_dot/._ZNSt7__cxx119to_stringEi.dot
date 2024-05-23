@@ -1,0 +1,5 @@
+digraph "CFG for '_ZNSt7__cxx119to_stringEi' function" {
+	label="CFG for '_ZNSt7__cxx119to_stringEi' function";
+
+	Node0x556bfe26a7e0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %result.ptr = alloca ptr, align 8\l  %__val.addr = alloca i32, align 4\l  store ptr %agg.result, ptr %result.ptr, align 8\l  store i32 %__val, ptr %__val.addr, align 4\l  %0 = load i32, ptr %__val.addr, align 4\l  call void (ptr, ptr, i64, ptr, ...)\l... @_ZN9__gnu_cxx12__to_xstringINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIc\l...EEEcEET_PFiPT0_mPKS8_P13__va_list_tagEmSB_z(ptr dead_on_unwind writable\l... sret(%\"class.std::__cxx11::basic_string\") align 8 %agg.result, ptr noundef\l... @vsnprintf, i64 noundef 16, ptr noundef @.str.311, i32 noundef %0)\l  ret void\l}"];
+}

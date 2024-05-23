@@ -1,0 +1,40 @@
+digraph "CFG for '_ZN9LAMMPS_NS8FixDummy7setmaskEv' function" {
+	label="CFG for '_ZN9LAMMPS_NS8FixDummy7setmaskEv' function";
+
+	Node0x561d8b02e8b0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %mask = alloca i32, align 4\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  store i32 0, ptr %mask, align 4\l  %initial_integrate_flag = getelementptr inbounds\l... %\"class.LAMMPS_NS::FixDummy\", ptr %this1, i32 0, i32 1\l  %0 = load i32, ptr %initial_integrate_flag, align 8\l  %tobool = icmp ne i32 %0, 0\l  br i1 %tobool, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x561d8b02e8b0:s0 -> Node0x561d8b02ec90[tooltip="entry -> if.then\nProbability 62.50%" ];
+	Node0x561d8b02e8b0:s1 -> Node0x561d8b02ed00[tooltip="entry -> if.end\nProbability 37.50%" ];
+	Node0x561d8b02ec90 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.then:\l|  %1 = load i32, ptr %mask, align 4\l  %or = or i32 %1, 1\l  store i32 %or, ptr %mask, align 4\l  br label %if.end\l}"];
+	Node0x561d8b02ec90 -> Node0x561d8b02ed00[tooltip="if.then -> if.end\nProbability 100.00%" ];
+	Node0x561d8b02ed00 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  %final_integrate_flag = getelementptr inbounds\l... %\"class.LAMMPS_NS::FixDummy\", ptr %this1, i32 0, i32 2\l  %2 = load i32, ptr %final_integrate_flag, align 4\l  %tobool2 = icmp ne i32 %2, 0\l  br i1 %tobool2, label %if.then3, label %if.end5\l|{<s0>T|<s1>F}}"];
+	Node0x561d8b02ed00:s0 -> Node0x561d8b02f200[tooltip="if.end -> if.then3\nProbability 62.50%" ];
+	Node0x561d8b02ed00:s1 -> Node0x561d8b02f3f0[tooltip="if.end -> if.end5\nProbability 37.50%" ];
+	Node0x561d8b02f200 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.then3:\l|  %3 = load i32, ptr %mask, align 4\l  %or4 = or i32 %3, 256\l  store i32 %or4, ptr %mask, align 4\l  br label %if.end5\l}"];
+	Node0x561d8b02f200 -> Node0x561d8b02f3f0[tooltip="if.then3 -> if.end5\nProbability 100.00%" ];
+	Node0x561d8b02f3f0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end5:\l|  %pre_exchange_flag = getelementptr inbounds %\"class.LAMMPS_NS::FixDummy\",\l... ptr %this1, i32 0, i32 3\l  %4 = load i32, ptr %pre_exchange_flag, align 8\l  %tobool6 = icmp ne i32 %4, 0\l  br i1 %tobool6, label %if.then7, label %if.end9\l|{<s0>T|<s1>F}}"];
+	Node0x561d8b02f3f0:s0 -> Node0x561d8b02f9d0[tooltip="if.end5 -> if.then7\nProbability 62.50%" ];
+	Node0x561d8b02f3f0:s1 -> Node0x561d8b02fa20[tooltip="if.end5 -> if.end9\nProbability 37.50%" ];
+	Node0x561d8b02f9d0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.then7:\l|  %5 = load i32, ptr %mask, align 4\l  %or8 = or i32 %5, 4\l  store i32 %or8, ptr %mask, align 4\l  br label %if.end9\l}"];
+	Node0x561d8b02f9d0 -> Node0x561d8b02fa20[tooltip="if.then7 -> if.end9\nProbability 100.00%" ];
+	Node0x561d8b02fa20 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end9:\l|  %pre_neighbor_flag = getelementptr inbounds %\"class.LAMMPS_NS::FixDummy\",\l... ptr %this1, i32 0, i32 4\l  %6 = load i32, ptr %pre_neighbor_flag, align 4\l  %tobool10 = icmp ne i32 %6, 0\l  br i1 %tobool10, label %if.then11, label %if.end13\l|{<s0>T|<s1>F}}"];
+	Node0x561d8b02fa20:s0 -> Node0x561d8b02ffb0[tooltip="if.end9 -> if.then11\nProbability 62.50%" ];
+	Node0x561d8b02fa20:s1 -> Node0x561d8b030000[tooltip="if.end9 -> if.end13\nProbability 37.50%" ];
+	Node0x561d8b02ffb0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.then11:\l|  %7 = load i32, ptr %mask, align 4\l  %or12 = or i32 %7, 8\l  store i32 %or12, ptr %mask, align 4\l  br label %if.end13\l}"];
+	Node0x561d8b02ffb0 -> Node0x561d8b030000[tooltip="if.then11 -> if.end13\nProbability 100.00%" ];
+	Node0x561d8b030000 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end13:\l|  %pre_force_flag = getelementptr inbounds %\"class.LAMMPS_NS::FixDummy\", ptr\l... %this1, i32 0, i32 5\l  %8 = load i32, ptr %pre_force_flag, align 8\l  %tobool14 = icmp ne i32 %8, 0\l  br i1 %tobool14, label %if.then15, label %if.end17\l|{<s0>T|<s1>F}}"];
+	Node0x561d8b030000:s0 -> Node0x561d8b0308c0[tooltip="if.end13 -> if.then15\nProbability 62.50%" ];
+	Node0x561d8b030000:s1 -> Node0x561d8b030940[tooltip="if.end13 -> if.end17\nProbability 37.50%" ];
+	Node0x561d8b0308c0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.then15:\l|  %9 = load i32, ptr %mask, align 4\l  %or16 = or i32 %9, 32\l  store i32 %or16, ptr %mask, align 4\l  br label %if.end17\l}"];
+	Node0x561d8b0308c0 -> Node0x561d8b030940[tooltip="if.then15 -> if.end17\nProbability 100.00%" ];
+	Node0x561d8b030940 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end17:\l|  %post_force_flag = getelementptr inbounds %\"class.LAMMPS_NS::FixDummy\",\l... ptr %this1, i32 0, i32 6\l  %10 = load i32, ptr %post_force_flag, align 4\l  %tobool18 = icmp ne i32 %10, 0\l  br i1 %tobool18, label %if.then19, label %if.end21\l|{<s0>T|<s1>F}}"];
+	Node0x561d8b030940:s0 -> Node0x561d8b030f10[tooltip="if.end17 -> if.then19\nProbability 62.50%" ];
+	Node0x561d8b030940:s1 -> Node0x561d8b030f90[tooltip="if.end17 -> if.end21\nProbability 37.50%" ];
+	Node0x561d8b030f10 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.then19:\l|  %11 = load i32, ptr %mask, align 4\l  %or20 = or i32 %11, 128\l  store i32 %or20, ptr %mask, align 4\l  br label %if.end21\l}"];
+	Node0x561d8b030f10 -> Node0x561d8b030f90[tooltip="if.then19 -> if.end21\nProbability 100.00%" ];
+	Node0x561d8b030f90 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end21:\l|  %end_of_step_flag = getelementptr inbounds %\"class.LAMMPS_NS::FixDummy\",\l... ptr %this1, i32 0, i32 7\l  %12 = load i32, ptr %end_of_step_flag, align 8\l  %tobool22 = icmp ne i32 %12, 0\l  br i1 %tobool22, label %if.then23, label %if.end25\l|{<s0>T|<s1>F}}"];
+	Node0x561d8b030f90:s0 -> Node0x561d8b0315c0[tooltip="if.end21 -> if.then23\nProbability 62.50%" ];
+	Node0x561d8b030f90:s1 -> Node0x561d8b0266a0[tooltip="if.end21 -> if.end25\nProbability 37.50%" ];
+	Node0x561d8b0315c0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.then23:\l|  %13 = load i32, ptr %mask, align 4\l  %or24 = or i32 %13, 512\l  store i32 %or24, ptr %mask, align 4\l  br label %if.end25\l}"];
+	Node0x561d8b0315c0 -> Node0x561d8b0266a0[tooltip="if.then23 -> if.end25\nProbability 100.00%" ];
+	Node0x561d8b0266a0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end25:\l|  %14 = load i32, ptr %mask, align 4\l  ret i32 %14\l}"];
+}

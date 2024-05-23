@@ -1,0 +1,26 @@
+digraph "CFG for '_ZN9LAMMPS_NS5Input10write_echoERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE' function" {
+	label="CFG for '_ZN9LAMMPS_NS5Input10write_echoERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE' function";
+
+	Node0x562873556230 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %txt.addr = alloca ptr, align 8\l  store ptr %this, ptr %this.addr, align 8\l  store ptr %txt, ptr %txt.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %me = getelementptr inbounds %\"class.LAMMPS_NS::Input\", ptr %this1, i32 0,\l... i32 7\l  %0 = load i32, ptr %me, align 8\l  %cmp = icmp eq i32 %0, 0\l  br i1 %cmp, label %if.then, label %if.end14\l|{<s0>T|<s1>F}}"];
+	Node0x562873556230:s0 -> Node0x5628735568a0[tooltip="entry -> if.then\nProbability 37.50%" ];
+	Node0x562873556230:s1 -> Node0x562873556910[tooltip="entry -> if.end14\nProbability 62.50%" ];
+	Node0x5628735568a0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{if.then:\l|  %echo_screen = getelementptr inbounds %\"class.LAMMPS_NS::Input\", ptr\l... %this1, i32 0, i32 5\l  %1 = load i32, ptr %echo_screen, align 8\l  %tobool = icmp ne i32 %1, 0\l  br i1 %tobool, label %land.lhs.true, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x5628735568a0:s0 -> Node0x562873556c60[tooltip="if.then -> land.lhs.true\nProbability 62.50%" ];
+	Node0x5628735568a0:s1 -> Node0x562873556e80[tooltip="if.then -> if.end\nProbability 37.50%" ];
+	Node0x562873556c60 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470" fontname="Courier",label="{land.lhs.true:\l|  %screen = getelementptr inbounds %\"class.LAMMPS_NS::Pointers\", ptr %this1,\l... i32 0, i32 18\l  %2 = load ptr, ptr %screen, align 8\l  %3 = load ptr, ptr %2, align 8\l  %tobool2 = icmp ne ptr %3, null\l  br i1 %tobool2, label %if.then3, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x562873556c60:s0 -> Node0x562873557230[tooltip="land.lhs.true -> if.then3\nProbability 62.50%" ];
+	Node0x562873556c60:s1 -> Node0x562873556e80[tooltip="land.lhs.true -> if.end\nProbability 37.50%" ];
+	Node0x562873557230 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#ca3b3770" fontname="Courier",label="{if.then3:\l|  %4 = load ptr, ptr %txt.addr, align 8\l  %call = call noundef ptr\l... @_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE5c_strEv(ptr noundef\l... nonnull align 8 dereferenceable(32) %4) #15\l  %screen4 = getelementptr inbounds %\"class.LAMMPS_NS::Pointers\", ptr %this1,\l... i32 0, i32 18\l  %5 = load ptr, ptr %screen4, align 8\l  %6 = load ptr, ptr %5, align 8\l  %call5 = call i32 @fputs(ptr noundef %call, ptr noundef %6)\l  br label %if.end\l}"];
+	Node0x562873557230 -> Node0x562873556e80[tooltip="if.then3 -> if.end\nProbability 100.00%" ];
+	Node0x562873556e80 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{if.end:\l|  %echo_log = getelementptr inbounds %\"class.LAMMPS_NS::Input\", ptr %this1,\l... i32 0, i32 6\l  %7 = load i32, ptr %echo_log, align 4\l  %tobool6 = icmp ne i32 %7, 0\l  br i1 %tobool6, label %land.lhs.true7, label %if.end13\l|{<s0>T|<s1>F}}"];
+	Node0x562873556e80:s0 -> Node0x562873557b30[tooltip="if.end -> land.lhs.true7\nProbability 62.50%" ];
+	Node0x562873556e80:s1 -> Node0x562873557bb0[tooltip="if.end -> if.end13\nProbability 37.50%" ];
+	Node0x562873557b30 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470" fontname="Courier",label="{land.lhs.true7:\l|  %logfile = getelementptr inbounds %\"class.LAMMPS_NS::Pointers\", ptr\l... %this1, i32 0, i32 19\l  %8 = load ptr, ptr %logfile, align 8\l  %9 = load ptr, ptr %8, align 8\l  %tobool8 = icmp ne ptr %9, null\l  br i1 %tobool8, label %if.then9, label %if.end13\l|{<s0>T|<s1>F}}"];
+	Node0x562873557b30:s0 -> Node0x562873558160[tooltip="land.lhs.true7 -> if.then9\nProbability 62.50%" ];
+	Node0x562873557b30:s1 -> Node0x562873557bb0[tooltip="land.lhs.true7 -> if.end13\nProbability 37.50%" ];
+	Node0x562873558160 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#ca3b3770" fontname="Courier",label="{if.then9:\l|  %10 = load ptr, ptr %txt.addr, align 8\l  %call10 = call noundef ptr\l... @_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE5c_strEv(ptr noundef\l... nonnull align 8 dereferenceable(32) %10) #15\l  %logfile11 = getelementptr inbounds %\"class.LAMMPS_NS::Pointers\", ptr\l... %this1, i32 0, i32 19\l  %11 = load ptr, ptr %logfile11, align 8\l  %12 = load ptr, ptr %11, align 8\l  %call12 = call i32 @fputs(ptr noundef %call10, ptr noundef %12)\l  br label %if.end13\l}"];
+	Node0x562873558160 -> Node0x562873557bb0[tooltip="if.then9 -> if.end13\nProbability 100.00%" ];
+	Node0x562873557bb0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{if.end13:\l|  br label %if.end14\l}"];
+	Node0x562873557bb0 -> Node0x562873556910[tooltip="if.end13 -> if.end14\nProbability 100.00%" ];
+	Node0x562873556910 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end14:\l|  ret void\l}"];
+}

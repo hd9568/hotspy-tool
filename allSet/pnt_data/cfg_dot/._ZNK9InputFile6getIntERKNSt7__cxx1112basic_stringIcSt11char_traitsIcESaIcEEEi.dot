@@ -1,0 +1,5 @@
+digraph "CFG for '_ZNK9InputFile6getIntERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi' function" {
+	label="CFG for '_ZNK9InputFile6getIntERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi' function";
+
+	Node0x55cf47c200d0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %key.addr = alloca ptr, align 8\l  %dflt.addr = alloca i32, align 4\l  store ptr %this, ptr %this.addr, align 8\l  store ptr %key, ptr %key.addr, align 8\l  store i32 %dflt, ptr %dflt.addr, align 4\l  %this1 = load ptr, ptr %this.addr, align 8\l  %0 = load ptr, ptr %key.addr, align 8\l  %call = call noundef i32\l... @_ZNK9InputFile3getIiEET_RKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE\l...ERKS1_(ptr noundef nonnull align 8 dereferenceable(48) %this1, ptr noundef\l... nonnull align 8 dereferenceable(32) %0, ptr noundef nonnull align 4\l... dereferenceable(4) %dflt.addr)\l  ret i32 %call\l}"];
+}

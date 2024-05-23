@@ -1,0 +1,10 @@
+digraph "CFG for '_ZN3fmt6v9_lmp6detail7get_argINS0_20basic_format_contextINS0_8appenderEcEEiEENT_10format_argERS6_T0_' function" {
+	label="CFG for '_ZN3fmt6v9_lmp6detail7get_argINS0_20basic_format_contextINS0_8appenderEcEEiEENT_10format_argERS6_T0_' function";
+
+	Node0x55fec3495810 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %ctx.addr = alloca ptr, align 8\l  %id.addr = alloca i32, align 4\l  store ptr %ctx, ptr %ctx.addr, align 8\l  store i32 %id, ptr %id.addr, align 4\l  %0 = load ptr, ptr %ctx.addr, align 8\l  %1 = load i32, ptr %id.addr, align 4\l  call void @_ZNK3fmt6v9_lmp20basic_format_contextINS0_8appenderEcE3argEi(ptr\l... dead_on_unwind writable sret(%\"class.fmt::v9_lmp::basic_format_arg\") align 16\l... %agg.result, ptr noundef nonnull align 8 dereferenceable(32) %0, i32 noundef\l... %1)\l  %call = call noundef zeroext i1\l... @_ZNK3fmt6v9_lmp16basic_format_argINS0_20basic_format_contextINS0_8appenderEcE\l...EEcvbEv(ptr noundef nonnull align 16 dereferenceable(20) %agg.result) #17\l  br i1 %call, label %if.end, label %if.then\l|{<s0>T|<s1>F}}"];
+	Node0x55fec3495810:s0 -> Node0x55fec3495ea0[tooltip="entry -> if.end\nProbability 50.00%" ];
+	Node0x55fec3495810:s1 -> Node0x55fec3495f10[tooltip="entry -> if.then\nProbability 50.00%" ];
+	Node0x55fec3495f10 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.then:\l|  %2 = load ptr, ptr %ctx.addr, align 8\l  call void\l... @_ZN3fmt6v9_lmp20basic_format_contextINS0_8appenderEcE8on_errorEPKc(ptr\l... noundef nonnull align 8 dereferenceable(32) %2, ptr noundef @.str.4)\l  br label %if.end\l}"];
+	Node0x55fec3495f10 -> Node0x55fec3495ea0[tooltip="if.then -> if.end\nProbability 100.00%" ];
+	Node0x55fec3495ea0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  ret void\l}"];
+}

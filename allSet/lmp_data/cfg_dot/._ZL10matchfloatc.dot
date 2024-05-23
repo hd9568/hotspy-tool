@@ -1,0 +1,16 @@
+digraph "CFG for '_ZL10matchfloatc' function" {
+	label="CFG for '_ZL10matchfloatc' function";
+
+	Node0x5584167ca950 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %c.addr = alloca i8, align 1\l  store i8 %c, ptr %c.addr, align 1\l  %0 = load i8, ptr %c.addr, align 1\l  %call = call noundef i32 @_ZL8matchintc(i8 noundef signext %0)\l  %tobool = icmp ne i32 %call, 0\l  br i1 %tobool, label %lor.end, label %lor.lhs.false\l|{<s0>T|<s1>F}}"];
+	Node0x5584167ca950:s0 -> Node0x5584167cac80[tooltip="entry -> lor.end\nProbability 62.50%" ];
+	Node0x5584167ca950:s1 -> Node0x5584167cacf0[tooltip="entry -> lor.lhs.false\nProbability 37.50%" ];
+	Node0x5584167cacf0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{lor.lhs.false:\l|  %1 = load i8, ptr %c.addr, align 1\l  %conv = sext i8 %1 to i32\l  %cmp = icmp eq i32 %conv, 46\l  br i1 %cmp, label %lor.end, label %lor.lhs.false1\l|{<s0>T|<s1>F}}"];
+	Node0x5584167cacf0:s0 -> Node0x5584167cac80[tooltip="lor.lhs.false -> lor.end\nProbability 50.00%" ];
+	Node0x5584167cacf0:s1 -> Node0x5584167cafb0[tooltip="lor.lhs.false -> lor.lhs.false1\nProbability 50.00%" ];
+	Node0x5584167cafb0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470" fontname="Courier",label="{lor.lhs.false1:\l|  %2 = load i8, ptr %c.addr, align 1\l  %conv2 = sext i8 %2 to i32\l  %cmp3 = icmp eq i32 %conv2, 101\l  br i1 %cmp3, label %lor.end, label %lor.rhs\l|{<s0>T|<s1>F}}"];
+	Node0x5584167cafb0:s0 -> Node0x5584167cac80[tooltip="lor.lhs.false1 -> lor.end\nProbability 50.00%" ];
+	Node0x5584167cafb0:s1 -> Node0x5584167cb2d0[tooltip="lor.lhs.false1 -> lor.rhs\nProbability 50.00%" ];
+	Node0x5584167cb2d0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#cc403a70" fontname="Courier",label="{lor.rhs:\l|  %3 = load i8, ptr %c.addr, align 1\l  %conv4 = sext i8 %3 to i32\l  %cmp5 = icmp eq i32 %conv4, 69\l  br label %lor.end\l}"];
+	Node0x5584167cb2d0 -> Node0x5584167cac80[tooltip="lor.rhs -> lor.end\nProbability 100.00%" ];
+	Node0x5584167cac80 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{lor.end:\l|  %4 = phi i1 [ true, %lor.lhs.false1 ], [ true, %lor.lhs.false ], [ true,\l... %entry ], [ %cmp5, %lor.rhs ]\l  %conv6 = zext i1 %4 to i32\l  ret i32 %conv6\l}"];
+}

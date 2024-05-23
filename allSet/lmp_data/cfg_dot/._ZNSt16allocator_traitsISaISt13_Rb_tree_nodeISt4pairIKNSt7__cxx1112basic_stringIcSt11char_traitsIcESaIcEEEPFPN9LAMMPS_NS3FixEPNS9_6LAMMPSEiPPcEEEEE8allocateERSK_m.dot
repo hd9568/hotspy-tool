@@ -1,0 +1,5 @@
+digraph "CFG for '_ZNSt16allocator_traitsISaISt13_Rb_tree_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEPFPN9LAMMPS_NS3FixEPNS9_6LAMMPSEiPPcEEEEE8allocateERSK_m' function" {
+	label="CFG for '_ZNSt16allocator_traitsISaISt13_Rb_tree_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEPFPN9LAMMPS_NS3FixEPNS9_6LAMMPSEiPPcEEEEE8allocateERSK_m' function";
+
+	Node0x561f164ac050 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %__a.addr = alloca ptr, align 8\l  %__n.addr = alloca i64, align 8\l  store ptr %__a, ptr %__a.addr, align 8\l  store i64 %__n, ptr %__n.addr, align 8\l  %0 = load ptr, ptr %__a.addr, align 8\l  %1 = load i64, ptr %__n.addr, align 8\l  %call = call noundef ptr\l... @_ZN9__gnu_cxx13new_allocatorISt13_Rb_tree_nodeISt4pairIKNSt7__cxx1112basic_st\l...ringIcSt11char_traitsIcESaIcEEEPFPN9LAMMPS_NS3FixEPNSA_6LAMMPSEiPPcEEEE8allocat\l...eEmPKv(ptr noundef nonnull align 1 dereferenceable(1) %0, i64 noundef %1, ptr\l... noundef null)\l  ret ptr %call\l}"];
+}

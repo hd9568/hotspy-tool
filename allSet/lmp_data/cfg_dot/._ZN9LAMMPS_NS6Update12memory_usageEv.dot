@@ -1,0 +1,17 @@
+digraph "CFG for '_ZN9LAMMPS_NS6Update12memory_usageEv' function" {
+	label="CFG for '_ZN9LAMMPS_NS6Update12memory_usageEv' function";
+
+	Node0x55ee27196f30 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %bytes = alloca double, align 8\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  store double 0.000000e+00, ptr %bytes, align 8\l  %whichflag = getelementptr inbounds %\"class.LAMMPS_NS::Update\", ptr %this1,\l... i32 0, i32 6\l  %0 = load i32, ptr %whichflag, align 4\l  %cmp = icmp eq i32 %0, 1\l  br i1 %cmp, label %if.then, label %if.else\l|{<s0>T|<s1>F}}"];
+	Node0x55ee27196f30:s0 -> Node0x55ee27197400[tooltip="entry -> if.then\nProbability 50.00%" ];
+	Node0x55ee27196f30:s1 -> Node0x55ee27197470[tooltip="entry -> if.else\nProbability 50.00%" ];
+	Node0x55ee27197400 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.then:\l|  %integrate = getelementptr inbounds %\"class.LAMMPS_NS::Update\", ptr\l... %this1, i32 0, i32 24\l  %1 = load ptr, ptr %integrate, align 8\l  %vtable = load ptr, ptr %1, align 8\l  %vfn = getelementptr inbounds ptr, ptr %vtable, i64 9\l  %2 = load ptr, ptr %vfn, align 8\l  %call = call noundef double %2(ptr noundef nonnull align 8\l... dereferenceable(272) %1)\l  %3 = load double, ptr %bytes, align 8\l  %add = fadd double %3, %call\l  store double %add, ptr %bytes, align 8\l  br label %if.end9\l}"];
+	Node0x55ee27197400 -> Node0x55ee27197d90[tooltip="if.then -> if.end9\nProbability 100.00%" ];
+	Node0x55ee27197470 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.else:\l|  %whichflag2 = getelementptr inbounds %\"class.LAMMPS_NS::Update\", ptr\l... %this1, i32 0, i32 6\l  %4 = load i32, ptr %whichflag2, align 4\l  %cmp3 = icmp eq i32 %4, 2\l  br i1 %cmp3, label %if.then4, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x55ee27197470:s0 -> Node0x55ee27198090[tooltip="if.else -> if.then4\nProbability 50.00%" ];
+	Node0x55ee27197470:s1 -> Node0x55ee27198110[tooltip="if.else -> if.end\nProbability 50.00%" ];
+	Node0x55ee27198090 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470" fontname="Courier",label="{if.then4:\l|  %minimize = getelementptr inbounds %\"class.LAMMPS_NS::Update\", ptr %this1,\l... i32 0, i32 26\l  %5 = load ptr, ptr %minimize, align 8\l  %vtable5 = load ptr, ptr %5, align 8\l  %vfn6 = getelementptr inbounds ptr, ptr %vtable5, i64 7\l  %6 = load ptr, ptr %vfn6, align 8\l  %call7 = call noundef double %6(ptr noundef nonnull align 8\l... dereferenceable(632) %5)\l  %7 = load double, ptr %bytes, align 8\l  %add8 = fadd double %7, %call7\l  store double %add8, ptr %bytes, align 8\l  br label %if.end\l}"];
+	Node0x55ee27198090 -> Node0x55ee27198110[tooltip="if.then4 -> if.end\nProbability 100.00%" ];
+	Node0x55ee27198110 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.end:\l|  br label %if.end9\l}"];
+	Node0x55ee27198110 -> Node0x55ee27197d90[tooltip="if.end -> if.end9\nProbability 100.00%" ];
+	Node0x55ee27197d90 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end9:\l|  %8 = load double, ptr %bytes, align 8\l  ret double %8\l}"];
+}

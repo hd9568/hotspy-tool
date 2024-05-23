@@ -1,0 +1,10 @@
+digraph "CFG for '_ZL8matchdotc' function" {
+	label="CFG for '_ZL8matchdotc' function";
+
+	Node0x5584167c3c90 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %c.addr = alloca i8, align 1\l  store i8 %c, ptr %c.addr, align 1\l  %0 = load i8, ptr %c.addr, align 1\l  %conv = sext i8 %0 to i32\l  %cmp = icmp ne i32 %conv, 10\l  br i1 %cmp, label %land.rhs, label %land.end\l|{<s0>T|<s1>F}}"];
+	Node0x5584167c3c90:s0 -> Node0x5584167c3f40[tooltip="entry -> land.rhs\nProbability 50.00%" ];
+	Node0x5584167c3c90:s1 -> Node0x5584167c3fc0[tooltip="entry -> land.end\nProbability 50.00%" ];
+	Node0x5584167c3f40 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{land.rhs:\l|  %1 = load i8, ptr %c.addr, align 1\l  %conv1 = sext i8 %1 to i32\l  %cmp2 = icmp ne i32 %conv1, 13\l  br label %land.end\l}"];
+	Node0x5584167c3f40 -> Node0x5584167c3fc0[tooltip="land.rhs -> land.end\nProbability 100.00%" ];
+	Node0x5584167c3fc0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{land.end:\l|  %2 = phi i1 [ false, %entry ], [ %cmp2, %land.rhs ]\l  %conv3 = zext i1 %2 to i32\l  ret i32 %conv3\l}"];
+}

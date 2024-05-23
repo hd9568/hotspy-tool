@@ -1,0 +1,9 @@
+digraph "CFG for '_ZNSt11_Deque_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE18_M_deallocate_nodeEPS5_' function" {
+	label="CFG for '_ZNSt11_Deque_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE18_M_deallocate_nodeEPS5_' function";
+
+	Node0x5651cd8d1080 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %__p.addr = alloca ptr, align 8\l  store ptr %this, ptr %this.addr, align 8\l  store ptr %__p, ptr %__p.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %_M_impl = getelementptr inbounds %\"class.std::_Deque_base\", ptr %this1, i32\l... 0, i32 0\l  %0 = load ptr, ptr %__p.addr, align 8\l  %call = call noundef i64 @_ZSt16__deque_buf_sizem(i64 noundef 32)\l  invoke void\l... @_ZNSt16allocator_traitsISaINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcE\l...EEEE10deallocateERS6_PS5_m(ptr noundef nonnull align 1 dereferenceable(1)\l... %_M_impl, ptr noundef %0, i64 noundef %call)\l          to label %invoke.cont unwind label %terminate.lpad\l}"];
+	Node0x5651cd8d1080 -> Node0x5651cd8d1500[tooltip="entry -> invoke.cont\nProbability 100.00%" ];
+	Node0x5651cd8d1080 -> Node0x5651cd8d1550[tooltip="entry -> terminate.lpad\nProbability 0.00%" ];
+	Node0x5651cd8d1500 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{invoke.cont:\l|  ret void\l}"];
+	Node0x5651cd8d1550 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f4c5ad70" fontname="Courier",label="{terminate.lpad:\l|  %1 = landingpad \{ ptr, i32 \}\l          catch ptr null\l  %2 = extractvalue \{ ptr, i32 \} %1, 0\l  call void @__clang_call_terminate(ptr %2) #20\l  unreachable\l}"];
+}

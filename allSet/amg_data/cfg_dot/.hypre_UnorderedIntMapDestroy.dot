@@ -1,0 +1,5 @@
+digraph "CFG for 'hypre_UnorderedIntMapDestroy' function" {
+	label="CFG for 'hypre_UnorderedIntMapDestroy' function";
+
+	Node0x55e2c2bcb120 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %m.addr = alloca ptr, align 8\l  store ptr %m, ptr %m.addr, align 8\l  %0 = load ptr, ptr %m.addr, align 8\l  %table = getelementptr inbounds %struct.hypre_UnorderedIntMap, ptr %0, i32\l... 0, i32 2\l  %1 = load volatile ptr, ptr %table, align 8\l  call void @hypre_Free(ptr noundef %1)\l  %2 = load ptr, ptr %m.addr, align 8\l  %table1 = getelementptr inbounds %struct.hypre_UnorderedIntMap, ptr %2, i32\l... 0, i32 2\l  store volatile ptr null, ptr %table1, align 8\l  ret void\l}"];
+}

@@ -1,0 +1,35 @@
+digraph "Call graph: integrate.ll" {
+	label="Call graph: integrate.ll";
+
+	Node0x55f52caebd60 [shape=record,label="{_ZN9LAMMPS_NS9IntegrateC2EPNS_6LAMMPSEiPPc}"];
+	Node0x55f52caebd60 -> Node0x55f52cb2c0f0;
+	Node0x55f52cb2c0f0 [shape=record,label="{_ZN9LAMMPS_NS8PointersC2EPNS_6LAMMPSE}"];
+	Node0x55f52caeaf40 [shape=record,label="{_ZdaPv}"];
+	Node0x55f52cb2bfa0 [shape=record,label="{_ZN9LAMMPS_NS9IntegrateD2Ev}"];
+	Node0x55f52cb2bfa0 -> Node0x55f52caeaf40;
+	Node0x55f52cb2bfa0 -> Node0x55f52caeb350;
+	Node0x55f52caf9930 [shape=record,label="{_Znam}"];
+	Node0x55f52cb1dc40 [shape=record,label="{_ZN9LAMMPS_NS9IntegrateD0Ev}"];
+	Node0x55f52cb1dc40 -> Node0x55f52cb11ec0;
+	Node0x55f52cb11ec0 [shape=record,label="{llvm.trap}"];
+	Node0x55f52cb27200 [shape=record,label="{_ZN9LAMMPS_NS9Integrate4initEv}"];
+	Node0x55f52cb27200 -> Node0x55f52cb22b50;
+	Node0x55f52cb22b50 [shape=record,label="{_ZN9LAMMPS_NS6CiteMe5flushEv}"];
+	Node0x55f52caab2d0 [shape=record,label="{_ZN9LAMMPS_NS9Integrate8ev_setupEv}"];
+	Node0x55f52caab2d0 -> Node0x55f52caeaf40;
+	Node0x55f52caab2d0 -> Node0x55f52caf9930;
+	Node0x55f52caab2d0 -> Node0x55f52caf58d0;
+	Node0x55f52caf58d0 [shape=record,label="{llvm.umul.with.overflow.i64}"];
+	Node0x55f52cafa600 [shape=record,label="{_ZN9LAMMPS_NS9Integrate6ev_setEl}"];
+	Node0x55f52cafa600 -> Node0x55f52cafbf10;
+	Node0x55f52cafbf10 [shape=record,label="{_ZN9LAMMPS_NS7Compute9matchstepEl}"];
+	Node0x55f52cb01180 [shape=record,label="{__cxa_pure_virtual}"];
+	Node0x55f52cb024c0 [shape=record,label="{_ZN9LAMMPS_NS9Integrate7cleanupEv}"];
+	Node0x55f52cb0bcc0 [shape=record,label="{_ZN9LAMMPS_NS9Integrate8reset_dtEv}"];
+	Node0x55f52cb0c970 [shape=record,label="{_ZN9LAMMPS_NS9Integrate12memory_usageEv}"];
+	Node0x55f52caeb350 [shape=record,label="{_ZN9LAMMPS_NS8PointersD2Ev}"];
+	Node0x55f52cb0d560 [shape=record,label="{_ZN9LAMMPS_NS8PointersD0Ev}"];
+	Node0x55f52cb0d560 -> Node0x55f52caeb350;
+	Node0x55f52cb0d560 -> Node0x55f52cb0ea80;
+	Node0x55f52cb0ea80 [shape=record,label="{_ZdlPv}"];
+}

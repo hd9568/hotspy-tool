@@ -1,0 +1,32 @@
+digraph "Call graph: fail.ll" {
+	label="Call graph: fail.ll";
+
+	Node0x558cd8fe49b0 [shape=record,label="{die}"];
+	Node0x558cd8fe49b0 -> Node0x558cd8fe5230;
+	Node0x558cd8fe5230 [shape=record,label="{exit}"];
+	Node0x558cd8fe0210 [shape=record,label="{vdiagnostic}"];
+	Node0x558cd8fe0210 -> Node0x558cd8fe38d0;
+	Node0x558cd8fe0210 -> Node0x558cd8fe3300;
+	Node0x558cd8fe0210 -> Node0x558cd8fdaa50;
+	Node0x558cd8fe0210 -> Node0x558cd8fdaad0;
+	Node0x558cd8fe0210 -> Node0x558cd8ff1040;
+	Node0x558cd8fe0210 -> Node0x558cd8ff0fc0;
+	Node0x558cd8fe38d0 [shape=record,label="{sprintf}"];
+	Node0x558cd8fdaa50 [shape=record,label="{vsprintf}"];
+	Node0x558cd8fe3300 [shape=record,label="{strlen}"];
+	Node0x558cd8fdaad0 [shape=record,label="{strcat}"];
+	Node0x558cd8ff0fc0 [shape=record,label="{fwrite}"];
+	Node0x558cd8ff1040 [shape=record,label="{fflush}"];
+	Node0x558cd8ff1500 [shape=record,label="{diagnostic}"];
+	Node0x558cd8ff1500 -> Node0x558cd8ff1580;
+	Node0x558cd8ff1500 -> Node0x558cd8fe0210;
+	Node0x558cd8ff1500 -> Node0x558cd8ff1630;
+	Node0x558cd8ff1580 [shape=record,label="{llvm.va_start}"];
+	Node0x558cd8ff1630 [shape=record,label="{llvm.va_end}"];
+	Node0x558cd8ff16b0 [shape=record,label="{vfail}"];
+	Node0x558cd8ff16b0 -> Node0x558cd8fe0210;
+	Node0x558cd8ff16b0 -> Node0x558cd8fe49b0;
+	Node0x558cd8ff1730 [shape=record,label="{fail}"];
+	Node0x558cd8ff1730 -> Node0x558cd8ff1580;
+	Node0x558cd8ff1730 -> Node0x558cd8ff16b0;
+}

@@ -1,0 +1,39 @@
+digraph "CFG for '_ZN3fmt6v9_lmp6detail6bigint12assign_pow10Ei' function" {
+	label="CFG for '_ZN3fmt6v9_lmp6detail6bigint12assign_pow10Ei' function";
+
+	Node0x556bfec3c200 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d24b4070" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %exp.addr = alloca i32, align 4\l  %bitmask = alloca i32, align 4\l  store ptr %this, ptr %this.addr, align 8\l  store i32 %exp, ptr %exp.addr, align 4\l  %this1 = load ptr, ptr %this.addr, align 8\l  %0 = load i32, ptr %exp.addr, align 4\l  %cmp = icmp sge i32 %0, 0\l  br i1 %cmp, label %cond.true, label %cond.false\l|{<s0>T|<s1>F}}"];
+	Node0x556bfec3c200:s0 -> Node0x556bfec3c6c0[tooltip="entry -> cond.true\nProbability 100.00%" ];
+	Node0x556bfec3c200:s1 -> Node0x556bfec3c740[tooltip="entry -> cond.false\nProbability 0.00%" ];
+	Node0x556bfec3c6c0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d24b4070" fontname="Courier",label="{cond.true:\l|  br label %cond.end\l}"];
+	Node0x556bfec3c6c0 -> Node0x556bfec3c870[tooltip="cond.true -> cond.end\nProbability 100.00%" ];
+	Node0x556bfec3c740 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#e8d6cc70" fontname="Courier",label="{cond.false:\l|  call void @_ZN3fmt6v9_lmp6detail11assert_failEPKciS3_(ptr noundef\l... @.str.339, i32 noundef 2887, ptr noundef @.str.75) #21\l  unreachable\l}"];
+	Node0x556bfec3cba0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#3d50c370" fontname="Courier",label="{1:\l|  br label %cond.end\l}"];
+	Node0x556bfec3cba0 -> Node0x556bfec3c870[tooltip="1 -> cond.end\nProbability 100.00%" ];
+	Node0x556bfec3c870 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d24b4070" fontname="Courier",label="{cond.end:\l|  %2 = load i32, ptr %exp.addr, align 4\l  %cmp2 = icmp eq i32 %2, 0\l  br i1 %cmp2, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x556bfec3c870:s0 -> Node0x556bfec3cd70[tooltip="cond.end -> if.then\nProbability 37.50%" ];
+	Node0x556bfec3c870:s1 -> Node0x556bfec3cf60[tooltip="cond.end -> if.end\nProbability 62.50%" ];
+	Node0x556bfec3cd70 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#dc5d4a70" fontname="Courier",label="{if.then:\l|  call void @_ZN3fmt6v9_lmp6detail6bigintaSIiEEvT_(ptr noundef nonnull align\l... 8 dereferenceable(172) %this1, i32 noundef 1)\l  br label %return\l}"];
+	Node0x556bfec3cd70 -> Node0x556bfec3d200[tooltip="if.then -> return\nProbability 100.00%" ];
+	Node0x556bfec3cf60 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{if.end:\l|  store i32 1, ptr %bitmask, align 4\l  br label %while.cond\l}"];
+	Node0x556bfec3cf60 -> Node0x556bfec3d360[tooltip="if.end -> while.cond\nProbability 100.00%" ];
+	Node0x556bfec3d360 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{while.cond:\l|  %3 = load i32, ptr %exp.addr, align 4\l  %4 = load i32, ptr %bitmask, align 4\l  %cmp3 = icmp sge i32 %3, %4\l  br i1 %cmp3, label %while.body, label %while.end\l|{<s0>T|<s1>F}}"];
+	Node0x556bfec3d360:s0 -> Node0x556bfec3d5b0[tooltip="while.cond -> while.body\nProbability 96.88%" ];
+	Node0x556bfec3d360:s1 -> Node0x556bfec3d600[tooltip="while.cond -> while.end\nProbability 3.12%" ];
+	Node0x556bfec3d5b0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{while.body:\l|  %5 = load i32, ptr %bitmask, align 4\l  %shl = shl i32 %5, 1\l  store i32 %shl, ptr %bitmask, align 4\l  br label %while.cond, !llvm.loop !6\l}"];
+	Node0x556bfec3d5b0 -> Node0x556bfec3d360[tooltip="while.body -> while.cond\nProbability 100.00%" ];
+	Node0x556bfec3d600 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{while.end:\l|  %6 = load i32, ptr %bitmask, align 4\l  %shr = ashr i32 %6, 1\l  store i32 %shr, ptr %bitmask, align 4\l  call void @_ZN3fmt6v9_lmp6detail6bigintaSIiEEvT_(ptr noundef nonnull align 8\l... dereferenceable(172) %this1, i32 noundef 5)\l  %7 = load i32, ptr %bitmask, align 4\l  %shr4 = ashr i32 %7, 1\l  store i32 %shr4, ptr %bitmask, align 4\l  br label %while.cond5\l}"];
+	Node0x556bfec3d600 -> Node0x556bfec3df30[tooltip="while.end -> while.cond5\nProbability 100.00%" ];
+	Node0x556bfec3df30 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{while.cond5:\l|  %8 = load i32, ptr %bitmask, align 4\l  %cmp6 = icmp ne i32 %8, 0\l  br i1 %cmp6, label %while.body7, label %while.end12\l|{<s0>T|<s1>F}}"];
+	Node0x556bfec3df30:s0 -> Node0x556bfec3e100[tooltip="while.cond5 -> while.body7\nProbability 96.88%" ];
+	Node0x556bfec3df30:s1 -> Node0x556bfec3cdc0[tooltip="while.cond5 -> while.end12\nProbability 3.12%" ];
+	Node0x556bfec3e100 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{while.body7:\l|  call void @_ZN3fmt6v9_lmp6detail6bigint6squareEv(ptr noundef nonnull align\l... 8 dereferenceable(172) %this1)\l  %9 = load i32, ptr %exp.addr, align 4\l  %10 = load i32, ptr %bitmask, align 4\l  %and = and i32 %9, %10\l  %cmp8 = icmp ne i32 %and, 0\l  br i1 %cmp8, label %if.then9, label %if.end10\l|{<s0>T|<s1>F}}"];
+	Node0x556bfec3e100:s0 -> Node0x556bfec3e830[tooltip="while.body7 -> if.then9\nProbability 62.50%" ];
+	Node0x556bfec3e100:s1 -> Node0x556bfec3e880[tooltip="while.body7 -> if.end10\nProbability 37.50%" ];
+	Node0x556bfec3e830 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.then9:\l|  %call = call noundef nonnull align 8 dereferenceable(172) ptr\l... @_ZN3fmt6v9_lmp6detail6bigintmLIiEERS2_T_(ptr noundef nonnull align 8\l... dereferenceable(172) %this1, i32 noundef 5)\l  br label %if.end10\l}"];
+	Node0x556bfec3e830 -> Node0x556bfec3e880[tooltip="if.then9 -> if.end10\nProbability 100.00%" ];
+	Node0x556bfec3e880 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end10:\l|  %11 = load i32, ptr %bitmask, align 4\l  %shr11 = ashr i32 %11, 1\l  store i32 %shr11, ptr %bitmask, align 4\l  br label %while.cond5, !llvm.loop !8\l}"];
+	Node0x556bfec3e880 -> Node0x556bfec3df30[tooltip="if.end10 -> while.cond5\nProbability 100.00%" ];
+	Node0x556bfec3cdc0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{while.end12:\l|  %12 = load i32, ptr %exp.addr, align 4\l  %call13 = call noundef nonnull align 8 dereferenceable(172) ptr\l... @_ZN3fmt6v9_lmp6detail6bigintlSEi(ptr noundef nonnull align 8\l... dereferenceable(172) %this1, i32 noundef %12)\l  br label %return\l}"];
+	Node0x556bfec3cdc0 -> Node0x556bfec3d200[tooltip="while.end12 -> return\nProbability 100.00%" ];
+	Node0x556bfec3d200 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d24b4070" fontname="Courier",label="{return:\l|  ret void\l}"];
+}

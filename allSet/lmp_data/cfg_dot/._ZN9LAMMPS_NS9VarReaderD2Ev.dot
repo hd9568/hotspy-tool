@@ -1,0 +1,40 @@
+digraph "CFG for '_ZN9LAMMPS_NS9VarReaderD2Ev' function" {
+	label="CFG for '_ZN9LAMMPS_NS9VarReaderD2Ev' function";
+
+	Node0x556bfe97f910 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %ref.tmp = alloca %\"class.std::__cxx11::basic_string\", align 8\l  %ref.tmp7 = alloca %\"class.std::allocator.4\", align 1\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  store ptr getelementptr inbounds (\{ [4 x ptr] \}, ptr\l... @_ZTVN9LAMMPS_NS9VarReaderE, i32 0, inrange i32 0, i32 2), ptr %this1, align 8\l  %me = getelementptr inbounds %\"class.LAMMPS_NS::VarReader\", ptr %this1, i32\l... 0, i32 3\l  %0 = load i32, ptr %me, align 8\l  %cmp = icmp eq i32 %0, 0\l  br i1 %cmp, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x556bfe97f910:s0 -> Node0x556bfe97fdb0[tooltip="entry -> if.then\nProbability 37.50%" ];
+	Node0x556bfe97f910:s1 -> Node0x556bfe97fe20[tooltip="entry -> if.end\nProbability 62.50%" ];
+	Node0x556bfe97fdb0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{if.then:\l|  %fp = getelementptr inbounds %\"class.LAMMPS_NS::VarReader\", ptr %this1,\l... i32 0, i32 5\l  %1 = load ptr, ptr %fp, align 8\l  %call = invoke i32 @fclose(ptr noundef %1)\l          to label %invoke.cont unwind label %terminate.lpad\l}"];
+	Node0x556bfe97fdb0 -> Node0x556bfe9800a0[tooltip="if.then -> invoke.cont\nProbability 100.00%" ];
+	Node0x556bfe97fdb0 -> Node0x556bfe9800f0[tooltip="if.then -> terminate.lpad\nProbability 0.00%" ];
+	Node0x556bfe9800a0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{invoke.cont:\l|  %fp2 = getelementptr inbounds %\"class.LAMMPS_NS::VarReader\", ptr %this1,\l... i32 0, i32 5\l  store ptr null, ptr %fp2, align 8\l  br label %if.end\l}"];
+	Node0x556bfe9800a0 -> Node0x556bfe97fe20[tooltip="invoke.cont -> if.end\nProbability 100.00%" ];
+	Node0x556bfe97fe20 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  %fixstore = getelementptr inbounds %\"class.LAMMPS_NS::VarReader\", ptr\l... %this1, i32 0, i32 1\l  %2 = load ptr, ptr %fixstore, align 8\l  %tobool = icmp ne ptr %2, null\l  br i1 %tobool, label %if.then3, label %if.end15\l|{<s0>T|<s1>F}}"];
+	Node0x556bfe97fe20:s0 -> Node0x556bfe980760[tooltip="if.end -> if.then3\nProbability 62.50%" ];
+	Node0x556bfe97fe20:s1 -> Node0x556bfe9807e0[tooltip="if.end -> if.end15\nProbability 37.50%" ];
+	Node0x556bfe980760 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.then3:\l|  %modify = getelementptr inbounds %\"class.LAMMPS_NS::Pointers\", ptr %this1,\l... i32 0, i32 12\l  %3 = load ptr, ptr %modify, align 8\l  %4 = load ptr, ptr %3, align 8\l  %tobool4 = icmp ne ptr %4, null\l  br i1 %tobool4, label %if.then5, label %if.end10\l|{<s0>T|<s1>F}}"];
+	Node0x556bfe980760:s0 -> Node0x556bfe980ba0[tooltip="if.then3 -> if.then5\nProbability 62.50%" ];
+	Node0x556bfe980760:s1 -> Node0x556bfe980c20[tooltip="if.then3 -> if.end10\nProbability 37.50%" ];
+	Node0x556bfe980ba0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.then5:\l|  %modify6 = getelementptr inbounds %\"class.LAMMPS_NS::Pointers\", ptr\l... %this1, i32 0, i32 12\l  %5 = load ptr, ptr %modify6, align 8\l  %6 = load ptr, ptr %5, align 8\l  %id_fix = getelementptr inbounds %\"class.LAMMPS_NS::VarReader\", ptr %this1,\l... i32 0, i32 2\l  %7 = load ptr, ptr %id_fix, align 8\l  call void @_ZNSaIcEC1Ev(ptr noundef nonnull align 1 dereferenceable(1)\l... %ref.tmp7) #3\l  invoke void\l... @_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC2IS3_EEPKcRKS3_(ptr\l... noundef nonnull align 8 dereferenceable(32) %ref.tmp, ptr noundef %7, ptr\l... noundef nonnull align 1 dereferenceable(1) %ref.tmp7)\l          to label %invoke.cont8 unwind label %terminate.lpad\l}"];
+	Node0x556bfe980ba0 -> Node0x556bfe9813d0[tooltip="if.then5 -> invoke.cont8\nProbability 100.00%" ];
+	Node0x556bfe980ba0 -> Node0x556bfe9800f0[tooltip="if.then5 -> terminate.lpad\nProbability 0.00%" ];
+	Node0x556bfe9813d0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{invoke.cont8:\l|  invoke void\l... @_ZN9LAMMPS_NS6Modify10delete_fixERKNSt7__cxx1112basic_stringIcSt11char_traits\l...IcESaIcEEE(ptr noundef nonnull align 8 dereferenceable(720) %6, ptr noundef\l... nonnull align 8 dereferenceable(32) %ref.tmp)\l          to label %invoke.cont9 unwind label %terminate.lpad\l}"];
+	Node0x556bfe9813d0 -> Node0x556bfe981380[tooltip="invoke.cont8 -> invoke.cont9\nProbability 100.00%" ];
+	Node0x556bfe9813d0 -> Node0x556bfe9800f0[tooltip="invoke.cont8 -> terminate.lpad\nProbability 0.00%" ];
+	Node0x556bfe981380 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{invoke.cont9:\l|  call void @_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEED1Ev(ptr\l... noundef nonnull align 8 dereferenceable(32) %ref.tmp) #3\l  call void @_ZNSaIcED1Ev(ptr noundef nonnull align 1 dereferenceable(1)\l... %ref.tmp7) #3\l  br label %if.end10\l}"];
+	Node0x556bfe981380 -> Node0x556bfe980c20[tooltip="invoke.cont9 -> if.end10\nProbability 100.00%" ];
+	Node0x556bfe980c20 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.end10:\l|  %id_fix11 = getelementptr inbounds %\"class.LAMMPS_NS::VarReader\", ptr\l... %this1, i32 0, i32 2\l  %8 = load ptr, ptr %id_fix11, align 8\l  %isnull = icmp eq ptr %8, null\l  br i1 %isnull, label %delete.end, label %delete.notnull\l|{<s0>T|<s1>F}}"];
+	Node0x556bfe980c20:s0 -> Node0x556bfe981c20[tooltip="if.end10 -> delete.end\nProbability 37.50%" ];
+	Node0x556bfe980c20:s1 -> Node0x556bfe981ca0[tooltip="if.end10 -> delete.notnull\nProbability 62.50%" ];
+	Node0x556bfe981ca0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{delete.notnull:\l|  call void @_ZdaPv(ptr noundef %8) #21\l  br label %delete.end\l}"];
+	Node0x556bfe981ca0 -> Node0x556bfe981c20[tooltip="delete.notnull -> delete.end\nProbability 100.00%" ];
+	Node0x556bfe981c20 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{delete.end:\l|  %buffer = getelementptr inbounds %\"class.LAMMPS_NS::VarReader\", ptr\l... %this1, i32 0, i32 6\l  %9 = load ptr, ptr %buffer, align 8\l  %isnull12 = icmp eq ptr %9, null\l  br i1 %isnull12, label %delete.end14, label %delete.notnull13\l|{<s0>T|<s1>F}}"];
+	Node0x556bfe981c20:s0 -> Node0x556bfe982170[tooltip="delete.end -> delete.end14\nProbability 37.50%" ];
+	Node0x556bfe981c20:s1 -> Node0x556bfe982220[tooltip="delete.end -> delete.notnull13\nProbability 62.50%" ];
+	Node0x556bfe982220 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{delete.notnull13:\l|  call void @_ZdaPv(ptr noundef %9) #21\l  br label %delete.end14\l}"];
+	Node0x556bfe982220 -> Node0x556bfe982170[tooltip="delete.notnull13 -> delete.end14\nProbability 100.00%" ];
+	Node0x556bfe982170 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{delete.end14:\l|  br label %if.end15\l}"];
+	Node0x556bfe982170 -> Node0x556bfe9807e0[tooltip="delete.end14 -> if.end15\nProbability 100.00%" ];
+	Node0x556bfe9807e0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end15:\l|  call void @_ZN9LAMMPS_NS8PointersD2Ev(ptr noundef nonnull align 8\l... dereferenceable(184) %this1) #3\l  ret void\l}"];
+	Node0x556bfe9800f0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f5c1a970" fontname="Courier",label="{terminate.lpad:\l|  %10 = landingpad \{ ptr, i32 \}\l          catch ptr null\l  %11 = extractvalue \{ ptr, i32 \} %10, 0\l  call void @__clang_call_terminate(ptr %11) #22\l  unreachable\l}"];
+}

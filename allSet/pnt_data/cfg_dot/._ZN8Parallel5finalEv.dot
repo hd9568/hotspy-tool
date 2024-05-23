@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN8Parallel5finalEv' function" {
+	label="CFG for '_ZN8Parallel5finalEv' function";
+
+	Node0x55fc3be230d0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  ret void\l}"];
+}

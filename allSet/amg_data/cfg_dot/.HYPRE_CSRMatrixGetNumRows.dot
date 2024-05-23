@@ -1,0 +1,5 @@
+digraph "CFG for 'HYPRE_CSRMatrixGetNumRows' function" {
+	label="CFG for 'HYPRE_CSRMatrixGetNumRows' function";
+
+	Node0x55b87af385c0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %matrix.addr = alloca ptr, align 8\l  %num_rows.addr = alloca ptr, align 8\l  %csr_matrix = alloca ptr, align 8\l  store ptr %matrix, ptr %matrix.addr, align 8\l  store ptr %num_rows, ptr %num_rows.addr, align 8\l  %0 = load ptr, ptr %matrix.addr, align 8\l  store ptr %0, ptr %csr_matrix, align 8\l  %1 = load ptr, ptr %csr_matrix, align 8\l  %num_rows1 = getelementptr inbounds %struct.hypre_CSRMatrix, ptr %1, i32 0,\l... i32 2\l  %2 = load i32, ptr %num_rows1, align 8\l  %3 = load ptr, ptr %num_rows.addr, align 8\l  store i32 %2, ptr %3, align 4\l  ret i32 0\l}"];
+}

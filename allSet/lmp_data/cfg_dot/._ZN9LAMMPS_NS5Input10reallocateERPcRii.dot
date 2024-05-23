@@ -1,0 +1,19 @@
+digraph "CFG for '_ZN9LAMMPS_NS5Input10reallocateERPcRii' function" {
+	label="CFG for '_ZN9LAMMPS_NS5Input10reallocateERPcRii' function";
+
+	Node0x562873496b60 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d24b4070" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %str.addr = alloca ptr, align 8\l  %max.addr = alloca ptr, align 8\l  %n.addr = alloca i32, align 4\l  store ptr %this, ptr %this.addr, align 8\l  store ptr %str, ptr %str.addr, align 8\l  store ptr %max, ptr %max.addr, align 8\l  store i32 %n, ptr %n.addr, align 4\l  %this1 = load ptr, ptr %this.addr, align 8\l  %0 = load i32, ptr %n.addr, align 4\l  %tobool = icmp ne i32 %0, 0\l  br i1 %tobool, label %if.then, label %if.else\l|{<s0>T|<s1>F}}"];
+	Node0x562873496b60:s0 -> Node0x5628734f23a0[tooltip="entry -> if.then\nProbability 62.50%" ];
+	Node0x562873496b60:s1 -> Node0x5628734f2410[tooltip="entry -> if.else\nProbability 37.50%" ];
+	Node0x5628734f23a0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{if.then:\l|  br label %while.cond\l}"];
+	Node0x5628734f23a0 -> Node0x5628734f26d0[tooltip="if.then -> while.cond\nProbability 100.00%" ];
+	Node0x5628734f26d0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{while.cond:\l|  %1 = load i32, ptr %n.addr, align 4\l  %2 = load ptr, ptr %max.addr, align 8\l  %3 = load i32, ptr %2, align 4\l  %cmp = icmp sgt i32 %1, %3\l  br i1 %cmp, label %while.body, label %while.end\l|{<s0>T|<s1>F}}"];
+	Node0x5628734f26d0:s0 -> Node0x5628734f29f0[tooltip="while.cond -> while.body\nProbability 96.88%" ];
+	Node0x5628734f26d0:s1 -> Node0x5628734f2a70[tooltip="while.cond -> while.end\nProbability 3.12%" ];
+	Node0x5628734f29f0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{while.body:\l|  %4 = load ptr, ptr %max.addr, align 8\l  %5 = load i32, ptr %4, align 4\l  %add = add nsw i32 %5, 256\l  store i32 %add, ptr %4, align 4\l  br label %while.cond, !llvm.loop !6\l}"];
+	Node0x5628734f29f0 -> Node0x5628734f26d0[tooltip="while.body -> while.cond\nProbability 100.00%" ];
+	Node0x5628734f2a70 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{while.end:\l|  br label %if.end\l}"];
+	Node0x5628734f2a70 -> Node0x5628734f2fe0[tooltip="while.end -> if.end\nProbability 100.00%" ];
+	Node0x5628734f2410 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#dc5d4a70" fontname="Courier",label="{if.else:\l|  %6 = load ptr, ptr %max.addr, align 8\l  %7 = load i32, ptr %6, align 4\l  %add2 = add nsw i32 %7, 256\l  store i32 %add2, ptr %6, align 4\l  br label %if.end\l}"];
+	Node0x5628734f2410 -> Node0x5628734f2fe0[tooltip="if.else -> if.end\nProbability 100.00%" ];
+	Node0x5628734f2fe0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d24b4070" fontname="Courier",label="{if.end:\l|  %memory = getelementptr inbounds %\"class.LAMMPS_NS::Pointers\", ptr %this1,\l... i32 0, i32 2\l  %8 = load ptr, ptr %memory, align 8\l  %9 = load ptr, ptr %8, align 8\l  %10 = load ptr, ptr %str.addr, align 8\l  %11 = load ptr, ptr %10, align 8\l  %12 = load ptr, ptr %max.addr, align 8\l  %13 = load i32, ptr %12, align 4\l  %conv = sext i32 %13 to i64\l  %mul = mul i64 %conv, 1\l  %call = call noundef ptr @_ZN9LAMMPS_NS6Memory8sreallocEPvlPKc(ptr noundef\l... nonnull align 8 dereferenceable(184) %9, ptr noundef %11, i64 noundef %mul,\l... ptr noundef @.str.66)\l  %14 = load ptr, ptr %str.addr, align 8\l  store ptr %call, ptr %14, align 8\l  ret void\l}"];
+}

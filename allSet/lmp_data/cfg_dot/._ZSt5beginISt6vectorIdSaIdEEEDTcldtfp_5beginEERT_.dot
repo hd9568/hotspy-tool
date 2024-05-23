@@ -1,0 +1,5 @@
+digraph "CFG for '_ZSt5beginISt6vectorIdSaIdEEEDTcldtfp_5beginEERT_' function" {
+	label="CFG for '_ZSt5beginISt6vectorIdSaIdEEEDTcldtfp_5beginEERT_' function";
+
+	Node0x556bfea51850 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %retval = alloca %\"class.__gnu_cxx::__normal_iterator\", align 8\l  %__cont.addr = alloca ptr, align 8\l  store ptr %__cont, ptr %__cont.addr, align 8\l  %0 = load ptr, ptr %__cont.addr, align 8\l  %call = call ptr @_ZNSt6vectorIdSaIdEE5beginEv(ptr noundef nonnull align 8\l... dereferenceable(24) %0) #3\l  %coerce.dive = getelementptr inbounds %\"class.__gnu_cxx::__normal_iterator\",\l... ptr %retval, i32 0, i32 0\l  store ptr %call, ptr %coerce.dive, align 8\l  %coerce.dive1 = getelementptr inbounds\l... %\"class.__gnu_cxx::__normal_iterator\", ptr %retval, i32 0, i32 0\l  %1 = load ptr, ptr %coerce.dive1, align 8\l  ret ptr %1\l}"];
+}

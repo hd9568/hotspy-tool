@@ -1,0 +1,14 @@
+digraph "CFG for '_ZN9LAMMPS_NS6ReaderD2Ev' function" {
+	label="CFG for '_ZN9LAMMPS_NS6ReaderD2Ev' function";
+
+	Node0x55a6f534b930 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  store ptr getelementptr inbounds (\{ [11 x ptr] \}, ptr\l... @_ZTVN9LAMMPS_NS6ReaderE, i32 0, inrange i32 0, i32 2), ptr %this1, align 8\l  %fp = getelementptr inbounds %\"class.LAMMPS_NS::Reader\", ptr %this1, i32 0,\l... i32 1\l  %0 = load ptr, ptr %fp, align 8\l  %cmp = icmp ne ptr %0, null\l  br i1 %cmp, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x55a6f534b930:s0 -> Node0x55a6f534bdb0[tooltip="entry -> if.then\nProbability 62.50%" ];
+	Node0x55a6f534b930:s1 -> Node0x55a6f534be20[tooltip="entry -> if.end\nProbability 37.50%" ];
+	Node0x55a6f534bdb0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.then:\l|  %vtable = load ptr, ptr %this1, align 8\l  %vfn = getelementptr inbounds ptr, ptr %vtable, i64 8\l  %1 = load ptr, ptr %vfn, align 8\l  invoke void %1(ptr noundef nonnull align 8 dereferenceable(194) %this1)\l          to label %invoke.cont unwind label %terminate.lpad\l}"];
+	Node0x55a6f534bdb0 -> Node0x55a6f534c180[tooltip="if.then -> invoke.cont\nProbability 100.00%" ];
+	Node0x55a6f534bdb0 -> Node0x55a6f534c1d0[tooltip="if.then -> terminate.lpad\nProbability 0.00%" ];
+	Node0x55a6f534c180 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{invoke.cont:\l|  br label %if.end\l}"];
+	Node0x55a6f534c180 -> Node0x55a6f534be20[tooltip="invoke.cont -> if.end\nProbability 100.00%" ];
+	Node0x55a6f534be20 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  call void @_ZN9LAMMPS_NS8PointersD2Ev(ptr noundef nonnull align 8\l... dereferenceable(184) %this1) #9\l  ret void\l}"];
+	Node0x55a6f534c1d0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f3c7b170" fontname="Courier",label="{terminate.lpad:\l|  %2 = landingpad \{ ptr, i32 \}\l          catch ptr null\l  %3 = extractvalue \{ ptr, i32 \} %2, 0\l  call void @__clang_call_terminate(ptr %3) #10\l  unreachable\l}"];
+}

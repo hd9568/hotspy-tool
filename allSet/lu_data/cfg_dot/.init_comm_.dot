@@ -1,0 +1,17 @@
+digraph "CFG for 'init_comm_' function" {
+	label="CFG for 'init_comm_' function";
+
+	Node0x559abcd81a70 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{0:\l|  %1 = alloca i32, i64 1, align 4\l  %2 = alloca i32, i64 1, align 4\l  %3 = alloca i32, i64 1, align 4\l  %4 = alloca i32, i64 1, align 4\l  %5 = alloca i32, i64 1, align 4\l  call void @mpi_init_(ptr %5)\l  store i32 0, ptr %4, align 4\l  call void @mpi_comm_rank_(ptr %4, ptr @dim_, ptr %5)\l  store i32 0, ptr %3, align 4\l  call void @mpi_comm_size_(ptr %3, ptr getelementptr (i8, ptr @dim_, i64 8),\l... ptr %5)\l  %6 = load i32, ptr getelementptr (i8, ptr @dim_, i64 8), align 4\l  %7 = icmp slt i32 %6, 28\l  br i1 %7, label %8, label %18\l|{<s0>T|<s1>F}}"];
+	Node0x559abcd81a70:s0 -> Node0x559abcd7e830[tooltip="0 -> 8\nProbability 50.00%" ];
+	Node0x559abcd81a70:s1 -> Node0x559abcd7e880[tooltip="0 -> 18\nProbability 50.00%" ];
+	Node0x559abcd7e830 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{8:\l|  %9 = load i32, ptr @dim_, align 4\l  %10 = icmp eq i32 %9, 0\l  br i1 %10, label %11, label %17\l|{<s0>T|<s1>F}}"];
+	Node0x559abcd7e830:s0 -> Node0x559abcd7ead0[tooltip="8 -> 11\nProbability 37.50%" ];
+	Node0x559abcd7e830:s1 -> Node0x559abcd7eb20[tooltip="8 -> 17\nProbability 62.50%" ];
+	Node0x559abcd7ead0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470" fontname="Courier",label="{11:\l|  %12 = call ptr @_FortranAioBeginExternalFormattedOutput(ptr\l... @_QQclX1963282ee5ccbeb095513b365c908176, i64 59, ptr null, i32 6, ptr\l... @_QQclX4e2fc5f34b1bf9c589229edb4c5ca67c, i32 48)\l  %13 = load i32, ptr getelementptr (i8, ptr @dim_, i64 8), align 4\l  %14 = call i1 @_FortranAioOutputInteger32(ptr %12, i32 %13)\l  %15 = call i1 @_FortranAioOutputInteger32(ptr %12, i32 28)\l  %16 = call i32 @_FortranAioEndIoStatement(ptr %12)\l  br label %17\l}"];
+	Node0x559abcd7ead0 -> Node0x559abcd7eb20[tooltip="11 -> 17\nProbability 100.00%" ];
+	Node0x559abcd7eb20 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{17:\l|  store i32 0, ptr %2, align 4\l  store i32 16, ptr %1, align 4\l  call void @mpi_abort_(ptr %2, ptr %1, ptr %5)\l  br label %18\l}"];
+	Node0x559abcd7eb20 -> Node0x559abcd7e880[tooltip="17 -> 18\nProbability 100.00%" ];
+	Node0x559abcd7e880 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{18:\l|  %19 = call i32 @nodedim_(ptr getelementptr (i8, ptr @dim_, i64 8))\l  store i32 %19, ptr getelementptr (i8, ptr @dim_, i64 4), align 4\l  store i32 17, ptr getelementptr (i8, ptr @mpistuff_, i64 24), align 4\l  br label %20\l}"];
+	Node0x559abcd7e880 -> Node0x559abcd84c30[tooltip="18 -> 20\nProbability 100.00%" ];
+	Node0x559abcd84c30 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{20:\l|  ret void\l}"];
+}

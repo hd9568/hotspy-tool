@@ -1,0 +1,9 @@
+digraph "Call graph: nodedim.ll" {
+	label="Call graph: nodedim.ll";
+
+	Node0x56423a764770 [shape=record,label="{nodedim_}"];
+	Node0x56423a764770 -> Node0x56423a764820;
+	Node0x56423a764ce0 [shape=record,label="{llvm.stacksave.p0}"];
+	Node0x56423a764d60 [shape=record,label="{llvm.stackrestore.p0}"];
+	Node0x56423a764820 [shape=record,label="{llvm.log.f64}"];
+}

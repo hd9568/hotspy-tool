@@ -1,0 +1,17 @@
+digraph "CFG for '_ZN9LAMMPS_NS5Image8saturateEd' function" {
+	label="CFG for '_ZN9LAMMPS_NS5Image8saturateEd' function";
+
+	Node0x55d953216220 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %retval = alloca double, align 8\l  %this.addr = alloca ptr, align 8\l  %v.addr = alloca double, align 8\l  store ptr %this, ptr %this.addr, align 8\l  store double %v, ptr %v.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %0 = load double, ptr %v.addr, align 8\l  %cmp = fcmp olt double %0, 0.000000e+00\l  br i1 %cmp, label %if.then, label %if.else\l|{<s0>T|<s1>F}}"];
+	Node0x55d953216220:s0 -> Node0x55d9532166a0[tooltip="entry -> if.then\nProbability 50.00%" ];
+	Node0x55d953216220:s1 -> Node0x55d953216710[tooltip="entry -> if.else\nProbability 50.00%" ];
+	Node0x55d9532166a0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.then:\l|  store double 0.000000e+00, ptr %retval, align 8\l  br label %return\l}"];
+	Node0x55d9532166a0 -> Node0x55d9532168d0[tooltip="if.then -> return\nProbability 100.00%" ];
+	Node0x55d953216710 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.else:\l|  %1 = load double, ptr %v.addr, align 8\l  %cmp2 = fcmp ogt double %1, 1.000000e+00\l  br i1 %cmp2, label %if.then3, label %if.else4\l|{<s0>T|<s1>F}}"];
+	Node0x55d953216710:s0 -> Node0x55d953216ae0[tooltip="if.else -> if.then3\nProbability 50.00%" ];
+	Node0x55d953216710:s1 -> Node0x55d953216cd0[tooltip="if.else -> if.else4\nProbability 50.00%" ];
+	Node0x55d953216ae0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470" fontname="Courier",label="{if.then3:\l|  store double 1.000000e+00, ptr %retval, align 8\l  br label %return\l}"];
+	Node0x55d953216ae0 -> Node0x55d9532168d0[tooltip="if.then3 -> return\nProbability 100.00%" ];
+	Node0x55d953216cd0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470" fontname="Courier",label="{if.else4:\l|  %2 = load double, ptr %v.addr, align 8\l  store double %2, ptr %retval, align 8\l  br label %return\l}"];
+	Node0x55d953216cd0 -> Node0x55d9532168d0[tooltip="if.else4 -> return\nProbability 100.00%" ];
+	Node0x55d9532168d0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{return:\l|  %3 = load double, ptr %retval, align 8\l  ret double %3\l}"];
+}

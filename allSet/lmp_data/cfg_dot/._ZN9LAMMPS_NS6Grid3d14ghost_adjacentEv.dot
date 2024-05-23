@@ -1,0 +1,12 @@
+digraph "CFG for '_ZN9LAMMPS_NS6Grid3d14ghost_adjacentEv' function" {
+	label="CFG for '_ZN9LAMMPS_NS6Grid3d14ghost_adjacentEv' function";
+
+	Node0x55fcd60801a0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %retval = alloca i32, align 4\l  %this.addr = alloca ptr, align 8\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %comm = getelementptr inbounds %\"class.LAMMPS_NS::Pointers\", ptr %this1, i32\l... 0, i32 9\l  %0 = load ptr, ptr %comm, align 8\l  %1 = load ptr, ptr %0, align 8\l  %layout = getelementptr inbounds %\"class.LAMMPS_NS::Comm\", ptr %1, i32 0,\l... i32 2\l  %2 = load i32, ptr %layout, align 4\l  %cmp = icmp ne i32 %2, 2\l  br i1 %cmp, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x55fcd60801a0:s0 -> Node0x55fcd60835d0[tooltip="entry -> if.then\nProbability 50.00%" ];
+	Node0x55fcd60801a0:s1 -> Node0x55fcd6083640[tooltip="entry -> if.end\nProbability 50.00%" ];
+	Node0x55fcd60835d0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.then:\l|  %call = call noundef i32 @_ZN9LAMMPS_NS6Grid3d20ghost_adjacent_brickEv(ptr\l... noundef nonnull align 8 dereferenceable(624) %this1)\l  store i32 %call, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x55fcd60835d0 -> Node0x55fcd60839d0[tooltip="if.then -> return\nProbability 100.00%" ];
+	Node0x55fcd6083640 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.end:\l|  %call2 = call noundef i32\l... @_ZN9LAMMPS_NS6Grid3d20ghost_adjacent_tiledEv(ptr noundef nonnull align 8\l... dereferenceable(624) %this1)\l  store i32 %call2, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x55fcd6083640 -> Node0x55fcd60839d0[tooltip="if.end -> return\nProbability 100.00%" ];
+	Node0x55fcd60839d0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{return:\l|  %3 = load i32, ptr %retval, align 4\l  ret i32 %3\l}"];
+}

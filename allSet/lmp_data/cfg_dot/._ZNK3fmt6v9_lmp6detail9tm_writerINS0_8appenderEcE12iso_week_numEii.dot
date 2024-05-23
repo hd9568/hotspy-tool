@@ -1,0 +1,12 @@
+digraph "CFG for '_ZNK3fmt6v9_lmp6detail9tm_writerINS0_8appenderEcE12iso_week_numEii' function" {
+	label="CFG for '_ZNK3fmt6v9_lmp6detail9tm_writerINS0_8appenderEcE12iso_week_numEii' function";
+
+	Node0x5584169df280 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %tm_yday.addr = alloca i32, align 4\l  %tm_wday.addr = alloca i32, align 4\l  store ptr %this, ptr %this.addr, align 8\l  store i32 %tm_yday, ptr %tm_yday.addr, align 4\l  store i32 %tm_wday, ptr %tm_wday.addr, align 4\l  %this1 = load ptr, ptr %this.addr, align 8\l  %0 = load i32, ptr %tm_yday.addr, align 4\l  %add = add nsw i32 %0, 11\l  %1 = load i32, ptr %tm_wday.addr, align 4\l  %cmp = icmp eq i32 %1, 0\l  br i1 %cmp, label %cond.true, label %cond.false\l|{<s0>T|<s1>F}}"];
+	Node0x5584169df280:s0 -> Node0x5584169df2f0[tooltip="entry -> cond.true\nProbability 37.50%" ];
+	Node0x5584169df280:s1 -> Node0x5584169dfc80[tooltip="entry -> cond.false\nProbability 62.50%" ];
+	Node0x5584169df2f0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{cond.true:\l|  br label %cond.end\l}"];
+	Node0x5584169df2f0 -> Node0x5584169dfdb0[tooltip="cond.true -> cond.end\nProbability 100.00%" ];
+	Node0x5584169dfc80 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{cond.false:\l|  %2 = load i32, ptr %tm_wday.addr, align 4\l  br label %cond.end\l}"];
+	Node0x5584169dfc80 -> Node0x5584169dfdb0[tooltip="cond.false -> cond.end\nProbability 100.00%" ];
+	Node0x5584169dfdb0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{cond.end:\l|  %cond = phi i32 [ 7, %cond.true ], [ %2, %cond.false ]\l  %sub = sub nsw i32 %add, %cond\l  %div = sdiv i32 %sub, 7\l  ret i32 %div\l}"];
+}

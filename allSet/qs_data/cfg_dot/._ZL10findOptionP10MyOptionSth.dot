@@ -1,0 +1,19 @@
+digraph "CFG for '_ZL10findOptionP10MyOptionSth' function" {
+	label="CFG for '_ZL10findOptionP10MyOptionSth' function";
+
+	Node0x5592ffb99a90 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d0473d70" fontname="Courier",label="{entry:\l|  %retval = alloca ptr, align 8\l  %o.addr = alloca ptr, align 8\l  %shortArg.addr = alloca i8, align 1\l  store ptr %o, ptr %o.addr, align 8\l  store i8 %shortArg, ptr %shortArg.addr, align 1\l  br label %while.cond\l}"];
+	Node0x5592ffb99a90 -> Node0x5592ffb99c40[tooltip="entry -> while.cond\nProbability 100.00%" ];
+	Node0x5592ffb99c40 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{while.cond:\l|  %0 = load ptr, ptr %o.addr, align 8\l  %tobool = icmp ne ptr %0, null\l  br i1 %tobool, label %while.body, label %while.end\l|{<s0>T|<s1>F}}"];
+	Node0x5592ffb99c40:s0 -> Node0x5592ffb99e60[tooltip="while.cond -> while.body\nProbability 96.88%" ];
+	Node0x5592ffb99c40:s1 -> Node0x5592ffb99ee0[tooltip="while.cond -> while.end\nProbability 3.12%" ];
+	Node0x5592ffb99e60 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{while.body:\l|  %1 = load ptr, ptr %o.addr, align 8\l  %shortArg1 = getelementptr inbounds %struct.MyOptionSt, ptr %1, i32 0, i32 2\l  %arrayidx = getelementptr inbounds [2 x i8], ptr %shortArg1, i64 0, i64 0\l  %2 = load i8, ptr %arrayidx, align 8\l  %conv = zext i8 %2 to i32\l  %3 = load i8, ptr %shortArg.addr, align 1\l  %conv2 = zext i8 %3 to i32\l  %cmp = icmp eq i32 %conv, %conv2\l  br i1 %cmp, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x5592ffb99e60:s0 -> Node0x5592ffb9a6e0[tooltip="while.body -> if.then\nProbability 3.12%" ];
+	Node0x5592ffb99e60:s1 -> Node0x5592ffb9a750[tooltip="while.body -> if.end\nProbability 96.88%" ];
+	Node0x5592ffb9a6e0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{if.then:\l|  %4 = load ptr, ptr %o.addr, align 8\l  store ptr %4, ptr %retval, align 8\l  br label %return\l}"];
+	Node0x5592ffb9a6e0 -> Node0x5592ffb9a990[tooltip="if.then -> return\nProbability 100.00%" ];
+	Node0x5592ffb9a750 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  %5 = load ptr, ptr %o.addr, align 8\l  %next = getelementptr inbounds %struct.MyOptionSt, ptr %5, i32 0, i32 7\l  %6 = load ptr, ptr %next, align 8\l  store ptr %6, ptr %o.addr, align 8\l  br label %while.cond, !llvm.loop !6\l}"];
+	Node0x5592ffb9a750 -> Node0x5592ffb99c40[tooltip="if.end -> while.cond\nProbability 100.00%" ];
+	Node0x5592ffb99ee0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{while.end:\l|  %7 = load ptr, ptr %o.addr, align 8\l  store ptr %7, ptr %retval, align 8\l  br label %return\l}"];
+	Node0x5592ffb99ee0 -> Node0x5592ffb9a990[tooltip="while.end -> return\nProbability 100.00%" ];
+	Node0x5592ffb9a990 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d0473d70" fontname="Courier",label="{return:\l|  %8 = load ptr, ptr %retval, align 8\l  ret ptr %8\l}"];
+}

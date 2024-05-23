@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN3fmt6v9_lmp6detail13convert_floatIfEENSt11conditionalIXoosr3std7is_sameIT_fEE5valueeqsr3std14numeric_limitsIS4_EE6digitsL_ZNSt14numeric_limitsIdE6digitsEEEdS4_E4typeES4_' function" {
+	label="CFG for '_ZN3fmt6v9_lmp6detail13convert_floatIfEENSt11conditionalIXoosr3std7is_sameIT_fEE5valueeqsr3std14numeric_limitsIS4_EE6digitsL_ZNSt14numeric_limitsIdE6digitsEEEdS4_E4typeES4_' function";
+
+	Node0x55fec3659830 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %value.addr = alloca float, align 4\l  store float %value, ptr %value.addr, align 4\l  %0 = load float, ptr %value.addr, align 4\l  %conv = fpext float %0 to double\l  ret double %conv\l}"];
+}

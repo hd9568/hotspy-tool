@@ -1,0 +1,18 @@
+digraph "CFG for '_ZN3fmt6v9_lmp6detail16adjust_precisionERii' function" {
+	label="CFG for '_ZN3fmt6v9_lmp6detail16adjust_precisionERii' function";
+
+	Node0x556bfec22f00 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %precision.addr = alloca ptr, align 8\l  %exp10.addr = alloca i32, align 4\l  %exn.slot = alloca ptr, align 8\l  %ehselector.slot = alloca i32, align 4\l  store ptr %precision, ptr %precision.addr, align 8\l  store i32 %exp10, ptr %exp10.addr, align 4\l  %0 = load i32, ptr %exp10.addr, align 4\l  %cmp = icmp sgt i32 %0, 0\l  br i1 %cmp, label %land.lhs.true, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x556bfec22f00:s0 -> Node0x556bfec233e0[tooltip="entry -> land.lhs.true\nProbability 62.50%" ];
+	Node0x556bfec22f00:s1 -> Node0x556bfec23460[tooltip="entry -> if.end\nProbability 37.50%" ];
+	Node0x556bfec233e0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{land.lhs.true:\l|  %1 = load ptr, ptr %precision.addr, align 8\l  %2 = load i32, ptr %1, align 4\l  %call = call noundef i32 @_ZN3fmt6v9_lmp6detail9max_valueIiEET_v()\l  %3 = load i32, ptr %exp10.addr, align 4\l  %sub = sub nsw i32 %call, %3\l  %cmp1 = icmp sgt i32 %2, %sub\l  br i1 %cmp1, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x556bfec233e0:s0 -> Node0x556bfec23b50[tooltip="land.lhs.true -> if.then\nProbability 0.00%" ];
+	Node0x556bfec233e0:s1 -> Node0x556bfec23460[tooltip="land.lhs.true -> if.end\nProbability 100.00%" ];
+	Node0x556bfec23b50 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f3c7b170" fontname="Courier",label="{if.then:\l|  %exception = call ptr @__cxa_allocate_exception(i64 16) #3\l  invoke void @_ZN3fmt6v9_lmp12format_errorC2EPKc(ptr noundef nonnull align 8\l... dereferenceable(16) %exception, ptr noundef @.str.322)\l          to label %invoke.cont unwind label %lpad\l}"];
+	Node0x556bfec23b50 -> Node0x556bfec23e50[tooltip="if.then -> invoke.cont\nProbability 50.00%" ];
+	Node0x556bfec23b50 -> Node0x556bfec23ed0[tooltip="if.then -> lpad\nProbability 50.00%" ];
+	Node0x556bfec23e50 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f1ccb870" fontname="Courier",label="{invoke.cont:\l|  call void @__cxa_throw(ptr %exception, ptr\l... @_ZTIN3fmt6v9_lmp12format_errorE, ptr @_ZN3fmt6v9_lmp12format_errorD1Ev) #21\l  unreachable\l}"];
+	Node0x556bfec23ed0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f1ccb870" fontname="Courier",label="{lpad:\l|  %4 = landingpad \{ ptr, i32 \}\l          cleanup\l  %5 = extractvalue \{ ptr, i32 \} %4, 0\l  store ptr %5, ptr %exn.slot, align 8\l  %6 = extractvalue \{ ptr, i32 \} %4, 1\l  store i32 %6, ptr %ehselector.slot, align 4\l  call void @__cxa_free_exception(ptr %exception) #3\l  br label %eh.resume\l}"];
+	Node0x556bfec23ed0 -> Node0x556bfec24760[tooltip="lpad -> eh.resume\nProbability 100.00%" ];
+	Node0x556bfec23460 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  %7 = load i32, ptr %exp10.addr, align 4\l  %8 = load ptr, ptr %precision.addr, align 8\l  %9 = load i32, ptr %8, align 4\l  %add = add nsw i32 %9, %7\l  store i32 %add, ptr %8, align 4\l  ret void\l}"];
+	Node0x556bfec24760 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f1ccb870" fontname="Courier",label="{eh.resume:\l|  %exn = load ptr, ptr %exn.slot, align 8\l  %sel = load i32, ptr %ehselector.slot, align 4\l  %lpad.val = insertvalue \{ ptr, i32 \} poison, ptr %exn, 0\l  %lpad.val2 = insertvalue \{ ptr, i32 \} %lpad.val, i32 %sel, 1\l  resume \{ ptr, i32 \} %lpad.val2\l}"];
+}

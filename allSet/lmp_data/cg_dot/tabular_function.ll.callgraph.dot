@@ -1,0 +1,29 @@
+digraph "Call graph: tabular_function.ll" {
+	label="Call graph: tabular_function.ll";
+
+	Node0x555d6d3423a0 [shape=record,label="{_ZN9LAMMPS_NS15TabularFunctionC2Ev}"];
+	Node0x555d6d327d00 [shape=record,label="{_ZN9LAMMPS_NS15TabularFunctionD2Ev}"];
+	Node0x555d6d327d00 -> Node0x555d6d3230a0;
+	Node0x555d6d3230a0 [shape=record,label="{_ZdaPv}"];
+	Node0x555d6d34e860 [shape=record,label="{_ZN9LAMMPS_NS15TabularFunctionD0Ev}"];
+	Node0x555d6d34e860 -> Node0x555d6d34e910;
+	Node0x555d6d34e910 [shape=record,label="{_ZdlPv}"];
+	Node0x555d6d324290 [shape=record,label="{_ZN9LAMMPS_NS15TabularFunction10set_valuesEiddPd}"];
+	Node0x555d6d324290 -> Node0x555d6d325890;
+	Node0x555d6d324290 -> Node0x555d6d326be0;
+	Node0x555d6d324290 -> Node0x555d6d33b060;
+	Node0x555d6d324290 -> Node0x555d6d3284f0;
+	Node0x555d6d325890 [shape=record,label="{_ZN9LAMMPS_NS15TabularFunction10reset_sizeEi}"];
+	Node0x555d6d325890 -> Node0x555d6d3230a0;
+	Node0x555d6d325890 -> Node0x555d6d329bf0;
+	Node0x555d6d325890 -> Node0x555d6d328a00;
+	Node0x555d6d326be0 [shape=record,label="{_ZN9LAMMPS_NS15TabularFunction10set_xrangeEdd}"];
+	Node0x555d6d33b060 [shape=record,label="{llvm.memcpy.p0.p0.i64}"];
+	Node0x555d6d3284f0 [shape=record,label="{_ZN9LAMMPS_NS15TabularFunction10initializeEv}"];
+	Node0x555d6d3284f0 -> Node0x555d6d32ae50;
+	Node0x555d6d3284f0 -> Node0x555d6d32bc30;
+	Node0x555d6d328a00 [shape=record,label="{llvm.umul.with.overflow.i64}"];
+	Node0x555d6d329bf0 [shape=record,label="{_Znam}"];
+	Node0x555d6d32ae50 [shape=record,label="{llvm.fabs.f64}"];
+	Node0x555d6d32bc30 [shape=record,label="{llvm.fmuladd.f64}"];
+}

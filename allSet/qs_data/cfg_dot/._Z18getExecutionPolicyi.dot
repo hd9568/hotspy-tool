@@ -1,0 +1,10 @@
+digraph "CFG for '_Z18getExecutionPolicyi' function" {
+	label="CFG for '_Z18getExecutionPolicyi' function";
+
+	Node0x5617e7d38000 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %useGPU.addr = alloca i32, align 4\l  %execPolicy = alloca i32, align 4\l  store i32 %useGPU, ptr %useGPU.addr, align 4\l  store i32 0, ptr %execPolicy, align 4\l  %0 = load i32, ptr %useGPU.addr, align 4\l  %tobool = icmp ne i32 %0, 0\l  br i1 %tobool, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x5617e7d38000:s0 -> Node0x5617e7d38250[tooltip="entry -> if.then\nProbability 62.50%" ];
+	Node0x5617e7d38000:s1 -> Node0x5617e7d382c0[tooltip="entry -> if.end\nProbability 37.50%" ];
+	Node0x5617e7d38250 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.then:\l|  br label %if.end\l}"];
+	Node0x5617e7d38250 -> Node0x5617e7d382c0[tooltip="if.then -> if.end\nProbability 100.00%" ];
+	Node0x5617e7d382c0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  %1 = load i32, ptr %execPolicy, align 4\l  ret i32 %1\l}"];
+}

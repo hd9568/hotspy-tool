@@ -1,0 +1,9 @@
+digraph "Call graph: exact_rhs.ll" {
+	label="Call graph: exact_rhs.ll";
+
+	Node0x5603ab6b30d0 [shape=record,label="{exact_rhs_}"];
+	Node0x5603ab6b30d0 -> Node0x5603ab6b4db0;
+	Node0x5603ab6b4db0 [shape=record,label="{exact_solution_}"];
+	Node0x5603ab6b4f10 [shape=record,label="{llvm.stacksave.p0}"];
+	Node0x5603ab6b3af0 [shape=record,label="{llvm.stackrestore.p0}"];
+}

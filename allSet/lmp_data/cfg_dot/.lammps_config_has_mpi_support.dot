@@ -1,0 +1,5 @@
+digraph "CFG for 'lammps_config_has_mpi_support' function" {
+	label="CFG for 'lammps_config_has_mpi_support' function";
+
+	Node0x55bdf80fa6d0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  ret i32 8\l}"];
+}

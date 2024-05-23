@@ -1,0 +1,17 @@
+digraph "CFG for 'fast_forward_LCG' function" {
+	label="CFG for 'fast_forward_LCG' function";
+
+	Node0x564d03be7400 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{entry:\l|  %seed.addr = alloca i64, align 8\l  %n.addr = alloca i64, align 8\l  %m = alloca i64, align 8\l  %a = alloca i64, align 8\l  %c = alloca i64, align 8\l  %a_new = alloca i64, align 8\l  %c_new = alloca i64, align 8\l  store i64 %seed, ptr %seed.addr, align 8\l  store i64 %n, ptr %n.addr, align 8\l  store i64 -9223372036854775808, ptr %m, align 8\l  store i64 2806196910506780709, ptr %a, align 8\l  store i64 1, ptr %c, align 8\l  %0 = load i64, ptr %n.addr, align 8\l  %rem = urem i64 %0, -9223372036854775808\l  store i64 %rem, ptr %n.addr, align 8\l  store i64 1, ptr %a_new, align 8\l  store i64 0, ptr %c_new, align 8\l  br label %while.cond\l}"];
+	Node0x564d03be7400 -> Node0x564d03be7e30[tooltip="entry -> while.cond\nProbability 100.00%" ];
+	Node0x564d03be7e30 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{while.cond:\l|  %1 = load i64, ptr %n.addr, align 8\l  %cmp = icmp ugt i64 %1, 0\l  br i1 %cmp, label %while.body, label %while.end\l|{<s0>T|<s1>F}}"];
+	Node0x564d03be7e30:s0 -> Node0x564d03be81f0[tooltip="while.cond -> while.body\nProbability 96.88%" ];
+	Node0x564d03be7e30:s1 -> Node0x564d03be8270[tooltip="while.cond -> while.end\nProbability 3.12%" ];
+	Node0x564d03be81f0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{while.body:\l|  %2 = load i64, ptr %n.addr, align 8\l  %and = and i64 %2, 1\l  %tobool = icmp ne i64 %and, 0\l  br i1 %tobool, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x564d03be81f0:s0 -> Node0x564d03be8580[tooltip="while.body -> if.then\nProbability 50.00%" ];
+	Node0x564d03be81f0:s1 -> Node0x564d03be85f0[tooltip="while.body -> if.end\nProbability 50.00%" ];
+	Node0x564d03be8580 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.then:\l|  %3 = load i64, ptr %a, align 8\l  %4 = load i64, ptr %a_new, align 8\l  %mul = mul i64 %4, %3\l  store i64 %mul, ptr %a_new, align 8\l  %5 = load i64, ptr %c_new, align 8\l  %6 = load i64, ptr %a, align 8\l  %mul1 = mul i64 %5, %6\l  %7 = load i64, ptr %c, align 8\l  %add = add i64 %mul1, %7\l  store i64 %add, ptr %c_new, align 8\l  br label %if.end\l}"];
+	Node0x564d03be8580 -> Node0x564d03be85f0[tooltip="if.then -> if.end\nProbability 100.00%" ];
+	Node0x564d03be85f0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  %8 = load i64, ptr %a, align 8\l  %add2 = add i64 %8, 1\l  %9 = load i64, ptr %c, align 8\l  %mul3 = mul i64 %9, %add2\l  store i64 %mul3, ptr %c, align 8\l  %10 = load i64, ptr %a, align 8\l  %11 = load i64, ptr %a, align 8\l  %mul4 = mul i64 %11, %10\l  store i64 %mul4, ptr %a, align 8\l  %12 = load i64, ptr %n.addr, align 8\l  %shr = lshr i64 %12, 1\l  store i64 %shr, ptr %n.addr, align 8\l  br label %while.cond, !llvm.loop !6\l}"];
+	Node0x564d03be85f0 -> Node0x564d03be7e30[tooltip="if.end -> while.cond\nProbability 100.00%" ];
+	Node0x564d03be8270 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{while.end:\l|  %13 = load i64, ptr %a_new, align 8\l  %14 = load i64, ptr %seed.addr, align 8\l  %mul5 = mul i64 %13, %14\l  %15 = load i64, ptr %c_new, align 8\l  %add6 = add i64 %mul5, %15\l  %rem7 = urem i64 %add6, -9223372036854775808\l  ret i64 %rem7\l}"];
+}

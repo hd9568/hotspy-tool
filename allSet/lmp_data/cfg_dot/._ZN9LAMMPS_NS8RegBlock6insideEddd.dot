@@ -1,0 +1,27 @@
+digraph "CFG for '_ZN9LAMMPS_NS8RegBlock6insideEddd' function" {
+	label="CFG for '_ZN9LAMMPS_NS8RegBlock6insideEddd' function";
+
+	Node0x55e6d4fe9520 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %retval = alloca i32, align 4\l  %this.addr = alloca ptr, align 8\l  %x.addr = alloca double, align 8\l  %y.addr = alloca double, align 8\l  %z.addr = alloca double, align 8\l  store ptr %this, ptr %this.addr, align 8\l  store double %x, ptr %x.addr, align 8\l  store double %y, ptr %y.addr, align 8\l  store double %z, ptr %z.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %0 = load double, ptr %x.addr, align 8\l  %xlo = getelementptr inbounds %\"class.LAMMPS_NS::RegBlock\", ptr %this1, i32\l... 0, i32 1\l  %1 = load double, ptr %xlo, align 8\l  %cmp = fcmp oge double %0, %1\l  br i1 %cmp, label %land.lhs.true, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x55e6d4fe9520:s0 -> Node0x55e6d4fe9e30[tooltip="entry -> land.lhs.true\nProbability 50.00%" ];
+	Node0x55e6d4fe9520:s1 -> Node0x55e6d4fe9e80[tooltip="entry -> if.end\nProbability 50.00%" ];
+	Node0x55e6d4fe9e30 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{land.lhs.true:\l|  %2 = load double, ptr %x.addr, align 8\l  %xhi = getelementptr inbounds %\"class.LAMMPS_NS::RegBlock\", ptr %this1, i32\l... 0, i32 2\l  %3 = load double, ptr %xhi, align 8\l  %cmp2 = fcmp ole double %2, %3\l  br i1 %cmp2, label %land.lhs.true3, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x55e6d4fe9e30:s0 -> Node0x55e6d4fea230[tooltip="land.lhs.true -> land.lhs.true3\nProbability 50.00%" ];
+	Node0x55e6d4fe9e30:s1 -> Node0x55e6d4fe9e80[tooltip="land.lhs.true -> if.end\nProbability 50.00%" ];
+	Node0x55e6d4fea230 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470" fontname="Courier",label="{land.lhs.true3:\l|  %4 = load double, ptr %y.addr, align 8\l  %ylo = getelementptr inbounds %\"class.LAMMPS_NS::RegBlock\", ptr %this1, i32\l... 0, i32 3\l  %5 = load double, ptr %ylo, align 8\l  %cmp4 = fcmp oge double %4, %5\l  br i1 %cmp4, label %land.lhs.true5, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x55e6d4fea230:s0 -> Node0x55e6d4fea5f0[tooltip="land.lhs.true3 -> land.lhs.true5\nProbability 50.00%" ];
+	Node0x55e6d4fea230:s1 -> Node0x55e6d4fe9e80[tooltip="land.lhs.true3 -> if.end\nProbability 50.00%" ];
+	Node0x55e6d4fea5f0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#ca3b3770" fontname="Courier",label="{land.lhs.true5:\l|  %6 = load double, ptr %y.addr, align 8\l  %yhi = getelementptr inbounds %\"class.LAMMPS_NS::RegBlock\", ptr %this1, i32\l... 0, i32 4\l  %7 = load double, ptr %yhi, align 8\l  %cmp6 = fcmp ole double %6, %7\l  br i1 %cmp6, label %land.lhs.true7, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x55e6d4fea5f0:s0 -> Node0x55e6d4fea9b0[tooltip="land.lhs.true5 -> land.lhs.true7\nProbability 50.00%" ];
+	Node0x55e6d4fea5f0:s1 -> Node0x55e6d4fe9e80[tooltip="land.lhs.true5 -> if.end\nProbability 50.00%" ];
+	Node0x55e6d4fea9b0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d0473d70" fontname="Courier",label="{land.lhs.true7:\l|  %8 = load double, ptr %z.addr, align 8\l  %zlo = getelementptr inbounds %\"class.LAMMPS_NS::RegBlock\", ptr %this1, i32\l... 0, i32 5\l  %9 = load double, ptr %zlo, align 8\l  %cmp8 = fcmp oge double %8, %9\l  br i1 %cmp8, label %land.lhs.true9, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x55e6d4fea9b0:s0 -> Node0x55e6d4fe9dc0[tooltip="land.lhs.true7 -> land.lhs.true9\nProbability 50.00%" ];
+	Node0x55e6d4fea9b0:s1 -> Node0x55e6d4fe9e80[tooltip="land.lhs.true7 -> if.end\nProbability 50.00%" ];
+	Node0x55e6d4fe9dc0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{land.lhs.true9:\l|  %10 = load double, ptr %z.addr, align 8\l  %zhi = getelementptr inbounds %\"class.LAMMPS_NS::RegBlock\", ptr %this1, i32\l... 0, i32 6\l  %11 = load double, ptr %zhi, align 8\l  %cmp10 = fcmp ole double %10, %11\l  br i1 %cmp10, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x55e6d4fe9dc0:s0 -> Node0x55e6d4feb2b0[tooltip="land.lhs.true9 -> if.then\nProbability 50.00%" ];
+	Node0x55e6d4fe9dc0:s1 -> Node0x55e6d4fe9e80[tooltip="land.lhs.true9 -> if.end\nProbability 50.00%" ];
+	Node0x55e6d4feb2b0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#dc5d4a70" fontname="Courier",label="{if.then:\l|  store i32 1, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x55e6d4feb2b0 -> Node0x55e6d4feb470[tooltip="if.then -> return\nProbability 100.00%" ];
+	Node0x55e6d4fe9e80 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  store i32 0, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x55e6d4fe9e80 -> Node0x55e6d4feb470[tooltip="if.end -> return\nProbability 100.00%" ];
+	Node0x55e6d4feb470 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{return:\l|  %12 = load i32, ptr %retval, align 4\l  ret i32 %12\l}"];
+}

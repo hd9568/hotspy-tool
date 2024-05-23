@@ -1,0 +1,74 @@
+this is GPU0: Tesla V100-PCIE-32GB
+All functions have been obtained! All graphs are being parsed:
+big is 0 ,0 of which is hot!
+35 is ignored,  1 of which is hot!
+test dataloader's time is 0.016666666666666666 mins
+========== all test data has already been ready! ===========
+| TN=189 FP=100 |
+| FN=3 TP=64 |
+test accuracy: 71.07%
+precision: 39.02%
+recall: 95.52%
+f1 score: 0.554
+amg_data datasize: 144; hot: 0.0278; acc: 0.7153
+lule_data datasize: 212; hot: 0.2972; acc: 0.7075
+MODEL BEGINNING!
+this is GPU0: Tesla V100-PCIE-32GB
+All functions have been obtained! All graphs are being parsed:
+big is 0 ,0 of which is hot!
+35 is ignored,  1 of which is hot!
+test dataloader's time is 0.016666666666666666 mins
+========== all test data has already been ready! ===========
+| TN=184 FP=105 |
+| FN=6 TP=61 |
+test accuracy: 68.82%
+precision: 36.75%
+recall: 91.04%
+f1 score: 0.524
+lule_data datasize: 212; hot: 0.2972; acc: 0.6887
+amg_data datasize: 144; hot: 0.0278; acc: 0.6875
+MODEL BEGINNING!
+this is GPU0: Tesla V100-PCIE-32GB
+All functions have been obtained! All graphs are being parsed:
+big is 0 ,0 of which is hot!
+35 is ignored,  1 of which is hot!
+test dataloader's time is 0.016666666666666666 mins
+========== all test data has already been ready! ===========
+| TN=203 FP=86 |
+| FN=13 TP=54 |
+test accuracy: 72.19%
+precision: 38.57%
+recall: 80.60%
+f1 score: 0.522
+lule_data datasize: 212; hot: 0.2972; acc: 0.7123
+amg_data datasize: 144; hot: 0.0278; acc: 0.7361
+MODEL BEGINNING!
+this is GPU0: Tesla V100-PCIE-32GB
+All functions have been obtained! All graphs are being parsed:
+big is 0 ,0 of which is hot!
+35 is ignored,  1 of which is hot!
+test dataloader's time is 0.016666666666666666 mins
+========== all test data has already been ready! ===========
+| TN=188 FP=101 |
+| FN=5 TP=62 |
+test accuracy: 70.22%
+precision: 38.04%
+recall: 92.54%
+f1 score: 0.539
+amg_data datasize: 144; hot: 0.0278; acc: 0.6806
+lule_data datasize: 212; hot: 0.2972; acc: 0.7170
+MODEL BEGINNING!
+this is GPU0: Tesla V100-PCIE-32GB
+All functions have been obtained! All graphs are being parsed:
+big is 0 ,0 of which is hot!
+35 is ignored,  1 of which is hot!
+test dataloader's time is 0.016666666666666666 mins
+========== all test data has already been ready! ===========
+| TN=184 FP=105 |
+| FN=7 TP=60 |
+test accuracy: 68.54%
+precision: 36.36%
+recall: 89.55%
+f1 score: 0.517
+amg_data datasize: 144; hot: 0.0278; acc: 0.7292
+lule_data datasize: 212; hot: 0.2972; acc: 0.6557

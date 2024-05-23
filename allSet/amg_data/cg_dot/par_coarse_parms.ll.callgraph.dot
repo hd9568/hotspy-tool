@@ -1,0 +1,11 @@
+digraph "Call graph: par_coarse_parms.ll" {
+	label="Call graph: par_coarse_parms.ll";
+
+	Node0x55e73b8679c0 [shape=record,label="{hypre_BoomerAMGCoarseParms}"];
+	Node0x55e73b8679c0 -> Node0x55e73b867a70;
+	Node0x55e73b8679c0 -> Node0x55e73b867f30;
+	Node0x55e73b8679c0 -> Node0x55e73b867fb0;
+	Node0x55e73b867a70 [shape=record,label="{hypre_MPI_Comm_size}"];
+	Node0x55e73b867f30 [shape=record,label="{hypre_CAlloc}"];
+	Node0x55e73b867fb0 [shape=record,label="{hypre_MPI_Scan}"];
+}

@@ -1,0 +1,5 @@
+digraph "CFG for '_ZSt8_DestroyIPSt6vectorIiSaIiEES2_EvT_S4_RSaIT0_E' function" {
+	label="CFG for '_ZSt8_DestroyIPSt6vectorIiSaIiEES2_EvT_S4_RSaIT0_E' function";
+
+	Node0x56307d6f7350 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %__first.addr = alloca ptr, align 8\l  %__last.addr = alloca ptr, align 8\l  %.addr = alloca ptr, align 8\l  store ptr %__first, ptr %__first.addr, align 8\l  store ptr %__last, ptr %__last.addr, align 8\l  store ptr %0, ptr %.addr, align 8\l  %1 = load ptr, ptr %__first.addr, align 8\l  %2 = load ptr, ptr %__last.addr, align 8\l  call void @_ZSt8_DestroyIPSt6vectorIiSaIiEEEvT_S4_(ptr noundef %1, ptr\l... noundef %2)\l  ret void\l}"];
+}

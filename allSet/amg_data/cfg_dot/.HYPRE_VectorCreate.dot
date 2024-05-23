@@ -1,0 +1,5 @@
+digraph "CFG for 'HYPRE_VectorCreate' function" {
+	label="CFG for 'HYPRE_VectorCreate' function";
+
+	Node0x559b772b9630 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %size.addr = alloca i32, align 4\l  store i32 %size, ptr %size.addr, align 4\l  %0 = load i32, ptr %size.addr, align 4\l  %call = call ptr @hypre_SeqVectorCreate(i32 noundef %0)\l  ret ptr %call\l}"];
+}

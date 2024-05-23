@@ -1,0 +1,11 @@
+digraph "CFG for '_ZL13style_creatorIN9LAMMPS_NS3FixENS0_11FixRecenterEEPT_PNS0_6LAMMPSEiPPc' function" {
+	label="CFG for '_ZL13style_creatorIN9LAMMPS_NS3FixENS0_11FixRecenterEEPT_PNS0_6LAMMPSEiPPc' function";
+
+	Node0x561f161a72e0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %lmp.addr = alloca ptr, align 8\l  %narg.addr = alloca i32, align 4\l  %arg.addr = alloca ptr, align 8\l  %exn.slot = alloca ptr, align 8\l  %ehselector.slot = alloca i32, align 4\l  store ptr %lmp, ptr %lmp.addr, align 8\l  store i32 %narg, ptr %narg.addr, align 4\l  store ptr %arg, ptr %arg.addr, align 8\l  %call = call noalias noundef nonnull ptr @_Znwm(i64 noundef 784) #13\l  %0 = load ptr, ptr %lmp.addr, align 8\l  %1 = load i32, ptr %narg.addr, align 4\l  %2 = load ptr, ptr %arg.addr, align 8\l  invoke void @_ZN9LAMMPS_NS11FixRecenterC1EPNS_6LAMMPSEiPPc(ptr noundef\l... nonnull align 8 dereferenceable(784) %call, ptr noundef %0, i32 noundef %1,\l... ptr noundef %2)\l          to label %invoke.cont unwind label %lpad\l}"];
+	Node0x561f161a72e0 -> Node0x561f161a7a80[tooltip="entry -> invoke.cont\nProbability 100.00%" ];
+	Node0x561f161a72e0 -> Node0x561f161a7b00[tooltip="entry -> lpad\nProbability 0.00%" ];
+	Node0x561f161a7a80 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{invoke.cont:\l|  ret ptr %call\l}"];
+	Node0x561f161a7b00 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f4c5ad70" fontname="Courier",label="{lpad:\l|  %3 = landingpad \{ ptr, i32 \}\l          cleanup\l  %4 = extractvalue \{ ptr, i32 \} %3, 0\l  store ptr %4, ptr %exn.slot, align 8\l  %5 = extractvalue \{ ptr, i32 \} %3, 1\l  store i32 %5, ptr %ehselector.slot, align 4\l  call void @_ZdlPv(ptr noundef %call) #14\l  br label %eh.resume\l}"];
+	Node0x561f161a7b00 -> Node0x561f161a8210[tooltip="lpad -> eh.resume\nProbability 100.00%" ];
+	Node0x561f161a8210 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f4c5ad70" fontname="Courier",label="{eh.resume:\l|  %exn = load ptr, ptr %exn.slot, align 8\l  %sel = load i32, ptr %ehselector.slot, align 4\l  %lpad.val = insertvalue \{ ptr, i32 \} poison, ptr %exn, 0\l  %lpad.val1 = insertvalue \{ ptr, i32 \} %lpad.val, i32 %sel, 1\l  resume \{ ptr, i32 \} %lpad.val1\l}"];
+}

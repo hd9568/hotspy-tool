@@ -1,0 +1,19 @@
+digraph "CFG for '_ZN3fmt6v9_lmp6detail18get_classic_localeEv' function" {
+	label="CFG for '_ZN3fmt6v9_lmp6detail18get_classic_localeEv' function";
+
+	Node0x55841691c930 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %exn.slot = alloca ptr, align 8\l  %ehselector.slot = alloca i32, align 4\l  %0 = load atomic i8, ptr\l... @_ZGVZN3fmt6v9_lmp6detail18get_classic_localeEvE6locale acquire, align 8\l  %guard.uninitialized = icmp eq i8 %0, 0\l  br i1 %guard.uninitialized, label %init.check, label %init.end, !prof !6\l|{<s0>T|<s1>F}}"];
+	Node0x55841691c930:s0 -> Node0x55841691cc60[tooltip="entry -> init.check\nProbability 0.00%" ];
+	Node0x55841691c930:s1 -> Node0x55841691ccb0[tooltip="entry -> init.end\nProbability 100.00%" ];
+	Node0x55841691cc60 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f4c5ad70" fontname="Courier",label="{init.check:\l|  %1 = call i32 @__cxa_guard_acquire(ptr\l... @_ZGVZN3fmt6v9_lmp6detail18get_classic_localeEvE6locale) #18\l  %tobool = icmp ne i32 %1, 0\l  br i1 %tobool, label %init, label %init.end\l|{<s0>T|<s1>F}}"];
+	Node0x55841691cc60:s0 -> Node0x55841691d0e0[tooltip="init.check -> init\nProbability 62.50%" ];
+	Node0x55841691cc60:s1 -> Node0x55841691ccb0[tooltip="init.check -> init.end\nProbability 37.50%" ];
+	Node0x55841691d0e0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f3c7b170" fontname="Courier",label="{init:\l|  %call = invoke noundef nonnull align 8 dereferenceable(8) ptr\l... @_ZNSt6locale7classicEv()\l          to label %invoke.cont unwind label %lpad\l}"];
+	Node0x55841691d0e0 -> Node0x55841691d200[tooltip="init -> invoke.cont\nProbability 100.00%" ];
+	Node0x55841691d0e0 -> Node0x55841691d280[tooltip="init -> lpad\nProbability 0.00%" ];
+	Node0x55841691d200 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f3c7b170" fontname="Courier",label="{invoke.cont:\l|  store ptr %call, ptr\l... @_ZZN3fmt6v9_lmp6detail18get_classic_localeEvE6locale, align 8\l  call void @__cxa_guard_release(ptr\l... @_ZGVZN3fmt6v9_lmp6detail18get_classic_localeEvE6locale) #18\l  br label %init.end\l}"];
+	Node0x55841691d200 -> Node0x55841691ccb0[tooltip="invoke.cont -> init.end\nProbability 100.00%" ];
+	Node0x55841691ccb0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{init.end:\l|  %2 = load ptr, ptr @_ZZN3fmt6v9_lmp6detail18get_classic_localeEvE6locale,\l... align 8\l  ret ptr %2\l}"];
+	Node0x55841691d280 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#8caffe70" fontname="Courier",label="{lpad:\l|  %3 = landingpad \{ ptr, i32 \}\l          cleanup\l  %4 = extractvalue \{ ptr, i32 \} %3, 0\l  store ptr %4, ptr %exn.slot, align 8\l  %5 = extractvalue \{ ptr, i32 \} %3, 1\l  store i32 %5, ptr %ehselector.slot, align 4\l  call void @__cxa_guard_abort(ptr\l... @_ZGVZN3fmt6v9_lmp6detail18get_classic_localeEvE6locale) #18\l  br label %eh.resume\l}"];
+	Node0x55841691d280 -> Node0x55841691dcc0[tooltip="lpad -> eh.resume\nProbability 100.00%" ];
+	Node0x55841691dcc0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#8caffe70" fontname="Courier",label="{eh.resume:\l|  %exn = load ptr, ptr %exn.slot, align 8\l  %sel = load i32, ptr %ehselector.slot, align 4\l  %lpad.val = insertvalue \{ ptr, i32 \} poison, ptr %exn, 0\l  %lpad.val1 = insertvalue \{ ptr, i32 \} %lpad.val, i32 %sel, 1\l  resume \{ ptr, i32 \} %lpad.val1\l}"];
+}

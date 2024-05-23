@@ -1,0 +1,7 @@
+digraph "Call graph: set_constants.ll" {
+	label="Call graph: set_constants.ll";
+
+	Node0x558b14755980 [shape=record,label="{set_constants_}"];
+	Node0x558b14755a30 [shape=record,label="{llvm.stacksave.p0}"];
+	Node0x558b14755ab0 [shape=record,label="{llvm.stackrestore.p0}"];
+}

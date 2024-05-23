@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN9LAMMPS_NS4Pair10init_styleEv' function" {
+	label="CFG for '_ZN9LAMMPS_NS4Pair10init_styleEv' function";
+
+	Node0x55f57320c0b0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %neighbor = getelementptr inbounds %\"class.LAMMPS_NS::Pointers\", ptr %this1,\l... i32 0, i32 8\l  %0 = load ptr, ptr %neighbor, align 8\l  %1 = load ptr, ptr %0, align 8\l  %call = call noundef ptr\l... @_ZN9LAMMPS_NS8Neighbor11add_requestEPNS_4PairEi(ptr noundef nonnull align 8\l... dereferenceable(1252) %1, ptr noundef %this1, i32 noundef 0)\l  ret void\l}"];
+}

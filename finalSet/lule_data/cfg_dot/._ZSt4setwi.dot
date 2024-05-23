@@ -1,0 +1,5 @@
+digraph "CFG for '_ZSt4setwi' function" {
+	label="CFG for '_ZSt4setwi' function";
+
+	Node0x55ca701c89b0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %retval = alloca %\"struct.std::_Setw\", align 4\l  %__n.addr = alloca i32, align 4\l  store i32 %__n, ptr %__n.addr, align 4\l  %_M_n = getelementptr inbounds %\"struct.std::_Setw\", ptr %retval, i32 0, i32\l... 0\l  %0 = load i32, ptr %__n.addr, align 4\l  store i32 %0, ptr %_M_n, align 4\l  %coerce.dive = getelementptr inbounds %\"struct.std::_Setw\", ptr %retval, i32\l... 0, i32 0\l  %1 = load i32, ptr %coerce.dive, align 4\l  ret i32 %1\l}"];
+}

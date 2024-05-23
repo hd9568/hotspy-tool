@@ -1,0 +1,5 @@
+digraph "CFG for '_ZSt3absd' function" {
+	label="CFG for '_ZSt3absd' function";
+
+	Node0x55dfe4b72650 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %__x.addr = alloca double, align 8\l  store double %__x, ptr %__x.addr, align 8\l  %0 = load double, ptr %__x.addr, align 8\l  %1 = call double @llvm.fabs.f64(double %0)\l  ret double %1\l}"];
+}

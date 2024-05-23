@@ -1,0 +1,26 @@
+digraph "Call graph: hypre_hopscotch_hash.ll" {
+	label="Call graph: hypre_hopscotch_hash.ll";
+
+	Node0x55bb17bf8890 [shape=record,label="{hypre_UnorderedIntSetCreate}"];
+	Node0x55bb17bf8890 -> Node0x55bb17be8b00;
+	Node0x55bb17bf8890 -> Node0x55bb17bfdf10;
+	Node0x55bb17be8b00 [shape=record,label="{NearestPowerOfTwo}"];
+	Node0x55bb17bfdf10 [shape=record,label="{hypre_MAlloc}"];
+	Node0x55bb17c033e0 [shape=record,label="{hypre_UnorderedIntMapCreate}"];
+	Node0x55bb17c033e0 -> Node0x55bb17be8b00;
+	Node0x55bb17c033e0 -> Node0x55bb17c03510;
+	Node0x55bb17c033e0 -> Node0x55bb17bfdf10;
+	Node0x55bb17c03510 [shape=record,label="{InitBucket}"];
+	Node0x55bb17c08030 [shape=record,label="{hypre_UnorderedIntSetDestroy}"];
+	Node0x55bb17c08030 -> Node0x55bb17c080b0;
+	Node0x55bb17c080b0 [shape=record,label="{hypre_Free}"];
+	Node0x55bb17c08330 [shape=record,label="{hypre_UnorderedIntMapDestroy}"];
+	Node0x55bb17c08330 -> Node0x55bb17c080b0;
+	Node0x55bb17c083b0 [shape=record,label="{hypre_UnorderedIntSetCopyToArray}"];
+	Node0x55bb17c083b0 -> Node0x55bb17bfdf10;
+	Node0x55bb17c083b0 -> Node0x55bb17c08460;
+	Node0x55bb17c083b0 -> Node0x55bb17c084e0;
+	Node0x55bb17c083b0 -> Node0x55bb17c080b0;
+	Node0x55bb17c08460 [shape=record,label="{hypre_GetSimpleThreadPartition}"];
+	Node0x55bb17c084e0 [shape=record,label="{hypre_prefix_sum}"];
+}

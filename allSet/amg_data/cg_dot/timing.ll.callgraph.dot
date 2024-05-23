@@ -1,0 +1,32 @@
+digraph "Call graph: timing.ll" {
+	label="Call graph: timing.ll";
+
+	Node0x55858deac2d0 [shape=record,label="{hypre_InitializeTiming}"];
+	Node0x55858deac2d0 -> Node0x55858deef090;
+	Node0x55858deac2d0 -> Node0x55858def1f50;
+	Node0x55858deac2d0 -> Node0x55858def79b0;
+	Node0x55858deac2d0 -> Node0x55858defd1a0;
+	Node0x55858def79b0 [shape=record,label="{strncpy}"];
+	Node0x55858deef090 [shape=record,label="{hypre_CAlloc}"];
+	Node0x55858def1f50 [shape=record,label="{strcmp}"];
+	Node0x55858defd1a0 [shape=record,label="{hypre_Free}"];
+	Node0x55858defddc0 [shape=record,label="{hypre_FinalizeTiming}"];
+	Node0x55858defddc0 -> Node0x55858defd1a0;
+	Node0x55858defe3f0 [shape=record,label="{hypre_IncFLOPCount}"];
+	Node0x55858defe840 [shape=record,label="{hypre_BeginTiming}"];
+	Node0x55858defe840 -> Node0x55858df020c0;
+	Node0x55858defe840 -> Node0x55858df03ce0;
+	Node0x55858df020c0 [shape=record,label="{time_getWallclockSeconds}"];
+	Node0x55858df03ce0 [shape=record,label="{time_getCPUSeconds}"];
+	Node0x55858df05a90 [shape=record,label="{hypre_EndTiming}"];
+	Node0x55858df05a90 -> Node0x55858df020c0;
+	Node0x55858df05a90 -> Node0x55858df03ce0;
+	Node0x55858df070f0 [shape=record,label="{hypre_ClearTiming}"];
+	Node0x55858df09ba0 [shape=record,label="{hypre_PrintTiming}"];
+	Node0x55858df09ba0 -> Node0x55858df0bf20;
+	Node0x55858df09ba0 -> Node0x55858df0d1b0;
+	Node0x55858df09ba0 -> Node0x55858df0eea0;
+	Node0x55858df0bf20 [shape=record,label="{hypre_MPI_Comm_rank}"];
+	Node0x55858df0d1b0 [shape=record,label="{hypre_printf}"];
+	Node0x55858df0eea0 [shape=record,label="{hypre_MPI_Allreduce}"];
+}

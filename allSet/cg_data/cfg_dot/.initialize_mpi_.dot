@@ -1,0 +1,18 @@
+digraph "CFG for 'initialize_mpi_' function" {
+	label="CFG for 'initialize_mpi_' function";
+
+	Node0x558b23f68700 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{0:\l|  %1 = alloca i32, i64 1, align 4\l  %2 = alloca i32, i64 1, align 4\l  %3 = alloca i32, i64 1, align 4\l  %4 = alloca i32, i64 1, align 4\l  %5 = alloca i32, i64 1, align 4\l  %6 = alloca i32, i64 1, align 4\l  %7 = alloca i32, i64 1, align 4\l  %8 = alloca i32, i64 1, align 4\l  call void @mpi_init_(ptr %8)\l  store i32 0, ptr %6, align 4\l  call void @mpi_comm_rank_(ptr %6, ptr @mpistuff_, ptr %8)\l  store i32 0, ptr %5, align 4\l  call void @mpi_comm_size_(ptr %5, ptr getelementptr (i8, ptr @mpistuff_, i64\l... 4), ptr %8)\l  store i32 0, ptr getelementptr (i8, ptr @mpistuff_, i64 8), align 4\l  %9 = load i32, ptr @mpistuff_, align 4\l  %10 = load i32, ptr getelementptr (i8, ptr @mpistuff_, i64 8), align 4\l  %11 = icmp eq i32 %9, %10\l  br i1 %11, label %12, label %25\l|{<s0>T|<s1>F}}"];
+	Node0x558b23f68700:s0 -> Node0x558b23f69800[tooltip="0 -> 12\nProbability 50.00%" ];
+	Node0x558b23f68700:s1 -> Node0x558b23f69850[tooltip="0 -> 25\nProbability 50.00%" ];
+	Node0x558b23f69800 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{12:\l|  %13 = call ptr @_FortranAioBeginOpenUnit(i32 2, ptr\l... @_QQclXae098a2d872e8c33ade0ee4ed82a74de, i32 681)\l  %14 = call \{\} @_FortranAioEnableHandlers(ptr %13, i1 true, i1 false, i1\l... false, i1 false, i1 false)\l  %15 = call i1 @_FortranAioSetFile(ptr %13, ptr @_QQclX74696D65722E666C6167,\l... i64 10)\l  br i1 %15, label %16, label %18\l|{<s0>T|<s1>F}}"];
+	Node0x558b23f69800:s0 -> Node0x558b23f6a0d0[tooltip="12 -> 16\nProbability 50.00%" ];
+	Node0x558b23f69800:s1 -> Node0x558b23f6a120[tooltip="12 -> 18\nProbability 50.00%" ];
+	Node0x558b23f6a0d0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470" fontname="Courier",label="{16:\l|  %17 = call i1 @_FortranAioSetStatus(ptr %13, ptr @_QQclX6F6C64, i64 3)\l  br label %18\l}"];
+	Node0x558b23f6a0d0 -> Node0x558b23f6a120[tooltip="16 -> 18\nProbability 100.00%" ];
+	Node0x558b23f6a120 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{18:\l|  %19 = call i32 @_FortranAioEndIoStatement(ptr %13)\l  store i32 %19, ptr %7, align 4\l  store i32 0, ptr @timers_, align 4\l  %20 = load i32, ptr %7, align 4\l  %21 = icmp eq i32 %20, 0\l  br i1 %21, label %22, label %25\l|{<s0>T|<s1>F}}"];
+	Node0x558b23f6a120:s0 -> Node0x558b23f6a800[tooltip="18 -> 22\nProbability 37.50%" ];
+	Node0x558b23f6a120:s1 -> Node0x558b23f69850[tooltip="18 -> 25\nProbability 62.50%" ];
+	Node0x558b23f6a800 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470" fontname="Courier",label="{22:\l|  store i32 1, ptr @timers_, align 4\l  %23 = call ptr @_FortranAioBeginClose(i32 2, ptr\l... @_QQclXae098a2d872e8c33ade0ee4ed82a74de, i32 685)\l  %24 = call i32 @_FortranAioEndIoStatement(ptr %23)\l  br label %25\l}"];
+	Node0x558b23f6a800 -> Node0x558b23f69850[tooltip="22 -> 25\nProbability 100.00%" ];
+	Node0x558b23f69850 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{25:\l|  store i32 1, ptr %4, align 4\l  store i32 6, ptr %3, align 4\l  store i32 0, ptr %2, align 4\l  store i32 0, ptr %1, align 4\l  call void @mpi_bcast_(ptr @timers_, ptr %4, ptr %3, ptr %2, ptr %1, ptr %8)\l  ret void\l}"];
+}

@@ -1,0 +1,5 @@
+digraph "CFG for '_ZNKSt8__detail10_AllocNodeISaINS_10_Hash_nodeINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEELb1EEEEEclIRKS7_EEPS8_OT_' function" {
+	label="CFG for '_ZNKSt8__detail10_AllocNodeISaINS_10_Hash_nodeINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEELb1EEEEEclIRKS7_EEPS8_OT_' function";
+
+	Node0x55c7e09d13d0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %__arg.addr = alloca ptr, align 8\l  store ptr %this, ptr %this.addr, align 8\l  store ptr %__arg, ptr %__arg.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %_M_h = getelementptr inbounds %\"struct.std::__detail::_AllocNode\", ptr\l... %this1, i32 0, i32 0\l  %0 = load ptr, ptr %_M_h, align 8\l  %1 = load ptr, ptr %__arg.addr, align 8\l  %call = call noundef ptr\l... @_ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeINSt7__cxx1112basic_string\l...IcSt11char_traitsIcESaIcEEELb1EEEEE16_M_allocate_nodeIJRKS7_EEEPS8_DpOT_(ptr\l... noundef nonnull align 1 dereferenceable(1) %0, ptr noundef nonnull align 8\l... dereferenceable(32) %1)\l  ret ptr %call\l}"];
+}

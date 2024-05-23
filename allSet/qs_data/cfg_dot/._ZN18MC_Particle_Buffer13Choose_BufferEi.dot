@@ -1,0 +1,17 @@
+digraph "CFG for '_ZN18MC_Particle_Buffer13Choose_BufferEi' function" {
+	label="CFG for '_ZN18MC_Particle_Buffer13Choose_BufferEi' function";
+
+	Node0x558b6943a490 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %processor.addr = alloca i32, align 4\l  %buffer = alloca i32, align 4\l  store ptr %this, ptr %this.addr, align 8\l  store i32 %processor, ptr %processor.addr, align 4\l  %this1 = load ptr, ptr %this.addr, align 8\l  %0 = load i32, ptr %processor.addr, align 4\l  %call = call noundef i32\l... @_ZN18MC_Particle_Buffer26Get_Processor_Buffer_IndexEi(ptr noundef nonnull\l... align 8 dereferenceable(132) %this1, i32 noundef %0)\l  store i32 %call, ptr %buffer, align 4\l  %1 = load i32, ptr %buffer, align 4\l  %cmp = icmp slt i32 %1, 0\l  br i1 %cmp, label %if.then, label %lor.lhs.false\l|{<s0>T|<s1>F}}"];
+	Node0x558b6943a490:s0 -> Node0x558b6947e870[tooltip="entry -> if.then\nProbability 37.50%" ];
+	Node0x558b6943a490:s1 -> Node0x558b6947e8e0[tooltip="entry -> lor.lhs.false\nProbability 62.50%" ];
+	Node0x558b6947e8e0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{lor.lhs.false:\l|  %2 = load i32, ptr %buffer, align 4\l  %num_buffers = getelementptr inbounds %class.MC_Particle_Buffer, ptr %this1,\l... i32 0, i32 5\l  %3 = load i32, ptr %num_buffers, align 4\l  %cmp2 = icmp sge i32 %2, %3\l  br i1 %cmp2, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x558b6947e8e0:s0 -> Node0x558b6947e870[tooltip="lor.lhs.false -> if.then\nProbability 50.00%" ];
+	Node0x558b6947e8e0:s1 -> Node0x558b6947ee50[tooltip="lor.lhs.false -> if.end\nProbability 50.00%" ];
+	Node0x558b6947e870 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.then:\l|  br label %do.body\l}"];
+	Node0x558b6947e870 -> Node0x558b6947ef70[tooltip="if.then -> do.body\nProbability 100.00%" ];
+	Node0x558b6947ef70 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{do.body:\l|  %call3 = call i32 (ptr, ...) @printf(ptr noundef @.str, ptr noundef\l... @.str.3, i32 noundef 387)\l  br label %do.end\l}"];
+	Node0x558b6947ef70 -> Node0x558b6947f0f0[tooltip="do.body -> do.end\nProbability 100.00%" ];
+	Node0x558b6947f0f0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{do.end:\l|  br label %if.end\l}"];
+	Node0x558b6947f0f0 -> Node0x558b6947ee50[tooltip="do.end -> if.end\nProbability 100.00%" ];
+	Node0x558b6947ee50 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  %4 = load i32, ptr %buffer, align 4\l  ret i32 %4\l}"];
+}

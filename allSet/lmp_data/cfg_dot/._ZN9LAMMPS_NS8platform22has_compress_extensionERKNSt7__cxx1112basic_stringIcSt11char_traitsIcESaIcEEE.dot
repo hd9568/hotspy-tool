@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN9LAMMPS_NS8platform22has_compress_extensionERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE' function" {
+	label="CFG for '_ZN9LAMMPS_NS8platform22has_compress_extensionERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE' function";
+
+	Node0x5651cd828170 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %file.addr = alloca ptr, align 8\l  store ptr %file, ptr %file.addr, align 8\l  %0 = load ptr, ptr %file.addr, align 8\l  %call = call noundef nonnull align 8 dereferenceable(132) ptr\l... @_ZL18find_compress_typeRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE\l...(ptr noundef nonnull align 8 dereferenceable(32) %0)\l  %style = getelementptr inbounds %struct.compress_info, ptr %call, i32 0, i32\l... 4\l  %1 = load i32, ptr %style, align 8\l  %cmp = icmp ne i32 %1, 0\l  ret i1 %cmp\l}"];
+}

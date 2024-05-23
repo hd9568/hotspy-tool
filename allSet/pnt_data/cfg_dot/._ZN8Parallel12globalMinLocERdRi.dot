@@ -1,0 +1,10 @@
+digraph "CFG for '_ZN8Parallel12globalMinLocERdRi' function" {
+	label="CFG for '_ZN8Parallel12globalMinLocERdRi' function";
+
+	Node0x55fc3be234e0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %x.addr = alloca ptr, align 8\l  %xpe.addr = alloca ptr, align 8\l  store ptr %x, ptr %x.addr, align 8\l  store ptr %xpe, ptr %xpe.addr, align 8\l  %0 = load i32, ptr @_ZN8Parallel5numpeE, align 4\l  %cmp = icmp eq i32 %0, 1\l  br i1 %cmp, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x55fc3be234e0:s0 -> Node0x55fc3be23d70[tooltip="entry -> if.then\nProbability 50.00%" ];
+	Node0x55fc3be234e0:s1 -> Node0x55fc3be23de0[tooltip="entry -> if.end\nProbability 50.00%" ];
+	Node0x55fc3be23d70 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.then:\l|  %1 = load ptr, ptr %xpe.addr, align 8\l  store i32 0, ptr %1, align 4\l  br label %if.end\l}"];
+	Node0x55fc3be23d70 -> Node0x55fc3be23de0[tooltip="if.then -> if.end\nProbability 100.00%" ];
+	Node0x55fc3be23de0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  ret void\l}"];
+}

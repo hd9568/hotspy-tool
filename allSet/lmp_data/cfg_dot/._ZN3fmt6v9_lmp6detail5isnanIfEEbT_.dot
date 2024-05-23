@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN3fmt6v9_lmp6detail5isnanIfEEbT_' function" {
+	label="CFG for '_ZN3fmt6v9_lmp6detail5isnanIfEEbT_' function";
+
+	Node0x55fec3651560 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %value.addr = alloca float, align 4\l  store float %value, ptr %value.addr, align 4\l  %0 = load float, ptr %value.addr, align 4\l  %1 = load float, ptr %value.addr, align 4\l  %cmp = fcmp oge float %0, %1\l  %lnot = xor i1 %cmp, true\l  ret i1 %lnot\l}"];
+}

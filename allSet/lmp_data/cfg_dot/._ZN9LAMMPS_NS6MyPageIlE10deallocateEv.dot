@@ -1,0 +1,14 @@
+digraph "CFG for '_ZN9LAMMPS_NS6MyPageIlE10deallocateEv' function" {
+	label="CFG for '_ZN9LAMMPS_NS6MyPageIlE10deallocateEv' function";
+
+	Node0x556aef9aaed0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %i = alloca i32, align 4\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  call void @_ZN9LAMMPS_NS6MyPageIlE5resetEv(ptr noundef nonnull align 8\l... dereferenceable(60) %this1)\l  store i32 0, ptr %i, align 4\l  br label %for.cond\l}"];
+	Node0x556aef9aaed0 -> Node0x556aef9ab370[tooltip="entry -> for.cond\nProbability 100.00%" ];
+	Node0x556aef9ab370 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.cond:\l|  %0 = load i32, ptr %i, align 4\l  %npage = getelementptr inbounds %\"class.LAMMPS_NS::MyPage.0\", ptr %this1,\l... i32 0, i32 5\l  %1 = load i32, ptr %npage, align 8\l  %cmp = icmp slt i32 %0, %1\l  br i1 %cmp, label %for.body, label %for.end\l|{<s0>T|<s1>F}}"];
+	Node0x556aef9ab370:s0 -> Node0x556aef9ab6a0[tooltip="for.cond -> for.body\nProbability 96.88%" ];
+	Node0x556aef9ab370:s1 -> Node0x556aef9ab720[tooltip="for.cond -> for.end\nProbability 3.12%" ];
+	Node0x556aef9ab6a0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.body:\l|  %pages = getelementptr inbounds %\"class.LAMMPS_NS::MyPage.0\", ptr %this1,\l... i32 0, i32 3\l  %2 = load ptr, ptr %pages, align 8\l  %3 = load i32, ptr %i, align 4\l  %idxprom = sext i32 %3 to i64\l  %arrayidx = getelementptr inbounds ptr, ptr %2, i64 %idxprom\l  %4 = load ptr, ptr %arrayidx, align 8\l  call void @free(ptr noundef %4) #7\l  br label %for.inc\l}"];
+	Node0x556aef9ab6a0 -> Node0x556aef9abed0[tooltip="for.body -> for.inc\nProbability 100.00%" ];
+	Node0x556aef9abed0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.inc:\l|  %5 = load i32, ptr %i, align 4\l  %inc = add nsw i32 %5, 1\l  store i32 %inc, ptr %i, align 4\l  br label %for.cond, !llvm.loop !6\l}"];
+	Node0x556aef9abed0 -> Node0x556aef9ab370[tooltip="for.inc -> for.cond\nProbability 100.00%" ];
+	Node0x556aef9ab720 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{for.end:\l|  %pages2 = getelementptr inbounds %\"class.LAMMPS_NS::MyPage.0\", ptr %this1,\l... i32 0, i32 3\l  %6 = load ptr, ptr %pages2, align 8\l  call void @free(ptr noundef %6) #7\l  %pages3 = getelementptr inbounds %\"class.LAMMPS_NS::MyPage.0\", ptr %this1,\l... i32 0, i32 3\l  store ptr null, ptr %pages3, align 8\l  %npage4 = getelementptr inbounds %\"class.LAMMPS_NS::MyPage.0\", ptr %this1,\l... i32 0, i32 5\l  store i32 0, ptr %npage4, align 8\l  ret void\l}"];
+}

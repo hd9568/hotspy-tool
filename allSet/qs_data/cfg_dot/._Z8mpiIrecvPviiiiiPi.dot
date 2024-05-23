@@ -1,0 +1,9 @@
+digraph "CFG for '_Z8mpiIrecvPviiiiiPi' function" {
+	label="CFG for '_Z8mpiIrecvPviiiiiPi' function";
+
+	Node0x5606e004d970 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %buf.addr = alloca ptr, align 8\l  %count.addr = alloca i32, align 4\l  %datatype.addr = alloca i32, align 4\l  %source.addr = alloca i32, align 4\l  %tag.addr = alloca i32, align 4\l  %comm.addr = alloca i32, align 4\l  %request.addr = alloca ptr, align 8\l  store ptr %buf, ptr %buf.addr, align 8\l  store i32 %count, ptr %count.addr, align 4\l  store i32 %datatype, ptr %datatype.addr, align 4\l  store i32 %source, ptr %source.addr, align 4\l  store i32 %tag, ptr %tag.addr, align 4\l  store i32 %comm, ptr %comm.addr, align 4\l  store ptr %request, ptr %request.addr, align 8\l  %call = call i32 (ptr, ...) @printf(ptr noundef @.str.2)\l  br label %do.body\l}"];
+	Node0x5606e004d970 -> Node0x5606e003c2e0[tooltip="entry -> do.body\nProbability 100.00%" ];
+	Node0x5606e003c2e0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{do.body:\l|  %call1 = call i32 (ptr, ...) @printf(ptr noundef @.str, ptr noundef\l... @.str.3, i32 noundef 108)\l  br label %do.end\l}"];
+	Node0x5606e003c2e0 -> Node0x5606e003c460[tooltip="do.body -> do.end\nProbability 100.00%" ];
+	Node0x5606e003c460 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{do.end:\l|  ret void\l}"];
+}

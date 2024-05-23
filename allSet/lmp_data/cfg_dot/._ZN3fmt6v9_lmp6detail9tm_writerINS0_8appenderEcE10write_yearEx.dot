@@ -1,0 +1,15 @@
+digraph "CFG for '_ZN3fmt6v9_lmp6detail9tm_writerINS0_8appenderEcE10write_yearEx' function" {
+	label="CFG for '_ZN3fmt6v9_lmp6detail9tm_writerINS0_8appenderEcE10write_yearEx' function";
+
+	Node0x558416988740 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %year.addr = alloca i64, align 8\l  store ptr %this, ptr %this.addr, align 8\l  store i64 %year, ptr %year.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %0 = load i64, ptr %year.addr, align 8\l  %cmp = icmp sge i64 %0, 0\l  br i1 %cmp, label %land.lhs.true, label %if.else\l|{<s0>T|<s1>F}}"];
+	Node0x558416988740:s0 -> Node0x558416988790[tooltip="entry -> land.lhs.true\nProbability 50.00%" ];
+	Node0x558416988740:s1 -> Node0x558416988de0[tooltip="entry -> if.else\nProbability 50.00%" ];
+	Node0x558416988790 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{land.lhs.true:\l|  %1 = load i64, ptr %year.addr, align 8\l  %cmp2 = icmp slt i64 %1, 10000\l  br i1 %cmp2, label %if.then, label %if.else\l|{<s0>T|<s1>F}}"];
+	Node0x558416988790:s0 -> Node0x558416989030[tooltip="land.lhs.true -> if.then\nProbability 50.00%" ];
+	Node0x558416988790:s1 -> Node0x558416988de0[tooltip="land.lhs.true -> if.else\nProbability 50.00%" ];
+	Node0x558416989030 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470" fontname="Courier",label="{if.then:\l|  %2 = load i64, ptr %year.addr, align 8\l  %div = sdiv i64 %2, 100\l  %conv = trunc i64 %div to i32\l  call void @_ZN3fmt6v9_lmp6detail9tm_writerINS0_8appenderEcE6write2Ei(ptr\l... noundef nonnull align 8 dereferenceable(32) %this1, i32 noundef %conv)\l  %3 = load i64, ptr %year.addr, align 8\l  %rem = srem i64 %3, 100\l  %conv3 = trunc i64 %rem to i32\l  call void @_ZN3fmt6v9_lmp6detail9tm_writerINS0_8appenderEcE6write2Ei(ptr\l... noundef nonnull align 8 dereferenceable(32) %this1, i32 noundef %conv3)\l  br label %if.end\l}"];
+	Node0x558416989030 -> Node0x5584169894b0[tooltip="if.then -> if.end\nProbability 100.00%" ];
+	Node0x558416988de0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.else:\l|  %4 = load i64, ptr %year.addr, align 8\l  call void\l... @_ZN3fmt6v9_lmp6detail9tm_writerINS0_8appenderEcE19write_year_extendedEx(ptr\l... noundef nonnull align 8 dereferenceable(32) %this1, i64 noundef %4)\l  br label %if.end\l}"];
+	Node0x558416988de0 -> Node0x5584169894b0[tooltip="if.else -> if.end\nProbability 100.00%" ];
+	Node0x5584169894b0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  ret void\l}"];
+}

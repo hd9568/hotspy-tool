@@ -1,0 +1,5 @@
+digraph "CFG for 'hypre_MPI_Init' function" {
+	label="CFG for 'hypre_MPI_Init' function";
+
+	Node0x5555d661cc10 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %argc.addr = alloca ptr, align 8\l  %argv.addr = alloca ptr, align 8\l  store ptr %argc, ptr %argc.addr, align 8\l  store ptr %argv, ptr %argv.addr, align 8\l  %0 = load ptr, ptr %argc.addr, align 8\l  %1 = load ptr, ptr %argv.addr, align 8\l  %call = call i32 @MPI_Init(ptr noundef %0, ptr noundef %1)\l  ret i32 %call\l}"];
+}

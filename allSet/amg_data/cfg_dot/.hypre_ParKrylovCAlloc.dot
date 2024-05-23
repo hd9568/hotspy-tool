@@ -1,0 +1,5 @@
+digraph "CFG for 'hypre_ParKrylovCAlloc' function" {
+	label="CFG for 'hypre_ParKrylovCAlloc' function";
+
+	Node0x557950105cf0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %count.addr = alloca i32, align 4\l  %elt_size.addr = alloca i32, align 4\l  store i32 %count, ptr %count.addr, align 4\l  store i32 %elt_size, ptr %elt_size.addr, align 4\l  %0 = load i32, ptr %count.addr, align 4\l  %conv = sext i32 %0 to i64\l  %1 = load i32, ptr %elt_size.addr, align 4\l  %conv1 = sext i32 %1 to i64\l  %call = call ptr @hypre_CAlloc(i64 noundef %conv, i64 noundef %conv1)\l  ret ptr %call\l}"];
+}

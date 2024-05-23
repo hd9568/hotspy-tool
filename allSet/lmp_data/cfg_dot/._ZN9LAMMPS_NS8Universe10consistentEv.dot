@@ -1,0 +1,21 @@
+digraph "CFG for '_ZN9LAMMPS_NS8Universe10consistentEv' function" {
+	label="CFG for '_ZN9LAMMPS_NS8Universe10consistentEv' function";
+
+	Node0x558ee7148900 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{entry:\l|  %retval = alloca i32, align 4\l  %this.addr = alloca ptr, align 8\l  %n = alloca i32, align 4\l  %i = alloca i32, align 4\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  store i32 0, ptr %n, align 4\l  store i32 0, ptr %i, align 4\l  br label %for.cond\l}"];
+	Node0x558ee7148900 -> Node0x558ee7164640[tooltip="entry -> for.cond\nProbability 100.00%" ];
+	Node0x558ee7164640 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.cond:\l|  %0 = load i32, ptr %i, align 4\l  %nworlds = getelementptr inbounds %\"class.LAMMPS_NS::Universe\", ptr %this1,\l... i32 0, i32 7\l  %1 = load i32, ptr %nworlds, align 4\l  %cmp = icmp slt i32 %0, %1\l  br i1 %cmp, label %for.body, label %for.end\l|{<s0>T|<s1>F}}"];
+	Node0x558ee7164640:s0 -> Node0x558ee71642b0[tooltip="for.cond -> for.body\nProbability 96.88%" ];
+	Node0x558ee7164640:s1 -> Node0x558ee7179c50[tooltip="for.cond -> for.end\nProbability 3.12%" ];
+	Node0x558ee71642b0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.body:\l|  %procs_per_world = getelementptr inbounds %\"class.LAMMPS_NS::Universe\",\l... ptr %this1, i32 0, i32 9\l  %2 = load ptr, ptr %procs_per_world, align 8\l  %3 = load i32, ptr %i, align 4\l  %idxprom = sext i32 %3 to i64\l  %arrayidx = getelementptr inbounds i32, ptr %2, i64 %idxprom\l  %4 = load i32, ptr %arrayidx, align 4\l  %5 = load i32, ptr %n, align 4\l  %add = add nsw i32 %5, %4\l  store i32 %add, ptr %n, align 4\l  br label %for.inc\l}"];
+	Node0x558ee71642b0 -> Node0x558ee717a4b0[tooltip="for.body -> for.inc\nProbability 100.00%" ];
+	Node0x558ee717a4b0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.inc:\l|  %6 = load i32, ptr %i, align 4\l  %inc = add nsw i32 %6, 1\l  store i32 %inc, ptr %i, align 4\l  br label %for.cond, !llvm.loop !6\l}"];
+	Node0x558ee717a4b0 -> Node0x558ee7164640[tooltip="for.inc -> for.cond\nProbability 100.00%" ];
+	Node0x558ee7179c50 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{for.end:\l|  %7 = load i32, ptr %n, align 4\l  %nprocs = getelementptr inbounds %\"class.LAMMPS_NS::Universe\", ptr %this1,\l... i32 0, i32 3\l  %8 = load i32, ptr %nprocs, align 4\l  %cmp2 = icmp eq i32 %7, %8\l  br i1 %cmp2, label %if.then, label %if.else\l|{<s0>T|<s1>F}}"];
+	Node0x558ee7179c50:s0 -> Node0x558ee717ab30[tooltip="for.end -> if.then\nProbability 50.00%" ];
+	Node0x558ee7179c50:s1 -> Node0x558ee717aba0[tooltip="for.end -> if.else\nProbability 50.00%" ];
+	Node0x558ee717ab30 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#dc5d4a70" fontname="Courier",label="{if.then:\l|  store i32 1, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x558ee717ab30 -> Node0x558ee717ad60[tooltip="if.then -> return\nProbability 100.00%" ];
+	Node0x558ee717aba0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#dc5d4a70" fontname="Courier",label="{if.else:\l|  store i32 0, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x558ee717aba0 -> Node0x558ee717ad60[tooltip="if.else -> return\nProbability 100.00%" ];
+	Node0x558ee717ad60 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{return:\l|  %9 = load i32, ptr %retval, align 4\l  ret i32 %9\l}"];
+}

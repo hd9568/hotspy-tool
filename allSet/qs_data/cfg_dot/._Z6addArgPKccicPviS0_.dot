@@ -1,0 +1,19 @@
+digraph "CFG for '_Z6addArgPKccicPviS0_' function" {
+	label="CFG for '_Z6addArgPKccicPviS0_' function";
+
+	Node0x5592ffb7be60 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %retval = alloca i32, align 4\l  %longOption.addr = alloca ptr, align 8\l  %shortOption.addr = alloca i8, align 1\l  %has_arg.addr = alloca i32, align 4\l  %type.addr = alloca i8, align 1\l  %dataPtr.addr = alloca ptr, align 8\l  %dataSize.addr = alloca i32, align 4\l  %help.addr = alloca ptr, align 8\l  %o = alloca ptr, align 8\l  %p = alloca ptr, align 8\l  store ptr %longOption, ptr %longOption.addr, align 8\l  store i8 %shortOption, ptr %shortOption.addr, align 1\l  store i32 %has_arg, ptr %has_arg.addr, align 4\l  store i8 %type, ptr %type.addr, align 1\l  store ptr %dataPtr, ptr %dataPtr.addr, align 8\l  store i32 %dataSize, ptr %dataSize.addr, align 4\l  store ptr %help, ptr %help.addr, align 8\l  %0 = load ptr, ptr %longOption.addr, align 8\l  %1 = load i8, ptr %shortOption.addr, align 1\l  %2 = load i32, ptr %has_arg.addr, align 4\l  %3 = load i8, ptr %type.addr, align 1\l  %4 = load ptr, ptr %dataPtr.addr, align 8\l  %5 = load i32, ptr %dataSize.addr, align 4\l  %6 = load ptr, ptr %help.addr, align 8\l  %call = call noundef ptr @_ZL13myOptionAllocPKccicPviS0_(ptr noundef %0, i8\l... noundef signext %1, i32 noundef %2, i8 noundef signext %3, ptr noundef %4,\l... i32 noundef %5, ptr noundef %6)\l  store ptr %call, ptr %o, align 8\l  %7 = load ptr, ptr %o, align 8\l  %tobool = icmp ne ptr %7, null\l  br i1 %tobool, label %if.end, label %if.then\l|{<s0>T|<s1>F}}"];
+	Node0x5592ffb7be60:s0 -> Node0x5592ffb7dae0[tooltip="entry -> if.end\nProbability 62.50%" ];
+	Node0x5592ffb7be60:s1 -> Node0x5592ffb7db50[tooltip="entry -> if.then\nProbability 37.50%" ];
+	Node0x5592ffb7db50 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{if.then:\l|  store i32 1, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x5592ffb7db50 -> Node0x5592ffb7dd10[tooltip="if.then -> return\nProbability 100.00%" ];
+	Node0x5592ffb7dae0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.end:\l|  %8 = load ptr, ptr @_ZL6myargs, align 8\l  %tobool1 = icmp ne ptr %8, null\l  br i1 %tobool1, label %if.else, label %if.then2\l|{<s0>T|<s1>F}}"];
+	Node0x5592ffb7dae0:s0 -> Node0x5592ffb7df20[tooltip="if.end -> if.else\nProbability 62.50%" ];
+	Node0x5592ffb7dae0:s1 -> Node0x5592ffb7e2b0[tooltip="if.end -> if.then2\nProbability 37.50%" ];
+	Node0x5592ffb7e2b0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470" fontname="Courier",label="{if.then2:\l|  %9 = load ptr, ptr %o, align 8\l  store ptr %9, ptr @_ZL6myargs, align 8\l  br label %if.end4\l}"];
+	Node0x5592ffb7e2b0 -> Node0x5592ffb7e530[tooltip="if.then2 -> if.end4\nProbability 100.00%" ];
+	Node0x5592ffb7df20 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.else:\l|  %10 = load ptr, ptr @_ZL6myargs, align 8\l  %call3 = call noundef ptr @_ZL10lastOptionP10MyOptionSt(ptr noundef %10)\l  store ptr %call3, ptr %p, align 8\l  %11 = load ptr, ptr %o, align 8\l  %12 = load ptr, ptr %p, align 8\l  %next = getelementptr inbounds %struct.MyOptionSt, ptr %12, i32 0, i32 7\l  store ptr %11, ptr %next, align 8\l  br label %if.end4\l}"];
+	Node0x5592ffb7df20 -> Node0x5592ffb7e530[tooltip="if.else -> if.end4\nProbability 100.00%" ];
+	Node0x5592ffb7e530 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.end4:\l|  store i32 0, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x5592ffb7e530 -> Node0x5592ffb7dd10[tooltip="if.end4 -> return\nProbability 100.00%" ];
+	Node0x5592ffb7dd10 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{return:\l|  %13 = load i32, ptr %retval, align 4\l  ret i32 %13\l}"];
+}

@@ -1,0 +1,5 @@
+digraph "CFG for 'hypre_CSRMatrixGetLoadBalancedPartitionEnd' function" {
+	label="CFG for 'hypre_CSRMatrixGetLoadBalancedPartitionEnd' function";
+
+	Node0x558241d377f0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %A.addr = alloca ptr, align 8\l  store ptr %A, ptr %A.addr, align 8\l  %0 = load ptr, ptr %A.addr, align 8\l  %call = call i32 @hypre_CSRMatrixGetLoadBalancedPartitionBoundary(ptr\l... noundef %0, i32 noundef 1)\l  ret i32 %call\l}"];
+}

@@ -1,0 +1,23 @@
+digraph "Call graph: MC_Base_Particle.ll" {
+	label="Call graph: MC_Base_Particle.ll";
+
+	Node0x559247774010 [shape=record,label="{__cxx_global_var_init}"];
+	Node0x559247774010 -> Node0x5592477b2b10;
+	Node0x559247774010 -> Node0x5592477b5c10;
+	Node0x5592477b2b10 [shape=record,label="{_ZNSt8ios_base4InitC1Ev}"];
+	Node0x5592477b5cc0 [shape=record,label="{_ZNSt8ios_base4InitD1Ev}"];
+	Node0x5592477b5c10 [shape=record,label="{__cxa_atexit}"];
+	Node0x5592477b5d70 [shape=record,label="{_Z16MC_Char8_To_LongPmPc}"];
+	Node0x5592477b4e80 [shape=record,label="{_Z16MC_Long_To_Char8PKmPc}"];
+	Node0x5592477b5050 [shape=record,label="{_ZN16MC_Base_Particle9SerializeEPiPdPcRiS3_S3_N24MC_Data_Member_Operation4EnumE}"];
+	Node0x5592477b5050 -> Node0x5592477b4e80;
+	Node0x5592477b5050 -> Node0x5592477b5d70;
+	Node0x5592477b5100 [shape=record,label="{_ZN16MC_Base_Particle13Update_CountsEv}"];
+	Node0x5592477b5100 -> Node0x5592477b10a0;
+	Node0x5592477b5100 -> Node0x5592477b5050;
+	Node0x5592477b10a0 [shape=record,label="{_ZN16MC_Base_ParticleC2Ev}"];
+	Node0x5592477b10a0 -> Node0x5592477b1120;
+	Node0x5592477b1120 [shape=record,label="{_ZN9MC_VectorC2Ev}"];
+	Node0x5592477b3b50 [shape=record,label="{_GLOBAL__sub_I_MC_Base_Particle.cc}"];
+	Node0x5592477b3b50 -> Node0x559247774010;
+}

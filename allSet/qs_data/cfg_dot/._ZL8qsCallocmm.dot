@@ -1,0 +1,5 @@
+digraph "CFG for '_ZL8qsCallocmm' function" {
+	label="CFG for '_ZL8qsCallocmm' function";
+
+	Node0x5592ffb953a0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %num.addr = alloca i64, align 8\l  %iSize.addr = alloca i64, align 8\l  store i64 %num, ptr %num.addr, align 8\l  store i64 %iSize, ptr %iSize.addr, align 8\l  %0 = load i64, ptr %num.addr, align 8\l  %1 = load i64, ptr %iSize.addr, align 8\l  %call = call noalias ptr @calloc(i64 noundef %0, i64 noundef %1) #6\l  ret ptr %call\l}"];
+}

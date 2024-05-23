@@ -1,0 +1,5 @@
+digraph "CFG for 'time_getWallclockSeconds' function" {
+	label="CFG for 'time_getWallclockSeconds' function";
+
+	Node0x556512b354b0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %usage = alloca %struct.tms, align 8\l  %wallclock = alloca i64, align 8\l  %call = call i64 @times(ptr noundef %usage) #2\l  store i64 %call, ptr %wallclock, align 8\l  %0 = load i64, ptr %wallclock, align 8\l  %conv = sitofp i64 %0 to double\l  %call1 = call i64 @sysconf(i32 noundef 2) #2\l  %conv2 = sitofp i64 %call1 to double\l  %div = fdiv double %conv, %conv2\l  ret double %div\l}"];
+}

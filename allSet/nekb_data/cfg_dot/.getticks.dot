@@ -1,0 +1,5 @@
+digraph "CFG for 'getticks' function" {
+	label="CFG for 'getticks' function";
+
+	Node0x55625fb741b0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %low = alloca i32, align 4\l  %high = alloca i32, align 4\l  %0 = call \{ i32, i32 \} asm sideeffect \"rdtsc\",\l... \"=\{ax\},=\{dx\},~\{dirflag\},~\{fpsr\},~\{flags\}\"() #4, !srcloc !6\l  %asmresult = extractvalue \{ i32, i32 \} %0, 0\l  %asmresult1 = extractvalue \{ i32, i32 \} %0, 1\l  store volatile i32 %asmresult, ptr %low, align 4\l  store volatile i32 %asmresult1, ptr %high, align 4\l  %1 = load volatile i32, ptr %high, align 4\l  %conv = zext i32 %1 to i64\l  %shl = shl i64 %conv, 32\l  %2 = load volatile i32, ptr %low, align 4\l  %conv2 = zext i32 %2 to i64\l  %or = or i64 %shl, %conv2\l  ret i64 %or\l}"];
+}

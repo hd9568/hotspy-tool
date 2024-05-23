@@ -1,0 +1,10 @@
+digraph "Call graph: solve_subs.ll" {
+	label="Call graph: solve_subs.ll";
+
+	Node0x56149cab5b60 [shape=record,label="{matvec_sub_}"];
+	Node0x56149cab5c10 [shape=record,label="{matmul_sub_}"];
+	Node0x56149cab5c90 [shape=record,label="{binvcrhs_}"];
+	Node0x56149cab5d10 [shape=record,label="{binvrhs_}"];
+	Node0x56149cab5d90 [shape=record,label="{llvm.stacksave.p0}"];
+	Node0x56149cab5f60 [shape=record,label="{llvm.stackrestore.p0}"];
+}

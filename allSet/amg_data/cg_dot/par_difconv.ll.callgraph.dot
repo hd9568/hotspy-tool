@@ -1,0 +1,21 @@
+digraph "Call graph: par_difconv.ll" {
+	label="Call graph: par_difconv.ll";
+
+	Node0x5565d44fe1c0 [shape=record,label="{GenerateDifConv}"];
+	Node0x5565d44fe1c0 -> Node0x5565d45050c0;
+	Node0x5565d44fe1c0 -> Node0x5565d4505480;
+	Node0x5565d44fe1c0 -> Node0x5565d4505ad0;
+	Node0x5565d44fe1c0 -> Node0x5565d44db850;
+	Node0x5565d44fe1c0 -> Node0x5565d44cf7b0;
+	Node0x5565d44fe1c0 -> Node0x5565d4505d10;
+	Node0x5565d44fe1c0 -> Node0x5565d45188a0;
+	Node0x5565d44fe1c0 -> Node0x5565d450d910;
+	Node0x5565d45050c0 [shape=record,label="{hypre_MPI_Comm_size}"];
+	Node0x5565d4505480 [shape=record,label="{hypre_MPI_Comm_rank}"];
+	Node0x5565d4505ad0 [shape=record,label="{hypre_GeneratePartitioning}"];
+	Node0x5565d4505d10 [shape=record,label="{hypre_CAlloc}"];
+	Node0x5565d45188a0 [shape=record,label="{hypre_qsort0}"];
+	Node0x5565d44db850 [shape=record,label="{hypre_Free}"];
+	Node0x5565d450d910 [shape=record,label="{hypre_map}"];
+	Node0x5565d44cf7b0 [shape=record,label="{hypre_ParCSRMatrixCreate}"];
+}

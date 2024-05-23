@@ -1,0 +1,12 @@
+digraph "CFG for 'hypre_BoomerAMGSetDofFunc' function" {
+	label="CFG for 'hypre_BoomerAMGSetDofFunc' function";
+
+	Node0x55fa80aa6d40 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %retval = alloca i32, align 4\l  %data.addr = alloca ptr, align 8\l  %dof_func.addr = alloca ptr, align 8\l  %amg_data = alloca ptr, align 8\l  store ptr %data, ptr %data.addr, align 8\l  store ptr %dof_func, ptr %dof_func.addr, align 8\l  %0 = load ptr, ptr %data.addr, align 8\l  store ptr %0, ptr %amg_data, align 8\l  %1 = load ptr, ptr %amg_data, align 8\l  %tobool = icmp ne ptr %1, null\l  br i1 %tobool, label %if.end, label %if.then\l|{<s0>T|<s1>F}}"];
+	Node0x55fa80aa6d40:s0 -> Node0x55fa80aa7380[tooltip="entry -> if.end\nProbability 62.50%" ];
+	Node0x55fa80aa6d40:s1 -> Node0x55fa80aa73f0[tooltip="entry -> if.then\nProbability 37.50%" ];
+	Node0x55fa80aa73f0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{if.then:\l|  call void @hypre_error_handler(ptr noundef @.str.2, i32 noundef 2526, i32\l... noundef 12, ptr noundef null)\l  %2 = load i32, ptr @hypre__global_error, align 4\l  store i32 %2, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x55fa80aa73f0 -> Node0x55fa80aa78b0[tooltip="if.then -> return\nProbability 100.00%" ];
+	Node0x55fa80aa7380 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.end:\l|  %3 = load ptr, ptr %amg_data, align 8\l  %dof_func1 = getelementptr inbounds %struct.hypre_ParAMGData, ptr %3, i32 0,\l... i32 48\l  %4 = load ptr, ptr %dof_func1, align 8\l  call void @hypre_Free(ptr noundef %4)\l  %5 = load ptr, ptr %amg_data, align 8\l  %dof_func2 = getelementptr inbounds %struct.hypre_ParAMGData, ptr %5, i32 0,\l... i32 48\l  store ptr null, ptr %dof_func2, align 8\l  %6 = load ptr, ptr %dof_func.addr, align 8\l  %7 = load ptr, ptr %amg_data, align 8\l  %dof_func3 = getelementptr inbounds %struct.hypre_ParAMGData, ptr %7, i32 0,\l... i32 48\l  store ptr %6, ptr %dof_func3, align 8\l  %8 = load i32, ptr @hypre__global_error, align 4\l  store i32 %8, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x55fa80aa7380 -> Node0x55fa80aa78b0[tooltip="if.end -> return\nProbability 100.00%" ];
+	Node0x55fa80aa78b0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{return:\l|  %9 = load i32, ptr %retval, align 4\l  ret i32 %9\l}"];
+}

@@ -1,0 +1,5 @@
+digraph "CFG for '_ZSt9make_pairIRm8CellInfoESt4pairINSt17__decay_and_stripIT_E6__typeENS3_IT0_E6__typeEEOS4_OS7_' function" {
+	label="CFG for '_ZSt9make_pairIRm8CellInfoESt4pairINSt17__decay_and_stripIT_E6__typeENS3_IT0_E6__typeEEOS4_OS7_' function";
+
+	Node0x560dc9fbed40 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %__x.addr = alloca ptr, align 8\l  %__y.addr = alloca ptr, align 8\l  store ptr %__x, ptr %__x.addr, align 8\l  store ptr %__y, ptr %__y.addr, align 8\l  %0 = load ptr, ptr %__x.addr, align 8\l  %1 = load ptr, ptr %__y.addr, align 8\l  call void\l... @_ZNSt4pairIm8CellInfoEC2IRmS0_TnNSt9enable_ifIXaaclsr5_PCCPE22_MoveConstructi\l...blePairIT_T0_EEclsr5_PCCPE30_ImplicitlyMoveConvertiblePairIS5_S6_EEEbE4typeELb1\l...EEEOS5_OS6_(ptr noundef nonnull align 8 dereferenceable(24) %agg.result, ptr\l... noundef nonnull align 8 dereferenceable(8) %0, ptr noundef nonnull align 4\l... dereferenceable(16) %1)\l  ret void\l}"];
+}

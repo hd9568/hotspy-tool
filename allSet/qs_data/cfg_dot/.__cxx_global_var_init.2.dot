@@ -1,0 +1,5 @@
+digraph "CFG for '__cxx_global_var_init.2' function" {
+	label="CFG for '__cxx_global_var_init.2' function";
+
+	Node0x558b69427d80 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  call void @_ZNSt3mapIiiSt4lessIiESaISt4pairIKiiEEEC2Ev(ptr noundef nonnull\l... align 8 dereferenceable(48) @_ZL10recv_count) #3\l  %0 = call i32 @__cxa_atexit(ptr\l... @_ZNSt3mapIiiSt4lessIiESaISt4pairIKiiEEED2Ev, ptr @_ZL10recv_count, ptr\l... @__dso_handle) #3\l  ret void\l}"];
+}

@@ -1,0 +1,12 @@
+digraph "CFG for '_Z8freeArgsv' function" {
+	label="CFG for '_Z8freeArgsv' function";
+
+	Node0x5592ffb86720 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{entry:\l|  br label %while.cond\l}"];
+	Node0x5592ffb86720 -> Node0x5592ffb86850[tooltip="entry -> while.cond\nProbability 100.00%" ];
+	Node0x5592ffb86850 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{while.cond:\l|  %0 = load ptr, ptr @_ZL6myargs, align 8\l  %tobool = icmp ne ptr %0, null\l  br i1 %tobool, label %while.body, label %while.end\l|{<s0>T|<s1>F}}"];
+	Node0x5592ffb86850:s0 -> Node0x5592ffb86a70[tooltip="while.cond -> while.body\nProbability 96.88%" ];
+	Node0x5592ffb86850:s1 -> Node0x5592ffb86af0[tooltip="while.cond -> while.end\nProbability 3.12%" ];
+	Node0x5592ffb86a70 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{while.body:\l|  %1 = load ptr, ptr @_ZL6myargs, align 8\l  %call = call noundef ptr @_ZL12myOptionFreeP10MyOptionSt(ptr noundef %1)\l  store ptr %call, ptr @_ZL6myargs, align 8\l  br label %while.cond, !llvm.loop !6\l}"];
+	Node0x5592ffb86a70 -> Node0x5592ffb86850[tooltip="while.body -> while.cond\nProbability 100.00%" ];
+	Node0x5592ffb86af0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{while.end:\l|  ret void\l}"];
+}

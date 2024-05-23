@@ -1,0 +1,39 @@
+digraph "CFG for '_ZN9LAMMPS_NS17NStencilHalfBin2d6createEv' function" {
+	label="CFG for '_ZN9LAMMPS_NS17NStencilHalfBin2d6createEv' function";
+
+	Node0x5555b7a00fe0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#ec7f6370" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %i = alloca i32, align 4\l  %j = alloca i32, align 4\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %nstencil = getelementptr inbounds %\"class.LAMMPS_NS::NStencil\", ptr %this1,\l... i32 0, i32 4\l  store i32 0, ptr %nstencil, align 8\l  store i32 0, ptr %j, align 4\l  br label %for.cond\l}"];
+	Node0x5555b7a00fe0 -> Node0x5555b7a014a0[tooltip="entry -> for.cond\nProbability 100.00%" ];
+	Node0x5555b7a014a0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{for.cond:\l|  %0 = load i32, ptr %j, align 4\l  %sy = getelementptr inbounds %\"class.LAMMPS_NS::NStencil\", ptr %this1, i32\l... 0, i32 15\l  %1 = load i32, ptr %sy, align 8\l  %cmp = icmp sle i32 %0, %1\l  br i1 %cmp, label %for.body, label %for.end16\l|{<s0>T|<s1>F}}"];
+	Node0x5555b7a014a0:s0 -> Node0x5555b7a01850[tooltip="for.cond -> for.body\nProbability 96.88%" ];
+	Node0x5555b7a014a0:s1 -> Node0x5555b7a018d0[tooltip="for.cond -> for.end16\nProbability 3.12%" ];
+	Node0x5555b7a01850 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{for.body:\l|  %sx = getelementptr inbounds %\"class.LAMMPS_NS::NStencil\", ptr %this1, i32\l... 0, i32 14\l  %2 = load i32, ptr %sx, align 4\l  %sub = sub nsw i32 0, %2\l  store i32 %sub, ptr %i, align 4\l  br label %for.cond2\l}"];
+	Node0x5555b7a01850 -> Node0x5555b7a01ee0[tooltip="for.body -> for.cond2\nProbability 100.00%" ];
+	Node0x5555b7a01ee0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.cond2:\l|  %3 = load i32, ptr %i, align 4\l  %sx3 = getelementptr inbounds %\"class.LAMMPS_NS::NStencil\", ptr %this1, i32\l... 0, i32 14\l  %4 = load i32, ptr %sx3, align 4\l  %cmp4 = icmp sle i32 %3, %4\l  br i1 %cmp4, label %for.body5, label %for.end\l|{<s0>T|<s1>F}}"];
+	Node0x5555b7a01ee0:s0 -> Node0x5555b7a02260[tooltip="for.cond2 -> for.body5\nProbability 96.88%" ];
+	Node0x5555b7a01ee0:s1 -> Node0x5555b7a022e0[tooltip="for.cond2 -> for.end\nProbability 3.12%" ];
+	Node0x5555b7a02260 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.body5:\l|  %5 = load i32, ptr %j, align 4\l  %cmp6 = icmp sgt i32 %5, 0\l  br i1 %cmp6, label %if.then, label %lor.lhs.false\l|{<s0>T|<s1>F}}"];
+	Node0x5555b7a02260:s0 -> Node0x5555b7a02590[tooltip="for.body5 -> if.then\nProbability 62.50%" ];
+	Node0x5555b7a02260:s1 -> Node0x5555b7a02600[tooltip="for.body5 -> lor.lhs.false\nProbability 37.50%" ];
+	Node0x5555b7a02600 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{lor.lhs.false:\l|  %6 = load i32, ptr %j, align 4\l  %cmp7 = icmp eq i32 %6, 0\l  br i1 %cmp7, label %land.lhs.true, label %if.end12\l|{<s0>T|<s1>F}}"];
+	Node0x5555b7a02600:s0 -> Node0x5555b7a028c0[tooltip="lor.lhs.false -> land.lhs.true\nProbability 37.50%" ];
+	Node0x5555b7a02600:s1 -> Node0x5555b7a02940[tooltip="lor.lhs.false -> if.end12\nProbability 62.50%" ];
+	Node0x5555b7a028c0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#ca3b3770" fontname="Courier",label="{land.lhs.true:\l|  %7 = load i32, ptr %i, align 4\l  %cmp8 = icmp sgt i32 %7, 0\l  br i1 %cmp8, label %if.then, label %if.end12\l|{<s0>T|<s1>F}}"];
+	Node0x5555b7a028c0:s0 -> Node0x5555b7a02590[tooltip="land.lhs.true -> if.then\nProbability 62.50%" ];
+	Node0x5555b7a028c0:s1 -> Node0x5555b7a02940[tooltip="land.lhs.true -> if.end12\nProbability 37.50%" ];
+	Node0x5555b7a02590 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.then:\l|  %8 = load i32, ptr %i, align 4\l  %9 = load i32, ptr %j, align 4\l  %call = call noundef double @_ZN9LAMMPS_NS8NStencil12bin_distanceEiii(ptr\l... noundef nonnull align 8 dereferenceable(616) %this1, i32 noundef %8, i32\l... noundef %9, i32 noundef 0)\l  %cutneighmaxsq = getelementptr inbounds %\"class.LAMMPS_NS::NStencil\", ptr\l... %this1, i32 0, i32 26\l  %10 = load double, ptr %cutneighmaxsq, align 8\l  %cmp9 = fcmp olt double %call, %10\l  br i1 %cmp9, label %if.then10, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x5555b7a02590:s0 -> Node0x5555b7a03510[tooltip="if.then -> if.then10\nProbability 50.00%" ];
+	Node0x5555b7a02590:s1 -> Node0x5555b7a03590[tooltip="if.then -> if.end\nProbability 50.00%" ];
+	Node0x5555b7a03510 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{if.then10:\l|  %11 = load i32, ptr %j, align 4\l  %mbinx = getelementptr inbounds %\"class.LAMMPS_NS::NStencil\", ptr %this1,\l... i32 0, i32 32\l  %12 = load i32, ptr %mbinx, align 8\l  %mul = mul nsw i32 %11, %12\l  %13 = load i32, ptr %i, align 4\l  %add = add nsw i32 %mul, %13\l  %stencil = getelementptr inbounds %\"class.LAMMPS_NS::NStencil\", ptr %this1,\l... i32 0, i32 5\l  %14 = load ptr, ptr %stencil, align 8\l  %nstencil11 = getelementptr inbounds %\"class.LAMMPS_NS::NStencil\", ptr\l... %this1, i32 0, i32 4\l  %15 = load i32, ptr %nstencil11, align 8\l  %inc = add nsw i32 %15, 1\l  store i32 %inc, ptr %nstencil11, align 8\l  %idxprom = sext i32 %15 to i64\l  %arrayidx = getelementptr inbounds i32, ptr %14, i64 %idxprom\l  store i32 %add, ptr %arrayidx, align 4\l  br label %if.end\l}"];
+	Node0x5555b7a03510 -> Node0x5555b7a03590[tooltip="if.then10 -> if.end\nProbability 100.00%" ];
+	Node0x5555b7a03590 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.end:\l|  br label %if.end12\l}"];
+	Node0x5555b7a03590 -> Node0x5555b7a02940[tooltip="if.end -> if.end12\nProbability 100.00%" ];
+	Node0x5555b7a02940 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end12:\l|  br label %for.inc\l}"];
+	Node0x5555b7a02940 -> Node0x5555b7a04a40[tooltip="if.end12 -> for.inc\nProbability 100.00%" ];
+	Node0x5555b7a04a40 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.inc:\l|  %16 = load i32, ptr %i, align 4\l  %inc13 = add nsw i32 %16, 1\l  store i32 %inc13, ptr %i, align 4\l  br label %for.cond2, !llvm.loop !6\l}"];
+	Node0x5555b7a04a40 -> Node0x5555b7a01ee0[tooltip="for.inc -> for.cond2\nProbability 100.00%" ];
+	Node0x5555b7a022e0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{for.end:\l|  br label %for.inc14\l}"];
+	Node0x5555b7a022e0 -> Node0x5555b7a05840[tooltip="for.end -> for.inc14\nProbability 100.00%" ];
+	Node0x5555b7a05840 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{for.inc14:\l|  %17 = load i32, ptr %j, align 4\l  %inc15 = add nsw i32 %17, 1\l  store i32 %inc15, ptr %j, align 4\l  br label %for.cond, !llvm.loop !8\l}"];
+	Node0x5555b7a05840 -> Node0x5555b7a014a0[tooltip="for.inc14 -> for.cond\nProbability 100.00%" ];
+	Node0x5555b7a018d0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#ec7f6370" fontname="Courier",label="{for.end16:\l|  ret void\l}"];
+}

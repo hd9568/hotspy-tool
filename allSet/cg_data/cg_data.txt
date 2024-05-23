@@ -1,0 +1,13 @@
+randlc_ 1
+icnvrt_ 1
+sprnvc_ 1
+vecset_ 1
+timer_clear_ 0
+setup_proc_info_ 0
+setup_submatrix_info_ 0
+makea_ 1
+sparse_ 1
+timer_start_ 0
+timer_stop_ 0
+timer_read_ 0
+print_results_ 0

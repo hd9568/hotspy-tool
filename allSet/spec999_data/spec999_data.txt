@@ -1,0 +1,7 @@
+spec_genrand_int32 1
+spec_rand 1
+spec_lrand48 1
+spec_srand 0
+spec_init_genrand 0
+run_sequence 1
+main 0

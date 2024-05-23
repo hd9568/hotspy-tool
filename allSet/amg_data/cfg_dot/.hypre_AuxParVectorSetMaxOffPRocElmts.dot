@@ -1,0 +1,5 @@
+digraph "CFG for 'hypre_AuxParVectorSetMaxOffPRocElmts' function" {
+	label="CFG for 'hypre_AuxParVectorSetMaxOffPRocElmts' function";
+
+	Node0x55a585fb87c0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %vector.addr = alloca ptr, align 8\l  %max_off_proc_elmts.addr = alloca i32, align 4\l  %ierr = alloca i32, align 4\l  store ptr %vector, ptr %vector.addr, align 8\l  store i32 %max_off_proc_elmts, ptr %max_off_proc_elmts.addr, align 4\l  store i32 0, ptr %ierr, align 4\l  %0 = load i32, ptr %max_off_proc_elmts.addr, align 4\l  %1 = load ptr, ptr %vector.addr, align 8\l  %max_off_proc_elmts1 = getelementptr inbounds %struct.hypre_AuxParVector,\l... ptr %1, i32 0, i32 0\l  store i32 %0, ptr %max_off_proc_elmts1, align 8\l  %2 = load i32, ptr %ierr, align 4\l  ret i32 %2\l}"];
+}

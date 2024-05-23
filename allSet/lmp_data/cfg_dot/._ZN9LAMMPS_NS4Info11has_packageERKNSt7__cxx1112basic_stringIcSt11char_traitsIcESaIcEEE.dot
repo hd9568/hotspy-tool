@@ -1,0 +1,21 @@
+digraph "CFG for '_ZN9LAMMPS_NS4Info11has_packageERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE' function" {
+	label="CFG for '_ZN9LAMMPS_NS4Info11has_packageERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE' function";
+
+	Node0x56284684fd10 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d0473d70" fontname="Courier",label="{entry:\l|  %retval = alloca i1, align 1\l  %package_name.addr = alloca ptr, align 8\l  %i = alloca i32, align 4\l  store ptr %package_name, ptr %package_name.addr, align 8\l  store i32 0, ptr %i, align 4\l  br label %for.cond\l}"];
+	Node0x56284684fd10 -> Node0x562846850080[tooltip="entry -> for.cond\nProbability 100.00%" ];
+	Node0x562846850080 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.cond:\l|  %0 = load i32, ptr %i, align 4\l  %idxprom = sext i32 %0 to i64\l  %arrayidx = getelementptr inbounds [0 x ptr], ptr\l... @_ZN9LAMMPS_NS6LAMMPS18installed_packagesE, i64 0, i64 %idxprom\l  %1 = load ptr, ptr %arrayidx, align 8\l  %cmp = icmp ne ptr %1, null\l  br i1 %cmp, label %for.body, label %for.end\l|{<s0>T|<s1>F}}"];
+	Node0x562846850080:s0 -> Node0x5628468504c0[tooltip="for.cond -> for.body\nProbability 96.88%" ];
+	Node0x562846850080:s1 -> Node0x562846850510[tooltip="for.cond -> for.end\nProbability 3.12%" ];
+	Node0x5628468504c0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.body:\l|  %2 = load ptr, ptr %package_name.addr, align 8\l  %3 = load i32, ptr %i, align 4\l  %idxprom1 = sext i32 %3 to i64\l  %arrayidx2 = getelementptr inbounds [0 x ptr], ptr\l... @_ZN9LAMMPS_NS6LAMMPS18installed_packagesE, i64 0, i64 %idxprom1\l  %4 = load ptr, ptr %arrayidx2, align 8\l  %call = call noundef zeroext i1\l... @_ZSteqIcSt11char_traitsIcESaIcEEbRKNSt7__cxx1112basic_stringIT_T0_T1_EEPKS5_(\l...ptr noundef nonnull align 8 dereferenceable(32) %2, ptr noundef %4)\l  br i1 %call, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x5628468504c0:s0 -> Node0x562846850b70[tooltip="for.body -> if.then\nProbability 3.12%" ];
+	Node0x5628468504c0:s1 -> Node0x562846850bc0[tooltip="for.body -> if.end\nProbability 96.88%" ];
+	Node0x562846850b70 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{if.then:\l|  store i1 true, ptr %retval, align 1\l  br label %return\l}"];
+	Node0x562846850b70 -> Node0x562846850d60[tooltip="if.then -> return\nProbability 100.00%" ];
+	Node0x562846850bc0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  br label %for.inc\l}"];
+	Node0x562846850bc0 -> Node0x562846850e40[tooltip="if.end -> for.inc\nProbability 100.00%" ];
+	Node0x562846850e40 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.inc:\l|  %5 = load i32, ptr %i, align 4\l  %inc = add nsw i32 %5, 1\l  store i32 %inc, ptr %i, align 4\l  br label %for.cond, !llvm.loop !6\l}"];
+	Node0x562846850e40 -> Node0x562846850080[tooltip="for.inc -> for.cond\nProbability 100.00%" ];
+	Node0x562846850510 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{for.end:\l|  store i1 false, ptr %retval, align 1\l  br label %return\l}"];
+	Node0x562846850510 -> Node0x562846850d60[tooltip="for.end -> return\nProbability 100.00%" ];
+	Node0x562846850d60 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d0473d70" fontname="Courier",label="{return:\l|  %6 = load i1, ptr %retval, align 1\l  ret i1 %6\l}"];
+}

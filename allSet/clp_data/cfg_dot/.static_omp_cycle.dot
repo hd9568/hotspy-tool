@@ -1,0 +1,5 @@
+digraph "CFG for 'static_omp_cycle' function" {
+	label="CFG for 'static_omp_cycle' function";
+
+	Node0x5567ef5a0f90 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  call void @static_omp_module1()\l  call void @static_omp_module2()\l  call void @static_omp_module3()\l  call void @static_omp_module4()\l  ret void\l}"];
+}

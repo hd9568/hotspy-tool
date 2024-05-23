@@ -1,0 +1,12 @@
+digraph "CFG for 'HYPRE_IJMatrixGetObject' function" {
+	label="CFG for 'HYPRE_IJMatrixGetObject' function";
+
+	Node0x55c120a5dd10 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %retval = alloca i32, align 4\l  %matrix.addr = alloca ptr, align 8\l  %object.addr = alloca ptr, align 8\l  %ijmatrix = alloca ptr, align 8\l  store ptr %matrix, ptr %matrix.addr, align 8\l  store ptr %object, ptr %object.addr, align 8\l  %0 = load ptr, ptr %matrix.addr, align 8\l  store ptr %0, ptr %ijmatrix, align 8\l  %1 = load ptr, ptr %ijmatrix, align 8\l  %tobool = icmp ne ptr %1, null\l  br i1 %tobool, label %if.end, label %if.then\l|{<s0>T|<s1>F}}"];
+	Node0x55c120a5dd10:s0 -> Node0x55c120a5e350[tooltip="entry -> if.end\nProbability 62.50%" ];
+	Node0x55c120a5dd10:s1 -> Node0x55c120a5e3c0[tooltip="entry -> if.then\nProbability 37.50%" ];
+	Node0x55c120a5e3c0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{if.then:\l|  call void @hypre_error_handler(ptr noundef @.str, i32 noundef 713, i32\l... noundef 12, ptr noundef null)\l  %2 = load i32, ptr @hypre__global_error, align 4\l  store i32 %2, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x55c120a5e3c0 -> Node0x55c120a5e820[tooltip="if.then -> return\nProbability 100.00%" ];
+	Node0x55c120a5e350 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.end:\l|  %3 = load ptr, ptr %ijmatrix, align 8\l  %object1 = getelementptr inbounds %struct.hypre_IJMatrix_struct, ptr %3, i32\l... 0, i32 4\l  %4 = load ptr, ptr %object1, align 8\l  %5 = load ptr, ptr %object.addr, align 8\l  store ptr %4, ptr %5, align 8\l  %6 = load i32, ptr @hypre__global_error, align 4\l  store i32 %6, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x55c120a5e350 -> Node0x55c120a5e820[tooltip="if.end -> return\nProbability 100.00%" ];
+	Node0x55c120a5e820 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{return:\l|  %7 = load i32, ptr %retval, align 4\l  ret i32 %7\l}"];
+}

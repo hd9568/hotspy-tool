@@ -1,0 +1,5 @@
+digraph "CFG for 'hypre_BoomerAMGSetRAP2' function" {
+	label="CFG for 'hypre_BoomerAMGSetRAP2' function";
+
+	Node0x55fa80abef20 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %data.addr = alloca ptr, align 8\l  %rap2.addr = alloca i32, align 4\l  %amg_data = alloca ptr, align 8\l  store ptr %data, ptr %data.addr, align 8\l  store i32 %rap2, ptr %rap2.addr, align 4\l  %0 = load ptr, ptr %data.addr, align 8\l  store ptr %0, ptr %amg_data, align 8\l  %1 = load i32, ptr %rap2.addr, align 4\l  %2 = load ptr, ptr %amg_data, align 8\l  %rap21 = getelementptr inbounds %struct.hypre_ParAMGData, ptr %2, i32 0, i32\l... 113\l  store i32 %1, ptr %rap21, align 8\l  %3 = load i32, ptr @hypre__global_error, align 4\l  ret i32 %3\l}"];
+}

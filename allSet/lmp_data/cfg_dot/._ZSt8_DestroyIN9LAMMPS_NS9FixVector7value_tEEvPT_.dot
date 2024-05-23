@@ -1,0 +1,5 @@
+digraph "CFG for '_ZSt8_DestroyIN9LAMMPS_NS9FixVector7value_tEEvPT_' function" {
+	label="CFG for '_ZSt8_DestroyIN9LAMMPS_NS9FixVector7value_tEEvPT_' function";
+
+	Node0x56349576bbd0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %__pointer.addr = alloca ptr, align 8\l  store ptr %__pointer, ptr %__pointer.addr, align 8\l  %0 = load ptr, ptr %__pointer.addr, align 8\l  call void @_ZN9LAMMPS_NS9FixVector7value_tD2Ev(ptr noundef nonnull align 8\l... dereferenceable(48) %0) #9\l  ret void\l}"];
+}

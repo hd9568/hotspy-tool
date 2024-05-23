@@ -1,0 +1,48 @@
+digraph "CFG for '_ZL8matchone7regex_tc' function" {
+	label="CFG for '_ZL8matchone7regex_tc' function";
+
+	Node0x558416616880 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %retval = alloca i32, align 4\l  %p = alloca %struct.regex_t, align 8\l  %c.addr = alloca i8, align 1\l  %0 = getelementptr inbounds \{ i8, ptr \}, ptr %p, i32 0, i32 0\l  store i8 %p.coerce0, ptr %0, align 8\l  %1 = getelementptr inbounds \{ i8, ptr \}, ptr %p, i32 0, i32 1\l  store ptr %p.coerce1, ptr %1, align 8\l  store i8 %c, ptr %c.addr, align 1\l  %type = getelementptr inbounds %struct.regex_t, ptr %p, i32 0, i32 0\l  %2 = load i8, ptr %type, align 8\l  %conv = zext i8 %2 to i32\l  switch i32 %conv, label %sw.default [\l    i32 1, label %sw.bb\l    i32 8, label %sw.bb1\l    i32 9, label %sw.bb3\l    i32 10, label %sw.bb7\l    i32 11, label %sw.bb9\l    i32 12, label %sw.bb14\l    i32 13, label %sw.bb16\l    i32 14, label %sw.bb21\l    i32 15, label %sw.bb23\l    i32 16, label %sw.bb28\l    i32 17, label %sw.bb30\l    i32 18, label %sw.bb35\l    i32 19, label %sw.bb37\l  ]\l|{<s0>def|<s1>1|<s2>8|<s3>9|<s4>10|<s5>11|<s6>12|<s7>13|<s8>14|<s9>15|<s10>16|<s11>17|<s12>18|<s13>19}}"];
+	Node0x558416616880:s0 -> Node0x558416616f60[tooltip="entry -> sw.default\nProbability 7.14%" ];
+	Node0x558416616880:s1 -> Node0x558416616fb0[tooltip="entry -> sw.bb\nProbability 7.14%" ];
+	Node0x558416616880:s2 -> Node0x558416617020[tooltip="entry -> sw.bb1\nProbability 7.14%" ];
+	Node0x558416616880:s3 -> Node0x558416617090[tooltip="entry -> sw.bb3\nProbability 7.14%" ];
+	Node0x558416616880:s4 -> Node0x5584166172a0[tooltip="entry -> sw.bb7\nProbability 7.14%" ];
+	Node0x558416616880:s5 -> Node0x558416617370[tooltip="entry -> sw.bb9\nProbability 7.14%" ];
+	Node0x558416616880:s6 -> Node0x558416617440[tooltip="entry -> sw.bb14\nProbability 7.14%" ];
+	Node0x558416616880:s7 -> Node0x558416617510[tooltip="entry -> sw.bb16\nProbability 7.14%" ];
+	Node0x558416616880:s8 -> Node0x5584166175e0[tooltip="entry -> sw.bb21\nProbability 7.14%" ];
+	Node0x558416616880:s9 -> Node0x5584166176b0[tooltip="entry -> sw.bb23\nProbability 7.14%" ];
+	Node0x558416616880:s10 -> Node0x558416617780[tooltip="entry -> sw.bb28\nProbability 7.14%" ];
+	Node0x558416616880:s11 -> Node0x558416617850[tooltip="entry -> sw.bb30\nProbability 7.14%" ];
+	Node0x558416616880:s12 -> Node0x558416617950[tooltip="entry -> sw.bb35\nProbability 7.14%" ];
+	Node0x558416616880:s13 -> Node0x5584167bf460[tooltip="entry -> sw.bb37\nProbability 7.14%" ];
+	Node0x558416616fb0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d0473d70" fontname="Courier",label="{sw.bb:\l|  %3 = load i8, ptr %c.addr, align 1\l  %call = call noundef i32 @_ZL8matchdotc(i8 noundef signext %3)\l  store i32 %call, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x558416616fb0 -> Node0x5584167bfbb0[tooltip="sw.bb -> return\nProbability 100.00%" ];
+	Node0x558416617020 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d0473d70" fontname="Courier",label="{sw.bb1:\l|  %4 = load i8, ptr %c.addr, align 1\l  %u = getelementptr inbounds %struct.regex_t, ptr %p, i32 0, i32 1\l  %5 = load ptr, ptr %u, align 8\l  %call2 = call noundef i32 @_ZL14matchcharclasscPKc(i8 noundef signext %4,\l... ptr noundef %5)\l  store i32 %call2, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x558416617020 -> Node0x5584167bfbb0[tooltip="sw.bb1 -> return\nProbability 100.00%" ];
+	Node0x558416617090 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d0473d70" fontname="Courier",label="{sw.bb3:\l|  %6 = load i8, ptr %c.addr, align 1\l  %u4 = getelementptr inbounds %struct.regex_t, ptr %p, i32 0, i32 1\l  %7 = load ptr, ptr %u4, align 8\l  %call5 = call noundef i32 @_ZL14matchcharclasscPKc(i8 noundef signext %6,\l... ptr noundef %7)\l  %tobool = icmp ne i32 %call5, 0\l  %lnot = xor i1 %tobool, true\l  %conv6 = zext i1 %lnot to i32\l  store i32 %conv6, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x558416617090 -> Node0x5584167bfbb0[tooltip="sw.bb3 -> return\nProbability 100.00%" ];
+	Node0x5584166172a0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d0473d70" fontname="Courier",label="{sw.bb7:\l|  %8 = load i8, ptr %c.addr, align 1\l  %call8 = call noundef i32 @_ZL10matchdigitc(i8 noundef signext %8)\l  store i32 %call8, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x5584166172a0 -> Node0x5584167bfbb0[tooltip="sw.bb7 -> return\nProbability 100.00%" ];
+	Node0x558416617370 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d0473d70" fontname="Courier",label="{sw.bb9:\l|  %9 = load i8, ptr %c.addr, align 1\l  %call10 = call noundef i32 @_ZL10matchdigitc(i8 noundef signext %9)\l  %tobool11 = icmp ne i32 %call10, 0\l  %lnot12 = xor i1 %tobool11, true\l  %conv13 = zext i1 %lnot12 to i32\l  store i32 %conv13, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x558416617370 -> Node0x5584167bfbb0[tooltip="sw.bb9 -> return\nProbability 100.00%" ];
+	Node0x558416617440 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d0473d70" fontname="Courier",label="{sw.bb14:\l|  %10 = load i8, ptr %c.addr, align 1\l  %call15 = call noundef i32 @_ZL8matchintc(i8 noundef signext %10)\l  store i32 %call15, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x558416617440 -> Node0x5584167bfbb0[tooltip="sw.bb14 -> return\nProbability 100.00%" ];
+	Node0x558416617510 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d0473d70" fontname="Courier",label="{sw.bb16:\l|  %11 = load i8, ptr %c.addr, align 1\l  %call17 = call noundef i32 @_ZL8matchintc(i8 noundef signext %11)\l  %tobool18 = icmp ne i32 %call17, 0\l  %lnot19 = xor i1 %tobool18, true\l  %conv20 = zext i1 %lnot19 to i32\l  store i32 %conv20, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x558416617510 -> Node0x5584167bfbb0[tooltip="sw.bb16 -> return\nProbability 100.00%" ];
+	Node0x5584166175e0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d0473d70" fontname="Courier",label="{sw.bb21:\l|  %12 = load i8, ptr %c.addr, align 1\l  %call22 = call noundef i32 @_ZL10matchfloatc(i8 noundef signext %12)\l  store i32 %call22, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x5584166175e0 -> Node0x5584167bfbb0[tooltip="sw.bb21 -> return\nProbability 100.00%" ];
+	Node0x5584166176b0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d0473d70" fontname="Courier",label="{sw.bb23:\l|  %13 = load i8, ptr %c.addr, align 1\l  %call24 = call noundef i32 @_ZL10matchfloatc(i8 noundef signext %13)\l  %tobool25 = icmp ne i32 %call24, 0\l  %lnot26 = xor i1 %tobool25, true\l  %conv27 = zext i1 %lnot26 to i32\l  store i32 %conv27, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x5584166176b0 -> Node0x5584167bfbb0[tooltip="sw.bb23 -> return\nProbability 100.00%" ];
+	Node0x558416617780 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d0473d70" fontname="Courier",label="{sw.bb28:\l|  %14 = load i8, ptr %c.addr, align 1\l  %call29 = call noundef i32 @_ZL13matchalphanumc(i8 noundef signext %14)\l  store i32 %call29, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x558416617780 -> Node0x5584167bfbb0[tooltip="sw.bb28 -> return\nProbability 100.00%" ];
+	Node0x558416617850 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d0473d70" fontname="Courier",label="{sw.bb30:\l|  %15 = load i8, ptr %c.addr, align 1\l  %call31 = call noundef i32 @_ZL13matchalphanumc(i8 noundef signext %15)\l  %tobool32 = icmp ne i32 %call31, 0\l  %lnot33 = xor i1 %tobool32, true\l  %conv34 = zext i1 %lnot33 to i32\l  store i32 %conv34, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x558416617850 -> Node0x5584167bfbb0[tooltip="sw.bb30 -> return\nProbability 100.00%" ];
+	Node0x558416617950 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d0473d70" fontname="Courier",label="{sw.bb35:\l|  %16 = load i8, ptr %c.addr, align 1\l  %call36 = call noundef i32 @_ZL15matchwhitespacec(i8 noundef signext %16)\l  store i32 %call36, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x558416617950 -> Node0x5584167bfbb0[tooltip="sw.bb35 -> return\nProbability 100.00%" ];
+	Node0x5584167bf460 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d0473d70" fontname="Courier",label="{sw.bb37:\l|  %17 = load i8, ptr %c.addr, align 1\l  %call38 = call noundef i32 @_ZL15matchwhitespacec(i8 noundef signext %17)\l  %tobool39 = icmp ne i32 %call38, 0\l  %lnot40 = xor i1 %tobool39, true\l  %conv41 = zext i1 %lnot40 to i32\l  store i32 %conv41, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x5584167bf460 -> Node0x5584167bfbb0[tooltip="sw.bb37 -> return\nProbability 100.00%" ];
+	Node0x558416616f60 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d0473d70" fontname="Courier",label="{sw.default:\l|  %u42 = getelementptr inbounds %struct.regex_t, ptr %p, i32 0, i32 1\l  %18 = load i8, ptr %u42, align 8\l  %conv43 = zext i8 %18 to i32\l  %19 = load i8, ptr %c.addr, align 1\l  %conv44 = sext i8 %19 to i32\l  %cmp = icmp eq i32 %conv43, %conv44\l  %conv45 = zext i1 %cmp to i32\l  store i32 %conv45, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x558416616f60 -> Node0x5584167bfbb0[tooltip="sw.default -> return\nProbability 100.00%" ];
+	Node0x5584167bfbb0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{return:\l|  %20 = load i32, ptr %retval, align 4\l  ret i32 %20\l}"];
+}

@@ -1,0 +1,43 @@
+digraph "Call graph: par_cg_relax_wt.ll" {
+	label="Call graph: par_cg_relax_wt.ll";
+
+	Node0x56349cb38470 [shape=record,label="{hypre_BoomerAMGCGRelaxWt}"];
+	Node0x56349cb38470 -> Node0x56349cb3b730;
+	Node0x56349cb38470 -> Node0x56349cb41750;
+	Node0x56349cb38470 -> Node0x56349cb3c310;
+	Node0x56349cb38470 -> Node0x56349cb3d0c0;
+	Node0x56349cb38470 -> Node0x56349cb3e370;
+	Node0x56349cb38470 -> Node0x56349cb42ae0;
+	Node0x56349cb38470 -> Node0x56349cb4e5b0;
+	Node0x56349cb38470 -> Node0x56349cb49000;
+	Node0x56349cb38470 -> Node0x56349cb4d590;
+	Node0x56349cb38470 -> Node0x56349cb46fe0;
+	Node0x56349cb38470 -> Node0x56349cb43670;
+	Node0x56349cb38470 -> Node0x56349cb45020;
+	Node0x56349cb38470 -> Node0x56349cb43fc0;
+	Node0x56349cb38470 -> Node0x56349cb43b20;
+	Node0x56349cb38470 -> Node0x56349cb5ee70;
+	Node0x56349cb38470 -> Node0x56349cb5eef0;
+	Node0x56349cb38470 -> Node0x56349cb3edf0;
+	Node0x56349cb38470 -> Node0x56349cb3f200;
+	Node0x56349cb3b730 [shape=record,label="{hypre_CAlloc}"];
+	Node0x56349cb3c310 [shape=record,label="{hypre_ParVectorCreate}"];
+	Node0x56349cb3d0c0 [shape=record,label="{hypre_ParVectorInitialize}"];
+	Node0x56349cb3e370 [shape=record,label="{hypre_ParVectorSetPartitioningOwner}"];
+	Node0x56349cb5ee70 [shape=record,label="{hypre_MPI_Comm_rank}"];
+	Node0x56349cb5eef0 [shape=record,label="{hypre_ParVectorSetRandomValues}"];
+	Node0x56349cb3edf0 [shape=record,label="{hypre_ParVectorSetConstantValues}"];
+	Node0x56349cb41750 [shape=record,label="{hypre_ParVectorDestroy}"];
+	Node0x56349cb42ae0 [shape=record,label="{hypre_Free}"];
+	Node0x56349cb3f200 [shape=record,label="{hypre_BoomerAMGRelax}"];
+	Node0x56349cb43670 [shape=record,label="{hypre_ParVectorInnerProd}"];
+	Node0x56349cb43b20 [shape=record,label="{hypre_ParVectorCopy}"];
+	Node0x56349cb43fc0 [shape=record,label="{llvm.fmuladd.f64}"];
+	Node0x56349cb45020 [shape=record,label="{hypre_ParCSRMatrixMatvec}"];
+	Node0x56349cb46fe0 [shape=record,label="{sqrt}"];
+	Node0x56349cb49000 [shape=record,label="{llvm.fabs.f64}"];
+	Node0x56349cb4d590 [shape=record,label="{hypre_Bisection}"];
+	Node0x56349cb4d590 -> Node0x56349cb49000;
+	Node0x56349cb4d590 -> Node0x56349cb43fc0;
+	Node0x56349cb4e5b0 [shape=record,label="{hypre_ParVectorAxpy}"];
+}

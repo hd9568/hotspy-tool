@@ -1,0 +1,24 @@
+digraph "CFG for '_ZN7FluenceD2Ev' function" {
+	label="CFG for '_ZN7FluenceD2Ev' function";
+
+	Node0x564271a28af0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %i = alloca i32, align 4\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  store i32 0, ptr %i, align 4\l  br label %for.cond\l}"];
+	Node0x564271a28af0 -> Node0x564271a28dd0[tooltip="entry -> for.cond\nProbability 100.00%" ];
+	Node0x564271a28dd0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.cond:\l|  %0 = load i32, ptr %i, align 4\l  %conv = sext i32 %0 to i64\l  %_domain = getelementptr inbounds %class.Fluence, ptr %this1, i32 0, i32 0\l  %call = call noundef i64 @_ZNKSt6vectorIP13FluenceDomainSaIS1_EE4sizeEv(ptr\l... noundef nonnull align 8 dereferenceable(24) %_domain) #3\l  %cmp = icmp ult i64 %conv, %call\l  br i1 %cmp, label %for.body, label %for.end\l|{<s0>T|<s1>F}}"];
+	Node0x564271a28dd0:s0 -> Node0x564271a29350[tooltip="for.cond -> for.body\nProbability 96.88%" ];
+	Node0x564271a28dd0:s1 -> Node0x564271a293d0[tooltip="for.cond -> for.end\nProbability 3.12%" ];
+	Node0x564271a29350 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.body:\l|  %_domain2 = getelementptr inbounds %class.Fluence, ptr %this1, i32 0, i32 0\l  %1 = load i32, ptr %i, align 4\l  %conv3 = sext i32 %1 to i64\l  %call4 = call noundef nonnull align 8 dereferenceable(8) ptr\l... @_ZNSt6vectorIP13FluenceDomainSaIS1_EEixEm(ptr noundef nonnull align 8\l... dereferenceable(24) %_domain2, i64 noundef %conv3) #3\l  %2 = load ptr, ptr %call4, align 8\l  %cmp5 = icmp ne ptr %2, null\l  br i1 %cmp5, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x564271a29350:s0 -> Node0x564271a29bd0[tooltip="for.body -> if.then\nProbability 62.50%" ];
+	Node0x564271a29350:s1 -> Node0x564271a29c40[tooltip="for.body -> if.end\nProbability 37.50%" ];
+	Node0x564271a29bd0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.then:\l|  %_domain6 = getelementptr inbounds %class.Fluence, ptr %this1, i32 0, i32 0\l  %3 = load i32, ptr %i, align 4\l  %conv7 = sext i32 %3 to i64\l  %call8 = call noundef nonnull align 8 dereferenceable(8) ptr\l... @_ZNSt6vectorIP13FluenceDomainSaIS1_EEixEm(ptr noundef nonnull align 8\l... dereferenceable(24) %_domain6, i64 noundef %conv7) #3\l  %4 = load ptr, ptr %call8, align 8\l  %isnull = icmp eq ptr %4, null\l  br i1 %isnull, label %delete.end, label %delete.notnull\l|{<s0>T|<s1>F}}"];
+	Node0x564271a29bd0:s0 -> Node0x564271a2a220[tooltip="if.then -> delete.end\nProbability 37.50%" ];
+	Node0x564271a29bd0:s1 -> Node0x564271a2a2a0[tooltip="if.then -> delete.notnull\nProbability 62.50%" ];
+	Node0x564271a2a2a0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{delete.notnull:\l|  call void @_ZN13FluenceDomainD2Ev(ptr noundef nonnull align 8\l... dereferenceable(24) %4) #3\l  call void @_ZdlPv(ptr noundef %4) #14\l  br label %delete.end\l}"];
+	Node0x564271a2a2a0 -> Node0x564271a2a220[tooltip="delete.notnull -> delete.end\nProbability 100.00%" ];
+	Node0x564271a2a220 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{delete.end:\l|  br label %if.end\l}"];
+	Node0x564271a2a220 -> Node0x564271a29c40[tooltip="delete.end -> if.end\nProbability 100.00%" ];
+	Node0x564271a29c40 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  br label %for.inc\l}"];
+	Node0x564271a29c40 -> Node0x564271a2a7c0[tooltip="if.end -> for.inc\nProbability 100.00%" ];
+	Node0x564271a2a7c0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{for.inc:\l|  %5 = load i32, ptr %i, align 4\l  %inc = add nsw i32 %5, 1\l  store i32 %inc, ptr %i, align 4\l  br label %for.cond, !llvm.loop !6\l}"];
+	Node0x564271a2a7c0 -> Node0x564271a28dd0[tooltip="for.inc -> for.cond\nProbability 100.00%" ];
+	Node0x564271a293d0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{for.end:\l|  %_domain9 = getelementptr inbounds %class.Fluence, ptr %this1, i32 0, i32 0\l  call void @_ZNSt6vectorIP13FluenceDomainSaIS1_EED2Ev(ptr noundef nonnull\l... align 8 dereferenceable(24) %_domain9) #3\l  ret void\l}"];
+}

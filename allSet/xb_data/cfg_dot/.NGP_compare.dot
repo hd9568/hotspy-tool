@@ -1,0 +1,17 @@
+digraph "CFG for 'NGP_compare' function" {
+	label="CFG for 'NGP_compare' function";
+
+	Node0x55bfd5c15160 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %retval = alloca i32, align 4\l  %a.addr = alloca ptr, align 8\l  %b.addr = alloca ptr, align 8\l  %A = alloca %struct.NuclideGridPoint, align 8\l  %B = alloca %struct.NuclideGridPoint, align 8\l  store ptr %a, ptr %a.addr, align 8\l  store ptr %b, ptr %b.addr, align 8\l  %0 = load ptr, ptr %a.addr, align 8\l  call void @llvm.memcpy.p0.p0.i64(ptr align 8 %A, ptr align 8 %0, i64 48, i1\l... false)\l  %1 = load ptr, ptr %b.addr, align 8\l  call void @llvm.memcpy.p0.p0.i64(ptr align 8 %B, ptr align 8 %1, i64 48, i1\l... false)\l  %energy = getelementptr inbounds %struct.NuclideGridPoint, ptr %A, i32 0,\l... i32 0\l  %2 = load double, ptr %energy, align 8\l  %energy1 = getelementptr inbounds %struct.NuclideGridPoint, ptr %B, i32 0,\l... i32 0\l  %3 = load double, ptr %energy1, align 8\l  %cmp = fcmp ogt double %2, %3\l  br i1 %cmp, label %if.then, label %if.else\l|{<s0>T|<s1>F}}"];
+	Node0x55bfd5c15160:s0 -> Node0x55bfd5c15eb0[tooltip="entry -> if.then\nProbability 50.00%" ];
+	Node0x55bfd5c15160:s1 -> Node0x55bfd5c15f20[tooltip="entry -> if.else\nProbability 50.00%" ];
+	Node0x55bfd5c15eb0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.then:\l|  store i32 1, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x55bfd5c15eb0 -> Node0x55bfd5c162e0[tooltip="if.then -> return\nProbability 100.00%" ];
+	Node0x55bfd5c15f20 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.else:\l|  %energy2 = getelementptr inbounds %struct.NuclideGridPoint, ptr %A, i32 0,\l... i32 0\l  %4 = load double, ptr %energy2, align 8\l  %energy3 = getelementptr inbounds %struct.NuclideGridPoint, ptr %B, i32 0,\l... i32 0\l  %5 = load double, ptr %energy3, align 8\l  %cmp4 = fcmp olt double %4, %5\l  br i1 %cmp4, label %if.then5, label %if.else6\l|{<s0>T|<s1>F}}"];
+	Node0x55bfd5c15f20:s0 -> Node0x55bfd5c16730[tooltip="if.else -> if.then5\nProbability 50.00%" ];
+	Node0x55bfd5c15f20:s1 -> Node0x55bfd5c16780[tooltip="if.else -> if.else6\nProbability 50.00%" ];
+	Node0x55bfd5c16730 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470" fontname="Courier",label="{if.then5:\l|  store i32 -1, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x55bfd5c16730 -> Node0x55bfd5c162e0[tooltip="if.then5 -> return\nProbability 100.00%" ];
+	Node0x55bfd5c16780 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470" fontname="Courier",label="{if.else6:\l|  store i32 0, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x55bfd5c16780 -> Node0x55bfd5c162e0[tooltip="if.else6 -> return\nProbability 100.00%" ];
+	Node0x55bfd5c162e0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{return:\l|  %6 = load i32, ptr %retval, align 4\l  ret i32 %6\l}"];
+}

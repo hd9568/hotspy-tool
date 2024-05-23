@@ -1,0 +1,5 @@
+digraph "CFG for '_ZZN12_GLOBAL__N_118checkCrossSectionsEP10MonteCarloRK10ParametersEN7XC_DataC2Ev' function" {
+	label="CFG for '_ZZN12_GLOBAL__N_118checkCrossSectionsEP10MonteCarloRK10ParametersEN7XC_DataC2Ev' function";
+
+	Node0x55dab497b280 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %absorption = getelementptr inbounds %struct.XC_Data, ptr %this1, i32 0, i32\l... 0\l  store double 0.000000e+00, ptr %absorption, align 8\l  %fission = getelementptr inbounds %struct.XC_Data, ptr %this1, i32 0, i32 1\l  store double 0.000000e+00, ptr %fission, align 8\l  %scatter = getelementptr inbounds %struct.XC_Data, ptr %this1, i32 0, i32 2\l  store double 0.000000e+00, ptr %scatter, align 8\l  ret void\l}"];
+}

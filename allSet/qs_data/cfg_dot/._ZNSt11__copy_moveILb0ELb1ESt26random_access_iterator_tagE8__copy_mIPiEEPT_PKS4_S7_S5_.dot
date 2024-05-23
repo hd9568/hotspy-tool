@@ -1,0 +1,10 @@
+digraph "CFG for '_ZNSt11__copy_moveILb0ELb1ESt26random_access_iterator_tagE8__copy_mIPiEEPT_PKS4_S7_S5_' function" {
+	label="CFG for '_ZNSt11__copy_moveILb0ELb1ESt26random_access_iterator_tagE8__copy_mIPiEEPT_PKS4_S7_S5_' function";
+
+	Node0x564619492320 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %__first.addr = alloca ptr, align 8\l  %__last.addr = alloca ptr, align 8\l  %__result.addr = alloca ptr, align 8\l  %_Num = alloca i64, align 8\l  store ptr %__first, ptr %__first.addr, align 8\l  store ptr %__last, ptr %__last.addr, align 8\l  store ptr %__result, ptr %__result.addr, align 8\l  %0 = load ptr, ptr %__last.addr, align 8\l  %1 = load ptr, ptr %__first.addr, align 8\l  %sub.ptr.lhs.cast = ptrtoint ptr %0 to i64\l  %sub.ptr.rhs.cast = ptrtoint ptr %1 to i64\l  %sub.ptr.sub = sub i64 %sub.ptr.lhs.cast, %sub.ptr.rhs.cast\l  %sub.ptr.div = sdiv exact i64 %sub.ptr.sub, 8\l  store i64 %sub.ptr.div, ptr %_Num, align 8\l  %2 = load i64, ptr %_Num, align 8\l  %tobool = icmp ne i64 %2, 0\l  br i1 %tobool, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x564619492320:s0 -> Node0x564619492eb0[tooltip="entry -> if.then\nProbability 62.50%" ];
+	Node0x564619492320:s1 -> Node0x564619492f20[tooltip="entry -> if.end\nProbability 37.50%" ];
+	Node0x564619492eb0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.then:\l|  %3 = load ptr, ptr %__result.addr, align 8\l  %4 = load ptr, ptr %__first.addr, align 8\l  %5 = load i64, ptr %_Num, align 8\l  %mul = mul i64 8, %5\l  call void @llvm.memmove.p0.p0.i64(ptr align 8 %3, ptr align 8 %4, i64 %mul,\l... i1 false)\l  br label %if.end\l}"];
+	Node0x564619492eb0 -> Node0x564619492f20[tooltip="if.then -> if.end\nProbability 100.00%" ];
+	Node0x564619492f20 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  %6 = load ptr, ptr %__result.addr, align 8\l  %7 = load i64, ptr %_Num, align 8\l  %add.ptr = getelementptr inbounds ptr, ptr %6, i64 %7\l  ret ptr %add.ptr\l}"];
+}

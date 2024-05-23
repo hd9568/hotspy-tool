@@ -1,0 +1,5 @@
+digraph "CFG for '_ZNKSt12_Vector_baseIdSaIdEE13get_allocatorEv' function" {
+	label="CFG for '_ZNKSt12_Vector_baseIdSaIdEE13get_allocatorEv' function";
+
+	Node0x56307d6bf730 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %result.ptr = alloca ptr, align 8\l  %this.addr = alloca ptr, align 8\l  store ptr %agg.result, ptr %result.ptr, align 8\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %call = call noundef nonnull align 1 dereferenceable(1) ptr\l... @_ZNKSt12_Vector_baseIdSaIdEE19_M_get_Tp_allocatorEv(ptr noundef nonnull\l... align 8 dereferenceable(24) %this1) #3\l  call void @_ZNSaIdEC2ERKS_(ptr noundef nonnull align 1 dereferenceable(1)\l... %agg.result, ptr noundef nonnull align 1 dereferenceable(1) %call) #3\l  ret void\l}"];
+}

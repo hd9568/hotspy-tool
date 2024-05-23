@@ -1,0 +1,19 @@
+digraph "CFG for 'hypre_GetSimpleThreadPartition' function" {
+	label="CFG for 'hypre_GetSimpleThreadPartition' function";
+
+	Node0x56424be55710 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %begin.addr = alloca ptr, align 8\l  %end.addr = alloca ptr, align 8\l  %n.addr = alloca i32, align 4\l  %num_threads = alloca i32, align 4\l  %my_thread_num = alloca i32, align 4\l  %n_per_thread = alloca i32, align 4\l  store ptr %begin, ptr %begin.addr, align 8\l  store ptr %end, ptr %end.addr, align 8\l  store i32 %n, ptr %n.addr, align 4\l  store i32 1, ptr %num_threads, align 4\l  store i32 0, ptr %my_thread_num, align 4\l  %0 = load i32, ptr %n.addr, align 4\l  %1 = load i32, ptr %num_threads, align 4\l  %add = add nsw i32 %0, %1\l  %sub = sub nsw i32 %add, 1\l  %2 = load i32, ptr %num_threads, align 4\l  %div = sdiv i32 %sub, %2\l  store i32 %div, ptr %n_per_thread, align 4\l  %3 = load i32, ptr %n_per_thread, align 4\l  %4 = load i32, ptr %my_thread_num, align 4\l  %mul = mul nsw i32 %3, %4\l  %5 = load i32, ptr %n.addr, align 4\l  %cmp = icmp slt i32 %mul, %5\l  br i1 %cmp, label %cond.true, label %cond.false\l|{<s0>T|<s1>F}}"];
+	Node0x56424be55710:s0 -> Node0x56424be58800[tooltip="entry -> cond.true\nProbability 50.00%" ];
+	Node0x56424be55710:s1 -> Node0x56424be58880[tooltip="entry -> cond.false\nProbability 50.00%" ];
+	Node0x56424be58800 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{cond.true:\l|  %6 = load i32, ptr %n_per_thread, align 4\l  %7 = load i32, ptr %my_thread_num, align 4\l  %mul1 = mul nsw i32 %6, %7\l  br label %cond.end\l}"];
+	Node0x56424be58800 -> Node0x56424be58b60[tooltip="cond.true -> cond.end\nProbability 100.00%" ];
+	Node0x56424be58880 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{cond.false:\l|  %8 = load i32, ptr %n.addr, align 4\l  br label %cond.end\l}"];
+	Node0x56424be58880 -> Node0x56424be58b60[tooltip="cond.false -> cond.end\nProbability 100.00%" ];
+	Node0x56424be58b60 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{cond.end:\l|  %cond = phi i32 [ %mul1, %cond.true ], [ %8, %cond.false ]\l  %9 = load ptr, ptr %begin.addr, align 8\l  store i32 %cond, ptr %9, align 4\l  %10 = load ptr, ptr %begin.addr, align 8\l  %11 = load i32, ptr %10, align 4\l  %12 = load i32, ptr %n_per_thread, align 4\l  %add2 = add nsw i32 %11, %12\l  %13 = load i32, ptr %n.addr, align 4\l  %cmp3 = icmp slt i32 %add2, %13\l  br i1 %cmp3, label %cond.true4, label %cond.false6\l|{<s0>T|<s1>F}}"];
+	Node0x56424be58b60:s0 -> Node0x56424be591e0[tooltip="cond.end -> cond.true4\nProbability 50.00%" ];
+	Node0x56424be58b60:s1 -> Node0x56424be592c0[tooltip="cond.end -> cond.false6\nProbability 50.00%" ];
+	Node0x56424be591e0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{cond.true4:\l|  %14 = load ptr, ptr %begin.addr, align 8\l  %15 = load i32, ptr %14, align 4\l  %16 = load i32, ptr %n_per_thread, align 4\l  %add5 = add nsw i32 %15, %16\l  br label %cond.end7\l}"];
+	Node0x56424be591e0 -> Node0x56424be599a0[tooltip="cond.true4 -> cond.end7\nProbability 100.00%" ];
+	Node0x56424be592c0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{cond.false6:\l|  %17 = load i32, ptr %n.addr, align 4\l  br label %cond.end7\l}"];
+	Node0x56424be592c0 -> Node0x56424be599a0[tooltip="cond.false6 -> cond.end7\nProbability 100.00%" ];
+	Node0x56424be599a0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{cond.end7:\l|  %cond8 = phi i32 [ %add5, %cond.true4 ], [ %17, %cond.false6 ]\l  %18 = load ptr, ptr %end.addr, align 8\l  store i32 %cond8, ptr %18, align 4\l  ret void\l}"];
+}

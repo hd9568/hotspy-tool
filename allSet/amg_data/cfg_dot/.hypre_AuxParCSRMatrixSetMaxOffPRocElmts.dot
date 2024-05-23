@@ -1,0 +1,5 @@
+digraph "CFG for 'hypre_AuxParCSRMatrixSetMaxOffPRocElmts' function" {
+	label="CFG for 'hypre_AuxParCSRMatrixSetMaxOffPRocElmts' function";
+
+	Node0x55cc6138b810 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %matrix.addr = alloca ptr, align 8\l  %max_off_proc_elmts.addr = alloca i32, align 4\l  %ierr = alloca i32, align 4\l  store ptr %matrix, ptr %matrix.addr, align 8\l  store i32 %max_off_proc_elmts, ptr %max_off_proc_elmts.addr, align 4\l  store i32 0, ptr %ierr, align 4\l  %0 = load i32, ptr %max_off_proc_elmts.addr, align 4\l  %1 = load ptr, ptr %matrix.addr, align 8\l  %max_off_proc_elmts1 = getelementptr inbounds %struct.hypre_AuxParCSRMatrix,\l... ptr %1, i32 0, i32 9\l  store i32 %0, ptr %max_off_proc_elmts1, align 8\l  %2 = load i32, ptr %ierr, align 4\l  ret i32 %2\l}"];
+}

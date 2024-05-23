@@ -1,0 +1,5 @@
+digraph "CFG for '_ZNSt15_Deque_iteratorImRmPmE14_S_buffer_sizeEv' function" {
+	label="CFG for '_ZNSt15_Deque_iteratorImRmPmE14_S_buffer_sizeEv' function";
+
+	Node0x560dc9fefc80 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %call = call noundef i64 @_ZSt16__deque_buf_sizem(i64 noundef 8)\l  ret i64 %call\l}"];
+}

@@ -1,0 +1,13 @@
+digraph "Call graph: blts_vec.ll" {
+	label="Call graph: blts_vec.ll";
+
+	Node0x55e5380c0630 [shape=record,label="{blts_}"];
+	Node0x55e5380c0630 -> Node0x55e5380c4950;
+	Node0x55e5380c0630 -> Node0x55e5380c4e10;
+	Node0x55e5380c0630 -> Node0x55e5380c4e90;
+	Node0x55e5380c4950 [shape=record,label="{timer_start_}"];
+	Node0x55e5380c4e10 [shape=record,label="{exchange_1_}"];
+	Node0x55e5380c4e90 [shape=record,label="{timer_stop_}"];
+	Node0x55e5380c5140 [shape=record,label="{llvm.stacksave.p0}"];
+	Node0x55e5380c5310 [shape=record,label="{llvm.stackrestore.p0}"];
+}

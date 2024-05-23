@@ -1,0 +1,5 @@
+digraph "CFG for 'time_get_cpu_seconds_' function" {
+	label="CFG for 'time_get_cpu_seconds_' function";
+
+	Node0x556512b39ac0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %call = call double @time_getCPUSeconds()\l  ret double %call\l}"];
+}

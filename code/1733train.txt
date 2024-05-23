@@ -1,0 +1,50 @@
+
+The number of function which is only with one node is 3996 ,80 of that is Hot
+4420 is ignored, 65 of which is hot
+dataloader is done! the final number is 3606
+Train dataloader's time is 0.8333333333333334 mins
+========== All training data has already been ready! ===========
+TRAIN_HOT: 0.33943427620632277
+TEST_HOT 0.2631578947368421
+Epoch [1/20], Loss: 0.14182
+| TN=6 FP=8 |
+| FN=1 TP=4 |
+test accuracy: 52.63%
+precision: 33.33%
+recall: 80.00%
+model_3_05191733_0.pth test accuracy: 52.63%
+Epoch [2/20], Loss: 0.00645
+| TN=14 FP=0 |
+| FN=3 TP=2 |
+test accuracy: 84.21%
+precision: 100.00%
+recall: 40.00%
+model_3_05191733_1.pth test accuracy: 84.21%
+Epoch [3/20], Loss: 0.05008
+| TN=13 FP=1 |
+| FN=3 TP=2 |
+test accuracy: 78.95%
+precision: 66.67%
+recall: 40.00%
+model_3_05191733_2.pth test accuracy: 78.95%
+Epoch [4/20], Loss: 0.00112
+| TN=11 FP=3 |
+| FN=1 TP=4 |
+test accuracy: 78.95%
+precision: 57.14%
+recall: 80.00%
+model_3_05191733_3.pth test accuracy: 78.95%
+Epoch [5/20], Loss: 0.00040
+| TN=11 FP=3 |
+| FN=2 TP=3 |
+test accuracy: 73.68%
+precision: 50.00%
+recall: 60.00%
+model_3_05191733_4.pth test accuracy: 73.68%
+Epoch [6/20], Loss: 0.00008
+| TN=13 FP=1 |
+| FN=3 TP=2 |
+test accuracy: 78.95%
+precision: 66.67%
+recall: 40.00%
+model_3_05191733_5.pth test accuracy: 78.95%

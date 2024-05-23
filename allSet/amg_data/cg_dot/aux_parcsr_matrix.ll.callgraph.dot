@@ -1,0 +1,13 @@
+digraph "Call graph: aux_parcsr_matrix.ll" {
+	label="Call graph: aux_parcsr_matrix.ll";
+
+	Node0x5602bdcf96d0 [shape=record,label="{hypre_AuxParCSRMatrixCreate}"];
+	Node0x5602bdcf96d0 -> Node0x5602bdd05850;
+	Node0x5602bdd05850 [shape=record,label="{hypre_CAlloc}"];
+	Node0x5602bdd05910 [shape=record,label="{hypre_AuxParCSRMatrixDestroy}"];
+	Node0x5602bdd05910 -> Node0x5602bdce3910;
+	Node0x5602bdce3910 [shape=record,label="{hypre_Free}"];
+	Node0x5602bdcebbc0 [shape=record,label="{hypre_AuxParCSRMatrixInitialize}"];
+	Node0x5602bdcebbc0 -> Node0x5602bdd05850;
+	Node0x5602bdd05620 [shape=record,label="{hypre_AuxParCSRMatrixSetMaxOffPRocElmts}"];
+}

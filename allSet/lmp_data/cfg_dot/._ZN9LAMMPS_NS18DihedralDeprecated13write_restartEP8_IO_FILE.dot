@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN9LAMMPS_NS18DihedralDeprecated13write_restartEP8_IO_FILE' function" {
+	label="CFG for '_ZN9LAMMPS_NS18DihedralDeprecated13write_restartEP8_IO_FILE' function";
+
+	Node0x564405590d90 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %.addr = alloca ptr, align 8\l  store ptr %this, ptr %this.addr, align 8\l  store ptr %0, ptr %.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  ret void\l}"];
+}

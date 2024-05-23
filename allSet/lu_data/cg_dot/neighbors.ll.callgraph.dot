@@ -1,0 +1,7 @@
+digraph "Call graph: neighbors.ll" {
+	label="Call graph: neighbors.ll";
+
+	Node0x55a26f8f0c60 [shape=record,label="{neighbors_}"];
+	Node0x55a26f8f0d10 [shape=record,label="{llvm.stacksave.p0}"];
+	Node0x55a26f8f0d90 [shape=record,label="{llvm.stackrestore.p0}"];
+}

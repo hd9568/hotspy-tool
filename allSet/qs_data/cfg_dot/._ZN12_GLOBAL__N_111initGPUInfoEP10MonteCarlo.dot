@@ -1,0 +1,12 @@
+digraph "CFG for '_ZN12_GLOBAL__N_111initGPUInfoEP10MonteCarlo' function" {
+	label="CFG for '_ZN12_GLOBAL__N_111initGPUInfoEP10MonteCarlo' function";
+
+	Node0x55dab46820d0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %monteCarlo.addr = alloca ptr, align 8\l  %Ngpus = alloca i32, align 4\l  store ptr %monteCarlo, ptr %monteCarlo.addr, align 8\l  store i32 0, ptr %Ngpus, align 4\l  %0 = load i32, ptr %Ngpus, align 4\l  %cmp = icmp ne i32 %0, 0\l  br i1 %cmp, label %if.then, label %if.else\l|{<s0>T|<s1>F}}"];
+	Node0x55dab46820d0:s0 -> Node0x55dab4682370[tooltip="entry -> if.then\nProbability 62.50%" ];
+	Node0x55dab46820d0:s1 -> Node0x55dab46823e0[tooltip="entry -> if.else\nProbability 37.50%" ];
+	Node0x55dab4682370 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.then:\l|  br label %if.end\l}"];
+	Node0x55dab4682370 -> Node0x55dab4682500[tooltip="if.then -> if.end\nProbability 100.00%" ];
+	Node0x55dab46823e0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{if.else:\l|  %1 = load ptr, ptr %monteCarlo.addr, align 8\l  %processor_info = getelementptr inbounds %class.MonteCarlo, ptr %1, i32 0,\l... i32 8\l  %2 = load ptr, ptr %processor_info, align 8\l  %use_gpu = getelementptr inbounds %class.MC_Processor_Info, ptr %2, i32 0,\l... i32 3\l  store i32 0, ptr %use_gpu, align 4\l  %3 = load ptr, ptr %monteCarlo.addr, align 8\l  %processor_info1 = getelementptr inbounds %class.MonteCarlo, ptr %3, i32 0,\l... i32 8\l  %4 = load ptr, ptr %processor_info1, align 8\l  %gpu_id = getelementptr inbounds %class.MC_Processor_Info, ptr %4, i32 0,\l... i32 4\l  store i32 -1, ptr %gpu_id, align 8\l  br label %if.end\l}"];
+	Node0x55dab46823e0 -> Node0x55dab4682500[tooltip="if.else -> if.end\nProbability 100.00%" ];
+	Node0x55dab4682500 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  ret void\l}"];
+}

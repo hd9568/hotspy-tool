@@ -1,0 +1,5 @@
+digraph "CFG for '_ZSt4swapI9FacetPairENSt9enable_ifIXsr6__and_ISt6__not_ISt15__is_tuple_likeIT_EESt21is_move_constructibleIS4_ESt18is_move_assignableIS4_EEE5valueEvE4typeERS4_SD_' function" {
+	label="CFG for '_ZSt4swapI9FacetPairENSt9enable_ifIXsr6__and_ISt6__not_ISt15__is_tuple_likeIT_EESt21is_move_constructibleIS4_ESt18is_move_assignableIS4_EEE5valueEvE4typeERS4_SD_' function";
+
+	Node0x5606e010d9a0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %__a.addr = alloca ptr, align 8\l  %__b.addr = alloca ptr, align 8\l  %__tmp = alloca %class.FacetPair, align 4\l  store ptr %__a, ptr %__a.addr, align 8\l  store ptr %__b, ptr %__b.addr, align 8\l  %0 = load ptr, ptr %__a.addr, align 8\l  call void @llvm.memcpy.p0.p0.i64(ptr align 4 %__tmp, ptr align 4 %0, i64 32,\l... i1 false)\l  %1 = load ptr, ptr %__b.addr, align 8\l  %2 = load ptr, ptr %__a.addr, align 8\l  call void @llvm.memcpy.p0.p0.i64(ptr align 4 %2, ptr align 4 %1, i64 32, i1\l... false)\l  %3 = load ptr, ptr %__b.addr, align 8\l  call void @llvm.memcpy.p0.p0.i64(ptr align 4 %3, ptr align 4 %__tmp, i64 32,\l... i1 false)\l  ret void\l}"];
+}

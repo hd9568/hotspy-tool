@@ -1,0 +1,5 @@
+digraph "CFG for '__cxx_global_var_init.15' function" {
+	label="CFG for '__cxx_global_var_init.15' function";
+
+	Node0x5651cd77f500 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %call = call i64 @_ZNSt6chrono3_V212steady_clock3nowEv() #4\l  store i64 %call, ptr @_ZL12initial_time, align 8\l  ret void\l}"];
+}

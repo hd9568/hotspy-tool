@@ -1,0 +1,10 @@
+digraph "CFG for '_ZNK3fmt6v9_lmp6detail9tm_writerINS0_8appenderEcE16split_year_lowerEx' function" {
+	label="CFG for '_ZNK3fmt6v9_lmp6detail9tm_writerINS0_8appenderEcE16split_year_lowerEx' function";
+
+	Node0x5584169d0ce0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %year.addr = alloca i64, align 8\l  %l = alloca i64, align 8\l  store ptr %this, ptr %this.addr, align 8\l  store i64 %year, ptr %year.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %0 = load i64, ptr %year.addr, align 8\l  %rem = srem i64 %0, 100\l  store i64 %rem, ptr %l, align 8\l  %1 = load i64, ptr %l, align 8\l  %cmp = icmp slt i64 %1, 0\l  br i1 %cmp, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x5584169d0ce0:s0 -> Node0x5584169d0d30[tooltip="entry -> if.then\nProbability 37.50%" ];
+	Node0x5584169d0ce0:s1 -> Node0x5584169d15b0[tooltip="entry -> if.end\nProbability 62.50%" ];
+	Node0x5584169d0d30 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{if.then:\l|  %2 = load i64, ptr %l, align 8\l  %sub = sub nsw i64 0, %2\l  store i64 %sub, ptr %l, align 8\l  br label %if.end\l}"];
+	Node0x5584169d0d30 -> Node0x5584169d15b0[tooltip="if.then -> if.end\nProbability 100.00%" ];
+	Node0x5584169d15b0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  %3 = load i64, ptr %l, align 8\l  %conv = trunc i64 %3 to i32\l  ret i32 %conv\l}"];
+}

@@ -1,0 +1,19 @@
+digraph "CFG for 'grid_search' function" {
+	label="CFG for 'grid_search' function";
+
+	Node0x564d03c15490 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{entry:\l|  %n.addr = alloca i64, align 8\l  %quarry.addr = alloca double, align 8\l  %A.addr = alloca ptr, align 8\l  %lowerLimit = alloca i64, align 8\l  %upperLimit = alloca i64, align 8\l  %examinationPoint = alloca i64, align 8\l  %length = alloca i64, align 8\l  store i64 %n, ptr %n.addr, align 8\l  store double %quarry, ptr %quarry.addr, align 8\l  store ptr %A, ptr %A.addr, align 8\l  store i64 0, ptr %lowerLimit, align 8\l  %0 = load i64, ptr %n.addr, align 8\l  %sub = sub nsw i64 %0, 1\l  store i64 %sub, ptr %upperLimit, align 8\l  %1 = load i64, ptr %upperLimit, align 8\l  %2 = load i64, ptr %lowerLimit, align 8\l  %sub1 = sub nsw i64 %1, %2\l  store i64 %sub1, ptr %length, align 8\l  br label %while.cond\l}"];
+	Node0x564d03c15490 -> Node0x564d03c16140[tooltip="entry -> while.cond\nProbability 100.00%" ];
+	Node0x564d03c16140 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{while.cond:\l|  %3 = load i64, ptr %length, align 8\l  %cmp = icmp sgt i64 %3, 1\l  br i1 %cmp, label %while.body, label %while.end\l|{<s0>T|<s1>F}}"];
+	Node0x564d03c16140:s0 -> Node0x564d03c16360[tooltip="while.cond -> while.body\nProbability 96.88%" ];
+	Node0x564d03c16140:s1 -> Node0x564d03c163b0[tooltip="while.cond -> while.end\nProbability 3.12%" ];
+	Node0x564d03c16360 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{while.body:\l|  %4 = load i64, ptr %lowerLimit, align 8\l  %5 = load i64, ptr %length, align 8\l  %div = sdiv i64 %5, 2\l  %add = add nsw i64 %4, %div\l  store i64 %add, ptr %examinationPoint, align 8\l  %6 = load ptr, ptr %A.addr, align 8\l  %7 = load i64, ptr %examinationPoint, align 8\l  %arrayidx = getelementptr inbounds double, ptr %6, i64 %7\l  %8 = load double, ptr %arrayidx, align 8\l  %9 = load double, ptr %quarry.addr, align 8\l  %cmp2 = fcmp ogt double %8, %9\l  br i1 %cmp2, label %if.then, label %if.else\l|{<s0>T|<s1>F}}"];
+	Node0x564d03c16360:s0 -> Node0x564d03c16b90[tooltip="while.body -> if.then\nProbability 50.00%" ];
+	Node0x564d03c16360:s1 -> Node0x564d03c16c00[tooltip="while.body -> if.else\nProbability 50.00%" ];
+	Node0x564d03c16b90 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.then:\l|  %10 = load i64, ptr %examinationPoint, align 8\l  store i64 %10, ptr %upperLimit, align 8\l  br label %if.end\l}"];
+	Node0x564d03c16b90 -> Node0x564d03c16e70[tooltip="if.then -> if.end\nProbability 100.00%" ];
+	Node0x564d03c16c00 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.else:\l|  %11 = load i64, ptr %examinationPoint, align 8\l  store i64 %11, ptr %lowerLimit, align 8\l  br label %if.end\l}"];
+	Node0x564d03c16c00 -> Node0x564d03c16e70[tooltip="if.else -> if.end\nProbability 100.00%" ];
+	Node0x564d03c16e70 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  %12 = load i64, ptr %upperLimit, align 8\l  %13 = load i64, ptr %lowerLimit, align 8\l  %sub3 = sub nsw i64 %12, %13\l  store i64 %sub3, ptr %length, align 8\l  br label %while.cond, !llvm.loop !6\l}"];
+	Node0x564d03c16e70 -> Node0x564d03c16140[tooltip="if.end -> while.cond\nProbability 100.00%" ];
+	Node0x564d03c163b0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{while.end:\l|  %14 = load i64, ptr %lowerLimit, align 8\l  ret i64 %14\l}"];
+}

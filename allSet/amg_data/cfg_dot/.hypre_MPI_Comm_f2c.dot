@@ -1,0 +1,5 @@
+digraph "CFG for 'hypre_MPI_Comm_f2c' function" {
+	label="CFG for 'hypre_MPI_Comm_f2c' function";
+
+	Node0x5555d661a9e0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %comm.addr = alloca i32, align 4\l  store i32 %comm, ptr %comm.addr, align 4\l  %0 = load i32, ptr %comm.addr, align 4\l  %conv = sext i32 %0 to i64\l  %1 = inttoptr i64 %conv to ptr\l  ret ptr %1\l}"];
+}

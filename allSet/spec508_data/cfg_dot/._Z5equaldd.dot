@@ -1,0 +1,12 @@
+digraph "CFG for '_Z5equaldd' function" {
+	label="CFG for '_Z5equaldd' function";
+
+	Node0x5606a9be54d0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %x.addr = alloca double, align 8\l  %y.addr = alloca double, align 8\l  %d = alloca double, align 8\l  store double %x, ptr %x.addr, align 8\l  store double %y, ptr %y.addr, align 8\l  %0 = load double, ptr %x.addr, align 8\l  %1 = load double, ptr %y.addr, align 8\l  %sub = fsub double %0, %1\l  store double %sub, ptr %d, align 8\l  %2 = load double, ptr %d, align 8\l  %cmp = fcmp ogt double %2, 1.000000e-05\l  br i1 %cmp, label %if.then, label %lor.lhs.false\l|{<s0>T|<s1>F}}"];
+	Node0x5606a9be54d0:s0 -> Node0x5606a9be6470[tooltip="entry -> if.then\nProbability 0.00%" ];
+	Node0x5606a9be54d0:s1 -> Node0x5606a9be64e0[tooltip="entry -> lor.lhs.false\nProbability 100.00%" ];
+	Node0x5606a9be64e0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{lor.lhs.false:\l|  %3 = load double, ptr %d, align 8\l  %cmp1 = fcmp olt double %3, -1.000000e-05\l  br i1 %cmp1, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x5606a9be64e0:s0 -> Node0x5606a9be6470[tooltip="lor.lhs.false -> if.then\nProbability 0.00%" ];
+	Node0x5606a9be64e0:s1 -> Node0x5606a9be6780[tooltip="lor.lhs.false -> if.end\nProbability 100.00%" ];
+	Node0x5606a9be6470 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f6bfa670" fontname="Courier",label="{if.then:\l|  %4 = load double, ptr %d, align 8\l  %call = call i32 (ptr, ...) @printf(ptr noundef @.str.8, double noundef %4)\l  call void @exit(i32 noundef -10) #6\l  unreachable\l}"];
+	Node0x5606a9be6780 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  ret void\l}"];
+}

@@ -1,0 +1,5 @@
+digraph "CFG for 'zwgl_' function" {
+	label="CFG for 'zwgl_' function";
+
+	Node0x55ec172e36d0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{3:\l|  %4 = alloca float, i64 1, align 4\l  %5 = alloca float, i64 1, align 4\l  store float 0.000000e+00, ptr %4, align 4\l  store float 0.000000e+00, ptr %5, align 4\l  call void @zwgj_(ptr %0, ptr %1, ptr %2, ptr %4, ptr %5)\l  ret void\l}"];
+}

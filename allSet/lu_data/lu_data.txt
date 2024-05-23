@@ -1,0 +1,16 @@
+exact_ 1
+jacld_ 1
+jacu_ 1
+timer_clear_ 0
+setbv_ 0
+setiv_ 1
+timer_start_ 0
+timer_stop_ 0
+timer_read_ 0
+nodedim_ 0
+proc_grid_ 0
+neighbors_ 0
+subdomain_ 0
+setcoeff_ 0
+verify_ 0
+print_results_ 0

@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN3fmt6v9_lmp6detail9max_valueIiEET_v' function" {
+	label="CFG for '_ZN3fmt6v9_lmp6detail9max_valueIiEET_v' function";
+
+	Node0x556bfeb18d40 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %call = call noundef i32 @_ZNSt14numeric_limitsIiE3maxEv() #3\l  ret i32 %call\l}"];
+}

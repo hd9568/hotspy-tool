@@ -1,0 +1,12 @@
+digraph "CFG for '_ZNSt12_Vector_baseIPN9LAMMPS_NS12NeighRequestESaIS2_EE11_M_allocateEm' function" {
+	label="CFG for '_ZNSt12_Vector_baseIPN9LAMMPS_NS12NeighRequestESaIS2_EE11_M_allocateEm' function";
+
+	Node0x5563be1aca30 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %__n.addr = alloca i64, align 8\l  store ptr %this, ptr %this.addr, align 8\l  store i64 %__n, ptr %__n.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %0 = load i64, ptr %__n.addr, align 8\l  %cmp = icmp ne i64 %0, 0\l  br i1 %cmp, label %cond.true, label %cond.false\l|{<s0>T|<s1>F}}"];
+	Node0x5563be1aca30:s0 -> Node0x5563be1aca80[tooltip="entry -> cond.true\nProbability 62.50%" ];
+	Node0x5563be1aca30:s1 -> Node0x5563be1ad130[tooltip="entry -> cond.false\nProbability 37.50%" ];
+	Node0x5563be1aca80 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{cond.true:\l|  %_M_impl = getelementptr inbounds %\"struct.std::_Vector_base.55\", ptr\l... %this1, i32 0, i32 0\l  %1 = load i64, ptr %__n.addr, align 8\l  %call = call noundef ptr\l... @_ZNSt16allocator_traitsISaIPN9LAMMPS_NS12NeighRequestEEE8allocateERS3_m(ptr\l... noundef nonnull align 1 dereferenceable(1) %_M_impl, i64 noundef %1)\l  br label %cond.end\l}"];
+	Node0x5563be1aca80 -> Node0x5563be1ad420[tooltip="cond.true -> cond.end\nProbability 100.00%" ];
+	Node0x5563be1ad130 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{cond.false:\l|  br label %cond.end\l}"];
+	Node0x5563be1ad130 -> Node0x5563be1ad420[tooltip="cond.false -> cond.end\nProbability 100.00%" ];
+	Node0x5563be1ad420 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{cond.end:\l|  %cond = phi ptr [ %call, %cond.true ], [ null, %cond.false ]\l  ret ptr %cond\l}"];
+}

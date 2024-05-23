@@ -1,0 +1,5 @@
+digraph "CFG for '_ZL8finalizev' function" {
+	label="CFG for '_ZL8finalizev' function";
+
+	Node0x5595cee523a0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  call void @lammps_kokkos_finalize()\l  call void @lammps_python_finalize()\l  ret void\l}"];
+}

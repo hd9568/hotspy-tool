@@ -1,0 +1,28 @@
+digraph "CFG for 'hypre_BinarySearch2' function" {
+	label="CFG for 'hypre_BinarySearch2' function";
+
+	Node0x5562f0b4c650 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d24b4070" fontname="Courier",label="{entry:\l|  %retval = alloca i32, align 4\l  %list.addr = alloca ptr, align 8\l  %value.addr = alloca i32, align 4\l  %low.addr = alloca i32, align 4\l  %high.addr = alloca i32, align 4\l  %spot.addr = alloca ptr, align 8\l  %m = alloca i32, align 4\l  store ptr %list, ptr %list.addr, align 8\l  store i32 %value, ptr %value.addr, align 4\l  store i32 %low, ptr %low.addr, align 4\l  store i32 %high, ptr %high.addr, align 4\l  store ptr %spot, ptr %spot.addr, align 8\l  br label %while.cond\l}"];
+	Node0x5562f0b4c650 -> Node0x5562f0b4db30[tooltip="entry -> while.cond\nProbability 100.00%" ];
+	Node0x5562f0b4db30 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{while.cond:\l|  %0 = load i32, ptr %low.addr, align 4\l  %1 = load i32, ptr %high.addr, align 4\l  %cmp = icmp sle i32 %0, %1\l  br i1 %cmp, label %while.body, label %while.end\l|{<s0>T|<s1>F}}"];
+	Node0x5562f0b4db30:s0 -> Node0x5562f0b4ddd0[tooltip="while.cond -> while.body\nProbability 96.88%" ];
+	Node0x5562f0b4db30:s1 -> Node0x5562f0b4de50[tooltip="while.cond -> while.end\nProbability 3.12%" ];
+	Node0x5562f0b4ddd0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{while.body:\l|  %2 = load i32, ptr %low.addr, align 4\l  %3 = load i32, ptr %high.addr, align 4\l  %4 = load i32, ptr %low.addr, align 4\l  %sub = sub nsw i32 %3, %4\l  %div = sdiv i32 %sub, 2\l  %add = add nsw i32 %2, %div\l  store i32 %add, ptr %m, align 4\l  %5 = load i32, ptr %value.addr, align 4\l  %6 = load ptr, ptr %list.addr, align 8\l  %7 = load i32, ptr %m, align 4\l  %idxprom = sext i32 %7 to i64\l  %arrayidx = getelementptr inbounds i32, ptr %6, i64 %idxprom\l  %8 = load i32, ptr %arrayidx, align 4\l  %cmp1 = icmp slt i32 %5, %8\l  br i1 %cmp1, label %if.then, label %if.else\l|{<s0>T|<s1>F}}"];
+	Node0x5562f0b4ddd0:s0 -> Node0x5562f0b4e7c0[tooltip="while.body -> if.then\nProbability 50.00%" ];
+	Node0x5562f0b4ddd0:s1 -> Node0x5562f0b4e830[tooltip="while.body -> if.else\nProbability 50.00%" ];
+	Node0x5562f0b4e7c0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.then:\l|  %9 = load i32, ptr %m, align 4\l  %sub2 = sub nsw i32 %9, 1\l  store i32 %sub2, ptr %high.addr, align 4\l  br label %if.end9\l}"];
+	Node0x5562f0b4e7c0 -> Node0x5562f0b4ee40[tooltip="if.then -> if.end9\nProbability 100.00%" ];
+	Node0x5562f0b4e830 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.else:\l|  %10 = load i32, ptr %value.addr, align 4\l  %11 = load ptr, ptr %list.addr, align 8\l  %12 = load i32, ptr %m, align 4\l  %idxprom3 = sext i32 %12 to i64\l  %arrayidx4 = getelementptr inbounds i32, ptr %11, i64 %idxprom3\l  %13 = load i32, ptr %arrayidx4, align 4\l  %cmp5 = icmp sgt i32 %10, %13\l  br i1 %cmp5, label %if.then6, label %if.else8\l|{<s0>T|<s1>F}}"];
+	Node0x5562f0b4e830:s0 -> Node0x5562f0b4f340[tooltip="if.else -> if.then6\nProbability 96.88%" ];
+	Node0x5562f0b4e830:s1 -> Node0x5562f0b4f3c0[tooltip="if.else -> if.else8\nProbability 3.12%" ];
+	Node0x5562f0b4f340 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.then6:\l|  %14 = load i32, ptr %m, align 4\l  %add7 = add nsw i32 %14, 1\l  store i32 %add7, ptr %low.addr, align 4\l  br label %if.end\l}"];
+	Node0x5562f0b4f340 -> Node0x5562f0b4f6c0[tooltip="if.then6 -> if.end\nProbability 100.00%" ];
+	Node0x5562f0b4f3c0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#dc5d4a70" fontname="Courier",label="{if.else8:\l|  %15 = load i32, ptr %m, align 4\l  %16 = load ptr, ptr %spot.addr, align 8\l  store i32 %15, ptr %16, align 4\l  %17 = load i32, ptr %m, align 4\l  store i32 %17, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x5562f0b4f3c0 -> Node0x5562f0b4fa60[tooltip="if.else8 -> return\nProbability 100.00%" ];
+	Node0x5562f0b4f6c0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.end:\l|  br label %if.end9\l}"];
+	Node0x5562f0b4f6c0 -> Node0x5562f0b4ee40[tooltip="if.end -> if.end9\nProbability 100.00%" ];
+	Node0x5562f0b4ee40 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end9:\l|  br label %while.cond, !llvm.loop !6\l}"];
+	Node0x5562f0b4ee40 -> Node0x5562f0b4db30[tooltip="if.end9 -> while.cond\nProbability 100.00%" ];
+	Node0x5562f0b4de50 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{while.end:\l|  %18 = load i32, ptr %low.addr, align 4\l  %19 = load ptr, ptr %spot.addr, align 8\l  store i32 %18, ptr %19, align 4\l  store i32 -1, ptr %retval, align 4\l  br label %return\l}"];
+	Node0x5562f0b4de50 -> Node0x5562f0b4fa60[tooltip="while.end -> return\nProbability 100.00%" ];
+	Node0x5562f0b4fa60 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d24b4070" fontname="Courier",label="{return:\l|  %20 = load i32, ptr %retval, align 4\l  ret i32 %20\l}"];
+}

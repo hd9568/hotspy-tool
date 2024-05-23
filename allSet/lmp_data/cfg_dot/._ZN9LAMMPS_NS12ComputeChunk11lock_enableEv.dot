@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN9LAMMPS_NS12ComputeChunk11lock_enableEv' function" {
+	label="CFG for '_ZN9LAMMPS_NS12ComputeChunk11lock_enableEv' function";
+
+	Node0x560c48939270 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %cchunk = getelementptr inbounds %\"class.LAMMPS_NS::ComputeChunk\", ptr\l... %this1, i32 0, i32 6\l  %0 = load ptr, ptr %cchunk, align 8\l  %lockcount = getelementptr inbounds %\"class.LAMMPS_NS::ComputeChunkAtom\",\l... ptr %0, i32 0, i32 5\l  %1 = load i32, ptr %lockcount, align 4\l  %inc = add nsw i32 %1, 1\l  store i32 %inc, ptr %lockcount, align 4\l  ret void\l}"];
+}

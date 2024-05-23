@@ -1,0 +1,5 @@
+digraph "CFG for '_Z9rngSamplePm' function" {
+	label="CFG for '_Z9rngSamplePm' function";
+
+	Node0x5650e4393ff0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %seed.addr = alloca ptr, align 8\l  store ptr %seed, ptr %seed.addr, align 8\l  %0 = load ptr, ptr %seed.addr, align 8\l  %1 = load i64, ptr %0, align 8\l  %mul = mul i64 2862933555777941757, %1\l  %add = add i64 %mul, 3037000493\l  %2 = load ptr, ptr %seed.addr, align 8\l  store i64 %add, ptr %2, align 8\l  %3 = load ptr, ptr %seed.addr, align 8\l  %4 = load i64, ptr %3, align 8\l  %conv = uitofp i64 %4 to double\l  %mul1 = fmul double 0x3BF0000000000000, %conv\l  ret double %mul1\l}"];
+}

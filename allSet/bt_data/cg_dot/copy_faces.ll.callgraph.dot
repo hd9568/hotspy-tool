@@ -1,0 +1,19 @@
+digraph "Call graph: copy_faces.ll" {
+	label="Call graph: copy_faces.ll";
+
+	Node0x55daa1407200 [shape=record,label="{copy_faces_}"];
+	Node0x55daa1407200 -> Node0x55daa13e64b0;
+	Node0x55daa1407200 -> Node0x55daa13e8e00;
+	Node0x55daa1407200 -> Node0x55daa13e65b0;
+	Node0x55daa1407200 -> Node0x55daa14430e0;
+	Node0x55daa1407200 -> Node0x55daa13e6630;
+	Node0x55daa1407200 -> Node0x55daa1443060;
+	Node0x55daa13e8c00 [shape=record,label="{llvm.stackrestore.p0}"];
+	Node0x55daa13e64b0 [shape=record,label="{compute_rhs_}"];
+	Node0x55daa13e8e00 [shape=record,label="{timer_start_}"];
+	Node0x55daa13e65b0 [shape=record,label="{timer_stop_}"];
+	Node0x55daa13e6630 [shape=record,label="{mpi_irecv_}"];
+	Node0x55daa1443060 [shape=record,label="{mpi_isend_}"];
+	Node0x55daa14430e0 [shape=record,label="{mpi_waitall_}"];
+	Node0x55daa13e8b80 [shape=record,label="{llvm.stacksave.p0}"];
+}

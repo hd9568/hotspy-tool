@@ -1,0 +1,5 @@
+digraph "CFG for '_ZL6qsFreePv' function" {
+	label="CFG for '_ZL6qsFreePv' function";
+
+	Node0x5592ffb9b6b0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %ptr.addr = alloca ptr, align 8\l  store ptr %ptr, ptr %ptr.addr, align 8\l  %0 = load ptr, ptr %ptr.addr, align 8\l  call void @free(ptr noundef %0) #6\l  ret void\l}"];
+}

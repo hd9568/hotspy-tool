@@ -1,0 +1,22 @@
+digraph "CFG for '_ZL12myOptionFreeP10MyOptionSt' function" {
+	label="CFG for '_ZL12myOptionFreeP10MyOptionSt' function";
+
+	Node0x5592ffb873f0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %retval = alloca ptr, align 8\l  %o.addr = alloca ptr, align 8\l  %r = alloca ptr, align 8\l  store ptr %o, ptr %o.addr, align 8\l  %0 = load ptr, ptr %o.addr, align 8\l  %tobool = icmp ne ptr %0, null\l  br i1 %tobool, label %if.end, label %if.then\l|{<s0>T|<s1>F}}"];
+	Node0x5592ffb873f0:s0 -> Node0x5592ffb87750[tooltip="entry -> if.end\nProbability 62.50%" ];
+	Node0x5592ffb873f0:s1 -> Node0x5592ffb877c0[tooltip="entry -> if.then\nProbability 37.50%" ];
+	Node0x5592ffb877c0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{if.then:\l|  store ptr null, ptr %retval, align 8\l  br label %return\l}"];
+	Node0x5592ffb877c0 -> Node0x5592ffb87980[tooltip="if.then -> return\nProbability 100.00%" ];
+	Node0x5592ffb87750 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.end:\l|  %1 = load ptr, ptr %o.addr, align 8\l  %next = getelementptr inbounds %struct.MyOptionSt, ptr %1, i32 0, i32 7\l  %2 = load ptr, ptr %next, align 8\l  store ptr %2, ptr %r, align 8\l  %3 = load ptr, ptr %o.addr, align 8\l  %longArg = getelementptr inbounds %struct.MyOptionSt, ptr %3, i32 0, i32 1\l  %4 = load ptr, ptr %longArg, align 8\l  %tobool1 = icmp ne ptr %4, null\l  br i1 %tobool1, label %if.then2, label %if.end4\l|{<s0>T|<s1>F}}"];
+	Node0x5592ffb87750:s0 -> Node0x5592ffb87f70[tooltip="if.end -> if.then2\nProbability 62.50%" ];
+	Node0x5592ffb87750:s1 -> Node0x5592ffb872f0[tooltip="if.end -> if.end4\nProbability 37.50%" ];
+	Node0x5592ffb87f70 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.then2:\l|  %5 = load ptr, ptr %o.addr, align 8\l  %longArg3 = getelementptr inbounds %struct.MyOptionSt, ptr %5, i32 0, i32 1\l  %6 = load ptr, ptr %longArg3, align 8\l  call void @_ZL6qsFreePv(ptr noundef %6)\l  br label %if.end4\l}"];
+	Node0x5592ffb87f70 -> Node0x5592ffb872f0[tooltip="if.then2 -> if.end4\nProbability 100.00%" ];
+	Node0x5592ffb872f0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.end4:\l|  %7 = load ptr, ptr %o.addr, align 8\l  %help = getelementptr inbounds %struct.MyOptionSt, ptr %7, i32 0, i32 0\l  %8 = load ptr, ptr %help, align 8\l  %tobool5 = icmp ne ptr %8, null\l  br i1 %tobool5, label %if.then6, label %if.end8\l|{<s0>T|<s1>F}}"];
+	Node0x5592ffb872f0:s0 -> Node0x5592ffb88800[tooltip="if.end4 -> if.then6\nProbability 62.50%" ];
+	Node0x5592ffb872f0:s1 -> Node0x5592ffb88880[tooltip="if.end4 -> if.end8\nProbability 37.50%" ];
+	Node0x5592ffb88800 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.then6:\l|  %9 = load ptr, ptr %o.addr, align 8\l  %help7 = getelementptr inbounds %struct.MyOptionSt, ptr %9, i32 0, i32 0\l  %10 = load ptr, ptr %help7, align 8\l  call void @_ZL6qsFreePv(ptr noundef %10)\l  br label %if.end8\l}"];
+	Node0x5592ffb88800 -> Node0x5592ffb88880[tooltip="if.then6 -> if.end8\nProbability 100.00%" ];
+	Node0x5592ffb88880 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.end8:\l|  %11 = load ptr, ptr %o.addr, align 8\l  call void @_ZL6qsFreePv(ptr noundef %11)\l  %12 = load ptr, ptr %r, align 8\l  store ptr %12, ptr %retval, align 8\l  br label %return\l}"];
+	Node0x5592ffb88880 -> Node0x5592ffb87980[tooltip="if.end8 -> return\nProbability 100.00%" ];
+	Node0x5592ffb87980 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{return:\l|  %13 = load ptr, ptr %retval, align 8\l  ret ptr %13\l}"];
+}

@@ -1,0 +1,5 @@
+digraph "CFG for '_GLOBAL__sub_I_MC_Location.cc' function" {
+	label="CFG for '_GLOBAL__sub_I_MC_Location.cc' function";
+
+	Node0x55c1dc6a4cc0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  call void @__cxx_global_var_init()\l  ret void\l}"];
+}

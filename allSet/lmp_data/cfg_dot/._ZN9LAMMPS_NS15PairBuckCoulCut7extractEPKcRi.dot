@@ -1,0 +1,17 @@
+digraph "CFG for '_ZN9LAMMPS_NS15PairBuckCoulCut7extractEPKcRi' function" {
+	label="CFG for '_ZN9LAMMPS_NS15PairBuckCoulCut7extractEPKcRi' function";
+
+	Node0x5558aabc2bb0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %retval = alloca ptr, align 8\l  %this.addr = alloca ptr, align 8\l  %str.addr = alloca ptr, align 8\l  %dim.addr = alloca ptr, align 8\l  store ptr %this, ptr %this.addr, align 8\l  store ptr %str, ptr %str.addr, align 8\l  store ptr %dim, ptr %dim.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %0 = load ptr, ptr %dim.addr, align 8\l  store i32 2, ptr %0, align 4\l  %1 = load ptr, ptr %str.addr, align 8\l  %call = call i32 @strcmp(ptr noundef %1, ptr noundef @.str.20) #9\l  %cmp = icmp eq i32 %call, 0\l  br i1 %cmp, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x5558aabc2bb0:s0 -> Node0x5558aabc6280[tooltip="entry -> if.then\nProbability 37.50%" ];
+	Node0x5558aabc2bb0:s1 -> Node0x5558aabc62f0[tooltip="entry -> if.end\nProbability 62.50%" ];
+	Node0x5558aabc6280 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{if.then:\l|  %a = getelementptr inbounds %\"class.LAMMPS_NS::PairBuckCoulCut\", ptr\l... %this1, i32 0, i32 7\l  %2 = load ptr, ptr %a, align 8\l  store ptr %2, ptr %retval, align 8\l  br label %return\l}"];
+	Node0x5558aabc6280 -> Node0x5558aabc67b0[tooltip="if.then -> return\nProbability 100.00%" ];
+	Node0x5558aabc62f0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{if.end:\l|  %3 = load ptr, ptr %str.addr, align 8\l  %call2 = call i32 @strcmp(ptr noundef %3, ptr noundef @.str.21) #9\l  %cmp3 = icmp eq i32 %call2, 0\l  br i1 %cmp3, label %if.then4, label %if.end5\l|{<s0>T|<s1>F}}"];
+	Node0x5558aabc62f0:s0 -> Node0x5558aabc6b10[tooltip="if.end -> if.then4\nProbability 37.50%" ];
+	Node0x5558aabc62f0:s1 -> Node0x5558aabc6b90[tooltip="if.end -> if.end5\nProbability 62.50%" ];
+	Node0x5558aabc6b10 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470" fontname="Courier",label="{if.then4:\l|  %c = getelementptr inbounds %\"class.LAMMPS_NS::PairBuckCoulCut\", ptr\l... %this1, i32 0, i32 9\l  %4 = load ptr, ptr %c, align 8\l  store ptr %4, ptr %retval, align 8\l  br label %return\l}"];
+	Node0x5558aabc6b10 -> Node0x5558aabc67b0[tooltip="if.then4 -> return\nProbability 100.00%" ];
+	Node0x5558aabc6b90 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.end5:\l|  store ptr null, ptr %retval, align 8\l  br label %return\l}"];
+	Node0x5558aabc6b90 -> Node0x5558aabc67b0[tooltip="if.end5 -> return\nProbability 100.00%" ];
+	Node0x5558aabc67b0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{return:\l|  %5 = load ptr, ptr %retval, align 8\l  ret ptr %5\l}"];
+}

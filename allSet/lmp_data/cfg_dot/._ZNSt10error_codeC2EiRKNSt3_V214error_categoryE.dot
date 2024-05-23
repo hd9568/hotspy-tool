@@ -1,0 +1,5 @@
+digraph "CFG for '_ZNSt10error_codeC2EiRKNSt3_V214error_categoryE' function" {
+	label="CFG for '_ZNSt10error_codeC2EiRKNSt3_V214error_categoryE' function";
+
+	Node0x55957a4b4440 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %__v.addr = alloca i32, align 4\l  %__cat.addr = alloca ptr, align 8\l  store ptr %this, ptr %this.addr, align 8\l  store i32 %__v, ptr %__v.addr, align 4\l  store ptr %__cat, ptr %__cat.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %_M_value = getelementptr inbounds %\"struct.std::error_code\", ptr %this1,\l... i32 0, i32 0\l  %0 = load i32, ptr %__v.addr, align 4\l  store i32 %0, ptr %_M_value, align 8\l  %_M_cat = getelementptr inbounds %\"struct.std::error_code\", ptr %this1, i32\l... 0, i32 1\l  %1 = load ptr, ptr %__cat.addr, align 8\l  store ptr %1, ptr %_M_cat, align 8\l  ret void\l}"];
+}

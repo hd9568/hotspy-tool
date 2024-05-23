@@ -1,0 +1,46 @@
+========== all test data has already been ready! ===========
+| TN=208 FP=81 |
+| FN=7 TP=60 |
+test accuracy: 75.28%
+precision: 42.55%
+recall: 89.55%
+f1 score: 0.577
+amg_data datasize: 144; hot: 0.0278; acc: 0.6319
+lule_data datasize: 212; hot: 0.2972; acc: 0.8349
+========== all test data has already been ready! ===========
+| TN=207 FP=82 |
+| FN=7 TP=60 |
+test accuracy: 75.00%
+precision: 42.25%
+recall: 89.55%
+f1 score: 0.574
+amg_data datasize: 144; hot: 0.0278; acc: 0.6319
+lule_data datasize: 212; hot: 0.2972; acc: 0.8302
+========== all test data has already been ready! ===========
+| TN=208 FP=81 |
+| FN=7 TP=60 |
+test accuracy: 75.28%
+precision: 42.55%
+recall: 89.55%
+f1 score: 0.577
+lule_data datasize: 212; hot: 0.2972; acc: 0.8349
+amg_data datasize: 144; hot: 0.0278; acc: 0.6319
+
+========== all test data has already been ready! ===========
+| TN=208 FP=81 |
+| FN=7 TP=60 |
+test accuracy: 75.28%
+precision: 42.55%
+recall: 89.55%
+f1 score: 0.577
+lule_data datasize: 212; hot: 0.2972; acc: 0.8349
+amg_data datasize: 144; hot: 0.0278; acc: 0.6319
+========== all test data has already been ready! ===========
+| TN=208 FP=81 |
+| FN=7 TP=60 |
+test accuracy: 75.28%
+precision: 42.55%
+recall: 89.55%
+f1 score: 0.577
+amg_data datasize: 144; hot: 0.0278; acc: 0.6319
+lule_data datasize: 212; hot: 0.2972; acc: 0.8349

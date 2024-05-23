@@ -1,0 +1,17 @@
+digraph "CFG for '_ZN9LAMMPS_NS11MathSpecial6fm_expEd' function" {
+	label="CFG for '_ZN9LAMMPS_NS11MathSpecial6fm_expEd' function";
+
+	Node0x5556d674e5f0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %retval = alloca double, align 8\l  %x.addr = alloca double, align 8\l  store double %x, ptr %x.addr, align 8\l  %0 = load double, ptr %x.addr, align 8\l  %cmp = fcmp olt double %0, 0xC086232BDD7ABCD2\l  br i1 %cmp, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x5556d674e5f0:s0 -> Node0x5556d674e8b0[tooltip="entry -> if.then\nProbability 50.00%" ];
+	Node0x5556d674e5f0:s1 -> Node0x5556d674e900[tooltip="entry -> if.end\nProbability 50.00%" ];
+	Node0x5556d674e8b0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.then:\l|  store double 0.000000e+00, ptr %retval, align 8\l  br label %return\l}"];
+	Node0x5556d674e8b0 -> Node0x5556d674eae0[tooltip="if.then -> return\nProbability 100.00%" ];
+	Node0x5556d674e900 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{if.end:\l|  %1 = load double, ptr %x.addr, align 8\l  %cmp1 = fcmp ogt double %1, 0x408628B76E3A7B61\l  br i1 %cmp1, label %if.then2, label %if.end3\l|{<s0>T|<s1>F}}"];
+	Node0x5556d674e900:s0 -> Node0x5556d674ecf0[tooltip="if.end -> if.then2\nProbability 50.00%" ];
+	Node0x5556d674e900:s1 -> Node0x5556d674ed40[tooltip="if.end -> if.end3\nProbability 50.00%" ];
+	Node0x5556d674ecf0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470" fontname="Courier",label="{if.then2:\l|  store double 0x7FF0000000000000, ptr %retval, align 8\l  br label %return\l}"];
+	Node0x5556d674ecf0 -> Node0x5556d674eae0[tooltip="if.then2 -> return\nProbability 100.00%" ];
+	Node0x5556d674ed40 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470" fontname="Courier",label="{if.end3:\l|  %2 = load double, ptr %x.addr, align 8\l  %mul = fmul double 0x3FF71547652B82FE, %2\l  %call = call noundef double @_ZN9LAMMPS_NS11MathSpecial8exp2_x86Ed(double\l... noundef %mul)\l  store double %call, ptr %retval, align 8\l  br label %return\l}"];
+	Node0x5556d674ed40 -> Node0x5556d674eae0[tooltip="if.end3 -> return\nProbability 100.00%" ];
+	Node0x5556d674eae0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{return:\l|  %3 = load double, ptr %retval, align 8\l  ret double %3\l}"];
+}

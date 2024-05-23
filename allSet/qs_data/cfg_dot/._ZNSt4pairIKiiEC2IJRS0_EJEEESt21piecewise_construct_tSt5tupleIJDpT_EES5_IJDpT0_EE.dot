@@ -1,0 +1,5 @@
+digraph "CFG for '_ZNSt4pairIKiiEC2IJRS0_EJEEESt21piecewise_construct_tSt5tupleIJDpT_EES5_IJDpT0_EE' function" {
+	label="CFG for '_ZNSt4pairIKiiEC2IJRS0_EJEEESt21piecewise_construct_tSt5tupleIJDpT_EES5_IJDpT0_EE' function";
+
+	Node0x560dca134810 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %0 = alloca %\"struct.std::piecewise_construct_t\", align 1\l  %__second = alloca %\"class.std::tuple.82\", align 1\l  %this.addr = alloca ptr, align 8\l  %__first.indirect_addr = alloca ptr, align 8\l  %agg.tmp = alloca %\"struct.std::_Index_tuple\", align 1\l  %agg.tmp3 = alloca %\"struct.std::_Index_tuple.87\", align 1\l  store ptr %this, ptr %this.addr, align 8\l  store ptr %__first, ptr %__first.indirect_addr, align 8\l  %this2 = load ptr, ptr %this.addr, align 8\l  call void\l... @_ZNSt4pairIKiiEC2IJRS0_EJLm0EEJETpTnmJEEERSt5tupleIJDpT_EERS4_IJDpT1_EESt12_I\l...ndex_tupleIJXspT0_EEESD_IJXspT2_EEE(ptr noundef nonnull align 4\l... dereferenceable(8) %this2, ptr noundef nonnull align 8 dereferenceable(8)\l... %__first, ptr noundef nonnull align 1 dereferenceable(1) %__second)\l  ret void\l}"];
+}

@@ -1,0 +1,9 @@
+digraph "CFG for '_ZN3fmt6v9_lmp6detail17precision_checkerINS1_13error_handlerEEclIiTnNSt9enable_ifIXsr10is_integerIT_EE5valueEiE4typeELi0EEEyS7_' function" {
+	label="CFG for '_ZN3fmt6v9_lmp6detail17precision_checkerINS1_13error_handlerEEclIiTnNSt9enable_ifIXsr10is_integerIT_EE5valueEiE4typeELi0EEEyS7_' function";
+
+	Node0x556bfeb44240 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %value.addr = alloca i32, align 4\l  store ptr %this, ptr %this.addr, align 8\l  store i32 %value, ptr %value.addr, align 4\l  %this1 = load ptr, ptr %this.addr, align 8\l  %0 = load i32, ptr %value.addr, align 4\l  %call = call noundef zeroext i1\l... @_ZN3fmt6v9_lmp6detail11is_negativeIiTnNSt9enable_ifIXsr9is_signedIT_EE5valueE\l...iE4typeELi0EEEbS4_(i32 noundef %0)\l  br i1 %call, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x556bfeb44240:s0 -> Node0x556bfeb447a0[tooltip="entry -> if.then\nProbability 0.00%" ];
+	Node0x556bfeb44240:s1 -> Node0x556bfeb44810[tooltip="entry -> if.end\nProbability 100.00%" ];
+	Node0x556bfeb447a0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f4c5ad70" fontname="Courier",label="{if.then:\l|  %handler_ = getelementptr inbounds\l... %\"class.fmt::v9_lmp::detail::precision_checker\", ptr %this1, i32 0, i32 0\l  %1 = load ptr, ptr %handler_, align 8\l  call void @_ZN3fmt6v9_lmp6detail13error_handler8on_errorEPKc(ptr noundef\l... nonnull align 1 dereferenceable(1) %1, ptr noundef @.str.331) #21\l  unreachable\l}"];
+	Node0x556bfeb44810 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  %2 = load i32, ptr %value.addr, align 4\l  %conv = sext i32 %2 to i64\l  ret i64 %conv\l}"];
+}

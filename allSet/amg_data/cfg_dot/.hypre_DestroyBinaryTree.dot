@@ -1,0 +1,5 @@
+digraph "CFG for 'hypre_DestroyBinaryTree' function" {
+	label="CFG for 'hypre_DestroyBinaryTree' function";
+
+	Node0x5625a77be490 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %tree.addr = alloca ptr, align 8\l  store ptr %tree, ptr %tree.addr, align 8\l  %0 = load ptr, ptr %tree.addr, align 8\l  %child_id = getelementptr inbounds %struct.hypre_BinaryTree, ptr %0, i32 0,\l... i32 2\l  %1 = load ptr, ptr %child_id, align 8\l  call void @hypre_Free(ptr noundef %1)\l  %2 = load ptr, ptr %tree.addr, align 8\l  %child_id1 = getelementptr inbounds %struct.hypre_BinaryTree, ptr %2, i32 0,\l... i32 2\l  store ptr null, ptr %child_id1, align 8\l  %3 = load i32, ptr @hypre__global_error, align 4\l  ret i32 %3\l}"];
+}

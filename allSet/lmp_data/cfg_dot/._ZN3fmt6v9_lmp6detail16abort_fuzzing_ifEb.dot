@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN3fmt6v9_lmp6detail16abort_fuzzing_ifEb' function" {
+	label="CFG for '_ZN3fmt6v9_lmp6detail16abort_fuzzing_ifEb' function";
+
+	Node0x556bfebad6a0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %condition.addr = alloca i8, align 1\l  %frombool = zext i1 %condition to i8\l  store i8 %frombool, ptr %condition.addr, align 1\l  call void @_ZN3fmt6v9_lmp6detail13ignore_unusedIJbEEEvDpRKT_(ptr noundef\l... nonnull align 1 dereferenceable(1) %condition.addr)\l  ret void\l}"];
+}

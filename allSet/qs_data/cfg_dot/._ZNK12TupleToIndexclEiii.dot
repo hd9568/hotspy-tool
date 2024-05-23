@@ -1,0 +1,5 @@
+digraph "CFG for '_ZNK12TupleToIndexclEiii' function" {
+	label="CFG for '_ZNK12TupleToIndexclEiii' function";
+
+	Node0x55c606332d80 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  %ix.addr = alloca i32, align 4\l  %iy.addr = alloca i32, align 4\l  %iz.addr = alloca i32, align 4\l  store ptr %this, ptr %this.addr, align 8\l  store i32 %ix, ptr %ix.addr, align 4\l  store i32 %iy, ptr %iy.addr, align 4\l  store i32 %iz, ptr %iz.addr, align 4\l  %this1 = load ptr, ptr %this.addr, align 8\l  %0 = load i32, ptr %ix.addr, align 4\l  %conv = sext i32 %0 to i64\l  %nx_ = getelementptr inbounds %class.TupleToIndex, ptr %this1, i32 0, i32 0\l  %1 = load i64, ptr %nx_, align 8\l  %2 = load i32, ptr %iy.addr, align 4\l  %conv2 = sext i32 %2 to i64\l  %ny_ = getelementptr inbounds %class.TupleToIndex, ptr %this1, i32 0, i32 1\l  %3 = load i64, ptr %ny_, align 8\l  %4 = load i32, ptr %iz.addr, align 4\l  %conv3 = sext i32 %4 to i64\l  %mul = mul i64 %3, %conv3\l  %add = add i64 %conv2, %mul\l  %mul4 = mul i64 %1, %add\l  %add5 = add i64 %conv, %mul4\l  ret i64 %add5\l}"];
+}

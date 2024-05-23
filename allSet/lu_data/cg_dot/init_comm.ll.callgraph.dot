@@ -1,0 +1,23 @@
+digraph "Call graph: init_comm.ll" {
+	label="Call graph: init_comm.ll";
+
+	Node0x55c8b84540f0 [shape=record,label="{init_comm_}"];
+	Node0x55c8b84540f0 -> Node0x55c8b84541a0;
+	Node0x55c8b84540f0 -> Node0x55c8b8454660;
+	Node0x55c8b84540f0 -> Node0x55c8b84546e0;
+	Node0x55c8b84540f0 -> Node0x55c8b8454760;
+	Node0x55c8b84540f0 -> Node0x55c8b84547e0;
+	Node0x55c8b84540f0 -> Node0x55c8b8454ab0;
+	Node0x55c8b84540f0 -> Node0x55c8b84549b0;
+	Node0x55c8b84540f0 -> Node0x55c8b8454a30;
+	Node0x55c8b84541a0 [shape=record,label="{mpi_init_}"];
+	Node0x55c8b8454660 [shape=record,label="{mpi_comm_rank_}"];
+	Node0x55c8b84546e0 [shape=record,label="{mpi_comm_size_}"];
+	Node0x55c8b8454760 [shape=record,label="{_FortranAioBeginExternalFormattedOutput}"];
+	Node0x55c8b84547e0 [shape=record,label="{_FortranAioOutputInteger32}"];
+	Node0x55c8b84549b0 [shape=record,label="{_FortranAioEndIoStatement}"];
+	Node0x55c8b8454a30 [shape=record,label="{mpi_abort_}"];
+	Node0x55c8b8454ab0 [shape=record,label="{nodedim_}"];
+	Node0x55c8b8455170 [shape=record,label="{llvm.stacksave.p0}"];
+	Node0x55c8b84551f0 [shape=record,label="{llvm.stackrestore.p0}"];
+}

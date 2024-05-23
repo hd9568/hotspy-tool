@@ -1,0 +1,13 @@
+digraph "CFG for '_ZN9LAMMPS_NS15ComputeCOMChunk5setupEv' function" {
+	label="CFG for '_ZN9LAMMPS_NS15ComputeCOMChunk5setupEv' function";
+
+	Node0x55df07904500 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  %firstflag = getelementptr inbounds %\"class.LAMMPS_NS::ComputeChunk\", ptr\l... %this1, i32 0, i32 4\l  %0 = load i32, ptr %firstflag, align 8\l  %tobool = icmp ne i32 %0, 0\l  br i1 %tobool, label %land.lhs.true, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x55df07904500:s0 -> Node0x55df07904810[tooltip="entry -> land.lhs.true\nProbability 62.50%" ];
+	Node0x55df07904500:s1 -> Node0x55df07904890[tooltip="entry -> if.end\nProbability 37.50%" ];
+	Node0x55df07904810 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{land.lhs.true:\l|  %cchunk = getelementptr inbounds %\"class.LAMMPS_NS::ComputeChunk\", ptr\l... %this1, i32 0, i32 6\l  %1 = load ptr, ptr %cchunk, align 8\l  %idsflag = getelementptr inbounds %\"class.LAMMPS_NS::ComputeChunkAtom\", ptr\l... %1, i32 0, i32 4\l  %2 = load i32, ptr %idsflag, align 8\l  %cmp = icmp eq i32 %2, 0\l  br i1 %cmp, label %if.then, label %if.end\l|{<s0>T|<s1>F}}"];
+	Node0x55df07904810:s0 -> Node0x55df07904d50[tooltip="land.lhs.true -> if.then\nProbability 37.50%" ];
+	Node0x55df07904810:s1 -> Node0x55df07904890[tooltip="land.lhs.true -> if.end\nProbability 62.50%" ];
+	Node0x55df07904d50 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470" fontname="Courier",label="{if.then:\l|  %vtable = load ptr, ptr %this1, align 8\l  %vfn = getelementptr inbounds ptr, ptr %vtable, i64 8\l  %3 = load ptr, ptr %vfn, align 8\l  call void %3(ptr noundef nonnull align 8 dereferenceable(632) %this1)\l  %massneed = getelementptr inbounds %\"class.LAMMPS_NS::ComputeChunk\", ptr\l... %this1, i32 0, i32 5\l  store i32 0, ptr %massneed, align 4\l  %firstflag2 = getelementptr inbounds %\"class.LAMMPS_NS::ComputeChunk\", ptr\l... %this1, i32 0, i32 4\l  store i32 0, ptr %firstflag2, align 8\l  br label %if.end\l}"];
+	Node0x55df07904d50 -> Node0x55df07904890[tooltip="if.then -> if.end\nProbability 100.00%" ];
+	Node0x55df07904890 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{if.end:\l|  ret void\l}"];
+}

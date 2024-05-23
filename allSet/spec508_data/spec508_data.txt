@@ -1,0 +1,143 @@
+pairlist_from_pairlist(double, double, double, double, CompAtom const*, unsigned short const*, int, unsigned short*, double, double*) 1
+Pairlists::nextlist(unsigned short**, int*) 1
+LJTable::table_row(unsigned int) const 1
+Pairlists::getIndexValue() 1
+Vector::length2() const 1
+Vector::operator+=(Vector const&) 1
+Pairlists::newsize(int) 1
+Vector::operator=(double const&) 1
+Pairlists::newlist() 1
+Molecule::get_excl_check_for_atom(int) const 1
+Vector::Vector(double, double, double) 1
+operator+(Vector const&, Vector const&) 1
+Pairlists::newlist(int) 1
+operator new(unsigned long, void*) 1
+Pairlists::addIndex() 1
+Pairlists::setIndexValue(unsigned short) 1
+ResizeArrayRaw<unsigned short>::resize(int) 1
+ResizeArray<unsigned short>::resize(int) 1
+ResizeArray<unsigned short>::begin() 1
+operator*(double const&, Vector const&) 1
+Vector::Vector() 1
+Lattice::offset(int) const 1
+ResizeArrayRaw<double>::resize(int) 1
+nonbonded::nonbonded() 0
+Pairlists::reset() 0
+ResizeArray<double>::resize(int) 0
+ResizeArray<double>::begin() 0
+ResizeArrayRaw<unsigned short>::resizeRaw(int) 0
+PairCompute::doWork(PatchList*) 1
+operator-(Vector const&, Vector const&) 0
+ResizeArrayRaw<double>::resizeRaw(int) 0
+ComputeNonbondedUtil::calc_pair_energy(nonbonded*) 1
+ComputeNonbondedUtil::calc_pair_energy_fullelect(nonbonded*) 1
+ComputeNonbondedUtil::calc_pair_energy_merge_fullelect(nonbonded*) 1
+ComputeNonbondedUtil::calc_pair(nonbonded*) 1
+ComputeNonbondedUtil::calc_pair_fullelect(nonbonded*) 1
+ComputeNonbondedUtil::calc_pair_merge_fullelect(nonbonded*) 1
+ObjectArena<char>::getNewArray(int) 0
+CompAtom::CompAtom() 0
+Molecule::atomvdwtype(int) const 0
+ResizeArrayRaw<Vector>::resize(int) 0
+ResizeArray<Vector>::resize(int) 0
+ResizeArray<Vector>::begin() 0
+Patch::zeroforces() 1
+SelfCompute::doWork(PatchList*) 0
+Patch::setforces(Vector*, Vector*) 1
+ResizeArrayRaw<Vector>::resizeRaw(int) 0
+equal(double, double) 0
+ComputeNonbondedUtil::calc_self_energy(nonbonded*) 1
+ComputeNonbondedUtil::calc_self_energy_fullelect(nonbonded*) 1
+ComputeNonbondedUtil::calc_self_energy_merge_fullelect(nonbonded*) 1
+ComputeNonbondedUtil::calc_self(nonbonded*) 1
+ComputeNonbondedUtil::calc_self_fullelect(nonbonded*) 1
+ComputeNonbondedUtil::calc_self_merge_fullelect(nonbonded*) 1
+Patch::moveatoms() 0
+Vector::length() const 0
+ResizeArrayRaw<char*>::size() const 0
+ComputeNonbondedUtil::ComputeNonbondedUtil() 0
+Pairlists::Pairlists() 0
+Pairlists::~Pairlists() 0
+ComputeNonbondedUtil::~ComputeNonbondedUtil() 0
+ResultSet::check() 0
+PairCompute::PairCompute() 0
+PairCompute::~PairCompute() 0
+ResizeArrayRaw<Vector>::size() const 0
+ResultSet::compare(ResultSet&) 0
+equal(double*, double*) 0
+ResizeArray<char*>::size() const 0
+ResizeArray<char*>::add(char* const&) 0
+ResizeArrayRaw<char*>::ins(char* const&, int) 0
+ResizeArrayRaw<char*>::resizeRaw(int) 0
+ResizeArray<char*>::operator[](int) 0
+ResizeArrayRaw<unsigned short>::size() const 0
+ResizeArrayRaw<double>::size() const 0
+equal(double*, double*, double*, double*) 0
+parse_param(char const*, char const*, char const*, int&) 0
+PatchList::zeroresults() 0
+ComputeList::runComputes(PatchList*) 0
+PatchList::setresults(ResultSet*) 1
+ResultSet::writefile(_IO_FILE*) 0
+parse_param(char const*, char const*, char const*, double&) 0
+parse_param(char const*, char const*, char const*, Vector&) 0
+Patch::Patch() 0
+Patch::readfile(_IO_FILE*, Molecule*) 0
+SelfCompute::SelfCompute() 0
+SelfCompute::~SelfCompute() 0
+Patch::~Patch() 0
+PatchList::moveatoms() 0
+SimParameters::setparam(char const*, char const*) 0
+ResizeArray<unsigned short>::ResizeArray() 0
+ResizeArrayRaw<unsigned short>::ResizeArrayRaw() 0
+ResizeArray<unsigned short>::~ResizeArray() 0
+ResizeArrayRaw<unsigned short>::~ResizeArrayRaw() 0
+CkMyPe() 0
+ResultSet::ResultSet(int) 0
+ResultSet::~ResultSet() 0
+Vector::set(char const*) 0
+cross(Vector const&, Vector const&) 0
+operator*(Vector const&, Vector const&) 0
+operator/(Vector const&, double const&) 0
+ResizeArray<Vector>::ResizeArray() 0
+ResizeArrayRaw<Vector>::ResizeArrayRaw() 0
+ResizeArray<Vector>::~ResizeArray() 0
+ResizeArrayRaw<Vector>::~ResizeArrayRaw() 0
+_GLOBAL__sub_I__ZN11SelfCompute6doWorkEP9PatchList 0
+__static_initialization_and_destruction_0(int, int) 0
+ComputeNonbondedWorkArrays::ComputeNonbondedWorkArrays() 0
+ResizeArray<double>::ResizeArray() 0
+ResizeArrayRaw<double>::ResizeArrayRaw() 0
+_GLOBAL__sub_I__ZN20ComputeNonbondedUtil8commOnlyE 0
+__static_initialization_and_destruction_0(int, int) 0
+main 0
+SimParameters::SimParameters() 0
+Lattice::Lattice() 0
+SimParameters::readfile(_IO_FILE*) 0
+Lattice::set(Vector, Vector, Vector, Vector) 0
+Lattice::volume() const 0
+Lattice::recalculate() 0
+LJTable::LJTable() 0
+LJTable::readfile(_IO_FILE*) 0
+Molecule::Molecule() 0
+ObjectArena<char>::ObjectArena() 0
+ResizeArray<char*>::ResizeArray() 0
+ResizeArrayRaw<char*>::ResizeArrayRaw() 0
+ResizeArrayRaw<char*>::resize(int) 0
+Molecule::readfile(_IO_FILE*) 0
+ComputeNonbondedUtil::select(SimParameters*, Molecule*, LJTable*) 0
+CkMyRank() 0
+PatchList::PatchList(Lattice&) 0
+PatchList::readfile(_IO_FILE*, Molecule*) 0
+ComputeList::ComputeList() 0
+ComputeList::readfile(_IO_FILE*, PatchList*) 0
+ComputeList::~ComputeList() 0
+PatchList::~PatchList() 0
+Molecule::~Molecule() 0
+ObjectArena<char>::~ObjectArena() 0
+ResizeArray<char*>::~ResizeArray() 0
+ResizeArrayRaw<char*>::~ResizeArrayRaw() 0
+LJTable::~LJTable() 0
+SimParameters::~SimParameters() 0
+ComputeNonbondedWorkArrays::~ComputeNonbondedWorkArrays() 0
+ResizeArray<double>::~ResizeArray() 0
+ResizeArrayRaw<double>::~ResizeArrayRaw() 0

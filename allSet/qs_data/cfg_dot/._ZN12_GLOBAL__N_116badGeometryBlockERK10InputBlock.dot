@@ -1,0 +1,9 @@
+digraph "CFG for '_ZN12_GLOBAL__N_116badGeometryBlockERK10InputBlock' function" {
+	label="CFG for '_ZN12_GLOBAL__N_116badGeometryBlockERK10InputBlock' function";
+
+	Node0x562c4e5b6160 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %input.addr = alloca ptr, align 8\l  store ptr %input, ptr %input.addr, align 8\l  br label %do.body\l}"];
+	Node0x562c4e5b6160 -> Node0x562c4e5b6280[tooltip="entry -> do.body\nProbability 100.00%" ];
+	Node0x562c4e5b6280 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{do.body:\l|  %call = call i32 (ptr, ...) @printf(ptr noundef @.str.47, ptr noundef\l... @.str.48, i32 noundef 502)\l  br label %do.end\l}"];
+	Node0x562c4e5b6280 -> Node0x562c4e5b63e0[tooltip="do.body -> do.end\nProbability 100.00%" ];
+	Node0x562c4e5b63e0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{do.end:\l|  ret void\l}"];
+}

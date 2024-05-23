@@ -1,0 +1,15 @@
+digraph "Call graph: l2norm.ll" {
+	label="Call graph: l2norm.ll";
+
+	Node0x56083a373330 [shape=record,label="{l2norm_}"];
+	Node0x56083a373330 -> Node0x56083a3733e0;
+	Node0x56083a373330 -> Node0x56083a3738a0;
+	Node0x56083a373330 -> Node0x56083a373920;
+	Node0x56083a373330 -> Node0x56083a373a50;
+	Node0x56083a3733e0 [shape=record,label="{timer_start_}"];
+	Node0x56083a3738a0 [shape=record,label="{mpi_allreduce_}"];
+	Node0x56083a373920 [shape=record,label="{timer_stop_}"];
+	Node0x56083a373bb0 [shape=record,label="{llvm.stacksave.p0}"];
+	Node0x56083a373d80 [shape=record,label="{llvm.stackrestore.p0}"];
+	Node0x56083a373a50 [shape=record,label="{llvm.sqrt.f64}"];
+}

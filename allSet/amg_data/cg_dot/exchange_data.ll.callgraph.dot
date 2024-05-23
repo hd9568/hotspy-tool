@@ -1,0 +1,47 @@
+digraph "Call graph: exchange_data.ll" {
+	label="Call graph: exchange_data.ll";
+
+	Node0x55ab8df77b10 [shape=record,label="{hypre_CreateBinaryTree}"];
+	Node0x55ab8df77b10 -> Node0x55ab8df7c3a0;
+	Node0x55ab8df7c3a0 [shape=record,label="{hypre_MAlloc}"];
+	Node0x55ab8df7f2a0 [shape=record,label="{hypre_DestroyBinaryTree}"];
+	Node0x55ab8df7f2a0 -> Node0x55ab8df7fa20;
+	Node0x55ab8df7fa20 [shape=record,label="{hypre_Free}"];
+	Node0x55ab8df83630 [shape=record,label="{hypre_DataExchangeList}"];
+	Node0x55ab8df83630 -> Node0x55ab8dfb0e70;
+	Node0x55ab8df83630 -> Node0x55ab8dfb0f20;
+	Node0x55ab8df83630 -> Node0x55ab8df84f00;
+	Node0x55ab8df83630 -> Node0x55ab8df88630;
+	Node0x55ab8df83630 -> Node0x55ab8df7c3a0;
+	Node0x55ab8df83630 -> Node0x55ab8df7f2a0;
+	Node0x55ab8df83630 -> Node0x55ab8df7fa20;
+	Node0x55ab8df83630 -> Node0x55ab8df959b0;
+	Node0x55ab8df83630 -> Node0x55ab8df88f40;
+	Node0x55ab8df83630 -> Node0x55ab8df91ac0;
+	Node0x55ab8df83630 -> Node0x55ab8df92a00;
+	Node0x55ab8df83630 -> Node0x55ab8df95250;
+	Node0x55ab8df83630 -> Node0x55ab8df95000;
+	Node0x55ab8df83630 -> Node0x55ab8df8a290;
+	Node0x55ab8df83630 -> Node0x55ab8df77b10;
+	Node0x55ab8df83630 -> Node0x55ab8df94140;
+	Node0x55ab8df83630 -> Node0x55ab8df8c1a0;
+	Node0x55ab8df83630 -> Node0x55ab8df8f740;
+	Node0x55ab8df83630 -> Node0x55ab8df8e340;
+	Node0x55ab8df83630 -> Node0x55ab8df909d0;
+	Node0x55ab8dfb0e70 [shape=record,label="{hypre_MPI_Comm_size}"];
+	Node0x55ab8dfb0f20 [shape=record,label="{hypre_MPI_Comm_rank}"];
+	Node0x55ab8df84f00 [shape=record,label="{llvm.ceil.f64}"];
+	Node0x55ab8df88630 [shape=record,label="{hypre_CAlloc}"];
+	Node0x55ab8df88f40 [shape=record,label="{hypre_MPI_Irecv}"];
+	Node0x55ab8df8a290 [shape=record,label="{hypre_MPI_Isend}"];
+	Node0x55ab8df8c1a0 [shape=record,label="{hypre_MPI_Iprobe}"];
+	Node0x55ab8df8e340 [shape=record,label="{hypre_MPI_Get_count}"];
+	Node0x55ab8df8f740 [shape=record,label="{hypre_ReAlloc}"];
+	Node0x55ab8df909d0 [shape=record,label="{hypre_MPI_Recv}"];
+	Node0x55ab8df91ac0 [shape=record,label="{llvm.memcpy.p0.p0.i64}"];
+	Node0x55ab8df92a00 [shape=record,label="{hypre_MPI_Send}"];
+	Node0x55ab8df94140 [shape=record,label="{hypre_MPI_Testall}"];
+	Node0x55ab8df95000 [shape=record,label="{hypre_MPI_Test}"];
+	Node0x55ab8df95250 [shape=record,label="{hypre_MPI_Wait}"];
+	Node0x55ab8df959b0 [shape=record,label="{hypre_MPI_Waitall}"];
+}

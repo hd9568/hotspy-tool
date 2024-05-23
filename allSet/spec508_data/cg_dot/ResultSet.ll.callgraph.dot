@@ -1,0 +1,37 @@
+digraph "Call graph: ResultSet.ll" {
+	label="Call graph: ResultSet.ll";
+
+	Node0x561bd680d2d0 [shape=record,label="{_ZN9ResultSet9writefileEP8_IO_FILE}"];
+	Node0x561bd680d2d0 -> Node0x561bd6850390;
+	Node0x561bd6850390 [shape=record,label="{fprintf}"];
+	Node0x561bd6854850 [shape=record,label="{_ZN9ResultSet8readfileEP8_IO_FILE}"];
+	Node0x561bd6854850 -> Node0x561bd6855b10;
+	Node0x561bd6854850 -> Node0x561bd6857530;
+	Node0x561bd6854850 -> Node0x561bd6856830;
+	Node0x561bd685dd00 [shape=record,label="{_ZN9ResultSet5checkEv}"];
+	Node0x561bd685dd00 -> Node0x561bd6864510;
+	Node0x561bd685dd00 -> Node0x561bd685a410;
+	Node0x561bd6855b10 [shape=record,label="{__isoc99_fscanf}"];
+	Node0x561bd6856830 [shape=record,label="{printf}"];
+	Node0x561bd6857530 [shape=record,label="{exit}"];
+	Node0x561bd685a410 [shape=record,label="{_Z5equaldd}"];
+	Node0x561bd685a410 -> Node0x561bd6856830;
+	Node0x561bd685a410 -> Node0x561bd6857530;
+	Node0x561bd685bd00 [shape=record,label="{_Z5equalPdS_}"];
+	Node0x561bd685bd00 -> Node0x561bd685a410;
+	Node0x561bd685c360 [shape=record,label="{_Z5equalPdS_S_S_}"];
+	Node0x561bd685c360 -> Node0x561bd685a410;
+	Node0x561bd6864510 [shape=record,label="{_ZNK6Vector6lengthEv}"];
+	Node0x561bd6864510 -> Node0x561bd68594b0;
+	Node0x561bd6864510 -> Node0x561bd6863530;
+	Node0x561bd6863840 [shape=record,label="{_ZN9ResultSet8samemodeERS_}"];
+	Node0x561bd6863840 -> Node0x561bd6856830;
+	Node0x561bd6863840 -> Node0x561bd6857530;
+	Node0x561bd6863ad0 [shape=record,label="{_ZN9ResultSet7compareERS_}"];
+	Node0x561bd6863ad0 -> Node0x561bd685dd00;
+	Node0x561bd6863ad0 -> Node0x561bd685bd00;
+	Node0x561bd6863ad0 -> Node0x561bd685a410;
+	Node0x561bd6863ad0 -> Node0x561bd685c360;
+	Node0x561bd6863530 [shape=record,label="{sqrt}"];
+	Node0x561bd68594b0 [shape=record,label="{llvm.fmuladd.f64}"];
+}

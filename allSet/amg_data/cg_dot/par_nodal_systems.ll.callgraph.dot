@@ -1,0 +1,33 @@
+digraph "Call graph: par_nodal_systems.ll" {
+	label="Call graph: par_nodal_systems.ll";
+
+	Node0x559d55da1dd0 [shape=record,label="{hypre_BoomerAMGCreateNodalA}"];
+	Node0x559d55da1dd0 -> Node0x559d55dae910;
+	Node0x559d55da1dd0 -> Node0x559d55dab7c0;
+	Node0x559d55da1dd0 -> Node0x559d55dab170;
+	Node0x559d55da1dd0 -> Node0x559d55da4ad0;
+	Node0x559d55da1dd0 -> Node0x559d55da7350;
+	Node0x559d55da1dd0 -> Node0x559d55dd5f00;
+	Node0x559d55da1dd0 -> Node0x559d55dd6aa0;
+	Node0x559d55da1dd0 -> Node0x559d55dba670;
+	Node0x559d55da1dd0 -> Node0x559d55dbec40;
+	Node0x559d55da1dd0 -> Node0x559d55d9c4c0;
+	Node0x559d55da1dd0 -> Node0x559d55d98840;
+	Node0x559d55dae910 [shape=record,label="{hypre_MPI_Comm_size}"];
+	Node0x559d55dab7c0 [shape=record,label="{hypre_MatvecCommPkgCreate}"];
+	Node0x559d55dab170 [shape=record,label="{hypre_CAlloc}"];
+	Node0x559d55da4ad0 [shape=record,label="{hypre_error_handler}"];
+	Node0x559d55d9c4c0 [shape=record,label="{hypre_CSRMatrixCreate}"];
+	Node0x559d55d98840 [shape=record,label="{llvm.fmuladd.f64}"];
+	Node0x559d55dbec40 [shape=record,label="{sqrt}"];
+	Node0x559d55dba670 [shape=record,label="{llvm.fabs.f64}"];
+	Node0x559d55da7350 [shape=record,label="{hypre_Free}"];
+	Node0x559d55dd6aa0 [shape=record,label="{hypre_ParCSRMatrixCreate}"];
+	Node0x559d55dd5f00 [shape=record,label="{hypre_CSRMatrixDestroy}"];
+	Node0x559d55dd0d60 [shape=record,label="{hypre_BoomerAMGCreateScalarCFS}"];
+	Node0x559d55dd0d60 -> Node0x559d55dae910;
+	Node0x559d55dd0d60 -> Node0x559d55dab170;
+	Node0x559d55dd0d60 -> Node0x559d55dd6aa0;
+	Node0x559d55d9cf60 [shape=record,label="{hypre_BoomerAMGCreateScalarCF}"];
+	Node0x559d55d9cf60 -> Node0x559d55dab170;
+}

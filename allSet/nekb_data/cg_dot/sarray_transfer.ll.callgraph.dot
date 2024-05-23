@@ -1,0 +1,45 @@
+digraph "Call graph: sarray_transfer.ll" {
+	label="Call graph: sarray_transfer.ll";
+
+	Node0x55b2ec884240 [shape=record,label="{sarray_transfer_many}"];
+	Node0x55b2ec884240 -> Node0x55b2ec87a120;
+	Node0x55b2ec884240 -> Node0x55b2ec8b7950;
+	Node0x55b2ec884240 -> Node0x55b2ec8b7800;
+	Node0x55b2ec884240 -> Node0x55b2ec8b7560;
+	Node0x55b2ec884240 -> Node0x55b2ec87a1b0;
+	Node0x55b2ec884240 -> Node0x55b2ec873ab0;
+	Node0x55b2ec884240 -> Node0x55b2ec87f030;
+	Node0x55b2ec884240 -> Node0x55b2ec87c0c0;
+	Node0x55b2ec884240 -> Node0x55b2ec880790;
+	Node0x55b2ec884240 -> Node0x55b2ec881230;
+	Node0x55b2ec87a120 [shape=record,label="{sortp_ui}"];
+	Node0x55b2ec8b7950 [shape=record,label="{pack_int}"];
+	Node0x55b2ec8b7950 -> Node0x55b2ec87f030;
+	Node0x55b2ec8b7950 -> Node0x55b2ec889810;
+	Node0x55b2ec87f030 [shape=record,label="{array_reserve_}"];
+	Node0x55b2ec87f030 -> Node0x55b2ec88d5d0;
+	Node0x55b2ec8b7800 [shape=record,label="{pack_ext}"];
+	Node0x55b2ec8b7800 -> Node0x55b2ec87f030;
+	Node0x55b2ec8b7800 -> Node0x55b2ec889810;
+	Node0x55b2ec8b7560 [shape=record,label="{pack_more}"];
+	Node0x55b2ec8b7560 -> Node0x55b2ec889810;
+	Node0x55b2ec87a1b0 [shape=record,label="{crystal_router}"];
+	Node0x55b2ec873ab0 [shape=record,label="{num_rows}"];
+	Node0x55b2ec87c0c0 [shape=record,label="{cap_rows}"];
+	Node0x55b2ec880790 [shape=record,label="{unpack_int}"];
+	Node0x55b2ec880790 -> Node0x55b2ec889810;
+	Node0x55b2ec881230 [shape=record,label="{unpack_more}"];
+	Node0x55b2ec881230 -> Node0x55b2ec889810;
+	Node0x55b2ec8bdc40 [shape=record,label="{sarray_transfer_}"];
+	Node0x55b2ec8bdc40 -> Node0x55b2ec884240;
+	Node0x55b2ec88d5d0 [shape=record,label="{array_resize_}"];
+	Node0x55b2ec88d5d0 -> Node0x55b2ec897980;
+	Node0x55b2ec891090 [shape=record,label="{sarray_transfer_ext_}"];
+	Node0x55b2ec891090 -> Node0x55b2ec884240;
+	Node0x55b2ec889810 [shape=record,label="{llvm.memcpy.p0.p0.i64}"];
+	Node0x55b2ec897980 [shape=record,label="{srealloc}"];
+	Node0x55b2ec897980 -> Node0x55b2ec89c9e0;
+	Node0x55b2ec897980 -> Node0x55b2ec8a8120;
+	Node0x55b2ec89c9e0 [shape=record,label="{realloc}"];
+	Node0x55b2ec8a8120 [shape=record,label="{fail}"];
+}

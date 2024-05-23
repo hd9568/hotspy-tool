@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN9__gnu_cxx14__alloc_traitsISaI9MC_VectorES1_E17_S_select_on_copyERKS2_' function" {
+	label="CFG for '_ZN9__gnu_cxx14__alloc_traitsISaI9MC_VectorES1_E17_S_select_on_copyERKS2_' function";
+
+	Node0x55dab4856b20 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %result.ptr = alloca ptr, align 8\l  %__a.addr = alloca ptr, align 8\l  store ptr %agg.result, ptr %result.ptr, align 8\l  store ptr %__a, ptr %__a.addr, align 8\l  %0 = load ptr, ptr %__a.addr, align 8\l  call void\l... @_ZNSt16allocator_traitsISaI9MC_VectorEE37select_on_container_copy_constructio\l...nERKS1_(ptr dead_on_unwind writable sret(%\"class.std::allocator.46\") align 1\l... %agg.result, ptr noundef nonnull align 1 dereferenceable(1) %0)\l  ret void\l}"];
+}

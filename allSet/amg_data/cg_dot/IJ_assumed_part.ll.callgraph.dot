@@ -1,0 +1,21 @@
+digraph "Call graph: IJ_assumed_part.ll" {
+	label="Call graph: IJ_assumed_part.ll";
+
+	Node0x55988df2fc60 [shape=record,label="{hypre_IJMatrixCreateAssumedPartition}"];
+	Node0x55988df2fc60 -> Node0x55988df2fd10;
+	Node0x55988df2fc60 -> Node0x55988df311e0;
+	Node0x55988df2fc60 -> Node0x55988df31260;
+	Node0x55988df2fc60 -> Node0x55988df312e0;
+	Node0x55988df2fc60 -> Node0x55988df31360;
+	Node0x55988df2fd10 [shape=record,label="{hypre_MPI_Comm_rank}"];
+	Node0x55988df311e0 [shape=record,label="{hypre_CAlloc}"];
+	Node0x55988df31260 [shape=record,label="{hypre_GetAssumedPartitionRowRange}"];
+	Node0x55988df312e0 [shape=record,label="{hypre_MAlloc}"];
+	Node0x55988df31360 [shape=record,label="{hypre_LocateAssummedPartition}"];
+	Node0x55988df45fe0 [shape=record,label="{hypre_IJVectorCreateAssumedPartition}"];
+	Node0x55988df45fe0 -> Node0x55988df2fd10;
+	Node0x55988df45fe0 -> Node0x55988df311e0;
+	Node0x55988df45fe0 -> Node0x55988df31260;
+	Node0x55988df45fe0 -> Node0x55988df312e0;
+	Node0x55988df45fe0 -> Node0x55988df31360;
+}

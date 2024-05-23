@@ -1,0 +1,5 @@
+digraph "CFG for '_ZNSt6chrono15duration_valuesIlE4zeroEv' function" {
+	label="CFG for '_ZNSt6chrono15duration_valuesIlE4zeroEv' function";
+
+	Node0x5651cd879000 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  ret i64 0\l}"];
+}

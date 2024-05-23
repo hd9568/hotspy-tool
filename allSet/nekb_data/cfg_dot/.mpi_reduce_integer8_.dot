@@ -1,0 +1,12 @@
+digraph "CFG for 'mpi_reduce_integer8_' function" {
+	label="CFG for 'mpi_reduce_integer8_' function";
+
+	Node0x5560a31cb5a0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{5:\l|  %6 = alloca i32, i64 1, align 4\l  %7 = load i32, ptr %2, align 4\l  %8 = sext i32 %7 to i64\l  %9 = icmp sgt i64 %8, 0\l  %10 = select i1 %9, i64 %8, i64 0\l  %11 = load i32, ptr %2, align 4\l  %12 = sext i32 %11 to i64\l  %13 = icmp sgt i64 %12, 0\l  %14 = select i1 %13, i64 %12, i64 0\l  store i32 0, ptr %4, align 4\l  %15 = load i32, ptr %2, align 4\l  %16 = sext i32 %15 to i64\l  br label %17\l}"];
+	Node0x5560a31cb5a0 -> Node0x5560a31cbdc0[tooltip="5 -> 17\nProbability 100.00%" ];
+	Node0x5560a31cbdc0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{17:\l|  %18 = phi i32 [ %38, %21 ], [ 1, %5 ]\l  %19 = phi i64 [ %39, %21 ], [ %16, %5 ]\l  %20 = icmp sgt i64 %19, 0\l  br i1 %20, label %21, label %40\l|{<s0>T|<s1>F}}"];
+	Node0x5560a31cbdc0:s0 -> Node0x5560a31cbe80[tooltip="17 -> 21\nProbability 96.88%" ];
+	Node0x5560a31cbdc0:s1 -> Node0x5560a31cc0b0[tooltip="17 -> 40\nProbability 3.12%" ];
+	Node0x5560a31cbe80 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{21:\l|  store i32 %18, ptr %6, align 4\l  %22 = load i32, ptr %6, align 4\l  %23 = sext i32 %22 to i64\l  %24 = sub nsw i64 %23, 1\l  %25 = mul nsw i64 %24, 1\l  %26 = mul nsw i64 %25, 1\l  %27 = add nsw i64 %26, 0\l  %28 = mul nsw i64 1, %10\l  %29 = getelementptr i64, ptr %0, i64 %27\l  %30 = load i64, ptr %29, align 8\l  %31 = sub nsw i64 %23, 1\l  %32 = mul nsw i64 %31, 1\l  %33 = mul nsw i64 %32, 1\l  %34 = add nsw i64 %33, 0\l  %35 = mul nsw i64 1, %14\l  %36 = getelementptr i64, ptr %1, i64 %34\l  store i64 %30, ptr %36, align 8\l  %37 = load i32, ptr %6, align 4\l  %38 = add i32 %37, 1\l  %39 = sub i64 %19, 1\l  br label %17\l}"];
+	Node0x5560a31cbe80 -> Node0x5560a31cbdc0[tooltip="21 -> 17\nProbability 100.00%" ];
+	Node0x5560a31cc0b0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{40:\l|  store i32 %18, ptr %6, align 4\l  store i32 1, ptr %4, align 4\l  ret void\l}"];
+}

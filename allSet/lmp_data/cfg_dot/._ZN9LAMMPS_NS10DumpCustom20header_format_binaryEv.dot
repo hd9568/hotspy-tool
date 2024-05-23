@@ -1,0 +1,5 @@
+digraph "CFG for '_ZN9LAMMPS_NS10DumpCustom20header_format_binaryEv' function" {
+	label="CFG for '_ZN9LAMMPS_NS10DumpCustom20header_format_binaryEv' function";
+
+	Node0x55d03a7538b0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %this.addr = alloca ptr, align 8\l  store ptr %this, ptr %this.addr, align 8\l  %this1 = load ptr, ptr %this.addr, align 8\l  call void @_ZN9LAMMPS_NS10DumpCustom26format_magic_string_binaryEv(ptr\l... noundef nonnull align 8 dereferenceable(1200) %this1)\l  call void @_ZN9LAMMPS_NS10DumpCustom20format_endian_binaryEv(ptr noundef\l... nonnull align 8 dereferenceable(1200) %this1)\l  call void @_ZN9LAMMPS_NS10DumpCustom22format_revision_binaryEv(ptr noundef\l... nonnull align 8 dereferenceable(1200) %this1)\l  ret void\l}"];
+}
