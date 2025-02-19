@@ -1,0 +1,22 @@
+digraph "Call graph: main.ll" {
+	label="Call graph: main.ll";
+
+	Node0x55729c6f1670 [shape=record,label="{main}"];
+	Node0x55729c6f1670 -> Node0x55729c6f3680;
+	Node0x55729c6f1670 -> Node0x55729c6f5090;
+	Node0x55729c6f1670 -> Node0x55729c6f57f0;
+	Node0x55729c6f3680 [shape=record,label="{printf}"];
+	Node0x55729c6f5090 [shape=record,label="{atoi}"];
+	Node0x55729c6f57f0 [shape=record,label="{run_sequence}"];
+	Node0x55729c6f57f0 -> Node0x55729c6f6420;
+	Node0x55729c6f57f0 -> Node0x55729c6f3680;
+	Node0x55729c6f57f0 -> Node0x55729c6f22c0;
+	Node0x55729c6f57f0 -> Node0x55729c6f8b80;
+	Node0x55729c6f57f0 -> Node0x55729c6f6870;
+	Node0x55729c6f57f0 -> Node0x55729c6eea20;
+	Node0x55729c6f6420 [shape=record,label="{puts}"];
+	Node0x55729c6f22c0 [shape=record,label="{spec_srand}"];
+	Node0x55729c6f6870 [shape=record,label="{spec_rand}"];
+	Node0x55729c6eea20 [shape=record,label="{llvm.fmuladd.f64}"];
+	Node0x55729c6f8b80 [shape=record,label="{spec_lrand48}"];
+}

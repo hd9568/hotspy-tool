@@ -1,0 +1,5 @@
+digraph "CFG for 'spec_srand' function" {
+	label="CFG for 'spec_srand' function";
+
+	Node0x5614a63d09e0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{entry:\l|  %seed.addr = alloca i32, align 4\l  store i32 %seed, ptr %seed.addr, align 4\l  %0 = load i32, ptr %seed.addr, align 4\l  %conv = sext i32 %0 to i64\l  call void @spec_init_genrand(i64 noundef %conv)\l  ret void\l}"];
+}
